@@ -20,8 +20,21 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale }: 
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const inputRef = useRef<HTMLInputElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const periodToggleRef = useRef<HTMLDivElement>(null);
+  const [showStickyToggle, setShowStickyToggle] = useState(false);
   const tr = t[locale];
   const is2127Available = periodAvailable['2127'];
+
+  useEffect(() => {
+    const el = periodToggleRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setShowStickyToggle(!entry.isIntersecting),
+      { threshold: 0 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     if (!data || query.length < 2) {
@@ -183,7 +196,7 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale }: 
         </p>
 
         {/* Period toggle */}
-        <div className="mt-4 animate-fade-in-up animate-delay-400">
+        <div ref={periodToggleRef} className="mt-4 animate-fade-in-up animate-delay-400">
           <div className="text-[#94a3b8] text-xs mb-2 mt-4">{tr.period_label}</div>
           <div className="inline-flex rounded-lg border border-[#1e1e2e] overflow-hidden mt-2">
             <button
@@ -221,6 +234,51 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale }: 
               {tr.period_ongoing}
             </div>
           )}
+        </div>
+      </div>
+
+      {/* Sticky floating period toggle */}
+      <div
+        style={{
+          position: 'fixed',
+          top: '70px',
+          right: '24px',
+          zIndex: 40,
+          opacity: showStickyToggle ? 1 : 0,
+          transform: showStickyToggle ? 'translateY(0)' : 'translateY(-8px)',
+          transition: 'opacity 0.2s ease, transform 0.2s ease',
+          pointerEvents: showStickyToggle ? 'auto' : 'none',
+        }}
+      >
+        <div
+          className="inline-flex rounded-lg border border-[#1e1e2e] overflow-hidden"
+          style={{
+            background: 'rgba(10, 10, 15, 0.85)',
+            backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)',
+          }}
+        >
+          <button
+            onClick={() => setPeriod('1420')}
+            className={`px-3 py-1 text-sm font-medium transition-colors ${
+              period === '1420' ? 'bg-[#3b82f6] text-white' : 'text-[#94a3b8] hover:text-[#f8fafc]'
+            }`}
+          >
+            2014 – 2020
+          </button>
+          <button
+            onClick={() => is2127Available && setPeriod('2127')}
+            disabled={!is2127Available}
+            className={`px-3 py-1 text-sm font-medium transition-colors ${
+              period === '2127'
+                ? 'bg-[#3b82f6] text-white'
+                : is2127Available
+                  ? 'text-[#94a3b8] hover:text-[#f8fafc]'
+                  : 'text-[#94a3b8]/40 cursor-not-allowed'
+            }`}
+          >
+            2021 – 2027
+          </button>
         </div>
       </div>
 
