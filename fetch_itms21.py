@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-fetch_itms21.py — Fetch ITMS21+ (2021-2027) project data and produce municipal_stats_2127.json.
+fetch_itms21.py — Fetch ITMS21+ (2021-2027) project data and produce municipal_stats_21.json.
 
 Data source: https://api.itms21.sk/public/v1/
 Endpoint: /aktivitaprojekt (project activities — need to dedupe by projekt.id)
@@ -29,8 +29,8 @@ CACHE_DIR = DATA_DIR / "itms21_raw_cache"
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
 LOG_FILE = DATA_DIR / "itms21_fetch_log.txt"
-AGGREGATED_FILE = DATA_DIR / "aggregated_by_beneficiary_2127.json"
-STATS_FILE = DATA_DIR / "municipal_stats_2127.json"
+AGGREGATED_FILE = DATA_DIR / "aggregated_by_beneficiary_21.json"
+STATS_FILE = DATA_DIR / "municipal_stats_21.json"
 NOTES_FILE = DATA_DIR / "itms21_notes.txt"
 MUNICIPALITIES_FILE = DATA_DIR / "municipalities_isco.json"
 
@@ -249,7 +249,7 @@ def step2_dedupe_and_aggregate(activities):
 
 
 def step3_match_municipalities(by_ico):
-    """Match against municipality IČO register to produce municipal_stats_2127.json."""
+    """Match against municipality IČO register to produce municipal_stats_21.json."""
     log("Step 3: Matching against municipality register")
 
     if not MUNICIPALITIES_FILE.exists():

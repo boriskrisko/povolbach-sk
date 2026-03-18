@@ -14,8 +14,8 @@ Output files:
   data/raw_subjects.json             — cached subject lookups
   data/raw_nuts_names.json           — cached NUTS name lookups
   data/raw_irregularities.json       — raw irregularity list
-  data/aggregated_by_beneficiary.json — main output grouped by IČO
-  data/irregularities_by_ico.json    — irregularities grouped by debtor IČO
+  data/aggregated_by_beneficiary_14.json — main output grouped by IČO
+  data/irregularities_by_ico_14.json    — irregularities grouped by debtor IČO
   data/fetch_log.txt                 — progress log
 """
 
@@ -416,7 +416,7 @@ def step5_aggregate(
         d["total_contracted_original_eur"] = round(d["total_contracted_original_eur"], 2)
         output.append(d)
 
-    out_path = DATA_DIR / "aggregated_by_beneficiary.json"
+    out_path = DATA_DIR / "aggregated_by_beneficiary_14.json"
     out_path.write_text(json.dumps(output, indent=2, ensure_ascii=False), encoding="utf-8")
     logger.info(f"  Written {len(output)} beneficiaries to {out_path}")
     return output
@@ -484,7 +484,7 @@ async def step6_irregularities() -> list[dict]:
         entry["total_returned_eur"] = round(entry["total_returned_eur"], 2)
 
     output = [by_ico[ico] for ico in sorted(by_ico)]
-    out_path = DATA_DIR / "irregularities_by_ico.json"
+    out_path = DATA_DIR / "irregularities_by_ico_14.json"
     out_path.write_text(json.dumps(output, indent=2, ensure_ascii=False), encoding="utf-8")
     logger.info(f"  {len(all_items)} irregularities → {len(output)} debtors, saved to {out_path}")
     return output

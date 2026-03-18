@@ -119,10 +119,10 @@ def main():
     with open(DATA / 'municipalities_isco.json') as f:
         muni_isco = json.load(f)
 
-    with open(DATA / 'subsidiaries_by_municipality.json') as f:
+    with open(DATA / 'subsidiaries_by_municipality_14.json') as f:
         subs = json.load(f)
 
-    with open(DATA / 'municipal_stats.json') as f:
+    with open(DATA / 'municipal_stats_14.json') as f:
         muni_stats = json.load(f)
 
     # Build name → ICO lookup
@@ -180,7 +180,7 @@ def main():
         else:
             unmatched.append((ico, name, eur))
 
-    with open(DATA / 'subsidiaries_by_municipality.json', 'w', encoding='utf-8') as f:
+    with open(DATA / 'subsidiaries_by_municipality_14.json', 'w', encoding='utf-8') as f:
         json.dump(subs, f, ensure_ascii=False, indent=2)
 
     # Append to attribution log

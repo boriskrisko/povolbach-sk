@@ -12,7 +12,7 @@ Processes both 2014-2020 and 2021-2027 periods.
 import json
 from pathlib import Path
 
-ROOT = Path('/Users/boriskrisko/ConveyorMind')
+ROOT = Path('/Users/boriskrisko/povolbach')
 DATA = ROOT / 'data'
 PUBLIC = ROOT / 'frontend' / 'public'
 
@@ -115,10 +115,10 @@ def process_vuc(vuc_path: Path, vuc_subs: dict, out_path: Path):
 def main():
     print('Loading shared data files...')
 
-    subs = load_json(DATA / 'subsidiaries_by_municipality.json')
-    vuc_subs = load_json(DATA / 'subsidiaries_by_vuc.json')
+    subs = load_json(DATA / 'subsidiaries_by_municipality_14.json')
+    vuc_subs = load_json(DATA / 'subsidiaries_by_vuc_14.json')
 
-    indirect_path = DATA / 'indirect_by_municipality.json'
+    indirect_path = DATA / 'indirect_by_municipality_14.json'
     indirect = load_json(indirect_path) if indirect_path.exists() else {}
 
     print(f'  Municipalities with subsidiaries: {len(subs)}')
@@ -126,11 +126,11 @@ def main():
 
     # ── 2014-2020 period ──────────────────────────────────────────────────────
     base_1420 = process_municipalities(
-        DATA / 'municipal_stats.json',
+        DATA / 'municipal_stats_14.json',
         subs, indirect,
-        PUBLIC / 'municipal_stats.json',
+        PUBLIC / 'municipal_stats_14.json',
     )
-    process_vuc(PUBLIC / 'vuc_stats.json', vuc_subs, PUBLIC / 'vuc_stats.json')
+    process_vuc(PUBLIC / 'vuc_stats_14.json', vuc_subs, PUBLIC / 'vuc_stats_14.json')
 
     # ── 2021-2027 period ──────────────────────────────────────────────────────
     if (DATA / 'municipal_stats_21.json').exists():

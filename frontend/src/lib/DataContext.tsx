@@ -24,7 +24,7 @@ const DataContext = createContext<DataContextType>({
 });
 
 const PERIOD_FILES: Record<Period, string> = {
-  '1420': '/municipal_stats.json',
+  '1420': '/municipal_stats_14.json',
   '2127': '/municipal_stats_21.json',
 };
 

@@ -106,7 +106,7 @@ def main():
         'categories': categories_out,
     }
 
-    with open(DATA / 'mikroregiony_stats.json', 'w', encoding='utf-8') as f:
+    with open(DATA / 'mikroregiony_stats_14.json', 'w', encoding='utf-8') as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
 
     print(f'Total mikroregióny: {total_count}, €{total_eur/1e6:.1f}M')

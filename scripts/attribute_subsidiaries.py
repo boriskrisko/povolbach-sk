@@ -138,10 +138,10 @@ def main():
     with open(DATA / 'raw_nuts_names.json') as f:
         nuts_names = json.load(f)  # numeric_id -> municipality_name
 
-    with open(DATA / 'municipal_stats.json') as f:
+    with open(DATA / 'municipal_stats_14.json') as f:
         muni_stats = json.load(f)
 
-    with open(DATA / 'aggregated_by_beneficiary.json') as f:
+    with open(DATA / 'aggregated_by_beneficiary_14.json') as f:
         agg_list = json.load(f)
     agg_by_ico = {e['ico']: e for e in agg_list}
 
@@ -288,7 +288,7 @@ def main():
         d['subsidiary_orgs'].sort(key=lambda o: o['total_contracted_eur'], reverse=True)
 
     # Save
-    with open(DATA / 'subsidiaries_by_municipality.json', 'w', encoding='utf-8') as f:
+    with open(DATA / 'subsidiaries_by_municipality_14.json', 'w', encoding='utf-8') as f:
         json.dump(dict(by_muni), f, ensure_ascii=False, indent=2)
 
     # For VÚC: add name fields
@@ -299,7 +299,7 @@ def main():
             'name': VUC_ICOS[vico],
             **d,
         }
-    with open(DATA / 'subsidiaries_by_vuc.json', 'w', encoding='utf-8') as f:
+    with open(DATA / 'subsidiaries_by_vuc_14.json', 'w', encoding='utf-8') as f:
         json.dump(vuc_sub_out, f, ensure_ascii=False, indent=2)
 
     with open(LOG_PATH, 'w', encoding='utf-8') as f:

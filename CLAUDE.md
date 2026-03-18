@@ -30,23 +30,42 @@
 ## File structure
 
 ```
-/
-├── CLAUDE.md                          ← you are here
-├── fetch_itms.py                      ← main data pipeline
-├── match_municipalities.py            ← IČO-based municipality matching (IN PROGRESS)
+/Users/boriskrisko/povolbach/
+├── CLAUDE.md                               ← you are here
+├── fetch_itms.py                           ← 2014-2020 data pipeline
+├── fetch_itms21.py                         ← 2021-2027 data pipeline
+├── match_municipalities.py                 ← IČO-based municipality matching
+├── scripts/
+│   ├── build_frontend_public.py            ← merge + slim to frontend/public/
+│   ├── attribute_subsidiaries.py           ← RPO-based subsidiary attribution
+│   ├── find_indirect_projects.py           ← state project geo-mapping
+│   └── build_mikroregiony.py               ← mikroregión stats
 ├── data/
-│   ├── raw_project_lists.json         ← paginated project IDs (step 1 cache)
-│   ├── raw_project_details/           ← individual project JSONs (step 2 cache)
-│   │   ├── ukoncene_{id}.json
-│   │   └── vrealizacii_{id}.json
-│   ├── raw_nuts_names.json            ← NUTS5 code → municipality name (step 3 cache)
-│   ├── raw_subjects.json              ← subject ID → name/address/GPS/municipality (step 4 cache)
-│   ├── aggregated_by_beneficiary.json ← main output: per-IČO aggregated stats (step 5)
-│   ├── irregularities_by_ico.json     ← irregularities per IČO (step 6)
-│   ├── municipality_icos.json         ← official Slovak municipality IČO register ← NEEDS CREATION
-│   ├── municipal_eu_stats.json        ← filtered + enriched municipal data ← NEEDS CREATION
-│   └── validation_report.txt          ← matching QA report ← NEEDS CREATION
-└── frontend/                          ← Next.js app (not yet built)
+│   ├── raw_project_lists.json              ← paginated project IDs (step 1 cache)
+│   ├── raw_project_details/                ← individual project JSONs (step 2 cache)
+│   ├── raw_nuts_names.json                 ← NUTS5 code → municipality name (step 3 cache)
+│   ├── raw_subjects.json                   ← subject ID → name/address/GPS/municipality (step 4 cache)
+│   ├── aggregated_by_beneficiary_14.json   ← 2014-2020 per-IČO aggregated stats (step 5)
+│   ├── irregularities_by_ico_14.json       ← 2014-2020 irregularities per IČO (step 6)
+│   ├── aggregated_by_beneficiary_21.json   ← 2021-2027 per-IČO aggregated stats
+│   ├── municipal_stats_14.json             ← 2014-2020 municipal stats (match_municipalities output)
+│   ├── municipal_stats_21.json             ← 2021-2027 municipal stats (fetch_itms21 output)
+│   ├── vuc_stats_14.json                   ← 2014-2020 VÚC stats
+│   ├── vuc_stats_21.json                   ← 2021-2027 VÚC stats
+│   ├── mikroregiony_stats_14.json          ← 2014-2020 mikroregión stats
+│   ├── mikroregiony_stats_21.json          ← 2021-2027 mikroregión stats
+│   ├── subsidiaries_by_municipality_14.json ← subsidiary org attribution (2014-2020)
+│   ├── subsidiaries_by_vuc_14.json         ← VÚC subsidiary attribution
+│   ├── indirect_by_municipality_14.json    ← state/indirect project mapping
+│   └── municipalities_isco.json            ← official Slovak municipality IČO register
+└── frontend/                               ← Next.js app
+    └── public/
+        ├── municipal_stats_14.json         ← slimmed 2014-2020 (from build_frontend_public.py)
+        ├── municipal_stats_21.json         ← slimmed 2021-2027
+        ├── vuc_stats_14.json
+        ├── vuc_stats_21.json
+        ├── mikroregiony_stats_14.json
+        └── mikroregiony_stats_21.json
 ```
 
 ---
@@ -72,8 +91,8 @@ This rule exists because name-based matching produced collisions and false match
 | 2 | Fetch each project detail (20 concurrent, retry on 429) | `data/raw_project_details/{endpoint}_{id}.json` |
 | 3 | Resolve NUTS5 codes → municipality names | `data/raw_nuts_names.json` |
 | 4 | Resolve subject IDs → name, address, GPS, municipality | `data/raw_subjects.json` |
-| 5 | Aggregate by IČO: name, location, active/completed counts, total contracted | `data/aggregated_by_beneficiary.json` |
-| 6 | Fetch all irregularities, group by debtor IČO | `data/irregularities_by_ico.json` |
+| 5 | Aggregate by IČO: name, location, active/completed counts, total contracted | `data/aggregated_by_beneficiary_14.json` |
+| 6 | Fetch all irregularities, group by debtor IČO | `data/irregularities_by_ico_14.json` |
 
 **Resumability:** Steps 2–4 cache individual files. Re-running skips already-fetched records. Always check if a cache file exists before re-fetching.
 
@@ -81,14 +100,14 @@ This rule exists because name-based matching produced collisions and false match
 
 ## Municipality matching (match_municipalities.py) — CURRENT TASK
 
-This script takes `aggregated_by_beneficiary.json` and filters it down to only Slovak municipalities, enriched with official register data.
+This script takes `aggregated_by_beneficiary_14.json` and filters it down to only Slovak municipalities, enriched with official register data.
 
 ### Input
-- `data/aggregated_by_beneficiary.json` — all beneficiaries from ITMS (IČO as key)
-- `data/municipality_icos.json` — official Slovak municipality IČO list (must be sourced or created)
+- `data/aggregated_by_beneficiary_14.json` — all beneficiaries from ITMS (IČO as key)
+- `data/municipalities_isco.json` — official Slovak municipality IČO list
 
 ### Output
-- `data/municipal_eu_stats.json` — municipalities only, with full stats
+- `data/municipal_stats_14.json` — municipalities only, with full stats
 - `data/validation_report.txt` — QA summary
 
 ### Municipality IČO source
@@ -206,6 +225,17 @@ When working on this project, Claude Code should:
 
 ---
 
+## File Naming Convention — HARD RULE
+
+ALL data files use period suffix:
+- **2014-2020 period:** `_14` (e.g. `municipal_stats_14.json`, `vuc_stats_14.json`, `aggregated_by_beneficiary_14.json`)
+- **2021-2027 period:** `_21` (e.g. `municipal_stats_21.json`, `vuc_stats_21.json`, `aggregated_by_beneficiary_21.json`)
+- **NEVER use:** `_2127`, `_2021`, `_14_20`, `_21_27`, or no suffix for period-specific files
+- **Frontend fetches:** `/municipal_stats_14.json` and `/municipal_stats_21.json`
+- **Local root:** `/Users/boriskrisko/povolbach/` (was ConveyorMind — do not use old path)
+
+---
+
 ## Tech preferences
 
 - **Python 3.10+**, stdlib preferred, `httpx` or `aiohttp` for async if needed
@@ -246,5 +276,12 @@ This gives genuinely unique data no Slovak platform has. Build after first publi
 The 2021-2027 pipeline (fetch_itms21.py) currently uses offset-based pagination for resume 
 (slow ~5 min/1k projects). If re-running from scratch, switch to minId cursor approach 
 (same as fetch_itms.py) for significantly faster fetching.
+
+### Indirect projects (štátne projekty v katastri)
+Currently sourced only from 2014-2020 excluded_beneficiaries.json.
+For accurate period-specific indirect data, run find_indirect_projects.py
+against aggregated_by_beneficiary_21.json to generate indirect_by_municipality_21.json.
+Until then, both periods show same geographic infrastructure data — which is 
+technically correct (same motorways exist in both periods) but not period-specific.
 
 *Last updated: March 2026*

@@ -37,11 +37,11 @@ def main():
     with open(f'{DATA}/excluded_beneficiaries.json') as f:
         excluded = json.load(f)
 
-    with open(f'{DATA}/aggregated_by_beneficiary.json') as f:
+    with open(f'{DATA}/aggregated_by_beneficiary_14.json') as f:
         agg_list = json.load(f)
     agg_by_ico = {e['ico']: e for e in agg_list}
 
-    with open(f'{DATA}/municipal_stats.json') as f:
+    with open(f'{DATA}/municipal_stats_14.json') as f:
         muni_stats = json.load(f)
 
     # Build name -> ICO lookup from municipal_stats
@@ -128,7 +128,7 @@ def main():
 
     result = dict(indirect_by_muni)
 
-    out_path = f'{DATA}/indirect_by_municipality.json'
+    out_path = f'{DATA}/indirect_by_municipality_14.json'
     with open(out_path, 'w', encoding='utf-8') as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
 
