@@ -2,26 +2,40 @@
 
 import { useData } from '@/lib/DataContext';
 import { Municipality } from '@/lib/types';
-import { getTop10, getBottom10WithProjects, formatEur, getWithoutProjects } from '@/lib/utils';
+import { formatEur, getWithoutProjects } from '@/lib/utils';
+
+type ViewMode = 'total' | 'capita';
 
 interface Props {
   onSelectMunicipality: (m: Municipality) => void;
+  viewMode: ViewMode;
+  setViewMode: (mode: ViewMode) => void;
+}
+
+function getCapita(m: Municipality): number {
+  return m.population > 0 ? m.total_contracted_eur / m.population : 0;
 }
 
 function LeaderboardRow({
   m,
   rank,
-  maxEur,
+  maxVal,
   color,
   onClick,
+  viewMode,
 }: {
   m: Municipality;
   rank: number;
-  maxEur: number;
+  maxVal: number;
   color: string;
   onClick: () => void;
+  viewMode: ViewMode;
 }) {
-  const barWidth = maxEur > 0 ? (m.total_contracted_eur / maxEur) * 100 : 0;
+  const val = viewMode === 'capita' ? getCapita(m) : m.total_contracted_eur;
+  const barWidth = maxVal > 0 ? (val / maxVal) * 100 : 0;
+  const displayLabel = viewMode === 'capita'
+    ? `${formatEur(Math.round(val))} / obyv.`
+    : formatEur(val);
 
   return (
     <button
@@ -34,7 +48,7 @@ function LeaderboardRow({
           {m.official_name}
         </span>
         <span className="font-mono text-sm font-semibold" style={{ color }}>
-          {formatEur(m.total_contracted_eur)}
+          {displayLabel}
         </span>
       </div>
       <div className="flex items-center gap-3">
@@ -51,27 +65,74 @@ function LeaderboardRow({
   );
 }
 
-export default function Leaderboard({ onSelectMunicipality }: Props) {
+export default function Leaderboard({ onSelectMunicipality, viewMode, setViewMode }: Props) {
   const { data, loading, period } = useData();
 
   if (loading || !data) return null;
 
-  const top10 = getTop10(data);
-  const bottom10 = getBottom10WithProjects(data);
+  const all = Object.values(data);
+
+  const top10 = viewMode === 'capita'
+    ? all.filter(m => m.population > 0 && m.total_contracted_eur > 0)
+        .sort((a, b) => getCapita(b) - getCapita(a))
+        .slice(0, 10)
+    : all.sort((a, b) => b.total_contracted_eur - a.total_contracted_eur).slice(0, 10);
+
+  const bottom10 = viewMode === 'capita'
+    ? all.filter(m => m.population > 0 && m.total_contracted_eur > 0)
+        .sort((a, b) => getCapita(a) - getCapita(b))
+        .slice(0, 10)
+    : all.filter(m => m.total_contracted_eur > 0)
+        .sort((a, b) => a.total_contracted_eur - b.total_contracted_eur)
+        .slice(0, 10);
+
   const zeroCount = getWithoutProjects(data);
-  const maxTop = top10[0]?.total_contracted_eur || 1;
-  const maxBottom = bottom10.length > 0 ? bottom10[bottom10.length - 1]?.total_contracted_eur || 1 : 1;
+
+  const maxTop = viewMode === 'capita'
+    ? (top10[0] ? getCapita(top10[0]) : 1)
+    : (top10[0]?.total_contracted_eur || 1);
+
+  const maxBottom = viewMode === 'capita'
+    ? (bottom10.length > 0 ? getCapita(bottom10[bottom10.length - 1]) : 1)
+    : (bottom10.length > 0 ? bottom10[bottom10.length - 1]?.total_contracted_eur || 1 : 1);
 
   return (
     <section className="py-24 px-4 max-w-6xl mx-auto">
-      <h2
-        className="text-3xl md:text-4xl font-bold text-[#f8fafc] mb-2"
-        style={{ fontFamily: 'Syne, sans-serif' }}
-      >
-        Rebríček obcí
-      </h2>
+      <div className="flex flex-wrap items-start justify-between gap-4 mb-2">
+        <h2
+          className="text-3xl md:text-4xl font-bold text-[#f8fafc]"
+          style={{ fontFamily: 'Syne, sans-serif' }}
+        >
+          Rebríček obcí
+        </h2>
+        <div className="inline-flex rounded-lg border border-[#1e1e2e] overflow-hidden">
+          <button
+            onClick={() => setViewMode('total')}
+            className={`px-4 py-1.5 text-sm font-medium transition-colors ${
+              viewMode === 'total'
+                ? 'bg-[#3b82f6] text-white'
+                : 'bg-[#13131a] text-[#94a3b8] hover:text-[#f8fafc]'
+            }`}
+          >
+            Celkové prostriedky
+          </button>
+          <button
+            onClick={() => setViewMode('capita')}
+            className={`px-4 py-1.5 text-sm font-medium transition-colors ${
+              viewMode === 'capita'
+                ? 'bg-[#3b82f6] text-white'
+                : 'bg-[#13131a] text-[#94a3b8] hover:text-[#f8fafc]'
+            }`}
+          >
+            Na obyvateľa
+          </button>
+        </div>
+      </div>
       <p className="text-[#94a3b8] mb-12">
-        Zoradené podľa celkových zmluvných prostriedkov EÚ
+        {viewMode === 'capita'
+          ? 'Zoradené podľa čerpania EÚ fondov na obyvateľa'
+          : 'Zoradené podľa celkových zmluvných prostriedkov EÚ'
+        }
       </p>
 
       <div className="grid md:grid-cols-2 gap-8">
@@ -89,9 +150,10 @@ export default function Leaderboard({ onSelectMunicipality }: Props) {
                 key={m.ico}
                 m={m}
                 rank={i + 1}
-                maxEur={maxTop}
+                maxVal={maxTop}
                 color="#3b82f6"
                 onClick={() => onSelectMunicipality(m)}
+                viewMode={viewMode}
               />
             ))}
           </div>
@@ -111,9 +173,10 @@ export default function Leaderboard({ onSelectMunicipality }: Props) {
                 key={m.ico}
                 m={m}
                 rank={i + 1}
-                maxEur={maxBottom}
+                maxVal={maxBottom}
                 color="#f59e0b"
                 onClick={() => onSelectMunicipality(m)}
+                viewMode={viewMode}
               />
             ))}
           </div>

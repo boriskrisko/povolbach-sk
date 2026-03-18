@@ -13,13 +13,21 @@ import MunicipalityModal from '@/components/MunicipalityModal';
 
 export default function Home() {
   const [selectedMunicipality, setSelectedMunicipality] = useState<Municipality | null>(null);
+  const [viewMode, setViewMode] = useState<'total' | 'capita'>('total');
 
   return (
     <DataProvider>
       <main className="min-h-screen bg-[#0a0a0f]">
         <HeroSearch onSelectMunicipality={setSelectedMunicipality} />
-        <Leaderboard onSelectMunicipality={setSelectedMunicipality} />
-        <SlovakiaMap onMunicipalityClick={setSelectedMunicipality} />
+        <Leaderboard
+          onSelectMunicipality={setSelectedMunicipality}
+          viewMode={viewMode}
+          setViewMode={setViewMode}
+        />
+        <SlovakiaMap
+          onMunicipalityClick={setSelectedMunicipality}
+          viewMode={viewMode}
+        />
         <StatsContext />
         <Footer />
         <MunicipalityModal

@@ -7,6 +7,7 @@ import { Municipality, RegionStats } from '@/lib/types';
 
 interface Props {
   onMunicipalityClick: (m: Municipality) => void;
+  viewMode: 'total' | 'capita';
 }
 
 // Map SVG id attributes to region names in our data
@@ -44,7 +45,17 @@ function getDotColor(amount: number): string {
   return '#ffffff';
 }
 
-const LEGEND_ITEMS = [
+function getDotColorCapita(amountPerCapita: number): string {
+  if (amountPerCapita === 0) return '#374151';
+  if (amountPerCapita < 50) return '#1e3a5f';
+  if (amountPerCapita < 200) return '#1d4ed8';
+  if (amountPerCapita < 500) return '#3b82f6';
+  if (amountPerCapita < 1000) return '#60a5fa';
+  if (amountPerCapita < 2000) return '#bfdbfe';
+  return '#ffffff';
+}
+
+const LEGEND_ITEMS_TOTAL = [
   { label: '€0', color: '#2d2d4e' },
   { label: '<€100k', color: '#1e3a5f' },
   { label: '<€500k', color: '#1d4ed8' },
@@ -54,7 +65,17 @@ const LEGEND_ITEMS = [
   { label: '€50M+', color: '#ffffff' },
 ];
 
-export default function SlovakiaMap({ onMunicipalityClick }: Props) {
+const LEGEND_ITEMS_CAPITA = [
+  { label: '€0/obyv.', color: '#374151' },
+  { label: '<€50', color: '#1e3a5f' },
+  { label: '<€200', color: '#1d4ed8' },
+  { label: '<€500', color: '#3b82f6' },
+  { label: '<€1k', color: '#60a5fa' },
+  { label: '<€2k', color: '#bfdbfe' },
+  { label: '€2k+', color: '#ffffff' },
+];
+
+export default function SlovakiaMap({ onMunicipalityClick, viewMode }: Props) {
   const { data, loading } = useData();
   const containerRef = useRef<HTMLDivElement>(null);
   const [hoveredRegion, setHoveredRegion] = useState<string | null>(null);
@@ -210,13 +231,17 @@ export default function SlovakiaMap({ onMunicipalityClick }: Props) {
               {municipalities.map(m => {
                 const { x, y } = gpsToSvg(m.gps_lat!, m.gps_lon!);
                 const isHovered = hoveredMunicipality?.ico === m.ico;
+                const perCapita = m.population > 0 ? m.total_contracted_eur / m.population : 0;
+                const dotColor = viewMode === 'capita'
+                  ? getDotColorCapita(perCapita)
+                  : getDotColor(m.total_contracted_eur);
                 return (
                   <circle
                     key={m.ico}
                     cx={x}
                     cy={y}
                     r={isHovered ? 18 : 6}
-                    fill={getDotColor(m.total_contracted_eur)}
+                    fill={dotColor}
                     opacity={isHovered ? 1 : 0.85}
                     style={{ cursor: 'pointer', transition: 'r 0.15s ease' }}
                     onMouseEnter={(e) => {
@@ -281,8 +306,13 @@ export default function SlovakiaMap({ onMunicipalityClick }: Props) {
               </div>
               <div className="text-[#94a3b8] text-xs mt-1.5 space-y-0.5">
                 <div>
-                  <span className="text-[#3b82f6] font-mono font-semibold">{formatEur(hoveredMunicipality.total_contracted_eur)}</span>
-                  {' '}celkové fondy
+                  {viewMode === 'capita' && hoveredMunicipality.population > 0 ? (
+                    <><span className="text-[#3b82f6] font-mono font-semibold">
+                      {formatEur(Math.round(hoveredMunicipality.total_contracted_eur / hoveredMunicipality.population))}
+                    </span>{' '}/ obyvateľa</>
+                  ) : (
+                    <><span className="text-[#3b82f6] font-mono font-semibold">{formatEur(hoveredMunicipality.total_contracted_eur)}</span>{' '}celkové fondy</>
+                  )}
                 </div>
                 <div>
                   {hoveredMunicipality.active_projects + hoveredMunicipality.completed_projects} projektov
@@ -295,7 +325,7 @@ export default function SlovakiaMap({ onMunicipalityClick }: Props) {
 
         {/* Dot legend */}
         <div className="flex items-center justify-center gap-4 mt-6 text-xs text-[#94a3b8] flex-wrap">
-          {LEGEND_ITEMS.map(item => (
+          {(viewMode === 'capita' ? LEGEND_ITEMS_CAPITA : LEGEND_ITEMS_TOTAL).map(item => (
             <div key={item.label} className="flex items-center gap-1.5">
               <span
                 className="inline-block w-2.5 h-2.5 rounded-full"
