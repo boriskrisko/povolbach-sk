@@ -55,10 +55,13 @@ export default function MikroregiónySection({ locale }: Props) {
 
   if (!data) return null;
 
+  const totalCount = data.categories.reduce((s, c) => s + c.count, 0);
+  const totalEur = data.categories.reduce((s, c) => s + c.total_contracted_eur, 0);
+
   const heading = locale === 'sk' ? 'Medzikomunálna spolupráca' : 'Inter-Municipal Cooperation';
   const subtitle = locale === 'sk'
-    ? `${data.total_count} združení obcí a mikroregiónov · ${formatAmount(data.total_contracted_eur, locale)} zo štruktúrnych fondov EÚ`
-    : `${data.total_count} inter-municipal bodies · ${formatAmount(data.total_contracted_eur, locale)} from EU structural funds`;
+    ? `${totalCount} združení obcí a mikroregiónov · ${formatAmount(totalEur, locale)} zo štruktúrnych fondov EÚ`
+    : `${totalCount} inter-municipal bodies · ${formatAmount(totalEur, locale)} from EU structural funds`;
   const noteText = locale === 'sk'
     ? 'Tieto prostriedky nie sú zahrnuté v hodnotení jednotlivých obcí — ide o spoločné projekty viacerých samospráv.'
     : 'These funds are not included in individual municipality scores — they represent joint projects across multiple municipalities.';

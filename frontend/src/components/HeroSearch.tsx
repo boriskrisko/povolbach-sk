@@ -2,17 +2,18 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { useData, type Period } from '@/lib/DataContext';
-import { Municipality } from '@/lib/types';
-import { searchMunicipalitiesFlexible, formatAmount, getTotalEur, formatBillions } from '@/lib/utils';
+import { Municipality, GlobalStats } from '@/lib/types';
+import { searchMunicipalitiesFlexible, formatAmount, formatBillions } from '@/lib/utils';
 import { t, type Locale } from '@/lib/translations';
 
 interface Props {
   onSelectMunicipality: (m: Municipality) => void;
   locale: Locale;
   setLocale: (l: Locale) => void;
+  globalStats: GlobalStats | null;
 }
 
-export default function HeroSearch({ onSelectMunicipality, locale, setLocale }: Props) {
+export default function HeroSearch({ onSelectMunicipality, locale, setLocale, globalStats }: Props) {
   const { data, loading, period, setPeriod, periodAvailable } = useData();
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<Municipality[]>([]);
@@ -92,8 +93,8 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale }: 
     }
   };
 
-  const totalCount = data ? Object.keys(data).length : 0;
-  const totalEur = data ? getTotalEur(data) : 0;
+  const totalCount = globalStats?.totalMunicipalities ?? 0;
+  const totalEur = globalStats?.totalFundsEur ?? 0;
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center relative px-4">

@@ -1,9 +1,10 @@
 'use client';
 
 import { useData } from '@/lib/DataContext';
-import { getTotalEur, getWithProjects, getWithoutProjects, formatBillions } from '@/lib/utils';
+import { formatBillions } from '@/lib/utils';
 import { useEffect, useRef, useState } from 'react';
 import { t, type Locale } from '@/lib/translations';
+import { GlobalStats } from '@/lib/types';
 
 function AnimatedCounter({ target, locale }: { target: number; locale: Locale }) {
   const [count, setCount] = useState(0);
@@ -57,18 +58,16 @@ function AnimatedCounter({ target, locale }: { target: number; locale: Locale })
 
 interface Props {
   locale: Locale;
+  globalStats: GlobalStats | null;
 }
 
-export default function StatsContext({ locale }: Props) {
-  const { data, loading, period } = useData();
+export default function StatsContext({ locale, globalStats }: Props) {
+  const { loading, period } = useData();
   const tr = t[locale];
 
-  if (loading || !data) return null;
+  if (loading || !globalStats) return null;
 
-  const totalEur = getTotalEur(data);
-  const withProjects = getWithProjects(data);
-  const withoutProjects = getWithoutProjects(data);
-  const totalMunicipalities = Object.keys(data).length;
+  const { totalFundsEur: totalEur, withProjects, withoutProjects, totalMunicipalities } = globalStats;
   const withPct = Math.round((withProjects / totalMunicipalities) * 100);
   const withoutPct = 100 - withPct;
 

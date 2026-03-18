@@ -72,3 +72,11 @@ export interface RegionStats {
   withProjects: number;
   withoutProjects: number;
 }
+
+export interface GlobalStats {
+  totalMunicipalities: number;
+  totalFundsEur: number;
+  withProjects: number;
+  withoutProjects: number;
+  byRegion: Record<string, { total: number; count: number; zero: number }>;
+}

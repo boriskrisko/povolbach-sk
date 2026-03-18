@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { DataProvider, useData } from '@/lib/DataContext';
-import { Municipality } from '@/lib/types';
+import { Municipality, GlobalStats } from '@/lib/types';
 import { type Locale } from '@/lib/translations';
 import dynamic from 'next/dynamic';
 import HeroSearch from '@/components/HeroSearch';
@@ -15,10 +15,29 @@ import Footer from '@/components/Footer';
 import MunicipalityModal from '@/components/MunicipalityModal';
 
 function PageContent() {
-  const { isTransitioning } = useData();
+  const { data, isTransitioning } = useData();
   const [selectedMunicipality, setSelectedMunicipality] = useState<Municipality | null>(null);
   const [viewMode, setViewMode] = useState<'total' | 'capita'>('total');
   const [locale, setLocale] = useState<Locale>('sk');
+
+  const globalStats = useMemo((): GlobalStats | null => {
+    if (!data) return null;
+    const munis = Object.values(data);
+    return {
+      totalMunicipalities: munis.length,
+      totalFundsEur: munis.reduce((s, m) => s + (m.total_contracted_eur || 0), 0),
+      withProjects: munis.filter(m => m.total_contracted_eur > 0).length,
+      withoutProjects: munis.filter(m => m.total_contracted_eur === 0).length,
+      byRegion: munis.reduce((acc, m) => {
+        const r = m.region || 'Iné';
+        if (!acc[r]) acc[r] = { total: 0, count: 0, zero: 0 };
+        acc[r].total += m.total_contracted_eur || 0;
+        acc[r].count++;
+        if (!m.total_contracted_eur) acc[r].zero++;
+        return acc;
+      }, {} as Record<string, { total: number; count: number; zero: number }>),
+    };
+  }, [data]);
 
   return (
     <main className="min-h-screen bg-[#0a0a0f]">
@@ -26,6 +45,7 @@ function PageContent() {
         onSelectMunicipality={setSelectedMunicipality}
         locale={locale}
         setLocale={setLocale}
+        globalStats={globalStats}
       />
       <div style={{ opacity: isTransitioning ? 0.5 : 1, transition: 'opacity 0.25s ease' }}>
         <Leaderboard
@@ -33,6 +53,7 @@ function PageContent() {
           viewMode={viewMode}
           setViewMode={setViewMode}
           locale={locale}
+          globalStats={globalStats}
         />
         <VucSection
           viewMode={viewMode}
@@ -46,7 +67,7 @@ function PageContent() {
           setViewMode={setViewMode}
           locale={locale}
         />
-        <StatsContext locale={locale} />
+        <StatsContext locale={locale} globalStats={globalStats} />
         <Footer locale={locale} />
       </div>
       <MunicipalityModal

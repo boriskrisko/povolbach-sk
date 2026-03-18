@@ -1,8 +1,8 @@
 'use client';
 
 import { useData } from '@/lib/DataContext';
-import { Municipality } from '@/lib/types';
-import { formatAmount, getWithoutProjects } from '@/lib/utils';
+import { Municipality, GlobalStats } from '@/lib/types';
+import { formatAmount } from '@/lib/utils';
 import ViewModeToggle from './ViewModeToggle';
 import { t, type Locale } from '@/lib/translations';
 
@@ -13,6 +13,7 @@ interface Props {
   viewMode: ViewMode;
   setViewMode: (mode: ViewMode) => void;
   locale: Locale;
+  globalStats: GlobalStats | null;
 }
 
 function getCapita(m: Municipality): number {
@@ -71,13 +72,14 @@ function LeaderboardRow({
   );
 }
 
-export default function Leaderboard({ onSelectMunicipality, viewMode, setViewMode, locale }: Props) {
+export default function Leaderboard({ onSelectMunicipality, viewMode, setViewMode, locale, globalStats }: Props) {
   const { data, loading, period } = useData();
   const tr = t[locale];
 
   if (loading || !data) return null;
 
   const all = Object.values(data);
+  const zeroCount = globalStats?.withoutProjects ?? all.filter(m => m.total_contracted_eur === 0).length;
 
   const top10 = viewMode === 'capita'
     ? all.filter(m => m.population > 0 && m.total_contracted_eur > 0)
@@ -92,8 +94,6 @@ export default function Leaderboard({ onSelectMunicipality, viewMode, setViewMod
     : all.filter(m => m.total_contracted_eur > 0)
         .sort((a, b) => a.total_contracted_eur - b.total_contracted_eur)
         .slice(0, 10);
-
-  const zeroCount = getWithoutProjects(data);
 
   const maxTop = viewMode === 'capita'
     ? (top10[0] ? getCapita(top10[0]) : 1)
