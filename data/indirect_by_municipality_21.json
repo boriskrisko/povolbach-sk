@@ -1,1 +1,898 @@
-{}
+{
+  "00314099": {
+    "indirect_projects": [
+      {
+        "name": "D3 Žilina, Brodno – Kysucké Nové Mesto",
+        "beneficiary_name": "Národná diaľničná spoločnosť, a.s.",
+        "beneficiary_ico": "35919001",
+        "contracted_eur": 447101278.38,
+        "status": "V realizácii"
+      },
+      {
+        "name": "D3 Kysucké Nové Mesto - Oščadnica",
+        "beneficiary_name": "Národná diaľničná spoločnosť, a.s.",
+        "beneficiary_ico": "35919001",
+        "contracted_eur": 294325445.84,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 741426724.22,
+    "ico": "00314099",
+    "municipality": "Kysucké Nové Mesto"
+  },
+  "00321796": {
+    "indirect_projects": [
+      {
+        "name": "D3 Žilina, Brodno – Kysucké Nové Mesto",
+        "beneficiary_name": "Národná diaľničná spoločnosť, a.s.",
+        "beneficiary_ico": "35919001",
+        "contracted_eur": 447101278.38,
+        "status": "V realizácii"
+      },
+      {
+        "name": "Modernizácia železničnej trate Žilina – Košice, úsek trate Poprad Tatry (mimo) – Krompachy, Stavba A.1 Poprad Tatry (mimo) – Vydrník",
+        "beneficiary_name": "Železnice Slovenskej republiky",
+        "beneficiary_ico": "31364501",
+        "contracted_eur": 438330121.55,
+        "status": "V realizácii"
+      },
+      {
+        "name": "ŽSR, Dostavba zriaďovacej stanice Žilina – Teplička a nadväzujúcej železničnej infraštruktúry v uzle Žilina, I. etapa (2.fáza)",
+        "beneficiary_name": "Železnice Slovenskej republiky",
+        "beneficiary_ico": "31364501",
+        "contracted_eur": 142388191.65,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 1027819591.58,
+    "ico": "00321796",
+    "municipality": "Žilina"
+  },
+  "00314170": {
+    "indirect_projects": [
+      {
+        "name": "D3 Kysucké Nové Mesto - Oščadnica",
+        "beneficiary_name": "Národná diaľničná spoločnosť, a.s.",
+        "beneficiary_ico": "35919001",
+        "contracted_eur": 294325445.84,
+        "status": "V realizácii"
+      },
+      {
+        "name": "D3 Oščadnica - Čadca, Bukov, II.polprofil",
+        "beneficiary_name": "Národná diaľničná spoločnosť, a.s.",
+        "beneficiary_ico": "35919001",
+        "contracted_eur": 260633521.57,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 554958967.41,
+    "ico": "00314170",
+    "municipality": "Oščadnica"
+  },
+  "00324361": {
+    "indirect_projects": [
+      {
+        "name": "R2 Košice, Šaca – Košické Oľšany (2. úsek) – II. fáza",
+        "beneficiary_name": "Národná diaľničná spoločnosť, a.s.",
+        "beneficiary_ico": "35919001",
+        "contracted_eur": 62132394.39,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 62132394.39,
+    "ico": "00324361",
+    "municipality": "Košické Oľšany"
+  },
+  "00691135": {
+    "indirect_projects": [
+      {
+        "name": "Modernizácia železničnej trate Žilina – Košice, úsek trate Poprad Tatry (mimo) – Krompachy, Stavba A.1 Poprad Tatry (mimo) – Vydrník",
+        "beneficiary_name": "Železnice Slovenskej republiky",
+        "beneficiary_ico": "31364501",
+        "contracted_eur": 438330121.55,
+        "status": "V realizácii"
+      },
+      {
+        "name": "R2 Košice, Šaca – Košické Oľšany (2. úsek) – II. fáza",
+        "beneficiary_name": "Národná diaľničná spoločnosť, a.s.",
+        "beneficiary_ico": "35919001",
+        "contracted_eur": 62132394.39,
+        "status": "V realizácii"
+      },
+      {
+        "name": "OC Kaufland Košice, Popradská ul, Inštalácia fotovoltického lokálneho zdroja",
+        "beneficiary_name": "Kaufland Slovenská republika v.o.s.",
+        "beneficiary_ico": "35790164",
+        "contracted_eur": 431243.6,
+        "status": "V realizácii"
+      },
+      {
+        "name": "Rekonštrukcia mosta M836 cez horský potok hranica okresu/Košice Spišská Nová Ves",
+        "beneficiary_name": "Správa ciest Košického samosprávneho kraja",
+        "beneficiary_ico": "35555777",
+        "contracted_eur": 0,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 500893759.54,
+    "ico": "00691135",
+    "municipality": "Košice"
+  },
+  "00314901": {
+    "indirect_projects": [
+      {
+        "name": "R3 Tvrdošín – Nižná, II. fáza",
+        "beneficiary_name": "Národná diaľničná spoločnosť, a.s.",
+        "beneficiary_ico": "35919001",
+        "contracted_eur": 20692311.49,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 20692311.49,
+    "ico": "00314901",
+    "municipality": "Tvrdošín"
+  },
+  "00313971": {
+    "indirect_projects": [
+      {
+        "name": "D3 Oščadnica - Čadca, Bukov, II.polprofil",
+        "beneficiary_name": "Národná diaľničná spoločnosť, a.s.",
+        "beneficiary_ico": "35919001",
+        "contracted_eur": 260633521.57,
+        "status": "V realizácii"
+      },
+      {
+        "name": "ŽSR, Modernizácia koridoru, štátna hranica ČR/SR – Čadca  – Krásno nad Kysucou (mimo), železničná trať, úsek Svrčinovec – štátna hranica SR/ČR (2. fáza)",
+        "beneficiary_name": "Železnice Slovenskej republiky",
+        "beneficiary_ico": "31364501",
+        "contracted_eur": 29343243.72,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 289976765.28999996,
+    "ico": "00313971",
+    "municipality": "Čadca"
+  },
+  "00321699": {
+    "indirect_projects": [
+      {
+        "name": "Zlepšovanie energetickej hospodárnosti a obnovy verejných budov - Terchová OO PZ",
+        "beneficiary_name": "Ministerstvo vnútra Slovenskej republiky",
+        "beneficiary_ico": "00151866",
+        "contracted_eur": 344442.7,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 344442.7,
+    "ico": "00321699",
+    "municipality": "Terchová"
+  },
+  "00321117": {
+    "indirect_projects": [
+      {
+        "name": "Zlepšovanie energetickej hospodárnosti a obnovy verejných budov - Žarnovica OO PZ",
+        "beneficiary_name": "Ministerstvo vnútra Slovenskej republiky",
+        "beneficiary_ico": "00151866",
+        "contracted_eur": 393573.46,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 393573.46,
+    "ico": "00321117",
+    "municipality": "Žarnovica"
+  },
+  "00324965": {
+    "indirect_projects": [
+      {
+        "name": "Zlepšovanie energetickej hospodárnosti a obnovy verejných budov - Žarnovica OO PZ",
+        "beneficiary_name": "Ministerstvo vnútra Slovenskej republiky",
+        "beneficiary_ico": "00151866",
+        "contracted_eur": 393573.46,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 393573.46,
+    "ico": "00324965",
+    "municipality": "Žarnov"
+  },
+  "00323021": {
+    "indirect_projects": [
+      {
+        "name": "Zlepšovanie energetickej hospodárnosti a obnovy verejných budov - Humenné OÚ",
+        "beneficiary_name": "Ministerstvo vnútra Slovenskej republiky",
+        "beneficiary_ico": "00151866",
+        "contracted_eur": 1244648.77,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 1244648.77,
+    "ico": "00323021",
+    "municipality": "Humenné"
+  },
+  "00316342": {
+    "indirect_projects": [
+      {
+        "name": "Zlepšovanie energetickej hospodárnosti a obnovy verejných budov - Poltár OO PZ",
+        "beneficiary_name": "Ministerstvo vnútra Slovenskej republiky",
+        "beneficiary_ico": "00151866",
+        "contracted_eur": 959755.76,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 959755.76,
+    "ico": "00316342",
+    "municipality": "Poltár"
+  },
+  "00309150": {
+    "indirect_projects": [
+      {
+        "name": "Zlepšovanie energetickej hospodárnosti a obnovy verejných budov - Nové Zámky OR PZ",
+        "beneficiary_name": "Ministerstvo vnútra Slovenskej republiky",
+        "beneficiary_ico": "00151866",
+        "contracted_eur": 2794672.3,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 2794672.3,
+    "ico": "00309150",
+    "municipality": "Nové Zámky"
+  },
+  "00305383": {
+    "indirect_projects": [
+      {
+        "name": "Zlepšovanie energetickej hospodárnosti a obnovy verejných budov - Dunajská Streda OR PZ",
+        "beneficiary_name": "Ministerstvo vnútra Slovenskej republiky",
+        "beneficiary_ico": "00151866",
+        "contracted_eur": 2664879.84,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 2664879.84,
+    "ico": "00305383",
+    "municipality": "Dunajská Streda"
+  },
+  "00327646": {
+    "indirect_projects": [
+      {
+        "name": "Budovanie systému včasného varovania v Košickom a v Prešovskom kraji",
+        "beneficiary_name": "Ministerstvo vnútra Slovenskej republiky",
+        "beneficiary_ico": "00151866",
+        "contracted_eur": 7432056.98,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 7432056.98,
+    "ico": "00327646",
+    "municipality": "Prešov"
+  },
+  "00314072": {
+    "indirect_projects": [
+      {
+        "name": "ŽSR, Modernizácia koridoru, štátna hranica ČR/SR – Čadca  – Krásno nad Kysucou (mimo), železničná trať, úsek Svrčinovec – štátna hranica SR/ČR (2. fáza)",
+        "beneficiary_name": "Železnice Slovenskej republiky",
+        "beneficiary_ico": "31364501",
+        "contracted_eur": 29343243.72,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 29343243.72,
+    "ico": "00314072",
+    "municipality": "Krásno nad Kysucou"
+  },
+  "00314323": {
+    "indirect_projects": [
+      {
+        "name": "ŽSR, Modernizácia koridoru, štátna hranica ČR/SR – Čadca  – Krásno nad Kysucou (mimo), železničná trať, úsek Svrčinovec – štátna hranica SR/ČR (2. fáza)",
+        "beneficiary_name": "Železnice Slovenskej republiky",
+        "beneficiary_ico": "31364501",
+        "contracted_eur": 29343243.72,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 29343243.72,
+    "ico": "00314323",
+    "municipality": "Svrčinovec"
+  },
+  "00699241": {
+    "indirect_projects": [
+      {
+        "name": "ŽSR, Modernizácia koridoru, štátna hranica ČR/SR – Čadca  – Krásno nad Kysucou (mimo), železničná trať, úsek Svrčinovec – štátna hranica SR/ČR (2. fáza)",
+        "beneficiary_name": "Železnice Slovenskej republiky",
+        "beneficiary_ico": "31364501",
+        "contracted_eur": 29343243.72,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 29343243.72,
+    "ico": "00699241",
+    "municipality": "Krásno"
+  },
+  "00329282": {
+    "indirect_projects": [
+      {
+        "name": "Modernizácia železničnej trate Žilina – Košice, úsek trate Poprad Tatry (mimo) – Krompachy, Stavba A.1 Poprad Tatry (mimo) – Vydrník",
+        "beneficiary_name": "Železnice Slovenskej republiky",
+        "beneficiary_ico": "31364501",
+        "contracted_eur": 438330121.55,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 438330121.55,
+    "ico": "00329282",
+    "municipality": "Krompachy"
+  },
+  "00326747": {
+    "indirect_projects": [
+      {
+        "name": "Modernizácia železničnej trate Žilina – Košice, úsek trate Poprad Tatry (mimo) – Krompachy, Stavba A.1 Poprad Tatry (mimo) – Vydrník",
+        "beneficiary_name": "Železnice Slovenskej republiky",
+        "beneficiary_ico": "31364501",
+        "contracted_eur": 438330121.55,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 438330121.55,
+    "ico": "00326747",
+    "municipality": "Vydrník"
+  },
+  "00326470": {
+    "indirect_projects": [
+      {
+        "name": "Modernizácia železničnej trate Žilina – Košice, úsek trate Poprad Tatry (mimo) – Krompachy, Stavba A.1 Poprad Tatry (mimo) – Vydrník",
+        "beneficiary_name": "Železnice Slovenskej republiky",
+        "beneficiary_ico": "31364501",
+        "contracted_eur": 438330121.55,
+        "status": "V realizácii"
+      },
+      {
+        "name": "Rozšírenie systémov zberu biologicky rozložiteľného odpadu (BRO) v meste Poprad",
+        "beneficiary_name": "Správa mestských komunikácií Poprad",
+        "beneficiary_ico": "00696463",
+        "contracted_eur": 578442.0,
+        "status": "V realizácii"
+      },
+      {
+        "name": "OC Kaufland Košice, Popradská ul, Inštalácia fotovoltického lokálneho zdroja",
+        "beneficiary_name": "Kaufland Slovenská republika v.o.s.",
+        "beneficiary_ico": "35790164",
+        "contracted_eur": 431243.6,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 439339807.15000004,
+    "ico": "00326470",
+    "municipality": "Poprad"
+  },
+  "00329690": {
+    "indirect_projects": [
+      {
+        "name": "ŽSR, Dostavba zriaďovacej stanice Žilina – Teplička a nadväzujúcej železničnej infraštruktúry v uzle Žilina, I. etapa (2.fáza)",
+        "beneficiary_name": "Železnice Slovenskej republiky",
+        "beneficiary_ico": "31364501",
+        "contracted_eur": 142388191.65,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 142388191.65,
+    "ico": "00329690",
+    "municipality": "Teplička"
+  },
+  "00603414": {
+    "indirect_projects": [
+      {
+        "name": "Výstavba terminálov integrovanej osobnej prepravy v Bratislave - Bratislava - Lamačská brána, projektová príprava (DSPRS) a realizácia",
+        "beneficiary_name": "Železnice Slovenskej republiky",
+        "beneficiary_ico": "31364501",
+        "contracted_eur": 5262650.41,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 5262650.41,
+    "ico": "00603414",
+    "municipality": "Bratislava - Lamač"
+  },
+  "00603481": {
+    "indirect_projects": [
+      {
+        "name": "Sanácia environmentálnej záťaže na lokalite B2 (020) / Bratislava - Vrakuňa - Vrakunská cesta - skládka CHZJD (SK/EZ/B2/136)",
+        "beneficiary_name": "Ministerstvo životného prostredia Slovenskej republiky",
+        "beneficiary_ico": "42181810",
+        "contracted_eur": 94274852.9,
+        "status": "V realizácii"
+      },
+      {
+        "name": "Sanácia environmentálnej záťaže na lokalite B2 (004) Bratislava - Ružinov - Čierny Les (SK/EZ/B2/120) - druhá fáza",
+        "beneficiary_name": "Ministerstvo životného prostredia Slovenskej republiky",
+        "beneficiary_ico": "42181810",
+        "contracted_eur": 6088610.1,
+        "status": "V realizácii"
+      },
+      {
+        "name": "Výstavba terminálov integrovanej osobnej prepravy v Bratislave - Bratislava - Lamačská brána, projektová príprava (DSPRS) a realizácia",
+        "beneficiary_name": "Železnice Slovenskej republiky",
+        "beneficiary_ico": "31364501",
+        "contracted_eur": 5262650.41,
+        "status": "V realizácii"
+      },
+      {
+        "name": "Výstavba terminálov integrovanej osobnej prepravy v Bratislave - Bratislava - Vrakuňa, projektová príprava (DSPRS) a realizácia",
+        "beneficiary_name": "Železnice Slovenskej republiky",
+        "beneficiary_ico": "31364501",
+        "contracted_eur": 3393502.32,
+        "status": "V realizácii"
+      },
+      {
+        "name": "Bratislava, Kutuzovove kasárne – rekonštrukcia budovy č.19",
+        "beneficiary_name": "Ministerstvo obrany Slovenskej republiky",
+        "beneficiary_ico": "30845572",
+        "contracted_eur": 811883.28,
+        "status": "V realizácii"
+      },
+      {
+        "name": "OC Kaufland Bratislava Podunajské Biskupice, Inštalácia fotovoltického lokálneho zdroja",
+        "beneficiary_name": "Kaufland Slovenská republika v.o.s.",
+        "beneficiary_ico": "35790164",
+        "contracted_eur": 439139.8,
+        "status": "V realizácii"
+      },
+      {
+        "name": "OC Kaufland Bratislava Rača, Inštalácia fotovoltického lokálneho zdroja",
+        "beneficiary_name": "Kaufland Slovenská republika v.o.s.",
+        "beneficiary_ico": "35790164",
+        "contracted_eur": 362801.32,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 110633440.13,
+    "ico": "00603481",
+    "municipality": "Bratislava"
+  },
+  "00324451": {
+    "indirect_projects": [
+      {
+        "name": "Elektrifikácia trate Haniska pri Košiciach - Moldava nad Bodvou, realizácia - 2. fáza",
+        "beneficiary_name": "Železnice Slovenskej republiky",
+        "beneficiary_ico": "31364501",
+        "contracted_eur": 35802040.51,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 35802040.51,
+    "ico": "00324451",
+    "municipality": "Moldava nad Bodvou"
+  },
+  "00603295": {
+    "indirect_projects": [
+      {
+        "name": "Sanácia environmentálnej záťaže na lokalite B2 (020) / Bratislava - Vrakuňa - Vrakunská cesta - skládka CHZJD (SK/EZ/B2/136)",
+        "beneficiary_name": "Ministerstvo životného prostredia Slovenskej republiky",
+        "beneficiary_ico": "42181810",
+        "contracted_eur": 94274852.9,
+        "status": "V realizácii"
+      },
+      {
+        "name": "Výstavba terminálov integrovanej osobnej prepravy v Bratislave - Bratislava - Vrakuňa, projektová príprava (DSPRS) a realizácia",
+        "beneficiary_name": "Železnice Slovenskej republiky",
+        "beneficiary_ico": "31364501",
+        "contracted_eur": 3393502.32,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 97668355.22,
+    "ico": "00603295",
+    "municipality": "Bratislava - Vrakuňa"
+  },
+  "00329614": {
+    "indirect_projects": [
+      {
+        "name": "Rekonštrukcia mosta M836 cez horský potok hranica okresu/Košice Spišská Nová Ves",
+        "beneficiary_name": "Správa ciest Košického samosprávneho kraja",
+        "beneficiary_ico": "35555777",
+        "contracted_eur": 0,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 0,
+    "ico": "00329614",
+    "municipality": "Spišská Nová Ves"
+  },
+  "00650200": {
+    "indirect_projects": [
+      {
+        "name": "Rekonštrukcia mosta M836 cez horský potok hranica okresu/Košice Spišská Nová Ves",
+        "beneficiary_name": "Správa ciest Košického samosprávneho kraja",
+        "beneficiary_ico": "35555777",
+        "contracted_eur": 0,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 0,
+    "ico": "00650200",
+    "municipality": "Nová Ves"
+  },
+  "00329177": {
+    "indirect_projects": [
+      {
+        "name": "Most cez Hornád – Chrasť nad Hornádom, oprava rímsy, chodníkov",
+        "beneficiary_name": "Správa ciest Košického samosprávneho kraja",
+        "beneficiary_ico": "35555777",
+        "contracted_eur": 656968.9,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 656968.9,
+    "ico": "00329177",
+    "municipality": "Chrasť nad Hornádom"
+  },
+  "00327883": {
+    "indirect_projects": [
+      {
+        "name": "Rekonštrukcia mosta M4047 cez rieku Torysa v obci Ploské",
+        "beneficiary_name": "Správa ciest Košického samosprávneho kraja",
+        "beneficiary_ico": "35555777",
+        "contracted_eur": 2091510.08,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 2091510.08,
+    "ico": "00327883",
+    "municipality": "Torysa"
+  },
+  "35550091": {
+    "indirect_projects": [
+      {
+        "name": "Komplexná rekonštrukcia cesty s príslušenstvom od križovatky Kostoľany nad Hornádom do obce Sokoľ",
+        "beneficiary_name": "Správa ciest Košického samosprávneho kraja",
+        "beneficiary_ico": "35555777",
+        "contracted_eur": 2066318.56,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 2066318.56,
+    "ico": "35550091",
+    "municipality": "Kostoľany nad Hornádom"
+  },
+  "00324752": {
+    "indirect_projects": [
+      {
+        "name": "Komplexná rekonštrukcia cesty s príslušenstvom od križovatky Kostoľany nad Hornádom do obce Sokoľ",
+        "beneficiary_name": "Správa ciest Košického samosprávneho kraja",
+        "beneficiary_ico": "35555777",
+        "contracted_eur": 2066318.56,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 2066318.56,
+    "ico": "00324752",
+    "municipality": "Sokoľ"
+  },
+  "00690295": {
+    "indirect_projects": [
+      {
+        "name": "Rekonštrukcia mosta M3219 cez potok Čečanka za obcou Mokrance",
+        "beneficiary_name": "Správa ciest Košického samosprávneho kraja",
+        "beneficiary_ico": "35555777",
+        "contracted_eur": 562632.27,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 562632.27,
+    "ico": "00690295",
+    "municipality": "Mokrance"
+  },
+  "00324094": {
+    "indirect_projects": [
+      {
+        "name": "Rekonštrukcia mosta M2575 cez rieku Bodva pred obcou Debraď",
+        "beneficiary_name": "Správa ciest Košického samosprávneho kraja",
+        "beneficiary_ico": "35555777",
+        "contracted_eur": 927920.39,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 927920.39,
+    "ico": "00324094",
+    "municipality": "Debraď"
+  },
+  "00691232": {
+    "indirect_projects": [
+      {
+        "name": "Rekonštrukcia cesty Hrašovík spojka",
+        "beneficiary_name": "Správa ciest Košického samosprávneho kraja",
+        "beneficiary_ico": "35555777",
+        "contracted_eur": 1273763.05,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 1273763.05,
+    "ico": "00691232",
+    "municipality": "Hrašovík"
+  },
+  "00331996": {
+    "indirect_projects": [
+      {
+        "name": "Most M917 Trebišov (nadjazd) na ceste III/3710",
+        "beneficiary_name": "Správa ciest Košického samosprávneho kraja",
+        "beneficiary_ico": "35555777",
+        "contracted_eur": 8092928.36,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 8092928.36,
+    "ico": "00331996",
+    "municipality": "Trebišov"
+  },
+  "00310255": {
+    "indirect_projects": [
+      {
+        "name": "Sanácia vybraných environmentálnych záťaží Slovenskej republiky (8) – PE (001) / Bošany - skládka koželužní I, (SK/EZ/PE/637)",
+        "beneficiary_name": "Ministerstvo životného prostredia Slovenskej republiky",
+        "beneficiary_ico": "42181810",
+        "contracted_eur": 7384722.72,
+        "status": "V realizácii"
+      },
+      {
+        "name": "Sanácia vybraných environmentálnych záťaží Slovenskej republiky (8) -  PE (1874) Bošany - skládka koželužní II, (SK/EZ/PE/1874)",
+        "beneficiary_name": "Ministerstvo životného prostredia Slovenskej republiky",
+        "beneficiary_ico": "42181810",
+        "contracted_eur": 3650326.79,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 11035049.51,
+    "ico": "00310255",
+    "municipality": "Bošany"
+  },
+  "00603155": {
+    "indirect_projects": [
+      {
+        "name": "Sanácia environmentálnej záťaže na lokalite B2 (004) Bratislava - Ružinov - Čierny Les (SK/EZ/B2/120) - druhá fáza",
+        "beneficiary_name": "Ministerstvo životného prostredia Slovenskej republiky",
+        "beneficiary_ico": "42181810",
+        "contracted_eur": 6088610.1,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 6088610.1,
+    "ico": "00603155",
+    "municipality": "Bratislava - Ružinov"
+  },
+  "00321125": {
+    "indirect_projects": [
+      {
+        "name": "Sanácia environmentálnej záťaže na lokalite ZH (015) Žiar nad Hronom - stará skládka PO ZSNP (SK/EZ/ZH/1101) - druhá fáza",
+        "beneficiary_name": "Ministerstvo životného prostredia Slovenskej republiky",
+        "beneficiary_ico": "42181810",
+        "contracted_eur": 6775695.72,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 6775695.72,
+    "ico": "00321125",
+    "municipality": "Žiar nad Hronom"
+  },
+  "00319031": {
+    "indirect_projects": [
+      {
+        "name": "Sanácia environmentálnej záťaže na lokalite RS (1980) Rimavská Sobota - areál po SA - priemyselný park (SK/EZ/RS/1980) - druhá fáza",
+        "beneficiary_name": "Ministerstvo životného prostredia Slovenskej republiky",
+        "beneficiary_ico": "42181810",
+        "contracted_eur": 6117256.04,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 6117256.04,
+    "ico": "00319031",
+    "municipality": "Rimavská Sobota"
+  },
+  "00313751": {
+    "indirect_projects": [
+      {
+        "name": "Sanácia vybraných environmentálnych záťaží Slovenskej republiky  - BR (015) / Predajná – skládka PO Predajná I (SK/EZ/BR/73) a BR (016) / Predajná – skládka PO Predajná II (SK/EZ/BR/74)",
+        "beneficiary_name": "Ministerstvo životného prostredia Slovenskej republiky",
+        "beneficiary_ico": "42181810",
+        "contracted_eur": 66238456.69,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 66238456.69,
+    "ico": "00313751",
+    "municipality": "Predajná"
+  },
+  "00307203": {
+    "indirect_projects": [
+      {
+        "name": "Sanácia vybraných environmentálnych záťaží Slovenskej republiky (8) - LV (008) / Levice - práčovne a čistiarne (SK/EZ/LV/434)",
+        "beneficiary_name": "Ministerstvo životného prostredia Slovenskej republiky",
+        "beneficiary_ico": "42181810",
+        "contracted_eur": 1250312.86,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 1250312.86,
+    "ico": "00307203",
+    "municipality": "Levice"
+  },
+  "00331414": {
+    "indirect_projects": [
+      {
+        "name": "Sanácia vybraných environmentálnych záťaží Slovenskej republiky (8) - TV (004) / Čeľovce - sklad pesticídov (SK/EZ/TV/989)",
+        "beneficiary_name": "Ministerstvo životného prostredia Slovenskej republiky",
+        "beneficiary_ico": "42181810",
+        "contracted_eur": 663723.64,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 663723.64,
+    "ico": "00331414",
+    "municipality": "Čeľovce"
+  },
+  "00307301": {
+    "indirect_projects": [
+      {
+        "name": "Sanácia vybraných environmentálnych záťaží Slovenskej republiky (8) - LV (012) Nová Dedina - sklad pesticídov (SK/EZ/LV/438)",
+        "beneficiary_name": "Ministerstvo životného prostredia Slovenskej republiky",
+        "beneficiary_ico": "42181810",
+        "contracted_eur": 516219.1,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 516219.1,
+    "ico": "00307301",
+    "municipality": "Nová Dedina"
+  },
+  "00312002": {
+    "indirect_projects": [
+      {
+        "name": "Sanácia environmentálnej záťaže na lokalite NM (013) Stará Turá - skládka KO Drahý vrch (SK/EZ/NM/535) - druhá fáza",
+        "beneficiary_name": "Ministerstvo životného prostredia Slovenskej republiky",
+        "beneficiary_ico": "42181810",
+        "contracted_eur": 5533425.61,
+        "status": "Ukončený"
+      }
+    ],
+    "indirect_total_eur": 5533425.61,
+    "ico": "00312002",
+    "municipality": "Stará Turá"
+  },
+  "00647985": {
+    "indirect_projects": [
+      {
+        "name": "OC Kaufland Bratislava Podunajské Biskupice, Inštalácia fotovoltického lokálneho zdroja",
+        "beneficiary_name": "Kaufland Slovenská republika v.o.s.",
+        "beneficiary_ico": "35790164",
+        "contracted_eur": 439139.8,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 439139.8,
+    "ico": "00647985",
+    "municipality": "Biskupice"
+  },
+  "00305863": {
+    "indirect_projects": [
+      {
+        "name": "Sanácia environmentálnej záťaže v lokalite Boldog – S od obce –  sklad pesticídov",
+        "beneficiary_name": "Ministerstvo hospodárstva Slovenskej republiky",
+        "beneficiary_ico": "00686832",
+        "contracted_eur": 760594.08,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 760594.08,
+    "ico": "00305863",
+    "municipality": "Boldog"
+  },
+  "00304697": {
+    "indirect_projects": [
+      {
+        "name": "Prieskum environmentálnej záťaže Budmerice – skládka Mrchovisko",
+        "beneficiary_name": "Ministerstvo hospodárstva Slovenskej republiky",
+        "beneficiary_ico": "00686832",
+        "contracted_eur": 364498.42,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 364498.42,
+    "ico": "00304697",
+    "municipality": "Budmerice"
+  },
+  "00682209": {
+    "indirect_projects": [
+      {
+        "name": "Prieskum environmentálnej záťaže Vlčkovce – bývalá obaľovačka bitumenových zmesí",
+        "beneficiary_name": "Ministerstvo hospodárstva Slovenskej republiky",
+        "beneficiary_ico": "00686832",
+        "contracted_eur": 354594.6,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 354594.6,
+    "ico": "00682209",
+    "municipality": "Vlčkovce"
+  },
+  "00313688": {
+    "indirect_projects": [
+      {
+        "name": "Prieskum environmentálnej záťaže Podbrezová - bývalá antimónová huta Vajsková",
+        "beneficiary_name": "Ministerstvo hospodárstva Slovenskej republiky",
+        "beneficiary_ico": "00686832",
+        "contracted_eur": 544593.47,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 544593.47,
+    "ico": "00313688",
+    "municipality": "Podbrezová"
+  },
+  "00316792": {
+    "indirect_projects": [
+      {
+        "name": "Príprava Programov starostlivosti pre vybrané ÚEV v kompetenčnom území Správy Národného parku Veľká Fatra so sídlom v Martine",
+        "beneficiary_name": "Správa Národného parku Veľká Fatra so sídlom v Martine",
+        "beneficiary_ico": "54435366",
+        "contracted_eur": 256201.09,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 256201.09,
+    "ico": "00316792",
+    "municipality": "Martin"
+  },
+  "00594768": {
+    "indirect_projects": [
+      {
+        "name": "Vypracovanie Programov starostlivosti pre vybrané ÚEV v kompetenčnom území Správy NP Slovenský kras so sídlom v Brzotíne",
+        "beneficiary_name": "Správa Národného parku Slovenský kras so sídlom v Brzotíne",
+        "beneficiary_ico": "54435463",
+        "contracted_eur": 139995.93,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 139995.93,
+    "ico": "00594768",
+    "municipality": "Brzotín"
+  },
+  "00326356": {
+    "indirect_projects": [
+      {
+        "name": "Zachovanie a zlepšenie stavu biotopov a druhov v PR Veľká Lučivná",
+        "beneficiary_name": "Správa Národného parku Malá Fatra so sídlom vo Varíne",
+        "beneficiary_ico": "54435340",
+        "contracted_eur": 153194.63,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 153194.63,
+    "ico": "00326356",
+    "municipality": "Lučivná"
+  },
+  "00322024": {
+    "indirect_projects": [
+      {
+        "name": "Eliminácia bezpečnostných rizík na ceste III/3491, Hertník - Kľušovská Zábava",
+        "beneficiary_name": "Správa a údržba ciest Prešovského samosprávneho kraja",
+        "beneficiary_ico": "37936859",
+        "contracted_eur": 3902157.43,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 3902157.43,
+    "ico": "00322024",
+    "municipality": "Hertník"
+  },
+  "00322113": {
+    "indirect_projects": [
+      {
+        "name": "Eliminácia bezpečnostných rizík na ceste III/3491, Hertník - Kľušovská Zábava",
+        "beneficiary_name": "Správa a údržba ciest Prešovského samosprávneho kraja",
+        "beneficiary_ico": "37936859",
+        "contracted_eur": 3902157.43,
+        "status": "V realizácii"
+      }
+    ],
+    "indirect_total_eur": 3902157.43,
+    "ico": "00322113",
+    "municipality": "Kľušov"
+  }
+}
