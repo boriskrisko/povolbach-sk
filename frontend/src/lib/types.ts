@@ -6,6 +6,27 @@ export interface IndirectProject {
   status: string;
 }
 
+export interface SubsidiaryOrg {
+  ico: string;
+  name: string;
+  total_contracted_eur: number;
+  projects_count: number;
+}
+
+export interface VucStats {
+  ico: string;
+  name: string;
+  name_short: string;
+  region_key: string;
+  population: number;
+  total_contracted_eur: number;
+  projects_active: number;
+  projects_completed: number;
+  projects: ProjectSummary[];
+  subsidiary_total_eur: number;
+  subsidiary_orgs: SubsidiaryOrg[];
+}
+
 export interface Municipality {
   ico: string;
   official_name: string;
@@ -25,6 +46,8 @@ export interface Municipality {
   projects: ProjectSummary[];
   indirect_projects?: IndirectProject[];
   indirect_total_eur?: number;
+  subsidiary_total_eur?: number;
+  subsidiary_orgs?: SubsidiaryOrg[];
 }
 
 export interface ProjectSummary {

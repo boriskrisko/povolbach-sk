@@ -1,0 +1,6737 @@
+{
+  "00313319": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31908969",
+        "name": "Nemocnica s poliklinikou Brezno, n.o.",
+        "total_contracted_eur": 9607326.33,
+        "projects_count": 3
+      },
+      {
+        "ico": "45016089",
+        "name": "Základná škola s materskou školou Karola Rapoša, Pionierska",
+        "total_contracted_eur": 159221.12,
+        "projects_count": 1
+      },
+      {
+        "ico": "00160547",
+        "name": "Gymnázium Jána Chalupku",
+        "total_contracted_eur": 141120.76,
+        "projects_count": 1
+      },
+      {
+        "ico": "37828533",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 60078.06,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 9967746.27,
+    "ico": "00313319",
+    "municipality": "Brezno"
+  },
+  "00330167": {
+    "subsidiary_orgs": [
+      {
+        "ico": "53265301",
+        "name": "Spojená škola, Jarmočná 108, Stará Ľubovňa",
+        "total_contracted_eur": 7506345.68,
+        "projects_count": 8
+      },
+      {
+        "ico": "00161217",
+        "name": "Gymnázium Terézie Vansovej",
+        "total_contracted_eur": 306265.34,
+        "projects_count": 1
+      },
+      {
+        "ico": "56409311",
+        "name": "Spojená škola, Štúrova 383/3, Stará Ľubovňa",
+        "total_contracted_eur": 167490.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35534681",
+        "name": "Základná škola Komenského 6, Stará Ľubovňa",
+        "total_contracted_eur": 145260.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37781243",
+        "name": "Ľubovnianska knižnica",
+        "total_contracted_eur": 84761.12,
+        "projects_count": 1
+      },
+      {
+        "ico": "50334212",
+        "name": "Špeciálna základná škola sv. Anny, Štúrova 5, Stará Ľubovňa",
+        "total_contracted_eur": 20760.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 8230882.14,
+    "ico": "00330167",
+    "municipality": "Stará Ľubovňa"
+  },
+  "00313271": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37956108",
+        "name": "Spojená škola",
+        "total_contracted_eur": 6600499.9,
+        "projects_count": 2
+      },
+      {
+        "ico": "00396869",
+        "name": "Gymnázium Jozefa Gregora Tajovského",
+        "total_contracted_eur": 2117666.46,
+        "projects_count": 2
+      },
+      {
+        "ico": "17055431",
+        "name": "Stredná Odborná škola Informačných Technológií",
+        "total_contracted_eur": 1896194.94,
+        "projects_count": 1
+      },
+      {
+        "ico": "00626317",
+        "name": "Gymnázium Mikuláša Kováča",
+        "total_contracted_eur": 1561346.94,
+        "projects_count": 4
+      },
+      {
+        "ico": "42195446",
+        "name": "Spojená škola, Kremnička 10, Banská Bystrica",
+        "total_contracted_eur": 576335.29,
+        "projects_count": 1
+      },
+      {
+        "ico": "00652709",
+        "name": "Základná škola s materskou školou Štefana Moysesa",
+        "total_contracted_eur": 242379.74,
+        "projects_count": 2
+      },
+      {
+        "ico": "42002931",
+        "name": "Základná škola Narnia",
+        "total_contracted_eur": 202320.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35677732",
+        "name": "Základná škola, Pieninská 27, Banská Bystrica",
+        "total_contracted_eur": 185796.0,
+        "projects_count": 2
+      },
+      {
+        "ico": "35677775",
+        "name": "Základná škola Sitnianska 32, Banská Bystrica",
+        "total_contracted_eur": 158580.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35677741",
+        "name": "Základná škola",
+        "total_contracted_eur": 154499.13,
+        "projects_count": 1
+      },
+      {
+        "ico": "00160521",
+        "name": "Gymnázium A. Sládkoviča",
+        "total_contracted_eur": 138000.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35677767",
+        "name": "Základná škola",
+        "total_contracted_eur": 72360.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 13905978.399999999,
+    "ico": "00313271",
+    "municipality": "Banská Bystrica"
+  },
+  "00319805": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37956205",
+        "name": "Spojená škola",
+        "total_contracted_eur": 5184042.18,
+        "projects_count": 1
+      },
+      {
+        "ico": "57046531",
+        "name": "Gymnázium, Obchodná akadémia a Stredná odborná škola technická, Štúrova 848, Detva",
+        "total_contracted_eur": 1436216.27,
+        "projects_count": 1
+      },
+      {
+        "ico": "37831275",
+        "name": "Základná škola Júliusa Juraja Thurzu",
+        "total_contracted_eur": 198630.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "31916503",
+        "name": "Kultúrne centrum Andreja Sládkoviča v Detve",
+        "total_contracted_eur": 197626.56,
+        "projects_count": 1
+      },
+      {
+        "ico": "35997621",
+        "name": "Základná škola, Ul. Obrancov mieru, Detva",
+        "total_contracted_eur": 194940.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "42302498",
+        "name": "Základná škola s materskou školou Alexandra Vagača",
+        "total_contracted_eur": 124200.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 7335655.009999999,
+    "ico": "00319805",
+    "municipality": "Detva"
+  },
+  "00323233": {
+    "subsidiary_orgs": [
+      {
+        "ico": "54018404",
+        "name": "Spojená škola, Duchnovičova 524/117, Medzilaborce",
+        "total_contracted_eur": 3423498.96,
+        "projects_count": 7
+      },
+      {
+        "ico": "37874055",
+        "name": "Základná škola",
+        "total_contracted_eur": 46368.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37874063",
+        "name": "Základná škola",
+        "total_contracted_eur": 46368.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 3516234.96,
+    "ico": "00323233",
+    "municipality": "Medzilaborce"
+  },
+  "00325490": {
+    "subsidiary_orgs": [
+      {
+        "ico": "17080789",
+        "name": "Spojená škola internátna, Školská 10, Michalovce s OZ: Špeciálna ZŠ internátna, Školská 10, MI a ZŠ pri zdrav. zariadení, Špitálska 1, MI",
+        "total_contracted_eur": 3116719.19,
+        "projects_count": 2
+      },
+      {
+        "ico": "00500402",
+        "name": "Spojená škola internátna, Odborné učilište internátne Viliama Gaňa, Praktická škola internátna",
+        "total_contracted_eur": 463236.1,
+        "projects_count": 1
+      },
+      {
+        "ico": "00161063",
+        "name": "Gymnázium Pavla Horova, Masarykova 1, Michalovce",
+        "total_contracted_eur": 209153.62,
+        "projects_count": 1
+      },
+      {
+        "ico": "31297749",
+        "name": "Zemplínske múzeum v Michalovciach",
+        "total_contracted_eur": 199945.32,
+        "projects_count": 1
+      },
+      {
+        "ico": "17151341",
+        "name": "Gymnázium, Ľ. Štúra 26, Michalovce",
+        "total_contracted_eur": 186562.47,
+        "projects_count": 1
+      },
+      {
+        "ico": "17080703",
+        "name": "Základná škola Michalovce T.J.Moussona 4",
+        "total_contracted_eur": 129518.84,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 4305135.54,
+    "ico": "00325490",
+    "municipality": "Michalovce"
+  },
+  "00652199": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00647918",
+        "name": "Zariadenie sociálnych služieb Radmera",
+        "total_contracted_eur": 2793906.16,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 2793906.16,
+    "ico": "00652199",
+    "municipality": "Ladomerská Vieska"
+  },
+  "00316181": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00632210",
+        "name": "Zariadenie sociálnych služieb Slatinka",
+        "total_contracted_eur": 2397769.5,
+        "projects_count": 1
+      },
+      {
+        "ico": "35991593",
+        "name": "Základná škola Milana Rastislava Štefánika",
+        "total_contracted_eur": 252000.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37833961",
+        "name": "Základná škola, Haličská cesta 1493/7, Lučenec",
+        "total_contracted_eur": 217379.5,
+        "projects_count": 2
+      },
+      {
+        "ico": "35987146",
+        "name": "Novohradská knižnica",
+        "total_contracted_eur": 81511.05,
+        "projects_count": 1
+      },
+      {
+        "ico": "37888404",
+        "name": "Základná škola s materskou školou J. Kármána s vyučovacím jazykom maďarským - Kármán József Alapiskola és Óvoda, J.Kármána 25/5,Lučenec",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 3010940.05,
+    "ico": "00316181",
+    "municipality": "Lučenec"
+  },
+  "00325813": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00692026",
+        "name": "LIDWINA - Domov sociálnych služieb",
+        "total_contracted_eur": 2059347.72,
+        "projects_count": 1
+      },
+      {
+        "ico": "35542250",
+        "name": "Základná škola Strážske Mierová 1",
+        "total_contracted_eur": 252000.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 2311347.7199999997,
+    "ico": "00325813",
+    "municipality": "Strážske"
+  },
+  "00313904": {
+    "subsidiary_orgs": [
+      {
+        "ico": "56971095",
+        "name": "Spojená škola internátna, Švermova 1, Valaská",
+        "total_contracted_eur": 1923395.38,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 1923395.38,
+    "ico": "00313904",
+    "municipality": "Valaská"
+  },
+  "00318001": {
+    "subsidiary_orgs": [
+      {
+        "ico": "17335795",
+        "name": "Nemocnica s poliklinikou Prievidza so sídlom v Bojniciach",
+        "total_contracted_eur": 1742137.76,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 1742137.76,
+    "ico": "00318001",
+    "municipality": "Bojnice"
+  },
+  "00328341": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35985241",
+        "name": "Špeciálna základná škola",
+        "total_contracted_eur": 1677591.73,
+        "projects_count": 1
+      },
+      {
+        "ico": "37888714",
+        "name": "Základná škola s materskou školou Jelšava",
+        "total_contracted_eur": 153870.23,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 1831461.96,
+    "ico": "00328341",
+    "municipality": "Jelšava"
+  },
+  "00309745": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42378508",
+        "name": "Materská škola, Bradáčova 773/30, 90701 Myjava",
+        "total_contracted_eur": 1315256.97,
+        "projects_count": 1
+      },
+      {
+        "ico": "00610721",
+        "name": "Nemocnica s poliklinikou Myjava so sídlom v Myjave",
+        "total_contracted_eur": 330911.79,
+        "projects_count": 1
+      },
+      {
+        "ico": "31202802",
+        "name": "Základná škola Myjava",
+        "total_contracted_eur": 252000.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "50457462",
+        "name": "Spojená škola, Továrenská 63/1, Myjava",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 1929308.76,
+    "ico": "00309745",
+    "municipality": "Myjava"
+  },
+  "00318850": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35984899",
+        "name": "Špeciálna základná škola",
+        "total_contracted_eur": 1230645.98,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 1230645.98,
+    "ico": "00318850",
+    "municipality": "Klenovec"
+  },
+  "00313726": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35984694",
+        "name": "Špeciálna základná škola",
+        "total_contracted_eur": 1219227.7,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 1219227.7,
+    "ico": "00313726",
+    "municipality": "Polomka"
+  },
+  "00331899": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35568356",
+        "name": "Spojená škola, Kollárova 17, Sečovce",
+        "total_contracted_eur": 1076150.66,
+        "projects_count": 5
+      },
+      {
+        "ico": "35541202",
+        "name": "Základná škola, Obchodná 5, Sečovce",
+        "total_contracted_eur": 104328.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 1180478.66,
+    "ico": "00331899",
+    "municipality": "Sečovce"
+  },
+  "00320056": {
+    "subsidiary_orgs": [
+      {
+        "ico": "57040176",
+        "name": "Gymnázium Andreja Sládkoviča a Stredná odborná škola obchodu a služieb, M. R. Štefánika 8, Krupina",
+        "total_contracted_eur": 1048068.74,
+        "projects_count": 1
+      },
+      {
+        "ico": "42193222",
+        "name": "Centrum sociálnych služieb KA",
+        "total_contracted_eur": 491724.22,
+        "projects_count": 3
+      },
+      {
+        "ico": "35984473",
+        "name": "Špeciálna základná škola",
+        "total_contracted_eur": 316195.61,
+        "projects_count": 1
+      },
+      {
+        "ico": "37830813",
+        "name": "Základná škola E. M. Šoltésovej",
+        "total_contracted_eur": 194940.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37833758",
+        "name": "Základná škola Jozefa Cígera Hronského",
+        "total_contracted_eur": 116722.5,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 2167651.07,
+    "ico": "00320056",
+    "municipality": "Krupina"
+  },
+  "00319651": {
+    "subsidiary_orgs": [
+      {
+        "ico": "57046492",
+        "name": "Gymnázium Augusta Horislava Škultétyho, Obchodná akadémia a Stredná odborná škola, Školská 21, Veľký Krtíš",
+        "total_contracted_eur": 984740.8,
+        "projects_count": 2
+      },
+      {
+        "ico": "00160709",
+        "name": "Gymnázium Augusta Horislava Škultétyho",
+        "total_contracted_eur": 142100.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 1126840.8,
+    "ico": "00319651",
+    "municipality": "Veľký Krtíš"
+  },
+  "00321842": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42035261",
+        "name": "Spojená škola Juraja Henischa",
+        "total_contracted_eur": 959252.97,
+        "projects_count": 1
+      },
+      {
+        "ico": "42029210",
+        "name": "Základná škola s materskou školou bl. Zefyrína, Poštárka, 08501 Bardejov",
+        "total_contracted_eur": 213440.94,
+        "projects_count": 2
+      },
+      {
+        "ico": "37873539",
+        "name": "Základná škola, Komenského v Bardejove",
+        "total_contracted_eur": 186840.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37873971",
+        "name": "Základná škola, Nám. arm. gen. L. Svobodu 16, Bardejov",
+        "total_contracted_eur": 116820.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37874004",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 110430.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37781570",
+        "name": "Okresná knižnica Dávida Gutgesela",
+        "total_contracted_eur": 59805.43,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 1646589.3399999999,
+    "ico": "00321842",
+    "municipality": "Bardejov"
+  },
+  "00310905": {
+    "subsidiary_orgs": [
+      {
+        "ico": "34058915",
+        "name": "Špeciálna základná škola Partizánske",
+        "total_contracted_eur": 940132.81,
+        "projects_count": 3
+      }
+    ],
+    "subsidiary_total_eur": 940132.81,
+    "ico": "00310905",
+    "municipality": "Partizánske"
+  },
+  "00332933": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00161268",
+        "name": "Gymnázium Cyrila Daxnera",
+        "total_contracted_eur": 821597.6,
+        "projects_count": 2
+      },
+      {
+        "ico": "42089808",
+        "name": "Spojená škola internátna, M.R.Štefánika 140, 093 41 Vranov nad Topľou",
+        "total_contracted_eur": 611750.7,
+        "projects_count": 3
+      },
+      {
+        "ico": "37781146",
+        "name": "Hornozemplínska knižnica vo Vranove nad Topľou",
+        "total_contracted_eur": 325841.16,
+        "projects_count": 2
+      },
+      {
+        "ico": "37873393",
+        "name": "Základná škola, Kukučínova ulica 106, Vranov nad Topľou",
+        "total_contracted_eur": 185062.86,
+        "projects_count": 2
+      },
+      {
+        "ico": "37873385",
+        "name": "Základná škola Lúčna Vranov nad Topľou",
+        "total_contracted_eur": 108540.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "31305318",
+        "name": "Základná škola, Bernolákova ulica 1061, Vranov nad Topľou",
+        "total_contracted_eur": 77354.36,
+        "projects_count": 1
+      },
+      {
+        "ico": "37873369",
+        "name": "Základná škola, Juh 1054, Vranov nad Topľou",
+        "total_contracted_eur": 61690.33,
+        "projects_count": 1
+      },
+      {
+        "ico": "42089816",
+        "name": "Spojená škola, Budovateľská 1309, Vranov nad Topľou",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 2222977.01,
+    "ico": "00332933",
+    "municipality": "Vranov nad Topľou"
+  },
+  "00331996": {
+    "subsidiary_orgs": [
+      {
+        "ico": "17072948",
+        "name": "Spojená škola internátna, Poľná 1, Trebišov s OZ: OU intern., Poľná 1, TV, Prakt.škola intern., Poľná 1, TV, Špec.ZŠ intern., Poľná 1, TV, CŠPP, Poľná 1",
+        "total_contracted_eur": 812124.43,
+        "projects_count": 1
+      },
+      {
+        "ico": "00161241",
+        "name": "Gymnázium, Komenského 32, Trebišov",
+        "total_contracted_eur": 303281.78,
+        "projects_count": 1
+      },
+      {
+        "ico": "35541113",
+        "name": "Základná škola",
+        "total_contracted_eur": 231493.83,
+        "projects_count": 2
+      },
+      {
+        "ico": "31297706",
+        "name": "Múzeum a Kultúrne centrum južného Zemplína v Trebišove",
+        "total_contracted_eur": 126691.2,
+        "projects_count": 1
+      },
+      {
+        "ico": "35541091",
+        "name": "Základná škola",
+        "total_contracted_eur": 126466.41,
+        "projects_count": 1
+      },
+      {
+        "ico": "35541075",
+        "name": "Základná škola, Komenského 1962/8, Trebišov",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 1683037.65,
+    "ico": "00331996",
+    "municipality": "Trebišov"
+  },
+  "00320781": {
+    "subsidiary_orgs": [
+      {
+        "ico": "51958767",
+        "name": "Spojená škola internátna, Československej armády 183/1, Kremnica",
+        "total_contracted_eur": 799350.85,
+        "projects_count": 1
+      },
+      {
+        "ico": "37831470",
+        "name": "Základná škola Pavla Križku Ul.P.Križku 392/8 Kremnica",
+        "total_contracted_eur": 214803.2,
+        "projects_count": 2
+      },
+      {
+        "ico": "37831461",
+        "name": "Základná škola, Angyalova ulica 401/26, Kremnica",
+        "total_contracted_eur": 101520.0,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 1115674.05,
+    "ico": "00320781",
+    "municipality": "Kremnica"
+  },
+  "00306525": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00160199",
+        "name": "Gymnázium Ľudovíta Jaroslava Šuleka Komárno",
+        "total_contracted_eur": 796675.75,
+        "projects_count": 1
+      },
+      {
+        "ico": "31193897",
+        "name": "OAZIS - Zariadenie sociálnych služieb",
+        "total_contracted_eur": 419690.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37861212",
+        "name": "Základná škola Jána Amosa Komenského, Komenského 3, Komárno",
+        "total_contracted_eur": 252000.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37861221",
+        "name": "Základná škola Komárno, Ul. pohraničná 9",
+        "total_contracted_eur": 62005.33,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 1530371.08,
+    "ico": "00306525",
+    "municipality": "Komárno"
+  },
+  "00329614": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31309658",
+        "name": "Spojená škola",
+        "total_contracted_eur": 779680.47,
+        "projects_count": 2
+      },
+      {
+        "ico": "31297927",
+        "name": "Múzeum Spiša v Spišskej Novej Vsi",
+        "total_contracted_eur": 197414.1,
+        "projects_count": 1
+      },
+      {
+        "ico": "00161195",
+        "name": "Gymnázium Školská 7",
+        "total_contracted_eur": 166785.38,
+        "projects_count": 1
+      },
+      {
+        "ico": "31297889",
+        "name": "Spišské kultúrne centrum a knižnica",
+        "total_contracted_eur": 120182.56,
+        "projects_count": 1
+      },
+      {
+        "ico": "17080665",
+        "name": "Základná škola sv. Cyrila a Metoda",
+        "total_contracted_eur": 62275.98,
+        "projects_count": 1
+      },
+      {
+        "ico": "42326931",
+        "name": "Spojená škola sv. Maximiliána Mária Kolbeho, Gaštanová 11, S",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 1357478.49,
+    "ico": "00329614",
+    "municipality": "Spišská Nová Ves"
+  },
+  "00306517": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31824633",
+        "name": "Zariadenie pre seniorov a denný stacionár",
+        "total_contracted_eur": 778500.0,
+        "projects_count": 2
+      },
+      {
+        "ico": "37866931",
+        "name": "Základná škola Jána Amosa Komenského, Rábska 14, Kolárovo",
+        "total_contracted_eur": 137880.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37861174",
+        "name": "Základná škola Františka Rákócziho II. s vyučovacím jazykom maďarským  - II. Rákóczi Ferenc Alapiskola , V. Palkovicha 3, Kolárovo",
+        "total_contracted_eur": 124200.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 1040580.0,
+    "ico": "00306517",
+    "municipality": "Kolárovo"
+  },
+  "00329631": {
+    "subsidiary_orgs": [
+      {
+        "ico": "45743118",
+        "name": "Centrum sociálnych služieb Spišský Štvrtok, n.o.",
+        "total_contracted_eur": 729075.22,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 729075.22,
+    "ico": "00329631",
+    "municipality": "Spišský Štvrtok"
+  },
+  "00310182": {
+    "subsidiary_orgs": [
+      {
+        "ico": "34058893",
+        "name": "Špeciálna základná škola",
+        "total_contracted_eur": 724803.24,
+        "projects_count": 2
+      },
+      {
+        "ico": "42151716",
+        "name": "Bánovské kultúrne centrum",
+        "total_contracted_eur": 199757.32,
+        "projects_count": 1
+      },
+      {
+        "ico": "36128406",
+        "name": "Základná škola",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 986840.56,
+    "ico": "00310182",
+    "municipality": "Bánovce nad Bebravou"
+  },
+  "00327646": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37946765",
+        "name": "Spojená škola",
+        "total_contracted_eur": 702664.93,
+        "projects_count": 1
+      },
+      {
+        "ico": "00161101",
+        "name": "Gymnázium Jána Adama Raymana",
+        "total_contracted_eur": 298592.3,
+        "projects_count": 1
+      },
+      {
+        "ico": "00161110",
+        "name": "Gymnázium Prešov",
+        "total_contracted_eur": 230195.1,
+        "projects_count": 1
+      },
+      {
+        "ico": "36159042",
+        "name": "Základná škola",
+        "total_contracted_eur": 168660.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "54007267",
+        "name": "Základná škola s materskou školou, Námestie Kráľovnej pokoja 14287/4, Prešov",
+        "total_contracted_eur": 164727.61,
+        "projects_count": 1
+      },
+      {
+        "ico": "36159051",
+        "name": "Základná škola",
+        "total_contracted_eur": 145260.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "36159034",
+        "name": "Základná škola",
+        "total_contracted_eur": 106740.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37877194",
+        "name": "Základná škola, Prostějovská 38, Prešov",
+        "total_contracted_eur": 93420.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "53200284",
+        "name": "Spojená škola bl. biskupa Gojdiča, Bernolákova 21, Prešov",
+        "total_contracted_eur": 88020.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37877216",
+        "name": "Základná škola Mirka Nešpora 2, Prešov",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37781278",
+        "name": "Krajské múzeum v Prešove",
+        "total_contracted_eur": 32922.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37877186",
+        "name": "Základná škola Bajkalská č. 29",
+        "total_contracted_eur": 10380.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 2124561.94,
+    "ico": "00327646",
+    "municipality": "Prešov"
+  },
+  "00321796": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36145173",
+        "name": "Považské múzeum",
+        "total_contracted_eur": 678158.2,
+        "projects_count": 1
+      },
+      {
+        "ico": "37815091",
+        "name": "Základná škola, Námestie mladosti 1, Žilina",
+        "total_contracted_eur": 426123.4,
+        "projects_count": 2
+      },
+      {
+        "ico": "37811789",
+        "name": "Základná škola s materskou školou, Brodňanská 110/17, Žilina",
+        "total_contracted_eur": 293937.01,
+        "projects_count": 2
+      },
+      {
+        "ico": "55634737",
+        "name": "Spojená škola, Jána Vojtaššáka 13, Žilina",
+        "total_contracted_eur": 267421.72,
+        "projects_count": 1
+      },
+      {
+        "ico": "00160903",
+        "name": "Gymnázium",
+        "total_contracted_eur": 236765.39,
+        "projects_count": 1
+      },
+      {
+        "ico": "00624128",
+        "name": "Základná škola, Martinská 20, Žilina",
+        "total_contracted_eur": 200160.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37810880",
+        "name": "Základná škola, Limbová 30, Žilina",
+        "total_contracted_eur": 167857.77,
+        "projects_count": 1
+      },
+      {
+        "ico": "37812980",
+        "name": "Základná škola, Slovenských dobrovoľníkov 122/7, Žilina",
+        "total_contracted_eur": 124560.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "53947002",
+        "name": "Mestská knižnica Žilina",
+        "total_contracted_eur": 112341.47,
+        "projects_count": 1
+      },
+      {
+        "ico": "37811762",
+        "name": "Základná škola s materskou školou, Dolná Trnovská 36, Žilina",
+        "total_contracted_eur": 106740.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37812891",
+        "name": "Základná škola, Lichardova 24, Žilina",
+        "total_contracted_eur": 106740.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37813013",
+        "name": "Základná škola, Karpatská 8063/11, Žilina",
+        "total_contracted_eur": 103680.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37812904",
+        "name": "ZŠ V. Javorku 32, Žilina",
+        "total_contracted_eur": 101520.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37810901",
+        "name": "Základná škola s materskou školou, Školská 49, Žilina",
+        "total_contracted_eur": 75600.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37813064",
+        "name": "Základná škola s materskou školou, Ulica sv. Gorazda 1, Žilina",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37813277",
+        "name": "Základná škola, Jarná 20, 010 01 Žilina",
+        "total_contracted_eur": 51840.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 3115724.9600000004,
+    "ico": "00321796",
+    "municipality": "Žilina"
+  },
+  "00319091": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00633577",
+        "name": "Spojená škola internátna",
+        "total_contracted_eur": 670426.05,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 670426.05,
+    "ico": "00319091",
+    "municipality": "Tornaľa"
+  },
+  "00317748": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00160768",
+        "name": "Gymnázium, Ul.1.mája 905, Púchov",
+        "total_contracted_eur": 651299.45,
+        "projects_count": 2
+      },
+      {
+        "ico": "52439585",
+        "name": "Spojená škola, I. Krasku 491, Púchov",
+        "total_contracted_eur": 261858.64,
+        "projects_count": 1
+      },
+      {
+        "ico": "31202420",
+        "name": "Základná škola, Mládežnícka, Púchov",
+        "total_contracted_eur": 252000.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35995912",
+        "name": "Základná škola, Gorazdova 1174/2, Púchov",
+        "total_contracted_eur": 252000.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35995904",
+        "name": "Základná škola Jana Amosa Komenského",
+        "total_contracted_eur": 176400.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "36125784",
+        "name": "Základná škola s materskou školou, Slovanská 330/23, Púchov",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "34058991",
+        "name": "Spojená škola, Športovcov 1461/17, Púchov",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 1738818.0899999999,
+    "ico": "00317748",
+    "municipality": "Púchov"
+  },
+  "00327735": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42383153",
+        "name": "Spojená škola, SNP 16, Sabinov s organizačnými zložkami Stredná odborná škola, SNP 16, Sabinov a Obchodná akadémia, SNP 16, Sabinov",
+        "total_contracted_eur": 625441.71,
+        "projects_count": 1
+      },
+      {
+        "ico": "00161152",
+        "name": "Súkromné Gymnázium DSA Komenského 40, Sabinov",
+        "total_contracted_eur": 122779.36,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 748221.07,
+    "ico": "00327735",
+    "municipality": "Sabinov"
+  },
+  "00316342": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42195462",
+        "name": "Spojená škola, Železničná 5, Poltár",
+        "total_contracted_eur": 623876.33,
+        "projects_count": 1
+      },
+      {
+        "ico": "37831534",
+        "name": "Základná škola Slobody 2, Poltár",
+        "total_contracted_eur": 295423.76,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 919300.09,
+    "ico": "00316342",
+    "municipality": "Poltár"
+  },
+  "00310263": {
+    "subsidiary_orgs": [
+      {
+        "ico": "51848767",
+        "name": "Základná škola s materskou školou pre deti a žiakov s narušenou komunikačnou schopnostou internátna, Brezolupy 30",
+        "total_contracted_eur": 590719.4,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 590719.4,
+    "ico": "00310263",
+    "municipality": "Brezolupy"
+  },
+  "00331007": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42343682",
+        "name": "Materská škola, Matice slovenskej 740/7, Stropkov",
+        "total_contracted_eur": 552127.37,
+        "projects_count": 1
+      },
+      {
+        "ico": "00161225",
+        "name": "Gymnázium, Konštantínova 1751/64, Stropkov",
+        "total_contracted_eur": 463013.05,
+        "projects_count": 2
+      },
+      {
+        "ico": "37873181",
+        "name": "Základná škola Mlynská, 697/7 Stropkov",
+        "total_contracted_eur": 124200.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37873172",
+        "name": "Základná škola, Konštantínova 1751/64, Stropkov",
+        "total_contracted_eur": 93420.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 1232760.42,
+    "ico": "00331007",
+    "municipality": "Stropkov"
+  },
+  "00313343": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35984635",
+        "name": "Špeciálna základná škola",
+        "total_contracted_eur": 542035.81,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 542035.81,
+    "ico": "00313343",
+    "municipality": "Čierny Balog"
+  },
+  "00309541": {
+    "subsidiary_orgs": [
+      {
+        "ico": "53638611",
+        "name": "Spojená škola, Námestie sv. Martina 5, Holíč",
+        "total_contracted_eur": 538014.42,
+        "projects_count": 1
+      },
+      {
+        "ico": "37838334",
+        "name": "Základná škola Holíč",
+        "total_contracted_eur": 156168.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 694182.42,
+    "ico": "00309541",
+    "municipality": "Holíč"
+  },
+  "00317667": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31116175",
+        "name": "Spojená škola, SNP 1653/152, Považská Bystrica",
+        "total_contracted_eur": 532641.97,
+        "projects_count": 2
+      },
+      {
+        "ico": "00610411",
+        "name": "Nemocnica s poliklinikou Považská Bystrica so sídlom v Považskej Bystrici",
+        "total_contracted_eur": 487515.43,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 1020157.3999999999,
+    "ico": "00317667",
+    "municipality": "Považská Bystrica"
+  },
+  "00316938": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00627844",
+        "name": "Bilingválne gymnázium Milana Hodžu",
+        "total_contracted_eur": 499204.48,
+        "projects_count": 1
+      },
+      {
+        "ico": "37812157",
+        "name": "Základná škola Slovenského národného povstania, Partizánska 13, Sučany",
+        "total_contracted_eur": 80640.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 579844.48,
+    "ico": "00316938",
+    "municipality": "Sučany"
+  },
+  "00314676": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00160717",
+        "name": "Gymnázium Antona Bernoláka",
+        "total_contracted_eur": 491912.57,
+        "projects_count": 2
+      },
+      {
+        "ico": "00355321",
+        "name": "Dom kultúry v Námestove",
+        "total_contracted_eur": 205028.79,
+        "projects_count": 1
+      },
+      {
+        "ico": "37810286",
+        "name": "Základná škola",
+        "total_contracted_eur": 146430.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37810294",
+        "name": "Základná škola",
+        "total_contracted_eur": 146430.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37982702",
+        "name": "Spojená škola internátna, M.Urbana 160/45, Námestovo",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 1052081.3599999999,
+    "ico": "00314676",
+    "municipality": "Námestovo"
+  },
+  "00308307": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37861301",
+        "name": "Základná škola- Škultétyho 1, Nitra",
+        "total_contracted_eur": 473094.38,
+        "projects_count": 3
+      },
+      {
+        "ico": "36102652",
+        "name": "Ponitrianske múzeum v Nitre",
+        "total_contracted_eur": 181155.6,
+        "projects_count": 1
+      },
+      {
+        "ico": "37865501",
+        "name": "Základná škola kniežaťa Pribinu, Andreja Šulgana1, Nitra",
+        "total_contracted_eur": 132660.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37861344",
+        "name": "Základná škola kráľa Svätopluka, Dražovská 6, Nitra",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "54054010",
+        "name": "Základná škola s materskou školou, Na Hôrke 30, Nitra",
+        "total_contracted_eur": 77706.28,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 978736.26,
+    "ico": "00308307",
+    "municipality": "Nitra"
+  },
+  "00311162": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37860658",
+        "name": "Základná škola, J.Hollého 696/3, Topoľčany",
+        "total_contracted_eur": 456694.74,
+        "projects_count": 2
+      },
+      {
+        "ico": "42211476",
+        "name": "Základná škola s materskou školou, Gogoľova 2143/7, Topoľčany",
+        "total_contracted_eur": 244151.24,
+        "projects_count": 2
+      },
+      {
+        "ico": "00160440",
+        "name": "Gymnázium, Ul. 17. novembra 1180, Topoľčany",
+        "total_contracted_eur": 201861.4,
+        "projects_count": 1
+      },
+      {
+        "ico": "42118727",
+        "name": "„MÔJ DOMOV“, Zariadenie sociálnych služieb Topoľčany",
+        "total_contracted_eur": 89344.02,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 992051.4,
+    "ico": "00311162",
+    "municipality": "Topoľčany"
+  },
+  "00309524": {
+    "subsidiary_orgs": [
+      {
+        "ico": "17050456",
+        "name": "Stredná odborná škola elektrotechnická, Učňovská 700/6, Gbely",
+        "total_contracted_eur": 438876.62,
+        "projects_count": 2
+      },
+      {
+        "ico": "36080799",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 88200.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 527076.62,
+    "ico": "00309524",
+    "municipality": "Gbely"
+  },
+  "00318442": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36126985",
+        "name": "Základná škola, Rastislavova ulica 416/4, Prievidza",
+        "total_contracted_eur": 432405.64,
+        "projects_count": 2
+      },
+      {
+        "ico": "34059113",
+        "name": "Regionálne kultúrne centrum v Prievidzi",
+        "total_contracted_eur": 199999.08,
+        "projects_count": 1
+      },
+      {
+        "ico": "31116183",
+        "name": "Spojená škola internátna, Úzka 2, Prievidza",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "31201725",
+        "name": "Základná škola, Ulica P. J. Šafárika 3,  Prievidza",
+        "total_contracted_eur": 25085.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 719769.72,
+    "ico": "00318442",
+    "municipality": "Prievidza"
+  },
+  "00325589": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31309771",
+        "name": "Spojená škola",
+        "total_contracted_eur": 430130.15,
+        "projects_count": 1
+      },
+      {
+        "ico": "35543825",
+        "name": "Základná škola s materskou školou, Školská 3, Pavlovce nad Uhom",
+        "total_contracted_eur": 108540.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 538670.15,
+    "ico": "00325589",
+    "municipality": "Pavlovce nad Uhom"
+  },
+  "00314901": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37813226",
+        "name": "Základná škola Márie Medveckej,Medvedzie 155, Tvrdošín",
+        "total_contracted_eur": 424450.02,
+        "projects_count": 2
+      },
+      {
+        "ico": "00626848",
+        "name": "Gymnázium",
+        "total_contracted_eur": 139375.59,
+        "projects_count": 1
+      },
+      {
+        "ico": "17060010",
+        "name": "Základná škola Štefana Šmálika Tvrdošín",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 677945.61,
+    "ico": "00314901",
+    "municipality": "Tvrdošín"
+  },
+  "00328758": {
+    "subsidiary_orgs": [
+      {
+        "ico": "17080835",
+        "name": "Telovýchovná jednota Geológ Rožňava",
+        "total_contracted_eur": 399530.88,
+        "projects_count": 1
+      },
+      {
+        "ico": "35543639",
+        "name": "Základná škola Zlatá 2, Rožňava",
+        "total_contracted_eur": 152248.12,
+        "projects_count": 1
+      },
+      {
+        "ico": "31297765",
+        "name": "Banícke múzeum v Rožňave",
+        "total_contracted_eur": 141785.66,
+        "projects_count": 1
+      },
+      {
+        "ico": "35543663",
+        "name": "Základná škola",
+        "total_contracted_eur": 93420.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "30689333",
+        "name": "Základná škola Reformovanej kresťanskej cirkvi s VJM - Rozsnyói Református Egyházkozség Alapiskolája, Kozmonautov 2, Rožňava",
+        "total_contracted_eur": 75600.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "00697184",
+        "name": "JASANIMA - Domov sociálnych služieb",
+        "total_contracted_eur": 21401.44,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 883986.1,
+    "ico": "00328758",
+    "municipality": "Rožňava"
+  },
+  "00307203": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37864386",
+        "name": "Základná škola Andreja Kmeťa, Ul. M. R. Štefánika 34, Levice",
+        "total_contracted_eur": 398090.67,
+        "projects_count": 2
+      },
+      {
+        "ico": "37864394",
+        "name": "Základná škola, Ul. sv. Michala 42, Levice",
+        "total_contracted_eur": 386801.65,
+        "projects_count": 2
+      },
+      {
+        "ico": "00893315",
+        "name": "SOŠTaS, Pod amfiteátrom 7, Levice",
+        "total_contracted_eur": 248316.74,
+        "projects_count": 1
+      },
+      {
+        "ico": "00160211",
+        "name": "Gymnázium Andreja Vrábla,  Mierová 5, Levice",
+        "total_contracted_eur": 160730.14,
+        "projects_count": 1
+      },
+      {
+        "ico": "37864416",
+        "name": "Základná škola, Pri Podlužianke 6, Levice",
+        "total_contracted_eur": 124560.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 1318499.2000000002,
+    "ico": "00307203",
+    "municipality": "Levice"
+  },
+  "00317063": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36125717",
+        "name": "Základná škola",
+        "total_contracted_eur": 391007.04,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 391007.04,
+    "ico": "00317063",
+    "municipality": "Beluša"
+  },
+  "00305022": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36062171",
+        "name": "Základná škola Jána Kupeckého, Kupeckého 74, Pezinok",
+        "total_contracted_eur": 362720.57,
+        "projects_count": 3
+      },
+      {
+        "ico": "36062162",
+        "name": "Základná škola, Na bielenisku 2, 90201Pezinok",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "36062201",
+        "name": "Základná škola Fándlyho 11 902 01 Pezinok",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 559820.5700000001,
+    "ico": "00305022",
+    "municipality": "Pezinok"
+  },
+  "00323021": {
+    "subsidiary_orgs": [
+      {
+        "ico": "45737983",
+        "name": "Zariadenie sociálnych služieb Slnečný dom, n.o.",
+        "total_contracted_eur": 351967.16,
+        "projects_count": 1
+      },
+      {
+        "ico": "37876741",
+        "name": "Základná škola Kudlovská ul. 11 v Humennom",
+        "total_contracted_eur": 292782.02,
+        "projects_count": 2
+      },
+      {
+        "ico": "37876732",
+        "name": "Základná škola, SNP 1, Humenné",
+        "total_contracted_eur": 258171.49,
+        "projects_count": 2
+      },
+      {
+        "ico": "35520078",
+        "name": "Základná škola, Dargovských hrdinov 19, Humenné",
+        "total_contracted_eur": 236492.27,
+        "projects_count": 2
+      },
+      {
+        "ico": "00160954",
+        "name": "Gymnázium arm. gen. L. Svobodu",
+        "total_contracted_eur": 208613.07,
+        "projects_count": 1
+      },
+      {
+        "ico": "37781464",
+        "name": "Vihorlatská knižnica v Humennom",
+        "total_contracted_eur": 178973.43,
+        "projects_count": 1
+      },
+      {
+        "ico": "35519151",
+        "name": "Základná škola, Hrnčiarska 13, Humenné",
+        "total_contracted_eur": 156690.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37874101",
+        "name": "Základná škola Laborecká 66 Humenné",
+        "total_contracted_eur": 150120.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37781391",
+        "name": "Vihorlatské múzeum v Humennom",
+        "total_contracted_eur": 98734.78,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 1932544.22,
+    "ico": "00323021",
+    "municipality": "Humenné"
+  },
+  "00327760": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37876651",
+        "name": "Základná škola s materskou školou Svinia",
+        "total_contracted_eur": 345414.36,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 345414.36,
+    "ico": "00327760",
+    "municipality": "Svinia"
+  },
+  "00317331": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36119385",
+        "name": "Nemocnica s poliklinikou Ilava, n. o.",
+        "total_contracted_eur": 343230.39,
+        "projects_count": 1
+      },
+      {
+        "ico": "34058974",
+        "name": "Špeciálna základná škola Ilava",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 374370.39,
+    "ico": "00317331",
+    "municipality": "Ilava"
+  },
+  "00326526": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42232228",
+        "name": "Spojená škola, Štúrova 231/123, Spišská Stará Ves",
+        "total_contracted_eur": 339181.93,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 339181.93,
+    "ico": "00326526",
+    "municipality": "Spišská Stará Ves"
+  },
+  "00691305": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31309585",
+        "name": "Špeciálna základná škola",
+        "total_contracted_eur": 336843.84,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 336843.84,
+    "ico": "00691305",
+    "municipality": "Vtáčkovce"
+  },
+  "00315575": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37812971",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 335783.17,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 335783.17,
+    "ico": "00315575",
+    "municipality": "Ľubochňa"
+  },
+  "00326089": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42104378",
+        "name": "Základná škola s materskou školou, Žbince 145",
+        "total_contracted_eur": 335020.18,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 335020.18,
+    "ico": "00326089",
+    "municipality": "Žbince"
+  },
+  "00321699": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42064872",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 333452.5,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 333452.5,
+    "ico": "00321699",
+    "municipality": "Terchová"
+  },
+  "00326283": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42035724",
+        "name": "Základná škola s materskou školou sv. Kríža",
+        "total_contracted_eur": 321835.27,
+        "projects_count": 2
+      },
+      {
+        "ico": "37874268",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 259380.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "36158976",
+        "name": "Základná škola - Grundschule, Hradné námestie 38, 060 01 Kežmarok",
+        "total_contracted_eur": 145260.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37781227",
+        "name": "Múzeum v Kežmarku",
+        "total_contracted_eur": 122528.34,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 849003.61,
+    "ico": "00326283",
+    "municipality": "Kežmarok"
+  },
+  "00316792": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00160695",
+        "name": "Gymnázium Viliama Paulínyho - Tótha",
+        "total_contracted_eur": 315676.06,
+        "projects_count": 1
+      },
+      {
+        "ico": "17050499",
+        "name": "Spojená škola, Československej armády 24, Martin",
+        "total_contracted_eur": 225148.58,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 540824.64,
+    "ico": "00316792",
+    "municipality": "Martin"
+  },
+  "00320277": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37888790",
+        "name": "Základná škola A.Sládkoviča",
+        "total_contracted_eur": 304132.47,
+        "projects_count": 3
+      }
+    ],
+    "subsidiary_total_eur": 304132.47,
+    "ico": "00320277",
+    "municipality": "Sliač"
+  },
+  "00321192": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37798383",
+        "name": "Základná škola",
+        "total_contracted_eur": 301164.53,
+        "projects_count": 2
+      },
+      {
+        "ico": "37808591",
+        "name": "Základná škola Bytča, Ulica Eliáša Lániho 261/7",
+        "total_contracted_eur": 119938.68,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 421103.21,
+    "ico": "00321192",
+    "municipality": "Bytča"
+  },
+  "00328693": {
+    "subsidiary_orgs": [
+      {
+        "ico": "45736324",
+        "name": "Nemocnica s poliklinikou, n.o. Revúca",
+        "total_contracted_eur": 299638.42,
+        "projects_count": 1
+      },
+      {
+        "ico": "37833847",
+        "name": "Základná škola J. A. Komenského, Komenského 7, Revúca",
+        "total_contracted_eur": 104872.16,
+        "projects_count": 1
+      },
+      {
+        "ico": "37833871",
+        "name": "Základná škola",
+        "total_contracted_eur": 72360.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 476870.57999999996,
+    "ico": "00328693",
+    "municipality": "Revúca"
+  },
+  "00331619": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00161012",
+        "name": "Gymnázium - Gimnázium, Horešská 18, Kráľovský Chlmec",
+        "total_contracted_eur": 298496.08,
+        "projects_count": 1
+      },
+      {
+        "ico": "45737967",
+        "name": "Nemocnica s poliklinikou n.o. Kráľovský Chlmec",
+        "total_contracted_eur": 204678.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35541148",
+        "name": "Základná škola s vyučovacím jazykom maďarským",
+        "total_contracted_eur": 146430.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35541156",
+        "name": "Základná škola,Kossutha 56,Kráľovský Chlmec",
+        "total_contracted_eur": 114636.06,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 764240.1400000001,
+    "ico": "00331619",
+    "municipality": "Kráľovský Chlmec"
+  },
+  "00329592": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37873822",
+        "name": "Základná škola s materskou školou, Komenského 2, Spišský Hrhov",
+        "total_contracted_eur": 294563.12,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 294563.12,
+    "ico": "00329592",
+    "municipality": "Spišský Hrhov"
+  },
+  "00305332": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36081060",
+        "name": "Základná škola Jána Amosa Komenského, Nám.B.Bartóka 497/20, 93201 Veľký Meder",
+        "total_contracted_eur": 294522.46,
+        "projects_count": 2
+      },
+      {
+        "ico": "36081035",
+        "name": "Základná škola Bélu Bartóka s vyučovacím jazykom maďarským, Veľký Meder - Bartók Béla Magyar Tanítási Nyelvű Alapiskola, Nagymegyer",
+        "total_contracted_eur": 145260.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "00596507",
+        "name": "Domov sociálnych služieb pre dospelých vo Veľkom Mederi",
+        "total_contracted_eur": 73099.66,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 512882.12,
+    "ico": "00305332",
+    "municipality": "Veľký Meder"
+  },
+  "00306738": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37866877",
+        "name": "Základná škola s materskou školou Móra Kóczána s vyučovacím jazykom maďarským - Kóczán Mór Alapiskola és Óvoda, Komenského 555, Zlatná na Ostrove",
+        "total_contracted_eur": 290365.08,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 290365.08,
+    "ico": "00306738",
+    "municipality": "Zlatná na Ostrove"
+  },
+  "00316733": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37811941",
+        "name": "Základná škola Františka Hrušovského KLáštor pod Znievom",
+        "total_contracted_eur": 288818.2,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 288818.2,
+    "ico": "00316733",
+    "municipality": "Kláštor pod Znievom"
+  },
+  "00317721": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36124681",
+        "name": "Základná škola s materskou školou Hugolína Gavloviča, Školská ulica 369, Pruské",
+        "total_contracted_eur": 286674.49,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 286674.49,
+    "ico": "00317721",
+    "municipality": "Pruské"
+  },
+  "00324426": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35544317",
+        "name": "Základná škola Malá Ida",
+        "total_contracted_eur": 285119.39,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 285119.39,
+    "ico": "00324426",
+    "municipality": "Malá Ida"
+  },
+  "00321028": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37831127",
+        "name": "Základná škola s materskou školou Maximiliána Hella",
+        "total_contracted_eur": 282748.18,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 282748.18,
+    "ico": "00321028",
+    "municipality": "Štiavnické Bane"
+  },
+  "00311081": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37860755",
+        "name": "Základná škola s materskou školou, Hviezdoslavova 38, Solčany",
+        "total_contracted_eur": 281075.56,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 281075.56,
+    "ico": "00311081",
+    "municipality": "Solčany"
+  },
+  "00315524": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37810421",
+        "name": "Základná škola J.Kráľa",
+        "total_contracted_eur": 280441.46,
+        "projects_count": 2
+      },
+      {
+        "ico": "37810448",
+        "name": "Základná škola M.R.Martákovej",
+        "total_contracted_eur": 156168.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "17060079",
+        "name": "Základná škola Apoštola Pavla",
+        "total_contracted_eur": 121392.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "36140473",
+        "name": "Múzeum Janka Kráľa",
+        "total_contracted_eur": 66237.4,
+        "projects_count": 1
+      },
+      {
+        "ico": "42434858",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 46368.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 670606.86,
+    "ico": "00315524",
+    "municipality": "Liptovský Mikuláš"
+  },
+  "00326470": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00161098",
+        "name": "Gymnázium",
+        "total_contracted_eur": 279048.34,
+        "projects_count": 1
+      },
+      {
+        "ico": "37876899",
+        "name": "Spojená škola",
+        "total_contracted_eur": 159713.42,
+        "projects_count": 1
+      },
+      {
+        "ico": "37942743",
+        "name": "Spojená škola sv. Jána Pavla II.",
+        "total_contracted_eur": 127510.16,
+        "projects_count": 1
+      },
+      {
+        "ico": "37781481",
+        "name": "Tatranská galéria v Poprade",
+        "total_contracted_eur": 95445.28,
+        "projects_count": 1
+      },
+      {
+        "ico": "17068223",
+        "name": "Základná škola s materskou školou Vagonárska ulica 1600/4, 058 01 Poprad- Spišská Sobota",
+        "total_contracted_eur": 88020.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "17068215",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37781171",
+        "name": "Podtatranské múzeum v Poprade",
+        "total_contracted_eur": 52629.14,
+        "projects_count": 1
+      },
+      {
+        "ico": "37781189",
+        "name": "Podtatranská knižnica v Poprade",
+        "total_contracted_eur": 44457.6,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 929803.9400000001,
+    "ico": "00326470",
+    "municipality": "Poprad"
+  },
+  "00332887": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37873351",
+        "name": "Základná škola s materskou školou Tovarné",
+        "total_contracted_eur": 276888.37,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 276888.37,
+    "ico": "00332887",
+    "municipality": "Tovarné"
+  },
+  "00327590": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36158097",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 273870.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 273870.0,
+    "ico": "00327590",
+    "municipality": "Pečovská Nová Ves"
+  },
+  "00647373": {
+    "subsidiary_orgs": [
+      {
+        "ico": "51278235",
+        "name": "Základná škola s materskou školou Benice 96",
+        "total_contracted_eur": 271324.4,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 271324.4,
+    "ico": "00647373",
+    "municipality": "Benice"
+  },
+  "00306185": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37861433",
+        "name": "Základná škola s materskou školou, Bernolákova 1, Šaľa",
+        "total_contracted_eur": 267570.45,
+        "projects_count": 2
+      },
+      {
+        "ico": "00399850",
+        "name": "Gymnázium Juraja Fándlyho, Školská 3, Šaľa",
+        "total_contracted_eur": 170290.77,
+        "projects_count": 1
+      },
+      {
+        "ico": "37861417",
+        "name": "Základná škola Jozefa Cígera Hronského, Krátka ul. 2, Šaľa",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37863622",
+        "name": "Základná škola Ľudovíta Štúra, Pionierska 4, Šaľa",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 634961.22,
+    "ico": "00306185",
+    "municipality": "Šaľa"
+  },
+  "00318167": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36126721",
+        "name": "Základná škola, Školská 192/8, Kamenec pod Vtáčnikom",
+        "total_contracted_eur": 264776.53,
+        "projects_count": 3
+      }
+    ],
+    "subsidiary_total_eur": 264776.53,
+    "ico": "00318167",
+    "municipality": "Kamenec pod Vtáčnikom"
+  },
+  "00332038": {
+    "subsidiary_orgs": [
+      {
+        "ico": "57095469",
+        "name": "Gymnázium-Gimnázium a Stredná odborná škola techniky a služieb-Műszaki és Szolgáltatóipari Szakközépiskola, Zoltána Fábryho 1, Veľké Kapušany",
+        "total_contracted_eur": 260158.85,
+        "projects_count": 1
+      },
+      {
+        "ico": "00161250",
+        "name": "Gymnázium",
+        "total_contracted_eur": 146542.96,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 406701.81,
+    "ico": "00332038",
+    "municipality": "Veľké Kapušany"
+  },
+  "00332852": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37873342",
+        "name": "Základná škola Slovenská Kajňa 54",
+        "total_contracted_eur": 259642.61,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 259642.61,
+    "ico": "00332852",
+    "municipality": "Slovenská Kajňa"
+  },
+  "00316008": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37831577",
+        "name": "Základná škola s materskou školou, Banská 116/47, Cinobaňa",
+        "total_contracted_eur": 259570.0,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 259570.0,
+    "ico": "00316008",
+    "municipality": "Cinobaňa"
+  },
+  "00324060": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31953204",
+        "name": "Základná škola, Pionierska 33, Čaňa",
+        "total_contracted_eur": 252000.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 252000.0,
+    "ico": "00324060",
+    "municipality": "Čaňa"
+  },
+  "00309974": {
+    "subsidiary_orgs": [
+      {
+        "ico": "34028218",
+        "name": "Základná škola",
+        "total_contracted_eur": 252000.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "31827705",
+        "name": "Základná škola, Sadová 620, Senica",
+        "total_contracted_eur": 189720.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "36088226",
+        "name": "Záhorská knižnica",
+        "total_contracted_eur": 58294.1,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 500014.1,
+    "ico": "00309974",
+    "municipality": "Senica"
+  },
+  "00305383": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36081078",
+        "name": "Základná škola Jilemnického ulica č. 204/11 Dunajská Streda",
+        "total_contracted_eur": 252000.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 252000.0,
+    "ico": "00305383",
+    "municipality": "Dunajská Streda"
+  },
+  "00322521": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37873938",
+        "name": "Základná škola, Toplianska 144, Raslavice",
+        "total_contracted_eur": 252000.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 252000.0,
+    "ico": "00322521",
+    "municipality": "Raslavice"
+  },
+  "00305669": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36086606",
+        "name": "Základná škola s materskou školou Zsigmonda Móricza s vyučovacím jazykom maďarským - Móricz Zsigmond Alapiskola és Óvoda",
+        "total_contracted_eur": 249969.44,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 249969.44,
+    "ico": "00305669",
+    "municipality": "Orechová Potôň"
+  },
+  "00305065": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00160326",
+        "name": "Gymnázium Antona Bernoláka, Lichnerova 69, Senec",
+        "total_contracted_eur": 243539.4,
+        "projects_count": 1
+      },
+      {
+        "ico": "36071161",
+        "name": "Základná škola Mlynská 50 903 01 Senec",
+        "total_contracted_eur": 133042.1,
+        "projects_count": 1
+      },
+      {
+        "ico": "36075604",
+        "name": "Súkromné liečebno-výchovné sanatórium, Dialničná ul.1 Senec a Základná škola pri Súkromnom liečebno-výchovnom sanatóriu Diaľničná ul.1, Senec",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "36071170",
+        "name": "Základná škola s vyučovacím jazykom maďarským Nám. A. Molnár",
+        "total_contracted_eur": 74070.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 533631.5,
+    "ico": "00305065",
+    "municipality": "Senec"
+  },
+  "00305049": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31810276",
+        "name": "Základná škola Plavecký Štvrtok",
+        "total_contracted_eur": 242815.39,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 242815.39,
+    "ico": "00305049",
+    "municipality": "Plavecký Štvrtok"
+  },
+  "00313700": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37828428",
+        "name": "Spojená škola, Hlavná 1, 976 56 Pohronská Polhora",
+        "total_contracted_eur": 240994.97,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 240994.97,
+    "ico": "00313700",
+    "municipality": "Pohronská Polhora"
+  },
+  "00306452": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37861123",
+        "name": "Základná škola Nám. Konkolyho-Thege č.2 Hurbanovo",
+        "total_contracted_eur": 239474.14,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 239474.14,
+    "ico": "00306452",
+    "municipality": "Hurbanovo"
+  },
+  "00314846": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37812076",
+        "name": "Základná škola s materskou školou Rabčice 194",
+        "total_contracted_eur": 232465.65,
+        "projects_count": 3
+      }
+    ],
+    "subsidiary_total_eur": 232465.65,
+    "ico": "00314846",
+    "municipality": "Rabčice"
+  },
+  "00306177": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36094234",
+        "name": "Spojená škola",
+        "total_contracted_eur": 229636.75,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 229636.75,
+    "ico": "00306177",
+    "municipality": "Sládkovičovo"
+  },
+  "00321125": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00160881",
+        "name": "Gymnázium Milana Rúfusa",
+        "total_contracted_eur": 226362.77,
+        "projects_count": 1
+      },
+      {
+        "ico": "37831372",
+        "name": "Základná škola, Jilemnického ulica č. 2, Žiar nad Hronom",
+        "total_contracted_eur": 146430.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37831500",
+        "name": "Základná škola, Ul. Dr. Janského č.2, Žiar nad Hronom",
+        "total_contracted_eur": 116820.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 489612.77,
+    "ico": "00321125",
+    "municipality": "Žiar nad Hronom"
+  },
+  "00307114": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37864351",
+        "name": "Základná škola s materskou školou, Jur nad Hronom 284",
+        "total_contracted_eur": 225892.09,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 225892.09,
+    "ico": "00307114",
+    "municipality": "Jur nad Hronom"
+  },
+  "00313114": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00588032",
+        "name": "Gymnázium Angely Merici",
+        "total_contracted_eur": 223772.72,
+        "projects_count": 1
+      },
+      {
+        "ico": "36080543",
+        "name": "Základná škola s materskou školou, Andreja Kubinu 34, Trnava",
+        "total_contracted_eur": 195606.83,
+        "projects_count": 1
+      },
+      {
+        "ico": "17643902",
+        "name": "Základná škola s materskou školou Angely Merici",
+        "total_contracted_eur": 158580.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "36080772",
+        "name": "Základná škola s materskou školou, Nám.Slov.uč.tovarišstva 15, Trnava",
+        "total_contracted_eur": 83098.77,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 661058.3200000001,
+    "ico": "00313114",
+    "municipality": "Trnava"
+  },
+  "00307513": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00047147",
+        "name": "Gymnázium, Mládežnícka 22, Šahy",
+        "total_contracted_eur": 219227.99,
+        "projects_count": 1
+      },
+      {
+        "ico": "37864530",
+        "name": "Základná škola Ladislava Balleka, Ul. E. B. Lukáča 6, Šahy",
+        "total_contracted_eur": 124505.5,
+        "projects_count": 1
+      },
+      {
+        "ico": "17050111",
+        "name": "Gymnázium Juraja Szondyho s vyučovacím jazykom maďarským - Szondy György Gimnázium, Mládežnícka 22, Šahy - Ipolyság",
+        "total_contracted_eur": 117145.25,
+        "projects_count": 1
+      },
+      {
+        "ico": "37864254",
+        "name": "Základná škola Lajosa Pongrácza s VJM - Pongrácz Lajos Alapiskola, Mládežnícka 24, Šahy - Ipolyság",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 523158.74,
+    "ico": "00307513",
+    "municipality": "Šahy"
+  },
+  "00306835": {
+    "subsidiary_orgs": [
+      {
+        "ico": "50655884",
+        "name": "Základná škola s materskou školou, Čajkov 285",
+        "total_contracted_eur": 218476.72,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 218476.72,
+    "ico": "00306835",
+    "municipality": "Čajkov"
+  },
+  "00311715": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36128449",
+        "name": "Základná škola s materskou školou Krajné",
+        "total_contracted_eur": 216640.79,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 216640.79,
+    "ico": "00311715",
+    "municipality": "Krajné"
+  },
+  "00319031": {
+    "subsidiary_orgs": [
+      {
+        "ico": "54023998",
+        "name": "Spojená škola Reformovanej kresťanskej cirkvi, Daxnerova 10/42, Rimavská Sobota",
+        "total_contracted_eur": 216397.51,
+        "projects_count": 1
+      },
+      {
+        "ico": "35985097",
+        "name": "Gemersko-malohontské múzeum",
+        "total_contracted_eur": 96102.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35991852",
+        "name": "Základná škola Mihálya Tompu - Tompa Mihály Alapiskola",
+        "total_contracted_eur": 72360.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37828312",
+        "name": "Základná škola Pavla Dobšinského",
+        "total_contracted_eur": 72360.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 457219.51,
+    "ico": "00319031",
+    "municipality": "Rimavská Sobota"
+  },
+  "00316075": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00160580",
+        "name": "Gymnázium - Gimnázium",
+        "total_contracted_eur": 215000.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37828851",
+        "name": "Základná škola Lajosa Mocsáryho s vyučovacím jazykom maďarským Fiľakovo, Mocsáry Lajos Alapiskola Fülek",
+        "total_contracted_eur": 72360.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37828878",
+        "name": "Základná škola Štefana Koháriho II. s VJM - II. Koháry István Alapiskola",
+        "total_contracted_eur": 72360.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37828860",
+        "name": "Základná škola, Školská 1, Fiľakovo",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 422000.0,
+    "ico": "00316075",
+    "municipality": "Fiľakovo"
+  },
+  "00308994": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37863932",
+        "name": "Základná škola s materskou školou Ondreja Cabana, Námestie A.Cabana 36, 941 06 Komjatice",
+        "total_contracted_eur": 214885.29,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 214885.29,
+    "ico": "00308994",
+    "municipality": "Komjatice"
+  },
+  "00331023": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36158411",
+        "name": "Základná škola Alexandra PavlovičaUl.Komenského 307/22, Svidník",
+        "total_contracted_eur": 212220.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "00161233",
+        "name": "Gymnázium duklianskych hrdinov",
+        "total_contracted_eur": 137418.07,
+        "projects_count": 1
+      },
+      {
+        "ico": "35509082",
+        "name": "Základná škola Ul. karpatská 803/11, Svidník",
+        "total_contracted_eur": 124200.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "36158429",
+        "name": "Základná škola, Ulica 8.mája 640/39, 089 01 Svidník",
+        "total_contracted_eur": 124200.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 598038.0700000001,
+    "ico": "00331023",
+    "municipality": "Svidník"
+  },
+  "00314285": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37812386",
+        "name": "Základná škola s materskou školou, Skalité - Kudlov č. 781",
+        "total_contracted_eur": 210789.02,
+        "projects_count": 2
+      },
+      {
+        "ico": "30232228",
+        "name": "Základná škola sv. Andreja Svorada a Benedikta, Skalité 729",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 241929.02,
+    "ico": "00314285",
+    "municipality": "Skalité"
+  },
+  "00320439": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35996561",
+        "name": "Krajská knižnica Ľudovíta Štúra",
+        "total_contracted_eur": 210526.32,
+        "projects_count": 1
+      },
+      {
+        "ico": "37888595",
+        "name": "Základná škola, J. Alexyho 1941/1, Zvolen",
+        "total_contracted_eur": 207540.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37888421",
+        "name": "Základná škola",
+        "total_contracted_eur": 183564.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "00160865",
+        "name": "Gymnázium Ľudovíta Štúra",
+        "total_contracted_eur": 152215.6,
+        "projects_count": 1
+      },
+      {
+        "ico": "37888528",
+        "name": "Základná škola, P.Jilemnického 1813/1, 960 01 Zvolen",
+        "total_contracted_eur": 72360.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 826205.92,
+    "ico": "00320439",
+    "municipality": "Zvolen"
+  },
+  "00315737": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35993154",
+        "name": "Liptovské múzeum",
+        "total_contracted_eur": 210500.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 210500.0,
+    "ico": "00315737",
+    "municipality": "Ružomberok"
+  },
+  "00321711": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37810944",
+        "name": "Základná škola s materskou školou Ondreja Štefku,  M. R. Štefánika 432, Varín",
+        "total_contracted_eur": 209491.09,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 209491.09,
+    "ico": "00321711",
+    "municipality": "Varín"
+  },
+  "00314463": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37808699",
+        "name": "Základná škola Janka Matúšku, Kohútov sad 1752/4, Dolný Kubín",
+        "total_contracted_eur": 208901.52,
+        "projects_count": 2
+      },
+      {
+        "ico": "37808761",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 136350.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 345251.52,
+    "ico": "00314463",
+    "municipality": "Dolný Kubín"
+  },
+  "00313823": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35677856",
+        "name": "Základná škola Sama Cambela",
+        "total_contracted_eur": 207058.33,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 207058.33,
+    "ico": "00313823",
+    "municipality": "Slovenská Ľupča"
+  },
+  "00326607": {
+    "subsidiary_orgs": [
+      {
+        "ico": "17068975",
+        "name": "Základná škola Svit",
+        "total_contracted_eur": 207042.74,
+        "projects_count": 3
+      }
+    ],
+    "subsidiary_total_eur": 207042.74,
+    "ico": "00326607",
+    "municipality": "Svit"
+  },
+  "00329878": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42078415",
+        "name": "Základná škola s materskou školou Kráľovnej Pokoja",
+        "total_contracted_eur": 204998.16,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 204998.16,
+    "ico": "00329878",
+    "municipality": "Haligovce"
+  },
+  "00329061": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35543906",
+        "name": "Základná škola, Hlavná 121, 056 01 Gelnica",
+        "total_contracted_eur": 204840.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 204840.0,
+    "ico": "00329061",
+    "municipality": "Gelnica"
+  },
+  "00314722": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31902952",
+        "name": "Základná škola s materskou školou Oravská Lesná 299",
+        "total_contracted_eur": 203706.72,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 203706.72,
+    "ico": "00314722",
+    "municipality": "Oravská Lesná"
+  },
+  "00312509": {
+    "subsidiary_orgs": [
+      {
+        "ico": "51786150",
+        "name": "Základná škola s materskou školou, Koperníkova 24, Hlohovec",
+        "total_contracted_eur": 202320.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "31825010",
+        "name": "Základná škola svätého Jozefa",
+        "total_contracted_eur": 145260.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "51786222",
+        "name": "Základná škola s materskou školou, A. Felcána 4, Hlohovec",
+        "total_contracted_eur": 145260.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "36080420",
+        "name": "Základná škola Vilka Šuleka",
+        "total_contracted_eur": 113894.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 606734.0,
+    "ico": "00312509",
+    "municipality": "Hlohovec"
+  },
+  "00623814": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42388660",
+        "name": "Základná škola s materskou školou, Radoľa 326",
+        "total_contracted_eur": 201955.9,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 201955.9,
+    "ico": "00623814",
+    "municipality": "Radoľa"
+  },
+  "00321117": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37831852",
+        "name": "Základná škola",
+        "total_contracted_eur": 200628.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 200628.0,
+    "ico": "00321117",
+    "municipality": "Žarnovica"
+  },
+  "00306169": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37836706",
+        "name": "Základná škola J.A.Komenského",
+        "total_contracted_eur": 200160.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37839918",
+        "name": "Základná škola Juraja Fándlyho, Ulica Fándlyho č. 763/7A, 926 01 Sereď",
+        "total_contracted_eur": 193882.44,
+        "projects_count": 2
+      },
+      {
+        "ico": "31871798",
+        "name": "Dom kultúry",
+        "total_contracted_eur": 131305.01,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 525347.45,
+    "ico": "00306169",
+    "municipality": "Sereď"
+  },
+  "00313971": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36145076",
+        "name": "Kysucké múzeum",
+        "total_contracted_eur": 200000.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37812238",
+        "name": "Základná škola, Rázusova 2260, Čadca",
+        "total_contracted_eur": 174044.17,
+        "projects_count": 1
+      },
+      {
+        "ico": "37812319",
+        "name": "Základná škola s Materskou školou",
+        "total_contracted_eur": 112349.67,
+        "projects_count": 1
+      },
+      {
+        "ico": "37812513",
+        "name": "Základná škola Jána Amosa Komenského",
+        "total_contracted_eur": 95439.04,
+        "projects_count": 1
+      },
+      {
+        "ico": "37812475",
+        "name": "Základná škola s materskou školou, Podzávoz 2739, Čadca",
+        "total_contracted_eur": 93352.91,
+        "projects_count": 1
+      },
+      {
+        "ico": "36145068",
+        "name": "Kysucká knižnica v Čadci",
+        "total_contracted_eur": 85407.89,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 760593.68,
+    "ico": "00313971",
+    "municipality": "Čadca"
+  },
+  "00320897": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37831879",
+        "name": "Základná škola Jána Zemana Nová Baňa",
+        "total_contracted_eur": 198630.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35985020",
+        "name": "Pohronské múzeum",
+        "total_contracted_eur": 146365.91,
+        "projects_count": 1
+      },
+      {
+        "ico": "30232481",
+        "name": "Základná škola sv. Alžbety",
+        "total_contracted_eur": 80640.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "00027987",
+        "name": "Spojená škola",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 456775.91000000003,
+    "ico": "00320897",
+    "municipality": "Nová Baňa"
+  },
+  "00326518": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37874233",
+        "name": "Základná škola M.R.Štefánika, Štefánikova 19, Spišská Belá",
+        "total_contracted_eur": 197208.9,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 197208.9,
+    "ico": "00326518",
+    "municipality": "Spišská Belá"
+  },
+  "00325708": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42251826",
+        "name": "Rodičia a priatelia ZŠsMŠ Rakovec nad Ondavou",
+        "total_contracted_eur": 194716.87,
+        "projects_count": 1
+      },
+      {
+        "ico": "35553863",
+        "name": "Základná škola s materskou školou, Rakovec nad Ondavou 2",
+        "total_contracted_eur": 165598.0,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 360314.87,
+    "ico": "00325708",
+    "municipality": "Rakovec nad Ondavou"
+  },
+  "00691721": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42108071",
+        "name": "Obecné kultúrne centrum",
+        "total_contracted_eur": 194264.03,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 194264.03,
+    "ico": "00691721",
+    "municipality": "Smižany"
+  },
+  "00306550": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37866796",
+        "name": "Základná škola Cesta na vŕšku 1, Marcelová",
+        "total_contracted_eur": 193323.54,
+        "projects_count": 2
+      },
+      {
+        "ico": "37866800",
+        "name": "Základná škola s vyučovacím jazykom maďarským - Alapiskola, Cesta na vŕšku 1, Marcelová",
+        "total_contracted_eur": 80109.6,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 273433.14,
+    "ico": "00306550",
+    "municipality": "Marcelová"
+  },
+  "00320609": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37831429",
+        "name": "Základná škola Hliník nad Hronom, Školská 482",
+        "total_contracted_eur": 192764.19,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 192764.19,
+    "ico": "00320609",
+    "municipality": "Hliník nad Hronom"
+  },
+  "00315745": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37976044",
+        "name": "Zariadenie pre seniorov a domov sociálnych služieb Liptovské Sliače",
+        "total_contracted_eur": 192000.0,
+        "projects_count": 2
+      },
+      {
+        "ico": "37813391",
+        "name": "Základná škola Jozefa Hanulu, Školská ulica 927/2, Liptovské Sliače",
+        "total_contracted_eur": 136350.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 328350.0,
+    "ico": "00315745",
+    "municipality": "Liptovské Sliače"
+  },
+  "00313734": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35677848",
+        "name": "Základná škola s materskou školou Štefana Žáryho",
+        "total_contracted_eur": 190865.85,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 190865.85,
+    "ico": "00313734",
+    "municipality": "Poniky"
+  },
+  "00328472": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37833863",
+        "name": "Základná škola Sama Tomášika s Materskou školou",
+        "total_contracted_eur": 188357.7,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 188357.7,
+    "ico": "00328472",
+    "municipality": "Lubeník"
+  },
+  "00326330": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37876490",
+        "name": "Základná škola s materskou školou Štefana Náhalku",
+        "total_contracted_eur": 188108.22,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 188108.22,
+    "ico": "00326330",
+    "municipality": "Liptovská Teplička"
+  },
+  "00312037": {
+    "subsidiary_orgs": [
+      {
+        "ico": "34059199",
+        "name": "Trenčianske múzeum v Trenčíne",
+        "total_contracted_eur": 188099.62,
+        "projects_count": 2
+      },
+      {
+        "ico": "34059202",
+        "name": "Galéria Miloša Alexandra Bazovského v Trenčíne",
+        "total_contracted_eur": 183608.65,
+        "projects_count": 1
+      },
+      {
+        "ico": "36125971",
+        "name": "Základná škola v Trenčíne, Na dolinách 27",
+        "total_contracted_eur": 163800.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "34008306",
+        "name": "Základná škola",
+        "total_contracted_eur": 108540.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "36126551",
+        "name": "Základná škola",
+        "total_contracted_eur": 104040.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "31201431",
+        "name": "Základná škola",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "00182451",
+        "name": "Spojená škola internátna, Ľ. Stárka 12, Trenčín",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 862208.27,
+    "ico": "00312037",
+    "municipality": "Trenčín"
+  },
+  "00329321": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00161039",
+        "name": "Gymnázium J. Francisciho - Rimavského",
+        "total_contracted_eur": 184303.44,
+        "projects_count": 1
+      },
+      {
+        "ico": "17082447",
+        "name": "Gymnázium sv. Františka Assiského  Levoča",
+        "total_contracted_eur": 85170.66,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 269474.1,
+    "ico": "00329321",
+    "municipality": "Levoča"
+  },
+  "00314196": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37812122",
+        "name": "Základná škola, Podvysoká 307",
+        "total_contracted_eur": 182955.59,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 182955.59,
+    "ico": "00314196",
+    "municipality": "Podvysoká"
+  },
+  "00304913": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42256887",
+        "name": "Spojená škola sv. Františka Assiského, Kláštorné nám. 1, Malacky",
+        "total_contracted_eur": 181935.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "36064181",
+        "name": "Základná škola",
+        "total_contracted_eur": 150120.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "31773729",
+        "name": "Základná škola v Malackách, Záhorácka ul. 95",
+        "total_contracted_eur": 124200.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 456255.0,
+    "ico": "00304913",
+    "municipality": "Malacky"
+  },
+  "00309150": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36106011",
+        "name": "Základná škola, Nábrežná 95, Nové zámky, 94057",
+        "total_contracted_eur": 177930.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "36110728",
+        "name": "Základná škola, Hradná 22, Nové Zámky",
+        "total_contracted_eur": 158580.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "36110752",
+        "name": "Základná škola Gergelya Czuczora s vyučovacím jazykom maďarským - Czuczor Gergely Alapiskola, G.Czuczora 10, Nové Zámky - Érsekújvár",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 450630.0,
+    "ico": "00309150",
+    "municipality": "Nové Zámky"
+  },
+  "00650498": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37810341",
+        "name": "Základná škola s materskou školou Oravské Veselé",
+        "total_contracted_eur": 176400.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 176400.0,
+    "ico": "00650498",
+    "municipality": "Oravské Veselé"
+  },
+  "00314081": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37812521",
+        "name": "Základná škola Kysucký Lieskovec",
+        "total_contracted_eur": 172515.06,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 172515.06,
+    "ico": "00314081",
+    "municipality": "Kysucký Lieskovec"
+  },
+  "00313491": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35677805",
+        "name": "Základná škola s materskou školou Brusno",
+        "total_contracted_eur": 171180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 171180.0,
+    "ico": "00313491",
+    "municipality": "Brusno"
+  },
+  "00332399": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37873288",
+        "name": "Základná škola",
+        "total_contracted_eur": 170221.47,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 170221.47,
+    "ico": "00332399",
+    "municipality": "Hanušovce nad Topľou"
+  },
+  "00305154": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42414636",
+        "name": "Základná škola s materskou školou, Hlavná 292/82 Viničné",
+        "total_contracted_eur": 166498.7,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 166498.7,
+    "ico": "00305154",
+    "municipality": "Viničné"
+  },
+  "00312053": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31201458",
+        "name": "Základná škola s materskou školou Samuela Timona, Trenčianska Turná 30",
+        "total_contracted_eur": 163800.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 163800.0,
+    "ico": "00312053",
+    "municipality": "Trenčianska Turná"
+  },
+  "00327379": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00161047",
+        "name": "Gymnázium Lipany",
+        "total_contracted_eur": 159968.13,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 159968.13,
+    "ico": "00327379",
+    "municipality": "Lipany"
+  },
+  "00312002": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36125121",
+        "name": "Základná škola Stará Turá, Hurbanova ul. 128/25",
+        "total_contracted_eur": 158580.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 158580.0,
+    "ico": "00312002",
+    "municipality": "Stará Turá"
+  },
+  "00325791": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00161187",
+        "name": "Gymnázium",
+        "total_contracted_eur": 158204.37,
+        "projects_count": 1
+      },
+      {
+        "ico": "35545623",
+        "name": "Základná škola",
+        "total_contracted_eur": 124560.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 282764.37,
+    "ico": "00325791",
+    "municipality": "Sobrance"
+  },
+  "00306711": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37867024",
+        "name": "Základná škola Bátorove Kosihy",
+        "total_contracted_eur": 155892.94,
+        "projects_count": 3
+      },
+      {
+        "ico": "37867016",
+        "name": "Základná škola Józsefa Kovátsa s vyučovacím jazykom maďarským Kováts József Magyar Tanítási Nyelvű Alapiskola Hlavná 889 , Bátorove Kosihy - Bátorkeszi",
+        "total_contracted_eur": 36180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 192072.94,
+    "ico": "00306711",
+    "municipality": "Bátorove Kosihy"
+  },
+  "00324728": {
+    "subsidiary_orgs": [
+      {
+        "ico": "17070589",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 150857.46,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 150857.46,
+    "ico": "00324728",
+    "municipality": "Slanec"
+  },
+  "00327344": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37876988",
+        "name": "Základná škola s materskou školou Lemešany",
+        "total_contracted_eur": 150374.97,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 150374.97,
+    "ico": "00327344",
+    "municipality": "Lemešany"
+  },
+  "00323560": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00161179",
+        "name": "Gymnázium, Študentská 4, Snina",
+        "total_contracted_eur": 150345.3,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 150345.3,
+    "ico": "00323560",
+    "municipality": "Snina"
+  },
+  "00306312": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37863673",
+        "name": "Základná škola s materskou školou Vlčany 1547",
+        "total_contracted_eur": 150120.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 150120.0,
+    "ico": "00306312",
+    "municipality": "Vlčany"
+  },
+  "00332810": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37873318",
+        "name": "Základná škola, Školská 389, Sačurov",
+        "total_contracted_eur": 149843.3,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 149843.3,
+    "ico": "00332810",
+    "municipality": "Sačurov"
+  },
+  "00305081": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31773711",
+        "name": "Základná škola kpt. J.Nálepku v Stupave, Školská ul. 2",
+        "total_contracted_eur": 148140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 148140.0,
+    "ico": "00305081",
+    "municipality": "Stupava"
+  },
+  "00305723": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36086568",
+        "name": "Základná škola Mateja Bela",
+        "total_contracted_eur": 147050.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 147050.0,
+    "ico": "00305723",
+    "municipality": "Šamorín"
+  },
+  "00318094": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31201768",
+        "name": "Základná škola v Handlovej",
+        "total_contracted_eur": 146902.52,
+        "projects_count": 1
+      },
+      {
+        "ico": "31201784",
+        "name": "Základná škola, Morovnianska cesta 1866/55, Handlová",
+        "total_contracted_eur": 72360.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "34058923",
+        "name": "Špeciálna základná škola, Námestie baníkov 10/20, Handlová",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 250402.52,
+    "ico": "00318094",
+    "municipality": "Handlová"
+  },
+  "00311464": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36125458",
+        "name": "Základná škola Štvrtej sednice Tatrína",
+        "total_contracted_eur": 146430.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 146430.0,
+    "ico": "00311464",
+    "municipality": "Čachtice"
+  },
+  "00320447": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37833626",
+        "name": "Základná škola s materskou školou Terézie Vansovej, Zvolenská Slatina",
+        "total_contracted_eur": 146430.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 146430.0,
+    "ico": "00320447",
+    "municipality": "Zvolenská Slatina"
+  },
+  "00307149": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37864378",
+        "name": "Základná škola s materskou školou, Kozárovce 927",
+        "total_contracted_eur": 146430.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 146430.0,
+    "ico": "00307149",
+    "municipality": "Kozárovce"
+  },
+  "00322245": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37873962",
+        "name": "Základná škola v Kurime",
+        "total_contracted_eur": 146430.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 146430.0,
+    "ico": "00322245",
+    "municipality": "Kurima"
+  },
+  "00321249": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37812700",
+        "name": "Základná škola Dolná Tižina",
+        "total_contracted_eur": 145669.77,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 145669.77,
+    "ico": "00321249",
+    "municipality": "Dolná Tižina"
+  },
+  "00319961": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37831291",
+        "name": "Základná škola s materskou školou, Krivec I. 1355, Hriňová",
+        "total_contracted_eur": 145270.21,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 145270.21,
+    "ico": "00319961",
+    "municipality": "Hriňová"
+  },
+  "00311928": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36125431",
+        "name": "Základná škola s materskou školou Podolie",
+        "total_contracted_eur": 145260.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 145260.0,
+    "ico": "00311928",
+    "municipality": "Podolie"
+  },
+  "00314897": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37810235",
+        "name": "Základná škola Pavla Országha Hviezdoslava , Hviezdoslavova 822/8, Trstená",
+        "total_contracted_eur": 145260.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "42434912",
+        "name": "Základná škola s materskou školou Rudolfa Dilonga",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 259380.0,
+    "ico": "00314897",
+    "municipality": "Trstená"
+  },
+  "00311286": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37860593",
+        "name": "Základná škola s materskou školou Veľké Ripňany",
+        "total_contracted_eur": 145260.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 145260.0,
+    "ico": "00311286",
+    "municipality": "Veľké Ripňany"
+  },
+  "00307696": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37864271",
+        "name": "Základná škola s vyučovacím jazykom maďarským - Alapiskola, Komenského 1, Želiezovce - Zselíz",
+        "total_contracted_eur": 145208.4,
+        "projects_count": 2
+      },
+      {
+        "ico": "00160504",
+        "name": "Gymnázium Jána Amosa Komenského - Comenius Gimnázium, Štúrova 16, Želiezovce",
+        "total_contracted_eur": 126071.13,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 271279.53,
+    "ico": "00307696",
+    "municipality": "Želiezovce"
+  },
+  "00314331": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00160849",
+        "name": "Gymnázium",
+        "total_contracted_eur": 144400.78,
+        "projects_count": 1
+      },
+      {
+        "ico": "52806570",
+        "name": "Spojená škola Juraja Turza, Stred 305, Turzovka",
+        "total_contracted_eur": 93420.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 237820.78,
+    "ico": "00314331",
+    "municipality": "Turzovka"
+  },
+  "00327930": {
+    "subsidiary_orgs": [
+      {
+        "ico": "50576119",
+        "name": "Základná škola Uzovské Pekľany",
+        "total_contracted_eur": 144255.0,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 144255.0,
+    "ico": "00327930",
+    "municipality": "Uzovské Pekľany"
+  },
+  "00324116": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35544139",
+        "name": "Základná škola, Hlavná 5, Družstevná pri Hornáde",
+        "total_contracted_eur": 143622.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 143622.0,
+    "ico": "00324116",
+    "municipality": "Družstevná pri Hornáde"
+  },
+  "00316962": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37811983",
+        "name": "Základná škola",
+        "total_contracted_eur": 143622.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 143622.0,
+    "ico": "00316962",
+    "municipality": "Turany"
+  },
+  "00321737": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37812793",
+        "name": "Základná škola s materskou školou Slovenského učeného tovarišstva Veľké Rovné 302",
+        "total_contracted_eur": 143622.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 143622.0,
+    "ico": "00321737",
+    "municipality": "Veľké Rovné"
+  },
+  "00324868": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35544422",
+        "name": "Základná škola Veľká Ida",
+        "total_contracted_eur": 143573.93,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 143573.93,
+    "ico": "00324868",
+    "municipality": "Veľká Ida"
+  },
+  "00307548": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37864548",
+        "name": "Základná škola, Komenského 37, Tekovské Lužany",
+        "total_contracted_eur": 143184.0,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 143184.0,
+    "ico": "00307548",
+    "municipality": "Tekovské Lužany"
+  },
+  "00318744": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35991755",
+        "name": "Základná škola Janka Francisciho Rimavského Hnúšťa",
+        "total_contracted_eur": 142067.94,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 142067.94,
+    "ico": "00318744",
+    "municipality": "Hnúšťa"
+  },
+  "00331465": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35541130",
+        "name": "Základná škola",
+        "total_contracted_eur": 137880.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 137880.0,
+    "ico": "00331465",
+    "municipality": "Čierna nad Tisou"
+  },
+  "00330132": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31967256",
+        "name": "Základná škola s materskou školou Podolínec",
+        "total_contracted_eur": 137158.49,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 137158.49,
+    "ico": "00330132",
+    "municipality": "Podolínec"
+  },
+  "00319830": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37833472",
+        "name": "Základná škola s materskou školou Juraja Slávika Neresnického, Školská 447/3, Dobrá Niva",
+        "total_contracted_eur": 136350.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 136350.0,
+    "ico": "00319830",
+    "municipality": "Dobrá Niva"
+  },
+  "00312983": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37836498",
+        "name": "Základná škola  s materskou školou",
+        "total_contracted_eur": 136350.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 136350.0,
+    "ico": "00312983",
+    "municipality": "Smolenice"
+  },
+  "00324451": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00161071",
+        "name": "Gymnázium Štefana Moysesa",
+        "total_contracted_eur": 135948.73,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 135948.73,
+    "ico": "00324451",
+    "municipality": "Moldava nad Bodvou"
+  },
+  "00314714": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37810308",
+        "name": "Základná škola s materskou školou Martina Hamuljaka Oravská Jasenica 141",
+        "total_contracted_eur": 135757.76,
+        "projects_count": 3
+      }
+    ],
+    "subsidiary_total_eur": 135757.76,
+    "ico": "00314714",
+    "municipality": "Oravská Jasenica"
+  },
+  "00325937": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35545640",
+        "name": "Základná škola s materskou školou, Úbrež 141",
+        "total_contracted_eur": 135118.3,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 135118.3,
+    "ico": "00325937",
+    "municipality": "Úbrež"
+  },
+  "00317209": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35678127",
+        "name": "Základná škola s materskou školou Centrum I 32",
+        "total_contracted_eur": 132660.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "00632384",
+        "name": "Centrum sociálnych služieb - AVE",
+        "total_contracted_eur": 68073.24,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 200733.24,
+    "ico": "00317209",
+    "municipality": "Dubnica nad Váhom"
+  },
+  "00305936": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37838407",
+        "name": "Základná škola Gejzu Dusíka",
+        "total_contracted_eur": 127641.24,
+        "projects_count": 1
+      },
+      {
+        "ico": "00352594",
+        "name": "Patria - Domov dôchodcov v Galante",
+        "total_contracted_eur": 97920.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 225561.24,
+    "ico": "00305936",
+    "municipality": "Galanta"
+  },
+  "00304662": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36071099",
+        "name": "Základná škola, Komenského 3, 90027 Bernolákovo",
+        "total_contracted_eur": 127440.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 127440.0,
+    "ico": "00304662",
+    "municipality": "Bernolákovo"
+  },
+  "00320170": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37831216",
+        "name": "Základná škola s materskou školou Pliešovce",
+        "total_contracted_eur": 126558.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 126558.0,
+    "ico": "00320170",
+    "municipality": "Pliešovce"
+  },
+  "00314625": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37813099",
+        "name": "Základná škola s materskou školou Lokca",
+        "total_contracted_eur": 124560.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 124560.0,
+    "ico": "00314625",
+    "municipality": "Lokca"
+  },
+  "00314544": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37813111",
+        "name": "Základná škola s materskou školou, Kliňanská cesta 122/4, Klin",
+        "total_contracted_eur": 124560.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 124560.0,
+    "ico": "00314544",
+    "municipality": "Klin"
+  },
+  "00318396": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31201741",
+        "name": "Základná škola Oslany",
+        "total_contracted_eur": 124200.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 124200.0,
+    "ico": "00318396",
+    "municipality": "Oslany"
+  },
+  "00328642": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35543698",
+        "name": "Základná škola",
+        "total_contracted_eur": 124200.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 124200.0,
+    "ico": "00328642",
+    "municipality": "Plešivec"
+  },
+  "00329517": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35546425",
+        "name": "Základná škola s materskou školou Prakovce 307",
+        "total_contracted_eur": 124200.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "00523461",
+        "name": "Spojená škola internátna s organizačnými zložkami: Odborné učilište internátne, Praktická škola internátna, Špeciálna základná škola",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 155340.0,
+    "ico": "00329517",
+    "municipality": "Prakovce"
+  },
+  "00329274": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35546573",
+        "name": "Základná škola, Kluknava 43",
+        "total_contracted_eur": 124200.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 124200.0,
+    "ico": "00329274",
+    "municipality": "Kluknava"
+  },
+  "00315494": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37910485",
+        "name": "Základná škola s materskou školou J.D. Matejovie 539, Liptovský Hrádok",
+        "total_contracted_eur": 124200.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 124200.0,
+    "ico": "00315494",
+    "municipality": "Liptovský Hrádok"
+  },
+  "00319902": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42002028",
+        "name": "Spojená škola Dudince",
+        "total_contracted_eur": 122769.16,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 122769.16,
+    "ico": "00319902",
+    "municipality": "Dudince"
+  },
+  "00306061": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36062243",
+        "name": "Základná škola Školská 190 900 50 Kráľová pri Senci",
+        "total_contracted_eur": 121392.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 121392.0,
+    "ico": "00306061",
+    "municipality": "Kráľová pri Senci"
+  },
+  "00312398": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36080586",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 121392.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 121392.0,
+    "ico": "00312398",
+    "municipality": "Dolná Krupá"
+  },
+  "00318019": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36126659",
+        "name": "Základná škola s materskou školou, M. Nešporu 12/1, Bystričany",
+        "total_contracted_eur": 121392.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 121392.0,
+    "ico": "00318019",
+    "municipality": "Bystričany"
+  },
+  "00306258": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37838377",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 121392.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 121392.0,
+    "ico": "00306258",
+    "municipality": "Trstice"
+  },
+  "00308641": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37865455",
+        "name": "Základná škola - Vráble, Levická 903, 95201",
+        "total_contracted_eur": 121392.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 121392.0,
+    "ico": "00308641",
+    "municipality": "Vráble"
+  },
+  "00317080": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36124672",
+        "name": "Základná škola s materskou školou Bolešov",
+        "total_contracted_eur": 121200.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 121200.0,
+    "ico": "00317080",
+    "municipality": "Bolešov"
+  },
+  "00305642": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00596485",
+        "name": "Domov sociálnych služieb pre deti a dospelých v Okoči - Opatovský Sokolec",
+        "total_contracted_eur": 121003.93,
+        "projects_count": 1
+      },
+      {
+        "ico": "37836391",
+        "name": "Základná škola Jánosa Aranya s vyučovacím jazykom maďarským",
+        "total_contracted_eur": 118010.87,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 239014.8,
+    "ico": "00305642",
+    "municipality": "Okoč"
+  },
+  "00324132": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35544392",
+        "name": "Základná škola Ďurkov",
+        "total_contracted_eur": 118325.55,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 118325.55,
+    "ico": "00324132",
+    "municipality": "Ďurkov"
+  },
+  "00316211": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35991364",
+        "name": "Základná škola",
+        "total_contracted_eur": 118320.71,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 118320.71,
+    "ico": "00316211",
+    "municipality": "Málinec"
+  },
+  "00313424": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37828355",
+        "name": "Základná škola Heľpa",
+        "total_contracted_eur": 117899.31,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 117899.31,
+    "ico": "00313424",
+    "municipality": "Heľpa"
+  },
+  "00330655": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36158348",
+        "name": "Základná škola Kružlová",
+        "total_contracted_eur": 117133.68,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 117133.68,
+    "ico": "00330655",
+    "municipality": "Kružlová"
+  },
+  "00324442": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35544201",
+        "name": "Základná škola - Grundschule Medzev",
+        "total_contracted_eur": 116820.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 116820.0,
+    "ico": "00324442",
+    "municipality": "Medzev"
+  },
+  "00308960": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37864050",
+        "name": "Základná škola Sándora Petőfiho s vyučovacím jazykom maďarským - Petőfi Sándor Alapiskola č. 494 Kamenín - Kéménd",
+        "total_contracted_eur": 116820.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 116820.0,
+    "ico": "00308960",
+    "municipality": "Kamenín"
+  },
+  "00309303": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00160423",
+        "name": "Gymnázium - Gimnázium, Adyho 7, Štúrovo",
+        "total_contracted_eur": 116530.06,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 116530.06,
+    "ico": "00309303",
+    "municipality": "Štúrovo"
+  },
+  "00311863": {
+    "subsidiary_orgs": [
+      {
+        "ico": "17643066",
+        "name": "Spojená škola sv. Jozefa",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "31202667",
+        "name": "Základná škola, Ulica kpt. Nálepku č. 855, Nové Mesto nad Váhom",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "31202675",
+        "name": "Základná škola, Tematínska ulica č. 2092, Nové Mesto nad Váhom",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "50457471",
+        "name": "Spojená škola, Ul. J. Kollára 3, Nové Mesto nad Váhom",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 311220.0,
+    "ico": "00311863",
+    "municipality": "Nové Mesto nad Váhom"
+  },
+  "00332062": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35545771",
+        "name": "Základná škola Istvána Dobóa s vyučovacím jazykom maďarským - Dobó István Alapiskola, Veľké Slemence 18 - Nagyszelmenc",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 114120.0,
+    "ico": "00332062",
+    "municipality": "Veľké Slemence"
+  },
+  "00312312": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36080870",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 114120.0,
+    "ico": "00312312",
+    "municipality": "Brestovany"
+  },
+  "00312355": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36090212",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 114120.0,
+    "ico": "00312355",
+    "municipality": "Červeník"
+  },
+  "00317390": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36124656",
+        "name": "Základná škola s Materskou školou",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 114120.0,
+    "ico": "00317390",
+    "municipality": "Košeca"
+  },
+  "00312011": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36126560",
+        "name": "Základná škola s materskou školou Svinná 131",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 114120.0,
+    "ico": "00312011",
+    "municipality": "Svinná"
+  },
+  "00326585": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36165051",
+        "name": "Základná škola s materskou školou, Dolný Smokovec 21, Vysoké Tatry",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 114120.0,
+    "ico": "00326585",
+    "municipality": "Vysoké Tatry"
+  },
+  "00314668": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37810359",
+        "name": "Základná škola s materskou školou Mútne 224",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 114120.0,
+    "ico": "00314668",
+    "municipality": "Mútne"
+  },
+  "00316695": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37811151",
+        "name": "Základná škola, Horná Štubňa 494",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 114120.0,
+    "ico": "00316695",
+    "municipality": "Horná Štubňa"
+  },
+  "00320706": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37831445",
+        "name": "Základná škola Janova Lehota č. 97",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 114120.0,
+    "ico": "00320706",
+    "municipality": "Janova Lehota"
+  },
+  "00306193": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37840517",
+        "name": "Základná škola s materskou školou kráľa Svätopluka Šintava",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 114120.0,
+    "ico": "00306193",
+    "municipality": "Šintava"
+  },
+  "00309125": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37864092",
+        "name": "Základná škola Jánosa Endrődyho s vyučovacím jazykom maďarským - Endrődy János Alapiskola, Mužla-Muzsla 491",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 114120.0,
+    "ico": "00309125",
+    "municipality": "Mužla"
+  },
+  "00306649": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37866966",
+        "name": "Základná škola s vyučovacím jazykom maďarským - Alapiskola",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37867172",
+        "name": "Základná škola, Pavilón B, Školská ul. č. 26, Pribeta",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 197100.0,
+    "ico": "00306649",
+    "municipality": "Pribeta"
+  },
+  "00306436": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37867121",
+        "name": "Základná škola s materskou školou, Školská 22, Svätý Peter",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37861166",
+        "name": "Základná škola s materskou školou Józsefa Kossányiho s vyučovacím jazykom maďarským - Kossányi József Alapiskola és Óvoda",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 197100.0,
+    "ico": "00306436",
+    "municipality": "Svätý Peter"
+  },
+  "00326551": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37874217",
+        "name": "Základná škola s materskou školou Spišské Hanušovce",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 114120.0,
+    "ico": "00326551",
+    "municipality": "Spišské Hanušovce"
+  },
+  "00323454": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37876708",
+        "name": "Základná škola s materskou školou Michala Sopiru Radvaň nad Laborcom",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 114120.0,
+    "ico": "00323454",
+    "municipality": "Radvaň nad Laborcom"
+  },
+  "35659599": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37888544",
+        "name": "Základná škola s materskou školou Brehy",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 114120.0,
+    "ico": "35659599",
+    "municipality": "Brehy"
+  },
+  "00319759": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37888641",
+        "name": "Základná škola Adely Ostrolúckej v Budči",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 114120.0,
+    "ico": "00319759",
+    "municipality": "Budča"
+  },
+  "00320382": {
+    "subsidiary_orgs": [
+      {
+        "ico": "54856418",
+        "name": "Základná škola s materskou školou, Vígľaš 436",
+        "total_contracted_eur": 114120.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 114120.0,
+    "ico": "00320382",
+    "municipality": "Vígľaš"
+  },
+  "00309249": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37864076",
+        "name": "Základná škola s materskou školou s vyučovacím jazykom maďarským - Alapiskola és Óvoda, Salka 428",
+        "total_contracted_eur": 113940.0,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 113940.0,
+    "ico": "00309249",
+    "municipality": "Salka"
+  },
+  "00307483": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37864513",
+        "name": "Základná škola Štefana Senčíka",
+        "total_contracted_eur": 111298.1,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 111298.1,
+    "ico": "00307483",
+    "municipality": "Starý Tekov"
+  },
+  "00324655": {
+    "subsidiary_orgs": [
+      {
+        "ico": "51896133",
+        "name": "Základná škola s materskou školou, SNP 121, Rozhanovce",
+        "total_contracted_eur": 110250.0,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 110250.0,
+    "ico": "00324655",
+    "municipality": "Rozhanovce"
+  },
+  "00321133": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37833791",
+        "name": "Základná škola s materskou školou Župkov",
+        "total_contracted_eur": 109675.23,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 109675.23,
+    "ico": "00321133",
+    "municipality": "Župkov"
+  },
+  "31942547": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36158984",
+        "name": "Základná škola, Školská 1, Ľubica",
+        "total_contracted_eur": 108540.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 108540.0,
+    "ico": "31942547",
+    "municipality": "Ľubica"
+  },
+  "00314234": {
+    "subsidiary_orgs": [
+      {
+        "ico": "17066867",
+        "name": "Základná škola Milana Mravca",
+        "total_contracted_eur": 106740.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 106740.0,
+    "ico": "00314234",
+    "municipality": "Raková"
+  },
+  "00311073": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31202641",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 106740.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 106740.0,
+    "ico": "00311073",
+    "municipality": "Slatina nad Bebravou"
+  },
+  "00311138": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36128503",
+        "name": "Základná škola, Šišov 74",
+        "total_contracted_eur": 106740.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 106740.0,
+    "ico": "00311138",
+    "municipality": "Šišov"
+  },
+  "00314358": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37812351",
+        "name": "Základná škola, Zákopčie č. 957",
+        "total_contracted_eur": 106740.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 106740.0,
+    "ico": "00314358",
+    "municipality": "Zákopčie"
+  },
+  "00329657": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35543931",
+        "name": "Základná škola, Komenského 6, Spišské Vlachy",
+        "total_contracted_eur": 105717.61,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 105717.61,
+    "ico": "00329657",
+    "municipality": "Spišské Vlachy"
+  },
+  "00309257": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37860810",
+        "name": "Základná škola Semerovo",
+        "total_contracted_eur": 105480.06,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 105480.06,
+    "ico": "00309257",
+    "municipality": "Semerovo"
+  },
+  "00321362": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37809750",
+        "name": "Základná škola s materskou školou Kolárovice, okres Bytča",
+        "total_contracted_eur": 104688.74,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 104688.74,
+    "ico": "00321362",
+    "municipality": "Kolárovice"
+  },
+  "00315052": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37813137",
+        "name": "Základná škola s materskou školou Ž A Š K O V",
+        "total_contracted_eur": 99341.36,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 99341.36,
+    "ico": "00315052",
+    "municipality": "Žaškov"
+  },
+  "00312100": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31201440",
+        "name": "Základná škola Jána Lipského s materskou školou Trenčianske Stankovce",
+        "total_contracted_eur": 98550.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 98550.0,
+    "ico": "00312100",
+    "municipality": "Trenčianske Stankovce"
+  },
+  "00309737": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00596256",
+        "name": "Domov sociálnych služieb pre dospelých v Moravskom Svätom Jáne",
+        "total_contracted_eur": 97814.02,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 97814.02,
+    "ico": "00309737",
+    "municipality": "Moravský Svätý Ján"
+  },
+  "00326232": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36158895",
+        "name": "Základná škola, Školská 212/19, Huncovce",
+        "total_contracted_eur": 97620.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 97620.0,
+    "ico": "00326232",
+    "municipality": "Huncovce"
+  },
+  "00332135": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35541181",
+        "name": "Základná škola Vojčice",
+        "total_contracted_eur": 97112.91,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 97112.91,
+    "ico": "00332135",
+    "municipality": "Vojčice"
+  },
+  "00314293": {
+    "subsidiary_orgs": [
+      {
+        "ico": "55492878",
+        "name": "Základná škola s materskou školou, Staškov 502",
+        "total_contracted_eur": 97092.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 97092.0,
+    "ico": "00314293",
+    "municipality": "Staškov"
+  },
+  "00648469": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37891839",
+        "name": "Základná škola s materskou školou Vlkanová",
+        "total_contracted_eur": 93747.51,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 93747.51,
+    "ico": "00648469",
+    "municipality": "Vlkanová"
+  },
+  "00313262": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35677813",
+        "name": "Základná škola s materskou školou, Tajovského 2, Badín",
+        "total_contracted_eur": 93420.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 93420.0,
+    "ico": "00313262",
+    "municipality": "Badín"
+  },
+  "00314617": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37810111",
+        "name": "Základná škola s materskou školou Liesek, Staničná 324, Liesek",
+        "total_contracted_eur": 93420.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 93420.0,
+    "ico": "00314617",
+    "municipality": "Liesek"
+  },
+  "00314749": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37810332",
+        "name": "Základná škola s materskou školou Oravská Polhora 130",
+        "total_contracted_eur": 93420.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 93420.0,
+    "ico": "00314749",
+    "municipality": "Oravská Polhora"
+  },
+  "00308897": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37860828",
+        "name": "Základná škola, Hlavné námestie 14, 941 31  Dvory nad Žitavou",
+        "total_contracted_eur": 92362.1,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 92362.1,
+    "ico": "00308897",
+    "municipality": "Dvory nad Žitavou"
+  },
+  "00329622": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00691887",
+        "name": "Domov sociálnych služieb sv. Jána z Boha",
+        "total_contracted_eur": 89313.22,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 89313.22,
+    "ico": "00329622",
+    "municipality": "Spišské Podhradie"
+  },
+  "00324001": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31953271",
+        "name": "Základná škola s materskou školou Milana Rastislava Štefánika, Budimír 11",
+        "total_contracted_eur": 88020.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 88020.0,
+    "ico": "00324001",
+    "municipality": "Budimír"
+  },
+  "00329207": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35546476",
+        "name": "Základná škola, Školská 297, Jaklovce",
+        "total_contracted_eur": 88020.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 88020.0,
+    "ico": "00329207",
+    "municipality": "Jaklovce"
+  },
+  "00314161": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37812343",
+        "name": "Základná škola s materskou školou Olešná 464",
+        "total_contracted_eur": 88020.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 88020.0,
+    "ico": "00314161",
+    "municipality": "Olešná"
+  },
+  "00307807": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37865366",
+        "name": "Základná škola s materskou školou, Nová č. 201, Čakajovce",
+        "total_contracted_eur": 88020.0,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 88020.0,
+    "ico": "00307807",
+    "municipality": "Čakajovce"
+  },
+  "00327239": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37873253",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 88020.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 88020.0,
+    "ico": "00327239",
+    "municipality": "Kapušany"
+  },
+  "00327514": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37876368",
+        "name": "Základná škola s materskou školou Nižný Slavkov",
+        "total_contracted_eur": 88020.0,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 88020.0,
+    "ico": "00327514",
+    "municipality": "Nižný Slavkov"
+  },
+  "00320242": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37897039",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 88020.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 88020.0,
+    "ico": "00320242",
+    "municipality": "Sielnica"
+  },
+  "00327883": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37942247",
+        "name": "Základná škola s materskou školou Torysa",
+        "total_contracted_eur": 88020.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 88020.0,
+    "ico": "00327883",
+    "municipality": "Torysa"
+  },
+  "00329193": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42026644",
+        "name": "Základná škola s materskou školou, Jablonov 209",
+        "total_contracted_eur": 88020.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 88020.0,
+    "ico": "00329193",
+    "municipality": "Jablonov"
+  },
+  "00308676": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37865081",
+        "name": "Základná škola Pribinova,Zlaté Moravce",
+        "total_contracted_eur": 87628.1,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 87628.1,
+    "ico": "00308676",
+    "municipality": "Zlaté Moravce"
+  },
+  "00315117": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37810375",
+        "name": "Základná škola",
+        "total_contracted_eur": 87150.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 87150.0,
+    "ico": "00315117",
+    "municipality": "Bobrovec"
+  },
+  "00321010": {
+    "subsidiary_orgs": [
+      {
+        "ico": "51284022",
+        "name": "Základná škola s materskou školou, Stará Kremnička 33",
+        "total_contracted_eur": 86709.13,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 86709.13,
+    "ico": "00321010",
+    "municipality": "Stará Kremnička"
+  },
+  "00311529": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36125911",
+        "name": "Základná škola s materskou školou Drietoma",
+        "total_contracted_eur": 86616.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 86616.0,
+    "ico": "00311529",
+    "municipality": "Drietoma"
+  },
+  "00314200": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37812785",
+        "name": "Základná škola s materskou školou,Povina 323",
+        "total_contracted_eur": 86616.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 86616.0,
+    "ico": "00314200",
+    "municipality": "Povina"
+  },
+  "00321427": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37813196",
+        "name": "Základná škola Lietava",
+        "total_contracted_eur": 86616.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 86616.0,
+    "ico": "00321427",
+    "municipality": "Lietava"
+  },
+  "00306126": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37838393",
+        "name": "Základná škola, Školská 240 Pata",
+        "total_contracted_eur": 86616.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 86616.0,
+    "ico": "00306126",
+    "municipality": "Pata"
+  },
+  "00327913": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37876872",
+        "name": "Základná škola s materskou školou, Tulčík 116",
+        "total_contracted_eur": 86616.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 86616.0,
+    "ico": "00327913",
+    "municipality": "Tulčík"
+  },
+  "00311944": {
+    "subsidiary_orgs": [
+      {
+        "ico": "51906236",
+        "name": "Základná škola s materskou školou kardinála Alexandra Rudnay, Považany 216",
+        "total_contracted_eur": 86616.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 86616.0,
+    "ico": "00311944",
+    "municipality": "Považany"
+  },
+  "00324400": {
+    "subsidiary_orgs": [
+      {
+        "ico": "56410000",
+        "name": "Spojená škola, Kysak 210",
+        "total_contracted_eur": 86616.0,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 86616.0,
+    "ico": "00324400",
+    "municipality": "Kysak"
+  },
+  "00648060": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00647683",
+        "name": "Centrum sociálnych služieb TAU",
+        "total_contracted_eur": 85282.93,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 85282.93,
+    "ico": "00648060",
+    "municipality": "Turie"
+  },
+  "00313475": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35677821",
+        "name": "Základná škola s materskou školou Andreja Sládkoviča Hrochoť",
+        "total_contracted_eur": 84330.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 84330.0,
+    "ico": "00313475",
+    "municipality": "Hrochoť"
+  },
+  "00331970": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35541164",
+        "name": "Základná škola, Školská 2, Streda nad Bodrogom",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 82980.0,
+    "ico": "00331970",
+    "municipality": "Streda nad Bodrogom"
+  },
+  "00312703": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35602643",
+        "name": "Základná škola Leopoldov",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 82980.0,
+    "ico": "00312703",
+    "municipality": "Leopoldov"
+  },
+  "00305235": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36063959",
+        "name": "Základná škola Albína Brunovského",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 82980.0,
+    "ico": "00305235",
+    "municipality": "Zohor"
+  },
+  "00311731": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36125105",
+        "name": "Základná škola s materskou školou Samuela Štúra, Lubina 1",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 82980.0,
+    "ico": "00311731",
+    "municipality": "Lubina"
+  },
+  "00306771": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37864289",
+        "name": "Základná škola, Bátovce 368",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 82980.0,
+    "ico": "00306771",
+    "municipality": "Bátovce"
+  },
+  "00308536": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37865145",
+        "name": "Základná škola Topoľčianky",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 82980.0,
+    "ico": "00308536",
+    "municipality": "Topoľčianky"
+  },
+  "00330124": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37872915",
+        "name": "Základná škola s materskou školou, Plavnica 244",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 82980.0,
+    "ico": "00330124",
+    "municipality": "Plavnica"
+  },
+  "00332275": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37873261",
+        "name": "Základná škola Bystré",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 82980.0,
+    "ico": "00332275",
+    "municipality": "Bystré"
+  },
+  "00321036": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37888692",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 82980.0,
+    "ico": "00321036",
+    "municipality": "Tekovská Breznica"
+  },
+  "00314129": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42388104",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 82980.0,
+    "ico": "00314129",
+    "municipality": "Makov"
+  },
+  "00315010": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42435048",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 82980.0,
+    "ico": "00315010",
+    "municipality": "Zázrivá"
+  },
+  "00312584": {
+    "subsidiary_orgs": [
+      {
+        "ico": "50090828",
+        "name": "Základná škola s materskou školou, Nám. 1. mája 3, Chtelnica",
+        "total_contracted_eur": 82980.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 82980.0,
+    "ico": "00312584",
+    "municipality": "Chtelnica"
+  },
+  "00329100": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35546492",
+        "name": "Základná škola s materskou školou Helcmanovce",
+        "total_contracted_eur": 82905.54,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 82905.54,
+    "ico": "00329100",
+    "municipality": "Helcmanovce"
+  },
+  "00328421": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35543710",
+        "name": "Základná škola Krásnohorské Podhradie",
+        "total_contracted_eur": 82800.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 82800.0,
+    "ico": "00328421",
+    "municipality": "Krásnohorské Podhradie"
+  },
+  "00309338": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37860976",
+        "name": "Základná škola Jána Amosa Komenského",
+        "total_contracted_eur": 82800.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37860917",
+        "name": "Základná škola Károlya Szemerényiho s vyučovacím jazykom maďarským Szemerényi Károly Magyar Tanítási Nyelvű Alapiskola",
+        "total_contracted_eur": 81337.49,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 164137.49,
+    "ico": "00309338",
+    "municipality": "Tvrdošovce"
+  },
+  "00611182": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37865315",
+        "name": "Základná škola Jelenecká 72 Nitrianske Hrnčiarovce",
+        "total_contracted_eur": 82428.27,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 82428.27,
+    "ico": "00611182",
+    "municipality": "Nitrianske Hrnčiarovce"
+  },
+  "00304964": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31810462",
+        "name": "Základná škola Športová 470 900 46 Most pri Bratislave",
+        "total_contracted_eur": 80640.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 80640.0,
+    "ico": "00304964",
+    "municipality": "Most pri Bratislave"
+  },
+  "00305103": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31817017",
+        "name": "Základná škola Vinohradská 62 900 81 Šenkvice",
+        "total_contracted_eur": 80640.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 80640.0,
+    "ico": "00305103",
+    "municipality": "Šenkvice"
+  },
+  "00330388": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36158313",
+        "name": "Základná škola Cernina",
+        "total_contracted_eur": 80640.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 80640.0,
+    "ico": "00330388",
+    "municipality": "Cernina"
+  },
+  "00306916": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37864327",
+        "name": "Základná škola, Hlavná 60, Dolný Pial",
+        "total_contracted_eur": 80640.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 80640.0,
+    "ico": "00306916",
+    "municipality": "Dolný Pial"
+  },
+  "00306576": {
+    "subsidiary_orgs": [
+      {
+        "ico": "56477554",
+        "name": "Spojená škola, Moča 417",
+        "total_contracted_eur": 79867.2,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 79867.2,
+    "ico": "00306576",
+    "municipality": "Moča"
+  },
+  "00308340": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37865447",
+        "name": "Základná škola s materskou školou Nové Sady 176",
+        "total_contracted_eur": 79236.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 79236.0,
+    "ico": "00308340",
+    "municipality": "Nové Sady"
+  },
+  "00311961": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00351717",
+        "name": "Centrum sociálnych služieb",
+        "total_contracted_eur": 77160.75,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 77160.75,
+    "ico": "00311961",
+    "municipality": "Skalka nad Váhom"
+  },
+  "00329282": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35543957",
+        "name": "Základná škola Krompachy, Zemanská ul.",
+        "total_contracted_eur": 74070.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "31309666",
+        "name": "Špeciálna základná škola, Ul. SNP 49, Krompachy",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 136350.0,
+    "ico": "00329282",
+    "municipality": "Krompachy"
+  },
+  "00314340": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42387299",
+        "name": "Základná škola s materskou školou E.A.Cernana",
+        "total_contracted_eur": 74070.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 74070.0,
+    "ico": "00314340",
+    "municipality": "Vysoká nad Kysucou"
+  },
+  "00305588": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00655651",
+        "name": "Domov sociálnych služieb pre deti a dospelých v Medveďove",
+        "total_contracted_eur": 73516.55,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 73516.55,
+    "ico": "00305588",
+    "municipality": "Medveďov"
+  },
+  "00311405": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00596175",
+        "name": "Domov sociálnych služieb-Adamovské Kochanovce",
+        "total_contracted_eur": 72638.16,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 72638.16,
+    "ico": "00311405",
+    "municipality": "Adamovské Kochanovce"
+  },
+  "00331813": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35541237",
+        "name": "Základná škola, Hlavná 462, Parchovany",
+        "total_contracted_eur": 72360.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 72360.0,
+    "ico": "00331813",
+    "municipality": "Parchovany"
+  },
+  "00324671": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35544074",
+        "name": "Základná škola Ruskov",
+        "total_contracted_eur": 72360.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 72360.0,
+    "ico": "00324671",
+    "municipality": "Ruskov"
+  },
+  "00332861": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37873334",
+        "name": "Základná škola",
+        "total_contracted_eur": 72360.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 72360.0,
+    "ico": "00332861",
+    "municipality": "Soľ"
+  },
+  "00322369": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37873954",
+        "name": "Základná škola v Malcove",
+        "total_contracted_eur": 72360.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 72360.0,
+    "ico": "00322369",
+    "municipality": "Malcov"
+  },
+  "00326542": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37876031",
+        "name": "Základná škola s materskou školou, Michalská 398/8, Spišské Bystré",
+        "total_contracted_eur": 72360.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 72360.0,
+    "ico": "00326542",
+    "municipality": "Spišské Bystré"
+  },
+  "00326691": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37876457",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 72360.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 72360.0,
+    "ico": "00326691",
+    "municipality": "Vikartovce"
+  },
+  "00323977": {
+    "subsidiary_orgs": [
+      {
+        "ico": "51001489",
+        "name": "Základná škola s materskou školou, Bidovce 209",
+        "total_contracted_eur": 72360.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 72360.0,
+    "ico": "00323977",
+    "municipality": "Bidovce"
+  },
+  "00325082": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35542225",
+        "name": "Základná škola Júlie Bilčíkovej, Budkovce 355",
+        "total_contracted_eur": 71405.13,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 71405.13,
+    "ico": "00325082",
+    "municipality": "Budkovce"
+  },
+  "00307581": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37864556",
+        "name": "Základná škola, Školská 9, Tlmače",
+        "total_contracted_eur": 71162.46,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 71162.46,
+    "ico": "00307581",
+    "municipality": "Tlmače"
+  },
+  "00318701": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37833944",
+        "name": "Základná škola - Alapiskola",
+        "total_contracted_eur": 70752.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 70752.0,
+    "ico": "00318701",
+    "municipality": "Gemerská Ves"
+  },
+  "00648264": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00614505",
+        "name": "Základná škola Žofie Bosniakovej",
+        "total_contracted_eur": 69552.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 69552.0,
+    "ico": "00648264",
+    "municipality": "Teplička nad Váhom"
+  },
+  "00329606": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35546093",
+        "name": "Základná škola Spišský Hrušov",
+        "total_contracted_eur": 69552.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 69552.0,
+    "ico": "00329606",
+    "municipality": "Spišský Hrušov"
+  },
+  "00305553": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36094102",
+        "name": "Základná škola Lehnice",
+        "total_contracted_eur": 69552.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "36094099",
+        "name": "Základná škola Rudolfa Benyovszkého s VJM -Benyovszky Rudolf Alapiskola",
+        "total_contracted_eur": 34776.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 104328.0,
+    "ico": "00305553",
+    "municipality": "Lehnice"
+  },
+  "00311561": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36125881",
+        "name": "Základná škola s materskou školou Michala Rešetku, Horná Súča č. 242",
+        "total_contracted_eur": 69552.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 69552.0,
+    "ico": "00311561",
+    "municipality": "Horná Súča"
+  },
+  "00314692": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37813129",
+        "name": "Základná škola s materskou školou Novoť 315",
+        "total_contracted_eur": 69552.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 69552.0,
+    "ico": "00314692",
+    "municipality": "Novoť"
+  },
+  "00314391": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42055318",
+        "name": "Základná škola s materskou školou, Beňadovo 68",
+        "total_contracted_eur": 69552.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 69552.0,
+    "ico": "00314391",
+    "municipality": "Beňadovo"
+  },
+  "00309109": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37864106",
+        "name": "Základná škola s materskou školou - Alapiskola és Óvoda, Školská 7, Veľký Kýr - Nagykér",
+        "total_contracted_eur": 68751.04,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 68751.04,
+    "ico": "00309109",
+    "municipality": "Veľký Kýr"
+  },
+  "00315001": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00632848",
+        "name": "Centrum sociálnych služieb Zákamenné",
+        "total_contracted_eur": 65980.07,
+        "projects_count": 1
+      },
+      {
+        "ico": "36140783",
+        "name": "Základná škola s materskou školou Jána Vojtaššáka",
+        "total_contracted_eur": 51840.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 117820.07,
+    "ico": "00315001",
+    "municipality": "Zákamenné"
+  },
+  "00612031": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36080349",
+        "name": "Základná škola",
+        "total_contracted_eur": 63458.28,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 63458.28,
+    "ico": "00612031",
+    "municipality": "Piešťany"
+  },
+  "00320501": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35991496",
+        "name": "Základná škola J.Horáka",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35991488",
+        "name": "Základná škola J. Kollára",
+        "total_contracted_eur": 61305.26,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 123585.26000000001,
+    "ico": "00320501",
+    "municipality": "Banská Štiavnica"
+  },
+  "00314978": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37810171",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 62280.0,
+    "ico": "00314978",
+    "municipality": "Vitanová"
+  },
+  "00315508": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37810618",
+        "name": "Základná škola s materskou školou Svätý Kríž",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 62280.0,
+    "ico": "00315508",
+    "municipality": "Svätý Kríž"
+  },
+  "00314595": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37812955",
+        "name": "Základná škola s materskou školou Krušetnica 83",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 62280.0,
+    "ico": "00314595",
+    "municipality": "Krušetnica"
+  },
+  "00321648": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37812998",
+        "name": "Základná škola Slovenského národného povstania Strečno",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 62280.0,
+    "ico": "00321648",
+    "municipality": "Strečno"
+  },
+  "00314501": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37813081",
+        "name": "Základná škola Hruštín",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 62280.0,
+    "ico": "00314501",
+    "municipality": "Hruštín"
+  },
+  "00320234": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37833898",
+        "name": "Základná škola s materskou školou Senohrad",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 62280.0,
+    "ico": "00320234",
+    "municipality": "Senohrad"
+  },
+  "00310441": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37860607",
+        "name": "Základná škola s materskou školou v Horných Obdokovciach",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 62280.0,
+    "ico": "00310441",
+    "municipality": "Horné Obdokovce"
+  },
+  "00306444": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37861255",
+        "name": "Základná škola Starohorská ul. č.8, Dulovce",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 62280.0,
+    "ico": "00306444",
+    "municipality": "Dulovce"
+  },
+  "00308765": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37863878",
+        "name": "Základná škola s materskou školou Bánov",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 62280.0,
+    "ico": "00308765",
+    "municipality": "Bánov"
+  },
+  "00309061": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37863941",
+        "name": "Základná škola s materskou školou Maňa",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 62280.0,
+    "ico": "00309061",
+    "municipality": "Maňa"
+  },
+  "00690538": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37870530",
+        "name": "Základná škola Ľubotice na Strážnickej ulici č. 26",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 62280.0,
+    "ico": "00690538",
+    "municipality": "Ľubotice"
+  },
+  "00329886": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37872869",
+        "name": "Základná škola s materskou školou Hniezdne",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 62280.0,
+    "ico": "00329886",
+    "municipality": "Hniezdne"
+  },
+  "00322938": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37873563",
+        "name": "Základná škola s materskou školou, Školská 231/4, Dlhé nad Cirochou",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 62280.0,
+    "ico": "00322938",
+    "municipality": "Dlhé nad Cirochou"
+  },
+  "00327743": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37876881",
+        "name": "Základná škola s materskou školou Sedlice",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 62280.0,
+    "ico": "00327743",
+    "municipality": "Sedlice"
+  },
+  "00320226": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37888536",
+        "name": "Základná škola s materskou školou Antona Matulu Sebechleby",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 62280.0,
+    "ico": "00320226",
+    "municipality": "Sebechleby"
+  },
+  "00308404": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42206618",
+        "name": "Základná škola s materskou školou, Rišňovce 427",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 62280.0,
+    "ico": "00308404",
+    "municipality": "Rišňovce"
+  },
+  "00307947": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42206685",
+        "name": "Základná škola s materskou školou, Hájske 67",
+        "total_contracted_eur": 62280.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 62280.0,
+    "ico": "00307947",
+    "municipality": "Hájske"
+  },
+  "00314404": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37810324",
+        "name": "Základná škola s materskou školou Bobrov",
+        "total_contracted_eur": 61761.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 61761.0,
+    "ico": "00314404",
+    "municipality": "Bobrov"
+  },
+  "00312789": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37836781",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 60865.53,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 60865.53,
+    "ico": "00312789",
+    "municipality": "Moravany nad Váhom"
+  },
+  "00309451": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37838512",
+        "name": "Základná škola Brodské, Školská 281",
+        "total_contracted_eur": 57916.32,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 57916.32,
+    "ico": "00309451",
+    "municipality": "Brodské"
+  },
+  "00314064": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37812726",
+        "name": "Základná škola",
+        "total_contracted_eur": 57816.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 57816.0,
+    "ico": "00314064",
+    "municipality": "Korňa"
+  },
+  "00324035": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35544015",
+        "name": "Základná škola s vyučovacím jazykom maďarským- Alapiskola, Buzica 327- Buzita 327",
+        "total_contracted_eur": 57060.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 57060.0,
+    "ico": "00324035",
+    "municipality": "Buzica"
+  },
+  "00306282": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36094226",
+        "name": "Základná škola",
+        "total_contracted_eur": 52207.24,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 52207.24,
+    "ico": "00306282",
+    "municipality": "Veľké Úľany"
+  },
+  "00312631": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36080471",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 51840.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 51840.0,
+    "ico": "00312631",
+    "municipality": "Kľačany"
+  },
+  "00313190": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36094188",
+        "name": "Základná škola",
+        "total_contracted_eur": 51840.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 51840.0,
+    "ico": "00313190",
+    "municipality": "Vrbové"
+  },
+  "00317438": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36124711",
+        "name": "Základná škola",
+        "total_contracted_eur": 51840.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 51840.0,
+    "ico": "00317438",
+    "municipality": "Ladce"
+  },
+  "00310506": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36125687",
+        "name": "Základná škola Valentína Beniaka s materskou školou Chynoran",
+        "total_contracted_eur": 51840.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 51840.0,
+    "ico": "00310506",
+    "municipality": "Chynorany"
+  },
+  "00311880": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36125954",
+        "name": "Základná škola s materskou školou, Omšenie 629",
+        "total_contracted_eur": 51840.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 51840.0,
+    "ico": "00311880",
+    "municipality": "Omšenie"
+  },
+  "00318337": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36126934",
+        "name": "Spojená škola, Školská 370/19, Nitrianske Pravno",
+        "total_contracted_eur": 51840.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 51840.0,
+    "ico": "00318337",
+    "municipality": "Nitrianske Pravno"
+  },
+  "00321273": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37813072",
+        "name": "Základná škola",
+        "total_contracted_eur": 51840.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 51840.0,
+    "ico": "00321273",
+    "municipality": "Gbeľany"
+  },
+  "00314641": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37813609",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 51840.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 51840.0,
+    "ico": "00314641",
+    "municipality": "Malatiná"
+  },
+  "00327018": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37877011",
+        "name": "Základná škola s materskou školou, Grófske nádvorie 209/2, Fintice",
+        "total_contracted_eur": 51840.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 51840.0,
+    "ico": "00327018",
+    "municipality": "Fintice"
+  },
+  "00329347": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35546328",
+        "name": "Základná škola s materskou školou, Školská 20, Margecany",
+        "total_contracted_eur": 51328.77,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 51328.77,
+    "ico": "00329347",
+    "municipality": "Margecany"
+  },
+  "00314731": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37808818",
+        "name": "Základná škola s materskou školou Oravský Podzámok 51",
+        "total_contracted_eur": 46710.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 46710.0,
+    "ico": "00314731",
+    "municipality": "Oravský Podzámok"
+  },
+  "00329355": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35546018",
+        "name": "Základná škola s materskou školou Školská 16 Markušovce",
+        "total_contracted_eur": 44460.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 44460.0,
+    "ico": "00329355",
+    "municipality": "Markušovce"
+  },
+  "00308439": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37863649",
+        "name": "Základná škola, Školská 1699/23, Močenok",
+        "total_contracted_eur": 44460.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 44460.0,
+    "ico": "00308439",
+    "municipality": "Močenok"
+  },
+  "00311588": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36125938",
+        "name": "Základná škola s materskou školou Václava Mitúcha v Hornom Srní",
+        "total_contracted_eur": 42161.47,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 42161.47,
+    "ico": "00311588",
+    "municipality": "Horné Srnie"
+  },
+  "00313564": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35677830",
+        "name": "Základná škola s materskou školou T. G. Masaryka Ľubietová",
+        "total_contracted_eur": 36180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 36180.0,
+    "ico": "00313564",
+    "municipality": "Ľubietová"
+  },
+  "00319023": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35991861",
+        "name": "Základná škola - Alapiskola Rimavská Seč",
+        "total_contracted_eur": 36180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 36180.0,
+    "ico": "00319023",
+    "municipality": "Rimavská Seč"
+  },
+  "00306274": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36080501",
+        "name": "Základná škola s materskou školou Dávida Mészárosa - Mészáros Dávid Alapiskola és Óvoda, Školský objekt č. 888, Veľká Mača - Nagymácséd",
+        "total_contracted_eur": 36180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 36180.0,
+    "ico": "00306274",
+    "municipality": "Veľká Mača"
+  },
+  "00311651": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36129861",
+        "name": "Základná škola s materskou školou Ivanovce",
+        "total_contracted_eur": 36180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 36180.0,
+    "ico": "00311651",
+    "municipality": "Ivanovce"
+  },
+  "00315486": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37810481",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 36180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 36180.0,
+    "ico": "00315486",
+    "municipality": "Liptovský Ján"
+  },
+  "00320269": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37831313",
+        "name": "Základná škola",
+        "total_contracted_eur": 36180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 36180.0,
+    "ico": "00320269",
+    "municipality": "Slatinské Lazy"
+  },
+  "00321052": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37831488",
+        "name": "Základná škola Trnavá Hora",
+        "total_contracted_eur": 36180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 36180.0,
+    "ico": "00321052",
+    "municipality": "Trnavá Hora"
+  },
+  "00316130": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37831542",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 36180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 36180.0,
+    "ico": "00316130",
+    "municipality": "Kokava nad Rimavicou"
+  },
+  "00319457": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37831780",
+        "name": "Základná škola s materskou školou Modrý Kameň",
+        "total_contracted_eur": 36180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 36180.0,
+    "ico": "00319457",
+    "municipality": "Modrý Kameň"
+  },
+  "00312363": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37836471",
+        "name": "Základná škola s materskou školou, Dechtice 514, Dechtice",
+        "total_contracted_eur": 36180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 36180.0,
+    "ico": "00312363",
+    "municipality": "Dechtice"
+  },
+  "00307378": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37864483",
+        "name": "Základná škola Plavé Vozokany 114",
+        "total_contracted_eur": 36180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 36180.0,
+    "ico": "00307378",
+    "municipality": "Plavé Vozokany"
+  },
+  "00308447": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37865048",
+        "name": "Základná škola Sľažany",
+        "total_contracted_eur": 36180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 36180.0,
+    "ico": "00308447",
+    "municipality": "Sľažany"
+  },
+  "00306398": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37867008",
+        "name": "Základná škola Mihálya Katonu s vyučovacím jazykom maďarským v Búči - Katona Mihály Alapiskola Búcs",
+        "total_contracted_eur": 36180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 36180.0,
+    "ico": "00306398",
+    "municipality": "Búč"
+  },
+  "00327603": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37873237",
+        "name": "Základná škola Petrovany",
+        "total_contracted_eur": 36180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 36180.0,
+    "ico": "00327603",
+    "municipality": "Petrovany"
+  },
+  "00323403": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37873580",
+        "name": "Základná škola s materskou školou Pčoliné",
+        "total_contracted_eur": 36180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 36180.0,
+    "ico": "00323403",
+    "municipality": "Pčoliné"
+  },
+  "00329835": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37876074",
+        "name": "Základná škola s materskou školou Čirč",
+        "total_contracted_eur": 36180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 36180.0,
+    "ico": "00329835",
+    "municipality": "Čirč"
+  },
+  "00326747": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37876481",
+        "name": "Základná škola s materskou školou, Vydrník 121",
+        "total_contracted_eur": 36180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 36180.0,
+    "ico": "00326747",
+    "municipality": "Vydrník"
+  },
+  "00327387": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37877097",
+        "name": "Základná škola s materskou školou Lipovce",
+        "total_contracted_eur": 36180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 36180.0,
+    "ico": "00327387",
+    "municipality": "Lipovce"
+  },
+  "00328961": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37942697",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 36180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 36180.0,
+    "ico": "00328961",
+    "municipality": "Bijacovce"
+  },
+  "00327719": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37944631",
+        "name": "Základná škola s materskou školou Rožkovany 190",
+        "total_contracted_eur": 36180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 36180.0,
+    "ico": "00327719",
+    "municipality": "Rožkovany"
+  },
+  "00305731": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42404771",
+        "name": "Základná škola Alapiskola",
+        "total_contracted_eur": 36180.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 36180.0,
+    "ico": "00305731",
+    "municipality": "Štvrtok na Ostrove"
+  },
+  "00329975": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37876104",
+        "name": "Základná škola s materskou školou Kyjov",
+        "total_contracted_eur": 35519.57,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 35519.57,
+    "ico": "00329975",
+    "municipality": "Kyjov"
+  },
+  "00329509": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35553979",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 35416.29,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 35416.29,
+    "ico": "00329509",
+    "municipality": "Poráč"
+  },
+  "00312495": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36080454",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 35376.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 35376.0,
+    "ico": "00312495",
+    "municipality": "Dvorníky"
+  },
+  "00317471": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31202471",
+        "name": "Základná škola s materskou školou, Lysá pod Makytou 44",
+        "total_contracted_eur": 34776.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 34776.0,
+    "ico": "00317471",
+    "municipality": "Lysá pod Makytou"
+  },
+  "00316121": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35991372",
+        "name": "Základná škola s materskou školou, SNP 158/20, Kalinovo",
+        "total_contracted_eur": 34776.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 34776.0,
+    "ico": "00316121",
+    "municipality": "Kalinovo"
+  },
+  "00306151": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36112119",
+        "name": "Základná škola s materskou školou Leandera Osztényiho s VJM Selice - Osztényi Leander Alapiskola és Óvoda",
+        "total_contracted_eur": 34776.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 34776.0,
+    "ico": "00306151",
+    "municipality": "Selice"
+  },
+  "00309371": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37860844",
+        "name": "Základná škola Ányosa Jedlika s vyučovacím jazykom maďarským - Jedlik Ányos Alapiskola, Školská 845, Zemné - Szímő",
+        "total_contracted_eur": 34776.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 34776.0,
+    "ico": "00309371",
+    "municipality": "Zemné"
+  },
+  "00328332": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35543728",
+        "name": "Základná škola s materskou školou s vyučovacím jazykom maďarským-Alapiskola és Óvoda, Jablonov nad Turňou 229",
+        "total_contracted_eur": 34334.84,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 34334.84,
+    "ico": "00328332",
+    "municipality": "Jablonov nad Turňou"
+  },
+  "00313416": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37957872",
+        "name": "Základná škola",
+        "total_contracted_eur": 34116.49,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 34116.49,
+    "ico": "00313416",
+    "municipality": "Harmanec"
+  },
+  "00312045": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00493562",
+        "name": "Spojená škola, M.R.Štefánika 323/1 Trenčianska Teplá",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 31140.0,
+    "ico": "00312045",
+    "municipality": "Trenčianska Teplá"
+  },
+  "34007521": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31875408",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 31140.0,
+    "ico": "34007521",
+    "municipality": "Hrnčiarovce nad Parnou"
+  },
+  "00311014": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35611201",
+        "name": "Základná škola s materskou školou Radošina, kpt. Nálepku 530/13 956 05 Radošina",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 31140.0,
+    "ico": "00311014",
+    "municipality": "Radošina"
+  },
+  "00305120": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36071226",
+        "name": "Základná škola s vyučovacím jazykom maďarským -Alapiskola",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 31140.0,
+    "ico": "00305120",
+    "municipality": "Tomášov"
+  },
+  "00311758": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36125563",
+        "name": "Základná škola s materskou školou Lúka 135",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 31140.0,
+    "ico": "00311758",
+    "municipality": "Lúka"
+  },
+  "00315036": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36142140",
+        "name": "Základná škola s materskou školou Zuberec",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 31140.0,
+    "ico": "00315036",
+    "municipality": "Zuberec"
+  },
+  "00634956": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37810197",
+        "name": "Základná škola s materskou školou Čimhová",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 31140.0,
+    "ico": "00634956",
+    "municipality": "Čimhová"
+  },
+  "00314382": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37810278",
+        "name": "Základná škola s materskou školou Babín",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 31140.0,
+    "ico": "00314382",
+    "municipality": "Babín"
+  },
+  "00315559": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37813374",
+        "name": "Základná škola s materskou školou Ulica pod Chočom 550 Lisková",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 31140.0,
+    "ico": "00315559",
+    "municipality": "Lisková"
+  },
+  "00320714": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37831453",
+        "name": "Základná škola s materskou školou Jastrabá č. 188",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 31140.0,
+    "ico": "00320714",
+    "municipality": "Jastrabá"
+  },
+  "00319678": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37831798",
+        "name": "Základná škola Bálinta Balassiho s vyučovacím jazykom maďarským Vinica Balassi Bálint Magyar Tanítási Nyelvű Alapiskola Ipolynyék",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 31140.0,
+    "ico": "00319678",
+    "municipality": "Vinica"
+  },
+  "00319236": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37831801",
+        "name": "Základná škola s materskou školou Bušince",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 31140.0,
+    "ico": "00319236",
+    "municipality": "Bušince"
+  },
+  "00308358": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37865137",
+        "name": "Základná škola, Školská 289, Obyce",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 31140.0,
+    "ico": "00308358",
+    "municipality": "Obyce"
+  },
+  "00313581": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42192609",
+        "name": "Základná škola s materskou školou",
+        "total_contracted_eur": 31140.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 31140.0,
+    "ico": "00313581",
+    "municipality": "Medzibrod"
+  },
+  "00330078": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37876147",
+        "name": "Základná škola s materskou školou, Nižné Ružbachy 45",
+        "total_contracted_eur": 29990.5,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 29990.5,
+    "ico": "00330078",
+    "municipality": "Nižné Ružbachy"
+  },
+  "00330035": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37872885",
+        "name": "Základná škola s materskou školou Ľubotín",
+        "total_contracted_eur": 24589.72,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 24589.72,
+    "ico": "00330035",
+    "municipality": "Ľubotín"
+  },
+  "00332151": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35571829",
+        "name": "Základná škola s materskou školou s vyučovacím jazykom maďarským - Alapiskola és Óvoda, Hlavná 114/60, Zatín - Zétény",
+        "total_contracted_eur": 24120.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 24120.0,
+    "ico": "00332151",
+    "municipality": "Zatín"
+  },
+  "00314633": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37910159",
+        "name": "Základná škola s materskou školou Lomná 36",
+        "total_contracted_eur": 20760.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 20760.0,
+    "ico": "00314633",
+    "municipality": "Lomná"
+  }
+}

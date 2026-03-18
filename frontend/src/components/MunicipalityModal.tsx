@@ -17,9 +17,7 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
   const tr = t[locale];
 
   useEffect(() => {
-    const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
-    };
+    const handleEsc = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
     document.addEventListener('keydown', handleEsc);
     return () => document.removeEventListener('keydown', handleEsc);
   }, [onClose]);
@@ -37,6 +35,8 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
 
   const m = municipality;
   const totalProjects = m.active_projects + m.completed_projects;
+  const subTotal = m.subsidiary_total_eur || 0;
+  const grandTotal = m.total_contracted_eur + subTotal;
 
   return (
     <div
@@ -59,7 +59,9 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
             </p>
             <p className="text-[#94a3b8] text-sm">
               IČO: <span className="font-mono text-[#f8fafc]">{m.ico}</span>
-              {m.population > 0 && <span> · {m.population.toLocaleString('sk-SK')} {locale === 'sk' ? 'obyvateľov' : 'inhabitants'}</span>}
+              {m.population > 0 && (
+                <span> · {m.population.toLocaleString('sk-SK')} {locale === 'sk' ? 'obyvateľov' : 'inhabitants'}</span>
+              )}
             </p>
           </div>
           <button
@@ -72,16 +74,36 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
 
         {/* Main stats */}
         <div className="grid grid-cols-2 gap-4 mb-6">
+          {/* Total card — shows breakdown if subsidiaries exist */}
           <div className="bg-[#0a0a0f] rounded-xl p-4 border border-[#1e1e2e]">
-            <div className="font-bold text-[#3b82f6] font-mono" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)' }}>
-              {formatAmount(m.total_contracted_eur, locale)}
-            </div>
-            <div className="text-[#94a3b8] text-sm mt-1">{tr.modal_total}</div>
+            {subTotal > 0 ? (
+              <>
+                <div className="font-bold text-[#3b82f6] font-mono" style={{ fontSize: 'clamp(1.2rem, 3.5vw, 2rem)' }}>
+                  {formatAmount(grandTotal, locale)}
+                </div>
+                <div className="text-[#94a3b8] text-xs mt-0.5">
+                  {formatAmount(m.total_contracted_eur, locale)}{' '}
+                  <span className="text-[#94a3b8]/60">{locale === 'sk' ? 'priame' : 'direct'}</span>
+                </div>
+                <div className="text-[#10b981] text-xs">
+                  +{formatAmount(subTotal, locale)}{' '}
+                  <span className="text-[#10b981]/70">{locale === 'sk' ? 'org.' : 'orgs'}</span>
+                </div>
+                <div className="text-[#94a3b8] text-xs mt-1">{tr.modal_total}</div>
+              </>
+            ) : (
+              <>
+                <div className="font-bold text-[#3b82f6] font-mono" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)' }}>
+                  {formatAmount(m.total_contracted_eur, locale)}
+                </div>
+                <div className="text-[#94a3b8] text-sm mt-1">{tr.modal_total}</div>
+              </>
+            )}
           </div>
+
+          {/* Projects count */}
           <div className="bg-[#0a0a0f] rounded-xl p-4 border border-[#1e1e2e]">
-            <div className="text-3xl font-bold text-[#f8fafc] font-mono">
-              {totalProjects}
-            </div>
+            <div className="text-3xl font-bold text-[#f8fafc] font-mono">{totalProjects}</div>
             <div className="text-[#94a3b8] text-sm mt-1">
               {m.active_projects > 0 ? `${m.active_projects} ${tr.modal_active}` : ''}
               {m.active_projects > 0 && m.completed_projects > 0 ? ', ' : ''}
@@ -91,11 +113,11 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
           </div>
         </div>
 
-        {/* Per capita if population available */}
-        {m.population > 0 && m.total_contracted_eur > 0 && (
+        {/* Per capita */}
+        {m.population > 0 && grandTotal > 0 && (
           <div className="mb-6 bg-[#0a0a0f] rounded-xl p-4 border border-[#1e1e2e]">
             <div className="text-xl font-bold text-[#10b981] font-mono">
-              {formatAmount(Math.round(m.total_contracted_eur / m.population), locale)} {tr.per_capita_suffix}
+              {formatAmount(Math.round(grandTotal / m.population), locale)} {tr.per_capita_suffix}
             </div>
             <div className="text-[#94a3b8] text-sm mt-1">{tr.modal_per_capita}</div>
           </div>
@@ -123,6 +145,28 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
                   <div className="flex justify-between text-xs">
                     <span className="text-[#3b82f6] font-mono">{formatAmount(p.sumaZazmluvnena, locale)}</span>
                     <span className="text-[#94a3b8]">{p.stav.includes('ukončený') ? tr.completed : tr.active}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Subsidiary orgs */}
+        {subTotal > 0 && m.subsidiary_orgs && m.subsidiary_orgs.length > 0 && (
+          <div className="mb-6">
+            <h3 className="text-sm font-medium text-[#10b981]/80 mb-1 uppercase tracking-wider flex items-center gap-1.5">
+              {tr.modal_subsidiary_title}
+              <span className="text-base leading-none" title={tr.modal_subsidiary_note}>ℹ️</span>
+            </h3>
+            <p className="text-[#94a3b8]/60 text-xs mb-3">{tr.modal_subsidiary_note}</p>
+            <div className="space-y-2">
+              {m.subsidiary_orgs.map((org, i) => (
+                <div key={i} className="bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e] border-l-2 border-l-[#10b981]/40">
+                  <div className="text-sm text-[#f8fafc]/90 mb-1 line-clamp-2">{org.name}</div>
+                  <div className="flex justify-between text-xs">
+                    <span className="text-[#10b981] font-mono">{formatAmount(org.total_contracted_eur, locale)}</span>
+                    <span className="text-[#94a3b8]/70">{org.projects_count} {tr.modal_projects}</span>
                   </div>
                 </div>
               ))}

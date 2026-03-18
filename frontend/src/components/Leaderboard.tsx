@@ -178,6 +178,9 @@ export default function Leaderboard({ onSelectMunicipality, viewMode, setViewMod
           <p className="text-[#94a3b8] text-sm leading-relaxed">
             {period === '2127' ? tr.disclaimer_2127 : tr.disclaimer_1420}
           </p>
+          <p className="text-[#94a3b8]/60 text-xs mt-2 leading-relaxed">
+            {tr.zero_muni_note}
+          </p>
         </div>
       </div>
     </section>

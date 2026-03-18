@@ -1,0 +1,693 @@
+{
+  "36126624": {
+    "ico": "36126624",
+    "name": "Trenčiansky samosprávny kraj",
+    "subsidiary_orgs": [
+      {
+        "ico": "00610470",
+        "name": "Fakultná nemocnica Trenčín",
+        "total_contracted_eur": 21646223.71,
+        "projects_count": 3
+      },
+      {
+        "ico": "00738301",
+        "name": "Nemocnica pre obvinených a odsúdených a Ústav na výkon trestu odňatia slobody Trenčín",
+        "total_contracted_eur": 921477.92,
+        "projects_count": 1
+      },
+      {
+        "ico": "00159298",
+        "name": "Stredná odborná škola Pruské 294,Pruské",
+        "total_contracted_eur": 420967.83,
+        "projects_count": 2
+      },
+      {
+        "ico": "17050561",
+        "name": "Stredná odborná škola strojnícka Považská Bystrica",
+        "total_contracted_eur": 415673.32,
+        "projects_count": 2
+      },
+      {
+        "ico": "45736316",
+        "name": "Nemocnica na okraji mesta, n.o.",
+        "total_contracted_eur": 362817.14,
+        "projects_count": 1
+      },
+      {
+        "ico": "50424891",
+        "name": "Stredná odborná škola Jána Antonína Baťu, Námestie SNP 5, Partizánske",
+        "total_contracted_eur": 242323.01,
+        "projects_count": 1
+      },
+      {
+        "ico": "42024471",
+        "name": "\"Stredná odborná škola, Lipová 8, Handlová (skrátený názov \"",
+        "total_contracted_eur": 207719.82,
+        "projects_count": 1
+      },
+      {
+        "ico": "42026393",
+        "name": "Stredná odborná škola technická, Bratislavská 439/18, Dubnica nad Váhom",
+        "total_contracted_eur": 154348.23,
+        "projects_count": 1
+      },
+      {
+        "ico": "17055202",
+        "name": "Stredná odborná škola dopravná, Školská 66, Trenčín",
+        "total_contracted_eur": 131662.9,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 24503213.880000003
+  },
+  "37870475": {
+    "ico": "37870475",
+    "name": "Prešovský samosprávny kraj",
+    "subsidiary_orgs": [
+      {
+        "ico": "00159468",
+        "name": "Stredná odborná škola agropotravinárska a technická, Kušnierska brána 349/2, Kežmarok",
+        "total_contracted_eur": 9950675.73,
+        "projects_count": 11
+      },
+      {
+        "ico": "37886851",
+        "name": "Ľubovnianska nemocnica, n.o.",
+        "total_contracted_eur": 5094522.28,
+        "projects_count": 3
+      },
+      {
+        "ico": "00610577",
+        "name": "Fakultná nemocnica s poliklinikou J. A. Reimana Prešov",
+        "total_contracted_eur": 4866358.91,
+        "projects_count": 2
+      },
+      {
+        "ico": "00893102",
+        "name": "Stredná odborná škola elektrotechnická",
+        "total_contracted_eur": 4226070.8,
+        "projects_count": 3
+      },
+      {
+        "ico": "37886436",
+        "name": "Nemocnica Dr. Vojtecha Alexandra v Kežmarku n. o.",
+        "total_contracted_eur": 4113057.99,
+        "projects_count": 2
+      },
+      {
+        "ico": "00891541",
+        "name": "Stredná odborná škola technická",
+        "total_contracted_eur": 1758368.37,
+        "projects_count": 4
+      },
+      {
+        "ico": "51896109",
+        "name": "Stredná odborná škola lesnícka, Kollárova 10, Prešov",
+        "total_contracted_eur": 1661953.93,
+        "projects_count": 4
+      },
+      {
+        "ico": "17078393",
+        "name": "Hotelová akadémia, Štefánikova 28,  Humenné",
+        "total_contracted_eur": 1035776.52,
+        "projects_count": 1
+      },
+      {
+        "ico": "00162191",
+        "name": "Hotelová akadémia",
+        "total_contracted_eur": 876683.45,
+        "projects_count": 2
+      },
+      {
+        "ico": "37942492",
+        "name": "Stredná odborná škola drevárska, Lúčna 1055, Vranov nad Topľou",
+        "total_contracted_eur": 847572.17,
+        "projects_count": 2
+      },
+      {
+        "ico": "00893358",
+        "name": "Stredná odborná škola polytechnická, Štefánikova 1550/20, 06601 Humenné",
+        "total_contracted_eur": 798541.14,
+        "projects_count": 2
+      },
+      {
+        "ico": "00159514",
+        "name": "Stredná odborná škola služieb Majstra Pavla",
+        "total_contracted_eur": 781376.8,
+        "projects_count": 1
+      },
+      {
+        "ico": "42077133",
+        "name": "Stredná odborná škola remesiel a služieb, Okružná 761/25, Poprad",
+        "total_contracted_eur": 769737.37,
+        "projects_count": 1
+      },
+      {
+        "ico": "00893251",
+        "name": "Stredná odborná škola technická",
+        "total_contracted_eur": 739334.46,
+        "projects_count": 2
+      },
+      {
+        "ico": "17078482",
+        "name": "Stredná odborná škola gastronómie a služieb",
+        "total_contracted_eur": 703742.61,
+        "projects_count": 3
+      },
+      {
+        "ico": "17078466",
+        "name": "Škola umeleckého priemyslu, Vodárenska 3, Prešov",
+        "total_contracted_eur": 640953.12,
+        "projects_count": 2
+      },
+      {
+        "ico": "00162132",
+        "name": "Obchodná akadémia",
+        "total_contracted_eur": 623112.3,
+        "projects_count": 1
+      },
+      {
+        "ico": "00159476",
+        "name": "Stredná odborná škola podnikania a služieb",
+        "total_contracted_eur": 348600.91,
+        "projects_count": 1
+      },
+      {
+        "ico": "36155993",
+        "name": "Stredná odborná škola ekonomiky, hotelierstva a služieb Jána Andraščíka, Pod Vinbargom 3, Bardejov",
+        "total_contracted_eur": 302127.8,
+        "projects_count": 2
+      },
+      {
+        "ico": "37880080",
+        "name": "Stredná odborná škola služieb, Košická 20, Prešov",
+        "total_contracted_eur": 276423.9,
+        "projects_count": 1
+      },
+      {
+        "ico": "37947915",
+        "name": "Stredná odborná škola elektrotechnická, Hviezdoslavova 44, Stropkov",
+        "total_contracted_eur": 170092.51,
+        "projects_count": 1
+      },
+      {
+        "ico": "37947541",
+        "name": "Stredná odborná škola Svit",
+        "total_contracted_eur": 160735.71,
+        "projects_count": 2
+      },
+      {
+        "ico": "36155667",
+        "name": "Škola umeleckého priemyslu, Slavkovská 19, Kežmarok",
+        "total_contracted_eur": 136153.36,
+        "projects_count": 1
+      },
+      {
+        "ico": "00162230",
+        "name": "Obchodná akadémia, Daxnerova 88, Vranov nad Topľou",
+        "total_contracted_eur": 133110.75,
+        "projects_count": 1
+      },
+      {
+        "ico": "17050405",
+        "name": "Stredná odborná škola technická, Levočská 40, Stará Ľubovňa",
+        "total_contracted_eur": 29070.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "37942484",
+        "name": "Stredná odborná škola technická, Družstevná 1474/19, Humenné",
+        "total_contracted_eur": 12444.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "00893692",
+        "name": "Stredná odborná škola polytechnická a služieb arm. gen. L. Svobodu, Bardejovská 715/18, Svidník",
+        "total_contracted_eur": 8340.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 41064936.889999986
+  },
+  "37828100": {
+    "ico": "37828100",
+    "name": "Banskobystrický samosprávny kraj",
+    "subsidiary_orgs": [
+      {
+        "ico": "37957937",
+        "name": "Detská fakultná nemocnica s poliklinikou Banská Bystrica",
+        "total_contracted_eur": 13641736.64,
+        "projects_count": 3
+      },
+      {
+        "ico": "37890221",
+        "name": "Stredná odborná škola hotelových služieb a dopravy",
+        "total_contracted_eur": 5645878.98,
+        "projects_count": 1
+      },
+      {
+        "ico": "37954571",
+        "name": "Všeobecná nemocnica s poliklinikou Lučenec n.o.",
+        "total_contracted_eur": 5635547.73,
+        "projects_count": 3
+      },
+      {
+        "ico": "42317665",
+        "name": "Stredná odborná škola technická a agropotravinárska - Műszaki, Mezőgazdasági és Élelmiszeripari Szakközépiskola, Okružná 61, Rimavská Sobota",
+        "total_contracted_eur": 5402975.7,
+        "projects_count": 2
+      },
+      {
+        "ico": "00162710",
+        "name": "Stredná odborná škola lesnícka, Akademická 16, Banská Štiavnica",
+        "total_contracted_eur": 4784509.81,
+        "projects_count": 2
+      },
+      {
+        "ico": "00165549",
+        "name": "Fakultná nemocnica s poliklinikou F. D. Roosevelta Banská Bystrica",
+        "total_contracted_eur": 2214440.9,
+        "projects_count": 2
+      },
+      {
+        "ico": "45017000",
+        "name": "Stredná odborná škola",
+        "total_contracted_eur": 2169821.01,
+        "projects_count": 3
+      },
+      {
+        "ico": "37956469",
+        "name": "Stredná odborná škola drevárska",
+        "total_contracted_eur": 911409.35,
+        "projects_count": 1
+      },
+      {
+        "ico": "37890069",
+        "name": "Stredná odborná škola – Szakközépiskola",
+        "total_contracted_eur": 859117.64,
+        "projects_count": 1
+      },
+      {
+        "ico": "45015171",
+        "name": "Stredná odborná škola technická, J. Švermu 1, Zvolen",
+        "total_contracted_eur": 759071.21,
+        "projects_count": 1
+      },
+      {
+        "ico": "42195438",
+        "name": "Stredná odborná škola obchodu a služieb",
+        "total_contracted_eur": 405253.15,
+        "projects_count": 3
+      },
+      {
+        "ico": "42317657",
+        "name": "Stredná odborná škola techniky a služieb",
+        "total_contracted_eur": 388498.5,
+        "projects_count": 1
+      },
+      {
+        "ico": "57039305",
+        "name": "Stredná priemyselná škola stavebná Oskara Winklera - Winkler Oszkár Építőipari Szakközépiskola a Stredná odborná škola technická, Ulica Dukelských hrdinov 2, Lučenec",
+        "total_contracted_eur": 321430.15,
+        "projects_count": 1
+      },
+      {
+        "ico": "00606987",
+        "name": "Psychiatrická nemocnica Profesora Matulaya Kremnica",
+        "total_contracted_eur": 191664.96,
+        "projects_count": 1
+      },
+      {
+        "ico": "00894818",
+        "name": "Stredná odborná škola - Szakközépiskola Tornaľa",
+        "total_contracted_eur": 185492.52,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 43516848.25
+  },
+  "37808427": {
+    "ico": "37808427",
+    "name": "Žilinský samosprávny kraj",
+    "subsidiary_orgs": [
+      {
+        "ico": "31936415",
+        "name": "Ústredná vojenská nemocnica SNP Ružomberok-fakultná nemocnica",
+        "total_contracted_eur": 19894097.98,
+        "projects_count": 3
+      },
+      {
+        "ico": "00634891",
+        "name": "Hornooravská nemocnica s poliklinikou Trstená",
+        "total_contracted_eur": 3950500.85,
+        "projects_count": 3
+      },
+      {
+        "ico": "00365327",
+        "name": "Univerzitná nemocnica Martin",
+        "total_contracted_eur": 3706796.96,
+        "projects_count": 2
+      },
+      {
+        "ico": "17335469",
+        "name": "Kysucká nemocnica s poliklinikou Čadca",
+        "total_contracted_eur": 3091111.45,
+        "projects_count": 3
+      },
+      {
+        "ico": "00634905",
+        "name": "Dolnooravská nemocnica s poliklinikou MUDr. L. N. Jégého",
+        "total_contracted_eur": 1686067.83,
+        "projects_count": 3
+      },
+      {
+        "ico": "17335825",
+        "name": "Fakultná nemocnica s poliklinikou Žilina",
+        "total_contracted_eur": 872609.54,
+        "projects_count": 2
+      },
+      {
+        "ico": "17336163",
+        "name": "Liptovská nemocnica s poliklinikou MUDr. Ivana Stodolu Liptovský Mikuláš",
+        "total_contracted_eur": 699113.96,
+        "projects_count": 2
+      },
+      {
+        "ico": "00893170",
+        "name": "Stredná odborná škola elektrotechnická",
+        "total_contracted_eur": 274663.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "00891835",
+        "name": "Stredná odborná škola drevárska a stavebná",
+        "total_contracted_eur": 269468.63,
+        "projects_count": 1
+      },
+      {
+        "ico": "00651117",
+        "name": "Stredná odborná škola dopravná, Rosinská cesta 2, Žilina",
+        "total_contracted_eur": 240357.74,
+        "projects_count": 1
+      },
+      {
+        "ico": "17053722",
+        "name": "Stredná odborná škola strojnícka",
+        "total_contracted_eur": 206491.25,
+        "projects_count": 1
+      },
+      {
+        "ico": "17335612",
+        "name": "Psychiatrická liečebňa Sučany",
+        "total_contracted_eur": 199555.44,
+        "projects_count": 1
+      },
+      {
+        "ico": "17055211",
+        "name": "Stredná odborná škola dopravná",
+        "total_contracted_eur": 186686.11,
+        "projects_count": 1
+      },
+      {
+        "ico": "31926754",
+        "name": "Obchodná akadémia",
+        "total_contracted_eur": 178155.89,
+        "projects_count": 1
+      },
+      {
+        "ico": "00162124",
+        "name": "Obchodná akadémia v Žiline",
+        "total_contracted_eur": 138842.03,
+        "projects_count": 1
+      },
+      {
+        "ico": "00893544",
+        "name": "Stredná odborná škola podnikania a služieb",
+        "total_contracted_eur": 132908.69,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 35727427.35
+  },
+  "37861298": {
+    "ico": "37861298",
+    "name": "Nitriansky samosprávny kraj",
+    "subsidiary_orgs": [
+      {
+        "ico": "17336007",
+        "name": "Fakultná nemocnica Nitra",
+        "total_contracted_eur": 18404749.79,
+        "projects_count": 4
+      },
+      {
+        "ico": "17336112",
+        "name": "Fakultná nemocnica s poliklinikou Nové Zámky",
+        "total_contracted_eur": 14252831.05,
+        "projects_count": 3
+      },
+      {
+        "ico": "46458581",
+        "name": "Nemocnica Topoľčany, a. s.",
+        "total_contracted_eur": 10512924.5,
+        "projects_count": 2
+      },
+      {
+        "ico": "50828371",
+        "name": "Nemocnica AGEL Komárno s. r. o.",
+        "total_contracted_eur": 9450197.35,
+        "projects_count": 2
+      },
+      {
+        "ico": "50861450",
+        "name": "Nemocnica AGEL Levice s. r. o.",
+        "total_contracted_eur": 7069357.43,
+        "projects_count": 2
+      },
+      {
+        "ico": "17050308",
+        "name": "Stredná odborná škola technická, Kozmálovská cesta 9, Tlmače",
+        "total_contracted_eur": 265893.84,
+        "projects_count": 1
+      },
+      {
+        "ico": "37971832",
+        "name": "Špecializovaná nemocnica sv. Svorada Zobor, n.o.",
+        "total_contracted_eur": 199918.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "00351989",
+        "name": "Stredná odborná škola techniky a služieb, Tovarnícka 1609, Topoľčany",
+        "total_contracted_eur": 189267.55,
+        "projects_count": 1
+      },
+      {
+        "ico": "00399388",
+        "name": "Stredná odborná škola techniky a služieb - Műszaki és Szolgá",
+        "total_contracted_eur": 177165.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "17053889",
+        "name": "Škola umeleckého priemyslu Ladislava Bielika, Vajanského 23, Levice",
+        "total_contracted_eur": 158504.65,
+        "projects_count": 1
+      },
+      {
+        "ico": "00893498",
+        "name": "Stredná odborná škola obchodu a služieb, Ul. SNP 5, Zlaté Moravce",
+        "total_contracted_eur": 152011.93,
+        "projects_count": 1
+      },
+      {
+        "ico": "00159841",
+        "name": "Obchodná akadémia, Inovecká 2041, Topoľčany",
+        "total_contracted_eur": 149221.04,
+        "projects_count": 1
+      },
+      {
+        "ico": "00159000",
+        "name": "Stredná odborná škola chovu koní a služieb - Lótenyésztési és Szolgáltatóipari Szakközépiskola, Štúrova 74, Šaľa",
+        "total_contracted_eur": 138534.3,
+        "projects_count": 1
+      },
+      {
+        "ico": "00162353",
+        "name": "Stredná odborná škola poľnohospodárstva a služieb na vidieku, Na lúkach 18, Levice",
+        "total_contracted_eur": 111230.26,
+        "projects_count": 1
+      },
+      {
+        "ico": "00352098",
+        "name": "Stredná odborná škola služieb, Ul. sv. Michala 36, Levice",
+        "total_contracted_eur": 110589.45,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 61342396.14
+  },
+  "35541016": {
+    "ico": "35541016",
+    "name": "Košický samosprávny kraj",
+    "subsidiary_orgs": [
+      {
+        "ico": "35568330",
+        "name": "Stredná odborná škola techniky a remesiel – Műszaki Szakok és Mesterségek Szakközépiskola, Rákocziho 23, Kráľovský Chlmec",
+        "total_contracted_eur": 1768210.66,
+        "projects_count": 4
+      },
+      {
+        "ico": "42096642",
+        "name": "Stredná odborná škola drevárska, Filinského 7, Spišská Nová Ves",
+        "total_contracted_eur": 844060.63,
+        "projects_count": 3
+      },
+      {
+        "ico": "42096651",
+        "name": "Stredná odborná škola technická, Partizánska 1, Michalovce",
+        "total_contracted_eur": 705905.75,
+        "projects_count": 2
+      },
+      {
+        "ico": "17050545",
+        "name": "Stredná odborná škola technická",
+        "total_contracted_eur": 567608.92,
+        "projects_count": 2
+      },
+      {
+        "ico": "35568381",
+        "name": "Stredná odborná škola ekonomická, Stojan 1, Spišská Nová Ves",
+        "total_contracted_eur": 461855.26,
+        "projects_count": 3
+      },
+      {
+        "ico": "35568364",
+        "name": "Stredná odborná škola obchodu a služieb, Námestie slobody 12, Sobrance",
+        "total_contracted_eur": 454241.42,
+        "projects_count": 1
+      },
+      {
+        "ico": "17078385",
+        "name": "Stredná odborná škola obchodu a služieb, Školská 4, Michalovce",
+        "total_contracted_eur": 405468.04,
+        "projects_count": 2
+      },
+      {
+        "ico": "31953549",
+        "name": "Obchodná akadémia , Kapušianska 2 ,  Michalovce",
+        "total_contracted_eur": 387262.97,
+        "projects_count": 2
+      },
+      {
+        "ico": "53966864",
+        "name": "Stredná odborná škola techniky a služieb, SNP 607, Dobšiná",
+        "total_contracted_eur": 352324.82,
+        "projects_count": 1
+      },
+      {
+        "ico": "00162205",
+        "name": "Obchodná akadémia, Akademika Hronca 8, Rožňava",
+        "total_contracted_eur": 311708.61,
+        "projects_count": 1
+      },
+      {
+        "ico": "35568348",
+        "name": "Stredná odborná škola techniky a služieb, Prakovce 282, Prakovce",
+        "total_contracted_eur": 275350.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35555912",
+        "name": "Stredná odborná škola služieb a priemyslu sv. Jozafáta",
+        "total_contracted_eur": 244041.57,
+        "projects_count": 1
+      },
+      {
+        "ico": "42104980",
+        "name": "Stredná odborná škola dopravy a služieb,  Mierová 727, Strážske",
+        "total_contracted_eur": 243620.63,
+        "projects_count": 1
+      },
+      {
+        "ico": "17078491",
+        "name": "Stredná odborná škola techniky a služieb, Markušovská cesta 4, Spišská Nová Ves",
+        "total_contracted_eur": 197615.82,
+        "projects_count": 1
+      },
+      {
+        "ico": "00162213",
+        "name": "Obchodná akadémia",
+        "total_contracted_eur": 144607.99,
+        "projects_count": 1
+      },
+      {
+        "ico": "17055393",
+        "name": "Stredná odborná škola techniky a služieb – Műszaki és Szolgáltatóipari Szakközépiskola, J.Kráľa 25, 079 01 Veľké Kapušany",
+        "total_contracted_eur": 129091.82,
+        "projects_count": 1
+      },
+      {
+        "ico": "00159557",
+        "name": "Stredná odborná škola agrotechnických a gastronomických služieb – Agrártechnikai és Gasztronómiai Szolgáltatási Szakközépiskola, J. Majlátha 2, Pribeník",
+        "total_contracted_eur": 125000.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 7617974.910000001
+  },
+  "37836901": {
+    "ico": "37836901",
+    "name": "Trnavský samosprávny kraj",
+    "subsidiary_orgs": [
+      {
+        "ico": "00610381",
+        "name": "Fakultná nemocnica Trnava",
+        "total_contracted_eur": 2877348.44,
+        "projects_count": 2
+      },
+      {
+        "ico": "00158984",
+        "name": "Stredná odborná škola technická Galanta - Műszaki Szakközépiskola Galanta",
+        "total_contracted_eur": 1817085.47,
+        "projects_count": 1
+      },
+      {
+        "ico": "17055385",
+        "name": "Stredná odborná škola elektrotechnická, Sibírska 1, Trnava",
+        "total_contracted_eur": 1356972.9,
+        "projects_count": 1
+      },
+      {
+        "ico": "17053676",
+        "name": "Stredná odborná škola automobilová, Coburgova 7859/39, Trnava",
+        "total_contracted_eur": 1173004.79,
+        "projects_count": 1
+      },
+      {
+        "ico": "00893137",
+        "name": "Stredná odborná škola strojnícka, Pplk. Pľjušťa 29, Skalica",
+        "total_contracted_eur": 1169847.36,
+        "projects_count": 2
+      },
+      {
+        "ico": "36084221",
+        "name": "Nemocnica Alexandra Wintera n.o.",
+        "total_contracted_eur": 537620.58,
+        "projects_count": 2
+      },
+      {
+        "ico": "00891568",
+        "name": "Stredná odborná škola technická, Nová 5245/9, Piešťany",
+        "total_contracted_eur": 445501.34,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 9377380.88
+  },
+  "36063606": {
+    "ico": "36063606",
+    "name": "Bratislavský samosprávny kraj",
+    "subsidiary_orgs": [],
+    "subsidiary_total_eur": 0
+  }
+}
