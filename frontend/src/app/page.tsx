@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import { DataProvider, useData } from '@/lib/DataContext';
 import { Municipality, GlobalStats } from '@/lib/types';
 import { type Locale } from '@/lib/translations';
@@ -14,24 +14,11 @@ import StatsContext from '@/components/StatsContext';
 import Footer from '@/components/Footer';
 import MunicipalityModal from '@/components/MunicipalityModal';
 
-interface IndirectDedup {
-  unique_projects_count: number;
-  unique_total_eur: number;
-}
-
 function PageContent() {
   const { data, isTransitioning } = useData();
   const [selectedMunicipality, setSelectedMunicipality] = useState<Municipality | null>(null);
   const [viewMode, setViewMode] = useState<'total' | 'capita'>('total');
   const [locale, setLocale] = useState<Locale>('sk');
-  const [indirectDedup, setIndirectDedup] = useState<IndirectDedup | null>(null);
-
-  useEffect(() => {
-    fetch('/indirect_dedup_stats.json')
-      .then(r => r.json())
-      .then(setIndirectDedup)
-      .catch(() => {});
-  }, []);
 
   const globalStats = useMemo((): GlobalStats | null => {
     if (!data) return null;
@@ -43,6 +30,24 @@ function PageContent() {
       withoutProjects: munis.filter(m => m.total_contracted_eur === 0).length,
       totalIndirectEur: munis.reduce((s, m) => s + (m.indirect_total_eur || 0), 0),
       withIndirect: munis.filter(m => (m.indirect_total_eur || 0) > 0).length,
+      ...(() => {
+        const seen = new Set<string>();
+        let uniqueIndirectEur = 0;
+        let uniqueIndirectCount = 0;
+        for (const m of munis) {
+          for (const p of (m.indirect_projects || [])) {
+            const pid = (p as { id?: string; kod?: string; name?: string }).id
+              || (p as { kod?: string }).kod
+              || (p as { name?: string }).name || '';
+            if (pid && !seen.has(pid)) {
+              seen.add(pid);
+              uniqueIndirectEur += (p as { contracted_eur?: number }).contracted_eur || 0;
+              uniqueIndirectCount++;
+            }
+          }
+        }
+        return { uniqueIndirectEur, uniqueIndirectCount };
+      })(),
       byRegion: munis.reduce((acc, m) => {
         const r = m.region || 'Iné';
         if (!acc[r]) acc[r] = { total: 0, count: 0, zero: 0 };
@@ -82,7 +87,7 @@ function PageContent() {
           setViewMode={setViewMode}
           locale={locale}
         />
-        <StatsContext locale={locale} globalStats={globalStats} indirectDedup={indirectDedup} />
+        <StatsContext locale={locale} globalStats={globalStats} />
         <Footer locale={locale} />
       </div>
       <MunicipalityModal

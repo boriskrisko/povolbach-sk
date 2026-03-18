@@ -56,33 +56,25 @@ function AnimatedCounter({ target, locale }: { target: number; locale: Locale })
   );
 }
 
-interface IndirectDedup {
-  unique_projects_count: number;
-  unique_total_eur: number;
-}
-
 interface Props {
   locale: Locale;
   globalStats: GlobalStats | null;
-  indirectDedup: IndirectDedup | null;
 }
 
-export default function StatsContext({ locale, globalStats, indirectDedup }: Props) {
+export default function StatsContext({ locale, globalStats }: Props) {
   const { loading, period } = useData();
   const tr = t[locale];
 
   if (loading || !globalStats) return null;
 
-  const { totalFundsEur: totalEur, withProjects, withoutProjects, totalMunicipalities, totalIndirectEur, withIndirect } = globalStats;
+  const { totalFundsEur: totalEur, withProjects, withoutProjects, totalMunicipalities, uniqueIndirectEur, uniqueIndirectCount } = globalStats;
   const withPct = Math.round((withProjects / totalMunicipalities) * 100);
   const withoutPct = 100 - withPct;
 
   const indirectLabel = locale === 'sk' ? 'štátnych investícií v obciach' : 'state investments in municipalities';
-  const indirectCount = indirectDedup?.unique_projects_count ?? 0;
-  const indirectEur = indirectDedup?.unique_total_eur ?? 0;
   const indirectNote = locale === 'sk'
-    ? `${indirectCount} unikátnych projektov · ministerstvá a štátne agentúry · nezahrnuté v hodnotení samospráv`
-    : `${indirectCount} unique projects · ministries and state agencies · not included in municipal scores`;
+    ? `${uniqueIndirectCount} unikátnych projektov · ministerstvá a štátne agentúry · nezahrnuté v hodnotení samospráv`
+    : `${uniqueIndirectCount} unique projects · ministries and state agencies · not included in municipal scores`;
 
   return (
     <section className="py-24 px-4 max-w-5xl mx-auto">
@@ -128,7 +120,7 @@ export default function StatsContext({ locale, globalStats, indirectDedup }: Pro
             className="text-4xl md:text-5xl font-bold mb-2"
             style={{ color: '#6366f1', fontFamily: 'JetBrains Mono, monospace' }}
           >
-            {formatBillions(indirectEur, locale)}
+            {formatBillions(uniqueIndirectEur, locale)}
           </div>
           <div className="text-[#94a3b8] mt-2">{indirectLabel}</div>
           <div className="text-[#94a3b8]/50 text-xs mt-2 leading-relaxed">{indirectNote}</div>
