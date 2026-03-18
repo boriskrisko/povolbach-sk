@@ -73,6 +73,103 @@
     "ico": "00330167",
     "municipality": "Stará Ľubovňa"
   },
+  "00603481": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00164721",
+        "name": "Slovenské národné múzeum",
+        "total_contracted_eur": 6915231.22,
+        "projects_count": 4
+      },
+      {
+        "ico": "51715171",
+        "name": "RAJEC – Zariadenie sociálnych služieb",
+        "total_contracted_eur": 998251.93,
+        "projects_count": 1
+      },
+      {
+        "ico": "30810655",
+        "name": "Základná škola, Železničná 14, Bratislava-Vrakuňa",
+        "total_contracted_eur": 378829.25,
+        "projects_count": 2
+      },
+      {
+        "ico": "31750214",
+        "name": "Spojená škola, Tilgnerova 14, Bratislava",
+        "total_contracted_eur": 291808.49,
+        "projects_count": 1
+      },
+      {
+        "ico": "17337046",
+        "name": "Gymnázium Jána Papánka, Vazovova 6, 811 07 Bratislava",
+        "total_contracted_eur": 265900.84,
+        "projects_count": 1
+      },
+      {
+        "ico": "31810497",
+        "name": "Základná škola s materskou školou Jána Amosa Komenského, Hubeného 25, Bratislava",
+        "total_contracted_eur": 252000.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "00605760",
+        "name": "Gymnázium Alberta Einsteina, Einsteinova 35, 85203 Bratislava",
+        "total_contracted_eur": 243261.86,
+        "projects_count": 1
+      },
+      {
+        "ico": "00226751",
+        "name": "Staromestská knižnica",
+        "total_contracted_eur": 209996.67,
+        "projects_count": 1
+      },
+      {
+        "ico": "00226815",
+        "name": "Knižnica Ružinov, p.o.",
+        "total_contracted_eur": 189873.51,
+        "projects_count": 1
+      },
+      {
+        "ico": "31768873",
+        "name": "Základná škola s materskou školou, Riazanská 75, Bratislava",
+        "total_contracted_eur": 156168.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "31754945",
+        "name": "Základná škola s materskou školu",
+        "total_contracted_eur": 148341.53,
+        "projects_count": 2
+      },
+      {
+        "ico": "30791847",
+        "name": "Základná škola Dr. Ivana Dérera",
+        "total_contracted_eur": 145260.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "31781845",
+        "name": "Základná škola s materskou školou Vývojová 228 Bratislava - Rusovce",
+        "total_contracted_eur": 143622.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "31780491",
+        "name": "Základná škola Holíčska 50",
+        "total_contracted_eur": 92886.07,
+        "projects_count": 1
+      },
+      {
+        "ico": "31780504",
+        "name": "Základná škola Alexandra Dubčeka, Majerníkova 62, Bratislava",
+        "total_contracted_eur": 86616.0,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 10518047.369999997,
+    "ico": "00603481",
+    "municipality": "Bratislava"
+  },
   "00313271": {
     "subsidiary_orgs": [
       {
@@ -564,6 +661,253 @@
     "subsidiary_total_eur": 940132.81,
     "ico": "00310905",
     "municipality": "Partizánske"
+  },
+  "00691135": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00088714",
+        "name": "Spojená škola, Opatovská cesta 101, Košice",
+        "total_contracted_eur": 915842.35,
+        "projects_count": 1
+      },
+      {
+        "ico": "17050367",
+        "name": "Stredná odborná škola priemyselných technológií, Učňovská 5, Košice -Šaca",
+        "total_contracted_eur": 767064.9,
+        "projects_count": 2
+      },
+      {
+        "ico": "35546841",
+        "name": "Základná škola Ľudovíta Fullu, Maurerova 21, Košice",
+        "total_contracted_eur": 301305.72,
+        "projects_count": 2
+      },
+      {
+        "ico": "35531754",
+        "name": "Gymnázium",
+        "total_contracted_eur": 299038.29,
+        "projects_count": 1
+      },
+      {
+        "ico": "00160997",
+        "name": "Gymnázium, Poštová 9, Košice",
+        "total_contracted_eur": 289654.96,
+        "projects_count": 1
+      },
+      {
+        "ico": "00160989",
+        "name": "Gymnázium",
+        "total_contracted_eur": 235473.74,
+        "projects_count": 1
+      },
+      {
+        "ico": "00162159",
+        "name": "Gymnázium, Opatovská cesta 7, Košice",
+        "total_contracted_eur": 233961.65,
+        "projects_count": 1
+      },
+      {
+        "ico": "35540559",
+        "name": "Základná škola Belehradská 21, Košice",
+        "total_contracted_eur": 230615.11,
+        "projects_count": 1
+      },
+      {
+        "ico": "00161004",
+        "name": "Gymnázium a základná škola Sándora Máraiho, s vyučovacím jazykom maďarským-Márai Sándor Magyar Tanítási Nyelvu Gimnázium és Alapiskola, Kuzmányho 6, Košice",
+        "total_contracted_eur": 225049.72,
+        "projects_count": 2
+      },
+      {
+        "ico": "00398900",
+        "name": "Gymnázium, Trebišovská 12, Košice",
+        "total_contracted_eur": 217425.45,
+        "projects_count": 1
+      },
+      {
+        "ico": "31297803",
+        "name": "Východoslovenské múzeum v Košiciach",
+        "total_contracted_eur": 210000.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "31297838",
+        "name": "Verejná knižnica Jána Bocatia v Košiciach",
+        "total_contracted_eur": 209206.24,
+        "projects_count": 1
+      },
+      {
+        "ico": "35543019",
+        "name": "Základná škola",
+        "total_contracted_eur": 204840.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "31297820",
+        "name": "Východoslovenská galéria",
+        "total_contracted_eur": 200000.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35540486",
+        "name": "Základná škola",
+        "total_contracted_eur": 194940.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "31263097",
+        "name": "Základná škola Košice",
+        "total_contracted_eur": 189720.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35546123",
+        "name": "Základná škola",
+        "total_contracted_eur": 189720.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "00598071",
+        "name": "Gymnázium",
+        "total_contracted_eur": 183946.47,
+        "projects_count": 1
+      },
+      {
+        "ico": "42407362",
+        "name": "Súkromné gymnázium FUTURUM",
+        "total_contracted_eur": 178522.99,
+        "projects_count": 1
+      },
+      {
+        "ico": "35542870",
+        "name": "Základná škola Ľ. Podjavorinskej 1, Košice",
+        "total_contracted_eur": 177300.9,
+        "projects_count": 1
+      },
+      {
+        "ico": "00189006",
+        "name": "Knižnica pre mládež mesta Košice",
+        "total_contracted_eur": 174409.15,
+        "projects_count": 1
+      },
+      {
+        "ico": "31263101",
+        "name": "Základná škola Jozefa Urbana, Jenisejská 22, Košice",
+        "total_contracted_eur": 173880.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "31985921",
+        "name": "Základná škola Starozagorská 8, Košice",
+        "total_contracted_eur": 167490.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35561548",
+        "name": "Spojená škola svätých Košických mučeníkov",
+        "total_contracted_eur": 167490.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35546867",
+        "name": "Základná škola Krosnianska 2, Košice",
+        "total_contracted_eur": 164080.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35546875",
+        "name": "Základná škola",
+        "total_contracted_eur": 158580.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35542616",
+        "name": "Základná škola Mateja Lechkého, Ulica Jána Pavla II. 1, Košice",
+        "total_contracted_eur": 148788.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35546832",
+        "name": "Základná škola",
+        "total_contracted_eur": 145260.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35542641",
+        "name": "Základná škola Drábova 3, Košice",
+        "total_contracted_eur": 143622.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "31262767",
+        "name": "Súkromné gymnázium, Dneperská 1, Košice",
+        "total_contracted_eur": 135909.9,
+        "projects_count": 1
+      },
+      {
+        "ico": "42319234",
+        "name": "Premonštrátske gymnázium",
+        "total_contracted_eur": 135760.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35546859",
+        "name": "Základná škola",
+        "total_contracted_eur": 135363.1,
+        "projects_count": 1
+      },
+      {
+        "ico": "35540478",
+        "name": "Základná škola Park Angelinum 8, Košice",
+        "total_contracted_eur": 131076.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "31263119",
+        "name": "Základná škola",
+        "total_contracted_eur": 124560.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "31263089",
+        "name": "Základná škola Staničná 13, Košice",
+        "total_contracted_eur": 122320.93,
+        "projects_count": 1
+      },
+      {
+        "ico": "31942199",
+        "name": "Základná škola s materskou školou sv. Marka Križina",
+        "total_contracted_eur": 112925.56,
+        "projects_count": 1
+      },
+      {
+        "ico": "31945856",
+        "name": "Múzeum Vojtecha Löfflera",
+        "total_contracted_eur": 98806.95,
+        "projects_count": 1
+      },
+      {
+        "ico": "17079756",
+        "name": "Základná škola sv. Cyrila a Metoda",
+        "total_contracted_eur": 93420.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35542632",
+        "name": "Základná škola",
+        "total_contracted_eur": 57060.0,
+        "projects_count": 1
+      },
+      {
+        "ico": "35542888",
+        "name": "Základná škola",
+        "total_contracted_eur": 54441.28,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 8298871.36,
+    "ico": "00691135",
+    "municipality": "Košice"
   },
   "00332933": {
     "subsidiary_orgs": [

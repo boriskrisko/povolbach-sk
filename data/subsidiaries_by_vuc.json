@@ -531,6 +531,18 @@
     "name": "Košický samosprávny kraj",
     "subsidiary_orgs": [
       {
+        "ico": "35570563",
+        "name": "Stredná odborná škola železničná, Palackého 14, Košice",
+        "total_contracted_eur": 2733356.95,
+        "projects_count": 2
+      },
+      {
+        "ico": "00606707",
+        "name": "Univerzitná nemocnica L. Pasteura Košice",
+        "total_contracted_eur": 2610264.08,
+        "projects_count": 1
+      },
+      {
         "ico": "35568330",
         "name": "Stredná odborná škola techniky a remesiel – Műszaki Szakok és Mesterségek Szakközépiskola, Rákocziho 23, Kráľovský Chlmec",
         "total_contracted_eur": 1768210.66,
@@ -549,9 +561,45 @@
         "projects_count": 2
       },
       {
+        "ico": "00159433",
+        "name": "Stredná odborná škola poľnohospodárstva a služieb na vidieku, Kukučinová 23, Košice",
+        "total_contracted_eur": 595216.34,
+        "projects_count": 3
+      },
+      {
+        "ico": "00893331",
+        "name": "Stredná odborná škola informačných technológií, Ostrovského 1, Košice",
+        "total_contracted_eur": 571190.27,
+        "projects_count": 2
+      },
+      {
         "ico": "17050545",
         "name": "Stredná odborná škola technická",
         "total_contracted_eur": 567608.92,
+        "projects_count": 2
+      },
+      {
+        "ico": "17078407",
+        "name": "Stredná odborná škola automobilová, Moldavská cesta 2, Košice",
+        "total_contracted_eur": 541586.62,
+        "projects_count": 2
+      },
+      {
+        "ico": "00606715",
+        "name": "Detská fakultná nemocnica Košice",
+        "total_contracted_eur": 539657.06,
+        "projects_count": 2
+      },
+      {
+        "ico": "31946615",
+        "name": "Hotelová akadémia Južná trieda 10, Košice",
+        "total_contracted_eur": 485970.16,
+        "projects_count": 2
+      },
+      {
+        "ico": "00893340",
+        "name": "Stredná odborná škola technická, Kukučínova 23, Košice",
+        "total_contracted_eur": 471871.57,
         "projects_count": 2
       },
       {
@@ -585,6 +633,12 @@
         "projects_count": 1
       },
       {
+        "ico": "17078423",
+        "name": "Stredná odborná škola beauty služieb, Gemerská 1, Košice",
+        "total_contracted_eur": 322261.81,
+        "projects_count": 2
+      },
+      {
         "ico": "00162205",
         "name": "Obchodná akadémia, Akademika Hronca 8, Rožňava",
         "total_contracted_eur": 311708.61,
@@ -609,6 +663,24 @@
         "projects_count": 1
       },
       {
+        "ico": "35570172",
+        "name": "Stredná odborná škola obchodu a služieb Jána Bocatia, Bocatiova 1, Košice",
+        "total_contracted_eur": 236039.22,
+        "projects_count": 1
+      },
+      {
+        "ico": "00161781",
+        "name": "Stredná odborná škola technická a ekonomická Jozefa Szakkayho – Szakkay József Műszaki és Közgazdasági Szakközépiskola, Grešákova 1, Košice",
+        "total_contracted_eur": 206679.72,
+        "projects_count": 1
+      },
+      {
+        "ico": "31956688",
+        "name": "Obchodná akadémia",
+        "total_contracted_eur": 200604.58,
+        "projects_count": 1
+      },
+      {
         "ico": "17078491",
         "name": "Stredná odborná škola techniky a služieb, Markušovská cesta 4, Spišská Nová Ves",
         "total_contracted_eur": 197615.82,
@@ -618,6 +690,24 @@
         "ico": "00162213",
         "name": "Obchodná akadémia",
         "total_contracted_eur": 144607.99,
+        "projects_count": 1
+      },
+      {
+        "ico": "35564024",
+        "name": "Stredná odborná škola pedagogická sv. Cyrila a Metoda, Južná trieda 48, Košice",
+        "total_contracted_eur": 142252.22,
+        "projects_count": 1
+      },
+      {
+        "ico": "00133132",
+        "name": "Škola umeleckého priemyslu, Jakobyho 15, Košice",
+        "total_contracted_eur": 130855.83,
+        "projects_count": 1
+      },
+      {
+        "ico": "00162574",
+        "name": "Stredná odborná škola veterinárna, Námestie mladých poľnohospodárov 2, Košice - Barca",
+        "total_contracted_eur": 130041.75,
         "projects_count": 1
       },
       {
@@ -633,7 +723,7 @@
         "projects_count": 1
       }
     ],
-    "subsidiary_total_eur": 7617974.910000001
+    "subsidiary_total_eur": 17535823.09
   },
   "37836901": {
     "ico": "37836901",
@@ -687,7 +777,38 @@
   "36063606": {
     "ico": "36063606",
     "name": "Bratislavský samosprávny kraj",
-    "subsidiary_orgs": [],
-    "subsidiary_total_eur": 0
+    "subsidiary_orgs": [
+      {
+        "ico": "31813861",
+        "name": "Univerzitná nemocnica Bratislava",
+        "total_contracted_eur": 18502152.14,
+        "projects_count": 1
+      },
+      {
+        "ico": "44570783",
+        "name": "Univerzitná nemocnica - Nemocnica svätého Michala, a. s.",
+        "total_contracted_eur": 508153.66,
+        "projects_count": 2
+      },
+      {
+        "ico": "36077739",
+        "name": "Špecializovaná nemocnica pre ortopedickú protetiku Bratislava, n.o.",
+        "total_contracted_eur": 454607.69,
+        "projects_count": 2
+      },
+      {
+        "ico": "30775426",
+        "name": "Obchodná akadémia Imricha Karvaša Bratislava",
+        "total_contracted_eur": 144335.13,
+        "projects_count": 1
+      },
+      {
+        "ico": "17055415",
+        "name": "Stredná odborná škola informačných technológií, Hlinícka 1, Bratislava",
+        "total_contracted_eur": 95268.69,
+        "projects_count": 1
+      }
+    ],
+    "subsidiary_total_eur": 19704517.310000002
   }
 }

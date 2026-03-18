@@ -178,6 +178,26 @@ def main():
         if len(uniq) == 1:
             nuts_id_to_ico[nid] = uniq[0]
 
+    # Manual overrides: multi-district cities (Košice I-IV, Bratislava sub-districts)
+    # All resolve to the single city municipality ICO
+    KOŠICE_ICO = '00691135'
+    BRATISLAVA_ICO = '00603481'
+    KOŠICE_SUB_IDS = [
+        '89', '90', '91', '92',  # Košice I, II, III, IV
+        '2704','2705','2706','2707','2708','2709','2710','2711','2712','2713',
+        '2714','2715','2716','2717','2718','2719','2720','2721','2722','2723',
+        '2724','2725',  # Košice mestské časti
+    ]
+    BRATISLAVA_SUB_IDS = [
+        '18', '19', '20', '21', '22',  # Bratislava I–V
+        '99','100','101','102','103','104','105','106','107','108',
+        '109','110','111','112','113','114','115',  # Bratislava mestské časti
+    ]
+    for nid in KOŠICE_SUB_IDS:
+        nuts_id_to_ico[nid] = KOŠICE_ICO
+    for nid in BRATISLAVA_SUB_IDS:
+        nuts_id_to_ico[nid] = BRATISLAVA_ICO
+
     log(f'NUTS5 IDs with unique ICO mapping: {len(nuts_id_to_ico)}')
 
     # Build VÚC region name → ICO lookup
