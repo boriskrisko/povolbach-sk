@@ -22,6 +22,7 @@ export default function VucSection({ viewMode, setViewMode, locale }: Props) {
 
   useEffect(() => {
     setLoading(true);
+    setSelectedVuc(null); // Close modal when period changes (Fix 4)
     const file = period === '2127' ? '/vuc_stats_21.json' : '/vuc_stats.json';
     fetch(file)
       .then(r => r.json())

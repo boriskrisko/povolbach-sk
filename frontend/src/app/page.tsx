@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { DataProvider, useData } from '@/lib/DataContext';
 import { Municipality, GlobalStats } from '@/lib/types';
 import { type Locale } from '@/lib/translations';
@@ -15,10 +15,15 @@ import Footer from '@/components/Footer';
 import MunicipalityModal from '@/components/MunicipalityModal';
 
 function PageContent() {
-  const { data, isTransitioning } = useData();
+  const { data, isTransitioning, period } = useData();
   const [selectedMunicipality, setSelectedMunicipality] = useState<Municipality | null>(null);
   const [viewMode, setViewMode] = useState<'total' | 'capita'>('total');
   const [locale, setLocale] = useState<Locale>('sk');
+
+  // Close any open modals when period changes (Fix 4)
+  useEffect(() => {
+    setSelectedMunicipality(null);
+  }, [period]);
 
   const globalStats = useMemo((): GlobalStats | null => {
     if (!data) return null;

@@ -38,6 +38,17 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
   const subTotal = m.subsidiary_total_eur || 0;
   const grandTotal = m.total_contracted_eur + subTotal;
 
+  // Sorted + capped client-side (build script pre-sorts, this is a safety net)
+  const topProjects = [...m.projects]
+    .sort((a, b) => (b.sumaZazmluvnena || 0) - (a.sumaZazmluvnena || 0))
+    .slice(0, 5);
+  const topIndirect = [...(m.indirect_projects || [])]
+    .sort((a, b) => (b.contracted_eur || 0) - (a.contracted_eur || 0))
+    .slice(0, 5);
+  const topSubsidiaryOrgs = [...(m.subsidiary_orgs || [])]
+    .sort((a, b) => (b.total_contracted_eur || 0) - (a.total_contracted_eur || 0))
+    .slice(0, 5);
+
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center modal-backdrop bg-black/60 overflow-hidden"
@@ -133,13 +144,13 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
         )}
 
         {/* Top projects */}
-        {m.projects.length > 0 && (
+        {topProjects.length > 0 && (
           <div className="mb-6">
             <h3 className="text-sm font-medium text-[#94a3b8] mb-3 uppercase tracking-wider">
               {tr.modal_top_projects}
             </h3>
             <div className="space-y-2">
-              {m.projects.map((p, i) => {
+              {topProjects.map((p, i) => {
                 const isActive = !p.stav.toLowerCase().includes('ukončen');
                 const endDate = p.datumKoncaRealizacie
                   ? (() => {
@@ -167,7 +178,7 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
         )}
 
         {/* Subsidiary orgs */}
-        {subTotal > 0 && m.subsidiary_orgs && m.subsidiary_orgs.length > 0 && (
+        {subTotal > 0 && topSubsidiaryOrgs.length > 0 && (
           <div className="mb-6">
             <h3 className="text-sm font-medium text-[#10b981]/80 mb-1 uppercase tracking-wider flex items-center gap-1.5">
               {tr.modal_subsidiary_title}
@@ -175,7 +186,7 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
             </h3>
             <p className="text-[#94a3b8]/60 text-xs mb-3">{tr.modal_subsidiary_note}</p>
             <div className="space-y-2">
-              {m.subsidiary_orgs.map((org, i) => (
+              {topSubsidiaryOrgs.map((org, i) => (
                 <div key={i} className="bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e] border-l-2 border-l-[#10b981]/40">
                   <div className="text-sm text-[#f8fafc]/90 mb-1 line-clamp-2">{org.name}</div>
                   <div className="flex justify-between text-xs">
@@ -189,7 +200,7 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
         )}
 
         {/* Indirect / state projects */}
-        {m.indirect_projects && m.indirect_projects.length > 0 && (
+        {topIndirect.length > 0 && (
           <div className="mb-6">
             <h3 className="text-sm font-medium text-[#94a3b8]/70 mb-1 uppercase tracking-wider flex items-center gap-1.5">
               {tr.modal_indirect_title}
@@ -197,7 +208,7 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
             </h3>
             <p className="text-[#94a3b8]/60 text-xs mb-3">{tr.modal_indirect_note}</p>
             <div className="space-y-2">
-              {m.indirect_projects.map((p, i) => (
+              {topIndirect.map((p, i) => (
                 <div key={i} className="bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e] opacity-80">
                   <div className="text-sm text-[#f8fafc]/80 mb-1 line-clamp-2">{p.name}</div>
                   <div className="flex justify-between text-xs">

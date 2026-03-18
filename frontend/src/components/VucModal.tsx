@@ -32,6 +32,13 @@ export default function VucModal({ vuc, onClose, locale }: Props) {
 
   const totalProjects = vuc.projects_active + vuc.projects_completed;
   const subTotal = vuc.subsidiary_total_eur || 0;
+
+  const topProjects = [...vuc.projects]
+    .sort((a, b) => (b.sumaZazmluvnena || 0) - (a.sumaZazmluvnena || 0))
+    .slice(0, 5);
+  const topSubsidiaryOrgs = [...(vuc.subsidiary_orgs || [])]
+    .sort((a, b) => (b.total_contracted_eur || 0) - (a.total_contracted_eur || 0))
+    .slice(0, 5);
   const grandTotal = vuc.total_contracted_eur + subTotal;
   const perCapita = vuc.population > 0 ? Math.round(grandTotal / vuc.population) : 0;
   const subsidiaryNote = locale === 'sk'
@@ -138,13 +145,13 @@ export default function VucModal({ vuc, onClose, locale }: Props) {
         )}
 
         {/* Top projects */}
-        {vuc.projects.length > 0 && (
+        {topProjects.length > 0 && (
           <div className="mb-6">
             <h3 className="text-sm font-medium text-[#94a3b8] mb-3 uppercase tracking-wider">
               {locale === 'sk' ? 'TOP PROJEKTY' : 'TOP PROJECTS'}
             </h3>
             <div className="space-y-2">
-              {vuc.projects.map((p, i) => {
+              {topProjects.map((p, i) => {
                 const isActive = !p.stav.toLowerCase().includes('ukončen');
                 return (
                   <div key={i} className="bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e]">
@@ -161,7 +168,7 @@ export default function VucModal({ vuc, onClose, locale }: Props) {
         )}
 
         {/* Subsidiary orgs */}
-        {subTotal > 0 && vuc.subsidiary_orgs && vuc.subsidiary_orgs.length > 0 && (
+        {subTotal > 0 && topSubsidiaryOrgs.length > 0 && (
           <div className="mb-6">
             <h3 className="text-sm font-medium text-[#10b981]/80 mb-1 uppercase tracking-wider flex items-center gap-1.5">
               {locale === 'sk' ? 'ORGANIZÁCIE V ZRIAĎOVATEĽSKEJ PÔSOBNOSTI' : 'ORGANIZATIONS UNDER REGIONAL JURISDICTION'}
@@ -169,7 +176,7 @@ export default function VucModal({ vuc, onClose, locale }: Props) {
             </h3>
             <p className="text-[#94a3b8]/60 text-xs mb-3">{subsidiaryNote}</p>
             <div className="space-y-2">
-              {vuc.subsidiary_orgs.map((org, i) => (
+              {topSubsidiaryOrgs.map((org, i) => (
                 <div key={i} className="bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e] border-l-2 border-l-[#10b981]/40">
                   <div className="text-sm text-[#f8fafc]/90 mb-1 line-clamp-2">{org.name}</div>
                   <div className="flex justify-between text-xs">
