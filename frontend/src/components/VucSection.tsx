@@ -42,7 +42,7 @@ export default function VucSection({ viewMode, setViewMode, locale }: Props) {
     : 'EU funds absorbed at the regional government level';
   const capSuffix = locale === 'sk' ? '/ obyv.' : '/ cap.';
   const directLabel = locale === 'sk' ? 'priame' : 'direct';
-  const subsLabel = locale === 'sk' ? 'org. v zriaď.' : 'subsidiaries';
+  const subsLabel = locale === 'sk' ? 'zriaďované organizácie' : 'subsidiaries';
 
   return (
     <section className="py-24 px-4 max-w-6xl mx-auto">

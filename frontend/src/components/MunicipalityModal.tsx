@@ -87,7 +87,7 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
                 </div>
                 <div className="text-[#10b981] text-xs">
                   +{formatAmount(subTotal, locale)}{' '}
-                  <span className="text-[#10b981]/70">{locale === 'sk' ? 'org.' : 'orgs'}</span>
+                  <span className="text-[#10b981]/70">{locale === 'sk' ? 'zriaďované org.' : 'orgs'}</span>
                 </div>
                 <div className="text-[#94a3b8] text-xs mt-1">{tr.modal_total}</div>
               </>

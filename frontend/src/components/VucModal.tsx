@@ -97,7 +97,7 @@ export default function VucModal({ vuc, onClose, locale }: Props) {
         {vuc.subsidiary_total_eur > 0 && (
           <div className="mb-6 bg-[#0a0a0f] rounded-xl p-4 border border-[#1e1e2e] border-l-2 border-l-[#10b981]">
             <div className="text-sm font-medium text-[#10b981] mb-2">
-              +{formatAmount(vuc.subsidiary_total_eur, locale)} {locale === 'sk' ? 'org. v zriaď. pôsobnosti' : 'subsidiary orgs'}
+              +{formatAmount(vuc.subsidiary_total_eur, locale)} {locale === 'sk' ? 'zriaďované organizácie' : 'subsidiary orgs'}
             </div>
             {vuc.subsidiary_orgs.slice(0, 5).map((org, i) => (
               <div key={i} className="flex justify-between text-xs text-[#94a3b8] py-0.5">
