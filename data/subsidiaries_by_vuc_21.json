@@ -50,12 +50,13 @@
         "name": "Integrovaná doprava Žilinského kraja, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 138586.75,
+        "total_contracted_eur": 194021.45,
         "full_amount_eur": 554347.0,
-        "co_owners": 4
+        "co_owners": 4,
+        "share_pct": 35.0
       }
     ],
-    "subsidiary_total_eur": 6461517.010000001
+    "subsidiary_total_eur": 6516951.710000001
   },
   "37870475": {
     "ico": "37870475",
@@ -243,7 +244,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 3921252.5,
         "full_amount_eur": 7842505.0,
-        "co_owners": 2
+        "co_owners": 2,
+        "share_pct": 50.0
       },
       {
         "ico": "36145076",
@@ -306,12 +308,13 @@
         "name": "Integrovaná doprava Žilinského kraja, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 138586.75,
+        "total_contracted_eur": 194021.45,
         "full_amount_eur": 554347.0,
-        "co_owners": 4
+        "co_owners": 4,
+        "share_pct": 35.0
       }
     ],
-    "subsidiary_total_eur": 14178240.14
+    "subsidiary_total_eur": 14233674.84
   },
   "37861298": {
     "ico": "37861298",
@@ -366,7 +369,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 4819200.0,
         "full_amount_eur": 9638400.0,
-        "co_owners": 2
+        "co_owners": 2,
+        "share_pct": 50.0
       },
       {
         "ico": "17078407",

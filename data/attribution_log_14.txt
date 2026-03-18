@@ -7,6 +7,8 @@ Zero name matching. IČO only.
 
 attributed_muni: 671
 attributed_vuc: 264
+deposit_split: 5
+equal_split: 37
 multi_founder: 42
 no_rpo_match: 4803
 

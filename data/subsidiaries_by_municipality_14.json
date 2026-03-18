@@ -426,9 +426,10 @@
         "name": "Regionálna vodárenská spoločnosť Vlára-Váh, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 6474326.89,
+        "total_contracted_eur": 1957836.45,
         "full_amount_eur": 38845961.37,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 5.04
       },
       {
         "ico": "00351717",
@@ -438,7 +439,7 @@
         "total_contracted_eur": 77160.75
       }
     ],
-    "subsidiary_total_eur": 6551487.64,
+    "subsidiary_total_eur": 2034997.2,
     "ico": "00311961",
     "municipality": "Skalka nad Váhom"
   },
@@ -514,7 +515,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 116538.99,
         "full_amount_eur": 233077.98,
-        "co_owners": 2
+        "co_owners": 2,
+        "share_pct": 50.0
       },
       {
         "ico": "00352594",
@@ -752,12 +754,13 @@
         "name": "Integrovaná doprava Žilinského a Trenčianskeho kraja, s. r. o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 11053.19,
+        "total_contracted_eur": 6631.91,
         "full_amount_eur": 44212.75,
-        "co_owners": 4
+        "co_owners": 4,
+        "share_pct": 15.0
       }
     ],
-    "subsidiary_total_eur": 36950811.85999999,
+    "subsidiary_total_eur": 36946390.57999999,
     "ico": "00321796",
     "municipality": "Žilina"
   },
@@ -924,7 +927,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 8526.32,
         "full_amount_eur": 162000.0,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 5.26
       }
     ],
     "subsidiary_total_eur": 8526.32,
@@ -940,7 +944,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 8526.32,
         "full_amount_eur": 162000.0,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 5.26
       }
     ],
     "subsidiary_total_eur": 8526.32,
@@ -956,7 +961,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 8526.32,
         "full_amount_eur": 162000.0,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 5.26
       }
     ],
     "subsidiary_total_eur": 8526.32,
@@ -972,7 +978,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 8526.32,
         "full_amount_eur": 162000.0,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 5.26
       }
     ],
     "subsidiary_total_eur": 8526.32,
@@ -988,7 +995,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 8526.32,
         "full_amount_eur": 162000.0,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 5.26
       }
     ],
     "subsidiary_total_eur": 8526.32,
@@ -1004,7 +1012,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 8526.32,
         "full_amount_eur": 162000.0,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 5.26
       }
     ],
     "subsidiary_total_eur": 8526.32,
@@ -1020,7 +1029,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 8526.32,
         "full_amount_eur": 162000.0,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 5.26
       }
     ],
     "subsidiary_total_eur": 8526.32,
@@ -1036,7 +1046,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 8526.32,
         "full_amount_eur": 162000.0,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 5.26
       }
     ],
     "subsidiary_total_eur": 8526.32,
@@ -1052,7 +1063,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 390499.85,
         "full_amount_eur": 780999.7,
-        "co_owners": 2
+        "co_owners": 2,
+        "share_pct": 50.0
       },
       {
         "ico": "30856698",
@@ -1082,7 +1094,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 8526.32,
         "full_amount_eur": 162000.0,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 5.26
       }
     ],
     "subsidiary_total_eur": 726626.1699999999,
@@ -1119,7 +1132,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 8526.32,
         "full_amount_eur": 162000.0,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 5.26
       }
     ],
     "subsidiary_total_eur": 568346.89,
@@ -1135,7 +1149,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 8526.32,
         "full_amount_eur": 162000.0,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 5.26
       }
     ],
     "subsidiary_total_eur": 8526.32,
@@ -1151,7 +1166,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 8526.32,
         "full_amount_eur": 162000.0,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 5.26
       }
     ],
     "subsidiary_total_eur": 8526.32,
@@ -1167,7 +1183,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 90388.08,
         "full_amount_eur": 1355821.27,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       },
       {
         "ico": "30797209",
@@ -1176,7 +1193,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 8526.32,
         "full_amount_eur": 162000.0,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 5.26
       }
     ],
     "subsidiary_total_eur": 98914.4,
@@ -1192,7 +1210,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 214222.04,
         "full_amount_eur": 642666.12,
-        "co_owners": 3
+        "co_owners": 3,
+        "share_pct": 33.33
       },
       {
         "ico": "30797209",
@@ -1201,7 +1220,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 8526.32,
         "full_amount_eur": 162000.0,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 5.26
       }
     ],
     "subsidiary_total_eur": 222748.36000000002,
@@ -1217,7 +1237,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 390499.85,
         "full_amount_eur": 780999.7,
-        "co_owners": 2
+        "co_owners": 2,
+        "share_pct": 50.0
       },
       {
         "ico": "31817017",
@@ -1233,7 +1254,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 8526.32,
         "full_amount_eur": 162000.0,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 5.26
       }
     ],
     "subsidiary_total_eur": 479666.17,
@@ -1249,7 +1271,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 8526.32,
         "full_amount_eur": 162000.0,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 5.26
       }
     ],
     "subsidiary_total_eur": 8526.32,
@@ -1272,7 +1295,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 8526.32,
         "full_amount_eur": 162000.0,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 5.26
       }
     ],
     "subsidiary_total_eur": 175025.02000000002,
@@ -1288,7 +1312,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 8526.32,
         "full_amount_eur": 162000.0,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 5.26
       }
     ],
     "subsidiary_total_eur": 8526.32,
@@ -1304,7 +1329,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 8526.32,
         "full_amount_eur": 162000.0,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 5.26
       }
     ],
     "subsidiary_total_eur": 8526.32,
@@ -1367,12 +1393,13 @@
         "name": "Integrovaná doprava Žilinského a Trenčianskeho kraja, s. r. o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 11053.19,
+        "total_contracted_eur": 6631.91,
         "full_amount_eur": 44212.75,
-        "co_owners": 4
+        "co_owners": 4,
+        "share_pct": 15.0
       }
     ],
-    "subsidiary_total_eur": 1452673.19,
+    "subsidiary_total_eur": 1448251.91,
     "ico": "00312037",
     "municipality": "Trenčín"
   },
@@ -1511,7 +1538,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 208314.63,
         "full_amount_eur": 1458202.43,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       },
       {
         "ico": "31202471",
@@ -1952,12 +1980,13 @@
         "name": "Ekover, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 63524.0,
+        "total_contracted_eur": 7241.74,
         "full_amount_eur": 1206955.91,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 0.6
       }
     ],
-    "subsidiary_total_eur": 63524.0,
+    "subsidiary_total_eur": 7241.74,
     "ico": "00328944",
     "municipality": "Beharovce"
   },
@@ -1968,12 +1997,13 @@
         "name": "Ekover, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 63524.0,
+        "total_contracted_eur": 86418.04,
         "full_amount_eur": 1206955.91,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 7.16
       }
     ],
-    "subsidiary_total_eur": 63524.0,
+    "subsidiary_total_eur": 86418.04,
     "ico": "00328995",
     "municipality": "Bystrany"
   },
@@ -1984,12 +2014,13 @@
         "name": "Ekover, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 63524.0,
+        "total_contracted_eur": 25225.38,
         "full_amount_eur": 1206955.91,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 2.09
       }
     ],
-    "subsidiary_total_eur": 63524.0,
+    "subsidiary_total_eur": 25225.38,
     "ico": "00329070",
     "municipality": "Granč - Petrovce"
   },
@@ -2000,12 +2031,13 @@
         "name": "Ekover, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 63524.0,
+        "total_contracted_eur": 9655.65,
         "full_amount_eur": 1206955.91,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 0.8
       }
     ],
-    "subsidiary_total_eur": 63524.0,
+    "subsidiary_total_eur": 9655.65,
     "ico": "00329126",
     "municipality": "Hincovce"
   },
@@ -2016,12 +2048,13 @@
         "name": "Ekover, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 63524.0,
+        "total_contracted_eur": 14362.78,
         "full_amount_eur": 1206955.91,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 1.19
       }
     ],
-    "subsidiary_total_eur": 63524.0,
+    "subsidiary_total_eur": 14362.78,
     "ico": "00329169",
     "municipality": "Hrišovce"
   },
@@ -2032,12 +2065,13 @@
         "name": "Ekover, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 63524.0,
+        "total_contracted_eur": 16776.69,
         "full_amount_eur": 1206955.91,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 1.39
       }
     ],
-    "subsidiary_total_eur": 63524.0,
+    "subsidiary_total_eur": 16776.69,
     "ico": "00329223",
     "municipality": "Kaľava"
   },
@@ -2055,12 +2089,13 @@
         "name": "Ekover, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 63524.0,
+        "total_contracted_eur": 7241.74,
         "full_amount_eur": 1206955.91,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 0.6
       }
     ],
-    "subsidiary_total_eur": 187724.0,
+    "subsidiary_total_eur": 131441.74,
     "ico": "00329274",
     "municipality": "Kluknava"
   },
@@ -2071,12 +2106,13 @@
         "name": "Ekover, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 63524.0,
+        "total_contracted_eur": 22811.47,
         "full_amount_eur": 1206955.91,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 1.89
       }
     ],
-    "subsidiary_total_eur": 63524.0,
+    "subsidiary_total_eur": 22811.47,
     "ico": "00329266",
     "municipality": "Kolinovce"
   },
@@ -2087,9 +2123,10 @@
         "name": "Ekover, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 63524.0,
+        "total_contracted_eur": 89918.22,
         "full_amount_eur": 1206955.91,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 7.45
       },
       {
         "ico": "35546328",
@@ -2099,7 +2136,7 @@
         "total_contracted_eur": 51328.77
       }
     ],
-    "subsidiary_total_eur": 114852.76999999999,
+    "subsidiary_total_eur": 141246.99,
     "ico": "00329347",
     "municipality": "Margecany"
   },
@@ -2110,12 +2147,13 @@
         "name": "Ekover, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 63524.0,
+        "total_contracted_eur": 39588.15,
         "full_amount_eur": 1206955.91,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 3.28
       }
     ],
-    "subsidiary_total_eur": 63524.0,
+    "subsidiary_total_eur": 39588.15,
     "ico": "00329436",
     "municipality": "Olcnava"
   },
@@ -2126,12 +2164,13 @@
         "name": "Ekover, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 63524.0,
+        "total_contracted_eur": 8448.69,
         "full_amount_eur": 1206955.91,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 0.7
       }
     ],
-    "subsidiary_total_eur": 63524.0,
+    "subsidiary_total_eur": 8448.69,
     "ico": "00330876",
     "municipality": "Oľšavka"
   },
@@ -2142,12 +2181,13 @@
         "name": "Ekover, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 63524.0,
+        "total_contracted_eur": 11948.86,
         "full_amount_eur": 1206955.91,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 0.99
       }
     ],
-    "subsidiary_total_eur": 63524.0,
+    "subsidiary_total_eur": 11948.86,
     "ico": "00329541",
     "municipality": "Slatvina"
   },
@@ -2158,12 +2198,13 @@
         "name": "Ekover, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 63524.0,
+        "total_contracted_eur": 57571.8,
         "full_amount_eur": 1206955.91,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 4.77
       }
     ],
-    "subsidiary_total_eur": 63524.0,
+    "subsidiary_total_eur": 57571.8,
     "ico": "00329525",
     "municipality": "Richnava"
   },
@@ -2174,12 +2215,13 @@
         "name": "Ekover, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 63524.0,
+        "total_contracted_eur": 71934.57,
         "full_amount_eur": 1206955.91,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 5.96
       }
     ],
-    "subsidiary_total_eur": 63524.0,
+    "subsidiary_total_eur": 71934.57,
     "ico": "00329550",
     "municipality": "Slovinky"
   },
@@ -2190,12 +2232,13 @@
         "name": "Ekover, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 63524.0,
+        "total_contracted_eur": 19190.6,
         "full_amount_eur": 1206955.91,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 1.59
       }
     ],
-    "subsidiary_total_eur": 63524.0,
+    "subsidiary_total_eur": 19190.6,
     "ico": "00329754",
     "municipality": "Vojkovce"
   },
@@ -2206,81 +2249,85 @@
         "name": "Ekover, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 63524.0,
+        "total_contracted_eur": 49243.8,
         "full_amount_eur": 1206955.91,
-        "co_owners": 19
+        "co_owners": 19,
+        "share_pct": 4.08
       }
     ],
-    "subsidiary_total_eur": 63524.0,
+    "subsidiary_total_eur": 49243.8,
     "ico": "00329819",
     "municipality": "Žehra"
   },
   "00329282": {
     "subsidiary_orgs": [
       {
+        "ico": "31691021",
+        "name": "Ekover, s.r.o.",
+        "projects_count": 1,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 368362.94,
+        "full_amount_eur": 1206955.91,
+        "co_owners": 19,
+        "share_pct": 30.52
+      },
+      {
         "ico": "35543957",
         "name": "Základná škola Krompachy, Zemanská ul.",
         "projects_count": 1,
         "rpo_relationship": "Zriaďovateľ",
         "total_contracted_eur": 74070.0
-      },
-      {
-        "ico": "31691021",
-        "name": "Ekover, s.r.o.",
-        "projects_count": 1,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 63524.0,
-        "full_amount_eur": 1206955.91,
-        "co_owners": 19
       }
     ],
-    "subsidiary_total_eur": 137594.0,
+    "subsidiary_total_eur": 442432.94,
     "ico": "00329282",
     "municipality": "Krompachy"
   },
   "00329622": {
     "subsidiary_orgs": [
       {
+        "ico": "31691021",
+        "name": "Ekover, s.r.o.",
+        "projects_count": 1,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 153524.79,
+        "full_amount_eur": 1206955.91,
+        "co_owners": 19,
+        "share_pct": 12.72
+      },
+      {
         "ico": "37873814",
         "name": "ZÁKLADNÁ ŠKOLA, Palešovo nám č. 9, 053 04 Spišské Podhradie",
         "projects_count": 1,
         "rpo_relationship": "Zriaďovateľ",
         "total_contracted_eur": 88020.0
-      },
-      {
-        "ico": "31691021",
-        "name": "Ekover, s.r.o.",
-        "projects_count": 1,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 63524.0,
-        "full_amount_eur": 1206955.91,
-        "co_owners": 19
       }
     ],
-    "subsidiary_total_eur": 151544.0,
+    "subsidiary_total_eur": 241544.79,
     "ico": "00329622",
     "municipality": "Spišské Podhradie"
   },
   "00329657": {
     "subsidiary_orgs": [
       {
+        "ico": "31691021",
+        "name": "Ekover, s.r.o.",
+        "projects_count": 1,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 147610.71,
+        "full_amount_eur": 1206955.91,
+        "co_owners": 19,
+        "share_pct": 12.23
+      },
+      {
         "ico": "35543931",
         "name": "Základná škola, Komenského 6, Spišské Vlachy",
         "projects_count": 1,
         "rpo_relationship": "Zriaďovateľ",
         "total_contracted_eur": 105717.61
-      },
-      {
-        "ico": "31691021",
-        "name": "Ekover, s.r.o.",
-        "projects_count": 1,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 63524.0,
-        "full_amount_eur": 1206955.91,
-        "co_owners": 19
       }
     ],
-    "subsidiary_total_eur": 169241.61,
+    "subsidiary_total_eur": 253328.32,
     "ico": "00329657",
     "municipality": "Spišské Vlachy"
   },
@@ -2391,7 +2438,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 2547261.14,
         "full_amount_eur": 5094522.28,
-        "co_owners": 2
+        "co_owners": 2,
+        "share_pct": 50.0
       },
       {
         "ico": "31719104",
@@ -2624,7 +2672,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 214222.04,
         "full_amount_eur": 642666.12,
-        "co_owners": 3
+        "co_owners": 3,
+        "share_pct": 33.33
       }
     ],
     "subsidiary_total_eur": 466222.04000000004,
@@ -2731,7 +2780,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 407674.54,
         "full_amount_eur": 4076745.44,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       },
       {
         "ico": "50428438",
@@ -2740,7 +2790,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 90388.08,
         "full_amount_eur": 1355821.27,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       },
       {
         "ico": "31875408",
@@ -2770,7 +2821,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 22171.29,
         "full_amount_eur": 155199.0,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 225878.01,
@@ -3248,7 +3300,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 19312.5,
         "full_amount_eur": 154500.0,
-        "co_owners": 8
+        "co_owners": 8,
+        "share_pct": 12.5
       }
     ],
     "subsidiary_total_eur": 162934.5,
@@ -3647,12 +3700,13 @@
         "name": "THERMALPARK, spol. s r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 18562.88,
+        "total_contracted_eur": 29073.17,
         "full_amount_eur": 37125.75,
-        "co_owners": 2
+        "co_owners": 2,
+        "share_pct": 78.31
       }
     ],
-    "subsidiary_total_eur": 729963.78,
+    "subsidiary_total_eur": 740474.07,
     "ico": "00316181",
     "municipality": "Lučenec"
   },
@@ -3777,7 +3831,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 3397987.8,
         "full_amount_eur": 10193963.41,
-        "co_owners": 3
+        "co_owners": 3,
+        "share_pct": 33.33
       },
       {
         "ico": "36062243",
@@ -3814,7 +3869,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 4495318.32,
         "full_amount_eur": 31467228.25,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 4495318.32,
@@ -3830,7 +3886,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 4495318.32,
         "full_amount_eur": 31467228.25,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 4495318.32,
@@ -3846,7 +3903,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 4495318.32,
         "full_amount_eur": 31467228.25,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 4495318.32,
@@ -3862,7 +3920,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 4495318.32,
         "full_amount_eur": 31467228.25,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 4495318.32,
@@ -3878,7 +3937,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 4495318.32,
         "full_amount_eur": 31467228.25,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 4495318.32,
@@ -3894,7 +3954,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 4495318.32,
         "full_amount_eur": 31467228.25,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 4495318.32,
@@ -3910,7 +3971,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 4495318.32,
         "full_amount_eur": 31467228.25,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 4495318.32,
@@ -4073,7 +4135,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 90388.08,
         "full_amount_eur": 1355821.27,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       },
       {
         "ico": "36080772",
@@ -4131,7 +4194,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 90388.08,
         "full_amount_eur": 1355821.27,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 204508.08000000002,
@@ -4154,7 +4218,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 18440.0,
         "full_amount_eur": 92200.0,
-        "co_owners": 5
+        "co_owners": 5,
+        "share_pct": 20.0
       }
     ],
     "subsidiary_total_eur": 165490.0,
@@ -4170,7 +4235,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 5619841.54,
         "full_amount_eur": 11239683.07,
-        "co_owners": 2
+        "co_owners": 2,
+        "share_pct": 50.0
       },
       {
         "ico": "36086606",
@@ -4228,7 +4294,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 1866375.19,
         "full_amount_eur": 3732750.38,
-        "co_owners": 2
+        "co_owners": 2,
+        "share_pct": 50.0
       },
       {
         "ico": "36094188",
@@ -4452,9 +4519,10 @@
         "name": "Regionálna vodárenská spoločnosť Vlára-Váh, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 6474326.89,
+        "total_contracted_eur": 2253065.76,
         "full_amount_eur": 38845961.37,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 5.8
       },
       {
         "ico": "36125881",
@@ -4464,7 +4532,7 @@
         "total_contracted_eur": 69552.0
       }
     ],
-    "subsidiary_total_eur": 6543878.89,
+    "subsidiary_total_eur": 2322617.76,
     "ico": "00311561",
     "municipality": "Horná Súča"
   },
@@ -4489,9 +4557,10 @@
         "name": "Regionálna vodárenská spoločnosť Vlára-Váh, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 6474326.89,
+        "total_contracted_eur": 1584915.22,
         "full_amount_eur": 38845961.37,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 4.08
       },
       {
         "ico": "36125938",
@@ -4501,7 +4570,7 @@
         "total_contracted_eur": 42161.47
       }
     ],
-    "subsidiary_total_eur": 6516488.359999999,
+    "subsidiary_total_eur": 1627076.69,
     "ico": "00311588",
     "municipality": "Horné Srnie"
   },
@@ -4512,9 +4581,10 @@
         "name": "Regionálna vodárenská spoločnosť Vlára-Váh, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 6474326.89,
+        "total_contracted_eur": 30540694.83,
         "full_amount_eur": 38845961.37,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 78.62
       },
       {
         "ico": "36125946",
@@ -4524,7 +4594,7 @@
         "total_contracted_eur": 108900.0
       }
     ],
-    "subsidiary_total_eur": 6583226.89,
+    "subsidiary_total_eur": 30649594.83,
     "ico": "00311812",
     "municipality": "Nemšová"
   },
@@ -4726,7 +4796,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 22171.29,
         "full_amount_eur": 155199.0,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 74011.29000000001,
@@ -4964,12 +5035,13 @@
         "name": "THERMALPARK, spol. s r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 18562.88,
+        "total_contracted_eur": 8052.58,
         "full_amount_eur": 37125.75,
-        "co_owners": 2
+        "co_owners": 2,
+        "share_pct": 21.69
       }
     ],
-    "subsidiary_total_eur": 18562.88,
+    "subsidiary_total_eur": 8052.58,
     "ico": "00316377",
     "municipality": "Rapovce"
   },
@@ -4980,12 +5052,13 @@
         "name": "Regionálna vodárenská spoločnosť Vlára-Váh, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 6474326.89,
+        "total_contracted_eur": 2148181.66,
         "full_amount_eur": 38845961.37,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 5.53
       }
     ],
-    "subsidiary_total_eur": 6474326.89,
+    "subsidiary_total_eur": 2148181.66,
     "ico": "00311502",
     "municipality": "Dolná Súča"
   },
@@ -4996,12 +5069,13 @@
         "name": "Regionálna vodárenská spoločnosť Vlára-Váh, s.r.o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 6474326.89,
+        "total_contracted_eur": 361267.44,
         "full_amount_eur": 38845961.37,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 0.93
       }
     ],
-    "subsidiary_total_eur": 6474326.89,
+    "subsidiary_total_eur": 361267.44,
     "ico": "00311600",
     "municipality": "Hrabovka"
   },
@@ -5035,7 +5109,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 22171.29,
         "full_amount_eur": 155199.0,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 22171.29,
@@ -5058,7 +5133,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 22171.29,
         "full_amount_eur": 155199.0,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 146731.29,
@@ -5074,7 +5150,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 22171.29,
         "full_amount_eur": 155199.0,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       },
       {
         "ico": "37910159",
@@ -5104,7 +5181,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 22171.29,
         "full_amount_eur": 155199.0,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 84451.29000000001,
@@ -5127,7 +5205,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 22171.29,
         "full_amount_eur": 155199.0,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 91723.29000000001,
@@ -5150,7 +5229,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 11593.2,
         "full_amount_eur": 173898.0,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 345045.7,
@@ -5173,7 +5253,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 11593.2,
         "full_amount_eur": 173898.0,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 42733.2,
@@ -5189,7 +5270,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 29366.67,
         "full_amount_eur": 176200.0,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       },
       {
         "ico": "37804880",
@@ -5198,7 +5280,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 11593.2,
         "full_amount_eur": 173898.0,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 40959.869999999995,
@@ -5214,7 +5297,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 11593.2,
         "full_amount_eur": 173898.0,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 11593.2,
@@ -5237,7 +5321,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 11593.2,
         "full_amount_eur": 173898.0,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 157262.97,
@@ -5253,7 +5338,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 11593.2,
         "full_amount_eur": 173898.0,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 11593.2,
@@ -5269,7 +5355,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 11593.2,
         "full_amount_eur": 173898.0,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 11593.2,
@@ -5292,7 +5379,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 11593.2,
         "full_amount_eur": 173898.0,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 221084.29,
@@ -5308,7 +5396,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 11593.2,
         "full_amount_eur": 173898.0,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 11593.2,
@@ -5331,7 +5420,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 11593.2,
         "full_amount_eur": 173898.0,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 63433.2,
@@ -5347,7 +5437,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 11593.2,
         "full_amount_eur": 173898.0,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 11593.2,
@@ -5363,7 +5454,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 11593.2,
         "full_amount_eur": 173898.0,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 11593.2,
@@ -5379,7 +5471,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 11593.2,
         "full_amount_eur": 173898.0,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 11593.2,
@@ -5395,7 +5488,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 11593.2,
         "full_amount_eur": 173898.0,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 11593.2,
@@ -5418,7 +5512,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 11593.2,
         "full_amount_eur": 173898.0,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 73873.2,
@@ -5441,7 +5536,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 23422.12,
         "full_amount_eur": 234221.16,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 70132.12,
@@ -5961,7 +6057,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 23422.12,
         "full_amount_eur": 234221.16,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 122763.48,
@@ -5984,7 +6081,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 32990.0,
         "full_amount_eur": 197939.99,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 119606.0,
@@ -6091,7 +6189,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 398326.48,
         "full_amount_eur": 1194979.43,
-        "co_owners": 3
+        "co_owners": 3,
+        "share_pct": 33.33
       }
     ],
     "subsidiary_total_eur": 398326.48,
@@ -6107,7 +6206,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 398326.48,
         "full_amount_eur": 1194979.43,
-        "co_owners": 3
+        "co_owners": 3,
+        "share_pct": 33.33
       }
     ],
     "subsidiary_total_eur": 398326.48,
@@ -6123,7 +6223,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 398326.48,
         "full_amount_eur": 1194979.43,
-        "co_owners": 3
+        "co_owners": 3,
+        "share_pct": 33.33
       }
     ],
     "subsidiary_total_eur": 398326.48,
@@ -6559,7 +6660,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 80582.0,
         "full_amount_eur": 402910.0,
-        "co_owners": 5
+        "co_owners": 5,
+        "share_pct": 20.0
       }
     ],
     "subsidiary_total_eur": 190257.22999999998,
@@ -6687,7 +6789,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 424995.44,
         "full_amount_eur": 1699981.77,
-        "co_owners": 4
+        "co_owners": 4,
+        "share_pct": 25.0
       },
       {
         "ico": "37838334",
@@ -7235,7 +7338,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 68981.6,
         "full_amount_eur": 206944.8,
-        "co_owners": 3
+        "co_owners": 3,
+        "share_pct": 33.33
       }
     ],
     "subsidiary_total_eur": 212165.6,
@@ -7349,7 +7453,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 629983.56,
         "full_amount_eur": 3779901.37,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       },
       {
         "ico": "37865366",
@@ -7491,7 +7596,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 4784.55,
         "full_amount_eur": 100475.6,
-        "co_owners": 21
+        "co_owners": 21,
+        "share_pct": 4.76
       }
     ],
     "subsidiary_total_eur": 67064.55,
@@ -7521,7 +7627,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 28300.0,
         "full_amount_eur": 141500.0,
-        "co_owners": 5
+        "co_owners": 5,
+        "share_pct": 20.0
       },
       {
         "ico": "37872885",
@@ -7803,7 +7910,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 28300.0,
         "full_amount_eur": 141500.0,
-        "co_owners": 5
+        "co_owners": 5,
+        "share_pct": 20.0
       }
     ],
     "subsidiary_total_eur": 64480.0,
@@ -7980,7 +8088,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 4784.55,
         "full_amount_eur": 100475.6,
-        "co_owners": 21
+        "co_owners": 21,
+        "share_pct": 4.76
       }
     ],
     "subsidiary_total_eur": 91400.55,
@@ -8003,7 +8112,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 4784.55,
         "full_amount_eur": 100475.6,
-        "co_owners": 21
+        "co_owners": 21,
+        "share_pct": 4.76
       }
     ],
     "subsidiary_total_eur": 67064.55,
@@ -8040,7 +8150,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 4784.55,
         "full_amount_eur": 100475.6,
-        "co_owners": 21
+        "co_owners": 21,
+        "share_pct": 4.76
       }
     ],
     "subsidiary_total_eur": 56624.55,
@@ -8077,7 +8188,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 74516.12,
         "full_amount_eur": 149032.23,
-        "co_owners": 2
+        "co_owners": 2,
+        "share_pct": 50.0
       }
     ],
     "subsidiary_total_eur": 162536.12,
@@ -8093,7 +8205,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 74516.12,
         "full_amount_eur": 149032.23,
-        "co_owners": 2
+        "co_owners": 2,
+        "share_pct": 50.0
       }
     ],
     "subsidiary_total_eur": 74516.12,
@@ -8165,7 +8278,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 26319.14,
         "full_amount_eur": 184234.0,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 140439.14,
@@ -8223,7 +8337,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 26521.33,
         "full_amount_eur": 159128.0,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 26521.33,
@@ -8239,7 +8354,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 26521.33,
         "full_amount_eur": 159128.0,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 26521.33,
@@ -8255,7 +8371,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 26521.33,
         "full_amount_eur": 159128.0,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 26521.33,
@@ -8271,7 +8388,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 26521.33,
         "full_amount_eur": 159128.0,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 26521.33,
@@ -8287,7 +8405,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 26521.33,
         "full_amount_eur": 159128.0,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 26521.33,
@@ -8303,7 +8422,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 26521.33,
         "full_amount_eur": 159128.0,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 26521.33,
@@ -8333,7 +8453,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 29366.67,
         "full_amount_eur": 176200.0,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 29366.67,
@@ -8349,7 +8470,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 29366.67,
         "full_amount_eur": 176200.0,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 29366.67,
@@ -8365,7 +8487,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 29366.67,
         "full_amount_eur": 176200.0,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 29366.67,
@@ -8381,7 +8504,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 29366.67,
         "full_amount_eur": 176200.0,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 29366.67,
@@ -8397,7 +8521,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 29366.67,
         "full_amount_eur": 176200.0,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 29366.67,
@@ -8441,7 +8566,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 4784.55,
         "full_amount_eur": 100475.6,
-        "co_owners": 21
+        "co_owners": 21,
+        "share_pct": 4.76
       }
     ],
     "subsidiary_total_eur": 4784.55,
@@ -8457,7 +8583,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 4784.55,
         "full_amount_eur": 100475.6,
-        "co_owners": 21
+        "co_owners": 21,
+        "share_pct": 4.76
       }
     ],
     "subsidiary_total_eur": 4784.55,
@@ -8473,7 +8600,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 4784.55,
         "full_amount_eur": 100475.6,
-        "co_owners": 21
+        "co_owners": 21,
+        "share_pct": 4.76
       }
     ],
     "subsidiary_total_eur": 4784.55,
@@ -8489,7 +8617,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 4784.55,
         "full_amount_eur": 100475.6,
-        "co_owners": 21
+        "co_owners": 21,
+        "share_pct": 4.76
       }
     ],
     "subsidiary_total_eur": 4784.55,
@@ -8505,7 +8634,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 4784.55,
         "full_amount_eur": 100475.6,
-        "co_owners": 21
+        "co_owners": 21,
+        "share_pct": 4.76
       }
     ],
     "subsidiary_total_eur": 4784.55,
@@ -8521,7 +8651,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 4784.55,
         "full_amount_eur": 100475.6,
-        "co_owners": 21
+        "co_owners": 21,
+        "share_pct": 4.76
       }
     ],
     "subsidiary_total_eur": 4784.55,
@@ -8537,7 +8668,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 4784.55,
         "full_amount_eur": 100475.6,
-        "co_owners": 21
+        "co_owners": 21,
+        "share_pct": 4.76
       }
     ],
     "subsidiary_total_eur": 4784.55,
@@ -8553,7 +8685,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 4784.55,
         "full_amount_eur": 100475.6,
-        "co_owners": 21
+        "co_owners": 21,
+        "share_pct": 4.76
       }
     ],
     "subsidiary_total_eur": 4784.55,
@@ -8569,7 +8702,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 4784.55,
         "full_amount_eur": 100475.6,
-        "co_owners": 21
+        "co_owners": 21,
+        "share_pct": 4.76
       }
     ],
     "subsidiary_total_eur": 4784.55,
@@ -8585,7 +8719,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 4784.55,
         "full_amount_eur": 100475.6,
-        "co_owners": 21
+        "co_owners": 21,
+        "share_pct": 4.76
       }
     ],
     "subsidiary_total_eur": 4784.55,
@@ -8601,7 +8736,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 4784.55,
         "full_amount_eur": 100475.6,
-        "co_owners": 21
+        "co_owners": 21,
+        "share_pct": 4.76
       }
     ],
     "subsidiary_total_eur": 4784.55,
@@ -8617,7 +8753,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 4784.55,
         "full_amount_eur": 100475.6,
-        "co_owners": 21
+        "co_owners": 21,
+        "share_pct": 4.76
       }
     ],
     "subsidiary_total_eur": 4784.55,
@@ -8633,7 +8770,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 4784.55,
         "full_amount_eur": 100475.6,
-        "co_owners": 21
+        "co_owners": 21,
+        "share_pct": 4.76
       }
     ],
     "subsidiary_total_eur": 4784.55,
@@ -8649,7 +8787,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 4784.55,
         "full_amount_eur": 100475.6,
-        "co_owners": 21
+        "co_owners": 21,
+        "share_pct": 4.76
       }
     ],
     "subsidiary_total_eur": 4784.55,
@@ -8665,7 +8804,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 4784.55,
         "full_amount_eur": 100475.6,
-        "co_owners": 21
+        "co_owners": 21,
+        "share_pct": 4.76
       }
     ],
     "subsidiary_total_eur": 4784.55,
@@ -8681,7 +8821,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 4784.55,
         "full_amount_eur": 100475.6,
-        "co_owners": 21
+        "co_owners": 21,
+        "share_pct": 4.76
       }
     ],
     "subsidiary_total_eur": 4784.55,
@@ -8697,7 +8838,8 @@
         "rpo_relationship": "Iná zainteresovaná osoba",
         "total_contracted_eur": 4784.55,
         "full_amount_eur": 100475.6,
-        "co_owners": 21
+        "co_owners": 21,
+        "share_pct": 4.76
       }
     ],
     "subsidiary_total_eur": 4784.55,
@@ -8797,7 +8939,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 28300.0,
         "full_amount_eur": 141500.0,
-        "co_owners": 5
+        "co_owners": 5,
+        "share_pct": 20.0
       }
     ],
     "subsidiary_total_eur": 28300.0,
@@ -8813,7 +8956,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 28300.0,
         "full_amount_eur": 141500.0,
-        "co_owners": 5
+        "co_owners": 5,
+        "share_pct": 20.0
       }
     ],
     "subsidiary_total_eur": 28300.0,
@@ -8829,7 +8973,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 28300.0,
         "full_amount_eur": 141500.0,
-        "co_owners": 5
+        "co_owners": 5,
+        "share_pct": 20.0
       }
     ],
     "subsidiary_total_eur": 28300.0,
@@ -8873,7 +9018,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 214222.04,
         "full_amount_eur": 642666.12,
-        "co_owners": 3
+        "co_owners": 3,
+        "share_pct": 33.33
       }
     ],
     "subsidiary_total_eur": 214222.04,
@@ -8903,7 +9049,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 80582.0,
         "full_amount_eur": 402910.0,
-        "co_owners": 5
+        "co_owners": 5,
+        "share_pct": 20.0
       }
     ],
     "subsidiary_total_eur": 80582.0,
@@ -8919,7 +9066,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 80582.0,
         "full_amount_eur": 402910.0,
-        "co_owners": 5
+        "co_owners": 5,
+        "share_pct": 20.0
       }
     ],
     "subsidiary_total_eur": 80582.0,
@@ -8935,7 +9083,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 80582.0,
         "full_amount_eur": 402910.0,
-        "co_owners": 5
+        "co_owners": 5,
+        "share_pct": 20.0
       }
     ],
     "subsidiary_total_eur": 80582.0,
@@ -8951,7 +9100,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 80582.0,
         "full_amount_eur": 402910.0,
-        "co_owners": 5
+        "co_owners": 5,
+        "share_pct": 20.0
       }
     ],
     "subsidiary_total_eur": 80582.0,
@@ -9009,7 +9159,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 208314.63,
         "full_amount_eur": 1458202.43,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 208314.63,
@@ -9025,7 +9176,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 208314.63,
         "full_amount_eur": 1458202.43,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 208314.63,
@@ -9041,7 +9193,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 208314.63,
         "full_amount_eur": 1458202.43,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 208314.63,
@@ -9057,7 +9210,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 208314.63,
         "full_amount_eur": 1458202.43,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 208314.63,
@@ -9073,7 +9227,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 208314.63,
         "full_amount_eur": 1458202.43,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 208314.63,
@@ -9089,7 +9244,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 208314.63,
         "full_amount_eur": 1458202.43,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 208314.63,
@@ -9105,7 +9261,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 1171733.25,
         "full_amount_eur": 4686932.99,
-        "co_owners": 4
+        "co_owners": 4,
+        "share_pct": 25.0
       }
     ],
     "subsidiary_total_eur": 1171733.25,
@@ -9121,7 +9278,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 1171733.25,
         "full_amount_eur": 4686932.99,
-        "co_owners": 4
+        "co_owners": 4,
+        "share_pct": 25.0
       },
       {
         "ico": "50305611",
@@ -9130,7 +9288,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 231900.67,
         "full_amount_eur": 2319006.66,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 1403633.92,
@@ -9146,7 +9305,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 1171733.25,
         "full_amount_eur": 4686932.99,
-        "co_owners": 4
+        "co_owners": 4,
+        "share_pct": 25.0
       },
       {
         "ico": "50305611",
@@ -9155,7 +9315,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 231900.67,
         "full_amount_eur": 2319006.66,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 1403633.92,
@@ -9171,7 +9332,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 1171733.25,
         "full_amount_eur": 4686932.99,
-        "co_owners": 4
+        "co_owners": 4,
+        "share_pct": 25.0
       }
     ],
     "subsidiary_total_eur": 1171733.25,
@@ -9187,7 +9349,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 1866375.19,
         "full_amount_eur": 3732750.38,
-        "co_owners": 2
+        "co_owners": 2,
+        "share_pct": 50.0
       },
       {
         "ico": "50305611",
@@ -9196,7 +9359,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 231900.67,
         "full_amount_eur": 2319006.66,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 2098275.86,
@@ -9282,7 +9446,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 18440.0,
         "full_amount_eur": 92200.0,
-        "co_owners": 5
+        "co_owners": 5,
+        "share_pct": 20.0
       }
     ],
     "subsidiary_total_eur": 18440.0,
@@ -9298,7 +9463,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 18440.0,
         "full_amount_eur": 92200.0,
-        "co_owners": 5
+        "co_owners": 5,
+        "share_pct": 20.0
       }
     ],
     "subsidiary_total_eur": 18440.0,
@@ -9314,7 +9480,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 18440.0,
         "full_amount_eur": 92200.0,
-        "co_owners": 5
+        "co_owners": 5,
+        "share_pct": 20.0
       }
     ],
     "subsidiary_total_eur": 18440.0,
@@ -9330,7 +9497,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 18440.0,
         "full_amount_eur": 92200.0,
-        "co_owners": 5
+        "co_owners": 5,
+        "share_pct": 20.0
       }
     ],
     "subsidiary_total_eur": 18440.0,
@@ -9374,7 +9542,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 407674.54,
         "full_amount_eur": 4076745.44,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 407674.54,
@@ -9390,7 +9559,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 407674.54,
         "full_amount_eur": 4076745.44,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 407674.54,
@@ -9406,7 +9576,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 407674.54,
         "full_amount_eur": 4076745.44,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 407674.54,
@@ -9422,7 +9593,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 407674.54,
         "full_amount_eur": 4076745.44,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 407674.54,
@@ -9438,7 +9610,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 407674.54,
         "full_amount_eur": 4076745.44,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 407674.54,
@@ -9454,7 +9627,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 407674.54,
         "full_amount_eur": 4076745.44,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 407674.54,
@@ -9470,7 +9644,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 407674.54,
         "full_amount_eur": 4076745.44,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 407674.54,
@@ -9486,7 +9661,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 407674.54,
         "full_amount_eur": 4076745.44,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 407674.54,
@@ -9502,7 +9678,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 407674.54,
         "full_amount_eur": 4076745.44,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       },
       {
         "ico": "50428438",
@@ -9511,7 +9688,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 90388.08,
         "full_amount_eur": 1355821.27,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 498062.62,
@@ -9555,7 +9733,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 26319.14,
         "full_amount_eur": 184234.0,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 26319.14,
@@ -9571,7 +9750,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 26319.14,
         "full_amount_eur": 184234.0,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 26319.14,
@@ -9587,7 +9767,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 26319.14,
         "full_amount_eur": 184234.0,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 26319.14,
@@ -9603,7 +9784,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 26319.14,
         "full_amount_eur": 184234.0,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 26319.14,
@@ -9619,7 +9801,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 26319.14,
         "full_amount_eur": 184234.0,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 26319.14,
@@ -9635,7 +9818,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 26319.14,
         "full_amount_eur": 184234.0,
-        "co_owners": 7
+        "co_owners": 7,
+        "share_pct": 14.29
       }
     ],
     "subsidiary_total_eur": 26319.14,
@@ -9651,7 +9835,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 5619841.54,
         "full_amount_eur": 11239683.07,
-        "co_owners": 2
+        "co_owners": 2,
+        "share_pct": 50.0
       }
     ],
     "subsidiary_total_eur": 5619841.54,
@@ -9667,7 +9852,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 231900.67,
         "full_amount_eur": 2319006.66,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       },
       {
         "ico": "50090828",
@@ -9690,7 +9876,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 231900.67,
         "full_amount_eur": 2319006.66,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 231900.67,
@@ -9706,7 +9893,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 231900.67,
         "full_amount_eur": 2319006.66,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 231900.67,
@@ -9722,7 +9910,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 231900.67,
         "full_amount_eur": 2319006.66,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 231900.67,
@@ -9738,7 +9927,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 231900.67,
         "full_amount_eur": 2319006.66,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 231900.67,
@@ -9754,7 +9944,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 231900.67,
         "full_amount_eur": 2319006.66,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 231900.67,
@@ -9770,7 +9961,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 231900.67,
         "full_amount_eur": 2319006.66,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 231900.67,
@@ -9800,7 +9992,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 90388.08,
         "full_amount_eur": 1355821.27,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 90388.08,
@@ -9816,7 +10009,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 90388.08,
         "full_amount_eur": 1355821.27,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 90388.08,
@@ -9832,7 +10026,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 90388.08,
         "full_amount_eur": 1355821.27,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 90388.08,
@@ -9848,7 +10043,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 90388.08,
         "full_amount_eur": 1355821.27,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 90388.08,
@@ -9864,7 +10060,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 90388.08,
         "full_amount_eur": 1355821.27,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 90388.08,
@@ -9880,7 +10077,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 90388.08,
         "full_amount_eur": 1355821.27,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 90388.08,
@@ -9896,7 +10094,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 90388.08,
         "full_amount_eur": 1355821.27,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 90388.08,
@@ -9912,7 +10111,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 90388.08,
         "full_amount_eur": 1355821.27,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 90388.08,
@@ -9928,7 +10128,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 90388.08,
         "full_amount_eur": 1355821.27,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 90388.08,
@@ -9944,7 +10145,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 90388.08,
         "full_amount_eur": 1355821.27,
-        "co_owners": 15
+        "co_owners": 15,
+        "share_pct": 6.67
       }
     ],
     "subsidiary_total_eur": 90388.08,
@@ -10002,7 +10204,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 24998.33,
         "full_amount_eur": 149990.0,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 24998.33,
@@ -10018,7 +10221,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 24998.33,
         "full_amount_eur": 149990.0,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 24998.33,
@@ -10034,7 +10238,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 24998.33,
         "full_amount_eur": 149990.0,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 24998.33,
@@ -10050,7 +10255,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 24998.33,
         "full_amount_eur": 149990.0,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 24998.33,
@@ -10066,7 +10272,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 24998.33,
         "full_amount_eur": 149990.0,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 24998.33,
@@ -10082,7 +10289,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 24998.33,
         "full_amount_eur": 149990.0,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 24998.33,
@@ -10098,7 +10306,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 33300.0,
         "full_amount_eur": 99900.0,
-        "co_owners": 3
+        "co_owners": 3,
+        "share_pct": 33.33
       }
     ],
     "subsidiary_total_eur": 33300.0,
@@ -10114,7 +10323,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 33300.0,
         "full_amount_eur": 99900.0,
-        "co_owners": 3
+        "co_owners": 3,
+        "share_pct": 33.33
       }
     ],
     "subsidiary_total_eur": 33300.0,
@@ -10130,7 +10340,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 33300.0,
         "full_amount_eur": 99900.0,
-        "co_owners": 3
+        "co_owners": 3,
+        "share_pct": 33.33
       }
     ],
     "subsidiary_total_eur": 33300.0,
@@ -10146,7 +10357,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 19312.5,
         "full_amount_eur": 154500.0,
-        "co_owners": 8
+        "co_owners": 8,
+        "share_pct": 12.5
       }
     ],
     "subsidiary_total_eur": 19312.5,
@@ -10162,7 +10374,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 19312.5,
         "full_amount_eur": 154500.0,
-        "co_owners": 8
+        "co_owners": 8,
+        "share_pct": 12.5
       }
     ],
     "subsidiary_total_eur": 19312.5,
@@ -10178,7 +10391,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 19312.5,
         "full_amount_eur": 154500.0,
-        "co_owners": 8
+        "co_owners": 8,
+        "share_pct": 12.5
       }
     ],
     "subsidiary_total_eur": 19312.5,
@@ -10194,7 +10408,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 19312.5,
         "full_amount_eur": 154500.0,
-        "co_owners": 8
+        "co_owners": 8,
+        "share_pct": 12.5
       }
     ],
     "subsidiary_total_eur": 19312.5,
@@ -10217,7 +10432,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 19312.5,
         "full_amount_eur": 154500.0,
-        "co_owners": 8
+        "co_owners": 8,
+        "share_pct": 12.5
       }
     ],
     "subsidiary_total_eur": 105928.5,
@@ -10233,7 +10449,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 19312.5,
         "full_amount_eur": 154500.0,
-        "co_owners": 8
+        "co_owners": 8,
+        "share_pct": 12.5
       }
     ],
     "subsidiary_total_eur": 19312.5,
@@ -10249,7 +10466,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 19312.5,
         "full_amount_eur": 154500.0,
-        "co_owners": 8
+        "co_owners": 8,
+        "share_pct": 12.5
       }
     ],
     "subsidiary_total_eur": 19312.5,
@@ -10265,7 +10483,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 32990.0,
         "full_amount_eur": 197939.99,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 32990.0,
@@ -10281,7 +10500,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 32990.0,
         "full_amount_eur": 197939.99,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 32990.0,
@@ -10297,7 +10517,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 32990.0,
         "full_amount_eur": 197939.99,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 32990.0,
@@ -10313,7 +10534,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 32990.0,
         "full_amount_eur": 197939.99,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 32990.0,
@@ -10329,7 +10551,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 32990.0,
         "full_amount_eur": 197939.99,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 32990.0,
@@ -10345,7 +10568,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 47124.75,
         "full_amount_eur": 188499.0,
-        "co_owners": 4
+        "co_owners": 4,
+        "share_pct": 25.0
       }
     ],
     "subsidiary_total_eur": 47124.75,
@@ -10361,7 +10585,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 47124.75,
         "full_amount_eur": 188499.0,
-        "co_owners": 4
+        "co_owners": 4,
+        "share_pct": 25.0
       }
     ],
     "subsidiary_total_eur": 47124.75,
@@ -10377,7 +10602,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 47124.75,
         "full_amount_eur": 188499.0,
-        "co_owners": 4
+        "co_owners": 4,
+        "share_pct": 25.0
       }
     ],
     "subsidiary_total_eur": 47124.75,
@@ -10393,7 +10619,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 47124.75,
         "full_amount_eur": 188499.0,
-        "co_owners": 4
+        "co_owners": 4,
+        "share_pct": 25.0
       }
     ],
     "subsidiary_total_eur": 47124.75,
@@ -10423,7 +10650,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 263115.58,
         "full_amount_eur": 1315577.89,
-        "co_owners": 5
+        "co_owners": 5,
+        "share_pct": 20.0
       }
     ],
     "subsidiary_total_eur": 263115.58,
@@ -10439,7 +10667,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 263115.58,
         "full_amount_eur": 1315577.89,
-        "co_owners": 5
+        "co_owners": 5,
+        "share_pct": 20.0
       }
     ],
     "subsidiary_total_eur": 263115.58,
@@ -10455,7 +10684,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 263115.58,
         "full_amount_eur": 1315577.89,
-        "co_owners": 5
+        "co_owners": 5,
+        "share_pct": 20.0
       }
     ],
     "subsidiary_total_eur": 263115.58,
@@ -10471,7 +10701,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 263115.58,
         "full_amount_eur": 1315577.89,
-        "co_owners": 5
+        "co_owners": 5,
+        "share_pct": 20.0
       }
     ],
     "subsidiary_total_eur": 263115.58,
@@ -10487,7 +10718,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 263115.58,
         "full_amount_eur": 1315577.89,
-        "co_owners": 5
+        "co_owners": 5,
+        "share_pct": 20.0
       }
     ],
     "subsidiary_total_eur": 263115.58,
@@ -10503,7 +10735,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 10642.86,
         "full_amount_eur": 149000.0,
-        "co_owners": 14
+        "co_owners": 14,
+        "share_pct": 7.14
       }
     ],
     "subsidiary_total_eur": 10642.86,
@@ -10519,7 +10752,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 10642.86,
         "full_amount_eur": 149000.0,
-        "co_owners": 14
+        "co_owners": 14,
+        "share_pct": 7.14
       }
     ],
     "subsidiary_total_eur": 10642.86,
@@ -10535,7 +10769,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 10642.86,
         "full_amount_eur": 149000.0,
-        "co_owners": 14
+        "co_owners": 14,
+        "share_pct": 7.14
       }
     ],
     "subsidiary_total_eur": 10642.86,
@@ -10551,7 +10786,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 10642.86,
         "full_amount_eur": 149000.0,
-        "co_owners": 14
+        "co_owners": 14,
+        "share_pct": 7.14
       }
     ],
     "subsidiary_total_eur": 10642.86,
@@ -10567,7 +10803,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 10642.86,
         "full_amount_eur": 149000.0,
-        "co_owners": 14
+        "co_owners": 14,
+        "share_pct": 7.14
       }
     ],
     "subsidiary_total_eur": 10642.86,
@@ -10583,7 +10820,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 10642.86,
         "full_amount_eur": 149000.0,
-        "co_owners": 14
+        "co_owners": 14,
+        "share_pct": 7.14
       }
     ],
     "subsidiary_total_eur": 10642.86,
@@ -10599,7 +10837,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 10642.86,
         "full_amount_eur": 149000.0,
-        "co_owners": 14
+        "co_owners": 14,
+        "share_pct": 7.14
       }
     ],
     "subsidiary_total_eur": 10642.86,
@@ -10615,7 +10854,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 10642.86,
         "full_amount_eur": 149000.0,
-        "co_owners": 14
+        "co_owners": 14,
+        "share_pct": 7.14
       }
     ],
     "subsidiary_total_eur": 10642.86,
@@ -10631,7 +10871,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 10642.86,
         "full_amount_eur": 149000.0,
-        "co_owners": 14
+        "co_owners": 14,
+        "share_pct": 7.14
       }
     ],
     "subsidiary_total_eur": 10642.86,
@@ -10647,7 +10888,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 10642.86,
         "full_amount_eur": 149000.0,
-        "co_owners": 14
+        "co_owners": 14,
+        "share_pct": 7.14
       }
     ],
     "subsidiary_total_eur": 10642.86,
@@ -10663,7 +10905,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 10642.86,
         "full_amount_eur": 149000.0,
-        "co_owners": 14
+        "co_owners": 14,
+        "share_pct": 7.14
       }
     ],
     "subsidiary_total_eur": 10642.86,
@@ -10679,7 +10922,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 10642.86,
         "full_amount_eur": 149000.0,
-        "co_owners": 14
+        "co_owners": 14,
+        "share_pct": 7.14
       }
     ],
     "subsidiary_total_eur": 10642.86,
@@ -10695,7 +10939,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 10642.86,
         "full_amount_eur": 149000.0,
-        "co_owners": 14
+        "co_owners": 14,
+        "share_pct": 7.14
       }
     ],
     "subsidiary_total_eur": 10642.86,
@@ -10711,7 +10956,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 10642.86,
         "full_amount_eur": 149000.0,
-        "co_owners": 14
+        "co_owners": 14,
+        "share_pct": 7.14
       }
     ],
     "subsidiary_total_eur": 10642.86,
@@ -10727,7 +10973,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 23422.12,
         "full_amount_eur": 234221.16,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 23422.12,
@@ -10743,7 +10990,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 23422.12,
         "full_amount_eur": 234221.16,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 23422.12,
@@ -10759,7 +11007,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 23422.12,
         "full_amount_eur": 234221.16,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 23422.12,
@@ -10775,7 +11024,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 23422.12,
         "full_amount_eur": 234221.16,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 23422.12,
@@ -10791,7 +11041,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 23422.12,
         "full_amount_eur": 234221.16,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 23422.12,
@@ -10807,7 +11058,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 23422.12,
         "full_amount_eur": 234221.16,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 23422.12,
@@ -10823,7 +11075,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 23422.12,
         "full_amount_eur": 234221.16,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 23422.12,
@@ -10839,7 +11092,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 23422.12,
         "full_amount_eur": 234221.16,
-        "co_owners": 10
+        "co_owners": 10,
+        "share_pct": 10.0
       }
     ],
     "subsidiary_total_eur": 23422.12,
@@ -10855,7 +11109,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 26313.67,
         "full_amount_eur": 210509.4,
-        "co_owners": 8
+        "co_owners": 8,
+        "share_pct": 12.5
       }
     ],
     "subsidiary_total_eur": 26313.67,
@@ -10871,7 +11126,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 26313.67,
         "full_amount_eur": 210509.4,
-        "co_owners": 8
+        "co_owners": 8,
+        "share_pct": 12.5
       }
     ],
     "subsidiary_total_eur": 26313.67,
@@ -10887,7 +11143,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 26313.67,
         "full_amount_eur": 210509.4,
-        "co_owners": 8
+        "co_owners": 8,
+        "share_pct": 12.5
       }
     ],
     "subsidiary_total_eur": 26313.67,
@@ -10903,7 +11160,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 26313.67,
         "full_amount_eur": 210509.4,
-        "co_owners": 8
+        "co_owners": 8,
+        "share_pct": 12.5
       }
     ],
     "subsidiary_total_eur": 26313.67,
@@ -10919,7 +11177,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 26313.67,
         "full_amount_eur": 210509.4,
-        "co_owners": 8
+        "co_owners": 8,
+        "share_pct": 12.5
       }
     ],
     "subsidiary_total_eur": 26313.67,
@@ -10935,7 +11194,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 26313.67,
         "full_amount_eur": 210509.4,
-        "co_owners": 8
+        "co_owners": 8,
+        "share_pct": 12.5
       }
     ],
     "subsidiary_total_eur": 26313.67,
@@ -10951,7 +11211,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 26313.67,
         "full_amount_eur": 210509.4,
-        "co_owners": 8
+        "co_owners": 8,
+        "share_pct": 12.5
       }
     ],
     "subsidiary_total_eur": 26313.67,
@@ -10967,7 +11228,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 26313.67,
         "full_amount_eur": 210509.4,
-        "co_owners": 8
+        "co_owners": 8,
+        "share_pct": 12.5
       }
     ],
     "subsidiary_total_eur": 26313.67,
@@ -10983,7 +11245,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 68981.6,
         "full_amount_eur": 206944.8,
-        "co_owners": 3
+        "co_owners": 3,
+        "share_pct": 33.33
       }
     ],
     "subsidiary_total_eur": 68981.6,
@@ -10999,7 +11262,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 68981.6,
         "full_amount_eur": 206944.8,
-        "co_owners": 3
+        "co_owners": 3,
+        "share_pct": 33.33
       }
     ],
     "subsidiary_total_eur": 68981.6,
@@ -11015,7 +11279,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 424995.44,
         "full_amount_eur": 1699981.77,
-        "co_owners": 4
+        "co_owners": 4,
+        "share_pct": 25.0
       }
     ],
     "subsidiary_total_eur": 424995.44,
@@ -11031,7 +11296,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 424995.44,
         "full_amount_eur": 1699981.77,
-        "co_owners": 4
+        "co_owners": 4,
+        "share_pct": 25.0
       }
     ],
     "subsidiary_total_eur": 424995.44,
@@ -11047,7 +11313,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 424995.44,
         "full_amount_eur": 1699981.77,
-        "co_owners": 4
+        "co_owners": 4,
+        "share_pct": 25.0
       }
     ],
     "subsidiary_total_eur": 424995.44,
@@ -11063,7 +11330,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 629983.56,
         "full_amount_eur": 3779901.37,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 629983.56,
@@ -11079,7 +11347,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 629983.56,
         "full_amount_eur": 3779901.37,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 629983.56,
@@ -11095,7 +11364,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 629983.56,
         "full_amount_eur": 3779901.37,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 629983.56,
@@ -11111,7 +11381,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 629983.56,
         "full_amount_eur": 3779901.37,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 629983.56,
@@ -11127,7 +11398,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 629983.56,
         "full_amount_eur": 3779901.37,
-        "co_owners": 6
+        "co_owners": 6,
+        "share_pct": 16.67
       }
     ],
     "subsidiary_total_eur": 629983.56,
@@ -11213,7 +11485,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 3397987.8,
         "full_amount_eur": 10193963.41,
-        "co_owners": 3
+        "co_owners": 3,
+        "share_pct": 33.33
       }
     ],
     "subsidiary_total_eur": 3397987.8,
@@ -11229,7 +11502,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 3397987.8,
         "full_amount_eur": 10193963.41,
-        "co_owners": 3
+        "co_owners": 3,
+        "share_pct": 33.33
       }
     ],
     "subsidiary_total_eur": 3397987.8,

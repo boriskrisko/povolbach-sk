@@ -13,6 +13,7 @@ export interface SubsidiaryOrg {
   projects_count: number;
   co_owners?: number;
   full_amount_eur?: number;
+  share_pct?: number;
 }
 
 export interface VucStats {

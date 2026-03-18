@@ -188,8 +188,12 @@ export default function VucModal({ vuc, onClose, locale }: Props) {
                   {(org.co_owners || 0) > 1 && org.full_amount_eur && (
                     <div className="text-[10px] text-[#94a3b8]/50 mt-1">
                       ↳ {locale === 'sk'
-                        ? `podiel 1/${org.co_owners} z ${formatAmount(org.full_amount_eur, locale)} (spoločný podnik ${org.co_owners} obcí)`
-                        : `share 1/${org.co_owners} of ${formatAmount(org.full_amount_eur, locale)} (joint venture of ${org.co_owners} municipalities)`}
+                        ? org.share_pct
+                          ? `podiel ${org.share_pct}% z ${formatAmount(org.full_amount_eur, locale)} (spoločný podnik ${org.co_owners} obcí)`
+                          : `podiel 1/${org.co_owners} z ${formatAmount(org.full_amount_eur, locale)} (spoločný podnik ${org.co_owners} obcí)`
+                        : org.share_pct
+                          ? `${org.share_pct}% share of ${formatAmount(org.full_amount_eur, locale)} (joint venture of ${org.co_owners} municipalities)`
+                          : `share 1/${org.co_owners} of ${formatAmount(org.full_amount_eur, locale)} (joint venture of ${org.co_owners} municipalities)`}
                     </div>
                   )}
                 </div>

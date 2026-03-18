@@ -109,19 +109,30 @@ def main():
             log_lines.append(f'NO_RPO\t{ico}\t{name}\t€{total_eur:,.0f}')
             continue
 
-        # Collect all founder IČOs (single or multi-founder)
+        # Collect all founder IČOs and their share percentages
         if 'founders' in rpo_entry:
-            all_founders = rpo_entry['founders']
-            founder_icos = [f['founder_ico'] for f in all_founders]
+            all_founders_list = rpo_entry['founders']
+            founder_icos = [f['founder_ico'] for f in all_founders_list]
+            # Build share map: {ico: pct} from deposit data, or equal split
+            share_map = {}
+            has_deposit_shares = any('share_pct' in f for f in all_founders_list)
+            if has_deposit_shares:
+                for f in all_founders_list:
+                    share_map[f['founder_ico']] = f.get('share_pct', 0) / 100
+            else:
+                muni_vuc_founders = [f for f in founder_icos if f in muni_set or f in vuc_set]
+                n = len(muni_vuc_founders) if muni_vuc_founders else len(founder_icos)
+                for f_ico in founder_icos:
+                    share_map[f_ico] = 1.0 / n
         else:
             founder_icos = [rpo_entry['founder_ico']]
+            share_map = {rpo_entry['founder_ico']: 1.0}
+            has_deposit_shares = False
 
-        # Count how many municipal/VÚC founders this entity has (for proportional split)
         muni_vuc_founders = [f for f in founder_icos if f in muni_set or f in vuc_set]
         n_owners = len(muni_vuc_founders) if muni_vuc_founders else 1
-        share_eur = total_eur / n_owners  # Option A: split equally
+        is_joint = n_owners > 1
 
-        # Build org entry — show split amount but also full amount + co-owner count
         org_entry_base = {
             'ico': ico,
             'name': name,
@@ -129,27 +140,31 @@ def main():
             'rpo_relationship': rpo_entry.get('relationship', ''),
         }
 
-        # Attribute to ALL founding municipalities/VÚCs with proportional split
+        # Attribute to ALL founding municipalities/VÚCs
         attributed = False
         for founder_ico in founder_icos:
+            pct = share_map.get(founder_ico, 1.0 / n_owners)
+            share_eur = round(total_eur * pct, 2)
+
             org_entry = {
                 **org_entry_base,
-                'total_contracted_eur': round(share_eur, 2),
+                'total_contracted_eur': share_eur,
             }
-            if n_owners > 1:
+            if is_joint:
                 org_entry['full_amount_eur'] = total_eur
                 org_entry['co_owners'] = n_owners
+                org_entry['share_pct'] = round(pct * 100, 2)
 
             if founder_ico in muni_set:
                 muni_name = muni_stats.get(founder_ico, {}).get('official_name', '')
                 by_muni[founder_ico]['ico'] = founder_ico
                 by_muni[founder_ico]['municipality'] = muni_name
                 by_muni[founder_ico]['subsidiary_orgs'].append(org_entry)
-                by_muni[founder_ico]['subsidiary_total_eur'] += round(share_eur, 2)
+                by_muni[founder_ico]['subsidiary_total_eur'] += share_eur
                 attributed = True
             elif founder_ico in vuc_set:
                 by_vuc[founder_ico]['subsidiary_orgs'].append(org_entry)
-                by_vuc[founder_ico]['subsidiary_total_eur'] += round(share_eur, 2)
+                by_vuc[founder_ico]['subsidiary_total_eur'] += share_eur
                 attributed = True
 
         if attributed:
@@ -158,8 +173,12 @@ def main():
                 counters['attributed_muni'] += 1
             elif primary_ico in vuc_set:
                 counters['attributed_vuc'] += 1
-            if n_owners > 1:
+            if is_joint:
                 counters['multi_founder'] += 1
+                if has_deposit_shares:
+                    counters['deposit_split'] += 1
+                else:
+                    counters['equal_split'] += 1
         else:
             counters['non_muni_founder'] += 1
             log_lines.append(f'NON_MUNI_FOUNDER\t{ico}\t{name}\tfounder={founder_icos[0]}\t{rpo_entry.get("founder_name","")}')

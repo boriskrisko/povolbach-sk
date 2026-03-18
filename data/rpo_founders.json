@@ -201,19 +201,22 @@
         "founder_ico": "00318001",
         "founder_name": "Mesto Bojnice",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 14.28
       },
       {
         "founder_ico": "00318094",
         "founder_name": "Mesto Handlová",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 71.43
       },
       {
         "founder_ico": "00318442",
         "founder_name": "Mesto Prievidza",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 14.28
       }
     ],
     "entity_name": "VIDEO TV s.r.o.",
@@ -459,43 +462,50 @@
         "founder_ico": "00311162",
         "founder_name": "Mesto Topoľčany",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 17.65
       },
       {
         "founder_ico": "00699195",
         "founder_name": "Obec Chudá Lehota",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 20.59
       },
       {
         "founder_ico": "00310506",
         "founder_name": "Obec Chynorany",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 5.88
       },
       {
         "founder_ico": "00699284",
         "founder_name": "Obec Livinské Opatovce",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 32.35
       },
       {
         "founder_ico": "00310786",
         "founder_name": "Obec Nadlice",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 5.88
       },
       {
         "founder_ico": "00311022",
         "founder_name": "Obec Rajčany",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 11.76
       },
       {
         "founder_ico": "00311375",
         "founder_name": "Obec Žabokreky nad Nitrou",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 5.88
       }
     ],
     "entity_name": "BORINA, s.r.o.",
@@ -524,37 +534,43 @@
         "founder_ico": "00311812",
         "founder_name": "Mesto Nemšová",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 78.62
       },
       {
         "founder_ico": "00311502",
         "founder_name": "Obec Dolná Súča",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 5.53
       },
       {
         "founder_ico": "00311561",
         "founder_name": "Obec Horná Súča",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 5.8
       },
       {
         "founder_ico": "00311588",
         "founder_name": "Obec Horné Srnie",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 4.08
       },
       {
         "founder_ico": "00311600",
         "founder_name": "Obec Hrabovka",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 0.93
       },
       {
         "founder_ico": "00311961",
         "founder_name": "Obec Skalka nad Váhom",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 5.04
       }
     ],
     "entity_name": "Regionálna vodárenská spoločnosť Vlára - Váh, s.r.o. skratka názvu : RSVV, s.r.o.",
@@ -695,19 +711,22 @@
         "founder_ico": "00311596",
         "founder_name": "Obec Hôrka nad Váhom",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 33.0
       },
       {
         "founder_ico": "00311685",
         "founder_name": "Obec Kočovce",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 35.0
       },
       {
         "founder_ico": "00699080",
         "founder_name": "Obec Nová Ves nad Váhom",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 32.0
       }
     ],
     "entity_name": "OVKS SOCHOŇ, s. r. o.",
@@ -736,13 +755,15 @@
         "founder_ico": "00687243",
         "founder_name": "Obec Modrovka",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 50.0
       },
       {
         "founder_ico": "00311758",
         "founder_name": "Obec Lúka",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 50.0
       }
     ],
     "entity_name": "Obecná vodohospodárska spoločnosť Šáchor, spol. s r.o.",
@@ -764,13 +785,15 @@
         "founder_ico": "00311634",
         "founder_name": "Obec Hrašné",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 50.0
       },
       {
         "founder_ico": "00311707",
         "founder_name": "Obec Kostolné",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 50.0
       }
     ],
     "entity_name": "Spoločné lesy Hrašné-Kostolné, s.r.o.",
@@ -855,67 +878,78 @@
         "founder_ico": "00312151",
         "founder_name": "obec Višňové",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 9.09
       },
       {
         "founder_ico": "00311863",
         "founder_name": "mesto Nové Mesto nad Váhom",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 9.09
       },
       {
         "founder_ico": "00312002",
         "founder_name": "mesto Stará Turá",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 9.09
       },
       {
         "founder_ico": "00311456",
         "founder_name": "obec Bzince pod Javorinou",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 9.09
       },
       {
         "founder_ico": "00311626",
         "founder_name": "obec Hrachovište",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 9.09
       },
       {
         "founder_ico": "00311634",
         "founder_name": "obec Hrašné",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 9.09
       },
       {
         "founder_ico": "00311707",
         "founder_name": "obec Kostolné",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 9.09
       },
       {
         "founder_ico": "00311715",
         "founder_name": "obec Krajné",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 9.09
       },
       {
         "founder_ico": "00311731",
         "founder_name": "obec Lubina",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 9.09
       },
       {
         "founder_ico": "00654639",
         "founder_name": "obec Podkylava",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 9.09
       },
       {
         "founder_ico": "00312126",
         "founder_name": "obec Vaďovce",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 9.09
       }
     ],
     "entity_name": "DOLINY, spol. s r.o.",
@@ -1028,73 +1062,85 @@
         "founder_ico": "34006613",
         "founder_name": "Obec Holiare",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 5.56
       },
       {
         "founder_ico": "00306371",
         "founder_name": "Obec Bodza",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 5.56
       },
       {
         "founder_ico": "00306380",
         "founder_name": "Obec Brestovec",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 5.56
       },
       {
         "founder_ico": "00306401",
         "founder_name": "Obec Čalovec",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 5.56
       },
       {
         "founder_ico": "00306509",
         "founder_name": "Obec Klížska Nemá",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 11.11
       },
       {
         "founder_ico": "00306410",
         "founder_name": "Obec Číčov",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 5.56
       },
       {
         "founder_ico": "00306665",
         "founder_name": "Obec Sokolce",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 11.11
       },
       {
         "founder_ico": "00306690",
         "founder_name": "Obec Tôň",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 11.11
       },
       {
         "founder_ico": "00306681",
         "founder_name": "Obec Trávnik",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 11.11
       },
       {
         "founder_ico": "00306703",
         "founder_name": "Obec Veľké Kosihy",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 11.11
       },
       {
         "founder_ico": "00306720",
         "founder_name": "Obec Zemianska Olča",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 11.11
       },
       {
         "founder_ico": "00306738",
         "founder_name": "Obec Zlatná na Ostrove",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 5.56
       }
     ],
     "entity_name": "Komunálna spoločnosť s.r.o.",
@@ -1319,79 +1365,92 @@
         "founder_ico": "00648086",
         "founder_name": "Obec Domaniky",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 2.83
       },
       {
         "founder_ico": "00649295",
         "founder_name": "Obec Drážovce",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 2.05
       },
       {
         "founder_ico": "00319911",
         "founder_name": "Obec Hontianske Moravce",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 8.78
       },
       {
         "founder_ico": "00319929",
         "founder_name": "Obec Hontianske Nemce",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 15.24
       },
       {
         "founder_ico": "00319902",
         "founder_name": "Mesto Dudince",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 31.91
       },
       {
         "founder_ico": "00319937",
         "founder_name": "Obec Hontianske Tesáre",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 7.91
       },
       {
         "founder_ico": "00320030",
         "founder_name": "Obec Kráľovce - Krnišov",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 2.83
       },
       {
         "founder_ico": "00320072",
         "founder_name": "Obec Ladzany",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 3.38
       },
       {
         "founder_ico": "00320099",
         "founder_name": "Obec Lišov",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 2.84
       },
       {
         "founder_ico": "00320226",
         "founder_name": "Obec Sebechleby",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 11.6
       },
       {
         "founder_ico": "00649091",
         "founder_name": "Obec Sudince",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 1.18
       },
       {
         "founder_ico": "00649082",
         "founder_name": "Obec Súdovce",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 2.62
       },
       {
         "founder_ico": "00320323",
         "founder_name": "Obec Terany",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 6.84
       }
     ],
     "entity_name": "Združenie H O N T, spol. s ručením obmedzeným",
@@ -1991,13 +2050,15 @@
         "founder_ico": "00316181",
         "founder_name": "Mesto Lučenec",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 78.31
       },
       {
         "founder_ico": "00316377",
         "founder_name": "Obec Rapovce",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 21.69
       }
     ],
     "entity_name": "THERMALPARK, spol. s r.o.",
@@ -2243,31 +2304,36 @@
         "founder_ico": "00321796",
         "founder_name": "Mesto Žilina",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 50.99
       },
       {
         "founder_ico": "00321273",
         "founder_name": "Obec Gbeľany",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 12.0
       },
       {
         "founder_ico": "00321494",
         "founder_name": "Obec Mojš",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 10.0
       },
       {
         "founder_ico": "00321516",
         "founder_name": "Obec Nededza",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 14.01
       },
       {
         "founder_ico": "00648264",
         "founder_name": "Obec Teplička nad Váhom",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 13.0
       }
     ],
     "entity_name": "Žilina Invest, s.r.o.",
@@ -2555,19 +2621,22 @@
         "founder_ico": "00326283",
         "founder_name": "Mesto Kežmarok",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 24.24
       },
       {
         "founder_ico": "00326585",
         "founder_name": "Mesto Vysoké Tatry",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 24.24
       },
       {
         "founder_ico": "00326771",
         "founder_name": "Obec Žakovce",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 51.52
       }
     ],
     "entity_name": "Lobbe - Žakovce, spol. s r.o.",
@@ -3184,115 +3253,134 @@
         "founder_ico": "00328944",
         "founder_name": "Obec Beharovce",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 0.6
       },
       {
         "founder_ico": "00328995",
         "founder_name": "Obec Bystrany",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 7.16
       },
       {
         "founder_ico": "00329070",
         "founder_name": "Obec Granč - Petrovce",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 2.09
       },
       {
         "founder_ico": "00329126",
         "founder_name": "Obec Hincovce",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 0.8
       },
       {
         "founder_ico": "00329169",
         "founder_name": "Obec Hrišovce",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 1.19
       },
       {
         "founder_ico": "00329223",
         "founder_name": "Obec Kaľava",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 1.39
       },
       {
         "founder_ico": "00329274",
         "founder_name": "Obec Kluknava",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 0.6
       },
       {
         "founder_ico": "00329266",
         "founder_name": "Obec Kolinovce",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 1.89
       },
       {
         "founder_ico": "00329347",
         "founder_name": "Obec Margecany",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 7.45
       },
       {
         "founder_ico": "00329436",
         "founder_name": "Obec Olcnava",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 3.28
       },
       {
         "founder_ico": "00330876",
         "founder_name": "Obec Oľšavka",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 0.7
       },
       {
         "founder_ico": "00329541",
         "founder_name": "Obec Slatvina",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 0.99
       },
       {
         "founder_ico": "00329525",
         "founder_name": "Obec Richnava",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 4.77
       },
       {
         "founder_ico": "00329550",
         "founder_name": "Obec Slovinky",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 5.96
       },
       {
         "founder_ico": "00329754",
         "founder_name": "Obec Vojkovce",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 1.59
       },
       {
         "founder_ico": "00329819",
         "founder_name": "Obec Žehra",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 4.08
       },
       {
         "founder_ico": "00329282",
         "founder_name": "Mesto Krompachy",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 30.52
       },
       {
         "founder_ico": "00329622",
         "founder_name": "Mesto Spišské Podhradie",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 12.72
       },
       {
         "founder_ico": "00329657",
         "founder_name": "Mesto Spišské Vlachy",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 12.23
       }
     ],
     "entity_name": "EKOVER, spol. s r.o.",
@@ -3412,13 +3500,15 @@
         "founder_ico": "00306100",
         "founder_name": "Obec Neded",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 50.0
       },
       {
         "founder_ico": "00306312",
         "founder_name": "Obec Vlčany",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 50.0
       }
     ],
     "entity_name": "ČOV VLČANY - NEDED, spol. s r.o.",
@@ -4011,19 +4101,22 @@
         "founder_ico": "00682144",
         "founder_name": "Obec Pavlice",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 22.01
       },
       {
         "founder_ico": "00682136",
         "founder_name": "Obec Slovenská Nová Ves",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 20.0
       },
       {
         "founder_ico": "00313181",
         "founder_name": "Obec Voderady",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 57.99
       }
     ],
     "entity_name": "MAVOS, s.r.o.",
@@ -4052,43 +4145,50 @@
         "founder_ico": "00312304",
         "founder_name": "Obec Borovce",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 15.93
       },
       {
         "founder_ico": "00312479",
         "founder_name": "Obec Dubovany",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 15.93
       },
       {
         "founder_ico": "00312878",
         "founder_name": "Obec Pečeňady",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 4.45
       },
       {
         "founder_ico": "00312916",
         "founder_name": "Obec Rakovice",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 15.93
       },
       {
         "founder_ico": "00313106",
         "founder_name": "Obec Trebatice",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 15.93
       },
       {
         "founder_ico": "00313149",
         "founder_name": "Obec Veľké Kostoľany",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 15.93
       },
       {
         "founder_ico": "00313165",
         "founder_name": "Obec Veselé",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 15.93
       }
     ],
     "entity_name": "Obecná kanalizačná, s.r.o.",
@@ -4285,13 +4385,15 @@
         "founder_ico": "00331899",
         "founder_name": "Mesto Sečovce",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 50.0
       },
       {
         "founder_ico": "00332046",
         "founder_name": "Obec Veľké Ozorovce",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 50.0
       }
     ],
     "entity_name": "OZOR, s.r.o.",
@@ -6142,43 +6244,50 @@
         "founder_ico": "00304743",
         "founder_name": "Obec GAJARY",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 14.29
       },
       {
         "founder_ico": "00309711",
         "founder_name": "Obec MALÉ LEVÁRE",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 14.29
       },
       {
         "founder_ico": "00310115",
         "founder_name": "Obec VEĽKÉ LEVÁRE",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 14.29
       },
       {
         "founder_ico": "00304816",
         "founder_name": "Obec JAKUBOV",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 14.29
       },
       {
         "founder_ico": "00310042",
         "founder_name": "Obec STUDIENKA",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 14.29
       },
       {
         "founder_ico": "00310158",
         "founder_name": "Obec ZÁVOD",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 14.29
       },
       {
         "founder_ico": "00304867",
         "founder_name": "Obec KOSTOLIŠTE",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 14.29
       }
     ],
     "entity_name": "Nezisková organizácia Enviropark Pomoravie",
@@ -6314,199 +6423,232 @@
         "founder_ico": "00331295",
         "founder_name": "Obec Bara",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 1.36
       },
       {
         "founder_ico": "00331341",
         "founder_name": "Obec Borša",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 5.44
       },
       {
         "founder_ico": "00331384",
         "founder_name": "Obec Brezina",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 2.9
       },
       {
         "founder_ico": "00331392",
         "founder_name": "Obec Byšta",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 0.71
       },
       {
         "founder_ico": "00331406",
         "founder_name": "Obec Cejkov",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 4.77
       },
       {
         "founder_ico": "00331431",
         "founder_name": "Obec Černochov",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 0.84
       },
       {
         "founder_ico": "00331538",
         "founder_name": "Obec Hraň",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 5.9
       },
       {
         "founder_ico": "00331546",
         "founder_name": "Obec Hrčel",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 2.97
       },
       {
         "founder_ico": "00689718",
         "founder_name": "Obec Klin nad Bodrogom",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 0.83
       },
       {
         "founder_ico": "00331589",
         "founder_name": "Obec Kašov",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 1.43
       },
       {
         "founder_ico": "00331601",
         "founder_name": "Obec Kožuchov",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 0.97
       },
       {
         "founder_ico": "00331643",
         "founder_name": "Obec Kuzmice",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 5.47
       },
       {
         "founder_ico": "00331651",
         "founder_name": "Obec Kysta",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 1.57
       },
       {
         "founder_ico": "00331660",
         "founder_name": "Obec Ladmovce",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 1.55
       },
       {
         "founder_ico": "00331678",
         "founder_name": "Obec Lastovce",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 3.59
       },
       {
         "founder_ico": "00331732",
         "founder_name": "Obec Malý Kamenec",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 2.06
       },
       {
         "founder_ico": "00331783",
         "founder_name": "Obec Novosad",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 3.58
       },
       {
         "founder_ico": "00331805",
         "founder_name": "Obec Oborín",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 2.6
       },
       {
         "founder_ico": "00331929",
         "founder_name": "Obec Slovenské Nové Mesto",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 3.89
       },
       {
         "founder_ico": "00331945",
         "founder_name": "Obec Somotor",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 6.41
       },
       {
         "founder_ico": "00331970",
         "founder_name": "Obec Streda nad Bodrogom",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 9.64
       },
       {
         "founder_ico": "00332020",
         "founder_name": "Obec Veľaty",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 3.28
       },
       {
         "founder_ico": "00332003",
         "founder_name": "Obec Veľká Tŕňa",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 2.11
       },
       {
         "founder_ico": "00332097",
         "founder_name": "Obec Veľký Kamenec",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 3.51
       },
       {
         "founder_ico": "00332101",
         "founder_name": "Obec Viničky",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 1.94
       },
       {
         "founder_ico": "00332178",
         "founder_name": "Obec Zemplín",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 1.59
       },
       {
         "founder_ico": "00332208",
         "founder_name": "Obec Zemplínske Hradište",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 4.83
       },
       {
         "founder_ico": "00332216",
         "founder_name": "Obec Zemplínske Jastrabie",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 2.41
       },
       {
         "founder_ico": "00332186",
         "founder_name": "Obec Zemplínska Nová Ves",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 3.54
       },
       {
         "founder_ico": "00332224",
         "founder_name": "Obec Zemplínsky Branč",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 1.62
       },
       {
         "founder_ico": "00689726",
         "founder_name": "Obec Malá Tŕňa",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 1.72
       },
       {
         "founder_ico": "00331902",
         "founder_name": "Obec Sirník",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 2.25
       },
       {
         "founder_ico": "00331422",
         "founder_name": "Obec Čerhov",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 2.73
       }
     ],
     "entity_name": "Združenie obcí pre separovaný zber Zemplín n.o. v likvidácii",
@@ -9193,13 +9335,15 @@
         "founder_ico": "00328341",
         "founder_name": "Mesto Jelšava",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 50.0
       },
       {
         "founder_ico": "00328600",
         "founder_name": "Obec Ochtiná",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 50.0
       }
     ],
     "entity_name": "HRÁDOK, n.o. v likvidácii",
@@ -14239,25 +14383,29 @@
         "founder_ico": "00312037",
         "founder_name": "Mesto Trenčín",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 15.0
       },
       {
         "founder_ico": "00321796",
         "founder_name": "Mesto Žilina",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 15.0
       },
       {
         "founder_ico": "36126624",
         "founder_name": "Trenčiansky samosprávny kraj",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 35.0
       },
       {
         "founder_ico": "37808427",
         "founder_name": "Žilinský samosprávny kraj",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 35.0
       }
     ],
     "entity_name": "Integrovaná doprava Žilinského a Trenčianskeho kraja, s. r. o.",
@@ -14415,19 +14563,22 @@
         "founder_ico": "00306517",
         "founder_name": "Mesto Kolárovo",
         "relationship": "Člen EZHZ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 33.33
       },
       {
         "founder_ico": "00306525",
         "founder_name": "Mesto Komárno",
         "relationship": "Člen EZHZ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 33.33
       },
       {
         "founder_ico": "00306606",
         "founder_name": "Mesto Nesvady",
         "relationship": "Člen EZHZ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 33.33
       }
     ],
     "entity_name": "Európske zoskupenie územnej spolupráce Pons Danubii, s ručením obmedzeným",
@@ -15026,115 +15177,134 @@
         "founder_ico": "00316555",
         "founder_name": "Obec Abramová",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 3.17
       },
       {
         "founder_ico": "00649201",
         "founder_name": "Obec Blažovce",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 2.79
       },
       {
         "founder_ico": "00648809",
         "founder_name": "Obec Bodorová",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 4.06
       },
       {
         "founder_ico": "00648043",
         "founder_name": "Obec Borcová",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 2.53
       },
       {
         "founder_ico": "00316580",
         "founder_name": "Obec Brieštie",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 2.22
       },
       {
         "founder_ico": "00316598",
         "founder_name": "Obec Budiš",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 3.51
       },
       {
         "founder_ico": "00316636",
         "founder_name": "Obec Dubové",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 12.17
       },
       {
         "founder_ico": "00316695",
         "founder_name": "Obec Horná Štubňa",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 27.81
       },
       {
         "founder_ico": "00316709",
         "founder_name": "Obec Ivančiná",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 1.66
       },
       {
         "founder_ico": "00316717",
         "founder_name": "Obec Jasenovo",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 2.29
       },
       {
         "founder_ico": "00316725",
         "founder_name": "Obec Jazernica",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 5.78
       },
       {
         "founder_ico": "00633909",
         "founder_name": "Obec Kaľamenová",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 1.45
       },
       {
         "founder_ico": "00650471",
         "founder_name": "Obec Liešno",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 0.91
       },
       {
         "founder_ico": "00316784",
         "founder_name": "Obec Malý Čepčín",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 9.19
       },
       {
         "founder_ico": "00650480",
         "founder_name": "Obec Ondrašová",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 1.4
       },
       {
         "founder_ico": "00316873",
         "founder_name": "Obec Rudno",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 3.34
       },
       {
         "founder_ico": "00317012",
         "founder_name": "Obec Turček",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 10.4
       },
       {
         "founder_ico": "00648817",
         "founder_name": "Obec Veľký Čepčín",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 4.21
       },
       {
         "founder_ico": "00648035",
         "founder_name": "Obec Moškovec",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 1.11
       }
     ],
     "entity_name": "VEPOS Horného Turca n. o.",
@@ -16548,13 +16718,15 @@
         "founder_ico": "35541016",
         "founder_name": "Košický samosprávny kraj",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 50.0
       },
       {
         "founder_ico": "37870475",
         "founder_name": "Prešovský samosprávny kraj",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 50.0
       }
     ],
     "entity_name": "IDS Východ, s.r.o.",
@@ -17127,85 +17299,99 @@
         "founder_ico": "00321869",
         "founder_name": "Obec Becherov",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 7.14
       },
       {
         "founder_ico": "00322075",
         "founder_name": "Obec Chmeľová",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 7.14
       },
       {
         "founder_ico": "00322067",
         "founder_name": "Obec Hutka",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 7.14
       },
       {
         "founder_ico": "00322091",
         "founder_name": "Obec Jedlinka",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 7.14
       },
       {
         "founder_ico": "00322393",
         "founder_name": "Obec Mikulášová",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 7.14
       },
       {
         "founder_ico": "00322423",
         "founder_name": "Obec Nižná Polianka",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 7.14
       },
       {
         "founder_ico": "17081939",
         "founder_name": "Obec Regetovka",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 7.14
       },
       {
         "founder_ico": "00322571",
         "founder_name": "Obec Smilno",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 7.14
       },
       {
         "founder_ico": "00322601",
         "founder_name": "Obec Stebník",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 7.14
       },
       {
         "founder_ico": "00322598",
         "founder_name": "Obec Stebnícka Huta",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 7.14
       },
       {
         "founder_ico": "00322636",
         "founder_name": "Obec Šarišské Čierne",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 7.14
       },
       {
         "founder_ico": "00322695",
         "founder_name": "Obec Varadka",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 7.14
       },
       {
         "founder_ico": "00322709",
         "founder_name": "Obec Vyšná Polianka",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 7.14
       },
       {
         "founder_ico": "00322741",
         "founder_name": "Obec Zborov",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 7.14
       }
     ],
     "entity_name": "Mikroregión Makovica, n.o.",
@@ -38841,13 +39027,15 @@
         "founder_ico": "37828100",
         "founder_name": "Banskobystrický samosprávny kraj",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 50.0
       },
       {
         "founder_ico": "00313271",
         "founder_name": "Mesto Banská Bystrica",
         "relationship": "Spoločník v.o.s. / s.r.o.",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 50.0
       }
     ],
     "entity_name": "Dom kultúry BB s.r.o.",
@@ -47002,13 +47190,15 @@
         "founder_ico": "00306177",
         "founder_name": "Mesto Sládkovičovo",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 50.0
       },
       {
         "founder_ico": "00306452",
         "founder_name": "Mesto Hurbanovo",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 50.0
       }
     ],
     "entity_name": "Organizácia pre separovaný zber-PASKO, n.o. v likvidácii",
@@ -48369,31 +48559,36 @@
         "founder_ico": "00322601",
         "founder_name": "Obec Stebník",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 20.0
       },
       {
         "founder_ico": "00322598",
         "founder_name": "Obec Stebnícka Huta",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 20.0
       },
       {
         "founder_ico": "00322075",
         "founder_name": "Obec Chmeľová",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 20.0
       },
       {
         "founder_ico": "17081939",
         "founder_name": "Obec Regetovka",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 20.0
       },
       {
         "founder_ico": "00321869",
         "founder_name": "Obec Becherov",
         "relationship": "Zakladateľ ",
-        "valid_to": ""
+        "valid_to": "",
+        "share_pct": 20.0
       }
     ],
     "entity_name": "MAGURA - PALEDOVKA, parkšport n. o. v likvidácii",

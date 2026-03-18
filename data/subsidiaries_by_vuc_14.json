@@ -141,12 +141,13 @@
         "name": "Integrovaná doprava Žilinského a Trenčianskeho kraja, s. r. o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 11053.19,
+        "total_contracted_eur": 15474.46,
         "full_amount_eur": 44212.75,
-        "co_owners": 4
+        "co_owners": 4,
+        "share_pct": 35.0
       }
     ],
-    "subsidiary_total_eur": 6164564.710000001
+    "subsidiary_total_eur": 6168985.98
   },
   "37870475": {
     "ico": "37870475",
@@ -180,7 +181,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 2547261.14,
         "full_amount_eur": 5094522.28,
-        "co_owners": 2
+        "co_owners": 2,
+        "share_pct": 50.0
       },
       {
         "ico": "00891541",
@@ -469,7 +471,8 @@
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
         "total_contracted_eur": 84552.7,
         "full_amount_eur": 169105.4,
-        "co_owners": 2
+        "co_owners": 2,
+        "share_pct": 50.0
       },
       {
         "ico": "37781375",
@@ -1057,12 +1060,13 @@
         "name": "Integrovaná doprava Žilinského a Trenčianskeho kraja, s. r. o.",
         "projects_count": 1,
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
-        "total_contracted_eur": 11053.19,
+        "total_contracted_eur": 15474.46,
         "full_amount_eur": 44212.75,
-        "co_owners": 4
+        "co_owners": 4,
+        "share_pct": 35.0
       }
     ],
-    "subsidiary_total_eur": 15892341.269999998
+    "subsidiary_total_eur": 15896762.54
   },
   "37861298": {
     "ico": "37861298",
@@ -1712,7 +1716,8 @@
         "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
         "total_contracted_eur": 84552.7,
         "full_amount_eur": 169105.4,
-        "co_owners": 2
+        "co_owners": 2,
+        "share_pct": 50.0
       },
       {
         "ico": "35578041",
@@ -1833,7 +1838,8 @@
         "rpo_relationship": "Zakladateľ ",
         "total_contracted_eur": 116538.99,
         "full_amount_eur": 233077.98,
-        "co_owners": 2
+        "co_owners": 2,
+        "share_pct": 50.0
       },
       {
         "ico": "36088269",

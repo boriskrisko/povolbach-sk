@@ -68,8 +68,9 @@ def download_chunk(filename):
     return local_path
 
 def process_chunk(path, target_icos):
-    """Process a single chunk, return list of (entity_ico, entity_name, stakeholder_ico, stakeholder_type, valid_to) tuples."""
-    results = []
+    """Process a single chunk. Returns matches list and deposits dict."""
+    matches = []
+    deposits_by_entity = {}  # entity_ico -> [{fullName, amount}]
     with gzip.open(path, 'rt', encoding='utf-8') as f:
         data = json.load(f)
 
@@ -79,20 +80,20 @@ def process_chunk(path, target_icos):
             continue
 
         entity_name = entity.get('fullNames', [{}])[0].get('value', '')
+        has_target_stakeholder = False
 
         for s in entity.get('stakeholders', []):
             sid = s.get('identifier', '')
             if not sid or sid == 'Neuvedené':
                 continue
 
-            # Normalize IČO — strip spaces, pad to 8 digits
             sid_clean = sid.strip().lstrip('0') or '0'
             sid_padded = sid_clean.zfill(8)
 
             if sid_padded in target_icos:
                 st = s.get('stakeholderType', {})
                 valid_to = s.get('validTo', '')
-                results.append({
+                matches.append({
                     'entity_ico': entity_ico,
                     'entity_name': entity_name,
                     'stakeholder_ico': sid_padded,
@@ -101,8 +102,26 @@ def process_chunk(path, target_icos):
                     'stakeholder_name': s.get('fullName', ''),
                     'valid_to': valid_to,
                 })
+                has_target_stakeholder = True
 
-    return results
+        # Extract current EUR deposits for entities with municipal stakeholders
+        if has_target_stakeholder and entity.get('deposits'):
+            current_deps = []
+            for d in entity['deposits']:
+                if 'validTo' not in d and d.get('currency', {}).get('code') == 'EUR':
+                    try:
+                        amt = float(d.get('amount', 0))
+                    except (ValueError, TypeError):
+                        amt = 0
+                    if amt > 0:
+                        current_deps.append({
+                            'fullName': d.get('fullName', ''),
+                            'amount': amt,
+                        })
+            if current_deps:
+                deposits_by_entity[entity_ico] = current_deps
+
+    return matches, deposits_by_entity
 
 def main():
     target_icos = load_target_icos()
@@ -110,13 +129,15 @@ def main():
 
     chunks = get_chunk_list()
     all_matches = []
+    all_deposits = {}  # entity_ico -> [{fullName, amount}]
 
     for i, chunk_name in enumerate(chunks):
         print(f'[{i+1}/{len(chunks)}] {chunk_name}', file=sys.stderr, end=' ', flush=True)
         path = download_chunk(chunk_name)
-        matches = process_chunk(path, target_icos)
+        matches, deposits = process_chunk(path, target_icos)
         all_matches.extend(matches)
-        print(f'-> {len(matches)} matches', file=sys.stderr, flush=True)
+        all_deposits.update(deposits)
+        print(f'-> {len(matches)} matches, {len(deposits)} with deposits', file=sys.stderr, flush=True)
 
     # Build founder lookup: for each entity, collect ALL unique municipal/VÚC
     # stakeholder IČOs. An entity can have multiple founders (joint ventures).
@@ -149,26 +170,75 @@ def main():
             'valid_to': vt_clean,
         }
 
+    # Match deposits to stakeholder IČOs by fullName
+    # Deposits use fullName (e.g. "Mesto Nemšová"), stakeholders have IČO.
+    # Build name→IČO lookup from stakeholder matches for each entity.
+    def match_deposits_to_icos(eico, founder_map, deposits):
+        """Return {founder_ico: share_pct} or None if deposits can't be matched."""
+        if not deposits:
+            return None
+
+        # Build name→ico mapping from this entity's stakeholders
+        name_to_ico = {}
+        for sico, entry in founder_map.items():
+            sname = entry['founder_name']
+            if sname:
+                name_to_ico[sname] = sico
+
+        # Match each deposit to a stakeholder IČO
+        matched = {}
+        total_deposit = 0
+        for dep in deposits:
+            dep_name = dep['fullName']
+            dep_amt = dep['amount']
+            ico = name_to_ico.get(dep_name)
+            if ico:
+                matched[ico] = matched.get(ico, 0) + dep_amt
+                total_deposit += dep_amt
+
+        if not matched or total_deposit == 0:
+            return None
+
+        # Only use deposit-based split if ALL founders have a deposit match
+        if set(matched.keys()) != set(founder_map.keys()):
+            return None
+
+        # Convert to percentages
+        return {ico: amt / total_deposit for ico, amt in matched.items()}
+
     # Flatten: each entity gets a list of ALL its municipal/VÚC founders
     # For single-founder entities (vast majority), output is same as before
     founders = {}
     multi_founder_count = 0
+    deposit_split_count = 0
     for eico, founder_map in by_entity_founder.items():
         entries = list(founder_map.values())
         if len(entries) == 1:
             founders[eico] = entries[0]
         else:
             multi_founder_count += 1
-            # Store all founders
-            founders[eico] = {
-                'founders': [{
+
+            # Try deposit-based proportional split
+            dep_shares = match_deposits_to_icos(
+                eico, founder_map, all_deposits.get(eico))
+            if dep_shares:
+                deposit_split_count += 1
+
+            founders_list = []
+            for e in entries:
+                f_entry = {
                     'founder_ico': e['founder_ico'],
                     'founder_name': e['founder_name'],
                     'relationship': e['relationship'],
                     'valid_to': e['valid_to'],
-                } for e in entries],
+                }
+                if dep_shares and e['founder_ico'] in dep_shares:
+                    f_entry['share_pct'] = round(dep_shares[e['founder_ico']] * 100, 2)
+                founders_list.append(f_entry)
+
+            founders[eico] = {
+                'founders': founders_list,
                 'entity_name': entries[0]['entity_name'],
-                # Primary founder: prefer current, then latest validTo
                 'founder_ico': next(
                     (e['founder_ico'] for e in entries if not e['valid_to']),
                     max(entries, key=lambda e: e['valid_to'] or '')['founder_ico']
@@ -181,11 +251,12 @@ def main():
                     (e['relationship'] for e in entries if not e['valid_to']),
                     max(entries, key=lambda e: e['valid_to'] or '')['relationship']
                 ),
-                'valid_to': '',  # at least one is current if any is
+                'valid_to': '',
             }
 
     print(f'\nTotal unique entities: {len(founders)}', file=sys.stderr)
     print(f'Single-founder: {len(founders) - multi_founder_count}', file=sys.stderr)
+    print(f'Multi-founder with deposit data: {deposit_split_count}/{multi_founder_count}', file=sys.stderr)
     print(f'Multi-founder (joint ventures): {multi_founder_count}', file=sys.stderr)
 
     # Count by relationship type
