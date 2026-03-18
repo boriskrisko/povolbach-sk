@@ -139,15 +139,29 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
               {tr.modal_top_projects}
             </h3>
             <div className="space-y-2">
-              {m.projects.map((p, i) => (
-                <div key={i} className="bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e]">
-                  <div className="text-sm text-[#f8fafc] mb-1 line-clamp-2">{p.nazov}</div>
-                  <div className="flex justify-between text-xs">
-                    <span className="text-[#3b82f6] font-mono">{formatAmount(p.sumaZazmluvnena, locale)}</span>
-                    <span className="text-[#94a3b8]">{p.stav.includes('ukončený') ? tr.completed : tr.active}</span>
+              {m.projects.map((p, i) => {
+                const isActive = !p.stav.toLowerCase().includes('ukončen');
+                const endDate = p.datumKoncaRealizacie
+                  ? (() => {
+                      const d = new Date(p.datumKoncaRealizacie);
+                      return isNaN(d.getTime()) ? null : `${d.getMonth() + 1}/${d.getFullYear()}`;
+                    })()
+                  : null;
+                return (
+                  <div key={i} className="bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e]">
+                    <div className="text-sm text-[#f8fafc] mb-1 line-clamp-2">{p.nazov}</div>
+                    {isActive && endDate && (
+                      <div className="text-xs text-[#94a3b8]/60 mb-1">
+                        {locale === 'sk' ? 'Realizácia do' : 'Until'}: {endDate}
+                      </div>
+                    )}
+                    <div className="flex justify-between text-xs">
+                      <span className="text-[#3b82f6] font-mono">{formatAmount(p.sumaZazmluvnena, locale)}</span>
+                      <span className="text-[#94a3b8]">{isActive ? tr.active : tr.completed}</span>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         )}

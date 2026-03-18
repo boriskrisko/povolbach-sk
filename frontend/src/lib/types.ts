@@ -54,6 +54,7 @@ export interface ProjectSummary {
   nazov: string;
   sumaZazmluvnena: number;
   stav: string;
+  datumKoncaRealizacie?: string;
 }
 
 export interface MunicipalityMap {
