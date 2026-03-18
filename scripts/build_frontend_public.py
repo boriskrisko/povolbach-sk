@@ -112,49 +112,57 @@ def process_vuc(vuc_path: Path, vuc_subs: dict, out_path: Path):
     print(f'    Saved {out_path} ({len(vuc_stats)} VÚC entries)')
 
 
-def main():
-    print('Loading shared data files...')
+def process_period(period: str):
+    """Process one period (14 or 21) using ONLY that period's attribution files."""
+    suffix = f'_{period}'
+    print(f'\n{"="*60}')
+    print(f'  Period: {period} ({"2014-2020" if period == "14" else "2021-2027"})')
+    print(f'{"="*60}')
 
-    subs = load_json(DATA / 'subsidiaries_by_municipality_14.json')
-    vuc_subs = load_json(DATA / 'subsidiaries_by_vuc_14.json')
+    muni_path = DATA / f'municipal_stats{suffix}.json'
+    if not muni_path.exists():
+        print(f'  Skipping — {muni_path.name} not found')
+        return None
 
-    indirect_path = DATA / 'indirect_by_municipality_14.json'
+    subs_path = DATA / f'subsidiaries_by_municipality{suffix}.json'
+    subs = load_json(subs_path) if subs_path.exists() else {}
+
+    vuc_subs_path = DATA / f'subsidiaries_by_vuc{suffix}.json'
+    vuc_subs = load_json(vuc_subs_path) if vuc_subs_path.exists() else {}
+
+    indirect_path = DATA / f'indirect_by_municipality{suffix}.json'
     indirect = load_json(indirect_path) if indirect_path.exists() else {}
 
     print(f'  Municipalities with subsidiaries: {len(subs)}')
+    print(f'  VÚC with subsidiaries: {sum(1 for v in vuc_subs.values() if v.get("subsidiary_orgs"))}')
     print(f'  Municipalities with indirect projects: {len(indirect)}')
 
-    # ── 2014-2020 period ──────────────────────────────────────────────────────
-    base_1420 = process_municipalities(
-        DATA / 'municipal_stats_14.json',
+    base = process_municipalities(
+        muni_path,
         subs, indirect,
-        PUBLIC / 'municipal_stats_14.json',
+        PUBLIC / f'municipal_stats{suffix}.json',
     )
-    process_vuc(PUBLIC / 'vuc_stats_14.json', vuc_subs, PUBLIC / 'vuc_stats_14.json')
+    process_vuc(PUBLIC / f'vuc_stats{suffix}.json', vuc_subs, PUBLIC / f'vuc_stats{suffix}.json')
+    return base
 
-    # ── 2021-2027 period ──────────────────────────────────────────────────────
-    if (DATA / 'municipal_stats_21.json').exists():
-        process_municipalities(
-            DATA / 'municipal_stats_21.json',
-            subs, indirect,
-            PUBLIC / 'municipal_stats_21.json',
-        )
-        process_vuc(PUBLIC / 'vuc_stats_21.json', vuc_subs, PUBLIC / 'vuc_stats_21.json')
-    else:
-        print('\n  Skipping 2021-2027 (data/municipal_stats_21.json not found)')
+
+def main():
+    base_14 = process_period('14')
+    process_period('21')
 
     # ── Verification ──────────────────────────────────────────────────────────
-    partizanske = next((m for m in base_1420.values() if 'Partizán' in m.get('official_name', '')), None)
-    if partizanske:
-        sub_eur = partizanske.get('subsidiary_total_eur', 0)
-        orgs = partizanske.get('subsidiary_orgs', [])
-        projs = partizanske.get('projects', [])
-        print(f'\nVerification — Partizánske:')
-        print(f'  direct:   €{partizanske["total_contracted_eur"]/1e6:.2f}M')
-        print(f'  subs:     €{sub_eur/1e6:.2f}M ({len(orgs)} orgs)')
-        print(f'  projects: {len(projs)} (top {MAX_PROJECTS})')
-        for p in projs[:3]:
-            print(f'    {p["nazov"][:55]} €{p["sumaZazmluvnena"]/1e6:.2f}M')
+    if base_14:
+        partizanske = next((m for m in base_14.values() if 'Partizán' in m.get('official_name', '')), None)
+        if partizanske:
+            sub_eur = partizanske.get('subsidiary_total_eur', 0)
+            orgs = partizanske.get('subsidiary_orgs', [])
+            projs = partizanske.get('projects', [])
+            print(f'\nVerification — Partizánske (_14):')
+            print(f'  direct:   €{partizanske["total_contracted_eur"]/1e6:.2f}M')
+            print(f'  subs:     €{sub_eur/1e6:.2f}M ({len(orgs)} orgs)')
+            print(f'  projects: {len(projs)} (top {MAX_PROJECTS})')
+            for p in projs[:3]:
+                print(f'    {p["nazov"][:55]} €{p["sumaZazmluvnena"]/1e6:.2f}M')
 
 
 if __name__ == '__main__':

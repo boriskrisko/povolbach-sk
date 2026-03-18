@@ -10,9 +10,10 @@ municipality-name strings by the pipeline.
 
 import json
 import sys
+import argparse
 from collections import defaultdict
 
-DATA = '/Users/boriskrisko/ConveyorMind/data'
+DATA = '/Users/boriskrisko/povolbach/data'
 
 STATE_KEYWORDS = [
     'Ministerstvo', 'Slovenská republika', 'Úrad vlády',
@@ -32,16 +33,32 @@ def is_state_agency(name: str) -> bool:
     return any(kw in name for kw in STATE_KEYWORDS)
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--period', choices=['14', '21'], default='14',
+                        help='Period suffix: 14 (2014-2020) or 21 (2021-2027)')
+    args = parser.parse_args()
+    period = args.period
+
+    log(f'=== Indirect project mapping for period _{period} ===')
     log('Loading data files...')
 
-    with open(f'{DATA}/excluded_beneficiaries.json') as f:
-        excluded = json.load(f)
+    with open(f'{DATA}/aggregated_by_beneficiary_{period}.json') as f:
+        agg_data = json.load(f)
+    # Normalize: _14 is a list, _21 is a dict
+    if isinstance(agg_data, list):
+        agg_by_ico = {e['ico']: e for e in agg_data}
+    else:
+        agg_by_ico = agg_data
 
-    with open(f'{DATA}/aggregated_by_beneficiary_14.json') as f:
-        agg_list = json.load(f)
-    agg_by_ico = {e['ico']: e for e in agg_list}
+    with open(f'{DATA}/municipalities_isco.json') as f:
+        muni_register = json.load(f)
+    muni_set = set(muni_register.keys())
 
-    with open(f'{DATA}/municipal_stats_14.json') as f:
+    # Build excluded list from non-municipality entries
+    excluded = [{'ico': ico, 'name': e.get('nazov', e.get('name', ''))}
+                for ico, e in agg_by_ico.items() if ico not in muni_set]
+
+    with open(f'{DATA}/municipal_stats_{period}.json') as f:
         muni_stats = json.load(f)
 
     # Build name -> ICO lookup from municipal_stats
@@ -128,7 +145,7 @@ def main():
 
     result = dict(indirect_by_muni)
 
-    out_path = f'{DATA}/indirect_by_municipality_14.json'
+    out_path = f'{DATA}/indirect_by_municipality_{period}.json'
     with open(out_path, 'w', encoding='utf-8') as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
 

@@ -26,11 +26,12 @@ Outputs:
 import json
 import sys
 import os
+import argparse
 from collections import defaultdict
 from pathlib import Path
 
-DATA = Path('/Users/boriskrisko/ConveyorMind/data')
-LOG_PATH = DATA / 'attribution_log.txt'
+ROOT = Path('/Users/boriskrisko/povolbach')
+DATA = ROOT / 'data'
 
 # ── VÚC IČOs ──────────────────────────────────────────────────────────────
 VUC_ICOS = {
@@ -126,11 +127,43 @@ def log(msg: str):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--period', choices=['14', '21'], default='14',
+                        help='Period suffix: 14 (2014-2020) or 21 (2021-2027)')
+    args = parser.parse_args()
+    period = args.period
+
+    log(f'=== Attribution for period _{period} ===')
     log('Loading data files...')
 
-    with open(DATA / 'excluded_beneficiaries.json') as f:
-        excluded = json.load(f)
+    # Load aggregated data for this period
+    agg_path = DATA / f'aggregated_by_beneficiary_{period}.json'
+    with open(agg_path) as f:
+        agg_data = json.load(f)
+    # Normalize: _14 is a list, _21 is a dict
+    if isinstance(agg_data, list):
+        agg_by_ico = {e['ico']: e for e in agg_data}
+    else:
+        agg_by_ico = agg_data
 
+    # Municipality register (same for both periods)
+    with open(DATA / 'municipalities_isco.json') as f:
+        muni_register = json.load(f)
+    muni_set = set(muni_register.keys())
+
+    # Build excluded list: all non-municipality beneficiaries for this period
+    excluded = []
+    for ico, e in agg_by_ico.items():
+        if ico not in muni_set:
+            excluded.append({
+                'ico': ico,
+                'name': e.get('nazov', e.get('name', '')),
+                'total_contracted_eur': e.get('total_contracted_eur', 0) or 0,
+                'projects_count': (e.get('active_projects', 0) or 0) + (e.get('completed_projects', 0) or 0),
+            })
+    log(f'Non-municipality beneficiaries (excluded): {len(excluded)}')
+
+    # Address data: raw_subjects.json is from ITMS2014 but physical addresses don't change
     with open(DATA / 'raw_subjects.json') as f:
         raw_subj = json.load(f)
     subj_by_ico = {str(v.get('ico', '')): v for v in raw_subj.values()}
@@ -138,12 +171,10 @@ def main():
     with open(DATA / 'raw_nuts_names.json') as f:
         nuts_names = json.load(f)  # numeric_id -> municipality_name
 
-    with open(DATA / 'municipal_stats_14.json') as f:
+    # Load municipal_stats for the correct period (for name→ICO lookup and region info)
+    muni_stats_path = DATA / f'municipal_stats_{period}.json'
+    with open(muni_stats_path) as f:
         muni_stats = json.load(f)
-
-    with open(DATA / 'aggregated_by_beneficiary_14.json') as f:
-        agg_list = json.load(f)
-    agg_by_ico = {e['ico']: e for e in agg_list}
 
     # Build municipality name → ICO lookup
     STRIP = ['Obec ', 'Mesto ', 'Mestská časť ']
@@ -288,7 +319,7 @@ def main():
         d['subsidiary_orgs'].sort(key=lambda o: o['total_contracted_eur'], reverse=True)
 
     # Save
-    with open(DATA / 'subsidiaries_by_municipality_14.json', 'w', encoding='utf-8') as f:
+    with open(DATA / f'subsidiaries_by_municipality_{period}.json', 'w', encoding='utf-8') as f:
         json.dump(dict(by_muni), f, ensure_ascii=False, indent=2)
 
     # For VÚC: add name fields
@@ -299,10 +330,11 @@ def main():
             'name': VUC_ICOS[vico],
             **d,
         }
-    with open(DATA / 'subsidiaries_by_vuc_14.json', 'w', encoding='utf-8') as f:
+    with open(DATA / f'subsidiaries_by_vuc_{period}.json', 'w', encoding='utf-8') as f:
         json.dump(vuc_sub_out, f, ensure_ascii=False, indent=2)
 
-    with open(LOG_PATH, 'w', encoding='utf-8') as f:
+    log_path = DATA / f'attribution_log_{period}.txt'
+    with open(log_path, 'w', encoding='utf-8') as f:
         f.write('SUBSIDIARY ATTRIBUTION LOG\n')
         f.write('=' * 80 + '\n\n')
         f.write('NOTE: RPO API (api.statistics.sk/rpo/v1) does not expose zakladatel\n')
@@ -324,7 +356,7 @@ def main():
     vuc_total = sum(d['subsidiary_total_eur'] for d in by_vuc.values())
     log(f'  Total EUR attributed to municipalities: €{muni_total:,.0f}')
     log(f'  Total EUR attributed to VÚC: €{vuc_total:,.0f}')
-    log(f'  Log written to {LOG_PATH}')
+    log(f'  Log written to {log_path}')
 
     # Top municipalities by subsidiary EUR
     top_muni = sorted(by_muni.items(), key=lambda x: x[1]['subsidiary_total_eur'], reverse=True)[:10]
