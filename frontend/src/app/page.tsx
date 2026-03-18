@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { DataProvider, useData } from '@/lib/DataContext';
 import { Municipality, GlobalStats } from '@/lib/types';
 import { type Locale } from '@/lib/translations';
@@ -14,11 +14,24 @@ import StatsContext from '@/components/StatsContext';
 import Footer from '@/components/Footer';
 import MunicipalityModal from '@/components/MunicipalityModal';
 
+interface IndirectDedup {
+  unique_projects_count: number;
+  unique_total_eur: number;
+}
+
 function PageContent() {
   const { data, isTransitioning } = useData();
   const [selectedMunicipality, setSelectedMunicipality] = useState<Municipality | null>(null);
   const [viewMode, setViewMode] = useState<'total' | 'capita'>('total');
   const [locale, setLocale] = useState<Locale>('sk');
+  const [indirectDedup, setIndirectDedup] = useState<IndirectDedup | null>(null);
+
+  useEffect(() => {
+    fetch('/indirect_dedup_stats.json')
+      .then(r => r.json())
+      .then(setIndirectDedup)
+      .catch(() => {});
+  }, []);
 
   const globalStats = useMemo((): GlobalStats | null => {
     if (!data) return null;
@@ -69,7 +82,7 @@ function PageContent() {
           setViewMode={setViewMode}
           locale={locale}
         />
-        <StatsContext locale={locale} globalStats={globalStats} />
+        <StatsContext locale={locale} globalStats={globalStats} indirectDedup={indirectDedup} />
         <Footer locale={locale} />
       </div>
       <MunicipalityModal

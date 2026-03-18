@@ -56,12 +56,18 @@ function AnimatedCounter({ target, locale }: { target: number; locale: Locale })
   );
 }
 
+interface IndirectDedup {
+  unique_projects_count: number;
+  unique_total_eur: number;
+}
+
 interface Props {
   locale: Locale;
   globalStats: GlobalStats | null;
+  indirectDedup: IndirectDedup | null;
 }
 
-export default function StatsContext({ locale, globalStats }: Props) {
+export default function StatsContext({ locale, globalStats, indirectDedup }: Props) {
   const { loading, period } = useData();
   const tr = t[locale];
 
@@ -72,9 +78,11 @@ export default function StatsContext({ locale, globalStats }: Props) {
   const withoutPct = 100 - withPct;
 
   const indirectLabel = locale === 'sk' ? 'štátnych investícií v obciach' : 'state investments in municipalities';
+  const indirectCount = indirectDedup?.unique_projects_count ?? 0;
+  const indirectEur = indirectDedup?.unique_total_eur ?? 0;
   const indirectNote = locale === 'sk'
-    ? 'projekty ministerstiev a štátnych agentúr realizované na území obcí · nezahrnuté v hodnotení samospráv'
-    : 'projects by ministries and state agencies carried out in municipal territories · not included in municipal scores';
+    ? `${indirectCount} unikátnych projektov · ministerstvá a štátne agentúry · nezahrnuté v hodnotení samospráv`
+    : `${indirectCount} unique projects · ministries and state agencies · not included in municipal scores`;
 
   return (
     <section className="py-24 px-4 max-w-5xl mx-auto">
@@ -120,7 +128,7 @@ export default function StatsContext({ locale, globalStats }: Props) {
             className="text-4xl md:text-5xl font-bold mb-2"
             style={{ color: '#6366f1', fontFamily: 'JetBrains Mono, monospace' }}
           >
-            {formatBillions(totalIndirectEur, locale)}
+            {formatBillions(indirectEur, locale)}
           </div>
           <div className="text-[#94a3b8] mt-2">{indirectLabel}</div>
           <div className="text-[#94a3b8]/50 text-xs mt-2 leading-relaxed">{indirectNote}</div>
