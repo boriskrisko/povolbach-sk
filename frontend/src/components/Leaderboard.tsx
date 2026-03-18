@@ -3,6 +3,7 @@
 import { useData } from '@/lib/DataContext';
 import { Municipality } from '@/lib/types';
 import { formatEur, getWithoutProjects } from '@/lib/utils';
+import ViewModeToggle from './ViewModeToggle';
 
 type ViewMode = 'total' | 'capita';
 
@@ -105,28 +106,7 @@ export default function Leaderboard({ onSelectMunicipality, viewMode, setViewMod
         >
           Rebríček obcí
         </h2>
-        <div className="inline-flex rounded-lg border border-[#1e1e2e] overflow-hidden">
-          <button
-            onClick={() => setViewMode('total')}
-            className={`px-4 py-1.5 text-sm font-medium transition-colors ${
-              viewMode === 'total'
-                ? 'bg-[#3b82f6] text-white'
-                : 'bg-[#13131a] text-[#94a3b8] hover:text-[#f8fafc]'
-            }`}
-          >
-            Celkové prostriedky
-          </button>
-          <button
-            onClick={() => setViewMode('capita')}
-            className={`px-4 py-1.5 text-sm font-medium transition-colors ${
-              viewMode === 'capita'
-                ? 'bg-[#3b82f6] text-white'
-                : 'bg-[#13131a] text-[#94a3b8] hover:text-[#f8fafc]'
-            }`}
-          >
-            Na obyvateľa
-          </button>
-        </div>
+        <ViewModeToggle viewMode={viewMode} onToggle={setViewMode} />
       </div>
       <p className="text-[#94a3b8] mb-12">
         {viewMode === 'capita'
