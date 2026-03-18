@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { formatAmount } from '@/lib/utils';
 import { type Locale } from '@/lib/translations';
+import { useData } from '@/lib/DataContext';
 
 interface MikroEntry {
   ico: string;
@@ -40,15 +41,17 @@ interface Props {
 }
 
 export default function MikroregiónySection({ locale }: Props) {
+  const { period } = useData();
   const [data, setData] = useState<MikroStats | null>(null);
   const [selected, setSelected] = useState<MikroCategory | null>(null);
 
   useEffect(() => {
-    fetch('/mikroregiony_stats.json')
+    const file = period === '2127' ? '/mikroregiony_stats_2127.json' : '/mikroregiony_stats.json';
+    fetch(file)
       .then(r => r.json())
       .then(setData)
       .catch(() => {});
-  }, []);
+  }, [period]);
 
   if (!data) return null;
 

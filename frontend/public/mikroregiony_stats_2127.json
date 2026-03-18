@@ -1,0 +1,133 @@
+{
+  "total_count": 14,
+  "total_contracted_eur": 73772672.36999999,
+  "categories": [
+    {
+      "key": "voda",
+      "label_sk": "Vodné hospodárstvo",
+      "label_en": "Water & Sewage",
+      "desc_sk": "Kanalizácie, čistiarne odpadových vôd, vodovody",
+      "desc_en": "Sewage networks, wastewater treatment, water supply",
+      "count": 1,
+      "total_contracted_eur": 16702870.2,
+      "entries": [
+        {
+          "ico": "42298296",
+          "name": "Združenie obcí Veselé ČOV",
+          "total_contracted_eur": 16702870.2,
+          "projects_count": 1
+        }
+      ]
+    },
+    {
+      "key": "odpad",
+      "label_sk": "Odpadové hospodárstvo",
+      "label_en": "Waste Management",
+      "desc_sk": "Triedenie a likvidácia odpadu, zberné dvory",
+      "desc_en": "Waste sorting, disposal, collection facilities",
+      "count": 1,
+      "total_contracted_eur": 497400.92,
+      "entries": [
+        {
+          "ico": "35679361",
+          "name": "Združenie obcí pre likvidáciu odpadu Poltár",
+          "total_contracted_eur": 497400.92,
+          "projects_count": 1
+        }
+      ]
+    },
+    {
+      "key": "doprava",
+      "label_sk": "Doprava a cestovný ruch",
+      "label_en": "Transport & Tourism",
+      "desc_sk": "Cyklotrasy, cesty, turistická infraštruktúra",
+      "desc_en": "Cycling paths, roads, tourist infrastructure",
+      "count": 0,
+      "total_contracted_eur": 0,
+      "entries": []
+    },
+    {
+      "key": "rozvoj",
+      "label_sk": "Regionálny rozvoj",
+      "label_en": "Regional Development",
+      "desc_sk": "Rozvojové projekty, spolupráca obcí, územný rozvoj",
+      "desc_en": "Development projects, inter-municipal cooperation",
+      "count": 12,
+      "total_contracted_eur": 56572401.24999999,
+      "entries": [
+        {
+          "ico": "00584614",
+          "name": "Združenie miest a obcí Slovenska",
+          "total_contracted_eur": 36623460.489999995,
+          "projects_count": 2
+        },
+        {
+          "ico": "52820254",
+          "name": "Združenie obcí - Kráľová pri Senci – Kostolná pri Dunaji - Hrubá Borša",
+          "total_contracted_eur": 10196873.75,
+          "projects_count": 1
+        },
+        {
+          "ico": "45013870",
+          "name": "ZDRUŽENIE OBCÍ - MIKROREGIÓN ŠAŠTÍNSKO",
+          "total_contracted_eur": 3810000.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "37905805",
+          "name": "MIKROREGIÓN BYSTRICKÁ DOLINA",
+          "total_contracted_eur": 1184873.92,
+          "projects_count": 2
+        },
+        {
+          "ico": "31915698",
+          "name": "Združenie obcí stredného Liptova EKOLÓG",
+          "total_contracted_eur": 928101.54,
+          "projects_count": 1
+        },
+        {
+          "ico": "37937278",
+          "name": "Združenie obcí EKOTORYSA",
+          "total_contracted_eur": 854100.71,
+          "projects_count": 1
+        },
+        {
+          "ico": "36091995",
+          "name": "Združenie obcí Medzičilizia",
+          "total_contracted_eur": 734408.27,
+          "projects_count": 1
+        },
+        {
+          "ico": "31870236",
+          "name": "Združenie miest a obcí Žitného ostrova",
+          "total_contracted_eur": 558576.15,
+          "projects_count": 1
+        },
+        {
+          "ico": "54471419",
+          "name": "Združenie obcí Hajlochy",
+          "total_contracted_eur": 510860.59,
+          "projects_count": 1
+        },
+        {
+          "ico": "56929242",
+          "name": "ZDRUŽENIE OBCÍ PRAVNIANSKEJ DOLINY",
+          "total_contracted_eur": 468417.31,
+          "projects_count": 2
+        },
+        {
+          "ico": "37805533",
+          "name": "Združenie obcí Rajecká dolina",
+          "total_contracted_eur": 430951.24,
+          "projects_count": 1
+        },
+        {
+          "ico": "36105945",
+          "name": "\"Združenie obcí Most priateľstva - Hídverő Társulás\"",
+          "total_contracted_eur": 271777.28,
+          "projects_count": 1
+        }
+      ]
+    }
+  ]
+}

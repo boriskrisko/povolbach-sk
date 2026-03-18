@@ -6,6 +6,7 @@ import { formatAmount } from '@/lib/utils';
 import ViewModeToggle from './ViewModeToggle';
 import VucModal from './VucModal';
 import { type Locale } from '@/lib/translations';
+import { useData } from '@/lib/DataContext';
 
 interface Props {
   viewMode: 'total' | 'capita';
@@ -14,16 +15,19 @@ interface Props {
 }
 
 export default function VucSection({ viewMode, setViewMode, locale }: Props) {
+  const { period } = useData();
   const [vucData, setVucData] = useState<Record<string, VucStats>>({});
   const [selectedVuc, setSelectedVuc] = useState<VucStats | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/vuc_stats.json')
+    setLoading(true);
+    const file = period === '2127' ? '/vuc_stats_2127.json' : '/vuc_stats.json';
+    fetch(file)
       .then(r => r.json())
       .then((d: Record<string, VucStats>) => { setVucData(d); setLoading(false); })
       .catch(() => setLoading(false));
-  }, []);
+  }, [period]);
 
   if (loading || Object.keys(vucData).length === 0) return null;
 
