@@ -42,16 +42,21 @@ export function formatBillions(amount: number, locale: Locale = 'sk'): string {
   return `${(amount / 1_000_000).toFixed(0)} mil. €`;
 }
 
+/** Combined total: direct + subsidiary (the number that matters for absorption ranking). */
+export function getCombinedTotal(m: Municipality): number {
+  return (m.total_contracted_eur || 0) + (m.subsidiary_total_eur || 0);
+}
+
 export function getTop10(data: MunicipalityMap): Municipality[] {
   return Object.values(data)
-    .sort((a, b) => b.total_contracted_eur - a.total_contracted_eur)
+    .sort((a, b) => getCombinedTotal(b) - getCombinedTotal(a))
     .slice(0, 10);
 }
 
 export function getBottom10WithProjects(data: MunicipalityMap): Municipality[] {
   return Object.values(data)
-    .filter(m => m.total_contracted_eur > 0)
-    .sort((a, b) => a.total_contracted_eur - b.total_contracted_eur)
+    .filter(m => getCombinedTotal(m) > 0)
+    .sort((a, b) => getCombinedTotal(a) - getCombinedTotal(b))
     .slice(0, 10);
 }
 
@@ -75,10 +80,10 @@ export function getRegionStats(data: MunicipalityMap): RegionStats[] {
     if (!regions[region]) {
       regions[region] = { totalEur: 0, totalPopulation: 0, count: 0, withProjects: 0, withoutProjects: 0 };
     }
-    regions[region].totalEur += m.total_contracted_eur;
+    regions[region].totalEur += getCombinedTotal(m);
     regions[region].totalPopulation += m.population || 0;
     regions[region].count += 1;
-    if (m.total_contracted_eur > 0) {
+    if (getCombinedTotal(m) > 0) {
       regions[region].withProjects += 1;
     } else {
       regions[region].withoutProjects += 1;
@@ -108,7 +113,7 @@ export function searchMunicipalities(data: MunicipalityMap, query: string): Muni
       const aStarts = a.official_name.toLowerCase().startsWith(q) ? 0 : 1;
       const bStarts = b.official_name.toLowerCase().startsWith(q) ? 0 : 1;
       if (aStarts !== bStarts) return aStarts - bStarts;
-      return b.total_contracted_eur - a.total_contracted_eur;
+      return getCombinedTotal(b) - getCombinedTotal(a);
     })
     .slice(0, 20);
 }
@@ -129,7 +134,7 @@ export function searchMunicipalitiesFlexible(data: MunicipalityMap, query: strin
       const aStarts = aName.startsWith(q) ? 0 : 1;
       const bStarts = bName.startsWith(q) ? 0 : 1;
       if (aStarts !== bStarts) return aStarts - bStarts;
-      return b.total_contracted_eur - a.total_contracted_eur;
+      return getCombinedTotal(b) - getCombinedTotal(a);
     })
     .slice(0, 20);
 }

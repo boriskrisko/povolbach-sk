@@ -2,7 +2,7 @@
 
 import { useData } from '@/lib/DataContext';
 import { Municipality, GlobalStats } from '@/lib/types';
-import { formatAmount } from '@/lib/utils';
+import { formatAmount, getCombinedTotal } from '@/lib/utils';
 import ViewModeToggle from './ViewModeToggle';
 import { t, type Locale } from '@/lib/translations';
 
@@ -17,7 +17,7 @@ interface Props {
 }
 
 function getCapita(m: Municipality): number {
-  return m.population > 0 ? m.total_contracted_eur / m.population : 0;
+  return m.population > 0 ? getCombinedTotal(m) / m.population : 0;
 }
 
 function LeaderboardRow({
@@ -38,7 +38,7 @@ function LeaderboardRow({
   locale: Locale;
 }) {
   const tr = t[locale];
-  const val = viewMode === 'capita' ? getCapita(m) : m.total_contracted_eur;
+  const val = viewMode === 'capita' ? getCapita(m) : getCombinedTotal(m);
   const barWidth = maxVal > 0 ? (val / maxVal) * 100 : 0;
   const displayLabel = viewMode === 'capita'
     ? `${formatAmount(Math.round(val), locale)} ${tr.per_capita_suffix}`
@@ -82,26 +82,26 @@ export default function Leaderboard({ onSelectMunicipality, viewMode, setViewMod
   const zeroCount = globalStats?.withoutProjects ?? all.filter(m => m.total_contracted_eur === 0).length;
 
   const top10 = viewMode === 'capita'
-    ? all.filter(m => m.population > 0 && m.total_contracted_eur > 0)
+    ? all.filter(m => m.population > 0 && getCombinedTotal(m) > 0)
         .sort((a, b) => getCapita(b) - getCapita(a))
         .slice(0, 10)
-    : all.sort((a, b) => b.total_contracted_eur - a.total_contracted_eur).slice(0, 10);
+    : all.sort((a, b) => getCombinedTotal(b) - getCombinedTotal(a)).slice(0, 10);
 
   const bottom10 = viewMode === 'capita'
-    ? all.filter(m => m.population > 0 && m.total_contracted_eur > 0)
+    ? all.filter(m => m.population > 0 && getCombinedTotal(m) > 0)
         .sort((a, b) => getCapita(a) - getCapita(b))
         .slice(0, 10)
-    : all.filter(m => m.total_contracted_eur > 0)
-        .sort((a, b) => a.total_contracted_eur - b.total_contracted_eur)
+    : all.filter(m => getCombinedTotal(m) > 0)
+        .sort((a, b) => getCombinedTotal(a) - getCombinedTotal(b))
         .slice(0, 10);
 
   const maxTop = viewMode === 'capita'
     ? (top10[0] ? getCapita(top10[0]) : 1)
-    : (top10[0]?.total_contracted_eur || 1);
+    : (top10[0] ? getCombinedTotal(top10[0]) : 1);
 
   const maxBottom = viewMode === 'capita'
     ? (bottom10.length > 0 ? getCapita(bottom10[bottom10.length - 1]) : 1)
-    : (bottom10.length > 0 ? bottom10[bottom10.length - 1]?.total_contracted_eur || 1 : 1);
+    : (bottom10.length > 0 ? getCombinedTotal(bottom10[bottom10.length - 1]) : 1);
 
   return (
     <section className="py-24 px-4 max-w-6xl mx-auto">

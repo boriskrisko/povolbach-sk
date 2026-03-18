@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useData, type Period } from '@/lib/DataContext';
 import { Municipality, GlobalStats } from '@/lib/types';
-import { searchMunicipalitiesFlexible, formatAmount, formatBillions } from '@/lib/utils';
+import { searchMunicipalitiesFlexible, formatAmount, formatBillions, getCombinedTotal } from '@/lib/utils';
 import { t, type Locale } from '@/lib/translations';
 
 interface Props {
@@ -185,7 +185,7 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale, gl
                     <span className="text-[#94a3b8] text-sm ml-2">{m.region}</span>
                   </div>
                   <span className="text-[#3b82f6] font-mono text-sm font-medium">
-                    {formatAmount(m.total_contracted_eur, locale)}
+                    {formatAmount(getCombinedTotal(m), locale)}
                   </span>
                 </button>
               ))}

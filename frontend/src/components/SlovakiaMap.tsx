@@ -1,7 +1,7 @@
 'use client';
 
 import { useData } from '@/lib/DataContext';
-import { getRegionStats, formatAmount } from '@/lib/utils';
+import { getRegionStats, formatAmount, getCombinedTotal } from '@/lib/utils';
 import ViewModeToggle from './ViewModeToggle';
 import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import { Municipality, RegionStats } from '@/lib/types';
@@ -239,10 +239,11 @@ export default function SlovakiaMap({ onMunicipalityClick, viewMode, setViewMode
               {municipalities.map(m => {
                 const { x, y } = gpsToSvg(m.gps_lat!, m.gps_lon!);
                 const isHovered = hoveredMunicipality?.ico === m.ico;
-                const perCapita = m.population > 0 ? m.total_contracted_eur / m.population : 0;
+                const combined = getCombinedTotal(m);
+                const perCapita = m.population > 0 ? combined / m.population : 0;
                 const dotColor = viewMode === 'capita'
                   ? getDotColorCapita(perCapita)
-                  : getDotColor(m.total_contracted_eur);
+                  : getDotColor(combined);
                 return (
                   <circle
                     key={m.ico}
@@ -314,13 +315,16 @@ export default function SlovakiaMap({ onMunicipalityClick, viewMode, setViewMode
               </div>
               <div className="text-[#94a3b8] text-xs mt-1.5 space-y-0.5">
                 <div>
-                  {viewMode === 'capita' && hoveredMunicipality.population > 0 ? (
-                    <><span className="text-[#3b82f6] font-mono font-semibold">
-                      {formatAmount(Math.round(hoveredMunicipality.total_contracted_eur / hoveredMunicipality.population), locale)}
-                    </span>{' '}{tr.per_capita_suffix}</>
-                  ) : (
-                    <><span className="text-[#3b82f6] font-mono font-semibold">{formatAmount(hoveredMunicipality.total_contracted_eur, locale)}</span>{' '}{locale === 'sk' ? 'celkové fondy' : 'total funds'}</>
-                  )}
+                  {(() => {
+                    const combined = getCombinedTotal(hoveredMunicipality);
+                    return viewMode === 'capita' && hoveredMunicipality.population > 0 ? (
+                      <><span className="text-[#3b82f6] font-mono font-semibold">
+                        {formatAmount(Math.round(combined / hoveredMunicipality.population), locale)}
+                      </span>{' '}{tr.per_capita_suffix}</>
+                    ) : (
+                      <><span className="text-[#3b82f6] font-mono font-semibold">{formatAmount(combined, locale)}</span>{' '}{locale === 'sk' ? 'celkové fondy' : 'total funds'}</>
+                    );
+                  })()}
                 </div>
                 <div>
                   {hoveredMunicipality.active_projects + hoveredMunicipality.completed_projects} {tr.modal_projects}

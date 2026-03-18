@@ -33,12 +33,14 @@ export default function VucSection({ viewMode, setViewMode, locale }: Props) {
   if (loading || Object.keys(vucData).length === 0) return null;
 
   const sorted = Object.values(vucData).sort((a, b) => {
+    const aTotal = a.total_contracted_eur + (a.subsidiary_total_eur || 0);
+    const bTotal = b.total_contracted_eur + (b.subsidiary_total_eur || 0);
     if (viewMode === 'capita') {
-      const apc = a.population > 0 ? a.total_contracted_eur / a.population : 0;
-      const bpc = b.population > 0 ? b.total_contracted_eur / b.population : 0;
+      const apc = a.population > 0 ? aTotal / a.population : 0;
+      const bpc = b.population > 0 ? bTotal / b.population : 0;
       return bpc - apc;
     }
-    return b.total_contracted_eur - a.total_contracted_eur;
+    return bTotal - aTotal;
   });
 
   const heading = locale === 'sk' ? 'Samosprávne kraje' : 'Regional Governments';
@@ -64,8 +66,8 @@ export default function VucSection({ viewMode, setViewMode, locale }: Props) {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {sorted.map(v => {
-          const perCapita = v.population > 0 ? Math.round(v.total_contracted_eur / v.population) : 0;
-          const subsPerCapita = v.population > 0 ? Math.round(v.subsidiary_total_eur / v.population) : 0;
+          const grandTotal = v.total_contracted_eur + (v.subsidiary_total_eur || 0);
+          const perCapita = v.population > 0 ? Math.round(grandTotal / v.population) : 0;
 
           return (
             <button
@@ -85,26 +87,23 @@ export default function VucSection({ viewMode, setViewMode, locale }: Props) {
                   <div className="text-[#3b82f6] font-mono font-bold text-xl mb-0.5">
                     {formatAmount(perCapita, locale)} {capSuffix}
                   </div>
-                  <div className="text-[#94a3b8] text-xs">{directLabel}</div>
                   {v.subsidiary_total_eur > 0 && (
-                    <div className="text-[#10b981] text-xs mt-1.5">
-                      +{formatAmount(subsPerCapita, locale)} {capSuffix} {subsLabel}
+                    <div className="text-[#94a3b8] text-xs">
+                      {formatAmount(v.total_contracted_eur, locale)} {directLabel} + {formatAmount(v.subsidiary_total_eur, locale)} {subsLabel}
                     </div>
                   )}
                 </>
               ) : (
                 <>
                   <div className="text-[#3b82f6] font-mono font-bold text-xl mb-0.5">
-                    {formatAmount(v.total_contracted_eur, locale)}
+                    {formatAmount(grandTotal, locale)}
                   </div>
                   <div className="text-[#94a3b8] text-xs">
-                    {formatProjects(v.projects_active + v.projects_completed, locale)} · {directLabel}
+                    {formatProjects(v.projects_active + v.projects_completed, locale)}
+                    {v.subsidiary_total_eur > 0 && (
+                      <> · {formatAmount(v.total_contracted_eur, locale)} {directLabel} + {formatAmount(v.subsidiary_total_eur, locale)} {subsLabel}</>
+                    )}
                   </div>
-                  {v.subsidiary_total_eur > 0 && (
-                    <div className="text-[#10b981] text-xs mt-1.5">
-                      +{formatAmount(v.subsidiary_total_eur, locale)} {subsLabel}
-                    </div>
-                  )}
                 </>
               )}
             </button>

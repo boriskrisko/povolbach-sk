@@ -30,9 +30,9 @@ function PageContent() {
     const munis = Object.values(data);
     return {
       totalMunicipalities: munis.length,
-      totalFundsEur: munis.reduce((s, m) => s + (m.total_contracted_eur || 0), 0),
-      withProjects: munis.filter(m => m.total_contracted_eur > 0).length,
-      withoutProjects: munis.filter(m => m.total_contracted_eur === 0).length,
+      totalFundsEur: munis.reduce((s, m) => s + (m.total_contracted_eur || 0) + (m.subsidiary_total_eur || 0), 0),
+      withProjects: munis.filter(m => (m.total_contracted_eur || 0) + (m.subsidiary_total_eur || 0) > 0).length,
+      withoutProjects: munis.filter(m => (m.total_contracted_eur || 0) + (m.subsidiary_total_eur || 0) === 0).length,
       totalIndirectEur: munis.reduce((s, m) => s + (m.indirect_total_eur || 0), 0),
       withIndirect: munis.filter(m => (m.indirect_total_eur || 0) > 0).length,
       ...(() => {
@@ -56,9 +56,9 @@ function PageContent() {
       byRegion: munis.reduce((acc, m) => {
         const r = m.region || 'Iné';
         if (!acc[r]) acc[r] = { total: 0, count: 0, zero: 0 };
-        acc[r].total += m.total_contracted_eur || 0;
+        acc[r].total += (m.total_contracted_eur || 0) + (m.subsidiary_total_eur || 0);
         acc[r].count++;
-        if (!m.total_contracted_eur) acc[r].zero++;
+        if (!(m.total_contracted_eur || 0) && !(m.subsidiary_total_eur || 0)) acc[r].zero++;
         return acc;
       }, {} as Record<string, { total: number; count: number; zero: number }>),
     };
