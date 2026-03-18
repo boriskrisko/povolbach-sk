@@ -68,8 +68,8 @@ def main():
         # Indirect
         if ico in indirect:
             ind = indirect[ico]
-            projs = ind.get('projects', [])[:MAX_INDIRECT_PROJECTS]
-            m['indirect_total_eur'] = ind.get('total_eur', 0)
+            projs = ind.get('indirect_projects', ind.get('projects', []))[:MAX_INDIRECT_PROJECTS]
+            m['indirect_total_eur'] = ind.get('indirect_total_eur', ind.get('total_eur', 0))
             m['indirect_projects'] = projs
             changed = True
         else:

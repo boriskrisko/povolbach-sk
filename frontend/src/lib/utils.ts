@@ -1,6 +1,13 @@
 import { Municipality, MunicipalityMap, RegionStats } from './types';
 import type { Locale } from './translations';
 
+export function formatProjects(count: number, locale: Locale): string {
+  if (locale === 'en') return count === 1 ? '1 project' : `${count} projects`;
+  if (count === 1) return '1 projekt';
+  if (count >= 2 && count <= 4) return `${count} projekty`;
+  return `${count} projektov`;
+}
+
 export function formatAmount(amount: number, locale: Locale = 'sk'): string {
   if (locale === 'en') {
     if (amount === 0) return '€0';

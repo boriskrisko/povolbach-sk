@@ -25,6 +25,8 @@ export interface VucStats {
   projects: ProjectSummary[];
   subsidiary_total_eur: number;
   subsidiary_orgs: SubsidiaryOrg[];
+  irregularities_count?: number;
+  irregularities_total_eur?: number;
 }
 
 export interface Municipality {

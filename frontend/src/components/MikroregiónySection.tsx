@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { formatAmount } from '@/lib/utils';
+import { formatAmount, formatProjects } from '@/lib/utils';
 import { type Locale } from '@/lib/translations';
 import { useData } from '@/lib/DataContext';
 
@@ -124,7 +124,6 @@ function MikroModal({ cat, locale, onClose }: { cat: MikroCategory; locale: Loca
 
   const color = CAT_COLORS[cat.key] ?? '#94a3b8';
   const label = locale === 'sk' ? cat.label_sk : cat.label_en;
-  const projectsWord = locale === 'sk' ? 'projektov' : 'projects';
 
   return (
     <div
@@ -156,7 +155,7 @@ function MikroModal({ cat, locale, onClose }: { cat: MikroCategory; locale: Loca
               <div className="text-sm text-[#f8fafc]/90 mb-1 line-clamp-2">{e.name}</div>
               <div className="flex justify-between text-xs">
                 <span className="font-mono" style={{ color }}>{formatAmount(e.total_contracted_eur, locale)}</span>
-                <span className="text-[#94a3b8]/70">{e.projects_count} {projectsWord}</span>
+                <span className="text-[#94a3b8]/70">{formatProjects(e.projects_count, locale)}</span>
               </div>
             </div>
           ))}

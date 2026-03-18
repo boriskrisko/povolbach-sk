@@ -26,7 +26,16 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale }: 
   const is2127Available = periodAvailable['2127'];
 
   function handlePeriodChange(newPeriod: Period) {
+    const scrollY = window.scrollY;
     setPeriod(newPeriod);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: scrollY, behavior: 'instant' });
+      });
+    });
+    setTimeout(() => {
+      window.scrollTo({ top: scrollY, behavior: 'instant' });
+    }, 100);
   }
 
   useEffect(() => {

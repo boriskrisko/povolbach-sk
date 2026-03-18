@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Municipality } from '@/lib/types';
-import { formatAmount } from '@/lib/utils';
+import { formatAmount, formatProjects } from '@/lib/utils';
 import { useData } from '@/lib/DataContext';
 import { useEffect } from 'react';
 import { t, type Locale } from '@/lib/translations';
@@ -180,7 +180,7 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
                   <div className="text-sm text-[#f8fafc]/90 mb-1 line-clamp-2">{org.name}</div>
                   <div className="flex justify-between text-xs">
                     <span className="text-[#10b981] font-mono">{formatAmount(org.total_contracted_eur, locale)}</span>
-                    <span className="text-[#94a3b8]/70">{org.projects_count} {tr.modal_projects}</span>
+                    <span className="text-[#94a3b8]/70">{formatProjects(org.projects_count, locale)}</span>
                   </div>
                 </div>
               ))}

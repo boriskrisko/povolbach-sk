@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { VucStats } from '@/lib/types';
-import { formatAmount } from '@/lib/utils';
+import { formatAmount, formatProjects } from '@/lib/utils';
 import ViewModeToggle from './ViewModeToggle';
 import VucModal from './VucModal';
 import { type Locale } from '@/lib/translations';
@@ -97,7 +97,7 @@ export default function VucSection({ viewMode, setViewMode, locale }: Props) {
                     {formatAmount(v.total_contracted_eur, locale)}
                   </div>
                   <div className="text-[#94a3b8] text-xs">
-                    {v.projects_active + v.projects_completed} {locale === 'sk' ? 'projektov' : 'projects'} · {directLabel}
+                    {formatProjects(v.projects_active + v.projects_completed, locale)} · {directLabel}
                   </div>
                   {v.subsidiary_total_eur > 0 && (
                     <div className="text-[#10b981] text-xs mt-1.5">
