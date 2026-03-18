@@ -5,11 +5,12 @@ Method: RPO full export from ŠÚSR S3 bucket (rpo_founders.json)
 Rule: If entity stakeholder IČO matches municipality → subsidiary
 Zero name matching. IČO only.
 
-attributed_muni: 667
+attributed_muni: 671
 attributed_vuc: 264
-no_rpo_match: 4807
+multi_founder: 42
+no_rpo_match: 4803
 
-Municipalities with subsidiaries: 450
+Municipalities with subsidiaries: 631
 VÚCs with subsidiaries: 8
 
 UNRESOLVED ENTRIES:
@@ -519,10 +520,8 @@ NO_RPO	31420249	Creatív spol. s r.o.	€92,720
 NO_RPO	31420796	LOWA PRODUCTION s. r. o.	€1,400,000
 NO_RPO	31420915	Certipo spol. s r. o.	€199,967
 NO_RPO	31420991	MENERT - THERM, s.r.o.	€2,292,425
-NO_RPO	31421695	TOMA, s.r.o.	€10,630,901
 NO_RPO	31422802	PYRONOVA s. r. o.	€131,656
 NO_RPO	31423736	HYKEMONT spol. s r.o.	€3,144,950
-NO_RPO	31423876	REKO RECYCLING spol. s r.o.	€0
 NO_RPO	31425712	KONEX - spol. s r.o.	€504,900
 NO_RPO	31426409	PAVKAS s.r.o.	€210,445
 NO_RPO	31427294	NOVOFRUCT SK, s.r.o.	€405,000
@@ -947,7 +946,6 @@ NO_RPO	34144790	SLOVENSKÉ LIEČEBNÉ KÚPELE PIEŠŤANY, a.s.	€174,631
 NO_RPO	34145095	HP STROJÁRNE, spol. s r.o.	€287,500
 NO_RPO	34146300	WINTOPERK, s.r.o.	€205,000
 NO_RPO	34149562	FABRICK SK, s.r.o.	€652,530
-NO_RPO	34152644	SOUTHERM, s.r.o.	€1,496,935
 NO_RPO	34153004	RM Gastro - JAZ s. r. o.	€50,574
 NO_RPO	34217461	Juraj Románek ml.	€99,690
 NO_RPO	34229183	Ing. Radovan Vološčuk - ALWO	€113,932
@@ -1269,7 +1267,6 @@ NO_RPO	36040690	Bryndziareň a syráreň, s.r.o.	€180,503
 NO_RPO	36040720	JT - PARTNER, s.r.o.	€15,464,042
 NO_RPO	36042161	AGRO CS Slovakia, a.s.	€4,003,568
 NO_RPO	36042528	EIBEN s.r.o.	€320,000
-NO_RPO	36042544	Veolia Energia Žiar nad Hronom, s.r.o.	€1,033,068
 NO_RPO	36042552	KODL s.r.o.	€133,545
 NO_RPO	36043532	ActivIT, s.r.o.	€63,856
 NO_RPO	36045047	ALACO, s.r.o.	€395,147

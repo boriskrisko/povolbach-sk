@@ -118,72 +118,96 @@ def main():
         all_matches.extend(matches)
         print(f'-> {len(matches)} matches', file=sys.stderr, flush=True)
 
-    # Build the founder lookup: for each entity, pick the CURRENT (no validTo or latest)
-    # relationship to a municipality
-    founders = {}
+    # Build founder lookup: for each entity, collect ALL unique municipal/VÚC
+    # stakeholder IČOs. An entity can have multiple founders (joint ventures).
+    # Per founder, keep the most current entry (prefer no validTo over expired).
+    from collections import defaultdict
+
+    # entity_ico -> stakeholder_ico -> best entry
+    by_entity_founder = defaultdict(dict)
     for m in all_matches:
         eico = m['entity_ico']
+        sico = m['stakeholder_ico']
         valid_to = m['valid_to']
+        vt_clean = valid_to if valid_to and valid_to != '1800-01-01' else ''
 
-        # Skip if we already have a "current" entry for this entity+municipality pair
-        if eico in founders:
-            existing = founders[eico]
+        if sico in by_entity_founder[eico]:
+            existing_vt = by_entity_founder[eico][sico]['valid_to']
             # Prefer current (no validTo) over historical
-            if not existing['valid_to'] or existing['valid_to'] == 'current':
+            if not existing_vt:
                 continue
-            # If new entry is current, replace
-            if not valid_to or valid_to == 'current':
-                pass  # will replace below
-            # Otherwise keep the latest validTo
-            elif valid_to <= existing['valid_to']:
+            if not vt_clean:
+                pass  # will replace
+            elif vt_clean <= existing_vt:
                 continue
 
-        founders[eico] = {
-            'founder_ico': m['stakeholder_ico'],
+        by_entity_founder[eico][sico] = {
+            'founder_ico': sico,
             'founder_name': m['stakeholder_name'],
             'entity_name': m['entity_name'],
             'relationship': m['stakeholder_type'],
-            'valid_to': valid_to if valid_to and valid_to != '1800-01-01' else '',
+            'valid_to': vt_clean,
         }
 
-    # Filter to only CURRENT relationships (no validTo or validTo in future)
-    current_founders = {}
-    historical_count = 0
-    for eico, info in founders.items():
-        vt = info['valid_to']
-        if not vt or vt >= '2024-01-01':  # Current or recent
-            current_founders[eico] = {
-                'founder_ico': info['founder_ico'],
-                'founder_name': info['founder_name'],
-                'entity_name': info['entity_name'],
-                'relationship': info['relationship'],
-            }
+    # Flatten: each entity gets a list of ALL its municipal/VÚC founders
+    # For single-founder entities (vast majority), output is same as before
+    founders = {}
+    multi_founder_count = 0
+    for eico, founder_map in by_entity_founder.items():
+        entries = list(founder_map.values())
+        if len(entries) == 1:
+            founders[eico] = entries[0]
         else:
-            historical_count += 1
+            multi_founder_count += 1
+            # Store all founders
+            founders[eico] = {
+                'founders': [{
+                    'founder_ico': e['founder_ico'],
+                    'founder_name': e['founder_name'],
+                    'relationship': e['relationship'],
+                    'valid_to': e['valid_to'],
+                } for e in entries],
+                'entity_name': entries[0]['entity_name'],
+                # Primary founder: prefer current, then latest validTo
+                'founder_ico': next(
+                    (e['founder_ico'] for e in entries if not e['valid_to']),
+                    max(entries, key=lambda e: e['valid_to'] or '')['founder_ico']
+                ),
+                'founder_name': next(
+                    (e['founder_name'] for e in entries if not e['valid_to']),
+                    max(entries, key=lambda e: e['valid_to'] or '')['founder_name']
+                ),
+                'relationship': next(
+                    (e['relationship'] for e in entries if not e['valid_to']),
+                    max(entries, key=lambda e: e['valid_to'] or '')['relationship']
+                ),
+                'valid_to': '',  # at least one is current if any is
+            }
 
-    print(f'\nTotal unique entities with municipal stakeholder: {len(founders)}', file=sys.stderr)
-    print(f'Current relationships: {len(current_founders)}', file=sys.stderr)
-    print(f'Historical (expired before 2024): {historical_count}', file=sys.stderr)
+    print(f'\nTotal unique entities: {len(founders)}', file=sys.stderr)
+    print(f'Single-founder: {len(founders) - multi_founder_count}', file=sys.stderr)
+    print(f'Multi-founder (joint ventures): {multi_founder_count}', file=sys.stderr)
 
     # Count by relationship type
     type_counts = {}
-    for info in current_founders.values():
+    for info in founders.values():
         rel = info['relationship']
         type_counts[rel] = type_counts.get(rel, 0) + 1
     print('\nBy relationship type:', file=sys.stderr)
     for rel, count in sorted(type_counts.items(), key=lambda x: -x[1]):
         print(f'  {rel}: {count}', file=sys.stderr)
 
-    # Save
+    # Save — no date filter, include all (expired ownership still matters for
+    # historical EU fund attribution)
     with open(OUTPUT, 'w', encoding='utf-8') as f:
-        json.dump(current_founders, f, ensure_ascii=False, indent=2)
+        json.dump(founders, f, ensure_ascii=False, indent=2)
 
-    print(f'\nSaved to {OUTPUT}', file=sys.stderr)
+    print(f'\nSaved {len(founders)} entries to {OUTPUT}', file=sys.stderr)
 
     # Verify Partizánske test case
     test_ico = '36311693'
-    if test_ico in current_founders:
-        info = current_founders[test_ico]
+    if test_ico in founders:
+        info = founders[test_ico]
         print(f'\nTest: {test_ico} ({info["entity_name"]}) -> {info["founder_ico"]} ({info["founder_name"]}) [{info["relationship"]}]', file=sys.stderr)
     else:
         print(f'\nWARNING: Test IČO {test_ico} not found!', file=sys.stderr)

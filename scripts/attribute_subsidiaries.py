@@ -105,7 +105,11 @@ def main():
             log_lines.append(f'NO_RPO\t{ico}\t{name}\t€{total_eur:,.0f}')
             continue
 
-        founder_ico = rpo_entry['founder_ico']
+        # Collect all founder IČOs (single or multi-founder)
+        if 'founders' in rpo_entry:
+            founder_icos = [f['founder_ico'] for f in rpo_entry['founders']]
+        else:
+            founder_icos = [rpo_entry['founder_ico']]
 
         org_entry = {
             'ico': ico,
@@ -115,23 +119,35 @@ def main():
             'rpo_relationship': rpo_entry.get('relationship', ''),
         }
 
-        if founder_ico in muni_set:
-            # Municipal subsidiary
-            muni_name = muni_stats.get(founder_ico, {}).get('official_name', '')
-            by_muni[founder_ico]['ico'] = founder_ico
-            by_muni[founder_ico]['municipality'] = muni_name
-            by_muni[founder_ico]['subsidiary_orgs'].append(org_entry)
-            by_muni[founder_ico]['subsidiary_total_eur'] += total_eur
-            counters['attributed_muni'] += 1
-        elif founder_ico in vuc_set:
-            # VÚC subsidiary
-            by_vuc[founder_ico]['subsidiary_orgs'].append(org_entry)
-            by_vuc[founder_ico]['subsidiary_total_eur'] += total_eur
-            counters['attributed_vuc'] += 1
+        # Attribute to ALL founding municipalities/VÚCs
+        # For multi-founder: each founder gets the full amount (it's their subsidiary)
+        # The entity is counted once per founder for org lists, but EUR is not split
+        attributed = False
+        for founder_ico in founder_icos:
+            if founder_ico in muni_set:
+                muni_name = muni_stats.get(founder_ico, {}).get('official_name', '')
+                by_muni[founder_ico]['ico'] = founder_ico
+                by_muni[founder_ico]['municipality'] = muni_name
+                by_muni[founder_ico]['subsidiary_orgs'].append(org_entry)
+                by_muni[founder_ico]['subsidiary_total_eur'] += total_eur
+                attributed = True
+            elif founder_ico in vuc_set:
+                by_vuc[founder_ico]['subsidiary_orgs'].append(org_entry)
+                by_vuc[founder_ico]['subsidiary_total_eur'] += total_eur
+                attributed = True
+
+        if attributed:
+            # Count by primary founder type
+            primary_ico = founder_icos[0]
+            if primary_ico in muni_set:
+                counters['attributed_muni'] += 1
+            elif primary_ico in vuc_set:
+                counters['attributed_vuc'] += 1
+            if len(founder_icos) > 1:
+                counters['multi_founder'] += 1
         else:
-            # Founder is neither municipality nor VÚC (e.g. another company)
             counters['non_muni_founder'] += 1
-            log_lines.append(f'NON_MUNI_FOUNDER\t{ico}\t{name}\tfounder={founder_ico}\t{rpo_entry.get("founder_name","")}')
+            log_lines.append(f'NON_MUNI_FOUNDER\t{ico}\t{name}\tfounder={founder_icos[0]}\t{rpo_entry.get("founder_name","")}')
 
     # Sort subsidiary orgs by EUR desc
     for d in by_muni.values():

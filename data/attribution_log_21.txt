@@ -5,11 +5,12 @@ Method: RPO full export from ŠÚSR S3 bucket (rpo_founders.json)
 Rule: If entity stakeholder IČO matches municipality → subsidiary
 Zero name matching. IČO only.
 
-attributed_muni: 78
+attributed_muni: 79
 attributed_vuc: 66
-no_rpo_match: 573
+multi_founder: 12
+no_rpo_match: 572
 
-Municipalities with subsidiaries: 55
+Municipalities with subsidiaries: 122
 VÚCs with subsidiaries: 8
 
 UNRESOLVED ENTRIES:
@@ -529,7 +530,6 @@ NO_RPO	36479560	Slovenská autobusová doprava Poprad, akciová spoločnosť	€
 NO_RPO	30812682	Rada pre poradenstvo v sociálnej práci	€278,496
 NO_RPO	36064220	Úrad na ochranu osobných údajov Slovenskej republiky	€1,447,704
 NO_RPO	30232295	Univerzita Mateja Bela v Banskej Bystrici	€488,840
-NO_RPO	36016411	Dopravný podnik mesta Banská Bystrica, a.s.	€4,879,074
 NO_RPO	31771815	BROZ - ochranárske združenie	€2,505,777
 NO_RPO	13644289	Střední škola polytechnická, Havířov-Šumbark, příspěvková organizace	€366,938
 NO_RPO	00358011	Národná zoologická záhrada Bojnice	€1,504,883

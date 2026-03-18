@@ -135,9 +135,16 @@
         "total_contracted_eur": 68073.24,
         "projects_count": 0,
         "rpo_relationship": "Zriaďovateľ"
+      },
+      {
+        "ico": "51110369",
+        "name": "Integrovaná doprava Žilinského a Trenčianskeho kraja, s. r. o.",
+        "total_contracted_eur": 44212.75,
+        "projects_count": 0,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
       }
     ],
-    "subsidiary_total_eur": 6153511.5200000005
+    "subsidiary_total_eur": 6197724.2700000005
   },
   "37870475": {
     "ico": "37870475",
@@ -382,6 +389,13 @@
         "rpo_relationship": "Zriaďovateľ"
       },
       {
+        "ico": "52681734",
+        "name": "IDS Východ, s.r.o.",
+        "total_contracted_eur": 169105.4,
+        "projects_count": 0,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+      },
+      {
         "ico": "37947541",
         "name": "Stredná odborná škola Svit",
         "total_contracted_eur": 160735.71,
@@ -501,7 +515,7 @@
         "rpo_relationship": "Zriaďovateľ"
       }
     ],
-    "subsidiary_total_eur": 45925288.1
+    "subsidiary_total_eur": 46094393.5
   },
   "37828100": {
     "ico": "37828100",
@@ -1031,9 +1045,16 @@
         "total_contracted_eur": 65980.07,
         "projects_count": 0,
         "rpo_relationship": "Zriaďovateľ"
+      },
+      {
+        "ico": "51110369",
+        "name": "Integrovaná doprava Žilinského a Trenčianskeho kraja, s. r. o.",
+        "total_contracted_eur": 44212.75,
+        "projects_count": 0,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
       }
     ],
-    "subsidiary_total_eur": 15881288.079999998
+    "subsidiary_total_eur": 15925500.829999998
   },
   "37861298": {
     "ico": "37861298",

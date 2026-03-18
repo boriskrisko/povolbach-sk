@@ -18,6 +18,13 @@
         "rpo_relationship": "Zriaďovateľ"
       },
       {
+        "ico": "51110369",
+        "name": "Integrovaná doprava Žilinského kraja, s.r.o.",
+        "total_contracted_eur": 554347.0,
+        "projects_count": 1,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+      },
+      {
         "ico": "34059199",
         "name": "Trenčianske múzeum v Trenčíne",
         "total_contracted_eur": 390466.65,
@@ -46,7 +53,7 @@
         "rpo_relationship": "Zriaďovateľ"
       }
     ],
-    "subsidiary_total_eur": 6322930.260000001
+    "subsidiary_total_eur": 6877277.260000001
   },
   "37870475": {
     "ico": "37870475",
@@ -256,6 +263,13 @@
         "rpo_relationship": "Zriaďovateľ"
       },
       {
+        "ico": "51110369",
+        "name": "Integrovaná doprava Žilinského kraja, s.r.o.",
+        "total_contracted_eur": 554347.0,
+        "projects_count": 1,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+      },
+      {
         "ico": "42054575",
         "name": "Správa ciest Žilinského samosprávneho kraja",
         "total_contracted_eur": 499689.78,
@@ -291,7 +305,7 @@
         "rpo_relationship": "Zriaďovateľ"
       }
     ],
-    "subsidiary_total_eur": 17960905.890000004
+    "subsidiary_total_eur": 18515252.890000004
   },
   "37861298": {
     "ico": "37861298",
