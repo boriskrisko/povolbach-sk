@@ -11,6 +11,8 @@ export interface SubsidiaryOrg {
   name: string;
   total_contracted_eur: number;
   projects_count: number;
+  co_owners?: number;
+  full_amount_eur?: number;
 }
 
 export interface VucStats {

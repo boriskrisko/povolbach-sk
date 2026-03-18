@@ -168,7 +168,9 @@ export default function VucModal({ vuc, onClose, locale }: Props) {
         )}
 
         {/* Subsidiary orgs */}
-        {subTotal > 0 && topSubsidiaryOrgs.length > 0 && (
+        {subTotal > 0 && topSubsidiaryOrgs.length > 0 && (() => {
+          const hasJointVentures = topSubsidiaryOrgs.some(o => (o.co_owners || 0) > 1);
+          return (
           <div className="mb-6">
             <h3 className="text-sm font-medium text-[#10b981]/80 mb-1 uppercase tracking-wider flex items-center gap-1.5">
               {locale === 'sk' ? 'ORGANIZÁCIE V ZRIAĎOVATEĽSKEJ PÔSOBNOSTI' : 'ORGANIZATIONS UNDER REGIONAL JURISDICTION'}
@@ -183,11 +185,26 @@ export default function VucModal({ vuc, onClose, locale }: Props) {
                     <span className="text-[#10b981] font-mono">{formatAmount(org.total_contracted_eur, locale)}</span>
                     <span className="text-[#94a3b8]/70">{formatProjects(org.projects_count, locale)}</span>
                   </div>
+                  {(org.co_owners || 0) > 1 && org.full_amount_eur && (
+                    <div className="text-[10px] text-[#94a3b8]/50 mt-1">
+                      ↳ {locale === 'sk'
+                        ? `podiel 1/${org.co_owners} z ${formatAmount(org.full_amount_eur, locale)} (spoločný podnik ${org.co_owners} obcí)`
+                        : `share 1/${org.co_owners} of ${formatAmount(org.full_amount_eur, locale)} (joint venture of ${org.co_owners} municipalities)`}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
+            {hasJointVentures && (
+              <p className="text-[10px] text-[#94a3b8]/40 mt-2">
+                {locale === 'sk'
+                  ? 'Sumy spoločných podnikov sú rozdelené proporcionálne medzi spoluvlastníkov.'
+                  : 'Joint venture amounts are split proportionally among co-owners.'}
+              </p>
+            )}
           </div>
-        )}
+          );
+        })()}
 
         {/* Disclaimer */}
         <div className="text-xs text-[#94a3b8] bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e] mb-8">
