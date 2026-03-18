@@ -67,13 +67,18 @@ export default function StatsContext({ locale, globalStats }: Props) {
 
   if (loading || !globalStats) return null;
 
-  const { totalFundsEur: totalEur, withProjects, withoutProjects, totalMunicipalities } = globalStats;
+  const { totalFundsEur: totalEur, withProjects, withoutProjects, totalMunicipalities, totalIndirectEur, withIndirect } = globalStats;
   const withPct = Math.round((withProjects / totalMunicipalities) * 100);
   const withoutPct = 100 - withPct;
 
+  const indirectLabel = locale === 'sk' ? 'štátnych investícií v obciach' : 'state investments in municipalities';
+  const indirectNote = locale === 'sk'
+    ? 'projekty ministerstiev a štátnych agentúr realizované na území obcí · nezahrnuté v hodnotení samospráv'
+    : 'projects by ministries and state agencies carried out in municipal territories · not included in municipal scores';
+
   return (
     <section className="py-24 px-4 max-w-5xl mx-auto">
-      <div className="grid md:grid-cols-3 gap-6 mb-12">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
         {/* Total EUR */}
         <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-8 text-center">
           <div
@@ -107,6 +112,18 @@ export default function StatsContext({ locale, globalStats }: Props) {
           </div>
           <div className="text-[#f8fafc] text-lg font-medium">({withoutPct}%)</div>
           <div className="text-[#94a3b8] mt-2">{tr.without_project}</div>
+        </div>
+
+        {/* State investments */}
+        <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-8 text-center">
+          <div
+            className="text-4xl md:text-5xl font-bold mb-2"
+            style={{ color: '#6366f1', fontFamily: 'JetBrains Mono, monospace' }}
+          >
+            {formatBillions(totalIndirectEur, locale)}
+          </div>
+          <div className="text-[#94a3b8] mt-2">{indirectLabel}</div>
+          <div className="text-[#94a3b8]/50 text-xs mt-2 leading-relaxed">{indirectNote}</div>
         </div>
       </div>
 

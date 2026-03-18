@@ -78,5 +78,7 @@ export interface GlobalStats {
   totalFundsEur: number;
   withProjects: number;
   withoutProjects: number;
+  totalIndirectEur: number;
+  withIndirect: number;
   byRegion: Record<string, { total: number; count: number; zero: number }>;
 }

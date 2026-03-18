@@ -28,6 +28,8 @@ function PageContent() {
       totalFundsEur: munis.reduce((s, m) => s + (m.total_contracted_eur || 0), 0),
       withProjects: munis.filter(m => m.total_contracted_eur > 0).length,
       withoutProjects: munis.filter(m => m.total_contracted_eur === 0).length,
+      totalIndirectEur: munis.reduce((s, m) => s + (m.indirect_total_eur || 0), 0),
+      withIndirect: munis.filter(m => (m.indirect_total_eur || 0) > 0).length,
       byRegion: munis.reduce((acc, m) => {
         const r = m.region || 'Iné';
         if (!acc[r]) acc[r] = { total: 0, count: 0, zero: 0 };
