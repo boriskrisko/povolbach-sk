@@ -9,6 +9,7 @@ import HeroSearch from '@/components/HeroSearch';
 import Leaderboard from '@/components/Leaderboard';
 const SlovakiaMap = dynamic(() => import('@/components/SlovakiaMap'), { ssr: false });
 const VucSection = dynamic(() => import('@/components/VucSection'), { ssr: false });
+const MikroregiónySection = dynamic(() => import('@/components/MikroregiónySection'), { ssr: false });
 import StatsContext from '@/components/StatsContext';
 import Footer from '@/components/Footer';
 import MunicipalityModal from '@/components/MunicipalityModal';
@@ -37,6 +38,7 @@ export default function Home() {
           setViewMode={setViewMode}
           locale={locale}
         />
+        <MikroregiónySection locale={locale} />
         <SlovakiaMap
           onMunicipalityClick={setSelectedMunicipality}
           viewMode={viewMode}

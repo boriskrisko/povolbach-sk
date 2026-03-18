@@ -1,0 +1,614 @@
+{
+  "total_count": 94,
+  "total_contracted_eur": 127741074.81,
+  "categories": [
+    {
+      "key": "voda",
+      "label_sk": "Vodné hospodárstvo",
+      "label_en": "Water & Sewage",
+      "desc_sk": "Kanalizácie, čistiarne odpadových vôd, vodovody",
+      "desc_en": "Sewage networks, wastewater treatment, water supply",
+      "count": 8,
+      "total_contracted_eur": 71623013.48,
+      "entries": [
+        {
+          "ico": "36067725",
+          "name": "ZDRUŽENIE OBCÍ ENVIROPARK POMORAVIE",
+          "total_contracted_eur": 31467228.25,
+          "projects_count": 3
+        },
+        {
+          "ico": "42120241",
+          "name": "Združenie obcí AGLOMERÁCIA HRONOVCE",
+          "total_contracted_eur": 16461587.42,
+          "projects_count": 1
+        },
+        {
+          "ico": "50060571",
+          "name": "Združenie obcí kanalizácia Orechová Potôň - Vieska - Michal na Ostrove",
+          "total_contracted_eur": 11239683.07,
+          "projects_count": 1
+        },
+        {
+          "ico": "42298296",
+          "name": "Združenie obcí Veselé ČOV",
+          "total_contracted_eur": 4686932.99,
+          "projects_count": 2
+        },
+        {
+          "ico": "51237814",
+          "name": "Združenie obcí \"Podzoborská hrádza\"",
+          "total_contracted_eur": 3779901.37,
+          "projects_count": 4
+        },
+        {
+          "ico": "42298644",
+          "name": "Združenie obcí Kanalizácia Vrbové - Krakovany",
+          "total_contracted_eur": 3732750.38,
+          "projects_count": 1
+        },
+        {
+          "ico": "37907387",
+          "name": "\"MIKROREGIÓN HRIČOV\" združenie obcí",
+          "total_contracted_eur": 155000.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "31773966",
+          "name": "Združenie obcí Záhorská Ves a Suchohrad pre výstavbu a prevádzkovanie ČOV a kanalizáciu v obciach",
+          "total_contracted_eur": 99930.0,
+          "projects_count": 1
+        }
+      ]
+    },
+    {
+      "key": "odpad",
+      "label_sk": "Odpadové hospodárstvo",
+      "label_en": "Waste Management",
+      "desc_sk": "Triedenie a likvidácia odpadu, zberné dvory",
+      "desc_en": "Waste sorting, disposal, collection facilities",
+      "count": 4,
+      "total_contracted_eur": 6913114.0200000005,
+      "entries": [
+        {
+          "ico": "35679361",
+          "name": "Združenie obcí pre likvidáciu odpadu Poltár",
+          "total_contracted_eur": 4340324.03,
+          "projects_count": 2
+        },
+        {
+          "ico": "50305611",
+          "name": "Združenie obcí Holeška na triedenie a nakladanie s odpadmi",
+          "total_contracted_eur": 2319006.66,
+          "projects_count": 1
+        },
+        {
+          "ico": "42157595",
+          "name": "Združenie obcí pre hospodárenie s odpadom v Malokarpatskom patnerstve",
+          "total_contracted_eur": 137900.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "31913954",
+          "name": "Skládka TKO Vyšehradné - záujmové združenie obcí Nitrianske Pravno, Tužina, Pravenec, Kľačno, Malinová, Poluvsie a Chvojnica",
+          "total_contracted_eur": 115883.33,
+          "projects_count": 1
+        }
+      ]
+    },
+    {
+      "key": "doprava",
+      "label_sk": "Doprava a cestovný ruch",
+      "label_en": "Transport & Tourism",
+      "desc_sk": "Cyklotrasy, cesty, turistická infraštruktúra",
+      "desc_en": "Cycling paths, roads, tourist infrastructure",
+      "count": 1,
+      "total_contracted_eur": 1699981.77,
+      "entries": [
+        {
+          "ico": "51057051",
+          "name": "Združenie obcí CykloEko",
+          "total_contracted_eur": 1699981.77,
+          "projects_count": 1
+        }
+      ]
+    },
+    {
+      "key": "rozvoj",
+      "label_sk": "Regionálny rozvoj",
+      "label_en": "Regional Development",
+      "desc_sk": "Rozvojové projekty, spolupráca obcí, územný rozvoj",
+      "desc_en": "Development projects, inter-municipal cooperation",
+      "count": 81,
+      "total_contracted_eur": 47504965.54,
+      "entries": [
+        {
+          "ico": "52820254",
+          "name": "Združenie obcí - Kráľová pri Senci – Kostolná pri Dunaji - Hrubá Borša",
+          "total_contracted_eur": 10193963.41,
+          "projects_count": 1
+        },
+        {
+          "ico": "45738807",
+          "name": "Mikroregión 11 PLUS",
+          "total_contracted_eur": 4076745.44,
+          "projects_count": 1
+        },
+        {
+          "ico": "00584614",
+          "name": "Združenie miest a obcí Slovenska",
+          "total_contracted_eur": 3813274.75,
+          "projects_count": 1
+        },
+        {
+          "ico": "70285195",
+          "name": "Sdružení obcí mikroregionu Valašské Klobucko",
+          "total_contracted_eur": 2803040.85,
+          "projects_count": 1
+        },
+        {
+          "ico": "71193821",
+          "name": "Mikroregion Slezská Harta",
+          "total_contracted_eur": 2651867.73,
+          "projects_count": 2
+        },
+        {
+          "ico": "37985001",
+          "name": "Združenie obcí Mikroregión Klátovské rameno - Tőkési-ág Kistérség",
+          "total_contracted_eur": 1664311.05,
+          "projects_count": 2
+        },
+        {
+          "ico": "42280788",
+          "name": "Združenie obcí Púchovská dolina",
+          "total_contracted_eur": 1458202.43,
+          "projects_count": 2
+        },
+        {
+          "ico": "50428438",
+          "name": "Združenie obcí mestskej oblasti Trnava",
+          "total_contracted_eur": 1355821.27,
+          "projects_count": 2
+        },
+        {
+          "ico": "51007894",
+          "name": "PRAMEŇ združenie obcí Konská, Kunerad, Kamenná Poruba, Stránske, Zbyňov",
+          "total_contracted_eur": 1315577.89,
+          "projects_count": 2
+        },
+        {
+          "ico": "37821849",
+          "name": "Združenie obcí Mikroregión pri Slanej",
+          "total_contracted_eur": 1194979.43,
+          "projects_count": 1
+        },
+        {
+          "ico": "42338352",
+          "name": "\"Mikroregión Hurbanovo\"",
+          "total_contracted_eur": 841740.07,
+          "projects_count": 5
+        },
+        {
+          "ico": "42120594",
+          "name": "Mikroregión TRÍBEČSKO",
+          "total_contracted_eur": 836074.92,
+          "projects_count": 5
+        },
+        {
+          "ico": "50630491",
+          "name": "Združenie obcí Modra - Šenkvice",
+          "total_contracted_eur": 780999.7,
+          "projects_count": 1
+        },
+        {
+          "ico": "37847465",
+          "name": "Združenie obcí VIESKY",
+          "total_contracted_eur": 657417.38,
+          "projects_count": 1
+        },
+        {
+          "ico": "42170168",
+          "name": "Združenie obcí JURAVA",
+          "total_contracted_eur": 642666.12,
+          "projects_count": 2
+        },
+        {
+          "ico": "42025184",
+          "name": "Občianske združenie Miestna akčná skupina Rozvoj Hornej Nitry, o. z.",
+          "total_contracted_eur": 626698.72,
+          "projects_count": 3
+        },
+        {
+          "ico": "42125618",
+          "name": "Miestna akčná skupina Spoločenstva obcí topoľčiansko-duchonského mikroregiónu",
+          "total_contracted_eur": 603696.5,
+          "projects_count": 5
+        },
+        {
+          "ico": "42119430",
+          "name": "Občianske združenie pre rozvoj mikroregiónu \"Požitavie - Širočina\"",
+          "total_contracted_eur": 535778.09,
+          "projects_count": 5
+        },
+        {
+          "ico": "37915771",
+          "name": "Združenie obcí bielokarpatsko-trenčianskeho mikroregiónu",
+          "total_contracted_eur": 514668.17,
+          "projects_count": 2
+        },
+        {
+          "ico": "42196124",
+          "name": "Združenie obcí Kľakovskej doliny",
+          "total_contracted_eur": 402910.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "36097314",
+          "name": "Združenie obcí dolného Žitného Ostrova",
+          "total_contracted_eur": 363304.08,
+          "projects_count": 2
+        },
+        {
+          "ico": "36103942",
+          "name": "Združenie mikroregiónu SVORNOSŤ",
+          "total_contracted_eur": 338386.03,
+          "projects_count": 5
+        },
+        {
+          "ico": "70956545",
+          "name": "Dobrovolný svazek obcí Mikroregion Valašskomeziříčsko-Kelečsko",
+          "total_contracted_eur": 256125.88,
+          "projects_count": 2
+        },
+        {
+          "ico": "51015013",
+          "name": "Ekocentrum Dolná Orava - združenie obcí",
+          "total_contracted_eur": 234221.16,
+          "projects_count": 2
+        },
+        {
+          "ico": "30795915",
+          "name": "Mikroregión Červený Kameň, združenie obcí",
+          "total_contracted_eur": 226402.64,
+          "projects_count": 3
+        },
+        {
+          "ico": "51017873",
+          "name": "Združenie obcí pod Inovcom",
+          "total_contracted_eur": 210509.4,
+          "projects_count": 1
+        },
+        {
+          "ico": "35675926",
+          "name": "Koordinačné združenie obcí mikroregiónu PODPOĽANIE",
+          "total_contracted_eur": 209935.6,
+          "projects_count": 1
+        },
+        {
+          "ico": "42024170",
+          "name": "Združenie obcí Pod Bielymi Karpatami",
+          "total_contracted_eur": 208700.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "51020181",
+          "name": "Združenie obcí Lužianka",
+          "total_contracted_eur": 206944.8,
+          "projects_count": 1
+        },
+        {
+          "ico": "35572281",
+          "name": "Združenie miest a obcí Použia",
+          "total_contracted_eur": 203338.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "37905431",
+          "name": "„ZDRUŽENIE MIEST A OBCÍ HORNÁ ORAVA\"",
+          "total_contracted_eur": 202740.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "42093678",
+          "name": "Mikroregión obcí ROŇAVA - združenie obcí",
+          "total_contracted_eur": 199935.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "35999021",
+          "name": "Mikroregión Hlinické Pohronie",
+          "total_contracted_eur": 199540.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "50990624",
+          "name": "Združenie obcí Čipčie",
+          "total_contracted_eur": 197939.99,
+          "projects_count": 1
+        },
+        {
+          "ico": "37870327",
+          "name": "Združenie mikroregiónu BESKYD",
+          "total_contracted_eur": 197702.6,
+          "projects_count": 1
+        },
+        {
+          "ico": "31915698",
+          "name": "Združenie obcí stredného Liptova EKOLÓG",
+          "total_contracted_eur": 195000.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "50998374",
+          "name": "Združenie obcí ONDAVA",
+          "total_contracted_eur": 188499.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "37917773",
+          "name": "Združenie obcí Handlovskej doliny",
+          "total_contracted_eur": 186700.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "37915908",
+          "name": "Regionálne združenie obcí Magura - Strážov",
+          "total_contracted_eur": 186500.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "45793727",
+          "name": "Mikroregión ADELA",
+          "total_contracted_eur": 184234.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "37825623",
+          "name": "Mikroregión obcí strehovskej doliny",
+          "total_contracted_eur": 183127.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "35560428",
+          "name": "SEZO - Spiš, združenie obcí",
+          "total_contracted_eur": 183000.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "37907522",
+          "name": "Združenie obcí - Čistý Liptov",
+          "total_contracted_eur": 181999.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "36121363",
+          "name": "Združenie obcí Mikroregión Machnáč - Inovec",
+          "total_contracted_eur": 181800.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "35628294",
+          "name": "Spoločenstvo obcí topoľčiansko-duchonského mikroregiónu - združenie obcí",
+          "total_contracted_eur": 180500.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "36092142",
+          "name": "Mikroregion Branč - združenie obcí",
+          "total_contracted_eur": 180000.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "35555157",
+          "name": "Združenie obcí Torysského mikroregiónu",
+          "total_contracted_eur": 179100.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "35999659",
+          "name": "Združenie obcí Mikroregión Pod Panským Dielom",
+          "total_contracted_eur": 178628.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "35556439",
+          "name": "BURÓD, združenie obcí",
+          "total_contracted_eur": 176235.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "37905805",
+          "name": "MIKROREGIÓN BYSTRICKÁ DOLINA",
+          "total_contracted_eur": 176200.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "37916718",
+          "name": "Združenie obcí - Mikroregión Bošáčka",
+          "total_contracted_eur": 176000.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "36091995",
+          "name": "Združenie obcí Medzičilizia",
+          "total_contracted_eur": 175400.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "37804880",
+          "name": "Združenie obcí Mikroregión Terchovská dolina",
+          "total_contracted_eur": 173898.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "35656514",
+          "name": "Združenie obcí Mikroregiónu Chopok - juh",
+          "total_contracted_eur": 172082.3,
+          "projects_count": 1
+        },
+        {
+          "ico": "37902415",
+          "name": "ZDRUŽENIE OBCÍ HAVRAN - Dolný Liptov",
+          "total_contracted_eur": 167638.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "37965468",
+          "name": "Združenie obcí pre separovaný zber \"Hont - Poiplie\"",
+          "total_contracted_eur": 165719.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "45028249",
+          "name": "Mikroregión Východný Hont, združenie obcí",
+          "total_contracted_eur": 165000.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "30797209",
+          "name": "Združenie miest a obcí Malokarpatského regiónu",
+          "total_contracted_eur": 162000.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "42141753",
+          "name": "Regionálne združenie miest a obcí, Región Stredné Ponitrie",
+          "total_contracted_eur": 161000.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "37891570",
+          "name": "Mikroregión Údolie Čebovského potoka - združenie obcí",
+          "total_contracted_eur": 159128.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "50981307",
+          "name": "Regionálne združenie obcí RUŽÍN",
+          "total_contracted_eur": 154500.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "35560312",
+          "name": "Združenie obcí Čierna voda - Uh",
+          "total_contracted_eur": 153735.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "50961276",
+          "name": "\"Združenie obcí Lednicko-rovňanského regiónu\"",
+          "total_contracted_eur": 149990.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "37888366",
+          "name": "Mikroregión Pozdola Bystrice",
+          "total_contracted_eur": 149032.23,
+          "projects_count": 1
+        },
+        {
+          "ico": "51009994",
+          "name": "Združenie obcí Strážovské vrchy",
+          "total_contracted_eur": 149000.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "31870007",
+          "name": "\"KOMPLEX\", záujmové združenie obcí",
+          "total_contracted_eur": 146400.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "42076676",
+          "name": "Združenie Obcí Mikroregiónu Minčol",
+          "total_contracted_eur": 141500.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "37917901",
+          "name": "Združenie obcí \"Uhrovská dolina\"",
+          "total_contracted_eur": 139366.21,
+          "projects_count": 1
+        },
+        {
+          "ico": "37915819",
+          "name": "Združenie obcí Bánovecko",
+          "total_contracted_eur": 136440.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "35561254",
+          "name": "Regionálne združenie obcí Laborecká niva",
+          "total_contracted_eur": 135955.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "35505281",
+          "name": "Záujmové združenie spoločenstva obcí mikroregiónu \" Juh Šíravy\"",
+          "total_contracted_eur": 134492.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "35564504",
+          "name": "Združenie obcí Uh - Olšava",
+          "total_contracted_eur": 129762.5,
+          "projects_count": 1
+        },
+        {
+          "ico": "37885316",
+          "name": "Združenie mikroregiónu \"Údolie smrti\"",
+          "total_contracted_eur": 120533.6,
+          "projects_count": 1
+        },
+        {
+          "ico": "35555718",
+          "name": "Združenie obci mikroregiónu BOROLO",
+          "total_contracted_eur": 117420.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "35555971",
+          "name": "Združenie obcí \"Duša\"",
+          "total_contracted_eur": 116388.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "35558644",
+          "name": "ROVINA - združenie obcí",
+          "total_contracted_eur": 113290.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "37937278",
+          "name": "Združenie obcí EKOTORYSA",
+          "total_contracted_eur": 100475.6,
+          "projects_count": 1
+        },
+        {
+          "ico": "50977041",
+          "name": "Združenie obcí Hrachovište, Vaďovce, Višňové",
+          "total_contracted_eur": 99900.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "35607254",
+          "name": "SPOLOČENSTVO OBCÍ MIKROREGIÓNU PODHORIE",
+          "total_contracted_eur": 94559.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "42447933",
+          "name": "Pro-Danubia - Združenie obcí pre miestnu dopravu po Dunaji",
+          "total_contracted_eur": 92200.0,
+          "projects_count": 1
+        },
+        {
+          "ico": "37936816",
+          "name": "Združenie mikroregiónu \"KAŠTIELIK\"",
+          "total_contracted_eur": 84480.0,
+          "projects_count": 1
+        }
+      ]
+    }
+  ]
+}

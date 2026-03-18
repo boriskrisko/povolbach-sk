@@ -164,9 +164,27 @@
         "name": "Základná škola Alexandra Dubčeka, Majerníkova 62, Bratislava",
         "total_contracted_eur": 86616.0,
         "projects_count": 1
+      },
+      {
+        "ico": "34112502",
+        "name": "Mestský podnik bytového hospodárstva, s.r.o.",
+        "total_contracted_eur": 2820528.02,
+        "projects_count": 1
+      },
+      {
+        "ico": "30808901",
+        "name": "Mestské lesy v Bratislave",
+        "total_contracted_eur": 1697181.46,
+        "projects_count": 1
+      },
+      {
+        "ico": "31814735",
+        "name": "Stredisko sociálnych služieb Petržalka",
+        "total_contracted_eur": 776680.0,
+        "projects_count": 2
       }
     ],
-    "subsidiary_total_eur": 10518047.369999997,
+    "subsidiary_total_eur": 15812436.849999998,
     "ico": "00603481",
     "municipality": "Bratislava"
   },
@@ -468,9 +486,15 @@
         "name": "Základná škola s materskou školou Jelšava",
         "total_contracted_eur": 153870.23,
         "projects_count": 1
+      },
+      {
+        "ico": "31686541",
+        "name": "Mestské lesy Jelšava, s.r.o.",
+        "total_contracted_eur": 123701.47,
+        "projects_count": 2
       }
     ],
-    "subsidiary_total_eur": 1831461.96,
+    "subsidiary_total_eur": 1955163.43,
     "ico": "00328341",
     "municipality": "Jelšava"
   },
@@ -656,9 +680,15 @@
         "name": "Špeciálna základná škola Partizánske",
         "total_contracted_eur": 940132.81,
         "projects_count": 3
+      },
+      {
+        "ico": "36311693",
+        "name": "Technické služby mesta Partizánske, spol. s r.o.",
+        "total_contracted_eur": 6563026.0,
+        "projects_count": 2
       }
     ],
-    "subsidiary_total_eur": 940132.81,
+    "subsidiary_total_eur": 7503158.8100000005,
     "ico": "00310905",
     "municipality": "Partizánske"
   },
@@ -903,9 +933,15 @@
         "name": "Základná škola",
         "total_contracted_eur": 54441.28,
         "projects_count": 1
+      },
+      {
+        "ico": "17078202",
+        "name": "Správa mestskej zelene v Košiciach",
+        "total_contracted_eur": 10560.0,
+        "projects_count": 1
       }
     ],
-    "subsidiary_total_eur": 8298871.36,
+    "subsidiary_total_eur": 8309431.36,
     "ico": "00691135",
     "municipality": "Košice"
   },
@@ -1242,9 +1278,15 @@
         "name": "Základná škola Bajkalská č. 29",
         "total_contracted_eur": 10380.0,
         "projects_count": 1
+      },
+      {
+        "ico": "31718914",
+        "name": "Technické služby mesta Prešov a.s.",
+        "total_contracted_eur": 794060.0,
+        "projects_count": 1
       }
     ],
-    "subsidiary_total_eur": 2124561.94,
+    "subsidiary_total_eur": 2918621.94,
     "ico": "00327646",
     "municipality": "Prešov"
   },
@@ -1426,9 +1468,15 @@
         "name": "Súkromné Gymnázium DSA Komenského 40, Sabinov",
         "total_contracted_eur": 122779.36,
         "projects_count": 1
+      },
+      {
+        "ico": "00149683",
+        "name": "Mestské kultúrne stredisko v Sabinove",
+        "total_contracted_eur": 200983.85,
+        "projects_count": 1
       }
     ],
-    "subsidiary_total_eur": 748221.07,
+    "subsidiary_total_eur": 949204.9199999999,
     "ico": "00327735",
     "municipality": "Sabinov"
   },
@@ -1489,9 +1537,15 @@
         "name": "Základná škola, Konštantínova 1751/64, Stropkov",
         "total_contracted_eur": 93420.0,
         "projects_count": 1
+      },
+      {
+        "ico": "31305784",
+        "name": "SLUŽBA, mestský podnik Stropkov",
+        "total_contracted_eur": 885977.86,
+        "projects_count": 1
       }
     ],
-    "subsidiary_total_eur": 1232760.42,
+    "subsidiary_total_eur": 2118738.28,
     "ico": "00331007",
     "municipality": "Stropkov"
   },
@@ -1540,9 +1594,15 @@
         "name": "Nemocnica s poliklinikou Považská Bystrica so sídlom v Považskej Bystrici",
         "total_contracted_eur": 487515.43,
         "projects_count": 1
+      },
+      {
+        "ico": "31613314",
+        "name": "Mestské lesy Považská Bystrica, s.r.o.",
+        "total_contracted_eur": 120003.53,
+        "projects_count": 1
       }
     ],
-    "subsidiary_total_eur": 1020157.3999999999,
+    "subsidiary_total_eur": 1140160.93,
     "ico": "00317667",
     "municipality": "Považská Bystrica"
   },
@@ -2141,9 +2201,15 @@
         "name": "Základná škola",
         "total_contracted_eur": 72360.0,
         "projects_count": 1
+      },
+      {
+        "ico": "31673449",
+        "name": "Mestské lesy, Revúca spol. s r.o.",
+        "total_contracted_eur": 78936.86,
+        "projects_count": 2
       }
     ],
-    "subsidiary_total_eur": 476870.57999999996,
+    "subsidiary_total_eur": 555807.44,
     "ico": "00328693",
     "municipality": "Revúca"
   },
@@ -3136,9 +3202,15 @@
         "name": "Základná škola",
         "total_contracted_eur": 200628.0,
         "projects_count": 1
+      },
+      {
+        "ico": "44299311",
+        "name": "Mestský podnik služieb Žarnovica s.r.o.",
+        "total_contracted_eur": 464803.29,
+        "projects_count": 2
       }
     ],
-    "subsidiary_total_eur": 200628.0,
+    "subsidiary_total_eur": 665431.29,
     "ico": "00321117",
     "municipality": "Žarnovica"
   },
@@ -3476,9 +3548,15 @@
         "name": "Základná škola v Malackách, Záhorácka ul. 95",
         "total_contracted_eur": 124200.0,
         "projects_count": 1
+      },
+      {
+        "ico": "36066541",
+        "name": "Mestské centrum sociálnych služieb Malacky",
+        "total_contracted_eur": 489600.0,
+        "projects_count": 1
       }
     ],
-    "subsidiary_total_eur": 456255.0,
+    "subsidiary_total_eur": 945855.0,
     "ico": "00304913",
     "municipality": "Malacky"
   },
@@ -3920,9 +3998,15 @@
         "name": "Spojená škola Juraja Turza, Stred 305, Turzovka",
         "total_contracted_eur": 93420.0,
         "projects_count": 1
+      },
+      {
+        "ico": "36139297",
+        "name": "Mestský podnik služieb Turzovka",
+        "total_contracted_eur": 184647.0,
+        "projects_count": 1
       }
     ],
-    "subsidiary_total_eur": 237820.78,
+    "subsidiary_total_eur": 422467.78,
     "ico": "00314331",
     "municipality": "Turzovka"
   },
@@ -4276,9 +4360,15 @@
         "name": "Spojená škola Dudince",
         "total_contracted_eur": 122769.16,
         "projects_count": 2
+      },
+      {
+        "ico": "36040100",
+        "name": "Mestský podnik Dudince s.r.o.",
+        "total_contracted_eur": 885729.71,
+        "projects_count": 1
       }
     ],
-    "subsidiary_total_eur": 122769.16,
+    "subsidiary_total_eur": 1008498.87,
     "ico": "00319902",
     "municipality": "Dudince"
   },
@@ -4438,9 +4528,15 @@
         "name": "Základná škola - Grundschule Medzev",
         "total_contracted_eur": 116820.0,
         "projects_count": 1
+      },
+      {
+        "ico": "00135283",
+        "name": "Mestské kultúrne stredisko mesta Medzev",
+        "total_contracted_eur": 126818.23,
+        "projects_count": 1
       }
     ],
-    "subsidiary_total_eur": 116820.0,
+    "subsidiary_total_eur": 243638.22999999998,
     "ico": "00324442",
     "municipality": "Medzev"
   },
@@ -5967,9 +6063,15 @@
         "name": "Základná škola J. Kollára",
         "total_contracted_eur": 61305.26,
         "projects_count": 1
+      },
+      {
+        "ico": "00185213",
+        "name": "Technické služby, mestský podnik Banská Štiavnica",
+        "total_contracted_eur": 1607579.69,
+        "projects_count": 1
       }
     ],
-    "subsidiary_total_eur": 123585.26000000001,
+    "subsidiary_total_eur": 1731164.95,
     "ico": "00320501",
     "municipality": "Banská Štiavnica"
   },
@@ -7077,5 +7179,18 @@
     "subsidiary_total_eur": 20760.0,
     "ico": "00314633",
     "municipality": "Lomná"
+  },
+  "00304956": {
+    "ico": "00304956",
+    "municipality": "Modra",
+    "subsidiary_orgs": [
+      {
+        "ico": "30856698",
+        "name": "Mestské centrum sociálnych služieb Modra",
+        "total_contracted_eur": 244620.0,
+        "projects_count": 2
+      }
+    ],
+    "subsidiary_total_eur": 244620.0
   }
 }

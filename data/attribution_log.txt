@@ -4859,3 +4859,71 @@ NO_PATTERN	47399040	AVE LINGUA s.r.o.
 NO_PATTERN	37052501	Marta Vavreková
 NO_PATTERN	10757597	Vladimír Bigoš - LEVOČSKÝ GASTRODOM
 NO_PATTERN	31423876	REKO RECYCLING spol. s r.o.
+
+
+=== OBECNÝ PODNIK ATTRIBUTION ===
+Matched: 18, Unmatched: 16
+Total matched EUR: €18.1M
+
+MATCHED:
+  36311693 Technické služby mesta Partizánske, spol. s r.o.   → Partizánske (€6.6M)
+  34112502 Mestský podnik bytového hospodárstva, s.r.o.       → Bratislava (€2.8M)
+  30808901 Mestské lesy v Bratislave                          → Bratislava (€1.7M)
+  00185213 Technické služby, mestský podnik Banská Štiavnica  → Banská Štiavnica (€1.6M)
+  31305784 SLUŽBA, mestský podnik Stropkov                    → Stropkov (€0.9M)
+  36040100 Mestský podnik Dudince s.r.o.                      → Dudince (€0.9M)
+  31718914 Technické služby mesta Prešov a.s.                 → Prešov (€0.8M)
+  31814735 Stredisko sociálnych služieb Petržalka             → Bratislava (€0.8M)
+  36066541 Mestské centrum sociálnych služieb Malacky         → Malacky (€0.5M)
+  44299311 Mestský podnik služieb Žarnovica s.r.o.            → Žarnovica (€0.5M)
+  30856698 Mestské centrum sociálnych služieb Modra           → Modra (€0.2M)
+  00149683 Mestské kultúrne stredisko v Sabinove              → Sabinov (€0.2M)
+  36139297 Mestský podnik služieb Turzovka                    → Turzovka (€0.2M)
+  00135283 Mestské kultúrne stredisko mesta Medzev            → Medzev (€0.1M)
+  31686541 Mestské lesy Jelšava, s.r.o.                       → Jelšava (€0.1M)
+  31613314 Mestské lesy Považská Bystrica, s.r.o.             → Považská Bystrica (€0.1M)
+  31673449 Mestské lesy, Revúca spol. s r.o.                  → Revúca (€0.1M)
+  17078202 Správa mestskej zelene v Košiciach                 → Košice (€0.0M)
+
+OBECNY_PODNIK_UNMATCHED:
+  OBECNY_PODNIK_UNMATCHED	37848836	Domov pre seniorov Golden Age	€4.05M
+  OBECNY_PODNIK_UNMATCHED	00226840	DOMOV DÔCHODCOV	€0.65M
+  OBECNY_PODNIK_UNMATCHED	00163988	Technické služby, príspevková organizácia mesta	€0.55M
+  OBECNY_PODNIK_UNMATCHED	42193222	Centrum sociálnych služieb KA	€0.49M
+  OBECNY_PODNIK_UNMATCHED	37923617	SPOKOJNOSŤ - centrum sociálnych služieb, n.o.	€0.44M
+  OBECNY_PODNIK_UNMATCHED	53740408	Zaži v Trnave – Mestské kultúrne stredisko	€0.21M
+  OBECNY_PODNIK_UNMATCHED	00355046	Mestské kultúrne stredisko	€0.21M
+  OBECNY_PODNIK_UNMATCHED	35519088	Mestský dom kultúry, príspevková organizácia	€0.20M
+  OBECNY_PODNIK_UNMATCHED	00351865	Mestské kultúrne stredisko	€0.20M
+  OBECNY_PODNIK_UNMATCHED	00138789	Mestské kultúrne stredisko	€0.19M
+  OBECNY_PODNIK_UNMATCHED	00059994	Mestské kultúrne stredisko Béni Egressyho - Egressy Béni Városi Művelődési Központ	€0.18M
+  OBECNY_PODNIK_UNMATCHED	00062448	Mestské kultúrne stredisko	€0.14M
+  OBECNY_PODNIK_UNMATCHED	00647683	Centrum sociálnych služieb TAU	€0.09M
+  OBECNY_PODNIK_UNMATCHED	31735860	BYTOVÉ HOSPODÁRSTVO, s.r.o.	€0.08M
+  OBECNY_PODNIK_UNMATCHED	00351717	Centrum sociálnych služieb	€0.08M
+  OBECNY_PODNIK_UNMATCHED	00632384	Centrum sociálnych služieb - AVE	€0.07M
+
+
+=== OBECNÝ PODNIK ATTRIBUTION ===
+Matched: 0, Unmatched: 16
+Total matched EUR: €0.0M
+
+MATCHED:
+
+OBECNY_PODNIK_UNMATCHED:
+  OBECNY_PODNIK_UNMATCHED	37848836	Domov pre seniorov Golden Age	€4.05M
+  OBECNY_PODNIK_UNMATCHED	00226840	DOMOV DÔCHODCOV	€0.65M
+  OBECNY_PODNIK_UNMATCHED	00163988	Technické služby, príspevková organizácia mesta	€0.55M
+  OBECNY_PODNIK_UNMATCHED	42193222	Centrum sociálnych služieb KA	€0.49M
+  OBECNY_PODNIK_UNMATCHED	37923617	SPOKOJNOSŤ - centrum sociálnych služieb, n.o.	€0.44M
+  OBECNY_PODNIK_UNMATCHED	53740408	Zaži v Trnave – Mestské kultúrne stredisko	€0.21M
+  OBECNY_PODNIK_UNMATCHED	00355046	Mestské kultúrne stredisko	€0.21M
+  OBECNY_PODNIK_UNMATCHED	35519088	Mestský dom kultúry, príspevková organizácia	€0.20M
+  OBECNY_PODNIK_UNMATCHED	00351865	Mestské kultúrne stredisko	€0.20M
+  OBECNY_PODNIK_UNMATCHED	00138789	Mestské kultúrne stredisko	€0.19M
+  OBECNY_PODNIK_UNMATCHED	00059994	Mestské kultúrne stredisko Béni Egressyho - Egressy Béni Városi Művelődési Központ	€0.18M
+  OBECNY_PODNIK_UNMATCHED	00062448	Mestské kultúrne stredisko	€0.14M
+  OBECNY_PODNIK_UNMATCHED	00647683	Centrum sociálnych služieb TAU	€0.09M
+  OBECNY_PODNIK_UNMATCHED	31735860	BYTOVÉ HOSPODÁRSTVO, s.r.o.	€0.08M
+  OBECNY_PODNIK_UNMATCHED	00351717	Centrum sociálnych služieb	€0.08M
+  OBECNY_PODNIK_UNMATCHED	00632384	Centrum sociálnych služieb - AVE	€0.07M
