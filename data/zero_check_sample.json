@@ -1,0 +1,162 @@
+[
+  {
+    "ico": "42407311",
+    "name": "Košice 1",
+    "nuts5": "SK042_KE1",
+    "region": "Košický kraj",
+    "population": null,
+    "category": "smallest"
+  },
+  {
+    "ico": "45777501",
+    "name": "Košice 3",
+    "nuts5": "SK042_KE3",
+    "region": "Košický kraj",
+    "population": null,
+    "category": "smallest"
+  },
+  {
+    "ico": "00322466",
+    "name": "Ondavka",
+    "nuts5": "SK0411519685",
+    "region": "Prešovský kraj",
+    "population": 10,
+    "category": "smallest"
+  },
+  {
+    "ico": "00330892",
+    "name": "Príkra",
+    "nuts5": "SK041C527734",
+    "region": "Prešovský kraj",
+    "population": 11,
+    "category": "smallest"
+  },
+  {
+    "ico": "00330361",
+    "name": "Bystrá",
+    "nuts5": "SK041B527190",
+    "region": "Prešovský kraj",
+    "population": 16,
+    "category": "smallest"
+  },
+  {
+    "ico": "00650188",
+    "name": "Chvalová",
+    "nuts5": "SK0328514977",
+    "region": "Banskobystrický kraj",
+    "population": 194,
+    "category": "mid-sized"
+  },
+  {
+    "ico": "00316555",
+    "name": "Abramová",
+    "nuts5": "SK0319512044",
+    "region": "Žilinský kraj",
+    "population": 194,
+    "category": "mid-sized"
+  },
+  {
+    "ico": "00319546",
+    "name": "Senné",
+    "nuts5": "SK032A516368",
+    "region": "Banskobystrický kraj",
+    "population": 194,
+    "category": "mid-sized"
+  },
+  {
+    "ico": "00690333",
+    "name": "Opiná",
+    "nuts5": "SK0426521841",
+    "region": "Košický kraj",
+    "population": 195,
+    "category": "mid-sized"
+  },
+  {
+    "ico": "00318906",
+    "name": "Lukovištia",
+    "nuts5": "SK0329515175",
+    "region": "Banskobystrický kraj",
+    "population": 197,
+    "category": "mid-sized"
+  },
+  {
+    "ico": "00314153",
+    "name": "Ochodnica",
+    "nuts5": "SK0314509329",
+    "region": "Žilinský kraj",
+    "population": 1933,
+    "category": "largest"
+  },
+  {
+    "ico": "00329681",
+    "name": "Švedlár",
+    "nuts5": "SK0421543659",
+    "region": "Košický kraj",
+    "population": 2087,
+    "category": "largest"
+  },
+  {
+    "ico": "00305766",
+    "name": "Trhová Hradská",
+    "nuts5": "SK0211555576",
+    "region": "Trnavský kraj",
+    "population": 2160,
+    "category": "largest"
+  },
+  {
+    "ico": "00649899",
+    "name": "Poproč",
+    "nuts5": "SK0426521892",
+    "region": "Košický kraj",
+    "population": 2647,
+    "category": "largest"
+  },
+  {
+    "ico": "31998178",
+    "name": "Košice - Košická Nová Ves",
+    "nuts5": "SK0424599018",
+    "region": "Košický kraj",
+    "population": 3178,
+    "category": "largest"
+  },
+  {
+    "ico": "00648426",
+    "name": "Čremošné",
+    "nuts5": "SK0319512141",
+    "region": "Žilinský kraj",
+    "population": 83,
+    "category": "random"
+  },
+  {
+    "ico": "00649678",
+    "name": "Babinec",
+    "nuts5": "SK0329514489",
+    "region": "Banskobystrický kraj",
+    "population": 66,
+    "category": "random"
+  },
+  {
+    "ico": "00651842",
+    "name": "Pravica",
+    "nuts5": "SK032A516309",
+    "region": "Banskobystrický kraj",
+    "population": 117,
+    "category": "random"
+  },
+  {
+    "ico": "00307602",
+    "name": "Turá",
+    "nuts5": "SK0232502880",
+    "region": "Nitriansky kraj",
+    "population": 229,
+    "category": "random"
+  },
+  {
+    "ico": "00328723",
+    "name": "Rochovce",
+    "nuts5": "SK0428526177",
+    "region": "Košický kraj",
+    "population": 366,
+    "category": "random"
+  }
+]

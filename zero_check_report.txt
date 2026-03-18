@@ -1,0 +1,142 @@
+======================================================================
+POVOLBACH.SK — Zero-Project Municipality Spot Check Report
+======================================================================
+
+[Košice 1] (IČO: 42407311) — pop: ? — smallest
+  Status: CONFIRMED ZERO
+  Reason: No matches found in ITMS subjects or excluded beneficiaries. Genuinely no EU funding.
+  ITMS search results: nothing
+  Excluded beneficiaries matches: none
+
+[Košice 3] (IČO: 45777501) — pop: ? — smallest
+  Status: CONFIRMED ZERO
+  Reason: No matches found in ITMS subjects or excluded beneficiaries. Genuinely no EU funding.
+  ITMS search results: nothing
+  Excluded beneficiaries matches: none
+
+[Ondavka] (IČO: 00322466) — pop: 10 — smallest
+  Status: CONFIRMED ZERO
+  Reason: No matches found in ITMS subjects or excluded beneficiaries. Genuinely no EU funding.
+  ITMS search results: nothing
+  Excluded beneficiaries matches: none
+
+[Príkra] (IČO: 00330892) — pop: 11 — smallest
+  Status: CONFIRMED ZERO
+  Reason: No matches found in ITMS subjects or excluded beneficiaries. Genuinely no EU funding.
+  ITMS search results: nothing
+  Excluded beneficiaries matches: none
+
+[Bystrá] (IČO: 00330361) — pop: 16 — smallest
+  Status: POSSIBLE MISS
+  Reason: Different IČO 00330591 (Obec Krajná Bystrá) has €164,806 in EU projects. May be same municipality under different legal entity.
+  ITMS search results:
+    - Obec Krajná Bystrá (IČO: 00330591) [DIFFERENT IČO]
+    - Obec Ruská Bystrá (IČO: 00325724) [DIFFERENT IČO]
+    - Obec Bystrá (IČO: 00647853) [DIFFERENT IČO]
+  Excluded beneficiaries matches: none
+
+[Chvalová] (IČO: 00650188) — pop: 194 — mid-sized
+  Status: CONFIRMED ZERO
+  Reason: No matches found in ITMS subjects or excluded beneficiaries. Genuinely no EU funding.
+  ITMS search results: nothing
+  Excluded beneficiaries matches: none
+
+[Abramová] (IČO: 00316555) — pop: 194 — mid-sized
+  Status: CONFIRMED ZERO
+  Reason: No matches found in ITMS subjects or excluded beneficiaries. Genuinely no EU funding.
+  ITMS search results: nothing
+  Excluded beneficiaries matches: none
+
+[Senné] (IČO: 00319546) — pop: 194 — mid-sized
+  Status: POSSIBLE MISS
+  Reason: Different IČO 00325767 (Obec Senné) has €613,163 in EU projects. May be same municipality under different legal entity.
+  ITMS search results:
+    - Obec Senné (IČO: 00325767) [DIFFERENT IČO]
+  Excluded beneficiaries matches: none
+
+[Opiná] (IČO: 00690333) — pop: 195 — mid-sized
+  Status: CONFIRMED ZERO
+  Reason: No matches found in ITMS subjects or excluded beneficiaries. Genuinely no EU funding.
+  ITMS search results: nothing
+  Excluded beneficiaries matches: none
+
+[Lukovištia] (IČO: 00318906) — pop: 197 — mid-sized
+  Status: CONFIRMED ZERO
+  Reason: No matches found in ITMS subjects or excluded beneficiaries. Genuinely no EU funding.
+  ITMS search results: nothing
+  Excluded beneficiaries matches: none
+
+[Ochodnica] (IČO: 00314153) — pop: 1933 — largest
+  Status: CONFIRMED ZERO
+  Reason: No matches found in ITMS subjects or excluded beneficiaries. Genuinely no EU funding.
+  ITMS search results: nothing
+  Excluded beneficiaries matches: none
+
+[Švedlár] (IČO: 00329681) — pop: 2087 — largest
+  Status: CONFIRMED ZERO
+  Reason: No matches found in ITMS subjects or excluded beneficiaries. Genuinely no EU funding.
+  ITMS search results: nothing
+  Excluded beneficiaries matches: none
+
+[Trhová Hradská] (IČO: 00305766) — pop: 2160 — largest
+  Status: CONFIRMED ZERO
+  Reason: No matches found in ITMS subjects or excluded beneficiaries. Genuinely no EU funding.
+  ITMS search results: nothing
+  Excluded beneficiaries matches: none
+
+[Poproč] (IČO: 00649899) — pop: 2647 — largest
+  Status: POSSIBLE MISS
+  Reason: Different IČO 00324639 (Obec Poproč) has €1,417,687 in EU projects. May be same municipality under different legal entity.
+  ITMS search results:
+    - Obec Poproč (IČO: 00324639) [DIFFERENT IČO]
+  Excluded beneficiaries matches: none
+
+[Košice - Košická Nová Ves] (IČO: 31998178) — pop: 3178 — largest
+  Status: CONFIRMED ZERO
+  Reason: No matches found in ITMS subjects or excluded beneficiaries. Genuinely no EU funding.
+  ITMS search results: nothing
+  Excluded beneficiaries matches: none
+
+[Čremošné] (IČO: 00648426) — pop: 83 — random
+  Status: CONFIRMED ZERO
+  Reason: No matches found in ITMS subjects or excluded beneficiaries. Genuinely no EU funding.
+  ITMS search results: nothing
+  Excluded beneficiaries matches: none
+
+[Babinec] (IČO: 00649678) — pop: 66 — random
+  Status: CONFIRMED ZERO
+  Reason: No matches found in ITMS subjects or excluded beneficiaries. Genuinely no EU funding.
+  ITMS search results: nothing
+  Excluded beneficiaries matches: none
+
+[Pravica] (IČO: 00651842) — pop: 117 — random
+  Status: CONFIRMED ZERO
+  Reason: No matches found in ITMS subjects or excluded beneficiaries. Genuinely no EU funding.
+  ITMS search results: nothing
+  Excluded beneficiaries matches: none
+
+[Turá] (IČO: 00307602) — pop: 229 — random
+  Status: POSSIBLE MISS
+  Reason: Different IČO 00312002 (Mesto Stará Turá) has €1,778,839 in EU projects. May be same municipality under different legal entity.
+  ITMS search results:
+    - Mesto Stará Turá (IČO: 00312002) [DIFFERENT IČO]
+  Excluded beneficiaries matches:
+    - Základná škola Stará Turá, Hurbanova ul. 128/25 (IČO: 36125121) — €158,580
+
+[Rochovce] (IČO: 00328723) — pop: 366 — random
+  Status: CONFIRMED ZERO
+  Reason: No matches found in ITMS subjects or excluded beneficiaries. Genuinely no EU funding.
+  ITMS search results: nothing
+  Excluded beneficiaries matches: none
+
+======================================================================
+SUMMARY
+======================================================================
+  Confirmed genuine zeros: 16
+  Possible misses needing investigation: 4
+  Likely data issues: 0
+
+  Recommended action:
+    4 municipalities may have projects under a different IČO/legal entity.
+    Investigate these by checking the RPO for IČO history and mergers.
+    Consider adding an IČO alias table for municipalities that changed legal form.

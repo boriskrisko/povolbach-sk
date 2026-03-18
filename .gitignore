@@ -1,0 +1,18 @@
+node_modules/
+__pycache__/
+*.pyc
+.env
+
+# Pipeline cache files (large, regeneratable)
+data/raw_project_details/
+data/raw_project_details_21/
+data/raw_project_lists.json
+data/raw_project_lists_21.json
+data/raw_subjects.json
+data/raw_nuts_names.json
+data/itms21_raw_cache/
+
+# OS
+.DS_Store
+settings.json
+.claude/

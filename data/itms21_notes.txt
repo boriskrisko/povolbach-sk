@@ -1,0 +1,20 @@
+ITMS21+ (2021-2027) Data Notes
+==================================================
+
+Source: https://api.itms21.sk/public/v1/aktivitaprojekt
+Fetched: 2026-03-18 01:38
+
+Schema differences from ITMS2014+:
+- Endpoint: /aktivitaprojekt (not /projektoveUkoncene + /projektoveVrealizacii)
+- Multiple activities per project — deduplicated by projekt.id
+- Financial field: projekt.celkovaZazmluvnenaSuma (not per-project sumaZazmluvnena)
+- Many projects are in preparation (stav='Projekt v príprave') with €0
+- No separate irregularities endpoint currently used
+
+Results:
+- Total activities fetched: (see log)
+- Unique projects: (see log)
+- Unique beneficiaries: 1884
+- Municipalities matched: 1159
+- Municipalities with €0: 1769
+- Total municipal contracted EUR: €1,494,785,485

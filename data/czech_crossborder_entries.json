@@ -1,0 +1,44 @@
+[
+  {
+    "ico": "00303780",
+    "nazov": "Obec Horní Lideč",
+    "total_contracted_eur": 2555253.18,
+    "projects_count": 1
+  },
+  {
+    "ico": "00544701",
+    "nazov": "Obec Kuželov",
+    "total_contracted_eur": 1338039.55,
+    "projects_count": 2
+  },
+  {
+    "ico": "00290823",
+    "nazov": "obec Boršice",
+    "total_contracted_eur": 1317715.0,
+    "projects_count": 1
+  },
+  {
+    "ico": "00283631",
+    "nazov": "Obec Tvrdonice",
+    "total_contracted_eur": 596673.11,
+    "projects_count": 1
+  },
+  {
+    "ico": "00283274",
+    "nazov": "Obec Kostice",
+    "total_contracted_eur": 544887.37,
+    "projects_count": 1
+  },
+  {
+    "ico": "00285188",
+    "nazov": "Obec Nová Lhota",
+    "total_contracted_eur": 282585.0,
+    "projects_count": 1
+  },
+  {
+    "ico": "00284858",
+    "nazov": "Obec Dolní Bojanovice",
+    "total_contracted_eur": 79151.75,
+    "projects_count": 1
+  }
+]

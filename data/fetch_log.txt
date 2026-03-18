@@ -1,0 +1,237 @@
+09:24:01  ITMS2014+ Data Pipeline starting...
+09:24:01  Output directory: /Users/boriskrisko/ConveyorMind/data
+09:24:01  Loading cached project lists from /Users/boriskrisko/ConveyorMind/data/raw_project_lists.json
+09:24:01    vrealizacii: 660, ukoncene: 21103
+09:24:01  Step 2: Fetching details for 21763 projects (cached ones will be skipped)...
+09:24:01    Details: 200/21763 processed (200 successful)
+09:24:01    Details: 400/21763 processed (400 successful)
+09:24:01    Details: 600/21763 processed (600 successful)
+09:24:02    Details: 800/21763 processed (800 successful)
+09:24:02    Details: 1000/21763 processed (1000 successful)
+09:24:02    Details: 1200/21763 processed (1200 successful)
+09:24:02    Details: 1400/21763 processed (1400 successful)
+09:24:02    Details: 1600/21763 processed (1600 successful)
+09:24:02    Details: 1800/21763 processed (1800 successful)
+09:24:38    Details: 2000/21763 processed (2000 successful)
+09:24:52    Details: 2200/21763 processed (2200 successful)
+09:25:16    Details: 2400/21763 processed (2400 successful)
+09:25:35    Details: 2600/21763 processed (2600 successful)
+09:26:10    Details: 2800/21763 processed (2800 successful)
+09:26:48    Details: 3000/21763 processed (3000 successful)
+09:27:20    Details: 3200/21763 processed (3200 successful)
+09:27:29    Details: 3400/21763 processed (3400 successful)
+09:27:42    Details: 3600/21763 processed (3600 successful)
+09:28:16    Details: 3800/21763 processed (3800 successful)
+09:28:46    Details: 4000/21763 processed (4000 successful)
+09:28:47    Details: 4200/21763 processed (4200 successful)
+09:29:14    Details: 4400/21763 processed (4400 successful)
+09:29:29    Details: 4600/21763 processed (4600 successful)
+09:30:02    Details: 4800/21763 processed (4800 successful)
+09:30:04    Details: 5000/21763 processed (5000 successful)
+09:30:24    Details: 5200/21763 processed (5200 successful)
+09:31:03    Details: 5400/21763 processed (5400 successful)
+09:31:37    Details: 5600/21763 processed (5600 successful)
+09:31:37    Details: 5800/21763 processed (5800 successful)
+09:32:28    Details: 6000/21763 processed (6000 successful)
+09:32:34    Details: 6200/21763 processed (6200 successful)
+09:33:17    Details: 6400/21763 processed (6400 successful)
+09:33:35    Details: 6600/21763 processed (6600 successful)
+09:34:32    Details: 6800/21763 processed (6800 successful)
+09:34:40    Details: 7000/21763 processed (7000 successful)
+09:35:15    Details: 7200/21763 processed (7200 successful)
+09:35:28    Details: 7400/21763 processed (7400 successful)
+09:35:56    Details: 7600/21763 processed (7600 successful)
+09:36:31    Details: 7800/21763 processed (7800 successful)
+09:36:45    Details: 8000/21763 processed (8000 successful)
+09:37:14    Details: 8200/21763 processed (8200 successful)
+09:37:28    Details: 8400/21763 processed (8400 successful)
+09:37:55    Details: 8600/21763 processed (8600 successful)
+09:38:34    Details: 8800/21763 processed (8800 successful)
+09:38:55    Details: 9000/21763 processed (9000 successful)
+09:39:30  Timeout on https://opendata.itms2014.sk/v2/projekty/ukoncene/8940, retrying...
+09:39:46    Details: 9200/21763 processed (9200 successful)
+09:40:01    Details: 9400/21763 processed (9400 successful)
+09:40:18    Details: 9600/21763 processed (9600 successful)
+09:40:28    Details: 9800/21763 processed (9800 successful)
+09:40:40    Details: 10000/21763 processed (10000 successful)
+09:41:18  Timeout on https://opendata.itms2014.sk/v2/projekty/ukoncene/9997, retrying...
+09:41:20    Details: 10200/21763 processed (10200 successful)
+09:41:20    Details: 10400/21763 processed (10400 successful)
+09:41:21    Details: 10600/21763 processed (10600 successful)
+09:41:52    Details: 10800/21763 processed (10800 successful)
+09:42:22  Timeout on https://opendata.itms2014.sk/v2/projekty/ukoncene/10804, retrying...
+09:42:43    Details: 11000/21763 processed (11000 successful)
+09:43:22    Details: 11200/21763 processed (11200 successful)
+09:43:40    Details: 11400/21763 processed (11400 successful)
+09:44:04    Details: 11600/21763 processed (11600 successful)
+09:44:31    Details: 11800/21763 processed (11800 successful)
+09:44:31    Details: 12000/21763 processed (12000 successful)
+09:44:46    Details: 12200/21763 processed (12200 successful)
+09:45:06    Details: 12400/21763 processed (12400 successful)
+09:45:13    Details: 12600/21763 processed (12600 successful)
+09:45:26    Details: 12800/21763 processed (12800 successful)
+09:45:38    Details: 13000/21763 processed (13000 successful)
+09:45:48    Details: 13200/21763 processed (13200 successful)
+09:46:14    Details: 13400/21763 processed (13400 successful)
+09:46:21    Details: 13600/21763 processed (13600 successful)
+09:46:34    Details: 13800/21763 processed (13800 successful)
+09:46:56    Details: 14000/21763 processed (14000 successful)
+09:46:56    Details: 14200/21763 processed (14200 successful)
+09:46:59    Details: 14400/21763 processed (14400 successful)
+09:47:21    Details: 14600/21763 processed (14600 successful)
+09:47:22    Details: 14800/21763 processed (14800 successful)
+09:47:36    Details: 15000/21763 processed (15000 successful)
+09:48:04    Details: 15200/21763 processed (15200 successful)
+09:48:14    Details: 15400/21763 processed (15400 successful)
+09:48:27    Details: 15600/21763 processed (15600 successful)
+09:49:01    Details: 15800/21763 processed (15800 successful)
+09:49:38  Timeout on https://opendata.itms2014.sk/v2/projekty/ukoncene/16099, retrying...
+09:49:41    Details: 16000/21763 processed (16000 successful)
+09:49:41    Details: 16200/21763 processed (16200 successful)
+09:49:43    Details: 16400/21763 processed (16400 successful)
+09:50:06    Details: 16600/21763 processed (16600 successful)
+09:50:15    Details: 16800/21763 processed (16800 successful)
+09:50:35    Details: 17000/21763 processed (17000 successful)
+09:50:43    Details: 17200/21763 processed (17200 successful)
+09:51:08    Details: 17400/21763 processed (17400 successful)
+09:51:08    Details: 17600/21763 processed (17600 successful)
+09:51:08    Details: 17800/21763 processed (17800 successful)
+09:51:14    Details: 18000/21763 processed (18000 successful)
+09:51:22    Details: 18200/21763 processed (18200 successful)
+09:51:31    Details: 18400/21763 processed (18400 successful)
+09:51:38    Details: 18600/21763 processed (18600 successful)
+09:51:46    Details: 18800/21763 processed (18800 successful)
+09:51:50    Details: 19000/21763 processed (19000 successful)
+09:51:51    Details: 19200/21763 processed (19200 successful)
+09:51:57    Details: 19400/21763 processed (19400 successful)
+09:52:04    Details: 19600/21763 processed (19600 successful)
+09:52:06    Details: 19800/21763 processed (19800 successful)
+09:52:11    Details: 20000/21763 processed (20000 successful)
+09:52:12    Details: 20200/21763 processed (20200 successful)
+09:52:16    Details: 20400/21763 processed (20400 successful)
+09:52:22    Details: 20600/21763 processed (20600 successful)
+09:52:22    Details: 20800/21763 processed (20800 successful)
+09:52:27    Details: 21000/21763 processed (21000 successful)
+09:52:27    Details: 21200/21763 processed (21200 successful)
+09:52:31    Details: 21400/21763 processed (21400 successful)
+09:52:35    Details: 21600/21763 processed (21600 successful)
+09:52:39    Details: 21763/21763 processed (21763 successful)
+09:52:39    Total details fetched: 21763
+09:52:39  Step 3: Resolving 3134 new NUTS codes (0 already cached)...
+09:52:43    NUTS: 200/3134 resolved
+09:52:46    NUTS: 400/3134 resolved
+09:52:50    NUTS: 600/3134 resolved
+09:52:55    NUTS: 800/3134 resolved
+09:52:58    NUTS: 1000/3134 resolved
+09:52:59    NUTS: 1200/3134 resolved
+09:53:01    NUTS: 1400/3134 resolved
+09:53:03    NUTS: 1600/3134 resolved
+09:53:06    NUTS: 1800/3134 resolved
+09:53:09    NUTS: 2000/3134 resolved
+09:53:11    NUTS: 2200/3134 resolved
+09:53:15    NUTS: 2400/3134 resolved
+09:53:17    NUTS: 2600/3134 resolved
+09:53:20    NUTS: 2800/3134 resolved
+09:53:22    NUTS: 3000/3134 resolved
+09:53:24    NUTS: 3134/3134 resolved
+09:53:24  Step 4: Resolving 8317 new subjects (0 already cached)...
+09:53:27    Subjects: 200/8317 resolved
+09:53:30    Subjects: 400/8317 resolved
+09:53:34    Subjects: 600/8317 resolved
+09:53:37    Subjects: 800/8317 resolved
+09:53:42    Subjects: 1000/8317 resolved
+09:53:47    Subjects: 1200/8317 resolved
+09:53:51    Subjects: 1400/8317 resolved
+09:53:54    Subjects: 1600/8317 resolved
+09:53:58    Subjects: 1800/8317 resolved
+09:54:02    Subjects: 2000/8317 resolved
+09:54:06    Subjects: 2200/8317 resolved
+09:54:08    Subjects: 2400/8317 resolved
+09:54:14    Subjects: 2600/8317 resolved
+09:54:17    Subjects: 2800/8317 resolved
+09:54:24    Subjects: 3000/8317 resolved
+09:54:29    Subjects: 3200/8317 resolved
+09:54:35    Subjects: 3400/8317 resolved
+09:54:38    Subjects: 3600/8317 resolved
+09:54:42    Subjects: 3800/8317 resolved
+09:54:45    Subjects: 4000/8317 resolved
+09:54:48    Subjects: 4200/8317 resolved
+09:54:52    Subjects: 4400/8317 resolved
+09:54:54    Subjects: 4600/8317 resolved
+09:54:57    Subjects: 4800/8317 resolved
+09:54:59    Subjects: 5000/8317 resolved
+09:55:02    Subjects: 5200/8317 resolved
+09:55:05    Subjects: 5400/8317 resolved
+09:55:08    Subjects: 5600/8317 resolved
+09:55:11    Subjects: 5800/8317 resolved
+09:55:15    Subjects: 6000/8317 resolved
+09:55:18    Subjects: 6200/8317 resolved
+09:55:21    Subjects: 6400/8317 resolved
+09:55:24    Subjects: 6600/8317 resolved
+09:55:28    Subjects: 6800/8317 resolved
+09:55:31    Subjects: 7000/8317 resolved
+09:55:35    Subjects: 7200/8317 resolved
+09:55:39    Subjects: 7400/8317 resolved
+09:55:43    Subjects: 7600/8317 resolved
+09:55:47    Subjects: 7800/8317 resolved
+09:55:51    Subjects: 8000/8317 resolved
+09:55:54    Subjects: 8200/8317 resolved
+09:55:55    Subjects: 8317/8317 resolved
+09:55:55  Step 5: Aggregating by beneficiary IČO...
+09:55:55    Written 8290 beneficiaries to /Users/boriskrisko/ConveyorMind/data/aggregated_by_beneficiary.json
+09:55:55  Step 6: Fetching irregularities...
+09:55:57    Irregularities: 1000 fetched
+09:55:58    Irregularities: 2000 fetched
+09:55:59    Irregularities: 3000 fetched
+09:56:01    Irregularities: 4000 fetched
+09:56:02    Irregularities: 5000 fetched
+09:56:04    Irregularities: 6000 fetched
+09:56:04    Irregularities: 7000 fetched
+09:56:05    Irregularities: 7603 fetched
+09:56:05    7603 irregularities → 1554 debtors, saved to /Users/boriskrisko/ConveyorMind/data/irregularities_by_ico.json
+09:56:05  
+======================================================================
+ITMS2014+ DATA PIPELINE — SUMMARY
+======================================================================
+Total projects fetched:       21,732
+  In realization:                660
+  Completed:                  21,072
+Unique beneficiaries (IČO):    8,290
+Total contracted:           €25,517,942,165.04
+Irregularities:                7,586 (1554 debtors)
+Elapsed time:               00:32:03
+
+TOP 10 BENEFICIARIES BY CONTRACTED AMOUNT:
+----------------------------------------------------------------------
+   1. Ústredie09:56:06    Subjects: 8000/8317 resolved
+09:56:09    Subjects: 8200/8317 resolved
+09:56:11    Subjects: 8317/8317 resolved
+09:56:11  Step 5: Aggregating by beneficiary IČO...
+09:56:11    Written 8290 beneficiaries to /Users/boriskrisko/ConveyorMind/data/aggregated_by_beneficiary.json
+09:56:11    Loading cached irregularities from /Users/boriskrisko/ConveyorMind/data/raw_irregularities.json
+09:56:11    7603 irregularities → 1554 debtors, saved to /Users/boriskrisko/ConveyorMind/data/irregularities_by_ico.json
+09:56:11  
+======================================================================
+ITMS2014+ DATA PIPELINE — SUMMARY
+======================================================================
+Total projects fetched:       21,732
+  In realization:                660
+  Completed:                  21,072
+Unique beneficiaries (IČO):    8,290
+Total contracted:           €25,517,942,165.04
+Irregularities:                7,586 (1554 debtors)
+Elapsed time:               00:35:39
+
+TOP 10 BENEFICIARIES BY CONTRACTED AMOUNT:
+----------------------------------------------------------------------
+   1. Ústredie práce, sociálnych vecí a rodiny      €3,207,305,655.97
+   2. Národná diaľničná spoločnosť, a.s.            €1,960,529,063.50
+   3. Slovak Investment Holding, a. s.              €1,699,179,261.68
+   4. Ministerstvo hospodárstva Slovenskej republik €1,075,810,064.18
+   5. Železnice Slovenskej republiky                €941,600,057.21
+   6. Ministerstvo vnútra Slovenskej republiky      €839,929,353.16
+   7. Železničná spoločnosť Slovensko, a.s.         €644,942,865.92
+   8. Ministerstvo práce, sociálnych vecí a rodiny  €603,779,093.66
+   9. Slovenská správa ciest                        €590,446,699.66
+  10. Národný inštitút vzdelávania a mládeže        €508,066,659.15
+======================================================================

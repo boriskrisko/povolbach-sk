@@ -1,0 +1,53 @@
+=== POVOLBACH.SK — IČO Matching Validation Report ===
+Generated: 2026-03-17 23:08:24
+
+MUNICIPALITY REFERENCE LIST
+  Total municipalities in reference: 2928
+
+MATCHING RESULTS
+  Municipalities with ≥1 project: 2544
+  Municipalities with €0 (no projects found): 384
+
+EXCLUDED BENEFICIARIES (not municipalities)
+  Total excluded IČOs: 5746
+  Total excluded contracted amount: €22,867,875,603
+  Sample (top 10 by amount):
+    30794536 | Ústredie práce, sociálnych vecí a rodiny | €3,207,305,656
+    35919001 | Národná diaľničná spoločnosť, a.s. | €1,960,529,064
+    47759097 | Slovak Investment Holding, a. s. | €1,699,179,262
+    00686832 | Ministerstvo hospodárstva Slovenskej republiky | €1,075,810,064
+    31364501 | Železnice Slovenskej republiky | €941,600,057
+    00151866 | Ministerstvo vnútra Slovenskej republiky | €839,929,353
+    35914939 | Železničná spoločnosť Slovensko, a.s. | €644,942,866
+    00681156 | Ministerstvo práce, sociálnych vecí a rodiny Slovenskej republiky | €603,779,094
+    00003328 | Slovenská správa ciest | €590,446,700
+    00164348 | Národný inštitút vzdelávania a mládeže | €508,066,659
+
+IČO FORMAT ANOMALIES
+  Non-8-digit IČOs found: none
+  Non-numeric IČOs found: none
+  Duplicate IČOs in reference: none
+
+TOP 10 MUNICIPALITIES BY TOTAL CONTRACTED EUR
+  1. Košice (00691135) — €129,829,658 — 55 projects
+  2. Bratislava (00603481) — €95,147,682 — 27 projects
+  3. Nitra (00308307) — €36,910,229 — 65 projects
+  4. Trenčín (00312037) — €32,430,554 — 55 projects
+  5. Trnava (00313114) — €30,050,114 — 56 projects
+  6. Žilina (00321796) — €26,642,602 — 57 projects
+  7. Prešov (00327646) — €25,204,678 — 55 projects
+  8. Bardejov (00321842) — €24,509,089 — 42 projects
+  9. Banská Bystrica (00313271) — €24,293,815 — 45 projects
+  10. Nesvady (00306606) — €21,548,033 — 13 projects
+
+BOTTOM 10 MUNICIPALITIES (with projects, by amount)
+  1. Uhrovské Podhradie (00800121) — €5,000 — 1 projects
+  2. Ratkovo (00316865) — €5,000 — 1 projects
+  3. Jalšovík (00647501) — €4,500 — 1 projects
+  4. Svätá Mária (00331325) — €2,600 — 1 projects
+  5. Čižatice (00324086) — €2,600 — 1 projects
+  6. Oľšavka (00330876) — €2,600 — 1 projects
+  7. Bajerov (00326801) — €2,600 — 1 projects
+  8. Hostovice (00322971) — €2,600 — 1 projects
+  9. Streženice (00692336) — €2,600 — 1 projects
+  10. Kyselica (34000658) — €2,600 — 1 projects

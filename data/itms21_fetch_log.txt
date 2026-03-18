@@ -1,0 +1,109 @@
+[2026-03-18 00:17:44] ============================================================
+[2026-03-18 00:17:44] fetch_itms21.py — Starting
+[2026-03-18 00:17:44] ============================================================
+[2026-03-18 00:17:44] Step 1: Fetching project activities from ITMS21+ API
+[2026-03-18 00:17:44]   Total activities available: 78572
+[2026-03-18 00:18:26]   Fetched 5000/78572 activities
+[2026-03-18 00:19:33]   Fetched 10000/78572 activities
+[2026-03-18 00:21:08]   Fetched 15000/78572 activities
+[2026-03-18 00:23:06]   Fetched 20000/78572 activities
+[2026-03-18 00:25:31]   Fetched 25000/78572 activities
+[2026-03-18 00:28:20]   Fetched 30000/78572 activities
+[2026-03-18 00:31:38]   Fetched 35000/78572 activities
+[2026-03-18 00:35:13]   Fetched 40000/78572 activities
+[2026-03-18 00:39:06]   Fetched 45000/78572 activities
+[2026-03-18 00:43:19]   Fetched 50000/78572 activities
+[2026-03-18 00:48:04]   Fetched 55000/78572 activities
+[2026-03-18 00:49:12]   Attempt 1/3 failed for https://api.itms21.sk/public/v1/aktivitaprojekt?limit=500&offset=55500: The read operation timed out
+[2026-03-18 00:52:13]   Attempt 1/3 failed for https://api.itms21.sk/public/v1/aktivitaprojekt?limit=500&offset=58000: The read operation timed out
+[2026-03-18 00:53:15]   Attempt 1/3 failed for https://api.itms21.sk/public/v1/aktivitaprojekt?limit=500&offset=58500: The read operation timed out
+[2026-03-18 00:54:16]   Attempt 1/3 failed for https://api.itms21.sk/public/v1/aktivitaprojekt?limit=500&offset=59000: The read operation timed out
+[2026-03-18 00:54:47]   Attempt 2/3 failed for https://api.itms21.sk/public/v1/aktivitaprojekt?limit=500&offset=59000: The read operation timed out
+[2026-03-18 00:55:50]   Fetched 60000/78572 activities
+[2026-03-18 00:56:29]   Attempt 1/3 failed for https://api.itms21.sk/public/v1/aktivitaprojekt?limit=500&offset=60000: The read operation timed out
+[2026-03-18 00:57:31]   Attempt 1/3 failed for https://api.itms21.sk/public/v1/aktivitaprojekt?limit=500&offset=60500: The read operation timed out
+[2026-03-18 00:58:02]   Attempt 2/3 failed for https://api.itms21.sk/public/v1/aktivitaprojekt?limit=500&offset=60500: The read operation timed out
+[2026-03-18 00:58:34]   Attempt 3/3 failed for https://api.itms21.sk/public/v1/aktivitaprojekt?limit=500&offset=60500: The read operation timed out
+[2026-03-18 00:58:34]   FATAL at offset 60500: The read operation timed out
+[2026-03-18 00:58:43]   Saved 60500 activities to partial cache
+[2026-03-18 01:00:48] ============================================================
+[2026-03-18 01:00:48] fetch_itms21.py — Starting
+[2026-03-18 01:00:48] ============================================================
+[2026-03-18 01:00:48] Step 1: Fetching project activities from ITMS21+ API
+[2026-03-18 01:00:49]   Total activities available: 78572
+[2026-03-18 01:00:53]   Resuming from offset 60500 (partial cache)
+[2026-03-18 01:01:23]   Attempt 1/3 failed for https://api.itms21.sk/public/v1/aktivitaprojekt?limit=500&offset=60500: The read operation timed out
+[2026-03-18 01:01:54]   Attempt 2/3 failed for https://api.itms21.sk/public/v1/aktivitaprojekt?limit=500&offset=60500: The read operation timed out
+[2026-03-18 01:04:06] ============================================================
+[2026-03-18 01:04:06] fetch_itms21.py — Starting
+[2026-03-18 01:04:06] ============================================================
+[2026-03-18 01:04:06] Step 1: Fetching project activities from ITMS21+ API
+[2026-03-18 01:04:06]   Total activities available: 78572
+[2026-03-18 01:04:09]   Resuming from offset 60500 (partial cache)
+[2026-03-18 01:06:26] ============================================================
+[2026-03-18 01:06:26] fetch_itms21.py — Starting
+[2026-03-18 01:06:26] ============================================================
+[2026-03-18 01:06:26] Step 1: Loading cached activities
+[2026-03-18 01:06:29]   Loaded 60500 cached activities
+[2026-03-18 01:06:29] Step 2: Deduplicating by project ID and aggregating by IČO
+[2026-03-18 01:06:29]   Unique projects: 3789
+[2026-03-18 01:06:29]   Unique beneficiaries (IČOs): 1869
+[2026-03-18 01:06:29]   Total contracted EUR: €10,413,059,541
+[2026-03-18 01:06:29]   Saved aggregated data to data/aggregated_by_beneficiary_2127.json
+[2026-03-18 01:06:29] Step 3: Matching against municipality register
+[2026-03-18 01:06:29]   Municipality register: 2928 entries
+[2026-03-18 01:06:29]   Matched municipalities: 1155
+[2026-03-18 01:06:29]   Zero-project municipalities: 1773
+[2026-03-18 01:06:29]   Total municipal EUR: €1,491,450,043
+[2026-03-18 01:06:29]   Saved to data/municipal_stats_2127.json
+[2026-03-18 01:06:29] ============================================================
+[2026-03-18 01:06:29] fetch_itms21.py — Complete
+[2026-03-18 01:06:29] ============================================================
+[2026-03-18 01:22:57] ============================================================
+[2026-03-18 01:22:57] fetch_itms21.py — Starting
+[2026-03-18 01:22:57] ============================================================
+[2026-03-18 01:22:57] Step 1: Fetching project activities from ITMS21+ API
+[2026-03-18 01:22:58]   Total activities available: 78572
+[2026-03-18 01:23:01]   Incomplete cache found: 60500/78572 — resuming fetch
+[2026-03-18 01:23:10]   Resuming from offset 60500/78572
+[2026-03-18 01:25:30]   Fetched 61000/78572 activities (77.6%)
+[2026-03-18 01:30:41]   Fetched 62000/78572 activities (78.9%)
+[2026-03-18 01:35:56] ============================================================
+[2026-03-18 01:35:56] fetch_itms21.py — Starting
+[2026-03-18 01:35:56] ============================================================
+[2026-03-18 01:35:56] Step 1: Fetching project activities from ITMS21+ API
+[2026-03-18 01:35:57]   Total activities available: 78572
+[2026-03-18 01:36:00]   Loaded 60500 cached activities from all_activities.json (IDs: 60500 unique)
+[2026-03-18 01:36:00]   Missing ~18072 activities — fetching with minId pagination (ascending)
+[2026-03-18 01:36:01]   Fetched 63000/78572 activities (80.2%)
+[2026-03-18 01:36:18]   Fetched 2000 new + 60500 cached = 62500/78572 (79.5%)
+[2026-03-18 01:36:37]   Fetched 4000 new + 60500 cached = 64500/78572 (82.1%)
+[2026-03-18 01:36:56]   Fetched 6000 new + 60500 cached = 66500/78572 (84.6%)
+[2026-03-18 01:37:14]   Fetched 8000 new + 60500 cached = 68500/78572 (87.2%)
+[2026-03-18 01:37:33]   Fetched 10000 new + 60500 cached = 70500/78572 (89.7%)
+[2026-03-18 01:37:51]   Fetched 12000 new + 60500 cached = 72500/78572 (92.3%)
+[2026-03-18 01:38:09]   Fetched 14000 new + 60500 cached = 74500/78572 (94.8%)
+[2026-03-18 01:38:27]   Fetched 16000 new + 60500 cached = 76500/78572 (97.4%)
+[2026-03-18 01:38:45]   Fetched 18000 new + 60500 cached = 78500/78572 (99.9%)
+[2026-03-18 01:38:47]   Fetched 18072 new + 60500 cached = 78572/78572 (100.0%)
+[2026-03-18 01:38:47]   Reached cached ID range at 505561 — done fetching new records
+[2026-03-18 01:38:47]   Total after merge: 78572 activities (78572 unique IDs)
+[2026-03-18 01:38:59]   Saved to complete cache
+[2026-03-18 01:38:59] Step 2: Deduplicating by project ID and aggregating by IČO
+[2026-03-18 01:38:59]   Unique projects: 3825
+[2026-03-18 01:38:59]   Unique beneficiaries (IČOs): 1884
+[2026-03-18 01:38:59]   Total contracted EUR: €10,538,999,086
+[2026-03-18 01:38:59]   Saved aggregated data to data/aggregated_by_beneficiary_2127.json
+[2026-03-18 01:38:59] Step 3: Matching against municipality register
+[2026-03-18 01:38:59]   Municipality register: 2928 entries
+[2026-03-18 01:38:59]   Matched municipalities: 1159
+[2026-03-18 01:38:59]   Zero-project municipalities: 1769
+[2026-03-18 01:38:59]   Total municipal EUR: €1,494,785,485
+[2026-03-18 01:38:59]   Saved to data/municipal_stats_2127.json
+[2026-03-18 01:38:59] ============================================================
+[2026-03-18 01:38:59] fetch_itms21.py — Complete
+[2026-03-18 01:38:59] ============================================================
+[2026-03-18 01:41:22]   Fetched 64000/78572 activities (81.5%)
+[2026-03-18 01:46:48]   Fetched 65000/78572 activities (82.7%)
+[2026-03-18 01:52:19]   Fetched 66000/78572 activities (84.0%)
+[2026-03-18 01:57:55]   Fetched 67000/78572 activities (85.3%)

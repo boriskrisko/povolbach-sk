@@ -1,0 +1,17 @@
+[2026-03-17 23:08:24] ============================================================
+[2026-03-17 23:08:24] match_municipalities.py — Starting
+[2026-03-17 23:08:24] ============================================================
+[2026-03-17 23:08:24] Step 1: Loading existing /Users/boriskrisko/ConveyorMind/data/municipalities_isco.json
+[2026-03-17 23:08:24]   Loaded 2928 municipalities from cache
+[2026-03-17 23:08:24] Step 2: Loading and normalizing IČOs
+[2026-03-17 23:08:24]   Aggregated: 8290 beneficiaries loaded
+[2026-03-17 23:08:24]   Irregularities: 1554 IČOs loaded
+[2026-03-17 23:08:24] Step 3: Running IČO join
+[2026-03-17 23:08:24]   Matched municipalities: 2544
+[2026-03-17 23:08:24]   Zero-project municipalities: 384
+[2026-03-17 23:08:24]   Excluded non-municipality IČOs: 5746
+[2026-03-17 23:08:24] Step 4: Saving outputs
+[2026-03-17 23:08:24]   Saved 2928 municipalities to /Users/boriskrisko/ConveyorMind/data/municipal_stats.json
+[2026-03-17 23:08:24]   Saved 5746 excluded beneficiaries to /Users/boriskrisko/ConveyorMind/data/excluded_beneficiaries.json
+[2026-03-17 23:08:24] Step 5: Generating validation report
+[2026-03-17 23:08:24]   Saved validation report to /Users/boriskrisko/ConveyorMind/validation_report.txt

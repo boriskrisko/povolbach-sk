@@ -1,0 +1,249 @@
+[
+  {
+    "ico": "42407311",
+    "name": "Košice 1",
+    "nuts5": "SK042_KE1",
+    "population": null,
+    "category": "smallest",
+    "itms_results": [],
+    "excluded_matches": [],
+    "agg_match": null
+  },
+  {
+    "ico": "45777501",
+    "name": "Košice 3",
+    "nuts5": "SK042_KE3",
+    "population": null,
+    "category": "smallest",
+    "itms_results": [],
+    "excluded_matches": [],
+    "agg_match": null
+  },
+  {
+    "ico": "00322466",
+    "name": "Ondavka",
+    "nuts5": "SK0411519685",
+    "population": 10,
+    "category": "smallest",
+    "itms_results": [],
+    "excluded_matches": [],
+    "agg_match": null
+  },
+  {
+    "ico": "00330892",
+    "name": "Príkra",
+    "nuts5": "SK041C527734",
+    "population": 11,
+    "category": "smallest",
+    "itms_results": [],
+    "excluded_matches": [],
+    "agg_match": null
+  },
+  {
+    "ico": "00330361",
+    "name": "Bystrá",
+    "nuts5": "SK041B527190",
+    "population": 16,
+    "category": "smallest",
+    "itms_results": [
+      {
+        "subject_id": "100186",
+        "ico": "00330591",
+        "name": "Obec Krajná Bystrá",
+        "ico_match": false
+      },
+      {
+        "subject_id": "114621",
+        "ico": "00325724",
+        "name": "Obec Ruská Bystrá",
+        "ico_match": false
+      },
+      {
+        "subject_id": "108608",
+        "ico": "00647853",
+        "name": "Obec Bystrá",
+        "ico_match": false
+      }
+    ],
+    "excluded_matches": [],
+    "agg_match": null
+  },
+  {
+    "ico": "00650188",
+    "name": "Chvalová",
+    "nuts5": "SK0328514977",
+    "population": 194,
+    "category": "mid-sized",
+    "itms_results": [],
+    "excluded_matches": [],
+    "agg_match": null
+  },
+  {
+    "ico": "00316555",
+    "name": "Abramová",
+    "nuts5": "SK0319512044",
+    "population": 194,
+    "category": "mid-sized",
+    "itms_results": [],
+    "excluded_matches": [],
+    "agg_match": null
+  },
+  {
+    "ico": "00319546",
+    "name": "Senné",
+    "nuts5": "SK032A516368",
+    "population": 194,
+    "category": "mid-sized",
+    "itms_results": [
+      {
+        "subject_id": "107926",
+        "ico": "00325767",
+        "name": "Obec Senné",
+        "ico_match": false
+      }
+    ],
+    "excluded_matches": [],
+    "agg_match": null
+  },
+  {
+    "ico": "00690333",
+    "name": "Opiná",
+    "nuts5": "SK0426521841",
+    "population": 195,
+    "category": "mid-sized",
+    "itms_results": [],
+    "excluded_matches": [],
+    "agg_match": null
+  },
+  {
+    "ico": "00318906",
+    "name": "Lukovištia",
+    "nuts5": "SK0329515175",
+    "population": 197,
+    "category": "mid-sized",
+    "itms_results": [],
+    "excluded_matches": [],
+    "agg_match": null
+  },
+  {
+    "ico": "00314153",
+    "name": "Ochodnica",
+    "nuts5": "SK0314509329",
+    "population": 1933,
+    "category": "largest",
+    "itms_results": [],
+    "excluded_matches": [],
+    "agg_match": null
+  },
+  {
+    "ico": "00329681",
+    "name": "Švedlár",
+    "nuts5": "SK0421543659",
+    "population": 2087,
+    "category": "largest",
+    "itms_results": [],
+    "excluded_matches": [],
+    "agg_match": null
+  },
+  {
+    "ico": "00305766",
+    "name": "Trhová Hradská",
+    "nuts5": "SK0211555576",
+    "population": 2160,
+    "category": "largest",
+    "itms_results": [],
+    "excluded_matches": [],
+    "agg_match": null
+  },
+  {
+    "ico": "00649899",
+    "name": "Poproč",
+    "nuts5": "SK0426521892",
+    "population": 2647,
+    "category": "largest",
+    "itms_results": [
+      {
+        "subject_id": "101922",
+        "ico": "00324639",
+        "name": "Obec Poproč",
+        "ico_match": false
+      }
+    ],
+    "excluded_matches": [],
+    "agg_match": null
+  },
+  {
+    "ico": "31998178",
+    "name": "Košice - Košická Nová Ves",
+    "nuts5": "SK0424599018",
+    "population": 3178,
+    "category": "largest",
+    "itms_results": [],
+    "excluded_matches": [],
+    "agg_match": null
+  },
+  {
+    "ico": "00648426",
+    "name": "Čremošné",
+    "nuts5": "SK0319512141",
+    "population": 83,
+    "category": "random",
+    "itms_results": [],
+    "excluded_matches": [],
+    "agg_match": null
+  },
+  {
+    "ico": "00649678",
+    "name": "Babinec",
+    "nuts5": "SK0329514489",
+    "population": 66,
+    "category": "random",
+    "itms_results": [],
+    "excluded_matches": [],
+    "agg_match": null
+  },
+  {
+    "ico": "00651842",
+    "name": "Pravica",
+    "nuts5": "SK032A516309",
+    "population": 117,
+    "category": "random",
+    "itms_results": [],
+    "excluded_matches": [],
+    "agg_match": null
+  },
+  {
+    "ico": "00307602",
+    "name": "Turá",
+    "nuts5": "SK0232502880",
+    "population": 229,
+    "category": "random",
+    "itms_results": [
+      {
+        "subject_id": "100147",
+        "ico": "00312002",
+        "name": "Mesto Stará Turá",
+        "ico_match": false
+      }
+    ],
+    "excluded_matches": [
+      {
+        "ico": "36125121",
+        "name": "Základná škola Stará Turá, Hurbanova ul. 128/25",
+        "total_contracted_eur": 158580.0,
+        "projects_count": 1
+      }
+    ],
+    "agg_match": null
+  },
+  {
+    "ico": "00328723",
+    "name": "Rochovce",
+    "nuts5": "SK0428526177",
+    "population": 366,
+    "category": "random",
+    "itms_results": [],
+    "excluded_matches": [],
+    "agg_match": null
+  }
+]
