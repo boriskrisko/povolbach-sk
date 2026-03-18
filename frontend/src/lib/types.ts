@@ -30,6 +30,7 @@ export interface MunicipalityMap {
 export interface RegionStats {
   name: string;
   totalEur: number;
+  totalPopulation: number;
   municipalityCount: number;
   avgEur: number;
   withProjects: number;

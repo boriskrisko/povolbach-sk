@@ -344,20 +344,33 @@ export default function SlovakiaMap({ onMunicipalityClick, viewMode, setViewMode
 
       {/* Region grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6">
-        {regionStats.map(r => (
-          <div
-            key={r.name}
-            className={`bg-[#13131a] border rounded-xl p-4 transition-colors ${
-              hoveredRegion === r.name ? 'border-[#3b82f6]' : 'border-[#1e1e2e]'
-            }`}
-          >
-            <div className="text-sm text-[#f8fafc] font-medium mb-1">{r.name}</div>
-            <div className="text-[#3b82f6] font-mono text-lg font-bold">{formatEur(r.totalEur)}</div>
-            <div className="text-[#94a3b8] text-xs mt-1">
-              {r.municipalityCount} obcí · {r.withoutProjects} bez projektu
-            </div>
-          </div>
-        ))}
+        {[...regionStats]
+          .sort((a, b) => viewMode === 'capita'
+            ? (b.totalPopulation > 0 ? b.totalEur / b.totalPopulation : 0) - (a.totalPopulation > 0 ? a.totalEur / a.totalPopulation : 0)
+            : b.totalEur - a.totalEur
+          )
+          .map(r => {
+            const perCapita = r.totalPopulation > 0 ? r.totalEur / r.totalPopulation : 0;
+            return (
+              <div
+                key={r.name}
+                className={`bg-[#13131a] border rounded-xl p-4 transition-colors ${
+                  hoveredRegion === r.name ? 'border-[#3b82f6]' : 'border-[#1e1e2e]'
+                }`}
+              >
+                <div className="text-sm text-[#f8fafc] font-medium mb-1">{r.name}</div>
+                <div className="text-[#3b82f6] font-mono text-lg font-bold">
+                  {viewMode === 'capita'
+                    ? `${formatEur(Math.round(perCapita))} / obyv.`
+                    : formatEur(r.totalEur)
+                  }
+                </div>
+                <div className="text-[#94a3b8] text-xs mt-1">
+                  {r.municipalityCount} obcí · {r.withoutProjects} bez projektu
+                </div>
+              </div>
+            );
+          })}
       </div>
     </section>
   );

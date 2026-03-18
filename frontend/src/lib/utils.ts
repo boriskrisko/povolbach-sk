@@ -45,14 +45,15 @@ export function getWithoutProjects(data: MunicipalityMap): number {
 }
 
 export function getRegionStats(data: MunicipalityMap): RegionStats[] {
-  const regions: Record<string, { totalEur: number; count: number; withProjects: number; withoutProjects: number }> = {};
+  const regions: Record<string, { totalEur: number; totalPopulation: number; count: number; withProjects: number; withoutProjects: number }> = {};
 
   for (const m of Object.values(data)) {
     const region = m.region || 'Neznámy';
     if (!regions[region]) {
-      regions[region] = { totalEur: 0, count: 0, withProjects: 0, withoutProjects: 0 };
+      regions[region] = { totalEur: 0, totalPopulation: 0, count: 0, withProjects: 0, withoutProjects: 0 };
     }
     regions[region].totalEur += m.total_contracted_eur;
+    regions[region].totalPopulation += m.population || 0;
     regions[region].count += 1;
     if (m.total_contracted_eur > 0) {
       regions[region].withProjects += 1;
@@ -65,6 +66,7 @@ export function getRegionStats(data: MunicipalityMap): RegionStats[] {
     .map(([name, s]) => ({
       name,
       totalEur: s.totalEur,
+      totalPopulation: s.totalPopulation,
       municipalityCount: s.count,
       avgEur: s.count > 0 ? s.totalEur / s.count : 0,
       withProjects: s.withProjects,
