@@ -25,7 +25,7 @@ const DataContext = createContext<DataContextType>({
 
 const PERIOD_FILES: Record<Period, string> = {
   '1420': '/municipal_stats.json',
-  '2127': '/municipal_stats_2127.json',
+  '2127': '/municipal_stats_21.json',
 };
 
 export function DataProvider({ children }: { children: ReactNode }) {

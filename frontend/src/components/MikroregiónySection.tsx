@@ -46,7 +46,7 @@ export default function MikroregiónySection({ locale }: Props) {
   const [selected, setSelected] = useState<MikroCategory | null>(null);
 
   useEffect(() => {
-    const file = period === '2127' ? '/mikroregiony_stats_2127.json' : '/mikroregiony_stats.json';
+    const file = period === '2127' ? '/mikroregiony_stats_21.json' : '/mikroregiony_stats.json';
     fetch(file)
       .then(r => r.json())
       .then(setData)
