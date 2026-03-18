@@ -47,8 +47,8 @@ export const t = {
     total_funds_tracked: 'Celkové fondy sledované',
     absorbing_eu: 'čerpá EÚ fondy',
     without_project: 'bez projektu',
-    data_source_1420: 'Dáta pochádzajú z oficiálneho systému ITMS2014+, ktorý eviduje všetky projekty financované z európskych štrukturálnych a investičných fondov v programovom období 2014–2021. Povolbach.sk agreguje tieto dáta na úrovni jednotlivých obcí a miest.',
-    data_source_2127: 'Dáta pochádzajú z oficiálneho systému ITMS2021+, ktorý eviduje všetky projekty financované z európskych štrukturálnych a investičných fondov v programovom období 2021–2027. Povolbach.sk agreguje tieto dáta na úrovni jednotlivých obcí a miest.',
+    data_source_1420: 'Dáta pochádzajú z oficiálneho systému ITMS2014+, ktorý eviduje všetky projekty financované z európskych štrukturálnych a investičných fondov v programovom období 2014–2021. Povolbach.sk agreguje tieto dáta na úrovni obcí, miest, samosprávnych krajov a medziobecných združení.',
+    data_source_2127: 'Dáta pochádzajú z oficiálneho systému ITMS2021+, ktorý eviduje všetky projekty financované z európskych štrukturálnych a investičných fondov v programovom období 2021–2027. Povolbach.sk agreguje tieto dáta na úrovni obcí, miest, samosprávnych krajov a medziobecných združení.',
   },
   en: {
     hero_label: 'EU FUND EFFICIENCY IN SLOVAKIA',
@@ -96,7 +96,7 @@ export const t = {
     total_funds_tracked: 'Total funds tracked',
     absorbing_eu: 'absorbing EU funds',
     without_project: 'without a project',
-    data_source_1420: 'Data sourced from the official ITMS2014+ system, which tracks all projects funded by EU structural and investment funds in the 2014–2021 programming period. Povolbach.sk aggregates this data at the level of individual municipalities.',
-    data_source_2127: 'Data sourced from the official ITMS2021+ system, which tracks all projects funded by EU structural and investment funds in the 2021–2027 programming period. Povolbach.sk aggregates this data at the level of individual municipalities.',
+    data_source_1420: 'Data sourced from the official ITMS2014+ system, which tracks all projects funded by EU structural and investment funds in the 2014–2021 programming period. Povolbach.sk aggregates this data at the level of municipalities, cities, regional governments and inter-municipal associations.',
+    data_source_2127: 'Data sourced from the official ITMS2021+ system, which tracks all projects funded by EU structural and investment funds in the 2021–2027 programming period. Povolbach.sk aggregates this data at the level of municipalities, cities, regional governments and inter-municipal associations.',
   },
 } as const;

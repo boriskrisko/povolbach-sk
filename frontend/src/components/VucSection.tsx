@@ -76,7 +76,7 @@ export default function VucSection({ viewMode, setViewMode, locale }: Props) {
                 className="text-sm font-semibold text-[#f8fafc] mb-3 group-hover:text-[#3b82f6] transition-colors leading-tight"
                 style={{ fontFamily: 'Syne, sans-serif' }}
               >
-                {v.name_short}
+                {v.name}
               </div>
 
               {viewMode === 'capita' ? (
