@@ -200,6 +200,8 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale }: 
           <div className="text-[#94a3b8] text-xs mb-2 mt-4">{tr.period_label}</div>
           <div className="inline-flex rounded-lg border border-[#1e1e2e] overflow-hidden mt-2">
             <button
+              type="button"
+              onMouseDown={e => e.preventDefault()}
               onClick={() => setPeriod('1420')}
               className={`px-4 py-1.5 text-sm font-medium transition-colors ${
                 period === '1420'
@@ -210,6 +212,8 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale }: 
               2014 – 2020
             </button>
             <button
+              type="button"
+              onMouseDown={e => e.preventDefault()}
               onClick={() => is2127Available && setPeriod('2127')}
               disabled={!is2127Available}
               className={`px-4 py-1.5 text-sm font-medium transition-colors ${
@@ -259,6 +263,8 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale }: 
           }}
         >
           <button
+            type="button"
+            onMouseDown={e => e.preventDefault()}
             onClick={() => setPeriod('1420')}
             className={`px-3 py-1 text-sm font-medium transition-colors ${
               period === '1420' ? 'bg-[#3b82f6] text-white' : 'text-[#94a3b8] hover:text-[#f8fafc]'
@@ -267,6 +273,8 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale }: 
             2014 – 2020
           </button>
           <button
+            type="button"
+            onMouseDown={e => e.preventDefault()}
             onClick={() => is2127Available && setPeriod('2127')}
             disabled={!is2127Available}
             className={`px-3 py-1 text-sm font-medium transition-colors ${
