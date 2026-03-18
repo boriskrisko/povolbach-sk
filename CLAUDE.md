@@ -238,4 +238,13 @@ Data work required:
 
 This gives genuinely unique data no Slovak platform has. Build after first public launch.
 
+---
+
+## Pipeline Notes
+
+### ITMS2021+ fetch performance
+The 2021-2027 pipeline (fetch_itms21.py) currently uses offset-based pagination for resume 
+(slow ~5 min/1k projects). If re-running from scratch, switch to minId cursor approach 
+(same as fetch_itms.py) for significantly faster fetching.
+
 *Last updated: March 2026*

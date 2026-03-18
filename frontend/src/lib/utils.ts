@@ -1,22 +1,38 @@
 import { Municipality, MunicipalityMap, RegionStats } from './types';
+import type { Locale } from './translations';
 
+export function formatAmount(amount: number, locale: Locale = 'sk'): string {
+  if (locale === 'en') {
+    if (amount === 0) return '€0';
+    if (amount >= 1_000_000_000) return `€${(amount / 1_000_000_000).toFixed(1)}B`;
+    if (amount >= 1_000_000) return `€${(amount / 1_000_000).toFixed(1)}M`;
+    if (amount >= 1_000) return `€${Math.round(amount / 1_000)}k`;
+    return `€${Math.round(amount)}`;
+  }
+  // Slovak locale
+  if (amount === 0) return '0 €';
+  if (amount >= 1_000_000_000) return `${(amount / 1_000_000_000).toFixed(2)} mld. €`;
+  if (amount >= 1_000_000) return `${(amount / 1_000_000).toFixed(1)} mil. €`;
+  if (amount >= 1_000) return `${Math.round(amount / 1_000)} tis. €`;
+  return `${Math.round(amount)} €`;
+}
+
+// Backward-compat alias (always SK locale)
 export function formatEur(amount: number): string {
-  if (amount === 0) return '€0';
-  if (amount < 1_000) return `€${Math.round(amount)}`;
-  if (amount < 1_000_000) return `€${(amount / 1_000).toFixed(amount < 10_000 ? 1 : 0)}k`;
-  if (amount < 100_000_000) return `€${(amount / 1_000_000).toFixed(1)}M`;
-  return `€${Math.round(amount / 1_000_000)}M`;
+  return formatAmount(amount, 'sk');
 }
 
 export function formatEurFull(amount: number): string {
   return `€${amount.toLocaleString('sk-SK', { maximumFractionDigits: 0 })}`;
 }
 
-export function formatBillions(amount: number): string {
-  if (amount >= 1_000_000_000) {
-    return `€${(amount / 1_000_000_000).toFixed(2)} mld`;
+export function formatBillions(amount: number, locale: Locale = 'sk'): string {
+  if (locale === 'en') {
+    if (amount >= 1_000_000_000) return `€${(amount / 1_000_000_000).toFixed(2)}B`;
+    return `€${(amount / 1_000_000).toFixed(0)}M`;
   }
-  return `€${(amount / 1_000_000).toFixed(0)} mil`;
+  if (amount >= 1_000_000_000) return `${(amount / 1_000_000_000).toFixed(2)} mld. €`;
+  return `${(amount / 1_000_000).toFixed(0)} mil. €`;
 }
 
 export function getTop10(data: MunicipalityMap): Municipality[] {

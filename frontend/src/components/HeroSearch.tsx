@@ -1,69 +1,27 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { useData, Period } from '@/lib/DataContext';
+import { useData } from '@/lib/DataContext';
 import { Municipality } from '@/lib/types';
-import { searchMunicipalitiesFlexible, formatEur, getTotalEur, formatBillions } from '@/lib/utils';
+import { searchMunicipalitiesFlexible, formatAmount, getTotalEur, formatBillions } from '@/lib/utils';
+import { t, type Locale } from '@/lib/translations';
 
 interface Props {
   onSelectMunicipality: (m: Municipality) => void;
+  locale: Locale;
+  setLocale: (l: Locale) => void;
 }
 
-function PeriodToggle() {
-  const { period, setPeriod, periodAvailable } = useData();
-  const is2127Available = periodAvailable['2127'];
-
-  return (
-    <div className="mt-4 animate-fade-in-up animate-delay-400">
-      <div className="text-[#94a3b8] text-xs mb-2 mt-4">Programové obdobie:</div>
-      <div className="inline-flex rounded-lg border border-[#1e1e2e] overflow-hidden mt-2">
-        <button
-          onClick={() => setPeriod('1420')}
-          className={`px-4 py-1.5 text-sm font-medium transition-colors ${
-            period === '1420'
-              ? 'bg-[#3b82f6] text-white'
-              : 'bg-[#13131a] text-[#94a3b8] hover:text-[#f8fafc]'
-          }`}
-        >
-          2014 – 2020
-        </button>
-        <button
-          onClick={() => is2127Available && setPeriod('2127')}
-          disabled={!is2127Available}
-          className={`px-4 py-1.5 text-sm font-medium transition-colors ${
-            period === '2127'
-              ? 'bg-[#3b82f6] text-white'
-              : is2127Available
-                ? 'bg-[#13131a] text-[#94a3b8] hover:text-[#f8fafc]'
-                : 'bg-[#13131a] text-[#94a3b8]/40 cursor-not-allowed'
-          }`}
-          title={!is2127Available ? 'Dáta 2021–2027 sa načítavajú, skúste neskôr.' : undefined}
-        >
-          2021 – 2027
-        </button>
-      </div>
-      {!is2127Available && (
-        <div className="text-[#94a3b8]/50 text-xs mt-1.5">
-          Dáta 2021–2027 sa načítavajú, skúste neskôr.
-        </div>
-      )}
-      {period === '2127' && (
-        <div className="text-[#f59e0b] text-xs mt-2">
-          &#9203; Prebiehajúce obdobie — dáta sú priebežné a budú narastať až do roku 2030.
-        </div>
-      )}
-    </div>
-  );
-}
-
-export default function HeroSearch({ onSelectMunicipality }: Props) {
-  const { data, loading, period } = useData();
+export default function HeroSearch({ onSelectMunicipality, locale, setLocale }: Props) {
+  const { data, loading, period, setPeriod, periodAvailable } = useData();
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<Municipality[]>([]);
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const inputRef = useRef<HTMLInputElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const tr = t[locale];
+  const is2127Available = periodAvailable['2127'];
 
   useEffect(() => {
     if (!data || query.length < 2) {
@@ -119,17 +77,27 @@ export default function HeroSearch({ onSelectMunicipality }: Props) {
           <span className="text-[#3b82f6]">povolbach</span>
           <span className="text-[#94a3b8]">.sk</span>
         </div>
-        <div className="flex gap-2 text-sm text-[#94a3b8]">
-          <span className="text-[#f8fafc] font-medium">SK</span>
-          <span>/</span>
-          <span className="cursor-not-allowed opacity-50">EN</span>
+        <div className="flex gap-2 text-sm">
+          <button
+            onClick={() => setLocale('sk')}
+            className={`font-medium transition-colors ${locale === 'sk' ? 'text-[#f8fafc]' : 'text-[#94a3b8] hover:text-[#f8fafc]'}`}
+          >
+            SK
+          </button>
+          <span className="text-[#94a3b8]">/</span>
+          <button
+            onClick={() => setLocale('en')}
+            className={`font-medium transition-colors ${locale === 'en' ? 'text-[#f8fafc]' : 'text-[#94a3b8] hover:text-[#f8fafc]'}`}
+          >
+            EN
+          </button>
         </div>
       </nav>
 
       {/* Center content */}
       <div className="w-full text-center" style={{ maxWidth: 'min(1100px, 94vw)' }}>
         <p className="text-[#94a3b8] text-sm tracking-widest uppercase mb-6 animate-fade-in-up">
-          Efektívnosť čerpania európskych fondov na Slovensku
+          {tr.hero_label}
         </p>
 
         <h1
@@ -141,7 +109,7 @@ export default function HeroSearch({ onSelectMunicipality }: Props) {
             margin: '0 auto 2.5rem',
           }}
         >
-          Zistite, ako efektívne vaša obec čerpá európske fondy.
+          {tr.hero_heading}
         </h1>
 
         {/* Search */}
@@ -161,7 +129,7 @@ export default function HeroSearch({ onSelectMunicipality }: Props) {
               onChange={e => setQuery(e.target.value)}
               onKeyDown={handleKeyDown}
               onFocus={() => results.length > 0 && setShowDropdown(true)}
-              placeholder="Zadajte názov obce alebo mesta..."
+              placeholder={tr.hero_search_placeholder}
               className="w-full bg-[#13131a] border border-[#1e1e2e] rounded-xl pl-12 pr-4 py-4 text-lg text-[#f8fafc] placeholder:text-[#94a3b8]/60 focus:outline-none focus:border-[#3b82f6] focus:ring-1 focus:ring-[#3b82f6]/30 transition-all"
               disabled={loading}
             />
@@ -190,7 +158,7 @@ export default function HeroSearch({ onSelectMunicipality }: Props) {
                     <span className="text-[#94a3b8] text-sm ml-2">{m.region}</span>
                   </div>
                   <span className="text-[#3b82f6] font-mono text-sm font-medium">
-                    {formatEur(m.total_contracted_eur)}
+                    {formatAmount(m.total_contracted_eur, locale)}
                   </span>
                 </button>
               ))}
@@ -200,7 +168,7 @@ export default function HeroSearch({ onSelectMunicipality }: Props) {
           {/* No results */}
           {query.length >= 2 && results.length === 0 && !loading && (
             <div className="absolute top-full left-0 right-0 mt-2 bg-[#13131a] border border-[#1e1e2e] rounded-xl px-4 py-3 text-[#94a3b8] text-sm">
-              Obec nenájdená. Skúste iný názov.
+              {tr.no_results}
             </div>
           )}
         </div>
@@ -210,18 +178,50 @@ export default function HeroSearch({ onSelectMunicipality }: Props) {
           {loading ? (
             'Načítavam dáta...'
           ) : (
-            <>
-              <span className="font-mono text-[#f8fafc]">{totalCount.toLocaleString('sk-SK')}</span> obcí
-              {' · '}
-              <span className="font-mono text-[#f8fafc]">{formatBillions(totalEur)}</span> sledovaných fondov
-              {' · '}
-              Dáta: {period === '1420' ? 'ITMS2014+' : 'ITMS21+'}
-            </>
+            tr.hero_stats(totalCount, formatBillions(totalEur, locale), period)
           )}
         </p>
 
         {/* Period toggle */}
-        <PeriodToggle />
+        <div className="mt-4 animate-fade-in-up animate-delay-400">
+          <div className="text-[#94a3b8] text-xs mb-2 mt-4">{tr.period_label}</div>
+          <div className="inline-flex rounded-lg border border-[#1e1e2e] overflow-hidden mt-2">
+            <button
+              onClick={() => setPeriod('1420')}
+              className={`px-4 py-1.5 text-sm font-medium transition-colors ${
+                period === '1420'
+                  ? 'bg-[#3b82f6] text-white'
+                  : 'bg-[#13131a] text-[#94a3b8] hover:text-[#f8fafc]'
+              }`}
+            >
+              2014 – 2020
+            </button>
+            <button
+              onClick={() => is2127Available && setPeriod('2127')}
+              disabled={!is2127Available}
+              className={`px-4 py-1.5 text-sm font-medium transition-colors ${
+                period === '2127'
+                  ? 'bg-[#3b82f6] text-white'
+                  : is2127Available
+                    ? 'bg-[#13131a] text-[#94a3b8] hover:text-[#f8fafc]'
+                    : 'bg-[#13131a] text-[#94a3b8]/40 cursor-not-allowed'
+              }`}
+              title={!is2127Available ? 'Dáta 2021–2027 sa načítavajú, skúste neskôr.' : undefined}
+            >
+              2021 – 2027
+            </button>
+          </div>
+          {!is2127Available && (
+            <div className="text-[#94a3b8]/50 text-xs mt-1.5">
+              Dáta 2021–2027 sa načítavajú, skúste neskôr.
+            </div>
+          )}
+          {period === '2127' && (
+            <div className="text-[#f59e0b] text-xs mt-2">
+              {tr.period_ongoing}
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Scroll indicator */}

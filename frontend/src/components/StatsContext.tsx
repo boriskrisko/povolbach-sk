@@ -3,8 +3,9 @@
 import { useData } from '@/lib/DataContext';
 import { getTotalEur, getWithProjects, getWithoutProjects, formatBillions } from '@/lib/utils';
 import { useEffect, useRef, useState } from 'react';
+import { t, type Locale } from '@/lib/translations';
 
-function AnimatedCounter({ target }: { target: number }) {
+function AnimatedCounter({ target, locale }: { target: number; locale: Locale }) {
   const [count, setCount] = useState(0);
   const [started, setStarted] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -49,13 +50,18 @@ function AnimatedCounter({ target }: { target: number }) {
 
   return (
     <div ref={ref} className="font-mono">
-      {count.toLocaleString('sk-SK')}
+      {count.toLocaleString(locale === 'en' ? 'en' : 'sk-SK')}
     </div>
   );
 }
 
-export default function StatsContext() {
+interface Props {
+  locale: Locale;
+}
+
+export default function StatsContext({ locale }: Props) {
   const { data, loading, period } = useData();
+  const tr = t[locale];
 
   if (loading || !data) return null;
 
@@ -75,9 +81,9 @@ export default function StatsContext() {
             className="text-4xl md:text-5xl font-bold mb-2"
             style={{ color: '#3b82f6', fontFamily: 'JetBrains Mono, monospace' }}
           >
-            {formatBillions(totalEur)}
+            {formatBillions(totalEur, locale)}
           </div>
-          <div className="text-[#94a3b8] mt-2">Celkové fondy sledované</div>
+          <div className="text-[#94a3b8] mt-2">{tr.total_funds_tracked}</div>
         </div>
 
         {/* With projects */}
@@ -86,10 +92,10 @@ export default function StatsContext() {
             className="text-4xl md:text-5xl font-bold mb-2"
             style={{ color: '#10b981', fontFamily: 'JetBrains Mono, monospace' }}
           >
-            <AnimatedCounter target={withProjects} />
+            <AnimatedCounter target={withProjects} locale={locale} />
           </div>
           <div className="text-[#f8fafc] text-lg font-medium">({withPct}%)</div>
-          <div className="text-[#94a3b8] mt-2">čerpá EÚ fondy</div>
+          <div className="text-[#94a3b8] mt-2">{tr.absorbing_eu}</div>
         </div>
 
         {/* Without projects */}
@@ -98,19 +104,16 @@ export default function StatsContext() {
             className="text-4xl md:text-5xl font-bold mb-2"
             style={{ color: '#f59e0b', fontFamily: 'JetBrains Mono, monospace' }}
           >
-            <AnimatedCounter target={withoutProjects} />
+            <AnimatedCounter target={withoutProjects} locale={locale} />
           </div>
           <div className="text-[#f8fafc] text-lg font-medium">({withoutPct}%)</div>
-          <div className="text-[#94a3b8] mt-2">bez projektu</div>
+          <div className="text-[#94a3b8] mt-2">{tr.without_project}</div>
         </div>
       </div>
 
       <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-8 max-w-3xl mx-auto">
         <p className="text-[#94a3b8] leading-relaxed text-center">
-          {period === '2127'
-            ? 'Dáta pochádzajú z oficiálneho systému ITMS2021+, ktorý eviduje všetky projekty financované z európskych štrukturálnych a investičných fondov v programovom období 2021–2027. Povolbach.sk agreguje tieto dáta na úrovni jednotlivých obcí a miest.'
-            : 'Dáta pochádzajú z oficiálneho systému ITMS2014+, ktorý eviduje všetky projekty financované z európskych štrukturálnych a investičných fondov v programovom období 2014–2021. Povolbach.sk agreguje tieto dáta na úrovni jednotlivých obcí a miest.'
-          }
+          {period === '2127' ? tr.data_source_2127 : tr.data_source_1420}
         </p>
       </div>
     </section>

@@ -2,8 +2,9 @@
 
 import { useData } from '@/lib/DataContext';
 import { Municipality } from '@/lib/types';
-import { formatEur, getWithoutProjects } from '@/lib/utils';
+import { formatAmount, getWithoutProjects } from '@/lib/utils';
 import ViewModeToggle from './ViewModeToggle';
+import { t, type Locale } from '@/lib/translations';
 
 type ViewMode = 'total' | 'capita';
 
@@ -11,6 +12,7 @@ interface Props {
   onSelectMunicipality: (m: Municipality) => void;
   viewMode: ViewMode;
   setViewMode: (mode: ViewMode) => void;
+  locale: Locale;
 }
 
 function getCapita(m: Municipality): number {
@@ -24,6 +26,7 @@ function LeaderboardRow({
   color,
   onClick,
   viewMode,
+  locale,
 }: {
   m: Municipality;
   rank: number;
@@ -31,12 +34,14 @@ function LeaderboardRow({
   color: string;
   onClick: () => void;
   viewMode: ViewMode;
+  locale: Locale;
 }) {
+  const tr = t[locale];
   const val = viewMode === 'capita' ? getCapita(m) : m.total_contracted_eur;
   const barWidth = maxVal > 0 ? (val / maxVal) * 100 : 0;
   const displayLabel = viewMode === 'capita'
-    ? `${formatEur(Math.round(val))} / obyv.`
-    : formatEur(val);
+    ? `${formatAmount(Math.round(val), locale)} ${tr.per_capita_suffix}`
+    : formatAmount(val, locale);
 
   return (
     <button
@@ -66,8 +71,9 @@ function LeaderboardRow({
   );
 }
 
-export default function Leaderboard({ onSelectMunicipality, viewMode, setViewMode }: Props) {
+export default function Leaderboard({ onSelectMunicipality, viewMode, setViewMode, locale }: Props) {
   const { data, loading, period } = useData();
+  const tr = t[locale];
 
   if (loading || !data) return null;
 
@@ -104,15 +110,12 @@ export default function Leaderboard({ onSelectMunicipality, viewMode, setViewMod
           className="text-3xl md:text-4xl font-bold text-[#f8fafc]"
           style={{ fontFamily: 'Syne, sans-serif' }}
         >
-          Rebríček obcí
+          {tr.leaderboard_title}
         </h2>
-        <ViewModeToggle viewMode={viewMode} onToggle={setViewMode} />
+        <ViewModeToggle viewMode={viewMode} onToggle={setViewMode} locale={locale} />
       </div>
       <p className="text-[#94a3b8] mb-12">
-        {viewMode === 'capita'
-          ? 'Zoradené podľa čerpania EÚ fondov na obyvateľa'
-          : 'Zoradené podľa celkových zmluvných prostriedkov EÚ'
-        }
+        {viewMode === 'capita' ? tr.leaderboard_subtitle_capita : tr.leaderboard_subtitle_total}
       </p>
 
       <div className="grid md:grid-cols-2 gap-8">
@@ -122,7 +125,7 @@ export default function Leaderboard({ onSelectMunicipality, viewMode, setViewMod
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clipRule="evenodd" />
             </svg>
-            Najúspešnejšie obce
+            {tr.leaderboard_top}
           </h3>
           <div className="space-y-1">
             {top10.map((m, i) => (
@@ -134,6 +137,7 @@ export default function Leaderboard({ onSelectMunicipality, viewMode, setViewMod
                 color="#3b82f6"
                 onClick={() => onSelectMunicipality(m)}
                 viewMode={viewMode}
+                locale={locale}
               />
             ))}
           </div>
@@ -145,7 +149,7 @@ export default function Leaderboard({ onSelectMunicipality, viewMode, setViewMod
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M12 13a1 1 0 100 2h5a1 1 0 001-1V9a1 1 0 10-2 0v2.586l-4.293-4.293a1 1 0 00-1.414 0L8 9.586 3.707 5.293a1 1 0 00-1.414 1.414l5 5a1 1 0 001.414 0L11 9.414 14.586 13H12z" clipRule="evenodd" />
             </svg>
-            Nevyužitý potenciál
+            {tr.leaderboard_bottom}
           </h3>
           <div className="space-y-1">
             {bottom10.map((m, i) => (
@@ -157,6 +161,7 @@ export default function Leaderboard({ onSelectMunicipality, viewMode, setViewMod
                 color="#f59e0b"
                 onClick={() => onSelectMunicipality(m)}
                 viewMode={viewMode}
+                locale={locale}
               />
             ))}
           </div>
@@ -168,13 +173,10 @@ export default function Leaderboard({ onSelectMunicipality, viewMode, setViewMod
         <div className="text-[#f59e0b] text-2xl flex-shrink-0 mt-0.5">&#9888;</div>
         <div>
           <p className="text-[#f8fafc] font-medium mb-1">
-            <span className="font-mono text-[#f59e0b]">{zeroCount}</span> obcí zatiaľ nevyčerpalo žiadne prostriedky EÚ
+            {tr.zero_municipalities(zeroCount)}
           </p>
           <p className="text-[#94a3b8] text-sm leading-relaxed">
-            {period === '2127'
-              ? 'Programové obdobie 2021–2027. Zahŕňa len priame čerpanie obcou.'
-              : 'Zahŕňa len priame čerpanie obcou. Nezahŕňa financovanie škôl, kultúrnych zariadení a iných organizácií v zriaďovateľskej pôsobnosti obce.'
-            }
+            {period === '2127' ? tr.disclaimer_2127 : tr.disclaimer_1420}
           </p>
         </div>
       </div>

@@ -1,15 +1,17 @@
 'use client';
 
 import { useData } from '@/lib/DataContext';
-import { getRegionStats, formatEur } from '@/lib/utils';
+import { getRegionStats, formatAmount } from '@/lib/utils';
 import ViewModeToggle from './ViewModeToggle';
 import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import { Municipality, RegionStats } from '@/lib/types';
+import { t, type Locale } from '@/lib/translations';
 
 interface Props {
   onMunicipalityClick: (m: Municipality) => void;
   viewMode: 'total' | 'capita';
   setViewMode: (mode: 'total' | 'capita') => void;
+  locale: Locale;
 }
 
 // Map SVG id attributes to region names in our data
@@ -77,7 +79,8 @@ const LEGEND_ITEMS_CAPITA = [
   { label: '€2k+', color: '#ffffff' },
 ];
 
-export default function SlovakiaMap({ onMunicipalityClick, viewMode, setViewMode }: Props) {
+export default function SlovakiaMap({ onMunicipalityClick, viewMode, setViewMode, locale }: Props) {
+  const tr = t[locale];
   const { data, loading } = useData();
   const containerRef = useRef<HTMLDivElement>(null);
   const [hoveredRegion, setHoveredRegion] = useState<string | null>(null);
@@ -212,12 +215,12 @@ export default function SlovakiaMap({ onMunicipalityClick, viewMode, setViewMode
           className="text-3xl md:text-4xl font-bold text-[#f8fafc]"
           style={{ fontFamily: 'Syne, sans-serif' }}
         >
-          Mapa Slovenska
+          {tr.map_title}
         </h2>
-        <ViewModeToggle viewMode={viewMode} onToggle={setViewMode} />
+        <ViewModeToggle viewMode={viewMode} onToggle={setViewMode} locale={locale} />
       </div>
       <p className="text-[#94a3b8] mb-12">
-        Každý bod predstavuje jednu obec — farba podľa výšky čerpania EÚ fondov
+        {tr.map_subtitle}
       </p>
 
       <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-6 md:p-10 relative">
@@ -285,9 +288,9 @@ export default function SlovakiaMap({ onMunicipalityClick, viewMode, setViewMode
                 {hoveredRegionStats.name}
               </div>
               <div className="text-[#94a3b8] text-xs mt-1.5 space-y-0.5">
-                <div>Počet obcí: <span className="text-[#f8fafc]">{hoveredRegionStats.municipalityCount}</span></div>
-                <div>Celkové fondy: <span className="text-[#f8fafc]">{formatEur(hoveredRegionStats.totalEur)}</span></div>
-                <div>Priemer na obec: <span className="text-[#3b82f6] font-mono">{formatEur(hoveredRegionStats.avgEur)}</span></div>
+                <div>{tr.region_label(hoveredRegionStats.municipalityCount, hoveredRegionStats.withoutProjects)}</div>
+                <div>{locale === 'sk' ? 'Celkové fondy' : 'Total funds'}: <span className="text-[#f8fafc]">{formatAmount(hoveredRegionStats.totalEur, locale)}</span></div>
+                <div>{locale === 'sk' ? 'Priemer na obec' : 'Avg per municipality'}: <span className="text-[#3b82f6] font-mono">{formatAmount(hoveredRegionStats.avgEur, locale)}</span></div>
               </div>
             </div>
           )}
@@ -313,15 +316,15 @@ export default function SlovakiaMap({ onMunicipalityClick, viewMode, setViewMode
                 <div>
                   {viewMode === 'capita' && hoveredMunicipality.population > 0 ? (
                     <><span className="text-[#3b82f6] font-mono font-semibold">
-                      {formatEur(Math.round(hoveredMunicipality.total_contracted_eur / hoveredMunicipality.population))}
-                    </span>{' '}/ obyvateľa</>
+                      {formatAmount(Math.round(hoveredMunicipality.total_contracted_eur / hoveredMunicipality.population), locale)}
+                    </span>{' '}{tr.per_capita_suffix}</>
                   ) : (
-                    <><span className="text-[#3b82f6] font-mono font-semibold">{formatEur(hoveredMunicipality.total_contracted_eur)}</span>{' '}celkové fondy</>
+                    <><span className="text-[#3b82f6] font-mono font-semibold">{formatAmount(hoveredMunicipality.total_contracted_eur, locale)}</span>{' '}{locale === 'sk' ? 'celkové fondy' : 'total funds'}</>
                   )}
                 </div>
                 <div>
-                  {hoveredMunicipality.active_projects + hoveredMunicipality.completed_projects} projektov
-                  {hoveredMunicipality.active_projects > 0 && ` (${hoveredMunicipality.active_projects} aktívnych)`}
+                  {hoveredMunicipality.active_projects + hoveredMunicipality.completed_projects} {tr.modal_projects}
+                  {hoveredMunicipality.active_projects > 0 && ` (${hoveredMunicipality.active_projects} ${tr.modal_active})`}
                 </div>
               </div>
             </div>
@@ -361,12 +364,12 @@ export default function SlovakiaMap({ onMunicipalityClick, viewMode, setViewMode
                 <div className="text-sm text-[#f8fafc] font-medium mb-1">{r.name}</div>
                 <div className="text-[#3b82f6] font-mono text-lg font-bold">
                   {viewMode === 'capita'
-                    ? `${formatEur(Math.round(perCapita))} / obyv.`
-                    : formatEur(r.totalEur)
+                    ? `${formatAmount(Math.round(perCapita), locale)} ${tr.per_capita_suffix}`
+                    : formatAmount(r.totalEur, locale)
                   }
                 </div>
                 <div className="text-[#94a3b8] text-xs mt-1">
-                  {r.municipalityCount} obcí · {r.withoutProjects} bez projektu
+                  {tr.region_label(r.municipalityCount, r.withoutProjects)}
                 </div>
               </div>
             );

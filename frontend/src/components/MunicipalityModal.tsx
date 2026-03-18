@@ -2,16 +2,20 @@
 
 import React from 'react';
 import { Municipality } from '@/lib/types';
-import { formatEurFull, formatEur } from '@/lib/utils';
+import { formatAmount } from '@/lib/utils';
 import { useData } from '@/lib/DataContext';
 import { useEffect } from 'react';
+import { t, type Locale } from '@/lib/translations';
 
 interface Props {
   municipality: Municipality | null;
   onClose: () => void;
+  locale: Locale;
 }
 
-export default function MunicipalityModal({ municipality, onClose }: Props) {
+export default function MunicipalityModal({ municipality, onClose, locale }: Props) {
+  const tr = t[locale];
+
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
@@ -55,7 +59,7 @@ export default function MunicipalityModal({ municipality, onClose }: Props) {
             </p>
             <p className="text-[#94a3b8] text-sm">
               IČO: <span className="font-mono text-[#f8fafc]">{m.ico}</span>
-              {m.population > 0 && <span> · {m.population.toLocaleString('sk-SK')} obyvateľov</span>}
+              {m.population > 0 && <span> · {m.population.toLocaleString('sk-SK')} {locale === 'sk' ? 'obyvateľov' : 'inhabitants'}</span>}
             </p>
           </div>
           <button
@@ -70,19 +74,19 @@ export default function MunicipalityModal({ municipality, onClose }: Props) {
         <div className="grid grid-cols-2 gap-4 mb-6">
           <div className="bg-[#0a0a0f] rounded-xl p-4 border border-[#1e1e2e]">
             <div className="font-bold text-[#3b82f6] font-mono" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)' }}>
-              {formatEur(m.total_contracted_eur)}
+              {formatAmount(m.total_contracted_eur, locale)}
             </div>
-            <div className="text-[#94a3b8] text-sm mt-1">Celkové zmluvné prostriedky</div>
+            <div className="text-[#94a3b8] text-sm mt-1">{tr.modal_total}</div>
           </div>
           <div className="bg-[#0a0a0f] rounded-xl p-4 border border-[#1e1e2e]">
             <div className="text-3xl font-bold text-[#f8fafc] font-mono">
               {totalProjects}
             </div>
             <div className="text-[#94a3b8] text-sm mt-1">
-              {m.active_projects > 0 ? `${m.active_projects} aktívnych` : ''}
+              {m.active_projects > 0 ? `${m.active_projects} ${tr.modal_active}` : ''}
               {m.active_projects > 0 && m.completed_projects > 0 ? ', ' : ''}
-              {m.completed_projects > 0 ? `${m.completed_projects} ukončených` : ''}
-              {totalProjects === 0 ? 'projektov' : ''}
+              {m.completed_projects > 0 ? `${m.completed_projects} ${tr.modal_completed}` : ''}
+              {totalProjects === 0 ? tr.modal_projects : ''}
             </div>
           </div>
         </div>
@@ -91,9 +95,9 @@ export default function MunicipalityModal({ municipality, onClose }: Props) {
         {m.population > 0 && m.total_contracted_eur > 0 && (
           <div className="mb-6 bg-[#0a0a0f] rounded-xl p-4 border border-[#1e1e2e]">
             <div className="text-xl font-bold text-[#10b981] font-mono">
-              {formatEur(Math.round(m.total_contracted_eur / m.population))} / obyvateľ
+              {formatAmount(Math.round(m.total_contracted_eur / m.population), locale)} {tr.per_capita_suffix}
             </div>
-            <div className="text-[#94a3b8] text-sm mt-1">Čerpanie na obyvateľa</div>
+            <div className="text-[#94a3b8] text-sm mt-1">{tr.modal_per_capita}</div>
           </div>
         )}
 
@@ -101,7 +105,7 @@ export default function MunicipalityModal({ municipality, onClose }: Props) {
         {m.irregularities_count > 0 && (
           <div className="mb-6 bg-[#0a0a0f] rounded-xl p-4 border border-[#1e1e2e] border-l-2 border-l-[#f59e0b]">
             <div className="text-[#f59e0b] text-sm font-medium">
-              {m.irregularities_count} nezrovnalosť{m.irregularities_count > 1 ? 'í' : ''} · {formatEurFull(m.irregularities_total_eur)}
+              {tr.modal_irregularities(m.irregularities_count, formatAmount(m.irregularities_total_eur, locale))}
             </div>
           </div>
         )}
@@ -110,15 +114,37 @@ export default function MunicipalityModal({ municipality, onClose }: Props) {
         {m.projects.length > 0 && (
           <div className="mb-6">
             <h3 className="text-sm font-medium text-[#94a3b8] mb-3 uppercase tracking-wider">
-              Top projekty
+              {tr.modal_top_projects}
             </h3>
             <div className="space-y-2">
               {m.projects.map((p, i) => (
                 <div key={i} className="bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e]">
                   <div className="text-sm text-[#f8fafc] mb-1 line-clamp-2">{p.nazov}</div>
                   <div className="flex justify-between text-xs">
-                    <span className="text-[#3b82f6] font-mono">{formatEur(p.sumaZazmluvnena)}</span>
-                    <span className="text-[#94a3b8]">{p.stav.includes('ukončený') ? 'Ukončený' : 'V realizácii'}</span>
+                    <span className="text-[#3b82f6] font-mono">{formatAmount(p.sumaZazmluvnena, locale)}</span>
+                    <span className="text-[#94a3b8]">{p.stav.includes('ukončený') ? tr.completed : tr.active}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Indirect / state projects */}
+        {m.indirect_projects && m.indirect_projects.length > 0 && (
+          <div className="mb-6">
+            <h3 className="text-sm font-medium text-[#94a3b8]/70 mb-1 uppercase tracking-wider flex items-center gap-1.5">
+              {tr.modal_indirect_title}
+              <span className="text-base leading-none" title={tr.modal_indirect_note}>ℹ️</span>
+            </h3>
+            <p className="text-[#94a3b8]/60 text-xs mb-3">{tr.modal_indirect_note}</p>
+            <div className="space-y-2">
+              {m.indirect_projects.map((p, i) => (
+                <div key={i} className="bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e] opacity-80">
+                  <div className="text-sm text-[#f8fafc]/80 mb-1 line-clamp-2">{p.name}</div>
+                  <div className="flex justify-between text-xs">
+                    <span className="text-[#3b82f6]/80 font-mono">{formatAmount(p.contracted_eur, locale)}</span>
+                    <span className="text-[#94a3b8]/70">{p.beneficiary_name.split(' ').slice(0, 3).join(' ')}</span>
                   </div>
                 </div>
               ))}
@@ -128,10 +154,7 @@ export default function MunicipalityModal({ municipality, onClose }: Props) {
 
         {/* Disclaimer */}
         <div className="text-xs text-[#94a3b8] bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e] mb-8">
-          {period === '2127'
-            ? 'Programové obdobie 2021–2027. Zahŕňa len priame čerpanie obcou.'
-            : 'Zahŕňa len priame čerpanie obcou. Nezahŕňa financovanie škôl, kultúrnych zariadení a iných organizácií v zriaďovateľskej pôsobnosti obce.'
-          }
+          {period === '2127' ? tr.modal_disclaimer_2127 : tr.modal_disclaimer_1420}
         </div>
       </div>
     </div>

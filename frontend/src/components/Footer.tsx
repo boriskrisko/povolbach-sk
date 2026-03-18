@@ -1,9 +1,15 @@
 'use client';
 
 import { useData } from '@/lib/DataContext';
+import { t, type Locale } from '@/lib/translations';
 
-export default function Footer() {
+interface Props {
+  locale: Locale;
+}
+
+export default function Footer({ locale }: Props) {
   const { period } = useData();
+  const tr = t[locale];
 
   return (
     <footer className="border-t border-[#1e1e2e] py-10 px-4">
@@ -14,12 +20,12 @@ export default function Footer() {
             <span>.sk</span>
           </span>
           <span className="hidden md:inline">·</span>
-          <span>Dáta: {period === '2127' ? 'ITMS2021+ Open Data' : 'ITMS2014+ Open Data'}</span>
+          <span>{period === '2127' ? tr.footer_data_2127 : tr.footer_data_1420}</span>
           <span className="hidden md:inline">·</span>
-          <span>Aktualizované: marec 2026</span>
+          <span>{tr.footer_updated}</span>
         </div>
         <p className="text-[#94a3b8]/60 text-xs mt-4">
-          Projekt nie je financovaný ani podporovaný žiadnou politickou stranou.
+          {tr.footer_disclaimer}
         </p>
         <div className="flex items-center justify-center gap-4 mt-4">
           {/* GitHub */}

@@ -1,3 +1,11 @@
+export interface IndirectProject {
+  name: string;
+  beneficiary_name: string;
+  beneficiary_ico: string;
+  contracted_eur: number;
+  status: string;
+}
+
 export interface Municipality {
   ico: string;
   official_name: string;
@@ -15,6 +23,8 @@ export interface Municipality {
   irregularities_count: number;
   irregularities_total_eur: number;
   projects: ProjectSummary[];
+  indirect_projects?: IndirectProject[];
+  indirect_total_eur?: number;
 }
 
 export interface ProjectSummary {
