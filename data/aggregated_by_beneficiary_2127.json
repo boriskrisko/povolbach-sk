@@ -4888,11 +4888,6 @@
         "stav": "Projekt mimoriadne ukončený - neprispel k cieľom OP (K)"
       },
       {
-        "nazov": "Podpora odborných a koordinačných kapacít strešných organizácií občianskej spoločnosti",
-        "sumaZazmluvnena": 9296454.22,
-        "stav": "Projekt mimoriadne ukončený - neprispel k cieľom OP (K)"
-      },
-      {
         "nazov": "Efektívne zapojenie občianskej spoločnosti do implementácie a monitorovania fondov EÚ zavádzaním participatívnych postupov v programovom období 2021 – 2027",
         "sumaZazmluvnena": 758600.0,
         "stav": "Projekt riadne ukončený (K)"
@@ -4901,6 +4896,11 @@
         "nazov": "Medzinárodné centrum pre odbornú prípravu a spoluprácu – nelegálne zbrane",
         "sumaZazmluvnena": 2133330.0,
         "stav": "Zmluva uzavretá"
+      },
+      {
+        "nazov": "Podpora odborných a koordinačných kapacít strešných organizácií občianskej spoločnosti",
+        "sumaZazmluvnena": 9296454.22,
+        "stav": "Projekt mimoriadne ukončený - neprispel k cieľom OP (K)"
       }
     ]
   },
@@ -14361,13 +14361,13 @@
         "stav": "Projekt riadne ukončený (K)"
       },
       {
-        "nazov": "Financovanie mzdových výdavkov administratívnych kapacít a externých zamestnancov platobného orgánu.",
-        "sumaZazmluvnena": 5589000.0,
+        "nazov": "Financovanie osobných výdavkov zamestnancov zabezpečujúcich činnosti orgánu auditu_2023 - 2024",
+        "sumaZazmluvnena": 4847210.0,
         "stav": "Projekt riadne ukončený (K)"
       },
       {
-        "nazov": "Financovanie osobných výdavkov zamestnancov zabezpečujúcich činnosti orgánu auditu_2023 - 2024",
-        "sumaZazmluvnena": 4847210.0,
+        "nazov": "Financovanie mzdových výdavkov administratívnych kapacít a externých zamestnancov platobného orgánu.",
+        "sumaZazmluvnena": 5589000.0,
         "stav": "Projekt riadne ukončený (K)"
       }
     ]
@@ -18816,14 +18816,14 @@
         "stav": "Zmluva uzavretá"
       },
       {
-        "nazov": "Refundácia miezd AK EŠIF DataCentra za rok 2023",
-        "sumaZazmluvnena": 578116.51,
-        "stav": "Projekt mimoriadne ukončený - neprispel k cieľom OP (K)"
-      },
-      {
         "nazov": "Refundácia miezd AK EŠIF DataCentra za rok 2024",
         "sumaZazmluvnena": 313599.47,
         "stav": "Projekt riadne ukončený (K)"
+      },
+      {
+        "nazov": "Refundácia miezd AK EŠIF DataCentra za rok 2023",
+        "sumaZazmluvnena": 578116.51,
+        "stav": "Projekt mimoriadne ukončený - neprispel k cieľom OP (K)"
       }
     ]
   },
@@ -35865,6 +35865,39 @@
       }
     ]
   },
+  "00318213": {
+    "ico": "00318213",
+    "nazov": "Obec Koš",
+    "active_projects": 0,
+    "completed_projects": 1,
+    "total_contracted_eur": 884952.91,
+    "projects": [
+      {
+        "nazov": "Zníženie energetickej náročnosti obecného úradu Koš",
+        "sumaZazmluvnena": 884952.91,
+        "stav": "Projekt mimoriadne ukončený - neprispel k cieľom OP (K)"
+      }
+    ]
+  },
+  "42066387": {
+    "ico": "42066387",
+    "nazov": "DOBRÝ PASTIER - KLÁŠTOR POD ZNIEVOM, o.z.",
+    "active_projects": 0,
+    "completed_projects": 2,
+    "total_contracted_eur": 719084.96,
+    "projects": [
+      {
+        "nazov": "Obnovená cesta",
+        "sumaZazmluvnena": 329014.06,
+        "stav": "Projekt mimoriadne ukončený - neprispel k cieľom OP (K)"
+      },
+      {
+        "nazov": "Zavedenie housing led-prístupu - Dobrý pastier",
+        "sumaZazmluvnena": 390070.9,
+        "stav": "Projekt mimoriadne ukončený - neprispel k cieľom OP (K)"
+      }
+    ]
+  },
   "00011002": {
     "ico": "00011002",
     "nazov": "Obec Ratnovce",
@@ -35876,76 +35909,6 @@
         "nazov": "Podpora komplexného poskytovania miestnej občianskej a preventívnej služby v obciach s prítomnosťou MRK",
         "sumaZazmluvnena": 81433.46,
         "stav": "Projekt mimoriadne ukončený - neprispel k cieľom OP (K)"
-      }
-    ]
-  },
-  "36286192": {
-    "ico": "36286192",
-    "nazov": "NAFTA a.s.",
-    "active_projects": 1,
-    "completed_projects": 0,
-    "total_contracted_eur": 1209489.83,
-    "projects": [
-      {
-        "nazov": "Výstavba fotovoltickej elektrárne v lokalite Moravany",
-        "sumaZazmluvnena": 1209489.83,
-        "stav": "Zmluva neuzavretá (K)"
-      }
-    ]
-  },
-  "35829052": {
-    "ico": "35829052",
-    "nazov": "Slovenské elektrárne, a.s.",
-    "active_projects": 1,
-    "completed_projects": 0,
-    "total_contracted_eur": 10876338.92,
-    "projects": [
-      {
-        "nazov": "FOTOVOLTICKÁ ELEKTRÁREŇ S INŠTALOVANÝM VÝKONOM 10 MW V LOKALITE ELEKTRÁRNE NOVÁKY",
-        "sumaZazmluvnena": 10876338.92,
-        "stav": "Zmluva neuzavretá (K)"
-      }
-    ]
-  },
-  "46936653": {
-    "ico": "46936653",
-    "nazov": "Ai-energy s.r.o.",
-    "active_projects": 1,
-    "completed_projects": 0,
-    "total_contracted_eur": 4785282.91,
-    "projects": [
-      {
-        "nazov": "Fotovoltická elektráreň 1 Nedanovce",
-        "sumaZazmluvnena": 4785282.91,
-        "stav": "Zmluva neuzavretá (K)"
-      }
-    ]
-  },
-  "36588181": {
-    "ico": "36588181",
-    "nazov": "DZS - M.K.TRANS, s.r.o.",
-    "active_projects": 1,
-    "completed_projects": 0,
-    "total_contracted_eur": 6326165.07,
-    "projects": [
-      {
-        "nazov": "Bezemisná mestská autobusová doprava v Michalovciach",
-        "sumaZazmluvnena": 6326165.07,
-        "stav": "Projekt v príprave (Z)"
-      }
-    ]
-  },
-  "36183181": {
-    "ico": "36183181",
-    "nazov": "LABAŠ s.r.o.",
-    "active_projects": 1,
-    "completed_projects": 0,
-    "total_contracted_eur": 950424.26,
-    "projects": [
-      {
-        "nazov": "FVZ Labaš 1 MW",
-        "sumaZazmluvnena": 950424.26,
-        "stav": "Zmluva neuzavretá (K)"
       }
     ]
   },
@@ -35963,67 +35926,6 @@
       }
     ]
   },
-  "00318213": {
-    "ico": "00318213",
-    "nazov": "Obec Koš",
-    "active_projects": 0,
-    "completed_projects": 1,
-    "total_contracted_eur": 884952.91,
-    "projects": [
-      {
-        "nazov": "Zníženie energetickej náročnosti obecného úradu Koš",
-        "sumaZazmluvnena": 884952.91,
-        "stav": "Projekt mimoriadne ukončený - neprispel k cieľom OP (K)"
-      }
-    ]
-  },
-  "00309141": {
-    "ico": "00309141",
-    "nazov": "Obec Nová Vieska",
-    "active_projects": 0,
-    "completed_projects": 1,
-    "total_contracted_eur": 219145.69,
-    "projects": [
-      {
-        "nazov": "Zateplenie kultúrneho domu",
-        "sumaZazmluvnena": 219145.69,
-        "stav": "Projekt mimoriadne ukončený - neprispel k cieľom OP (K)"
-      }
-    ]
-  },
-  "42066387": {
-    "ico": "42066387",
-    "nazov": "DOBRÝ PASTIER - KLÁŠTOR POD ZNIEVOM, o.z.",
-    "active_projects": 0,
-    "completed_projects": 2,
-    "total_contracted_eur": 719084.96,
-    "projects": [
-      {
-        "nazov": "Zavedenie housing led-prístupu - Dobrý pastier",
-        "sumaZazmluvnena": 390070.9,
-        "stav": "Projekt mimoriadne ukončený - neprispel k cieľom OP (K)"
-      },
-      {
-        "nazov": "Obnovená cesta",
-        "sumaZazmluvnena": 329014.06,
-        "stav": "Projekt mimoriadne ukončený - neprispel k cieľom OP (K)"
-      }
-    ]
-  },
-  "50634721": {
-    "ico": "50634721",
-    "nazov": "EU Poultry s.r.o.",
-    "active_projects": 1,
-    "completed_projects": 0,
-    "total_contracted_eur": 31616000.0,
-    "projects": [
-      {
-        "nazov": "Zriadenie novej prevádzkárne na spracovanie hydinového mäsa a výrobu hotových jedál",
-        "sumaZazmluvnena": 31616000.0,
-        "stav": "Projekt v príprave (Z)"
-      }
-    ]
-  },
   "50086821": {
     "ico": "50086821",
     "nazov": "Úrad vládneho auditu",
@@ -36038,16 +35940,16 @@
       }
     ]
   },
-  "51665263": {
-    "ico": "51665263",
-    "nazov": "Fitlife",
-    "active_projects": 0,
+  "00322865": {
+    "ico": "00322865",
+    "nazov": "Obec Čabalovce",
+    "active_projects": 1,
     "completed_projects": 0,
-    "total_contracted_eur": 0,
+    "total_contracted_eur": 16969.15,
     "projects": [
       {
-        "nazov": "Fitlife - Worklife",
-        "sumaZazmluvnena": 0,
+        "nazov": "Obec Čabalovce - jednoduché pozemkové úpravy v osídlení MRK",
+        "sumaZazmluvnena": 16969.15,
         "stav": "Zmluva neuzavretá (K)"
       }
     ]
@@ -36066,16 +35968,114 @@
       }
     ]
   },
-  "00322865": {
-    "ico": "00322865",
-    "nazov": "Obec Čabalovce",
-    "active_projects": 1,
+  "51665263": {
+    "ico": "51665263",
+    "nazov": "Fitlife",
+    "active_projects": 0,
     "completed_projects": 0,
-    "total_contracted_eur": 16969.15,
+    "total_contracted_eur": 0,
     "projects": [
       {
-        "nazov": "Obec Čabalovce - jednoduché pozemkové úpravy v osídlení MRK",
-        "sumaZazmluvnena": 16969.15,
+        "nazov": "Fitlife - Worklife",
+        "sumaZazmluvnena": 0,
+        "stav": "Zmluva neuzavretá (K)"
+      }
+    ]
+  },
+  "50634721": {
+    "ico": "50634721",
+    "nazov": "EU Poultry s.r.o.",
+    "active_projects": 1,
+    "completed_projects": 0,
+    "total_contracted_eur": 31616000.0,
+    "projects": [
+      {
+        "nazov": "Zriadenie novej prevádzkárne na spracovanie hydinového mäsa a výrobu hotových jedál",
+        "sumaZazmluvnena": 31616000.0,
+        "stav": "Projekt v príprave (Z)"
+      }
+    ]
+  },
+  "00309141": {
+    "ico": "00309141",
+    "nazov": "Obec Nová Vieska",
+    "active_projects": 0,
+    "completed_projects": 1,
+    "total_contracted_eur": 219145.69,
+    "projects": [
+      {
+        "nazov": "Zateplenie kultúrneho domu",
+        "sumaZazmluvnena": 219145.69,
+        "stav": "Projekt mimoriadne ukončený - neprispel k cieľom OP (K)"
+      }
+    ]
+  },
+  "36183181": {
+    "ico": "36183181",
+    "nazov": "LABAŠ s.r.o.",
+    "active_projects": 1,
+    "completed_projects": 0,
+    "total_contracted_eur": 950424.26,
+    "projects": [
+      {
+        "nazov": "FVZ Labaš 1 MW",
+        "sumaZazmluvnena": 950424.26,
+        "stav": "Zmluva neuzavretá (K)"
+      }
+    ]
+  },
+  "36588181": {
+    "ico": "36588181",
+    "nazov": "DZS - M.K.TRANS, s.r.o.",
+    "active_projects": 1,
+    "completed_projects": 0,
+    "total_contracted_eur": 6326165.07,
+    "projects": [
+      {
+        "nazov": "Bezemisná mestská autobusová doprava v Michalovciach",
+        "sumaZazmluvnena": 6326165.07,
+        "stav": "Projekt v príprave (Z)"
+      }
+    ]
+  },
+  "46936653": {
+    "ico": "46936653",
+    "nazov": "Ai-energy s.r.o.",
+    "active_projects": 1,
+    "completed_projects": 0,
+    "total_contracted_eur": 4785282.91,
+    "projects": [
+      {
+        "nazov": "Fotovoltická elektráreň 1 Nedanovce",
+        "sumaZazmluvnena": 4785282.91,
+        "stav": "Zmluva neuzavretá (K)"
+      }
+    ]
+  },
+  "35829052": {
+    "ico": "35829052",
+    "nazov": "Slovenské elektrárne, a.s.",
+    "active_projects": 1,
+    "completed_projects": 0,
+    "total_contracted_eur": 10876338.92,
+    "projects": [
+      {
+        "nazov": "FOTOVOLTICKÁ ELEKTRÁREŇ S INŠTALOVANÝM VÝKONOM 10 MW V LOKALITE ELEKTRÁRNE NOVÁKY",
+        "sumaZazmluvnena": 10876338.92,
+        "stav": "Zmluva neuzavretá (K)"
+      }
+    ]
+  },
+  "36286192": {
+    "ico": "36286192",
+    "nazov": "NAFTA a.s.",
+    "active_projects": 1,
+    "completed_projects": 0,
+    "total_contracted_eur": 1209489.83,
+    "projects": [
+      {
+        "nazov": "Výstavba fotovoltickej elektrárne v lokalite Moravany",
+        "sumaZazmluvnena": 1209489.83,
         "stav": "Zmluva neuzavretá (K)"
       }
     ]

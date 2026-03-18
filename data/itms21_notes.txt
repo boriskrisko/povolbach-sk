@@ -2,7 +2,7 @@ ITMS21+ (2021-2027) Data Notes
 ==================================================
 
 Source: https://api.itms21.sk/public/v1/aktivitaprojekt
-Fetched: 2026-03-18 01:38
+Fetched: 2026-03-18 03:08
 
 Schema differences from ITMS2014+:
 - Endpoint: /aktivitaprojekt (not /projektoveUkoncene + /projektoveVrealizacii)

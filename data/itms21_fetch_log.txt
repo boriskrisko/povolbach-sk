@@ -117,3 +117,21 @@
 [2026-03-18 02:44:57]   Fetched 75000/78572 activities (95.5%)
 [2026-03-18 02:51:15]   Fetched 76000/78572 activities (96.7%)
 [2026-03-18 02:57:42]   Fetched 77000/78572 activities (98.0%)
+[2026-03-18 03:04:22]   Fetched 78000/78572 activities (99.3%)
+[2026-03-18 03:08:20]   Fetched 78572/78572 activities (100.0%)
+[2026-03-18 03:08:32]   Fetch complete: 78572/78572 activities
+[2026-03-18 03:08:44]   Saved 78572 activities to complete cache
+[2026-03-18 03:08:44] Step 2: Deduplicating by project ID and aggregating by IČO
+[2026-03-18 03:08:44]   Unique projects: 3825
+[2026-03-18 03:08:44]   Unique beneficiaries (IČOs): 1884
+[2026-03-18 03:08:44]   Total contracted EUR: €10,538,999,086
+[2026-03-18 03:08:44]   Saved aggregated data to data/aggregated_by_beneficiary_2127.json
+[2026-03-18 03:08:44] Step 3: Matching against municipality register
+[2026-03-18 03:08:44]   Municipality register: 2928 entries
+[2026-03-18 03:08:44]   Matched municipalities: 1159
+[2026-03-18 03:08:44]   Zero-project municipalities: 1769
+[2026-03-18 03:08:44]   Total municipal EUR: €1,494,785,485
+[2026-03-18 03:08:44]   Saved to data/municipal_stats_2127.json
+[2026-03-18 03:08:44] ============================================================
+[2026-03-18 03:08:44] fetch_itms21.py — Complete
+[2026-03-18 03:08:44] ============================================================
