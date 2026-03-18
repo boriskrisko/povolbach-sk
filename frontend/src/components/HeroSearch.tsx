@@ -21,20 +21,13 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale }: 
   const inputRef = useRef<HTMLInputElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const periodToggleRef = useRef<HTMLDivElement>(null);
-  const scrollRef = useRef(0);
   const [showStickyToggle, setShowStickyToggle] = useState(false);
   const tr = t[locale];
   const is2127Available = periodAvailable['2127'];
 
   function handlePeriodChange(newPeriod: Period) {
-    scrollRef.current = window.scrollY;
     setPeriod(newPeriod);
   }
-
-  // Restore scroll position after period change re-renders shift layout
-  useEffect(() => {
-    window.scrollTo({ top: scrollRef.current, behavior: 'instant' });
-  }, [period]);
 
   useEffect(() => {
     const el = periodToggleRef.current;
