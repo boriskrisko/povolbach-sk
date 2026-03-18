@@ -96,7 +96,11 @@ def main():
 
         name = e.get('nazov', e.get('name', ''))
         total_eur = e.get('total_contracted_eur', 0) or 0
-        projects_count = (e.get('active_projects', 0) or 0) + (e.get('completed_projects', 0) or 0)
+        # Field names vary: projects_count/projects_active/projects_completed
+        # OR active_projects/completed_projects. Try both.
+        projects_active = e.get('projects_active', e.get('active_projects', 0)) or 0
+        projects_completed = e.get('projects_completed', e.get('completed_projects', 0)) or 0
+        projects_count = e.get('projects_count', 0) or (projects_active + projects_completed)
 
         # Look up in RPO founders
         rpo_entry = rpo_founders.get(ico)
