@@ -1,48 +1,143 @@
 {
-  "00329321": {
+  "00316792": {
     "subsidiary_orgs": [
       {
-        "ico": "00161039",
-        "name": "Gymnázium J. Francisciho - Rimavského",
-        "total_contracted_eur": 1514616.46,
-        "projects_count": 1
+        "ico": "53560922",
+        "name": "Dopravný podnik mesta Martin, s. r. o.",
+        "total_contracted_eur": 3939528.08,
+        "projects_count": 2,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
       }
     ],
-    "subsidiary_total_eur": 1514616.46,
-    "ico": "00329321",
-    "municipality": "Levoča"
+    "subsidiary_total_eur": 3939528.08,
+    "ico": "00316792",
+    "municipality": "Martin"
   },
-  "00332933": {
+  "00317667": {
     "subsidiary_orgs": [
       {
-        "ico": "37781146",
-        "name": "Hornozemplínska knižnica vo Vranove nad Topľou",
-        "total_contracted_eur": 9343912.46,
-        "projects_count": 2
+        "ico": "53153073",
+        "name": "Dopravný podnik mesta Považská Bystrica s. r. o. skrátene DPMPB s.r.o.",
+        "total_contracted_eur": 1540643.8,
+        "projects_count": 1,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+      }
+    ],
+    "subsidiary_total_eur": 1540643.8,
+    "ico": "00317667",
+    "municipality": "Považská Bystrica"
+  },
+  "00309303": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36110744",
+        "name": "Základná škola Endre Adyho s vyučovacím jazykom maďarským - Ady Endre Alapiskola, Adyho 9, Štúrovo",
+        "total_contracted_eur": 299897.14,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
       },
       {
-        "ico": "37873385",
-        "name": "Základná škola Lúčna Vranov nad Topľou",
-        "total_contracted_eur": 519214.57,
-        "projects_count": 1
+        "ico": "37860879",
+        "name": "Základná škola, Adyho 6, Štúrovo",
+        "total_contracted_eur": 244074.79,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
       }
     ],
-    "subsidiary_total_eur": 9863127.030000001,
-    "ico": "00332933",
-    "municipality": "Vranov nad Topľou"
+    "subsidiary_total_eur": 543971.93,
+    "ico": "00309303",
+    "municipality": "Štúrovo"
   },
-  "00319651": {
+  "00518239": {
     "subsidiary_orgs": [
       {
-        "ico": "57046492",
-        "name": "Gymnázium Augusta Horislava Škultétyho, Obchodná akadémia a Stredná odborná škola, Školská 21, Veľký Krtíš",
-        "total_contracted_eur": 915908.26,
-        "projects_count": 1
+        "ico": "56929242",
+        "name": "ZDRUŽENIE OBCÍ PRAVNIANSKEJ DOLINY",
+        "total_contracted_eur": 468417.31,
+        "projects_count": 2,
+        "rpo_relationship": "Zakladateľ "
       }
     ],
-    "subsidiary_total_eur": 915908.26,
-    "ico": "00319651",
-    "municipality": "Veľký Krtíš"
+    "subsidiary_total_eur": 468417.31,
+    "ico": "00518239",
+    "municipality": "Kanianka"
+  },
+  "00603481": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00492736",
+        "name": "Dopravný podnik Bratislava, akciová spoločnosť",
+        "total_contracted_eur": 79509381.09,
+        "projects_count": 3,
+        "rpo_relationship": "Jediný akcionár a.s."
+      },
+      {
+        "ico": "00179744",
+        "name": "Múzeum mesta Bratislavy",
+        "total_contracted_eur": 2840895.21,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      },
+      {
+        "ico": "30808901",
+        "name": "Mestské lesy v Bratislave",
+        "total_contracted_eur": 2175104.8,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      },
+      {
+        "ico": "00681300",
+        "name": "Odvoz a likvidácia odpadu a.s. v skratke: OLO a.s.",
+        "total_contracted_eur": 920657.17,
+        "projects_count": 1,
+        "rpo_relationship": "Jediný akcionár a.s."
+      },
+      {
+        "ico": "52324940",
+        "name": "Metropolitný inštitút Bratislavy",
+        "total_contracted_eur": 655272.59,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      },
+      {
+        "ico": "00179752",
+        "name": "Galéria mesta Bratislavy",
+        "total_contracted_eur": 532683.0,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      }
+    ],
+    "subsidiary_total_eur": 86633993.86,
+    "ico": "00603481",
+    "municipality": "Bratislava"
+  },
+  "00318094": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31633765",
+        "name": "HATER - HANDLOVÁ spol. s r.o.",
+        "total_contracted_eur": 192503.7,
+        "projects_count": 1,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+      }
+    ],
+    "subsidiary_total_eur": 192503.7,
+    "ico": "00318094",
+    "municipality": "Handlová"
+  },
+  "00648981": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37805533",
+        "name": "Združenie obcí Rajecká dolina",
+        "total_contracted_eur": 430951.24,
+        "projects_count": 1,
+        "rpo_relationship": "Zakladateľ "
+      }
+    ],
+    "subsidiary_total_eur": 430951.24,
+    "ico": "00648981",
+    "municipality": "Lietavská Lúčka"
   },
   "00315494": {
     "subsidiary_orgs": [
@@ -50,93 +145,13 @@
         "ico": "37910485",
         "name": "Základná škola s materskou školou J.D. Matejovie 539, Liptovský Hrádok",
         "total_contracted_eur": 212038.19,
-        "projects_count": 1
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
       }
     ],
     "subsidiary_total_eur": 212038.19,
     "ico": "00315494",
     "municipality": "Liptovský Hrádok"
-  },
-  "00327646": {
-    "subsidiary_orgs": [
-      {
-        "ico": "37781278",
-        "name": "Krajské múzeum v Prešove",
-        "total_contracted_eur": 5244870.51,
-        "projects_count": 2
-      },
-      {
-        "ico": "37946765",
-        "name": "Spojená škola",
-        "total_contracted_eur": 635149.34,
-        "projects_count": 1
-      }
-    ],
-    "subsidiary_total_eur": 5880019.85,
-    "ico": "00327646",
-    "municipality": "Prešov"
-  },
-  "00315737": {
-    "subsidiary_orgs": [
-      {
-        "ico": "35993154",
-        "name": "Liptovské múzeum",
-        "total_contracted_eur": 2520528.08,
-        "projects_count": 1
-      }
-    ],
-    "subsidiary_total_eur": 2520528.08,
-    "ico": "00315737",
-    "municipality": "Ružomberok"
-  },
-  "00691135": {
-    "subsidiary_orgs": [
-      {
-        "ico": "17050367",
-        "name": "Stredná odborná škola priemyselných technológií, Učňovská 5, Košice -Šaca",
-        "total_contracted_eur": 2956786.95,
-        "projects_count": 2
-      },
-      {
-        "ico": "35546841",
-        "name": "Základná škola Ľudovíta Fullu, Maurerova 21, Košice",
-        "total_contracted_eur": 877812.0,
-        "projects_count": 1
-      },
-      {
-        "ico": "35546832",
-        "name": "Základná škola, Postupimská 37, Košice",
-        "total_contracted_eur": 779157.17,
-        "projects_count": 1
-      },
-      {
-        "ico": "35542641",
-        "name": "Základná škola Drábova 3, Košice",
-        "total_contracted_eur": 490938.79,
-        "projects_count": 1
-      },
-      {
-        "ico": "31985921",
-        "name": "Základná škola Starozagorská 8, Košice",
-        "total_contracted_eur": 368513.99,
-        "projects_count": 1
-      },
-      {
-        "ico": "00189006",
-        "name": "Knižnica pre mládež mesta Košice",
-        "total_contracted_eur": 282393.21,
-        "projects_count": 1
-      },
-      {
-        "ico": "35543019",
-        "name": "Základná škola",
-        "total_contracted_eur": 272064.58,
-        "projects_count": 1
-      }
-    ],
-    "subsidiary_total_eur": 6027666.69,
-    "ico": "00691135",
-    "municipality": "Košice"
   },
   "00319031": {
     "subsidiary_orgs": [
@@ -144,18 +159,300 @@
         "ico": "35991852",
         "name": "Základná škola Mihálya Tompu s VJM - Tompa Mihály Alapiskola",
         "total_contracted_eur": 700545.46,
-        "projects_count": 1
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      },
+      {
+        "ico": "37831721",
+        "name": "Základná škola Š. M. Daxnera, Dr. V. Clementisa 1857/13, Rimavská Sobota",
+        "total_contracted_eur": 505265.51,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
       },
       {
         "ico": "37828312",
         "name": "Základná škola Pavla Dobšinského, P. Dobšinského 1744/2, Rimavská Sobota",
         "total_contracted_eur": 418407.71,
-        "projects_count": 1
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      },
+      {
+        "ico": "37950975",
+        "name": "Základná škola s materskou školou s vyučovacím jazykom maďarským - Alapiskola és Óvoda, Dúžavská cesta 1054/11, Rimavská Sobota",
+        "total_contracted_eur": 298127.0,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
       }
     ],
-    "subsidiary_total_eur": 1118953.17,
+    "subsidiary_total_eur": 1922345.68,
     "ico": "00319031",
     "municipality": "Rimavská Sobota"
+  },
+  "00308846": {
+    "subsidiary_orgs": [
+      {
+        "ico": "54471419",
+        "name": "Združenie obcí Hajlochy",
+        "total_contracted_eur": 510860.59,
+        "projects_count": 1,
+        "rpo_relationship": "Zakladateľ "
+      }
+    ],
+    "subsidiary_total_eur": 510860.59,
+    "ico": "00308846",
+    "municipality": "Černík"
+  },
+  "00325074": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35545755",
+        "name": "Základná škola s materskou školou, Bracovce 26",
+        "total_contracted_eur": 329255.01,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      }
+    ],
+    "subsidiary_total_eur": 329255.01,
+    "ico": "00325074",
+    "municipality": "Bracovce"
+  },
+  "00326241": {
+    "subsidiary_orgs": [
+      {
+        "ico": "50515853",
+        "name": "Kežmarská platforma pre sociálne začlenenie, n.o.",
+        "total_contracted_eur": 381873.41,
+        "projects_count": 1,
+        "rpo_relationship": "Zakladateľ "
+      }
+    ],
+    "subsidiary_total_eur": 381873.41,
+    "ico": "00326241",
+    "municipality": "Ihľany"
+  },
+  "00691135": {
+    "subsidiary_orgs": [
+      {
+        "ico": "55969984",
+        "name": "BUSINESS KOŠICE, n.o.",
+        "total_contracted_eur": 2685700.0,
+        "projects_count": 1,
+        "rpo_relationship": "Zakladateľ "
+      },
+      {
+        "ico": "35583461",
+        "name": "Creative Industry Košice, n.o.",
+        "total_contracted_eur": 1497987.29,
+        "projects_count": 1,
+        "rpo_relationship": "Zakladateľ "
+      },
+      {
+        "ico": "35546841",
+        "name": "Základná škola Ľudovíta Fullu, Maurerova 21, Košice",
+        "total_contracted_eur": 877812.0,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      },
+      {
+        "ico": "35546832",
+        "name": "Základná škola, Postupimská 37, Košice",
+        "total_contracted_eur": 779157.17,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      },
+      {
+        "ico": "35542641",
+        "name": "Základná škola Drábova 3, Košice",
+        "total_contracted_eur": 490938.79,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      },
+      {
+        "ico": "31985921",
+        "name": "Základná škola Starozagorská 8, Košice",
+        "total_contracted_eur": 368513.99,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      },
+      {
+        "ico": "00189006",
+        "name": "Knižnica pre mládež mesta Košice",
+        "total_contracted_eur": 282393.21,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      },
+      {
+        "ico": "35543019",
+        "name": "Základná škola",
+        "total_contracted_eur": 272064.58,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      },
+      {
+        "ico": "42323975",
+        "name": "K 13 - Košické kultúrne centrá",
+        "total_contracted_eur": 267762.87,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      }
+    ],
+    "subsidiary_total_eur": 7522329.9,
+    "ico": "00691135",
+    "municipality": "Košice"
+  },
+  "00306525": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36537870",
+        "name": "KOMVaK - Vodárne a kanalizácie mesta Komárna, a.s.",
+        "total_contracted_eur": 0,
+        "projects_count": 0,
+        "rpo_relationship": "Jediný akcionár a.s."
+      }
+    ],
+    "subsidiary_total_eur": 0,
+    "ico": "00306525",
+    "municipality": "Komárno"
+  },
+  "00306517": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00513474",
+        "name": "Mestské kultúrne stredisko Anny Adamis - Adamis Anna Városi Művelődési Központ",
+        "total_contracted_eur": 1480981.6,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      }
+    ],
+    "subsidiary_total_eur": 1480981.6,
+    "ico": "00306517",
+    "municipality": "Kolárovo"
+  },
+  "00306606": {
+    "subsidiary_orgs": [
+      {
+        "ico": "51451859",
+        "name": "Thermál Nesvady, s.r.o.",
+        "total_contracted_eur": 113752.81,
+        "projects_count": 1,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+      }
+    ],
+    "subsidiary_total_eur": 113752.81,
+    "ico": "00306606",
+    "municipality": "Nesvady"
+  },
+  "00314412": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37804332",
+        "name": "Združenie BIELA ORAVA, pre všestranný rozvoj obcí regiónu Biela Orava",
+        "total_contracted_eur": 478369.9,
+        "projects_count": 1,
+        "rpo_relationship": "Zakladateľ "
+      }
+    ],
+    "subsidiary_total_eur": 478369.9,
+    "ico": "00314412",
+    "municipality": "Breza"
+  },
+  "00317748": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31643884",
+        "name": "Autobusová doprava Púchov, a.s.",
+        "total_contracted_eur": 599460.0,
+        "projects_count": 1,
+        "rpo_relationship": "Jediný akcionár a.s."
+      },
+      {
+        "ico": "36321893",
+        "name": "Podnik technických služieb mesta, s.r.o.",
+        "total_contracted_eur": 352471.91,
+        "projects_count": 1,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+      }
+    ],
+    "subsidiary_total_eur": 951931.9099999999,
+    "ico": "00317748",
+    "municipality": "Púchov"
+  },
+  "00327646": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31718922",
+        "name": "Dopravný podnik mesta Prešov, akciová spoločnosť",
+        "total_contracted_eur": 43346812.71,
+        "projects_count": 2,
+        "rpo_relationship": "Jediný akcionár a.s."
+      },
+      {
+        "ico": "31718914",
+        "name": "Technické služby mesta Prešov, a.s.",
+        "total_contracted_eur": 2437626.47,
+        "projects_count": 2,
+        "rpo_relationship": "Jediný akcionár a.s."
+      }
+    ],
+    "subsidiary_total_eur": 45784439.18,
+    "ico": "00327646",
+    "municipality": "Prešov"
+  },
+  "00308641": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36519821",
+        "name": "VEPOS, spol. s r.o.",
+        "total_contracted_eur": 492394.02,
+        "projects_count": 1,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+      }
+    ],
+    "subsidiary_total_eur": 492394.02,
+    "ico": "00308641",
+    "municipality": "Vráble"
+  },
+  "00326585": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37876015",
+        "name": "Základná škola, Tatranská Lomnica 14123, Vysoké Tatry",
+        "total_contracted_eur": 433153.47,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      }
+    ],
+    "subsidiary_total_eur": 433153.47,
+    "ico": "00326585",
+    "municipality": "Vysoké Tatry"
+  },
+  "00312037": {
+    "subsidiary_orgs": [
+      {
+        "ico": "51110369",
+        "name": "Integrovaná doprava Žilinského kraja, s.r.o.",
+        "total_contracted_eur": 554347.0,
+        "projects_count": 1,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+      }
+    ],
+    "subsidiary_total_eur": 554347.0,
+    "ico": "00312037",
+    "municipality": "Trenčín"
+  },
+  "00307203": {
+    "subsidiary_orgs": [
+      {
+        "ico": "55380174",
+        "name": "Služby občanom mesta Levice, s. r. o., r. s. p. (SOM Levice)",
+        "total_contracted_eur": 96032.5,
+        "projects_count": 1,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+      }
+    ],
+    "subsidiary_total_eur": 96032.5,
+    "ico": "00307203",
+    "municipality": "Levice"
   },
   "00313319": {
     "subsidiary_orgs": [
@@ -163,94 +460,235 @@
         "ico": "31908969",
         "name": "Nemocnica s poliklinikou Brezno, n.o.",
         "total_contracted_eur": 2912819.73,
-        "projects_count": 2
+        "projects_count": 2,
+        "rpo_relationship": "Zakladateľ "
       },
       {
-        "ico": "00160547",
-        "name": "Gymnázium Jána Chalupku",
-        "total_contracted_eur": 275755.0,
-        "projects_count": 1
+        "ico": "00183067",
+        "name": "Mestské služby, kultúra a šport Brezno",
+        "total_contracted_eur": 639765.85,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
       }
     ],
-    "subsidiary_total_eur": 3188574.73,
+    "subsidiary_total_eur": 3552585.58,
     "ico": "00313319",
     "municipality": "Brezno"
   },
-  "00317331": {
+  "00314731": {
     "subsidiary_orgs": [
       {
-        "ico": "36119385",
-        "name": "Nemocnica s poliklinikou Ilava, n. o.",
-        "total_contracted_eur": 217491.24,
-        "projects_count": 1
+        "ico": "54239931",
+        "name": "Sociálny podnik Oravský Podzámok s.r.o.",
+        "total_contracted_eur": 322652.57,
+        "projects_count": 1,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
       }
     ],
-    "subsidiary_total_eur": 217491.24,
-    "ico": "00317331",
-    "municipality": "Ilava"
+    "subsidiary_total_eur": 322652.57,
+    "ico": "00314731",
+    "municipality": "Oravský Podzámok"
   },
-  "00312037": {
+  "00315346": {
     "subsidiary_orgs": [
       {
-        "ico": "34059199",
-        "name": "Trenčianske múzeum v Trenčíne",
-        "total_contracted_eur": 390466.65,
-        "projects_count": 1
+        "ico": "37813455",
+        "name": "Základná škola, Kvačany 227",
+        "total_contracted_eur": 297333.99,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
       }
     ],
-    "subsidiary_total_eur": 390466.65,
-    "ico": "00312037",
-    "municipality": "Trenčín"
+    "subsidiary_total_eur": 297333.99,
+    "ico": "00315346",
+    "municipality": "Kvačany"
   },
-  "00309745": {
+  "00306061": {
     "subsidiary_orgs": [
       {
-        "ico": "00610721",
-        "name": "Nemocnica s poliklinikou Myjava so sídlom v Myjave",
-        "total_contracted_eur": 299932.62,
-        "projects_count": 1
+        "ico": "52820254",
+        "name": "Združenie obcí - Kráľová pri Senci – Kostolná pri Dunaji - Hrubá Borša",
+        "total_contracted_eur": 10196873.75,
+        "projects_count": 1,
+        "rpo_relationship": "Zakladateľ "
       }
     ],
-    "subsidiary_total_eur": 299932.62,
-    "ico": "00309745",
-    "municipality": "Myjava"
+    "subsidiary_total_eur": 10196873.75,
+    "ico": "00306061",
+    "municipality": "Kráľová pri Senci"
+  },
+  "00314307": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37905805",
+        "name": "MIKROREGIÓN BYSTRICKÁ DOLINA",
+        "total_contracted_eur": 1184873.92,
+        "projects_count": 2,
+        "rpo_relationship": "Zakladateľ "
+      }
+    ],
+    "subsidiary_total_eur": 1184873.92,
+    "ico": "00314307",
+    "municipality": "Stará Bystrica"
+  },
+  "00321796": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36007099",
+        "name": "Dopravný podnik mesta Žiliny s.r.o.",
+        "total_contracted_eur": 46608316.54,
+        "projects_count": 2,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+      }
+    ],
+    "subsidiary_total_eur": 46608316.54,
+    "ico": "00321796",
+    "municipality": "Žilina"
+  },
+  "00330167": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36168475",
+        "name": "EKOS, spol. s r.o. Stará Ľubovňa",
+        "total_contracted_eur": 519732.28,
+        "projects_count": 1,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+      },
+      {
+        "ico": "53538773",
+        "name": "Verejnoprospešné služby Stará Ľubovňa, s. r. o.",
+        "total_contracted_eur": 283439.28,
+        "projects_count": 1,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+      }
+    ],
+    "subsidiary_total_eur": 803171.56,
+    "ico": "00330167",
+    "municipality": "Stará Ľubovňa"
+  },
+  "00319805": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36057029",
+        "name": "Technické služby Detva s.r.o.",
+        "total_contracted_eur": 499937.0,
+        "projects_count": 1,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+      }
+    ],
+    "subsidiary_total_eur": 499937.0,
+    "ico": "00319805",
+    "municipality": "Detva"
+  },
+  "00320048": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37831305",
+        "name": "Základná škola, Kriváň 435",
+        "total_contracted_eur": 543444.53,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      }
+    ],
+    "subsidiary_total_eur": 543444.53,
+    "ico": "00320048",
+    "municipality": "Kriváň"
+  },
+  "00332933": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37873377",
+        "name": "Základná škola, Sídlisko II. 1336, Vranov nad Topľou",
+        "total_contracted_eur": 680935.17,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      },
+      {
+        "ico": "37873385",
+        "name": "Základná škola Lúčna Vranov nad Topľou",
+        "total_contracted_eur": 519214.57,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      }
+    ],
+    "subsidiary_total_eur": 1200149.74,
+    "ico": "00332933",
+    "municipality": "Vranov nad Topľou"
+  },
+  "00326283": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42234891",
+        "name": "Verejnoprospešné služby Mesta Kežmarok",
+        "total_contracted_eur": 238099.08,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      }
+    ],
+    "subsidiary_total_eur": 238099.08,
+    "ico": "00326283",
+    "municipality": "Kežmarok"
+  },
+  "00311154": {
+    "subsidiary_orgs": [
+      {
+        "ico": "45746940",
+        "name": "Bánovská regionálna rozvojová agentúra",
+        "total_contracted_eur": 299986.97,
+        "projects_count": 1,
+        "rpo_relationship": "Zakladateľ "
+      }
+    ],
+    "subsidiary_total_eur": 299986.97,
+    "ico": "00311154",
+    "municipality": "Timoradza"
+  },
+  "00308307": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31436200",
+        "name": "Nitrianske komunálne služby, s.r.o.",
+        "total_contracted_eur": 489881.66,
+        "projects_count": 1,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+      },
+      {
+        "ico": "37966456",
+        "name": "Správa zariadení sociálnych služieb",
+        "total_contracted_eur": 74946.18,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      }
+    ],
+    "subsidiary_total_eur": 564827.84,
+    "ico": "00308307",
+    "municipality": "Nitra"
   },
   "00326470": {
     "subsidiary_orgs": [
       {
-        "ico": "37781171",
-        "name": "Podtatranské múzeum v Poprade",
-        "total_contracted_eur": 327981.75,
-        "projects_count": 1
+        "ico": "00696463",
+        "name": "Správa mestských komunikácií Poprad",
+        "total_contracted_eur": 578442.0,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
       }
     ],
-    "subsidiary_total_eur": 327981.75,
+    "subsidiary_total_eur": 578442.0,
     "ico": "00326470",
     "municipality": "Poprad"
-  },
-  "00320056": {
-    "subsidiary_orgs": [
-      {
-        "ico": "42193222",
-        "name": "Centrum sociálnych služieb KA",
-        "total_contracted_eur": 207214.5,
-        "projects_count": 1
-      }
-    ],
-    "subsidiary_total_eur": 207214.5,
-    "ico": "00320056",
-    "municipality": "Krupina"
   },
   "00318001": {
     "subsidiary_orgs": [
       {
-        "ico": "17335795",
-        "name": "Nemocnica s poliklinikou Prievidza so sídlom v Bojniciach",
-        "total_contracted_eur": 295028.32,
-        "projects_count": 1
+        "ico": "00163988",
+        "name": "Technické služby, príspevková organizácia mesta",
+        "total_contracted_eur": 159333.7,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
       }
     ],
-    "subsidiary_total_eur": 295028.32,
+    "subsidiary_total_eur": 159333.7,
     "ico": "00318001",
     "municipality": "Bojnice"
   },
@@ -260,12 +698,27 @@
         "ico": "37833863",
         "name": "Základná škola Sama Tomášika s Materskou školou",
         "total_contracted_eur": 1032112.7,
-        "projects_count": 1
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
       }
     ],
     "subsidiary_total_eur": 1032112.7,
     "ico": "00328472",
     "municipality": "Lubeník"
+  },
+  "00318060": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37923617",
+        "name": "SPOKOJNOSŤ - centrum sociálnych služieb, n.o.",
+        "total_contracted_eur": 271264.0,
+        "projects_count": 1,
+        "rpo_relationship": "Zakladateľ "
+      }
+    ],
+    "subsidiary_total_eur": 271264.0,
+    "ico": "00318060",
+    "municipality": "Diviaky nad Nitricou"
   },
   "00332062": {
     "subsidiary_orgs": [
@@ -273,25 +726,97 @@
         "ico": "35545771",
         "name": "Základná škola Istvána Dobóa s vyučovacím jazykom maďarským - Dobó István Alapiskola, Veľké Slemence 18 - Nagyszelmenc",
         "total_contracted_eur": 323922.81,
-        "projects_count": 1
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
       }
     ],
     "subsidiary_total_eur": 323922.81,
     "ico": "00332062",
     "municipality": "Veľké Slemence"
   },
-  "00313971": {
+  "00317209": {
     "subsidiary_orgs": [
       {
-        "ico": "36145076",
-        "name": "Kysucké múzeum",
-        "total_contracted_eur": 3586929.66,
-        "projects_count": 1
+        "ico": "36312941",
+        "name": "TSM Dubnica nad Váhom, s.r.o., r.s.p.",
+        "total_contracted_eur": 360108.5,
+        "projects_count": 1,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
       }
     ],
-    "subsidiary_total_eur": 3586929.66,
-    "ico": "00313971",
-    "municipality": "Čadca"
+    "subsidiary_total_eur": 360108.5,
+    "ico": "00317209",
+    "municipality": "Dubnica nad Váhom"
+  },
+  "00313343": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37828541",
+        "name": "Základná škola Jozefa Dekreta Matejovie, Jánošovka, Školská 511/2, Čierny Balog",
+        "total_contracted_eur": 209467.72,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      }
+    ],
+    "subsidiary_total_eur": 209467.72,
+    "ico": "00313343",
+    "municipality": "Čierny Balog"
+  },
+  "00309923": {
+    "subsidiary_orgs": [
+      {
+        "ico": "53046587",
+        "name": "Obecný podnik Rohožník s.r.o.",
+        "total_contracted_eur": 535000.0,
+        "projects_count": 1,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+      }
+    ],
+    "subsidiary_total_eur": 535000.0,
+    "ico": "00309923",
+    "municipality": "Rohožník"
+  },
+  "00331007": {
+    "subsidiary_orgs": [
+      {
+        "ico": "31305784",
+        "name": "SLUŽBA, mestský podnik Stropkov",
+        "total_contracted_eur": 875263.89,
+        "projects_count": 2,
+        "rpo_relationship": "Zriaďovateľ"
+      }
+    ],
+    "subsidiary_total_eur": 875263.89,
+    "ico": "00331007",
+    "municipality": "Stropkov"
+  },
+  "00320501": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00185213",
+        "name": "Technické služby, mestský podnik Banská Štiavnica",
+        "total_contracted_eur": 431358.94,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      }
+    ],
+    "subsidiary_total_eur": 431358.94,
+    "ico": "00320501",
+    "municipality": "Banská Štiavnica"
+  },
+  "00323021": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00186155",
+        "name": "Technické služby mesta Humenné",
+        "total_contracted_eur": 134779.37,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      }
+    ],
+    "subsidiary_total_eur": 134779.37,
+    "ico": "00323021",
+    "municipality": "Humenné"
   },
   "00329347": {
     "subsidiary_orgs": [
@@ -299,24 +824,110 @@
         "ico": "35546328",
         "name": "Základná škola s materskou školou, Školská 20, Margecany",
         "total_contracted_eur": 306104.86,
-        "projects_count": 1
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
       }
     ],
     "subsidiary_total_eur": 306104.86,
     "ico": "00329347",
     "municipality": "Margecany"
   },
-  "00328693": {
+  "00314897": {
     "subsidiary_orgs": [
       {
-        "ico": "45736324",
-        "name": "Nemocnica s poliklinikou, n.o. Revúca",
-        "total_contracted_eur": 3138941.35,
-        "projects_count": 1
+        "ico": "46941037",
+        "name": "Trstenské technické služby - T T S, s.r.o",
+        "total_contracted_eur": 399784.37,
+        "projects_count": 1,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
       }
     ],
-    "subsidiary_total_eur": 3138941.35,
-    "ico": "00328693",
-    "municipality": "Revúca"
+    "subsidiary_total_eur": 399784.37,
+    "ico": "00314897",
+    "municipality": "Trstená"
+  },
+  "00309311": {
+    "subsidiary_orgs": [
+      {
+        "ico": "35606347",
+        "name": "Mestská poliklinika",
+        "total_contracted_eur": 3150420.0,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      }
+    ],
+    "subsidiary_total_eur": 3150420.0,
+    "ico": "00309311",
+    "municipality": "Šurany"
+  },
+  "00309974": {
+    "subsidiary_orgs": [
+      {
+        "ico": "36273074",
+        "name": "Mestská poliklinika Senica, a.s.",
+        "total_contracted_eur": 3148897.21,
+        "projects_count": 1,
+        "rpo_relationship": "Jediný akcionár a.s."
+      }
+    ],
+    "subsidiary_total_eur": 3148897.21,
+    "ico": "00309974",
+    "municipality": "Senica"
+  },
+  "00690562": {
+    "subsidiary_orgs": [
+      {
+        "ico": "37937278",
+        "name": "Združenie obcí EKOTORYSA",
+        "total_contracted_eur": 854100.71,
+        "projects_count": 1,
+        "rpo_relationship": "Iná zainteresovaná osoba"
+      }
+    ],
+    "subsidiary_total_eur": 854100.71,
+    "ico": "00690562",
+    "municipality": "Mošurov"
+  },
+  "00321117": {
+    "subsidiary_orgs": [
+      {
+        "ico": "44299311",
+        "name": "Mestský podnik služieb Žarnovica s.r.o.",
+        "total_contracted_eur": 0,
+        "projects_count": 0,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+      }
+    ],
+    "subsidiary_total_eur": 0,
+    "ico": "00321117",
+    "municipality": "Žarnovica"
+  },
+  "00331996": {
+    "subsidiary_orgs": [
+      {
+        "ico": "00188433",
+        "name": "Technické služby mesta Trebišov",
+        "total_contracted_eur": 405733.28,
+        "projects_count": 1,
+        "rpo_relationship": "Zriaďovateľ"
+      }
+    ],
+    "subsidiary_total_eur": 405733.28,
+    "ico": "00331996",
+    "municipality": "Trebišov"
+  },
+  "00312916": {
+    "subsidiary_orgs": [
+      {
+        "ico": "42298296",
+        "name": "Združenie obcí Veselé ČOV",
+        "total_contracted_eur": 16702870.2,
+        "projects_count": 1,
+        "rpo_relationship": "Zakladateľ "
+      }
+    ],
+    "subsidiary_total_eur": 16702870.2,
+    "ico": "00312916",
+    "municipality": "Rakovice"
   }
 }

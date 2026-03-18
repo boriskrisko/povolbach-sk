@@ -2,30 +2,24 @@
 """
 attribute_subsidiaries.py
 --------------------------
-Attribute excluded ITMS beneficiaries to their founding municipality or VÚC.
+Attribute ITMS beneficiaries to their founding municipality or VÚC
+using RPO (Register právnických osôb) full export data.
 
-NOTE: The RPO API (api.statistics.sk/rpo/v1/subjects/{ico}) returns 404 for
-all ICO lookups, and /rpo/v1/search only accepts fullName parameter with no
-zakladatel field in response. Attribution uses NUTS5 address from raw_subjects.json
-(municipality where org is registered) combined with name-pattern filtering to
-identify likely municipal/VÚC subsidiaries.
-
-Attribution logic:
-1. Filter state/ministry entities → skip (go to indirect, handled separately)
-2. Filter VÚC entities → skip
-3. For remaining: check address municipality via NUTS5 ID → municipal ICO
-4. Name-pattern filter: only attribute if org name suggests municipal subsidiary
-5. If founder municipality = VÚC region → attribute to VÚC instead
+Attribution logic — ZERO name matching, IČO only:
+1. Load rpo_founders.json (extracted from RPO S3 dump by extract_rpo_founders.py)
+2. For each non-municipality beneficiary in aggregated_by_beneficiary_{period}.json:
+   - If RPO says its founder/stakeholder IČO matches a municipality → municipal subsidiary
+   - If RPO says its founder/stakeholder IČO matches a VÚC → VÚC subsidiary
+   - Otherwise → excluded (not municipally-controlled)
 
 Outputs:
-  data/subsidiaries_by_municipality.json
-  data/subsidiaries_by_vuc.json
-  data/attribution_log.txt
+  data/subsidiaries_by_municipality_{period}.json
+  data/subsidiaries_by_vuc_{period}.json
+  data/attribution_log_{period}.txt
 """
 
 import json
 import sys
-import os
 import argparse
 from collections import defaultdict
 from pathlib import Path
@@ -45,83 +39,6 @@ VUC_ICOS = {
     '36063606': 'Bratislavský samosprávny kraj',
 }
 
-VUC_REGIONS = {
-    '36126624': 'Trenčiansky kraj',
-    '37870475': 'Prešovský kraj',
-    '37828100': 'Banskobystrický kraj',
-    '37808427': 'Žilinský kraj',
-    '37861298': 'Nitriansky kraj',
-    '35541016': 'Košický kraj',
-    '37836901': 'Trnavský kraj',
-    '36063606': 'Bratislavský kraj',
-}
-
-STATE_KW = [
-    'Ministerstvo', 'Úrad vlády', 'Ústredie', 'Slovenská republika',
-    'Národná agentúra', 'Slovenská agentúra', 'Fond', 'Správa',
-    'Národná diaľničná', 'Železnice', 'Štátna', 'štátna', 'Sociálna poisťovňa',
-    'Slovak Investment Holding', 'Slovenská inovačná', 'Dopravný podnik',
-    'Slovenská správa', 'Národné centrum', 'Slovenské centrum',
-]
-
-# Name patterns for municipal/VÚC subsidiaries
-MUNI_NAME_PATTERNS = [
-    # Educational
-    'ZŠ', 'MŠ', 'ZUŠ', 'CVČ', 'ŠKD', 'Gymnázium', 'gymnázium',
-    'Základná škola', 'Materská škola', 'Stredná škola', 'Spojená škola',
-    'SOŠ', 'SŠ', 'Odborná škola', 'Stredné odborné', 'Učňovská',
-    'Špeciálna základná', 'Špeciálna škola', 'Konzervatórium',
-    # Cultural
-    'Kultúrny dom', 'kultúrny dom', 'Dom kultúry', 'Kultúrne centrum',
-    'kultúrne centrum', 'Knižnica', 'knižnica', 'Múzeum', 'múzeum',
-    'Galéria', 'galéria', 'Osvetové stredisko', 'Kultúrne zariadenie',
-    # Social & health
-    'Domov dôchodcov', 'Domov sociálnych', 'Centrum sociálnych',
-    'Zariadenie pre seniorov', 'Zariadenie sociálnych', 'Denné centrum',
-    'Sociálne centrum', 'Poliklinika', 'Nemocnica s poliklinikou',
-    # City property / utilities
-    'Správa mestskej', 'Správa mesta', 'Správa obecného', 'Správa obce',
-    'Bytový podnik', 'Mestský bytový', 'Obecný bytový',
-    'Mestské služby', 'Obecné služby', 'Technické služby mesta',
-    'Technické služby obce', 'Verejnoprospešné', 'Komunálne',
-    'Mestská zeleň', 'Správa zelene', 'Záhradnícke', 'Záhradníctvo',
-    # Sports
-    'Mestský stadión', 'Telovýchovná jednota', 'Mestská plaváreň',
-]
-
-VUC_NAME_PATTERNS = [
-    # VÚC-level education
-    'Stredná odborná škola', 'Stredné odborné učilište', 'Gymnázium',
-    'gymnázium', 'Obchodná akadémia', 'Zdravotnícka škola',
-    'Pedagogická a sociálna', 'Hotelová akadémia', 'Škola umeleckého',
-    # VÚC hospitals/social
-    'Nemocnica', 'nemocnica', 'Psychiatrická liečebňa', 'Psychiatrická nemocnica',
-    'Domov sociálnych služieb pre', 'Domov pre postihnutých',
-    'Centrum pre deti', 'Krízové centrum',
-    # Regional museums/culture
-    'Krajské múzeum', 'Krajská knižnica', 'Krajské kultúrne',
-    'Hornonitrianské múzeum', 'Vihorlatské múzeum',
-]
-
-def is_state(name: str) -> bool:
-    return any(kw in name for kw in STATE_KW)
-
-def has_commercial_suffix(name: str) -> bool:
-    """Commercial entities are usually not subsidiaries."""
-    suffixes = [', a.s.', ', s.r.o.', ' a.s.', ' s.r.o.', ', spol.', 'akciová spoločnosť', ', n.p.']
-    nl = name.lower()
-    return any(s.lower() in nl for s in suffixes)
-
-def is_municipal_subsidiary(name: str) -> bool:
-    if has_commercial_suffix(name):
-        return False
-    return any(pat in name for pat in MUNI_NAME_PATTERNS)
-
-def is_vuc_subsidiary(name: str) -> bool:
-    if has_commercial_suffix(name):
-        return False
-    return any(pat in name for pat in VUC_NAME_PATTERNS)
-
 def log(msg: str):
     print(msg, file=sys.stderr)
 
@@ -133,196 +50,99 @@ def main():
     args = parser.parse_args()
     period = args.period
 
-    log(f'=== Attribution for period _{period} ===')
-    log('Loading data files...')
+    log(f'=== RPO-based Attribution for period _{period} ===')
 
-    # Load aggregated data for this period
+    # ── Load data ────────────────────────────────────────────────────────
+    # RPO founder lookup (entity_ico -> {founder_ico, founder_name, ...})
+    with open(DATA / 'rpo_founders.json') as f:
+        rpo_founders = json.load(f)
+    log(f'RPO founder entries: {len(rpo_founders)}')
+
+    # Aggregated beneficiaries for this period
     agg_path = DATA / f'aggregated_by_beneficiary_{period}.json'
     with open(agg_path) as f:
         agg_data = json.load(f)
-    # Normalize: _14 is a list, _21 is a dict
     if isinstance(agg_data, list):
         agg_by_ico = {e['ico']: e for e in agg_data}
     else:
         agg_by_ico = agg_data
 
-    # Municipality register (same for both periods)
+    # Municipality register
     with open(DATA / 'municipalities_isco.json') as f:
         muni_register = json.load(f)
     muni_set = set(muni_register.keys())
 
-    # Build excluded list: all non-municipality beneficiaries for this period
-    excluded = []
-    for ico, e in agg_by_ico.items():
-        if ico not in muni_set:
-            excluded.append({
-                'ico': ico,
-                'name': e.get('nazov', e.get('name', '')),
-                'total_contracted_eur': e.get('total_contracted_eur', 0) or 0,
-                'projects_count': (e.get('active_projects', 0) or 0) + (e.get('completed_projects', 0) or 0),
-            })
-    log(f'Non-municipality beneficiaries (excluded): {len(excluded)}')
-
-    # Address data: raw_subjects.json is from ITMS2014 but physical addresses don't change
-    with open(DATA / 'raw_subjects.json') as f:
-        raw_subj = json.load(f)
-    subj_by_ico = {str(v.get('ico', '')): v for v in raw_subj.values()}
-
-    with open(DATA / 'raw_nuts_names.json') as f:
-        nuts_names = json.load(f)  # numeric_id -> municipality_name
-
-    # Load municipal_stats for the correct period (for name→ICO lookup and region info)
+    # Municipal stats (for official_name lookup)
     muni_stats_path = DATA / f'municipal_stats_{period}.json'
     with open(muni_stats_path) as f:
         muni_stats = json.load(f)
 
-    # Build municipality name → ICO lookup
-    STRIP = ['Obec ', 'Mesto ', 'Mestská časť ']
-    def plain(n):
-        for p in STRIP:
-            if n.startswith(p):
-                return n[len(p):]
-        return n
+    vuc_set = set(VUC_ICOS.keys())
 
-    name_to_ico_muni = {}
-    for ico, m in muni_stats.items():
-        on = m.get('official_name', '')
-        pn = plain(on)
-        # Only store if unique
-        for nm in [on, pn]:
-            if nm not in name_to_ico_muni:
-                name_to_ico_muni[nm] = ico
-
-    # Build NUTS5 numeric id → municipality ICO (unique matches only)
-    from collections import defaultdict
-    name_to_icos_all = defaultdict(list)
-    for ico, m in muni_stats.items():
-        on = m.get('official_name', '')
-        pn = plain(on)
-        name_to_icos_all[on].append(ico)
-        name_to_icos_all[pn].append(ico)
-
-    nuts_id_to_ico = {}
-    for nid, name in nuts_names.items():
-        cands = name_to_icos_all.get(name, [])
-        uniq = list(dict.fromkeys(cands))
-        if len(uniq) == 1:
-            nuts_id_to_ico[nid] = uniq[0]
-
-    # Manual overrides: multi-district cities (Košice I-IV, Bratislava sub-districts)
-    # All resolve to the single city municipality ICO
-    KOŠICE_ICO = '00691135'
-    BRATISLAVA_ICO = '00603481'
-    KOŠICE_SUB_IDS = [
-        '89', '90', '91', '92',  # Košice I, II, III, IV
-        '2704','2705','2706','2707','2708','2709','2710','2711','2712','2713',
-        '2714','2715','2716','2717','2718','2719','2720','2721','2722','2723',
-        '2724','2725',  # Košice mestské časti
-    ]
-    BRATISLAVA_SUB_IDS = [
-        '18', '19', '20', '21', '22',  # Bratislava I–V
-        '99','100','101','102','103','104','105','106','107','108',
-        '109','110','111','112','113','114','115',  # Bratislava mestské časti
-    ]
-    for nid in KOŠICE_SUB_IDS:
-        nuts_id_to_ico[nid] = KOŠICE_ICO
-    for nid in BRATISLAVA_SUB_IDS:
-        nuts_id_to_ico[nid] = BRATISLAVA_ICO
-
-    log(f'NUTS5 IDs with unique ICO mapping: {len(nuts_id_to_ico)}')
-
-    # Build VÚC region name → ICO lookup
-    region_to_vuc = {v: k for k, v in VUC_REGIONS.items()}
-
-    # ── Main attribution loop ──────────────────────────────────────────────
+    # ── Main attribution loop ────────────────────────────────────────────
     by_muni = defaultdict(lambda: {'subsidiary_orgs': [], 'subsidiary_total_eur': 0})
     by_vuc = {ico: {'subsidiary_orgs': [], 'subsidiary_total_eur': 0} for ico in VUC_ICOS}
 
     counters = defaultdict(int)
     log_lines = []
 
-    for e in excluded:
-        ico = e.get('ico', '')
-        name = e.get('name', '')
+    for ico, e in agg_by_ico.items():
+        # Skip municipalities themselves
+        if ico in muni_set:
+            continue
+        # Skip VÚCs themselves
+        if ico in vuc_set:
+            continue
+
+        name = e.get('nazov', e.get('name', ''))
         total_eur = e.get('total_contracted_eur', 0) or 0
-        projects_count = e.get('projects_count', 0) or 0
+        projects_count = (e.get('active_projects', 0) or 0) + (e.get('completed_projects', 0) or 0)
 
-        # Skip VÚC
-        if ico in VUC_ICOS:
-            counters['skip_vuc'] += 1
+        # Look up in RPO founders
+        rpo_entry = rpo_founders.get(ico)
+        if not rpo_entry:
+            counters['no_rpo_match'] += 1
+            log_lines.append(f'NO_RPO\t{ico}\t{name}\t€{total_eur:,.0f}')
             continue
 
-        # Skip state entities
-        if is_state(name):
-            counters['skip_state'] += 1
-            continue
+        founder_ico = rpo_entry['founder_ico']
 
-        # Get NUTS5 municipality from address
-        sv = subj_by_ico.get(ico)
-        if not sv:
-            counters['no_subject'] += 1
-            log_lines.append(f'NO_SUBJECT\t{ico}\t{name}')
-            continue
-
-        nuts_id = str(sv.get('obec', {}).get('hodnotaNuts', {}).get('id', ''))
-        if not nuts_id:
-            counters['no_nuts'] += 1
-            log_lines.append(f'NO_NUTS\t{ico}\t{name}')
-            continue
-
-        # Resolve NUTS5 to municipality name
-        muni_name = nuts_names.get(nuts_id, '')
-        muni_ico = nuts_id_to_ico.get(nuts_id)
-
-        if not muni_ico:
-            counters['ambig_nuts'] += 1
-            log_lines.append(f'AMBIG_NUTS\t{ico}\t{name}\tnuts_id={nuts_id}\tname={muni_name}')
-            continue
-
-        # Get the region for this municipality (to check VÚC attribution)
-        muni_region = muni_stats.get(muni_ico, {}).get('region', '')
-        vuc_ico = region_to_vuc.get(muni_region)
-
-        # Determine attribution type
         org_entry = {
             'ico': ico,
             'name': name,
             'total_contracted_eur': total_eur,
             'projects_count': projects_count,
+            'rpo_relationship': rpo_entry.get('relationship', ''),
         }
 
-        if is_vuc_subsidiary(name) and not is_municipal_subsidiary(name):
-            # Regional hospitals, secondary schools → VÚC
-            if vuc_ico:
-                by_vuc[vuc_ico]['subsidiary_orgs'].append(org_entry)
-                by_vuc[vuc_ico]['subsidiary_total_eur'] += total_eur
-                counters['attributed_vuc'] += 1
-            else:
-                counters['unresolved_region'] += 1
-                log_lines.append(f'UNRESOLVED_REGION\t{ico}\t{name}\tregion={muni_region}')
-        elif is_municipal_subsidiary(name):
-            # Schools, libraries, cultural centers → municipality
-            by_muni[muni_ico]['ico'] = muni_ico
-            by_muni[muni_ico]['municipality'] = muni_stats.get(muni_ico, {}).get('official_name', '')
-            by_muni[muni_ico]['subsidiary_orgs'].append(org_entry)
-            by_muni[muni_ico]['subsidiary_total_eur'] += total_eur
+        if founder_ico in muni_set:
+            # Municipal subsidiary
+            muni_name = muni_stats.get(founder_ico, {}).get('official_name', '')
+            by_muni[founder_ico]['ico'] = founder_ico
+            by_muni[founder_ico]['municipality'] = muni_name
+            by_muni[founder_ico]['subsidiary_orgs'].append(org_entry)
+            by_muni[founder_ico]['subsidiary_total_eur'] += total_eur
             counters['attributed_muni'] += 1
+        elif founder_ico in vuc_set:
+            # VÚC subsidiary
+            by_vuc[founder_ico]['subsidiary_orgs'].append(org_entry)
+            by_vuc[founder_ico]['subsidiary_total_eur'] += total_eur
+            counters['attributed_vuc'] += 1
         else:
-            # Doesn't match patterns → log and skip
-            counters['unmatched_pattern'] += 1
-            log_lines.append(f'NO_PATTERN\t{ico}\t{name}')
+            # Founder is neither municipality nor VÚC (e.g. another company)
+            counters['non_muni_founder'] += 1
+            log_lines.append(f'NON_MUNI_FOUNDER\t{ico}\t{name}\tfounder={founder_ico}\t{rpo_entry.get("founder_name","")}')
 
     # Sort subsidiary orgs by EUR desc
-    for mico, d in by_muni.items():
+    for d in by_muni.values():
         d['subsidiary_orgs'].sort(key=lambda o: o['total_contracted_eur'], reverse=True)
-    for vico, d in by_vuc.items():
+    for d in by_vuc.values():
         d['subsidiary_orgs'].sort(key=lambda o: o['total_contracted_eur'], reverse=True)
 
-    # Save
+    # ── Save ─────────────────────────────────────────────────────────────
     with open(DATA / f'subsidiaries_by_municipality_{period}.json', 'w', encoding='utf-8') as f:
         json.dump(dict(by_muni), f, ensure_ascii=False, indent=2)
 
-    # For VÚC: add name fields
     vuc_sub_out = {}
     for vico, d in by_vuc.items():
         vuc_sub_out[vico] = {
@@ -335,19 +155,21 @@ def main():
 
     log_path = DATA / f'attribution_log_{period}.txt'
     with open(log_path, 'w', encoding='utf-8') as f:
-        f.write('SUBSIDIARY ATTRIBUTION LOG\n')
+        f.write('SUBSIDIARY ATTRIBUTION LOG (RPO-based)\n')
         f.write('=' * 80 + '\n\n')
-        f.write('NOTE: RPO API (api.statistics.sk/rpo/v1) does not expose zakladatel\n')
-        f.write('field via ICO lookup. Attribution uses NUTS5 address from ITMS\n')
-        f.write('raw_subjects.json combined with name-pattern classification.\n\n')
-        for k, v in counters.items():
+        f.write('Method: RPO full export from ŠÚSR S3 bucket (rpo_founders.json)\n')
+        f.write('Rule: If entity stakeholder IČO matches municipality → subsidiary\n')
+        f.write('Zero name matching. IČO only.\n\n')
+        for k, v in sorted(counters.items()):
             f.write(f'{k}: {v}\n')
+        f.write(f'\nMunicipalities with subsidiaries: {len(by_muni)}\n')
+        f.write(f'VÚCs with subsidiaries: {sum(1 for d in by_vuc.values() if d["subsidiary_orgs"])}\n')
         f.write('\nUNRESOLVED ENTRIES:\n')
         for line in log_lines:
             f.write(line + '\n')
 
     log('\n=== Attribution Results ===')
-    for k, v in counters.items():
+    for k, v in sorted(counters.items()):
         log(f'  {k}: {v}')
     log(f'  Municipalities with subsidiaries: {len(by_muni)}')
     log(f'  VÚC entries with subsidiaries: {sum(1 for d in by_vuc.values() if d["subsidiary_orgs"])}')
@@ -356,7 +178,6 @@ def main():
     vuc_total = sum(d['subsidiary_total_eur'] for d in by_vuc.values())
     log(f'  Total EUR attributed to municipalities: €{muni_total:,.0f}')
     log(f'  Total EUR attributed to VÚC: €{vuc_total:,.0f}')
-    log(f'  Log written to {log_path}')
 
     # Top municipalities by subsidiary EUR
     top_muni = sorted(by_muni.items(), key=lambda x: x[1]['subsidiary_total_eur'], reverse=True)[:10]

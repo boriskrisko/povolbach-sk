@@ -1,620 +1,588 @@
-SUBSIDIARY ATTRIBUTION LOG
+SUBSIDIARY ATTRIBUTION LOG (RPO-based)
 ================================================================================
 
-NOTE: RPO API (api.statistics.sk/rpo/v1) does not expose zakladatel
-field via ICO lookup. Attribution uses NUTS5 address from ITMS
-raw_subjects.json combined with name-pattern classification.
+Method: RPO full export from ŠÚSR S3 bucket (rpo_founders.json)
+Rule: If entity stakeholder IČO matches municipality → subsidiary
+Zero name matching. IČO only.
 
-skip_state: 54
-skip_vuc: 8
-unmatched_pattern: 242
-no_subject: 349
-attributed_muni: 30
-attributed_vuc: 29
-ambig_nuts: 13
+attributed_muni: 78
+attributed_vuc: 66
+no_rpo_match: 573
+
+Municipalities with subsidiaries: 55
+VÚCs with subsidiaries: 8
 
 UNRESOLVED ENTRIES:
-NO_PATTERN	31797580	Asociácia pre kultúru, vzdelávanie a komunikáciu
-NO_PATTERN	31753604	Štátny geologický ústav Dionýza Štúra
-NO_SUBJECT	50808389	Centrum včasnej intervencie Trenčín, n.o. Anglický názov: Early Childhood Intervention Center Trenčín, ngo
-NO_SUBJECT	54100453	calorie s.r.o.
-NO_SUBJECT	35570504	Centrum poradenstva a prevencie, Okružná 3657, Michalovce
-NO_SUBJECT	45744009	Centrum včasnej intervencie Žilina, n. o.
-NO_PATTERN	30854687	Implementačná agentúra Ministerstva práce, sociálnych vecí a rodiny Slovenskej republiky
-NO_PATTERN	30847451	Inštitút pre výskum práce a rodiny
-NO_PATTERN	00606731	Záchranná služba Košice
-NO_PATTERN	00397563	Žilinská univerzita v Žiline
-NO_SUBJECT	35838949	HORNBACH - Baumarkt SK spol. s r.o.
-NO_PATTERN	35593008	Rímskokatolícka cirkev Biskupstvo Nitra
-NO_SUBJECT	37836501	Centrum poradenstva a prevencie, M.Sch. Trnavského 398/2, Trnava
-NO_SUBJECT	00602124	Střední průmyslová škola chemická akademika Heyrovského, Ostrava, p. o.
-NO_PATTERN	36077658	Kľúč, n.o.
-NO_PATTERN	42428998	Pokoj a dobro - pomoc núdznym
-NO_SUBJECT	36086941	Záhorské múzeum v Skalici
-NO_SUBJECT	50562771	Dieťa do dlaní
-NO_PATTERN	50336754	Lakovňa R.D.G. s.r.o.
-NO_SUBJECT	35876557	Mobis Slovakia s.r.o.
-NO_PATTERN	35755598	Pressburg Mint – Bratislavská mincovňa s. r. o.
-NO_SUBJECT	37901273	Centrum poradenstva a prevencie, Komenského 2740, Kysucké Nové Mesto
-NO_SUBJECT	52565301	Inklucentrum - Centrum inkluzívneho vzdelávania
-NO_PATTERN	52828123	Digitálna koalícia
-NO_PATTERN	36111601	EFFETA - stredisko sv. Františka Saleského
-NO_PATTERN	50189786	ALTERNATÍVA - Centrum nezávislého života, n.o.
-NO_PATTERN	17070775	Prešovská univerzita v Prešove
-NO_SUBJECT	46409114	evergreen recycling, s.r.o.
-NO_SUBJECT	37860879	Základná škola, Adyho 6, Štúrovo
-NO_SUBJECT	56763531	Farma u Felixov s. r. o.
-NO_SUBJECT	56929242	ZDRUŽENIE OBCÍ PRAVNIANSKEJ DOLINY
-NO_PATTERN	51744422	ROZVOJOVÁ AGENTÚRA Banskobystrického samosprávneho kraja, n. o.
-NO_PATTERN	37954130	IN Network Slovakia, n.o.
-NO_SUBJECT	00179752	Galéria mesta Bratislavy
-NO_SUBJECT	31688233	BETÓN - SPIŠ, s.r.o., Spišská Nová Ves
-NO_SUBJECT	53638522	Stredná odborná škola rozvoja vidieka s vyučovacím jazykom maďarským - Vidékfejlesztési Szakközépiskola a Stredná športová škola s vyučovacím jazykom maďarským - Középfokú Sportiskola, Námestie sv. Štefana 1533/3, Dunajská Streda - Dunaszerdahely
-NO_PATTERN	36378241	RP HUJO spol. s r.o.
-NO_PATTERN	45782814	DRUHÁ STRANA MINCE
-NO_PATTERN	52411133	myJUMP.sk
-NO_SUBJECT	35767308	KORD SIPOX a.s.
-NO_SUBJECT	52009424	BIATHLON Slovakia, s.r.o.
-NO_SUBJECT	31966314	Rímskokatolícka cirkev, farnosť Levoča
-NO_PATTERN	30842654	Slovenská obchodná a priemyselná komora
-NO_PATTERN	36485250	Podtatranská vodárenská spoločnosť, a.s.
-NO_PATTERN	45023085	MISERICORDIA n.o.
-NO_PATTERN	53928008	Ideme vpred
-NO_SUBJECT	31870236	Združenie miest a obcí Žitného ostrova
-NO_PATTERN	00397687	Slovenská technická univerzita v Bratislave
-NO_SUBJECT	52429601	EDUKAS o.z.
-NO_PATTERN	42136938	Human Point Slovakia
-NO_SUBJECT	31633765	HATER - HANDLOVÁ spol. s r.o.
-NO_SUBJECT	37805533	Združenie obcí Rajecká dolina
-NO_SUBJECT	52565114	Krajina čitateľov
-NO_SUBJECT	42128919	Spojená škola, ul. SNP 30, Ivanka pri Dunaji
-NO_PATTERN	36570460	Východoslovenská vodárenská spoločnosť, a.s. Košice
-NO_SUBJECT	37977997	Ústav pamäti národa
-NO_SUBJECT	31380051	Výskumný ústav papiera a celulózy a.s.
-NO_SUBJECT	51035171	Ekonid
-NO_PATTERN	53461304	Sociálne bývanie, n.o.
-NO_SUBJECT	31999859	Rímskokatolícka cirkev, farnosť Spišská Stará Ves
-NO_SUBJECT	00691861	Centrum sociálnych služieb Domov pod Tatrami
-NO_PATTERN	17314852	Štátny inštitút odborného vzdelávania
-NO_SUBJECT	42007267	Občianske združenie smARTimEDU
-NO_PATTERN	31825249	Trnavská univerzita v Trnave
-NO_SUBJECT	00216305	Vysoké učení technické v Brně
-NO_SUBJECT	17050324	Stredná odborná škola technická, F. Lipku 2422/5, Hlohovec
-NO_SUBJECT	42380537	DOTYKY
-NO_SUBJECT	17321450	exe, a.s.
-NO_PATTERN	37897985	Tretia vlna
-NO_PATTERN	17316014	Slovenská humanitná rada
-NO_SUBJECT	17147000	Rímskokatolícka farnosť sv. Mikuláša, Prešov
-NO_SUBJECT	51075750	Súkromná základná umelecká škola, Františkánska 57/2, Trnava
-NO_PATTERN	00690996	Mestská časť-Košická Nová Ves
-NO_SUBJECT	42278961	Židovská náboženská obec Trenčín
-NO_SUBJECT	00165361	Slovenská zdravotnícka univerzita v Bratislave
-NO_PATTERN	36302724	Trenčianske vodárne a kanalizácie, a.s. skratka obchodného mena: TVK a.s. Trenčín
-NO_PATTERN	42255015	TENENET o.z.
-NO_SUBJECT	37831721	Základná škola Š. M. Daxnera, Dr. V. Clementisa 1857/13, Rimavská Sobota
-NO_PATTERN	42499500	Finančné riaditeľstvo Slovenskej republiky
-NO_PATTERN	00397865	Univerzita Komenského v Bratislave
-AMBIG_NUTS	61989100	Vysoká škola báňská - Technická univerzita Ostrava	nuts_id=120032	name=Ostrava
-NO_SUBJECT	53817664	Súkromné centrum poradenstva a prevencie BambiCentrum, Prostějovská 127A, Prešov
-NO_PATTERN	31686303	ORIENS s.r.o.
-NO_SUBJECT	54471419	Združenie obcí Hajlochy
-NO_PATTERN	42414199	Mosty Integrácie
-NO_PATTERN	52628345	MuGiC for ART and Watoto n.o.
-NO_SUBJECT	37986031	Sociálne centrum ANJEL, n.o.
-NO_SUBJECT	42101280	Femina Spiš
-NO_SUBJECT	42310920	Dracula MONACObet Gym o.z.
-NO_PATTERN	55111777	Centrum poradenstva a prevencie, Slovenská 69/56, Gelnica
-NO_PATTERN	30856523	Inštitút zamestnanosti
-NO_SUBJECT	42160286	Centrum poradenstva a prevencie, Hodská 2352/62, Galanta
-NO_PATTERN	37924443	DEPAUL SLOVENSKO, nezisková organizácia
-NO_SUBJECT	42261791	IPčko
-NO_SUBJECT	30795141	Slovenská advokátska komora
-NO_PATTERN	52577341	Všetci pre rodinu, n.o.
-NO_PATTERN	36464503	STROJLAB, s.r.o.
-NO_SUBJECT	35545755	Základná škola s materskou školou, Bracovce 26
-NO_SUBJECT	00287407	Obec Lechotice
-NO_SUBJECT	50515853	Kežmarská platforma pre sociálne začlenenie, n.o.
-NO_PATTERN	37887483	RELEVANT n.o.
-NO_SUBJECT	36436798	KTT - INVEST, a.s.
-NO_SUBJECT	00415995	Slovenský Červený kríž, územný spolok Nové Zámky
-NO_SUBJECT	50654896	NIE RAKOVINE
-NO_PATTERN	42417686	HELP 4 PEOPLE o.z.
-NO_PATTERN	35583461	Creative Industry Košice, n.o.
-NO_PATTERN	36672084	Turčianska vodárenská spoločnosť, a.s.
-NO_SUBJECT	54906466	Good Vibes Software s.r.o.
-NO_SUBJECT	54072042	EFC plus o.z.
-NO_PATTERN	36537870	KOMVaK - Vodárne a kanalizácie mesta Komárna, a.s.
-NO_SUBJECT	00162311	Stredná odborná škola vinársko - ovocinárska, Kostolná 3, Modra
-NO_SUBJECT	53176910	Educat – vzdelávacie centrum, s. r. o.
-NO_SUBJECT	42178941	Spojená škola Svätej Rodiny, Gercenova 10, Bratislava
-NO_PATTERN	36789097	CHYŽBET SK, s.r.o.
-NO_SUBJECT	42264120	ARS ARETE
-NO_SUBJECT	36578380	DIAKOL STRÁŽSKE, s.r.o.
-NO_SUBJECT	42273404	Centrum poradenstva a prevencie, 5. apríla 792/14, Bánovce nad Bebravou
-NO_PATTERN	36545317	ARRIVA Nové Zámky, akciová spoločnosť (v skratke: ARRIVA Nové Zámky, a.s.)
-NO_SUBJECT	00634875	Oravská poliklinika Námestovo
-NO_PATTERN	36057185	IKE, spol.s.r.o.
-NO_SUBJECT	00162019	Hotelová akadémia Ľudovíta Wintera, Stromová 34, Piešťany
-NO_PATTERN	36091995	Združenie obcí Medzičilizia
-NO_PATTERN	00891657	Súkromná stredná odborná škola automobilová Duálna akadémia, Jána Jonáša 5, Bratislava
-NO_SUBJECT	35539488	Gréckokatolícka eparchiálna charita Košice
-NO_SUBJECT	00101435	Technické muzeum v Brně
-NO_PATTERN	00156884	Slovenský hydrometeorologický ústav
-NO_PATTERN	00156582	Ústredný kontrolný a skúšobný ústav poľnohospodársky v Bratislave
-AMBIG_NUTS	70888337	Jihomoravský kraj	nuts_id=118693	name=Brno
-NO_SUBJECT	62156489	Mendelova univerzita v Brně
-NO_SUBJECT	42065895	Diecézna charita Žilina
-NO_SUBJECT	52509231	SAMEMA s. r. o.
-NO_PATTERN	45472220	Liptovská potravinárska spoločnosť, s. r. o. skrátene LPS s. r. o.
-NO_SUBJECT	00523551	Centrum poradenstva a prevencie, Kpt. Nálepku 1057/18, Trebišov
-NO_SUBJECT	00513474	Mestské kultúrne stredisko Anny Adamis - Adamis Anna Városi Művelődési Központ
-NO_SUBJECT	34899316	Slavka Gazdová - SG style Art
-NO_SUBJECT	70983950	Základní škola a mateřská škola Staré Město, okres Frýdek-Místek, příspěvková organizace
-NO_SUBJECT	52022072	Cirkevná základná škola s materskou školou sv. Juraja, Gorkého 55, Trebišov
-NO_SUBJECT	44186479	REALTECH TRADE s.r.o.
-NO_PATTERN	35679361	Združenie obcí pre likvidáciu odpadu Poltár
-NO_PATTERN	36550949	Západoslovenská vodárenská spoločnosť, a.s.
-NO_SUBJECT	35690623	SLOVGAS, s.r.o.
-NO_SUBJECT	54033420	Nová nádej, Centrum pre deti a rodiny
-NO_SUBJECT	19634269	Spolek pro veřejnou správu, z.s.
-NO_SUBJECT	51451859	Thermál Nesvady, s.r.o.
-AMBIG_NUTS	00283061	Město Břeclav	nuts_id=118825	name=Břeclav
-NO_PATTERN	00397482	Slovenská poľnohospodárska univerzita v Nitre
-NO_SUBJECT	00351873	Stredná odborná škola obchodu a služieb, Z. Kodálya 765, Galanta
-NO_PATTERN	37804332	Združenie BIELA ORAVA, pre všestranný rozvoj obcí regiónu Biela Orava
-NO_SUBJECT	53290046	Kempelenov inštitút inteligentných technológií, v anglickom jazyku Kempelen Institute of Intelligent Technologies
-NO_SUBJECT	42323975	K 13 - Košické kultúrne centrá
-NO_SUBJECT	42413605	Združenie pre kariérové poradenstvo a rozvoj kariéry
-NO_SUBJECT	36518344	ANDKA s. r. o.
-NO_PATTERN	52722449	INO-HUB Energy j.s.a.
-AMBIG_NUTS	00216224	Masarykova univerzita	nuts_id=118693	name=Brno
-NO_SUBJECT	56315309	Energetické družstvo Bratislava
-NO_PATTERN	31678378	M-D-J, spol. s r.o.
-NO_PATTERN	00164348	Národný inštitút vzdelávania a mládeže
-NO_PATTERN	31995420	Karpatská nadácia
-NO_PATTERN	36084344	PRO REGION n.o.
-NO_SUBJECT	54240255	EDURAMA o.z.
-NO_PATTERN	42114985	Súkromná stredná odborná škola polytechnická DSA, Novozámocká 220,  Nitra
-NO_SUBJECT	31601413	VS - MONT, s.r.o.
-NO_SUBJECT	50040901	YouthWatch
-NO_PATTERN	17055237	Súkromná stredná odborná škola DSA, Koniarekova 17, Trnava
-NO_SUBJECT	54256861	Sensible Biotechnologies s.r.o.
-NO_SUBJECT	36515582	FR-INVEST Hranična, s.r.o.
-NO_PATTERN	35570547	Centrum poradenstva a prevencie, Zuzkin park 10, Košice
-NO_PATTERN	00157805	Vysoká škola výtvarných umení v Bratislave
-NO_PATTERN	36560669	ACROPOLIS SLOVAKIA, s.r.o.
-NO_PATTERN	31997520	Východný dištrikt Evanjelickej cirkvi augsburského vyznania na Slovensku
-NO_PATTERN	00151882	Centrum vedecko-technických informácií SR
-NO_PATTERN	36022047	SLOVENSKÝ VODOHOSPODÁRSKY PODNIK, štátny podnik
-NO_SUBJECT	36321893	Podnik technických služieb mesta, s.r.o.
-NO_PATTERN	42337402	Národné poľnohospodárske a potravinárske centrum
-NO_PATTERN	17327661	Stredná priemyselná škola elektrotechnická, Hálova 16, Bratislava
-NO_PATTERN	00399957	Ekonomická univerzita v Bratislave
-NO_PATTERN	52028089	Optima Status
-NO_SUBJECT	50492152	PNP marketing s.r.o.
-NO_SUBJECT	53064909	Aliancia pre sociálnu ekonomiku na Slovensku
-NO_SUBJECT	55560172	LiMaR SocialComplet o.z.
-NO_SUBJECT	35562340	Inštitút nukleárnej a molekulárnej medicíny
-NO_SUBJECT	50288504	olivka s. r. o.
-NO_SUBJECT	35767014	SIPOX HOLDING a.s.
-NO_PATTERN	42138515	Kolégium Antona Neuwirtha
-NO_SUBJECT	61989592	Univerzita Palackého v Olomouci
-NO_PATTERN	55209491	Aliancia sektorových rád
-NO_SUBJECT	00596795	Centrum spoločenských a psychologických vied SAV, v. v. i.
-NO_PATTERN	36096555	Centrum Slniečko, n.o. (v anglickom jazyku The Sun Center)
-NO_SUBJECT	52659917	Impact Games
-NO_SUBJECT	35971703	BTS Cargo & Hangar Services, a.s.
-NO_PATTERN	36252484	Trnavská vodárenská spoločnosť, a.s. (skrátený názov: TAVOS, a.s.)
-NO_SUBJECT	36138517	Slovenská národná knižnica
-NO_SUBJECT	42124697	ŠŤASTNÝ ÚSMEV
-NO_PATTERN	00397768	Univerzita Pavla Jozefa Šafárika v Košiciach
-NO_PATTERN	00027383	Česká televize
-NO_SUBJECT	53726987	Nadácia PRONEA
-NO_SUBJECT	47624051	FREQUENTIS Solutions & Services s. r. o.
-NO_SUBJECT	53091124	ŽenaVIE
-NO_SUBJECT	47221721	HOTEL MAMAS a.s.
-NO_PATTERN	36038351	LESY Slovenskej republiky, štátny podnik
-NO_SUBJECT	00604968	Centrum sociálnych služieb Sibírka
-NO_PATTERN	00397431	Vysoká škola múzických umení v Bratislave
-NO_PATTERN	35515325	Diecézna Charita Rožňava
-NO_SUBJECT	45744700	Centrum včasnej intervencie Prešov, n.o. Anglický názov: Early Childhood Intervention Center Prešov
-NO_PATTERN	31749542	Štátny fond rozvoja bývania
-NO_SUBJECT	49629549	Česká společnost ornitologická
-NO_SUBJECT	17059640	Obchodná akadémia sv. Tomáša Akvinského, Vysokoškolákov 13, Žilina
-NO_SUBJECT	42360056	Rodič ľavou zadnou
-NO_SUBJECT	55118348	Súkromné centrum poradenstva a prevencie HELP-DYS, Royova 773, Púchov
-NO_SUBJECT	42390575	KOMUNITA AKTIVITY
-NO_SUBJECT	52277224	KRALO, s. r. o.
-NO_SUBJECT	54625491	FinQ Centrum, n.o.
-NO_SUBJECT	31970621	Cirkevný zbor ECAV na Slovensku Poprad-Veľká
-NO_SUBJECT	54533848	Lichtgitter FRP Slovakia s.r.o.
-NO_PATTERN	36672297	Severoslovenské vodárne a kanalizácie, a. s.
-AMBIG_NUTS	27744485	Centrála cestovního ruchu Východní Moravy, o.p.s.	nuts_id=119694	name=Zlín
-NO_PATTERN	52190820	KIRA n.o.
-NO_PATTERN	36519821	VEPOS, spol. s r.o.
-NO_PATTERN	00397610	Technická univerzita v Košiciach
-NO_SUBJECT	37876015	Základná škola, Tatranská Lomnica 14123, Vysoké Tatry
-NO_SUBJECT	51666651	AlfaPureo s.r.o.
-NO_SUBJECT	37922467	Stredná priemyselná škola stavebná Emila Belluša, Staničná 4, Trenčín
-NO_SUBJECT	47674652	Vodovody a kanalizace Vsetín,a.s.
-NO_SUBJECT	17335949	Psychiatrická liečebňa Samuela Bluma v Plešivci
-NO_PATTERN	35760419	Asseco Central Europe, a. s.
-NO_SUBJECT	42218161	Kala Dance Studio
-NO_PATTERN	36056006	Stredoslovenská vodárenská spoločnosť, a.s.
-NO_PATTERN	50082001	Človek v ohrození, n. o.
-NO_PATTERN	00179124	Rímskokatolícka cirkev Biskupstvo Spišské Podhradie
-NO_PATTERN	00587141	Kongregácia sestier dominikánok bl. Imeldy
-NO_SUBJECT	00842753	Gymnázium Hladnov a Jazyková škola s právem státní jazykové zkoušky
-NO_PATTERN	00151564	DataCentrum
-NO_SUBJECT	00285242	Obec Ratíškovice
-NO_PATTERN	51110369	Integrovaná doprava Žilinského kraja, s.r.o.
-NO_SUBJECT	00151491	Kancelária Národnej rady Slovenskej republiky
-NO_PATTERN	36078913	Univerzita sv. Cyrila a Metoda v Trnave vysoká škola
-NO_SUBJECT	50834207	SILVERGON s. r. o.
-NO_SUBJECT	36846104	BACKBONE, s.r.o.
-NO_PATTERN	00681385	Výskumný ústav detskej psychológie a patopsychológie
-NO_SUBJECT	56695021	AMBIENTE Slovakia
-NO_SUBJECT	45734348	Inovačné partnerské centrum, Prešov
-NO_PATTERN	00157716	Univerzita Konštantína Filozofa v Nitre
-NO_SUBJECT	45744688	Centrum včasnej intervencie Bratislava, n.o.
-NO_PATTERN	47387289	MB Dunajská Streda s.r.o.
-NO_PATTERN	31118259	Trenčianska univerzita Alexandra Dubčeka v Trenčíne
-NO_PATTERN	37801279	Katolícka univerzita v Ružomberku
-NO_PATTERN	00397440	Technická univerzita vo Zvolene
-NO_PATTERN	00606758	Stredná zdravotnícka škola
-NO_SUBJECT	56466277	Súkromné centrum poradenstva a prevencie, Kpt. Nálepku 19, Košice
-NO_SUBJECT	37880292	Centrum poradenstva a prevencie, Mučeníkov 1246/4, Kežmarok
-NO_SUBJECT	37950975	Základná škola s materskou školou s vyučovacím jazykom maďarským - Alapiskola és Óvoda, Dúžavská cesta 1054/11, Rimavská Sobota
-NO_SUBJECT	47250119	BPS HORNÝ JATOV, s. r. o.
-NO_SUBJECT	31333389	LADCE Betón, s.r.o.
-NO_PATTERN	46833323	Saneca Pharmaceuticals a. s.
-NO_SUBJECT	00416223	Slovenský Červený kríž, územný spolok Poprad
-NO_SUBJECT	00416070	Slovenský Červený kríž, územný spolok Liptovský Mikuláš
-NO_SUBJECT	00291234	Obec Pitín
-NO_SUBJECT	31105513	DIPEX spol. s r. o.
-NO_SUBJECT	34057871	Spoločnosť buddhizmu Diamantovej cesty - Karma Kagjü, o.z.
-NO_PATTERN	36532088	EUROSVIT, s.r.o.
-NO_SUBJECT	31574645	ITECO, spol. s r.o.
-NO_PATTERN	45329818	Biomedical Engineering, s.r.o.
-NO_SUBJECT	36080781	Špecializované centrum poradenstva a prevencie pre deti a žiakov s viacnásobným postihnutím, Čajkovského 55, Trnava
-NO_SUBJECT	56103158	Súkromné špecializované centrum poradenstva a prevencie pre deti do siedmeho roku veku, Dukelských hrdinov 199/3, Moldava nad Bodvou
-NO_SUBJECT	55380174	Služby občanom mesta Levice, s. r. o., r. s. p. (SOM Levice)
-NO_SUBJECT	53779517	Súkromná hotelová akadémia, Drieňová 12, Banská Štiavnica
-NO_SUBJECT	42404843	Klikk, o.z.
-NO_PATTERN	52317129	OZ Pre lepšiu spoločnosť
-NO_PATTERN	42000726	UNI KREDIT, n.o.
-NO_PATTERN	31435076	GASTRO - HAAL, s.r.o.
-NO_SUBJECT	31768679	Medzinárodná organizácia pre migráciu (IOM)
-NO_SUBJECT	35700629	Slovgen s.r.o.
-NO_SUBJECT	00735779	Akadémia Policajného zboru v Bratislave
-NO_PATTERN	00161756	Stredná priemyselná škola elektrotechnická, Komenského 44, Košice
-NO_PATTERN	00166481	Generálna prokuratúra SR
-NO_SUBJECT	54214823	Ostrov pomoci
-NO_SUBJECT	53638549	Spojená škola, Gyulu Szabóa 21, Dunajská Streda
-NO_SUBJECT	51055490	Sociálni inovátori, družstvo
-NO_SUBJECT	00101451	Zoo Brno a stanice zájmových činností, příspěvková organizace
-NO_PATTERN	36672076	Považská vodárenská spoločnosť, a.s.
-NO_PATTERN	36537608	BAMIPA, s.r.o.
-NO_PATTERN	42116201	MARTINO - Inštitút rozvoja spoločnosti
-NO_SUBJECT	45744327	Linka detskej istoty, n. o.
-NO_PATTERN	52324940	Metropolitný inštitút Bratislavy
-NO_PATTERN	36068781	Proti prúdu
-NO_PATTERN	42194954	Centrum pre ľudské práva KLINGER
-NO_SUBJECT	00416011	Slovenský Červený kríž, územný spolok Topoľčany
-NO_SUBJECT	51937425	Saturnalia, o. z.
-NO_PATTERN	51253208	Saturnia Nova
-NO_SUBJECT	50827332	Black and white
-NO_PATTERN	45738700	Podnik medzitrhu práce, n.o., r.s.p.
-NO_PATTERN	42432430	OZ "Partnerstvo pre MAS Dolný Liptov"
-NO_SUBJECT	55943080	Impulsio o. z.
-NO_SUBJECT	36117102	"Fórum pre pomoc starším" - národná sieť
-NO_PATTERN	35514388	Gréckokatolícka charita Prešov
-NO_SUBJECT	50764624	Aurum residences, o.z.
-NO_SUBJECT	68898665	Zdravý Rožnov, z. s.
-NO_SUBJECT	36110744	Základná škola Endre Adyho s vyučovacím jazykom maďarským - Ady Endre Alapiskola, Adyho 9, Štúrovo
-NO_SUBJECT	46817794	TRISOMYtest, s. r. o.
-NO_SUBJECT	55833560	Acta et Ars
-NO_PATTERN	37927353	EDU
-NO_SUBJECT	54239931	Sociálny podnik Oravský Podzámok s.r.o.
-NO_PATTERN	50073893	Duálna akadémia,z.z.p.o.
-NO_SUBJECT	36145114	Slovenské múzeum ochrany prírody a jaskyniarstva
-NO_SUBJECT	56137184	CKC n.o.
-NO_SUBJECT	00416045	Slovenský Červený kríž, územný spolok Banská Bystrica
-NO_SUBJECT	36724530	MH Invest, s.r.o.
-AMBIG_NUTS	37813455	Základná škola, Kvačany 227	nuts_id=1226	name=Kvačany
-NO_SUBJECT	56126468	Siedma hora
-NO_PATTERN	35701501	CHEZAR, spol. s r.o.
-NO_SUBJECT	30854105	Republiková únia zamestnávateľov
-NO_PATTERN	30794323	Pôdohospodárska platobná agentúra
-NO_SUBJECT	55969984	BUSINESS KOŠICE, n.o.
-NO_PATTERN	30796482	Úrad pre dohľad nad zdravotnou starostlivosťou
-NO_PATTERN	00584614	Združenie miest a obcí Slovenska
-NO_SUBJECT	50645358	Pre krajší život, n.o.
-NO_PATTERN	17336210	Záchranná zdravotná služba Bratislava
-NO_SUBJECT	55965504	DSS AMARANT o.z.
-NO_PATTERN	53568290	NATURA VIA, občianske združenie
-NO_PATTERN	37961632	UNIVERZITA J. SELYEHO
-NO_SUBJECT	35537663	Spoločnosť priateľov detí - Li(e)nka
-NO_SUBJECT	50617397	Viva la Vida
-NO_PATTERN	31751245	ETP Slovensko - Centrum pre udržateľný rozvoj
-NO_SUBJECT	53579372	Paragrafium
-NO_SUBJECT	45784949	Krok k ľuďom o.z.
-NO_SUBJECT	52979466	Zväz na podporu športu
-NO_SUBJECT	00158496	Stredná odborná škola hotelových služieb a obchodu
-NO_SUBJECT	51740877	Naše Progresio
-NO_PATTERN	00156850	Výskumný ústav vodného hospodárstva
-NO_PATTERN	52820254	Združenie obcí - Kráľová pri Senci – Kostolná pri Dunaji - Hrubá Borša
-NO_SUBJECT	56099207	OZ RENEXA
-NO_PATTERN	35602406	Diecézna charita Nitra
-NO_PATTERN	37905805	MIKROREGIÓN BYSTRICKÁ DOLINA
-NO_PATTERN	35581697	Oáza - nádej pre nový život, n. o. Oasis of Hope for new life, non for profit organisation
-NO_SUBJECT	37925211	ESI - Environmentálna a sociálna iniciatíva
-NO_SUBJECT	36024929	K W D s.r.o.
-NO_SUBJECT	56057491	OZ TAJGETA
-NO_PATTERN	35766450	Medirex s. r. o.
-NO_PATTERN	00398144	Centrum spoločných činností Slovenskej akadémie vied
-AMBIG_NUTS	45659168	Sdružení měst a obcí Východní Moravy	nuts_id=119694	name=Zlín
-NO_SUBJECT	42071399	Cirkevná spojená škola
-NO_SUBJECT	53751965	PATRIUS o.z.
-NO_SUBJECT	36064505	ARGUMENT
-NO_PATTERN	30786525	Liga za duševné zdravie Slovenskej republiky
-NO_SUBJECT	37948601	Social Connect
-NO_PATTERN	45740143	A m a n t e, n. o.
-NO_SUBJECT	55844154	Spoločne pre pomoc, o.z.
-NO_SUBJECT	30847940	Centrum poradenstva a prevencie, Vajnorská 10595/98/D, Bratislava
-NO_SUBJECT	55712533	SwitchOn
-NO_SUBJECT	42386721	Združenie Martinských rómov - Romale progress
-NO_SUBJECT	55143881	ReFresh 7G
-NO_SUBJECT	55849156	Dokážeš TO, o.z.
-NO_PATTERN	51656957	Cesta von
-NO_SUBJECT	55845096	SZOFA, o.z.
-NO_SUBJECT	37983415	Modrý anjel / tím krízovej intervencie n. o.
-NO_SUBJECT	55846408	OZ Magnus Global
-NO_PATTERN	00161772	Stredná priemyselná škola strojnícka, Komenského 2, Košice
-NO_PATTERN	00490750	Ústav materiálov a mechaniky strojov Slovenskej akadémie vied, verejná výskumná inštitúcia
-NO_PATTERN	42004446	CENTRUM POMOCI MARGARÉTKA
-NO_PATTERN	50157370	RUBBER 24, s.r.o.
-NO_SUBJECT	51425815	3V - VEDOMOSTI, VZDELANIE, VÝVOJ
-NO_SUBJECT	50015273	ROMA STRÁNSKA
-NO_SUBJECT	00493031	Centrum poradenstva a prevencie, Letná 44, Rožňava
-NO_PATTERN	36249840	ARRIVA Trnava, a.s.
-NO_SUBJECT	55849181	Pomáhať ĽUĎOM, o.z.
-NO_SUBJECT	36005622	Hornonitrianske bane Prievidza, a.s. v skratke HBP, a.s.
-NO_SUBJECT	55844693	PROSPERITUS, o.z.
-NO_SUBJECT	55845169	POMOC ZA POMOC, o.z.
-NO_PATTERN	00161829	Stredná priemyselná škola elektrotechnická, Plzenská 1, Prešov
-NO_SUBJECT	36168475	EKOS, spol. s r.o. Stará Ľubovňa
-NO_SUBJECT	00324612	Obec Perín-Chym
-NO_PATTERN	42185971	OZ Vagus
-NO_PATTERN	00166812	Ústav experimentálnej fyziky Slovenskej akadémie vied, verejná výskumná inštitúcia
-NO_SUBJECT	17060265	Základná škola sv. Dominika Savia, M. M. Hodžu 1732/9, Zvolen
-NO_SUBJECT	55754694	Inštitút pre podporu vzdelávania
-NO_PATTERN	50309587	SISA - sociálna intervencia, sociálne aktivity n.o.
-NO_SUBJECT	36057029	Technické služby Detva s.r.o.
-NO_PATTERN	00164330	Centrum poradenstva a prevencie, Karpatská 8, Košice
-NO_SUBJECT	42169861	EQUITA
-NO_SUBJECT	48232980	Slnečný vrch, s.r.o.
-NO_PATTERN	42217202	VIAC - Inštitút pre podporu a rozvoj mládeže
-NO_SUBJECT	36323951	COMTEC s. r. o.
-NO_SUBJECT	35917571	BIONT, a.s.
-NO_SUBJECT	37977466	Stimulus
-NO_SUBJECT	42036780	Občianske Združenie JEDNA Z NÁS
-NO_PATTERN	35980788	Návrat-RDZO
-NO_SUBJECT	56322089	Platforma potravinovej pomoci Slovensko
-NO_SUBJECT	52974081	Komunita nádeje, o.z.
-NO_PATTERN	31718914	Technické služby mesta Prešov, a.s.
-NO_PATTERN	35514221	Spišská katolícka charita
-NO_SUBJECT	48436615	MARTINIUS
-NO_PATTERN	00166634	Ústav molekulárnej biológie Slovenskej akadémie vied, verejná výskumná inštitúcia
-NO_SUBJECT	42106729	Súkromné špecializované centrum poradenstva a prevencie pre deti do siedmeho roku veku, Komenského 3, Košice
-NO_SUBJECT	53388089	Fortis Posterum
-NO_PATTERN	53572106	OBJAVME NÁŠ KRAJ, občianske združenie
-NO_SUBJECT	44006918	GRAFOBAL GROUP GOLF RESORT SKALICA a.s.
-NO_PATTERN	45740968	Vaša charita, n.o.
-NO_PATTERN	52700569	Agentúra práce Banskobystrického samosprávneho kraja, n.o.
-NO_PATTERN	45782296	Pre človeka
-NO_PATTERN	56398255	Slovenská televízia a rozhlas
-NO_PATTERN	36077941	MONTARRY n. o.
-NO_SUBJECT	37831305	Základná škola, Kriváň 435
-AMBIG_NUTS	00323802	Obec Závadka	nuts_id=2252	name=Závadka
-NO_SUBJECT	56689527	GEMERIAN
-NO_SUBJECT	00416088	Slovenský Červený kríž, územný spolok Lučenec
-NO_SUBJECT	00416126	Slovenský Červený kríž, územný spolok Rimavská Sobota
-NO_SUBJECT	55703607	KAMBEK
-NO_PATTERN	37896016	LAVUTA
-NO_SUBJECT	00079171	Centrum poradenstva a prevencie, Slovenskej jednoty 29, Košice
-NO_SUBJECT	42006899	Pomoc vidieku - záujmové združenie občanov
-NO_PATTERN	51410745	NÁŠ DOMOV n.o.
-NO_SUBJECT	00183067	Mestské služby, kultúra a šport Brezno
-NO_SUBJECT	37873377	Základná škola, Sídlisko II. 1336, Vranov nad Topľou
-NO_PATTERN	50433946	Nemocnica AGEL Zlaté Moravce a.s.
-NO_PATTERN	36594849	Nemocnica AGEL Levoča a.s.
-NO_PATTERN	31804713	Občianske združenie Brána do života
-NO_SUBJECT	42197554	posunky.online
-NO_SUBJECT	45013870	ZDRUŽENIE OBCÍ - MIKROREGIÓN ŠAŠTÍNSKO
-NO_SUBJECT	00161942	Obchodná akadémia, Bolečkova 2, Nitra
-NO_SUBJECT	42004896	Súkromné centrum poradenstva a prevencie, Ulica P. Rádayho 1857/2, Lučenec
-NO_PATTERN	51221144	IVCM Informačné a vzdelávacie centrum mladých
-NO_SUBJECT	36076996	Domovské vzdelávacie centrum n.o.
-NO_SUBJECT	55486665	ROZHLASOVÉ A TELEVÍZNE ŠTÚDIÁ PREŠOV, o.z.
-NO_PATTERN	35514027	Arcidiecézna charita Košice
-NO_PATTERN	52257622	EDI Slovensko
-NO_SUBJECT	00802751	Vojenský historický ústav
-NO_PATTERN	00416185	Slovenský Červený kríž, územný spolok Humenné
-NO_SUBJECT	55845151	POMOC K VZDELÁVANIU, o.z.
-NO_SUBJECT	55936679	Občianske združenie Secura Vita
-NO_PATTERN	50607740	Úsmev pre druhých
-AMBIG_NUTS	00329053	Obec Dúbrava	nuts_id=2321	name=Dúbrava
-NO_SUBJECT	35570512	Centrum poradenstva a prevencie, Letná 66, Spišská Nová Ves
-NO_PATTERN	35602619	Trnavská arcidiecézna charita
-NO_PATTERN	50334981	nezisková organizácia Projekt DOM.ov
-NO_SUBJECT	55519504	Donote
-NO_SUBJECT	55968368	Tropolis
-NO_SUBJECT	37925547	Súkromné špecializované centrum poradenstva a prevencie pre deti a žiakov s autizmom alebo ďalšími pervazívnymi vývinovými poruchami, Galandova 7, Bratislava
-AMBIG_NUTS	00283819	Město Brumov-Bylnice	nuts_id=119698	name=Brumov-Bylnice
-NO_SUBJECT	56442181	OZ OČAMI ĽUDÍ
-NO_PATTERN	53104056	TITAN Slovakia, o. z.
-NO_PATTERN	00738361	Ústav na výkon trestu odňatia slobody pre mladistvých
-NO_PATTERN	36672441	Liptovská vodárenská spoločnosť, a.s.
-NO_PATTERN	00416266	Slovenský Červený kríž, územný spolok Svidník
-NO_SUBJECT	55609210	Spojená škola Samuela Mikovíniho, Akademická 13, Banská Štiavnica
-NO_PATTERN	52972178	Dorka Bags, n. o.
-NO_PATTERN	00521663	Stredná priemyselná škola technická, Hviezdoslavova 6, Spišská Nová Ves
-NO_SUBJECT	42234891	Verejnoprospešné služby Mesta Kežmarok
-NO_PATTERN	31797903	Úrad pre verejné obstarávanie
-NO_PATTERN	31745661	Slovenský paralympijský výbor
-NO_PATTERN	30808901	Mestské lesy v Bratislave
-NO_SUBJECT	35758015	GOIMPEX BRATISLAVA, a.s.
-NO_SUBJECT	53384831	Bubamara
-NO_SUBJECT	50692925	EDUAWEN EUROPE s.r.o.
-NO_PATTERN	53770048	PALIS & comp.
-NO_PATTERN	44984251	R-DAS, s. r. o.
-NO_SUBJECT	55188931	Spoločne 8
-NO_SUBJECT	55714846	Eferent
-NO_SUBJECT	42419051	Spoločný sen
-NO_SUBJECT	54147336	Koľko Lásky o.z.
-NO_PATTERN	45731454	Spoločne za zdravím, n.o.
-NO_PATTERN	45746940	Bánovská regionálna rozvojová agentúra
-NO_PATTERN	17316537	Spoločnosť priateľov detí z detských domovov Úsmev ako dar
-NO_SUBJECT	47881305	MBCD s.r.o.
-NO_SUBJECT	37948890	Centrum poradenstva a prevencie, Hviezdoslavova 441/10, Rimavská Sobota
-NO_PATTERN	17055555	Ústav informatiky Slovenskej akadémie vied
-NO_SUBJECT	00283924	statutární město Zlín
-NO_SUBJECT	31436200	Nitrianske komunálne služby, s.r.o.
-NO_SUBJECT	54080576	Inovačné centrum Košického kraja Košice Region Innovation Center
-NO_SUBJECT	50098829	EDUMA, n.o.
-NO_SUBJECT	54838215	SAGAPE
-NO_SUBJECT	35841893	IMMOBAU s.r.o.
-NO_PATTERN	52365808	JEDEN RODIČ, n.o.
-NO_PATTERN	42289645	Občianske združenie Pro Bono
-NO_SUBJECT	51237351	Vedieme
-NO_SUBJECT	48773514	Charita Nový Hrozenkov
-NO_SUBJECT	42043751	Súkromné centrum poradenstva a prevencie, Ul. J. Hollého 558/1, Levice
-NO_SUBJECT	42083923	Súkromné centrum poradenstva a prevencie, Budovateľská 1992/9, Snina
-NO_PATTERN	31788734	Občianske združenie Odyseus
-NO_PATTERN	00163988	Technické služby, príspevková organizácia mesta
-NO_PATTERN	45741875	Silver care, n. o.
-NO_SUBJECT	51167786	HEPTA s.r.o.
-NO_SUBJECT	42017998	Súkromné centrum poradenstva a prevencie, Obrancov mieru 354/32, Dubnica nad Váhom
-NO_SUBJECT	55119301	Súkromné špecializované centrum poradenstva a prevencie pre deti a žiakov s autizmom alebo ďalšími pervazívnymi vývinovými poruchami, 13. januára 716/23, Poltár
-NO_SUBJECT	35749245	FREE ZONE SIPOX, a.s.
-NO_SUBJECT	55122043	Centrum poradenstva a prevencie, Komárňanská 177, Hurbanovo
-NO_SUBJECT	42150311	Centrum poradenstva a prevencie, Februárová 153/3, Partizánske
-NO_SUBJECT	30796687	Centrum poradenstva a prevencie, Nevädzová 534/7, Bratislava
-NO_PATTERN	45736359	DataCentrum elektronizácie územnej samosprávy Slovenska
-NO_SUBJECT	36210137	GEOTERM KOŠICE, a.s.
-NO_PATTERN	31094970	Akadémia umení v Banskej Bystrici
-NO_SUBJECT	00607274	Psychiatrická nemocnica Veľké Zálužie
-NO_SUBJECT	54264405	InoVia
-NO_SUBJECT	37890115	Stredná odborná škola hotelových služieb a obchodu
-NO_SUBJECT	55714897	ANO 31
-NO_SUBJECT	42194865	World Academy
-NO_SUBJECT	52433897	SVDM s. r. o.
-NO_SUBJECT	00351997	Stredná odborná škola podnikania v remeslách a službách, V. Paulínyho Tótha 31/5, Senica
-NO_PATTERN	00397474	Univerzita veterinárskeho lekárstva a farmácie v Košiciach
-NO_SUBJECT	51843846	Súkromné centrum poradenstva a prevencie, Farská 84/5, Ilava
-NO_SUBJECT	37998676	Súkromná stredná odborná škola, Železničná 2, Revúca
-NO_SUBJECT	56549725	Step by Step n.o.
-NO_PATTERN	36582433	Železničné zdravotníctvo Košice, s.r.o.
-NO_SUBJECT	53495284	KONAVI
-NO_PATTERN	00165271	Národný ústav reumatických chorôb
-NO_SUBJECT	42260043	Prosenior
-NO_PATTERN	37923617	SPOKOJNOSŤ - centrum sociálnych služieb, n.o.
-NO_SUBJECT	30804850	ADRA - Adventistická agentúra pre pomoc a rozvoj - Občianske združenie
-NO_SUBJECT	00098639	Hvězdárna Valašské Meziříčí, p. o.
-NO_SUBJECT	52308537	Občianske združenie SaUvedom
-NO_SUBJECT	50320696	HANS
-NO_PATTERN	37995545	Iniciatíva Inakosť
-NO_PATTERN	37923251	PE-ES, n.o.
-NO_SUBJECT	10876766	Janúšovja, z.s.
-NO_SUBJECT	31748333	Neuroimunologický ústav Slovenskej akadémie vied
-NO_SUBJECT	55115055	Špecializované centrum poradenstva a prevencie pre deti a žiakov so zrakovým postihnutím, Námestie Štefana Kluberta 2, Levoča
-NO_SUBJECT	53638581	Stredná odborná škola regionálneho rozvoja a Stredná odborná škola záhradnícka, Rakovice 25, Rakovice
-NO_PATTERN	36312941	TSM Dubnica nad Váhom, s.r.o., r.s.p.
-NO_PATTERN	36054666	Slovenská autobusová doprava Zvolen, akciová spoločnosť
-NO_PATTERN	36069744	Mládež ulice
-NO_PATTERN	36324043	SAD Prievidza a.s.
-NO_PATTERN	36120804	EUROREGIÓN BÍLÉ-BIELE KARPATY
-NO_SUBJECT	71217860	Základní škola JUDr. Josefa Mareše a Mateřská škola, Znojmo, Klášterní 2 příspěvková organizace
-NO_SUBJECT	52787494	Energy for Business s. r. o.
-NO_SUBJECT	53453948	Mael consulting s. r. o.
-NO_SUBJECT	53452275	SYLVIO s. r. o.
-NO_SUBJECT	54635560	VO-DOJEM o.z.
-NO_SUBJECT	37828541	Základná škola Jozefa Dekreta Matejovie, Jánošovka, Školská 511/2, Čierny Balog
-NO_PATTERN	30810710	Úrad pre normalizáciu, metrológiu a skúšobníctvo Slovenskej republiky
-NO_SUBJECT	53046587	Obecný podnik Rohožník s.r.o.
-NO_PATTERN	31305784	SLUŽBA, mestský podnik Stropkov
-NO_SUBJECT	35547031	Súkromná stredná odborná škola ekonomická KOŠICKÁ AKADÉMIA, Tajovského 15, Košice
-NO_SUBJECT	30814081	Daphne - Inštitút aplikovanej ekológie
-NO_SUBJECT	50787136	Trnavské umenovedné centrum
-NO_SUBJECT	03798798	Základní škola ZaHRAda
-AMBIG_NUTS	68081766	Ústav biologie obratlovců AV ČR, v.v.i.	nuts_id=118693	name=Brno
-AMBIG_NUTS	75068478	Obce pro Baťův kanál	nuts_id=118893	name=Hodonín
-NO_SUBJECT	54903360	AZ-Lines s. r. o.
-NO_SUBJECT	36479560	Slovenská autobusová doprava Poprad, akciová spoločnosť
-NO_PATTERN	00185213	Technické služby, mestský podnik Banská Štiavnica
-NO_SUBJECT	30812682	Rada pre poradenstvo v sociálnej práci
-NO_SUBJECT	00186155	Technické služby mesta Humenné
-NO_PATTERN	36064220	Úrad na ochranu osobných údajov Slovenskej republiky
-NO_PATTERN	30232295	Univerzita Mateja Bela v Banskej Bystrici
-NO_PATTERN	31771815	BROZ - ochranárske združenie
-NO_SUBJECT	13644289	Střední škola polytechnická, Havířov-Šumbark, příspěvková organizace
-NO_PATTERN	00358011	Národná zoologická záhrada Bojnice
-NO_SUBJECT	36291081	SLOVUNIT SLIAČSKA 1D s. r. o.
-NO_PATTERN	35776455	Novplasta, s.r.o.
-NO_SUBJECT	00304387	Město Valašské Meziříčí
-NO_SUBJECT	00179744	Múzeum mesta Bratislavy
-NO_SUBJECT	53538773	Verejnoprospešné služby Stará Ľubovňa, s. r. o.
-NO_PATTERN	42169666	Spoločnosť komunitných centier
-NO_SUBJECT	31643884	Autobusová doprava Púchov, a.s.
-NO_SUBJECT	00117641	Okresní výbor Českého svazu ochránců přírody Vsetín
-NO_SUBJECT	00291480	Město Uherský Ostroh
-NO_SUBJECT	36137952	Združenie TKO Semeteš n.o.
-NO_PATTERN	31915698	Združenie obcí stredného Liptova EKOLÓG
-NO_PATTERN	42355818	Úrad pre reguláciu elektronických komunikácií a poštových sl
-NO_PATTERN	00166197	Štatistický úrad Slovenskej republiky
-NO_SUBJECT	01428926	Centrum podpory transformace, o.p.s.
-NO_PATTERN	50668277	Kancelária Najvyššieho súdu Slovenskej republiky
-NO_SUBJECT	46941037	Trstenské technické služby - T T S, s.r.o
-NO_SUBJECT	43380107	Základní škola a Mateřská škola Nedvědice, okres Brno-venkov, příspěvková organizace
-NO_SUBJECT	35606347	Mestská poliklinika
-NO_SUBJECT	31753485	Centrum pre deti a rodiny Bratislava - Röntgenova
-NO_SUBJECT	42412943	Slovenská aliancia pre inovatívnu ekonomiku
-NO_SUBJECT	36273074	Mestská poliklinika Senica, a.s.
-NO_SUBJECT	30798868	Úrad pre Slovákov žijúcich v zahraničí
-NO_SUBJECT	42175682	Slovenská poľovnícka komora
-NO_SUBJECT	42378541	CPR Trenčín
-NO_PATTERN	31947000	Kancelária Ústavného súdu Slovenskej republiky
-NO_PATTERN	30845301	Slovak Business Agency
-NO_PATTERN	31622780	CMK, s.r.o.
-NO_SUBJECT	60555980	Vzdělávací institut pro Moravu, zařízení pro další vzdělávání pedagogických pracovníků a středisko služeb školám, příspěvková organizace
-NO_PATTERN	37937278	Združenie obcí EKOTORYSA
-NO_PATTERN	36061701	Národný bezpečnostný úrad
-NO_SUBJECT	00160555	Gymnázium, Štefánikova 219/4, Bytča
-NO_PATTERN	36054259	Slovenská autobusová doprava Lučenec, akciová spoločnosť
-NO_PATTERN	44299311	Mestský podnik služieb Žarnovica s.r.o.
-NO_SUBJECT	52534260	New System s. r. o.
-NO_SUBJECT	00188433	Technické služby mesta Trebišov
-NO_PATTERN	00681300	Odvoz a likvidácia odpadu a.s. v skratke: OLO a.s.
-AMBIG_NUTS	00283631	Obec Tvrdonice	nuts_id=118880	name=Tvrdonice
-NO_SUBJECT	36105945	"Združenie obcí Most priateľstva - Hídverő Társulás"
-NO_SUBJECT	36370967	PREFA ALFA, a.s.
-NO_PATTERN	36339865	Nemocnica AGEL Handlová s.r.o.
-NO_PATTERN	36348015	Nemocnica AGEL Bánovce s.r.o.
-NO_PATTERN	37905783	Rozvojová agentúra Žilinského samosprávneho kraja, n.o.
-NO_SUBJECT	34056149	Krajské centrum voľného času, Pod Sokolice 14, Trenčín
-NO_SUBJECT	36693154	DB Properties s. r. o.
-NO_PATTERN	36601284	Východoslovenský ústav srdcových a cievnych chorôb, a.s.
-NO_PATTERN	50073869	Biomedicínske centrum Slovenskej akadémie vied
-NO_PATTERN	52648192	InoBat Auto j.s.a.
-NO_SUBJECT	62331540	Gymnázium a Obchodní akademie, Orlová, příspěvková organizace
-NO_SUBJECT	42066387	DOBRÝ PASTIER - KLÁŠTOR POD ZNIEVOM, o.z.
-NO_PATTERN	42298296	Združenie obcí Veselé ČOV
-NO_PATTERN	50086821	Úrad vládneho auditu
-NO_SUBJECT	51665263	Fitlife
-NO_PATTERN	50634721	EU Poultry s.r.o.
-NO_SUBJECT	36183181	LABAŠ s.r.o.
-NO_SUBJECT	36588181	DZS - M.K.TRANS, s.r.o.
-NO_SUBJECT	46936653	Ai-energy s.r.o.
-NO_SUBJECT	35829052	Slovenské elektrárne, a.s.
-NO_SUBJECT	36286192	NAFTA a.s.
+NO_RPO	54435323	Správa Pieninského národného parku so sídlom v Spišskej Starej Vsi	€328,503
+NO_RPO	31797580	Asociácia pre kultúru, vzdelávanie a komunikáciu	€1,179,649
+NO_RPO	31753604	Štátny geologický ústav Dionýza Štúra	€32,353,014
+NO_RPO	50808389	Centrum včasnej intervencie Trenčín, n.o. Anglický názov: Early Childhood Intervention Center Trenčín, ngo	€296,693
+NO_RPO	54100453	calorie s.r.o.	€314,595
+NO_RPO	00003328	Slovenská správa ciest	€276,786,087
+NO_RPO	35570504	Centrum poradenstva a prevencie, Okružná 3657, Michalovce	€57,701
+NO_RPO	45744009	Centrum včasnej intervencie Žilina, n. o.	€446,682
+NO_RPO	30854687	Implementačná agentúra Ministerstva práce, sociálnych vecí a rodiny Slovenskej republiky	€136,634,960
+NO_RPO	30847451	Inštitút pre výskum práce a rodiny	€20,297,496
+NO_RPO	00606731	Záchranná služba Košice	€299,301
+NO_RPO	00397563	Žilinská univerzita v Žiline	€24,849,628
+NO_RPO	30794536	Ústredie práce, sociálnych vecí a rodiny	€673,270,731
+NO_RPO	35838949	HORNBACH - Baumarkt SK spol. s r.o.	€627,577
+NO_RPO	35593008	Rímskokatolícka cirkev Biskupstvo Nitra	€3,365,150
+NO_RPO	37836501	Centrum poradenstva a prevencie, M.Sch. Trnavského 398/2, Trnava	€33,166
+NO_RPO	00602124	Střední průmyslová škola chemická akademika Heyrovského, Ostrava, p. o.	€131,314
+NO_RPO	36077658	Kľúč, n.o.	€299,880
+NO_RPO	42428998	Pokoj a dobro - pomoc núdznym	€676,328
+NO_RPO	50562771	Dieťa do dlaní	€171,512
+NO_RPO	50336754	Lakovňa R.D.G. s.r.o.	€3,760,972
+NO_RPO	35876557	Mobis Slovakia s.r.o.	€73,714,000
+NO_RPO	35755598	Pressburg Mint – Bratislavská mincovňa s. r. o.	€6,032,356
+NO_RPO	37901273	Centrum poradenstva a prevencie, Komenského 2740, Kysucké Nové Mesto	€99,692
+NO_RPO	00002801	Slovenská inovačná a energetická agentúra	€267,907,458
+NO_RPO	52565301	Inklucentrum - Centrum inkluzívneho vzdelávania	€308,000
+NO_RPO	35919001	Národná diaľničná spoločnosť, a.s.	€1,084,884,952
+NO_RPO	52828123	Digitálna koalícia	€50,773,061
+NO_RPO	36111601	EFFETA - stredisko sv. Františka Saleského	€277,802
+NO_RPO	50189786	ALTERNATÍVA - Centrum nezávislého života, n.o.	€424,017
+NO_RPO	17070775	Prešovská univerzita v Prešove	€13,368,790
+NO_RPO	46409114	evergreen recycling, s.r.o.	€107,782
+NO_RPO	56763531	Farma u Felixov s. r. o.	€1,557,090
+NO_RPO	37954130	IN Network Slovakia, n.o.	€527,620
+NO_RPO	31688233	BETÓN - SPIŠ, s.r.o., Spišská Nová Ves	€1,496,980
+NO_RPO	36378241	RP HUJO spol. s r.o.	€327,289
+NO_RPO	45782814	DRUHÁ STRANA MINCE	€541,295
+NO_RPO	52411133	myJUMP.sk	€357,941
+NO_RPO	35767308	KORD SIPOX a.s.	€3,179,975
+NO_RPO	52009424	BIATHLON Slovakia, s.r.o.	€585,112
+NO_RPO	31966314	Rímskokatolícka cirkev, farnosť Levoča	€1,484,973
+NO_RPO	30842654	Slovenská obchodná a priemyselná komora	€923,820
+NO_RPO	00151866	Ministerstvo vnútra Slovenskej republiky	€221,046,029
+NO_RPO	36485250	Podtatranská vodárenská spoločnosť, a.s.	€35,087,861
+NO_RPO	45023085	MISERICORDIA n.o.	€680,147
+NO_RPO	53928008	Ideme vpred	€409,458
+NO_RPO	31870236	Združenie miest a obcí Žitného ostrova	€558,576
+NO_RPO	00397687	Slovenská technická univerzita v Bratislave	€11,078,127
+NO_RPO	52429601	EDUKAS o.z.	€431,869
+NO_RPO	42136938	Human Point Slovakia	€707,347
+NO_RPO	52565114	Krajina čitateľov	€314,894
+NO_RPO	00893251	Stredná odborná škola technická	€3,285,173
+NO_RPO	00165565	Ministerstvo zdravotníctva Slovenskej republiky	€83,724,331
+NO_RPO	36570460	Východoslovenská vodárenská spoločnosť, a.s. Košice	€113,340,549
+NO_RPO	37977997	Ústav pamäti národa	€1,777,261
+NO_RPO	31380051	Výskumný ústav papiera a celulózy a.s.	€16,133,728
+NO_RPO	51035171	Ekonid	€119,689
+NO_RPO	53461304	Sociálne bývanie, n.o.	€312,649
+NO_RPO	31999859	Rímskokatolícka cirkev, farnosť Spišská Stará Ves	€267,293
+NO_RPO	17314852	Štátny inštitút odborného vzdelávania	€22,550,236
+NO_RPO	42007267	Občianske združenie smARTimEDU	€156,960
+NO_RPO	31825249	Trnavská univerzita v Trnave	€4,488,866
+NO_RPO	00216305	Vysoké učení technické v Brně	€395,331
+NO_RPO	42380537	DOTYKY	€452,276
+NO_RPO	17321450	exe, a.s.	€7,667,320
+NO_RPO	54435439	Správa Národného parku Muránska planina so sídlom v Revúcej	€1,955,580
+NO_RPO	37897985	Tretia vlna	€2,137,075
+NO_RPO	17316014	Slovenská humanitná rada	€4,122,858
+NO_RPO	17147000	Rímskokatolícka farnosť sv. Mikuláša, Prešov	€1,618,412
+NO_RPO	51075750	Súkromná základná umelecká škola, Františkánska 57/2, Trnava	€198,896
+NO_RPO	00690996	Mestská časť-Košická Nová Ves	€341,577
+NO_RPO	42278961	Židovská náboženská obec Trenčín	€0
+NO_RPO	00165361	Slovenská zdravotnícka univerzita v Bratislave	€717,022
+NO_RPO	36302724	Trenčianske vodárne a kanalizácie, a.s. skratka obchodného mena: TVK a.s. Trenčín	€3,030,000
+NO_RPO	42255015	TENENET o.z.	€1,269,879
+NO_RPO	42499500	Finančné riaditeľstvo Slovenskej republiky	€7,337,523
+NO_RPO	00397865	Univerzita Komenského v Bratislave	€53,469,892
+NO_RPO	31364501	Železnice Slovenskej republiky	€654,519,750
+NO_RPO	61989100	Vysoká škola báňská - Technická univerzita Ostrava	€800,988
+NO_RPO	53817664	Súkromné centrum poradenstva a prevencie BambiCentrum, Prostějovská 127A, Prešov	€35,990
+NO_RPO	31686303	ORIENS s.r.o.	€126,426
+NO_RPO	42414199	Mosty Integrácie	€871,593
+NO_RPO	52628345	MuGiC for ART and Watoto n.o.	€426,739
+NO_RPO	37986031	Sociálne centrum ANJEL, n.o.	€745,689
+NO_RPO	42101280	Femina Spiš	€825,752
+NO_RPO	42310920	Dracula MONACObet Gym o.z.	€603,858
+NO_RPO	55111777	Centrum poradenstva a prevencie, Slovenská 69/56, Gelnica	€20,272
+NO_RPO	30856523	Inštitút zamestnanosti	€499,110
+NO_RPO	37942492	Stredná odborná škola drevárska	€1,660,971
+NO_RPO	42160286	Centrum poradenstva a prevencie, Hodská 2352/62, Galanta	€30,874
+NO_RPO	00699021	Ministerstvo zahraničných vecí a európskych záležitostí Slovenskej republiky	€6,679,986
+NO_RPO	37924443	DEPAUL SLOVENSKO, nezisková organizácia	€1,503,907
+NO_RPO	42261791	IPčko	€1,533,606
+NO_RPO	30795141	Slovenská advokátska komora	€620,316
+NO_RPO	52577341	Všetci pre rodinu, n.o.	€1,222,803
+NO_RPO	36464503	STROJLAB, s.r.o.	€157,663
+NO_RPO	00287407	Obec Lechotice	€604,782
+NO_RPO	37887483	RELEVANT n.o.	€500,932
+NO_RPO	36436798	KTT - INVEST, a.s.	€524,902
+NO_RPO	00415995	Slovenský Červený kríž, územný spolok Nové Zámky	€828,174
+NO_RPO	50654896	NIE RAKOVINE	€315,338
+NO_RPO	42417686	HELP 4 PEOPLE o.z.	€253,111
+NO_RPO	00681156	Ministerstvo práce, sociálnych vecí a rodiny Slovenskej republiky	€287,856,572
+NO_RPO	36672084	Turčianska vodárenská spoločnosť, a.s.	€3,917,841
+NO_RPO	54906466	Good Vibes Software s.r.o.	€215,194
+NO_RPO	54072042	EFC plus o.z.	€0
+NO_RPO	53176910	Educat – vzdelávacie centrum, s. r. o.	€285,992
+NO_RPO	42178941	Spojená škola Svätej Rodiny, Gercenova 10, Bratislava	€3,371,814
+NO_RPO	36789097	CHYŽBET SK, s.r.o.	€1,810,005
+NO_RPO	42264120	ARS ARETE	€541,805
+NO_RPO	50349287	Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky	€132,650,772
+NO_RPO	36578380	DIAKOL STRÁŽSKE, s.r.o.	€918,383
+NO_RPO	42273404	Centrum poradenstva a prevencie, 5. apríla 792/14, Bánovce nad Bebravou	€23,295
+NO_RPO	36545317	ARRIVA Nové Zámky, akciová spoločnosť (v skratke: ARRIVA Nové Zámky, a.s.)	€4,063,008
+NO_RPO	36057185	IKE, spol.s.r.o.	€983,507
+NO_RPO	36091995	Združenie obcí Medzičilizia	€734,408
+NO_RPO	00891657	Súkromná stredná odborná škola automobilová Duálna akadémia, Jána Jonáša 5, Bratislava	€1,163,349
+NO_RPO	35539488	Gréckokatolícka eparchiálna charita Košice	€359,402
+NO_RPO	00101435	Technické muzeum v Brně	€1,118,289
+NO_RPO	00156884	Slovenský hydrometeorologický ústav	€48,924,873
+NO_RPO	00156582	Ústredný kontrolný a skúšobný ústav poľnohospodársky v Bratislave	€828,167
+NO_RPO	70888337	Jihomoravský kraj	€4,453,490
+NO_RPO	62156489	Mendelova univerzita v Brně	€1,986,037
+NO_RPO	42065895	Diecézna charita Žilina	€716,778
+NO_RPO	52509231	SAMEMA s. r. o.	€343,047
+NO_RPO	45472220	Liptovská potravinárska spoločnosť, s. r. o. skrátene LPS s. r. o.	€675,733
+NO_RPO	00523551	Centrum poradenstva a prevencie, Kpt. Nálepku 1057/18, Trebišov	€45,036
+NO_RPO	34899316	Slavka Gazdová - SG style Art	€170,520
+NO_RPO	00151513	Úrad vlády Slovenskej republiky	€131,546,250
+NO_RPO	70983950	Základní škola a mateřská škola Staré Město, okres Frýdek-Místek, příspěvková organizace	€151,464
+NO_RPO	52022072	Cirkevná základná škola s materskou školou sv. Juraja, Gorkého 55, Trebišov	€201,175
+NO_RPO	44186479	REALTECH TRADE s.r.o.	€0
+NO_RPO	35679361	Združenie obcí pre likvidáciu odpadu Poltár	€497,401
+NO_RPO	36550949	Západoslovenská vodárenská spoločnosť, a.s.	€91,575,371
+NO_RPO	35690623	SLOVGAS, s.r.o.	€451,029
+NO_RPO	54033420	Nová nádej, Centrum pre deti a rodiny	€720,490
+NO_RPO	19634269	Spolek pro veřejnou správu, z.s.	€510,233
+NO_RPO	42181810	Ministerstvo životného prostredia Slovenskej republiky	€222,400,797
+NO_RPO	00283061	Město Břeclav	€840,359
+NO_RPO	00397482	Slovenská poľnohospodárska univerzita v Nitre	€700,172
+NO_RPO	53290046	Kempelenov inštitút inteligentných technológií, v anglickom jazyku Kempelen Institute of Intelligent Technologies	€11,602,485
+NO_RPO	42413605	Združenie pre kariérové poradenstvo a rozvoj kariéry	€5,887,642
+NO_RPO	36518344	ANDKA s. r. o.	€0
+NO_RPO	31797857	Štátna školská inšpekcia	€10,255,270
+NO_RPO	52722449	INO-HUB Energy j.s.a.	€20,965,058
+NO_RPO	00216224	Masarykova univerzita	€1,008,479
+NO_RPO	56315309	Energetické družstvo Bratislava	€978,502
+NO_RPO	31678378	M-D-J, spol. s r.o.	€1,044,466
+NO_RPO	00164348	Národný inštitút vzdelávania a mládeže	€264,040,732
+NO_RPO	31995420	Karpatská nadácia	€293,423
+NO_RPO	36084344	PRO REGION n.o.	€1,033,369
+NO_RPO	54240255	EDURAMA o.z.	€748,974
+NO_RPO	42114985	Súkromná stredná odborná škola polytechnická DSA, Novozámocká 220,  Nitra	€2,499,691
+NO_RPO	00151742	Ministerstvo financií Slovenskej republiky	€39,921,797
+NO_RPO	31601413	VS - MONT, s.r.o.	€990,803
+NO_RPO	35790164	Kaufland Slovenská republika v.o.s.	€1,233,185
+NO_RPO	50040901	YouthWatch	€314,994
+NO_RPO	17055237	Súkromná stredná odborná škola DSA, Koniarekova 17, Trnava	€2,499,665
+NO_RPO	54256861	Sensible Biotechnologies s.r.o.	€13,590,314
+NO_RPO	36515582	FR-INVEST Hranična, s.r.o.	€821,110
+NO_RPO	35570547	Centrum poradenstva a prevencie, Zuzkin park 10, Košice	€99,761
+NO_RPO	00157805	Vysoká škola výtvarných umení v Bratislave	€691,926
+NO_RPO	36560669	ACROPOLIS SLOVAKIA, s.r.o.	€0
+NO_RPO	31997520	Východný dištrikt Evanjelickej cirkvi augsburského vyznania na Slovensku	€1,742,789
+NO_RPO	00151882	Centrum vedecko-technických informácií SR	€93,351,713
+NO_RPO	36022047	SLOVENSKÝ VODOHOSPODÁRSKY PODNIK, štátny podnik	€68,772,820
+NO_RPO	42337402	Národné poľnohospodárske a potravinárske centrum	€1,635,713
+NO_RPO	00164381	Ministerstvo školstva, výskumu, vývoja a mládeže Slovenskej republiky	€142,139,502
+NO_RPO	00399957	Ekonomická univerzita v Bratislave	€7,774,427
+NO_RPO	52028089	Optima Status	€629,400
+NO_RPO	50492152	PNP marketing s.r.o.	€972,423
+NO_RPO	53064909	Aliancia pre sociálnu ekonomiku na Slovensku	€6,602,543
+NO_RPO	55560172	LiMaR SocialComplet o.z.	€260,613
+NO_RPO	35562340	Inštitút nukleárnej a molekulárnej medicíny	€299,911
+NO_RPO	50288504	olivka s. r. o.	€947,205
+NO_RPO	35767014	SIPOX HOLDING a.s.	€620,868
+NO_RPO	42138515	Kolégium Antona Neuwirtha	€315,047
+NO_RPO	61989592	Univerzita Palackého v Olomouci	€937,434
+NO_RPO	55209491	Aliancia sektorových rád	€6,987,680
+NO_RPO	00596795	Centrum spoločenských a psychologických vied SAV, v. v. i.	€9,963,460
+NO_RPO	36096555	Centrum Slniečko, n.o. (v anglickom jazyku The Sun Center)	€652,074
+NO_RPO	52659917	Impact Games	€189,909
+NO_RPO	35971703	BTS Cargo & Hangar Services, a.s.	€681,939
+NO_RPO	36252484	Trnavská vodárenská spoločnosť, a.s. (skrátený názov: TAVOS, a.s.)	€3,809,510
+NO_RPO	36138517	Slovenská národná knižnica	€272,658
+NO_RPO	42124697	ŠŤASTNÝ ÚSMEV	€445,936
+NO_RPO	00397768	Univerzita Pavla Jozefa Šafárika v Košiciach	€13,994,186
+NO_RPO	00027383	Česká televize	€1,157,796
+NO_RPO	00686832	Ministerstvo hospodárstva Slovenskej republiky	€24,126,717
+NO_RPO	53726987	Nadácia PRONEA	€285,296
+NO_RPO	47624051	FREQUENTIS Solutions & Services s. r. o.	€4,144,273
+NO_RPO	53091124	ŽenaVIE	€2,114,628
+NO_RPO	47221721	HOTEL MAMAS a.s.	€205,096
+NO_RPO	36038351	LESY Slovenskej republiky, štátny podnik	€1,551,817
+NO_RPO	00397431	Vysoká škola múzických umení v Bratislave	€299,874
+NO_RPO	54435366	Správa Národného parku Veľká Fatra so sídlom v Martine	€8,518,271
+NO_RPO	17058520	Štátna ochrana prírody Slovenskej republiky	€10,109,862
+NO_RPO	35515325	Diecézna Charita Rožňava	€478,625
+NO_RPO	45744700	Centrum včasnej intervencie Prešov, n.o. Anglický názov: Early Childhood Intervention Center Prešov	€198,218
+NO_RPO	31749542	Štátny fond rozvoja bývania	€490,058,824
+NO_RPO	54435293	Správa Tatranského národného parku so sídlom v Tatranskej Lomnici	€2,212,807
+NO_RPO	49629549	Česká společnost ornitologická	€1,442,656
+NO_RPO	17059640	Obchodná akadémia sv. Tomáša Akvinského, Vysokoškolákov 13, Žilina	€474,192
+NO_RPO	42360056	Rodič ľavou zadnou	€290,360
+NO_RPO	55118348	Súkromné centrum poradenstva a prevencie HELP-DYS, Royova 773, Púchov	€99,536
+NO_RPO	42390575	KOMUNITA AKTIVITY	€314,895
+NO_RPO	52277224	KRALO, s. r. o.	€299,451
+NO_RPO	54625491	FinQ Centrum, n.o.	€313,878
+NO_RPO	31970621	Cirkevný zbor ECAV na Slovensku Poprad-Veľká	€553,939
+NO_RPO	47759097	Slovak Investment Holding, a. s.	€575,616,508
+NO_RPO	54533848	Lichtgitter FRP Slovakia s.r.o.	€4,181,405
+NO_RPO	36672297	Severoslovenské vodárne a kanalizácie, a. s.	€387,537
+NO_RPO	27744485	Centrála cestovního ruchu Východní Moravy, o.p.s.	€331,926
+NO_RPO	00397610	Technická univerzita v Košiciach	€10,967,185
+NO_RPO	51666651	AlfaPureo s.r.o.	€1,222,120
+NO_RPO	47674652	Vodovody a kanalizace Vsetín,a.s.	€2,165,495
+NO_RPO	17335949	Psychiatrická liečebňa Samuela Bluma v Plešivci	€299,491
+NO_RPO	35760419	Asseco Central Europe, a. s.	€14,784,394
+NO_RPO	54435412	Správa Národného parku Slovenský raj so sídlom v Spišskej Novej Vsi	€2,494,305
+NO_RPO	42218161	Kala Dance Studio	€523,726
+NO_RPO	31701914	Dopravný podnik mesta Košice, akciová spoločnosť	€80,885,733
+NO_RPO	36056006	Stredoslovenská vodárenská spoločnosť, a.s.	€187,339,959
+NO_RPO	50082001	Človek v ohrození, n. o.	€1,225,704
+NO_RPO	00179124	Rímskokatolícka cirkev Biskupstvo Spišské Podhradie	€279,479
+NO_RPO	00587141	Kongregácia sestier dominikánok bl. Imeldy	€261,349
+NO_RPO	00842753	Gymnázium Hladnov a Jazyková škola s právem státní jazykové zkoušky	€270,874
+NO_RPO	00151564	DataCentrum	€11,774,324
+NO_RPO	00285242	Obec Ratíškovice	€181,379
+NO_RPO	00151491	Kancelária Národnej rady Slovenskej republiky	€5,000,000
+NO_RPO	36078913	Univerzita sv. Cyrila a Metoda v Trnave vysoká škola	€9,080,899
+NO_RPO	50834207	SILVERGON s. r. o.	€308,221
+NO_RPO	36846104	BACKBONE, s.r.o.	€3,631,287
+NO_RPO	00681385	Výskumný ústav detskej psychológie a patopsychológie	€32,302,410
+NO_RPO	56695021	AMBIENTE Slovakia	€565,070
+NO_RPO	42156424	Národná agentúra pre sieťové a elektronické služby	€7,709,217
+NO_RPO	00157716	Univerzita Konštantína Filozofa v Nitre	€3,264,201
+NO_RPO	45744688	Centrum včasnej intervencie Bratislava, n.o.	€404,723
+NO_RPO	47387289	MB Dunajská Streda s.r.o.	€0
+NO_RPO	31118259	Trenčianska univerzita Alexandra Dubčeka v Trenčíne	€6,689,217
+NO_RPO	37801279	Katolícka univerzita v Ružomberku	€10,343,172
+NO_RPO	00397440	Technická univerzita vo Zvolene	€649,541
+NO_RPO	56466277	Súkromné centrum poradenstva a prevencie, Kpt. Nálepku 19, Košice	€59,975
+NO_RPO	37880292	Centrum poradenstva a prevencie, Mučeníkov 1246/4, Kežmarok	€64,909
+NO_RPO	47250119	BPS HORNÝ JATOV, s. r. o.	€0
+NO_RPO	31333389	LADCE Betón, s.r.o.	€0
+NO_RPO	46833323	Saneca Pharmaceuticals a. s.	€231,627
+NO_RPO	00416223	Slovenský Červený kríž, územný spolok Poprad	€690,828
+NO_RPO	00416070	Slovenský Červený kríž, územný spolok Liptovský Mikuláš	€712,153
+NO_RPO	00291234	Obec Pitín	€1,852,741
+NO_RPO	31105513	DIPEX spol. s r. o.	€464,684
+NO_RPO	34057871	Spoločnosť buddhizmu Diamantovej cesty - Karma Kagjü, o.z.	€136,629
+NO_RPO	31936415	Ústredná vojenská nemocnica SNP Ružomberok-fakultná nemocnica	€290,645
+NO_RPO	36532088	EUROSVIT, s.r.o.	€0
+NO_RPO	31574645	ITECO, spol. s r.o.	€0
+NO_RPO	45329818	Biomedical Engineering, s.r.o.	€11,223,806
+NO_RPO	36080781	Špecializované centrum poradenstva a prevencie pre deti a žiakov s viacnásobným postihnutím, Čajkovského 55, Trnava	€44,103
+NO_RPO	56103158	Súkromné špecializované centrum poradenstva a prevencie pre deti do siedmeho roku veku, Dukelských hrdinov 199/3, Moldava nad Bodvou	€15,169
+NO_RPO	53779517	Súkromná hotelová akadémia, Drieňová 12, Banská Štiavnica	€507,231
+NO_RPO	42404843	Klikk, o.z.	€865,798
+NO_RPO	36155993	Stredná odborná škola ekonomiky, hotelierstva a služieb Jána Andraščíka, Pod Vinbargom 3, Bardejov	€2,439,876
+NO_RPO	52317129	OZ Pre lepšiu spoločnosť	€283,324
+NO_RPO	42000726	UNI KREDIT, n.o.	€561,752
+NO_RPO	36119385	Nemocnica s poliklinikou Ilava, n. o.	€217,491
+NO_RPO	54435374	Správa Národného parku Nízke Tatry so sídlom v Banskej Bystrici	€23,164,388
+NO_RPO	31435076	GASTRO - HAAL, s.r.o.	€0
+NO_RPO	54435463	Správa Národného parku Slovenský kras so sídlom v Brzotíne	€634,247
+NO_RPO	31768679	Medzinárodná organizácia pre migráciu (IOM)	€5,108,902
+NO_RPO	35700629	Slovgen s.r.o.	€6,631,274
+NO_RPO	00735779	Akadémia Policajného zboru v Bratislave	€447,786
+NO_RPO	00166481	Generálna prokuratúra SR	€8,381,887
+NO_RPO	54214823	Ostrov pomoci	€305,735
+NO_RPO	51055490	Sociálni inovátori, družstvo	€1,268,073
+NO_RPO	00101451	Zoo Brno a stanice zájmových činností, příspěvková organizace	€779,856
+NO_RPO	36672076	Považská vodárenská spoločnosť, a.s.	€26,624,864
+NO_RPO	36537608	BAMIPA, s.r.o.	€958,333
+NO_RPO	42116201	MARTINO - Inštitút rozvoja spoločnosti	€432,927
+NO_RPO	45744327	Linka detskej istoty, n. o.	€868,706
+NO_RPO	36068781	Proti prúdu	€957,485
+NO_RPO	42194954	Centrum pre ľudské práva KLINGER	€476,943
+NO_RPO	00416011	Slovenský Červený kríž, územný spolok Topoľčany	€485,308
+NO_RPO	51937425	Saturnalia, o. z.	€507,403
+NO_RPO	51253208	Saturnia Nova	€507,403
+NO_RPO	50827332	Black and white	€739,732
+NO_RPO	45738700	Podnik medzitrhu práce, n.o., r.s.p.	€548,600
+NO_RPO	42432430	OZ "Partnerstvo pre MAS Dolný Liptov"	€939,564
+NO_RPO	55943080	Impulsio o. z.	€523,726
+NO_RPO	36117102	"Fórum pre pomoc starším" - národná sieť	€611,145
+NO_RPO	35514388	Gréckokatolícka charita Prešov	€480,558
+NO_RPO	50764624	Aurum residences, o.z.	€447,546
+NO_RPO	68898665	Zdravý Rožnov, z. s.	€631,696
+NO_RPO	46817794	TRISOMYtest, s. r. o.	€3,346,792
+NO_RPO	55833560	Acta et Ars	€545,294
+NO_RPO	54435340	Správa Národného parku Malá Fatra so sídlom vo Varíne	€153,195
+NO_RPO	37927353	EDU	€616,774
+NO_RPO	50073893	Duálna akadémia,z.z.p.o.	€964,726
+NO_RPO	36145114	Slovenské múzeum ochrany prírody a jaskyniarstva	€2,010,528
+NO_RPO	56137184	CKC n.o.	€553,204
+NO_RPO	00416045	Slovenský Červený kríž, územný spolok Banská Bystrica	€478,513
+NO_RPO	36724530	MH Invest, s.r.o.	€17,692,100
+NO_RPO	56126468	Siedma hora	€715,533
+NO_RPO	35701501	CHEZAR, spol. s r.o.	€10,771,922
+NO_RPO	30854105	Republiková únia zamestnávateľov	€29,883,252
+NO_RPO	37971832	Špecializovaná nemocnica sv. Svorada Zobor, n.o.	€226,350
+NO_RPO	30794323	Pôdohospodárska platobná agentúra	€998,079
+NO_RPO	30796482	Úrad pre dohľad nad zdravotnou starostlivosťou	€496,608
+NO_RPO	00584614	Združenie miest a obcí Slovenska	€36,623,460
+NO_RPO	50645358	Pre krajší život, n.o.	€411,975
+NO_RPO	17336210	Záchranná zdravotná služba Bratislava	€299,621
+NO_RPO	55965504	DSS AMARANT o.z.	€490,627
+NO_RPO	53568290	NATURA VIA, občianske združenie	€492,598
+NO_RPO	00606987	Psychiatrická nemocnica Profesora Matulaya Kremnica	€289,111
+NO_RPO	37961632	UNIVERZITA J. SELYEHO	€488,062
+NO_RPO	35537663	Spoločnosť priateľov detí - Li(e)nka	€359,822
+NO_RPO	50617397	Viva la Vida	€299,887
+NO_RPO	31751245	ETP Slovensko - Centrum pre udržateľný rozvoj	€303,505
+NO_RPO	53579372	Paragrafium	€523,726
+NO_RPO	45784949	Krok k ľuďom o.z.	€513,930
+NO_RPO	52979466	Zväz na podporu športu	€403,518
+NO_RPO	51740877	Naše Progresio	€480,739
+NO_RPO	00156850	Výskumný ústav vodného hospodárstva	€15,177,851
+NO_RPO	56099207	OZ RENEXA	€487,456
+NO_RPO	35602406	Diecézna charita Nitra	€498,184
+NO_RPO	35581697	Oáza - nádej pre nový život, n. o. Oasis of Hope for new life, non for profit organisation	€499,856
+NO_RPO	37925211	ESI - Environmentálna a sociálna iniciatíva	€566,370
+NO_RPO	36024929	K W D s.r.o.	€1,034,239
+NO_RPO	56057491	OZ TAJGETA	€541,721
+NO_RPO	35766450	Medirex s. r. o.	€4,603,066
+NO_RPO	00398144	Centrum spoločných činností Slovenskej akadémie vied	€1,158,833
+NO_RPO	45659168	Sdružení měst a obcí Východní Moravy	€865,973
+NO_RPO	42071399	Cirkevná spojená škola	€872,941
+NO_RPO	53751965	PATRIUS o.z.	€299,843
+NO_RPO	36064505	ARGUMENT	€543,672
+NO_RPO	30786525	Liga za duševné zdravie Slovenskej republiky	€865,435
+NO_RPO	37948601	Social Connect	€1,218,347
+NO_RPO	45740143	A m a n t e, n. o.	€276,773
+NO_RPO	55844154	Spoločne pre pomoc, o.z.	€472,419
+NO_RPO	30847940	Centrum poradenstva a prevencie, Vajnorská 10595/98/D, Bratislava	€89,096
+NO_RPO	55712533	SwitchOn	€732,188
+NO_RPO	42386721	Združenie Martinských rómov - Romale progress	€527,903
+NO_RPO	55143881	ReFresh 7G	€428,583
+NO_RPO	00165387	Národné centrum zdravotníckych informácií	€9,131,553
+NO_RPO	55849156	Dokážeš TO, o.z.	€540,947
+NO_RPO	51656957	Cesta von	€1,351,037
+NO_RPO	55845096	SZOFA, o.z.	€527,951
+NO_RPO	37983415	Modrý anjel / tím krízovej intervencie n. o.	€1,278,206
+NO_RPO	55846408	OZ Magnus Global	€456,085
+NO_RPO	00156621	Ministerstvo pôdohospodárstva a rozvoja vidieka Slovenskej republiky	€19,430,862
+NO_RPO	00490750	Ústav materiálov a mechaniky strojov Slovenskej akadémie vied, verejná výskumná inštitúcia	€1,491,297
+NO_RPO	42004446	CENTRUM POMOCI MARGARÉTKA	€629,895
+NO_RPO	50157370	RUBBER 24, s.r.o.	€1,222,119
+NO_RPO	51425815	3V - VEDOMOSTI, VZDELANIE, VÝVOJ	€577,252
+NO_RPO	50015273	ROMA STRÁNSKA	€578,721
+NO_RPO	00493031	Centrum poradenstva a prevencie, Letná 44, Rožňava	€60,267
+NO_RPO	36249840	ARRIVA Trnava, a.s.	€11,912,226
+NO_RPO	55849181	Pomáhať ĽUĎOM, o.z.	€538,774
+NO_RPO	36005622	Hornonitrianske bane Prievidza, a.s. v skratke HBP, a.s.	€2,416,857
+NO_RPO	55844693	PROSPERITUS, o.z.	€558,331
+NO_RPO	00893692	Stredná odborná škola polytechnická a služieb arm. gen. L. Svobodu, Bardejovská 715/18, Svidník	€1,955,493
+NO_RPO	55845169	POMOC ZA POMOC, o.z.	€490,627
+NO_RPO	00324612	Obec Perín-Chym	€243,998
+NO_RPO	42185971	OZ Vagus	€499,775
+NO_RPO	00166812	Ústav experimentálnej fyziky Slovenskej akadémie vied, verejná výskumná inštitúcia	€2,661,083
+NO_RPO	17060265	Základná škola sv. Dominika Savia, M. M. Hodžu 1732/9, Zvolen	€291,736
+NO_RPO	55754694	Inštitút pre podporu vzdelávania	€649,503
+NO_RPO	50309587	SISA - sociálna intervencia, sociálne aktivity n.o.	€274,394
+NO_RPO	00164330	Centrum poradenstva a prevencie, Karpatská 8, Košice	€72,242
+NO_RPO	42169861	EQUITA	€787,546
+NO_RPO	48232980	Slnečný vrch, s.r.o.	€803,443
+NO_RPO	42217202	VIAC - Inštitút pre podporu a rozvoj mládeže	€768,083
+NO_RPO	36323951	COMTEC s. r. o.	€11,102,135
+NO_RPO	35917571	BIONT, a.s.	€291,994
+NO_RPO	37977466	Stimulus	€310,059
+NO_RPO	42036780	Občianske Združenie JEDNA Z NÁS	€657,046
+NO_RPO	30416094	Ministerstvo dopravy Slovenskej republiky	€69,739,767
+NO_RPO	35980788	Návrat-RDZO	€721,028
+NO_RPO	56322089	Platforma potravinovej pomoci Slovensko	€3,598,372
+NO_RPO	52974081	Komunita nádeje, o.z.	€579,683
+NO_RPO	35514221	Spišská katolícka charita	€1,154,573
+NO_RPO	48436615	MARTINIUS	€457,925
+NO_RPO	00166634	Ústav molekulárnej biológie Slovenskej akadémie vied, verejná výskumná inštitúcia	€1,685,026
+NO_RPO	42106729	Súkromné špecializované centrum poradenstva a prevencie pre deti do siedmeho roku veku, Komenského 3, Košice	€31,067
+NO_RPO	53388089	Fortis Posterum	€520,567
+NO_RPO	53572106	OBJAVME NÁŠ KRAJ, občianske združenie	€995,896
+NO_RPO	44006918	GRAFOBAL GROUP GOLF RESORT SKALICA a.s.	€2,180,859
+NO_RPO	45740968	Vaša charita, n.o.	€795,055
+NO_RPO	45782296	Pre človeka	€398,844
+NO_RPO	56398255	Slovenská televízia a rozhlas	€6,888,822
+NO_RPO	36077941	MONTARRY n. o.	€520,107
+NO_RPO	00323802	Obec Závadka	€337,722
+NO_RPO	56689527	GEMERIAN	€558,641
+NO_RPO	00416088	Slovenský Červený kríž, územný spolok Lučenec	€304,768
+NO_RPO	00416126	Slovenský Červený kríž, územný spolok Rimavská Sobota	€162,532
+NO_RPO	55703607	KAMBEK	€447,735
+NO_RPO	37896016	LAVUTA	€749,837
+NO_RPO	00079171	Centrum poradenstva a prevencie, Slovenskej jednoty 29, Košice	€52,841
+NO_RPO	42006899	Pomoc vidieku - záujmové združenie občanov	€266,893
+NO_RPO	51410745	NÁŠ DOMOV n.o.	€306,137
+NO_RPO	50433946	Nemocnica AGEL Zlaté Moravce a.s.	€3,150,420
+NO_RPO	36594849	Nemocnica AGEL Levoča a.s.	€3,150,420
+NO_RPO	31804713	Občianske združenie Brána do života	€270,558
+NO_RPO	54435480	Správa Národného parku Poloniny so sídlom v Stakčíne	€1,642,704
+NO_RPO	42197554	posunky.online	€469,097
+NO_RPO	45013870	ZDRUŽENIE OBCÍ - MIKROREGIÓN ŠAŠTÍNSKO	€3,810,000
+NO_RPO	42004896	Súkromné centrum poradenstva a prevencie, Ulica P. Rádayho 1857/2, Lučenec	€50,143
+NO_RPO	51221144	IVCM Informačné a vzdelávacie centrum mladých	€688,690
+NO_RPO	36076996	Domovské vzdelávacie centrum n.o.	€474,408
+NO_RPO	55486665	ROZHLASOVÉ A TELEVÍZNE ŠTÚDIÁ PREŠOV, o.z.	€541,295
+NO_RPO	35514027	Arcidiecézna charita Košice	€1,076,890
+NO_RPO	52257622	EDI Slovensko	€247,366
+NO_RPO	00802751	Vojenský historický ústav	€556,826
+NO_RPO	00416185	Slovenský Červený kríž, územný spolok Humenné	€239,288
+NO_RPO	55845151	POMOC K VZDELÁVANIU, o.z.	€492,598
+NO_RPO	55936679	Občianske združenie Secura Vita	€620,078
+NO_RPO	50607740	Úsmev pre druhých	€311,069
+NO_RPO	00329053	Obec Dúbrava	€84,548
+NO_RPO	35570512	Centrum poradenstva a prevencie, Letná 66, Spišská Nová Ves	€33,264
+NO_RPO	35602619	Trnavská arcidiecézna charita	€491,918
+NO_RPO	50334981	nezisková organizácia Projekt DOM.ov	€4,516,022
+NO_RPO	30845572	Ministerstvo obrany Slovenskej republiky	€1,811,331
+NO_RPO	55519504	Donote	€559,575
+NO_RPO	55968368	Tropolis	€488,656
+NO_RPO	37925547	Súkromné špecializované centrum poradenstva a prevencie pre deti a žiakov s autizmom alebo ďalšími pervazívnymi vývinovými poruchami, Galandova 7, Bratislava	€54,785
+NO_RPO	00283819	Město Brumov-Bylnice	€2,503,091
+NO_RPO	56442181	OZ OČAMI ĽUDÍ	€461,024
+NO_RPO	53104056	TITAN Slovakia, o. z.	€682,433
+NO_RPO	00738361	Ústav na výkon trestu odňatia slobody pre mladistvých	€17,997,237
+NO_RPO	36672441	Liptovská vodárenská spoločnosť, a.s.	€509,842
+NO_RPO	00416266	Slovenský Červený kríž, územný spolok Svidník	€530,347
+NO_RPO	36070513	Slovenská agentúra pre rozvoj investícii a obchodu	€12,687,898
+NO_RPO	52972178	Dorka Bags, n. o.	€550,007
+NO_RPO	00626031	Slovenská agentúra životného prostredia	€6,762,608
+NO_RPO	31797903	Úrad pre verejné obstarávanie	€8,378,035
+NO_RPO	31745661	Slovenský paralympijský výbor	€8,798,191
+NO_RPO	42193222	Centrum sociálnych služieb KA	€207,214
+NO_RPO	35758015	GOIMPEX BRATISLAVA, a.s.	€750,809
+NO_RPO	53384831	Bubamara	€378,039
+NO_RPO	50692925	EDUAWEN EUROPE s.r.o.	€314,873
+NO_RPO	53770048	PALIS & comp.	€476,843
+NO_RPO	44984251	R-DAS, s. r. o.	€11,596,626
+NO_RPO	55188931	Spoločne 8	€261,664
+NO_RPO	55714846	Eferent	€349,605
+NO_RPO	42419051	Spoločný sen	€721,597
+NO_RPO	54147336	Koľko Lásky o.z.	€315,593
+NO_RPO	45731454	Spoločne za zdravím, n.o.	€288,671
+NO_RPO	17316537	Spoločnosť priateľov detí z detských domovov Úsmev ako dar	€1,267,735
+NO_RPO	47881305	MBCD s.r.o.	€11,854,960
+NO_RPO	37948890	Centrum poradenstva a prevencie, Hviezdoslavova 441/10, Rimavská Sobota	€12,339
+NO_RPO	00166073	Ministerstvo spravodlivosti Slovenskej republiky	€3,169,795
+NO_RPO	17055555	Ústav informatiky Slovenskej akadémie vied	€10,303,158
+NO_RPO	00283924	statutární město Zlín	€267,412
+NO_RPO	50098829	EDUMA, n.o.	€302,833
+NO_RPO	54838215	SAGAPE	€490,627
+NO_RPO	35841893	IMMOBAU s.r.o.	€6,720,383
+NO_RPO	52365808	JEDEN RODIČ, n.o.	€299,999
+NO_RPO	42289645	Občianske združenie Pro Bono	€227,963
+NO_RPO	51237351	Vedieme	€451,742
+NO_RPO	00365327	Univerzitná nemocnica Martin	€1,379,230
+NO_RPO	00893102	Stredná odborná škola elektrotechnická	€5,576,707
+NO_RPO	48773514	Charita Nový Hrozenkov	€332,540
+NO_RPO	42043751	Súkromné centrum poradenstva a prevencie, Ul. J. Hollého 558/1, Levice	€26,418
+NO_RPO	42083923	Súkromné centrum poradenstva a prevencie, Budovateľská 1992/9, Snina	€29,435
+NO_RPO	31788734	Občianske združenie Odyseus	€430,418
+NO_RPO	45741875	Silver care, n. o.	€737,699
+NO_RPO	51167786	HEPTA s.r.o.	€107,520
+NO_RPO	42017998	Súkromné centrum poradenstva a prevencie, Obrancov mieru 354/32, Dubnica nad Váhom	€44,642
+NO_RPO	55119301	Súkromné špecializované centrum poradenstva a prevencie pre deti a žiakov s autizmom alebo ďalšími pervazívnymi vývinovými poruchami, 13. januára 716/23, Poltár	€74,617
+NO_RPO	35749245	FREE ZONE SIPOX, a.s.	€1,411,276
+NO_RPO	55122043	Centrum poradenstva a prevencie, Komárňanská 177, Hurbanovo	€44,302
+NO_RPO	42150311	Centrum poradenstva a prevencie, Februárová 153/3, Partizánske	€41,243
+NO_RPO	30796687	Centrum poradenstva a prevencie, Nevädzová 534/7, Bratislava	€99,509
+NO_RPO	45736359	DataCentrum elektronizácie územnej samosprávy Slovenska	€966,071
+NO_RPO	36210137	GEOTERM KOŠICE, a.s.	€95,739,293
+NO_RPO	31094970	Akadémia umení v Banskej Bystrici	€481,108
+NO_RPO	00607274	Psychiatrická nemocnica Veľké Zálužie	€299,723
+NO_RPO	55714897	ANO 31	€363,635
+NO_RPO	42194865	World Academy	€748,921
+NO_RPO	52433897	SVDM s. r. o.	€219,104
+NO_RPO	00397474	Univerzita veterinárskeho lekárstva a farmácie v Košiciach	€3,502,424
+NO_RPO	51843846	Súkromné centrum poradenstva a prevencie, Farská 84/5, Ilava	€22,943
+NO_RPO	37998676	Súkromná stredná odborná škola, Železničná 2, Revúca	€1,193,253
+NO_RPO	56549725	Step by Step n.o.	€636,468
+NO_RPO	36582433	Železničné zdravotníctvo Košice, s.r.o.	€3,150,026
+NO_RPO	53495284	KONAVI	€646,440
+NO_RPO	00165271	Národný ústav reumatických chorôb	€298,608
+NO_RPO	42260043	Prosenior	€491,186
+NO_RPO	30804850	ADRA - Adventistická agentúra pre pomoc a rozvoj - Občianske združenie	€694,974
+NO_RPO	00098639	Hvězdárna Valašské Meziříčí, p. o.	€204,757
+NO_RPO	52308537	Občianske združenie SaUvedom	€315,362
+NO_RPO	50320696	HANS	€291,545
+NO_RPO	37995545	Iniciatíva Inakosť	€411,506
+NO_RPO	37923251	PE-ES, n.o.	€104,792
+NO_RPO	10876766	Janúšovja, z.s.	€887,866
+NO_RPO	31748333	Neuroimunologický ústav Slovenskej akadémie vied	€1,648,417
+NO_RPO	55115055	Špecializované centrum poradenstva a prevencie pre deti a žiakov so zrakovým postihnutím, Námestie Štefana Kluberta 2, Levoča	€54,914
+NO_RPO	36054666	Slovenská autobusová doprava Zvolen, akciová spoločnosť	€35,691,375
+NO_RPO	36069744	Mládež ulice	€514,603
+NO_RPO	36324043	SAD Prievidza a.s.	€9,738,867
+NO_RPO	36120804	EUROREGIÓN BÍLÉ-BIELE KARPATY	€9,967,710
+NO_RPO	71217860	Základní škola JUDr. Josefa Mareše a Mateřská škola, Znojmo, Klášterní 2 příspěvková organizace	€378,207
+NO_RPO	52787494	Energy for Business s. r. o.	€0
+NO_RPO	53453948	Mael consulting s. r. o.	€4,950,138
+NO_RPO	53452275	SYLVIO s. r. o.	€0
+NO_RPO	54635560	VO-DOJEM o.z.	€265,145
+NO_RPO	30810710	Úrad pre normalizáciu, metrológiu a skúšobníctvo Slovenskej republiky	€1,499,616
+NO_RPO	00165182	Ministerstvo kultúry Slovenskej republiky	€159,446,678
+NO_RPO	35547031	Súkromná stredná odborná škola ekonomická KOŠICKÁ AKADÉMIA, Tajovského 15, Košice	€958,296
+NO_RPO	30814081	Daphne - Inštitút aplikovanej ekológie	€668,119
+NO_RPO	50787136	Trnavské umenovedné centrum	€1,461,060
+NO_RPO	03798798	Základní škola ZaHRAda	€163,737
+NO_RPO	68081766	Ústav biologie obratlovců AV ČR, v.v.i.	€756,510
+NO_RPO	75068478	Obce pro Baťův kanál	€3,015,597
+NO_RPO	54903360	AZ-Lines s. r. o.	€3,761,602
+NO_RPO	36479560	Slovenská autobusová doprava Poprad, akciová spoločnosť	€4,589,231
+NO_RPO	30812682	Rada pre poradenstvo v sociálnej práci	€278,496
+NO_RPO	36064220	Úrad na ochranu osobných údajov Slovenskej republiky	€1,447,704
+NO_RPO	30232295	Univerzita Mateja Bela v Banskej Bystrici	€488,840
+NO_RPO	36016411	Dopravný podnik mesta Banská Bystrica, a.s.	€4,879,074
+NO_RPO	31771815	BROZ - ochranárske združenie	€2,505,777
+NO_RPO	13644289	Střední škola polytechnická, Havířov-Šumbark, příspěvková organizace	€366,938
+NO_RPO	00358011	Národná zoologická záhrada Bojnice	€1,504,883
+NO_RPO	36291081	SLOVUNIT SLIAČSKA 1D s. r. o.	€654,318
+NO_RPO	35776455	Novplasta, s.r.o.	€291,088
+NO_RPO	00304387	Město Valašské Meziříčí	€1,620,118
+NO_RPO	30807484	Sociálna poisťovňa	€3,990,929
+NO_RPO	45736324	Nemocnica s poliklinikou, n.o. Revúca	€3,138,941
+NO_RPO	42169666	Spoločnosť komunitných centier	€238,299
+NO_RPO	00117641	Okresní výbor Českého svazu ochránců přírody Vsetín	€215,173
+NO_RPO	00291480	Město Uherský Ostroh	€674,758
+NO_RPO	36137952	Združenie TKO Semeteš n.o.	€1,267,308
+NO_RPO	31915698	Združenie obcí stredného Liptova EKOLÓG	€928,102
+NO_RPO	42355818	Úrad pre reguláciu elektronických komunikácií a poštových sl	€184,564
+NO_RPO	00166197	Štatistický úrad Slovenskej republiky	€2,945,262
+NO_RPO	01428926	Centrum podpory transformace, o.p.s.	€410,939
+NO_RPO	50668277	Kancelária Najvyššieho súdu Slovenskej republiky	€997,907
+NO_RPO	30844363	Správa štátnych hmotných rezerv Slovenskej republiky	€1,421,906
+NO_RPO	43380107	Základní škola a Mateřská škola Nedvědice, okres Brno-venkov, příspěvková organizace	€131,032
+NO_RPO	31753485	Centrum pre deti a rodiny Bratislava - Röntgenova	€496,555
+NO_RPO	42412943	Slovenská aliancia pre inovatívnu ekonomiku	€2,509,280
+NO_RPO	30798868	Úrad pre Slovákov žijúcich v zahraničí	€3,998,576
+NO_RPO	42175682	Slovenská poľovnícka komora	€283,911
+NO_RPO	42378541	CPR Trenčín	€779,107
+NO_RPO	31947000	Kancelária Ústavného súdu Slovenskej republiky	€1,456,773
+NO_RPO	30845301	Slovak Business Agency	€6,993,007
+NO_RPO	31622780	CMK, s.r.o.	€1,053,027
+NO_RPO	60555980	Vzdělávací institut pro Moravu, zařízení pro další vzdělávání pedagogických pracovníků a středisko služeb školám, příspěvková organizace	€180,324
+NO_RPO	36061701	Národný bezpečnostný úrad	€937,090
+NO_RPO	36054259	Slovenská autobusová doprava Lučenec, akciová spoločnosť	€0
+NO_RPO	52534260	New System s. r. o.	€4,950,138
+NO_RPO	00283631	Obec Tvrdonice	€462,711
+NO_RPO	36105945	"Združenie obcí Most priateľstva - Hídverő Társulás"	€271,777
+NO_RPO	36370967	PREFA ALFA, a.s.	€9,182,173
+NO_RPO	36339865	Nemocnica AGEL Handlová s.r.o.	€2,076,992
+NO_RPO	36348015	Nemocnica AGEL Bánovce s.r.o.	€3,150,420
+NO_RPO	00606707	Univerzitná nemocnica L. Pasteura Košice	€292,738
+NO_RPO	37905783	Rozvojová agentúra Žilinského samosprávneho kraja, n.o.	€346,967
+NO_RPO	36693154	DB Properties s. r. o.	€4,602,675
+NO_RPO	50371550	Fond Židovského Dedičstva v Bardejove n.o.	€492,317
+NO_RPO	36601284	Východoslovenský ústav srdcových a cievnych chorôb, a.s.	€299,576
+NO_RPO	50073869	Biomedicínske centrum Slovenskej akadémie vied	€668,121
+NO_RPO	52648192	InoBat Auto j.s.a.	€25,011,461
+NO_RPO	31813861	Univerzitná nemocnica Bratislava	€299,976
+NO_RPO	62331540	Gymnázium a Obchodní akademie, Orlová, příspěvková organizace	€84,101
+NO_RPO	35987006	Štátna vedecká knižnica v Banskej Bystrici	€994,976
+NO_RPO	42066387	DOBRÝ PASTIER - KLÁŠTOR POD ZNIEVOM, o.z.	€719,085
+NO_RPO	50086821	Úrad vládneho auditu	€2,314,640
+NO_RPO	00164682	Štátna vedecká knižnica v Prešove	€218,433
+NO_RPO	51665263	Fitlife	€0
+NO_RPO	50634721	EU Poultry s.r.o.	€31,616,000
+NO_RPO	36183181	LABAŠ s.r.o.	€950,424
+NO_RPO	36588181	DZS - M.K.TRANS, s.r.o.	€6,326,165
+NO_RPO	46936653	Ai-energy s.r.o.	€4,785,283
+NO_RPO	35829052	Slovenské elektrárne, a.s.	€10,876,339
+NO_RPO	36286192	NAFTA a.s.	€1,209,490
