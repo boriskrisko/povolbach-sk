@@ -6,54 +6,56 @@
       {
         "ico": "37922467",
         "name": "Stredná priemyselná škola stavebná Emila Belluša, Staničná 4, Trenčín",
-        "total_contracted_eur": 2500000.0,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 2500000.0
       },
       {
         "ico": "17050561",
         "name": "Stredná odborná škola strojnícka",
-        "total_contracted_eur": 2490535.67,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
-      },
-      {
-        "ico": "51110369",
-        "name": "Integrovaná doprava Žilinského kraja, s.r.o.",
-        "total_contracted_eur": 554347.0,
-        "projects_count": 1,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 2490535.67
       },
       {
         "ico": "34059199",
         "name": "Trenčianske múzeum v Trenčíne",
-        "total_contracted_eur": 390466.65,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 390466.65
       },
       {
         "ico": "34056149",
         "name": "Krajské centrum voľného času, Pod Sokolice 14, Trenčín",
-        "total_contracted_eur": 346967.0,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 346967.0
       },
       {
         "ico": "00610721",
         "name": "Nemocnica s poliklinikou Myjava so sídlom v Myjave",
-        "total_contracted_eur": 299932.62,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 299932.62
       },
       {
         "ico": "17335795",
         "name": "Nemocnica s poliklinikou Prievidza so sídlom v Bojniciach",
-        "total_contracted_eur": 295028.32,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 295028.32
+      },
+      {
+        "ico": "51110369",
+        "name": "Integrovaná doprava Žilinského kraja, s.r.o.",
+        "projects_count": 1,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 138586.75,
+        "full_amount_eur": 554347.0,
+        "co_owners": 4
       }
     ],
-    "subsidiary_total_eur": 6877277.260000001
+    "subsidiary_total_eur": 6461517.010000001
   },
   "37870475": {
     "ico": "37870475",
@@ -62,93 +64,93 @@
       {
         "ico": "37781146",
         "name": "Hornozemplínska knižnica vo Vranove nad Topľou",
-        "total_contracted_eur": 9343912.46,
         "projects_count": 2,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 9343912.46
       },
       {
         "ico": "45734348",
         "name": "Inovačné partnerské centrum, Prešov",
-        "total_contracted_eur": 6349923.53,
         "projects_count": 2,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 6349923.53
       },
       {
         "ico": "37781278",
         "name": "Krajské múzeum v Prešove",
-        "total_contracted_eur": 5244870.51,
         "projects_count": 2,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 5244870.51
       },
       {
         "ico": "37936859",
         "name": "Správa a údržba ciest Prešovského samosprávneho kraja",
-        "total_contracted_eur": 3902157.43,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 3902157.43
       },
       {
         "ico": "37947541",
         "name": "Stredná odborná škola polytechnická Jana Antonína Baťu, Štefánikova 39, Svit",
-        "total_contracted_eur": 3031345.02,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 3031345.02
       },
       {
         "ico": "00161829",
         "name": "Stredná priemyselná škola elektrotechnická, Plzenská 1, Prešov",
-        "total_contracted_eur": 2246506.98,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 2246506.98
       },
       {
         "ico": "00691861",
         "name": "Centrum sociálnych služieb Domov pod Tatrami",
-        "total_contracted_eur": 1684384.74,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 1684384.74
       },
       {
         "ico": "00891541",
         "name": "Stredná odborná škola technická",
-        "total_contracted_eur": 1659349.15,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 1659349.15
       },
       {
         "ico": "37942484",
         "name": "Stredná odborná škola technická, Družstevná 1474/19, Humenné",
-        "total_contracted_eur": 1631110.93,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 1631110.93
       },
       {
         "ico": "00161039",
         "name": "Gymnázium J. Francisciho - Rimavského",
-        "total_contracted_eur": 1514616.46,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 1514616.46
       },
       {
         "ico": "37946765",
         "name": "Spojená škola",
-        "total_contracted_eur": 635149.34,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 635149.34
       },
       {
         "ico": "17078482",
         "name": "Stredná odborná škola gastronómie a služieb",
-        "total_contracted_eur": 472912.48,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 472912.48
       },
       {
         "ico": "37781171",
         "name": "Podtatranské múzeum v Poprade",
-        "total_contracted_eur": 327981.75,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 327981.75
       }
     ],
     "subsidiary_total_eur": 38044220.78
@@ -160,72 +162,72 @@
       {
         "ico": "51744422",
         "name": "ROZVOJOVÁ AGENTÚRA Banskobystrického samosprávneho kraja, n. o.",
-        "total_contracted_eur": 14090791.26,
         "projects_count": 3,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 14090791.26
       },
       {
         "ico": "45017000",
         "name": "Stredná odborná škola",
-        "total_contracted_eur": 2497679.95,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 2497679.95
       },
       {
         "ico": "00162710",
         "name": "Stredná odborná škola lesnícka, Akademická 16, Banská Štiavnica",
-        "total_contracted_eur": 2470767.12,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 2470767.12
       },
       {
         "ico": "37956469",
         "name": "Stredná odborná škola drevárska",
-        "total_contracted_eur": 1844222.94,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 1844222.94
       },
       {
         "ico": "55609210",
         "name": "Spojená škola Samuela Mikovíniho, Akademická 13, Banská Štiavnica",
-        "total_contracted_eur": 1059932.5,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 1059932.5
       },
       {
         "ico": "57046492",
         "name": "Gymnázium Augusta Horislava Škultétyho, Obchodná akadémia a Stredná odborná škola, Školská 21, Veľký Krtíš",
-        "total_contracted_eur": 915908.26,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 915908.26
       },
       {
         "ico": "37890115",
         "name": "Stredná odborná škola hotelových služieb a obchodu",
-        "total_contracted_eur": 636823.02,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 636823.02
       },
       {
         "ico": "52700569",
         "name": "Agentúra práce Banskobystrického samosprávneho kraja, n.o.",
-        "total_contracted_eur": 548562.66,
         "projects_count": 2,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 548562.66
       },
       {
         "ico": "00158496",
         "name": "Stredná odborná škola hotelových služieb a obchodu",
-        "total_contracted_eur": 438475.76,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 438475.76
       },
       {
         "ico": "00160547",
         "name": "Gymnázium Jána Chalupku",
-        "total_contracted_eur": 275755.0,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 275755.0
       }
     ],
     "subsidiary_total_eur": 24778918.470000003
@@ -237,75 +239,79 @@
       {
         "ico": "54264405",
         "name": "InoVia",
-        "total_contracted_eur": 7842505.0,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 3921252.5,
+        "full_amount_eur": 7842505.0,
+        "co_owners": 2
       },
       {
         "ico": "36145076",
         "name": "Kysucké múzeum",
-        "total_contracted_eur": 3586929.66,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 3586929.66
       },
       {
         "ico": "35993154",
         "name": "Liptovské múzeum",
-        "total_contracted_eur": 2520528.08,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 2520528.08
       },
       {
         "ico": "17053722",
         "name": "Stredná odborná škola strojnícka",
-        "total_contracted_eur": 2499950.47,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
-      },
-      {
-        "ico": "51110369",
-        "name": "Integrovaná doprava Žilinského kraja, s.r.o.",
-        "total_contracted_eur": 554347.0,
-        "projects_count": 1,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 2499950.47
       },
       {
         "ico": "42054575",
         "name": "Správa ciest Žilinského samosprávneho kraja",
-        "total_contracted_eur": 499689.78,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 499689.78
       },
       {
         "ico": "00634905",
         "name": "Dolnooravská nemocnica s poliklinikou MUDr. L. N. Jégého",
-        "total_contracted_eur": 293964.16,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 293964.16
       },
       {
         "ico": "00160555",
         "name": "Gymnázium, Štefánikova 219/4, Bytča",
-        "total_contracted_eur": 264939.28,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 264939.28
       },
       {
         "ico": "00634891",
         "name": "Hornooravská nemocnica s poliklinikou Trstená",
-        "total_contracted_eur": 248032.62,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 248032.62
       },
       {
         "ico": "00634875",
         "name": "Oravská poliklinika Námestovo",
-        "total_contracted_eur": 204366.84,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 204366.84
+      },
+      {
+        "ico": "51110369",
+        "name": "Integrovaná doprava Žilinského kraja, s.r.o.",
+        "projects_count": 1,
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 138586.75,
+        "full_amount_eur": 554347.0,
+        "co_owners": 4
       }
     ],
-    "subsidiary_total_eur": 18515252.890000004
+    "subsidiary_total_eur": 14178240.14
   },
   "37861298": {
     "ico": "37861298",
@@ -314,9 +320,9 @@
       {
         "ico": "00161942",
         "name": "Obchodná akadémia, Bolečkova 2, Nitra",
-        "total_contracted_eur": 2249701.35,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 2249701.35
       }
     ],
     "subsidiary_total_eur": 2249701.35
@@ -328,89 +334,91 @@
       {
         "ico": "35555777",
         "name": "Správa ciest Košického samosprávneho kraja",
-        "total_contracted_eur": 15672041.61,
         "projects_count": 7,
-        "rpo_relationship": "Zriaďovateľ"
-      },
-      {
-        "ico": "54080576",
-        "name": "Inovačné centrum Košického kraja Košice Region Innovation Center",
-        "total_contracted_eur": 9638400.0,
-        "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 15672041.61
       },
       {
         "ico": "00521663",
         "name": "Stredná priemyselná škola technická, Hviezdoslavova 6, Spišská Nová Ves",
-        "total_contracted_eur": 6283027.91,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 6283027.91
       },
       {
         "ico": "00161756",
         "name": "Stredná priemyselná škola elektrotechnická, Komenského 44, Košice",
-        "total_contracted_eur": 5572138.470000001,
         "projects_count": 2,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 5572138.47
       },
       {
         "ico": "42096651",
         "name": "Stredná odborná škola technická, Partizánska 1, Michalovce",
-        "total_contracted_eur": 5494082.51,
         "projects_count": 2,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 5494082.51
+      },
+      {
+        "ico": "54080576",
+        "name": "Inovačné centrum Košického kraja Košice Region Innovation Center",
+        "projects_count": 1,
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 4819200.0,
+        "full_amount_eur": 9638400.0,
+        "co_owners": 2
       },
       {
         "ico": "17078407",
         "name": "Stredná odborná škola automobilová, Moldavská cesta 2, Košice",
-        "total_contracted_eur": 3999562.76,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 3999562.76
       },
       {
         "ico": "17050367",
         "name": "Stredná odborná škola priemyselných technológií, Učňovská 5, Košice -Šaca",
-        "total_contracted_eur": 2956786.95,
         "projects_count": 2,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 2956786.95
       },
       {
         "ico": "00606758",
         "name": "Stredná zdravotnícka škola",
-        "total_contracted_eur": 2789674.28,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 2789674.28
       },
       {
         "ico": "17050545",
         "name": "Stredná odborná škola technická",
-        "total_contracted_eur": 2517798.0,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 2517798.0
       },
       {
         "ico": "00161772",
         "name": "Stredná priemyselná škola strojnícka, Komenského 2, Košice",
-        "total_contracted_eur": 1203570.86,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 1203570.86
       },
       {
         "ico": "00893331",
         "name": "Stredná odborná škola informačných technológii, Ostrovského 1, Košice",
-        "total_contracted_eur": 787821.43,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 787821.43
       },
       {
         "ico": "00893340",
         "name": "Stredná odborná škola technická, Kukučínova 23, Košice",
-        "total_contracted_eur": 295429.4,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 295429.4
       }
     ],
-    "subsidiary_total_eur": 57210334.17999999
+    "subsidiary_total_eur": 52391134.17999999
   },
   "37836901": {
     "ico": "37836901",
@@ -419,79 +427,79 @@
       {
         "ico": "52190820",
         "name": "KIRA n.o.",
-        "total_contracted_eur": 7504018.71,
         "projects_count": 3,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 7504018.71
       },
       {
         "ico": "36086941",
         "name": "Záhorské múzeum v Skalici",
-        "total_contracted_eur": 5992730.13,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 5992730.13
       },
       {
         "ico": "00162019",
         "name": "Hotelová akadémia Ľudovíta Wintera, Stromová 34, Piešťany",
-        "total_contracted_eur": 2493353.7,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 2493353.7
       },
       {
         "ico": "17055385",
         "name": "Stredná odborná škola elektrotechnická, Sibírska 1, Trnava",
-        "total_contracted_eur": 2450857.41,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 2450857.41
       },
       {
         "ico": "53638581",
         "name": "Stredná odborná škola regionálneho rozvoja a Stredná odborná škola záhradnícka, Rakovice 25, Rakovice",
-        "total_contracted_eur": 1179415.94,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 1179415.94
       },
       {
         "ico": "00351873",
         "name": "Stredná odborná škola obchodu a služieb, Z. Kodálya 765, Galanta",
-        "total_contracted_eur": 536559.86,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 536559.86
       },
       {
         "ico": "17050324",
         "name": "Stredná odborná škola technická, F. Lipku 2422/5, Hlohovec",
-        "total_contracted_eur": 495500.16,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 495500.16
       },
       {
         "ico": "00158984",
         "name": "Stredná odborná škola technická Galanta - Műszaki Szakközépiskola Galanta",
-        "total_contracted_eur": 284891.67,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 284891.67
       },
       {
         "ico": "53638522",
         "name": "Stredná odborná škola rozvoja vidieka s vyučovacím jazykom maďarským - Vidékfejlesztési Szakközépiskola a Stredná športová škola s vyučovacím jazykom maďarským - Középfokú Sportiskola, Námestie sv. Štefana 1533/3, Dunajská Streda - Dunaszerdahely",
-        "total_contracted_eur": 238397.85,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 238397.85
       },
       {
         "ico": "53638549",
         "name": "Spojená škola, Gyulu Szabóa 21, Dunajská Streda",
-        "total_contracted_eur": 228584.93,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 228584.93
       },
       {
         "ico": "00351997",
         "name": "Stredná odborná škola podnikania v remeslách a službách, V. Paulínyho Tótha 31/5, Senica",
-        "total_contracted_eur": 214248.07,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 214248.07
       }
     ],
     "subsidiary_total_eur": 21618558.43
@@ -503,30 +511,30 @@
       {
         "ico": "17327661",
         "name": "Stredná priemyselná škola elektrotechnická, Hálova 16, Bratislava",
-        "total_contracted_eur": 895625.64,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 895625.64
       },
       {
         "ico": "00604968",
         "name": "Centrum sociálnych služieb Sibírka",
-        "total_contracted_eur": 248501.12,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 248501.12
       },
       {
         "ico": "42128919",
         "name": "Spojená škola, ul. SNP 30, Ivanka pri Dunaji",
-        "total_contracted_eur": 0,
         "projects_count": 0,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 0.0
       },
       {
         "ico": "00162311",
         "name": "Stredná odborná škola vinársko - ovocinárska, Kostolná 3, Modra",
-        "total_contracted_eur": 0,
         "projects_count": 0,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 0.0
       }
     ],
     "subsidiary_total_eur": 1144126.76

@@ -107,43 +107,54 @@ def main():
 
         # Collect all founder IČOs (single or multi-founder)
         if 'founders' in rpo_entry:
-            founder_icos = [f['founder_ico'] for f in rpo_entry['founders']]
+            all_founders = rpo_entry['founders']
+            founder_icos = [f['founder_ico'] for f in all_founders]
         else:
             founder_icos = [rpo_entry['founder_ico']]
 
-        org_entry = {
+        # Count how many municipal/VÚC founders this entity has (for proportional split)
+        muni_vuc_founders = [f for f in founder_icos if f in muni_set or f in vuc_set]
+        n_owners = len(muni_vuc_founders) if muni_vuc_founders else 1
+        share_eur = total_eur / n_owners  # Option A: split equally
+
+        # Build org entry — show split amount but also full amount + co-owner count
+        org_entry_base = {
             'ico': ico,
             'name': name,
-            'total_contracted_eur': total_eur,
             'projects_count': projects_count,
             'rpo_relationship': rpo_entry.get('relationship', ''),
         }
 
-        # Attribute to ALL founding municipalities/VÚCs
-        # For multi-founder: each founder gets the full amount (it's their subsidiary)
-        # The entity is counted once per founder for org lists, but EUR is not split
+        # Attribute to ALL founding municipalities/VÚCs with proportional split
         attributed = False
         for founder_ico in founder_icos:
+            org_entry = {
+                **org_entry_base,
+                'total_contracted_eur': round(share_eur, 2),
+            }
+            if n_owners > 1:
+                org_entry['full_amount_eur'] = total_eur
+                org_entry['co_owners'] = n_owners
+
             if founder_ico in muni_set:
                 muni_name = muni_stats.get(founder_ico, {}).get('official_name', '')
                 by_muni[founder_ico]['ico'] = founder_ico
                 by_muni[founder_ico]['municipality'] = muni_name
                 by_muni[founder_ico]['subsidiary_orgs'].append(org_entry)
-                by_muni[founder_ico]['subsidiary_total_eur'] += total_eur
+                by_muni[founder_ico]['subsidiary_total_eur'] += round(share_eur, 2)
                 attributed = True
             elif founder_ico in vuc_set:
                 by_vuc[founder_ico]['subsidiary_orgs'].append(org_entry)
-                by_vuc[founder_ico]['subsidiary_total_eur'] += total_eur
+                by_vuc[founder_ico]['subsidiary_total_eur'] += round(share_eur, 2)
                 attributed = True
 
         if attributed:
-            # Count by primary founder type
-            primary_ico = founder_icos[0]
+            primary_ico = muni_vuc_founders[0] if muni_vuc_founders else founder_icos[0]
             if primary_ico in muni_set:
                 counters['attributed_muni'] += 1
             elif primary_ico in vuc_set:
                 counters['attributed_vuc'] += 1
-            if len(founder_icos) > 1:
+            if n_owners > 1:
                 counters['multi_founder'] += 1
         else:
             counters['non_muni_founder'] += 1

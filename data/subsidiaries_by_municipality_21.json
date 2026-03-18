@@ -4,9 +4,9 @@
       {
         "ico": "53560922",
         "name": "Dopravný podnik mesta Martin, s. r. o.",
-        "total_contracted_eur": 3939528.08,
         "projects_count": 2,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 3939528.08
       }
     ],
     "subsidiary_total_eur": 3939528.08,
@@ -18,9 +18,9 @@
       {
         "ico": "53153073",
         "name": "Dopravný podnik mesta Považská Bystrica s. r. o. skrátene DPMPB s.r.o.",
-        "total_contracted_eur": 1540643.8,
         "projects_count": 1,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 1540643.8
       }
     ],
     "subsidiary_total_eur": 1540643.8,
@@ -32,16 +32,16 @@
       {
         "ico": "36110744",
         "name": "Základná škola Endre Adyho s vyučovacím jazykom maďarským - Ady Endre Alapiskola, Adyho 9, Štúrovo",
-        "total_contracted_eur": 299897.14,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 299897.14
       },
       {
         "ico": "37860879",
         "name": "Základná škola, Adyho 6, Štúrovo",
-        "total_contracted_eur": 244074.79,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 244074.79
       }
     ],
     "subsidiary_total_eur": 543971.93,
@@ -53,12 +53,14 @@
       {
         "ico": "56929242",
         "name": "ZDRUŽENIE OBCÍ PRAVNIANSKEJ DOLINY",
-        "total_contracted_eur": 468417.31,
         "projects_count": 2,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 46841.73,
+        "full_amount_eur": 468417.31,
+        "co_owners": 10
       }
     ],
-    "subsidiary_total_eur": 468417.31,
+    "subsidiary_total_eur": 46841.73,
     "ico": "00518239",
     "municipality": "Kanianka"
   },
@@ -67,12 +69,14 @@
       {
         "ico": "56929242",
         "name": "ZDRUŽENIE OBCÍ PRAVNIANSKEJ DOLINY",
-        "total_contracted_eur": 468417.31,
         "projects_count": 2,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 46841.73,
+        "full_amount_eur": 468417.31,
+        "co_owners": 10
       }
     ],
-    "subsidiary_total_eur": 468417.31,
+    "subsidiary_total_eur": 46841.73,
     "ico": "00318183",
     "municipality": "Kľačno"
   },
@@ -81,12 +85,14 @@
       {
         "ico": "56929242",
         "name": "ZDRUŽENIE OBCÍ PRAVNIANSKEJ DOLINY",
-        "total_contracted_eur": 468417.31,
         "projects_count": 2,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 46841.73,
+        "full_amount_eur": 468417.31,
+        "co_owners": 10
       }
     ],
-    "subsidiary_total_eur": 468417.31,
+    "subsidiary_total_eur": 46841.73,
     "ico": "00648868",
     "municipality": "Kocurany"
   },
@@ -95,12 +101,14 @@
       {
         "ico": "56929242",
         "name": "ZDRUŽENIE OBCÍ PRAVNIANSKEJ DOLINY",
-        "total_contracted_eur": 468417.31,
         "projects_count": 2,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 46841.73,
+        "full_amount_eur": 468417.31,
+        "co_owners": 10
       }
     ],
-    "subsidiary_total_eur": 468417.31,
+    "subsidiary_total_eur": 46841.73,
     "ico": "00318281",
     "municipality": "Malinová"
   },
@@ -109,12 +117,14 @@
       {
         "ico": "56929242",
         "name": "ZDRUŽENIE OBCÍ PRAVNIANSKEJ DOLINY",
-        "total_contracted_eur": 468417.31,
         "projects_count": 2,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 46841.73,
+        "full_amount_eur": 468417.31,
+        "co_owners": 10
       }
     ],
-    "subsidiary_total_eur": 468417.31,
+    "subsidiary_total_eur": 46841.73,
     "ico": "00318337",
     "municipality": "Nitrianske Pravno"
   },
@@ -123,12 +133,14 @@
       {
         "ico": "56929242",
         "name": "ZDRUŽENIE OBCÍ PRAVNIANSKEJ DOLINY",
-        "total_contracted_eur": 468417.31,
         "projects_count": 2,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 46841.73,
+        "full_amount_eur": 468417.31,
+        "co_owners": 10
       }
     ],
-    "subsidiary_total_eur": 468417.31,
+    "subsidiary_total_eur": 46841.73,
     "ico": "00318388",
     "municipality": "Opatovce nad Nitrou"
   },
@@ -137,12 +149,14 @@
       {
         "ico": "56929242",
         "name": "ZDRUŽENIE OBCÍ PRAVNIANSKEJ DOLINY",
-        "total_contracted_eur": 468417.31,
         "projects_count": 2,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 46841.73,
+        "full_amount_eur": 468417.31,
+        "co_owners": 10
       }
     ],
-    "subsidiary_total_eur": 468417.31,
+    "subsidiary_total_eur": 46841.73,
     "ico": "00318426",
     "municipality": "Poruba"
   },
@@ -151,12 +165,14 @@
       {
         "ico": "56929242",
         "name": "ZDRUŽENIE OBCÍ PRAVNIANSKEJ DOLINY",
-        "total_contracted_eur": 468417.31,
         "projects_count": 2,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 46841.73,
+        "full_amount_eur": 468417.31,
+        "co_owners": 10
       }
     ],
-    "subsidiary_total_eur": 468417.31,
+    "subsidiary_total_eur": 46841.73,
     "ico": "00318434",
     "municipality": "Pravenec"
   },
@@ -165,12 +181,14 @@
       {
         "ico": "56929242",
         "name": "ZDRUŽENIE OBCÍ PRAVNIANSKEJ DOLINY",
-        "total_contracted_eur": 468417.31,
         "projects_count": 2,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 46841.73,
+        "full_amount_eur": 468417.31,
+        "co_owners": 10
       }
     ],
-    "subsidiary_total_eur": 468417.31,
+    "subsidiary_total_eur": 46841.73,
     "ico": "00318523",
     "municipality": "Tužina"
   },
@@ -179,12 +197,14 @@
       {
         "ico": "56929242",
         "name": "ZDRUŽENIE OBCÍ PRAVNIANSKEJ DOLINY",
-        "total_contracted_eur": 468417.31,
         "projects_count": 2,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 46841.73,
+        "full_amount_eur": 468417.31,
+        "co_owners": 10
       }
     ],
-    "subsidiary_total_eur": 468417.31,
+    "subsidiary_total_eur": 46841.73,
     "ico": "00318221",
     "municipality": "Lazany"
   },
@@ -193,44 +213,44 @@
       {
         "ico": "00492736",
         "name": "Dopravný podnik Bratislava, akciová spoločnosť",
-        "total_contracted_eur": 79509381.09,
         "projects_count": 3,
-        "rpo_relationship": "Jediný akcionár a.s."
+        "rpo_relationship": "Jediný akcionár a.s.",
+        "total_contracted_eur": 79509381.09
       },
       {
         "ico": "00179744",
         "name": "Múzeum mesta Bratislavy",
-        "total_contracted_eur": 2840895.21,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 2840895.21
       },
       {
         "ico": "30808901",
         "name": "Mestské lesy v Bratislave",
-        "total_contracted_eur": 2175104.8,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 2175104.8
       },
       {
         "ico": "00681300",
         "name": "Odvoz a likvidácia odpadu a.s. v skratke: OLO a.s.",
-        "total_contracted_eur": 920657.17,
         "projects_count": 1,
-        "rpo_relationship": "Jediný akcionár a.s."
+        "rpo_relationship": "Jediný akcionár a.s.",
+        "total_contracted_eur": 920657.17
       },
       {
         "ico": "52324940",
         "name": "Metropolitný inštitút Bratislavy",
-        "total_contracted_eur": 655272.59,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 655272.59
       },
       {
         "ico": "00179752",
         "name": "Galéria mesta Bratislavy",
-        "total_contracted_eur": 532683.0,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 532683.0
       }
     ],
     "subsidiary_total_eur": 86633993.86,
@@ -242,9 +262,9 @@
       {
         "ico": "31633765",
         "name": "HATER - HANDLOVÁ spol. s r.o.",
-        "total_contracted_eur": 192503.7,
         "projects_count": 1,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 192503.7
       }
     ],
     "subsidiary_total_eur": 192503.7,
@@ -256,12 +276,14 @@
       {
         "ico": "37805533",
         "name": "Združenie obcí Rajecká dolina",
-        "total_contracted_eur": 430951.24,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 21547.56,
+        "full_amount_eur": 430951.24,
+        "co_owners": 20
       }
     ],
-    "subsidiary_total_eur": 430951.24,
+    "subsidiary_total_eur": 21547.56,
     "ico": "00648981",
     "municipality": "Lietavská Lúčka"
   },
@@ -270,12 +292,14 @@
       {
         "ico": "37805533",
         "name": "Združenie obcí Rajecká dolina",
-        "total_contracted_eur": 430951.24,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 21547.56,
+        "full_amount_eur": 430951.24,
+        "co_owners": 20
       }
     ],
-    "subsidiary_total_eur": 430951.24,
+    "subsidiary_total_eur": 21547.56,
     "ico": "00321427",
     "municipality": "Lietava"
   },
@@ -284,12 +308,14 @@
       {
         "ico": "37805533",
         "name": "Združenie obcí Rajecká dolina",
-        "total_contracted_eur": 430951.24,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 21547.56,
+        "full_amount_eur": 430951.24,
+        "co_owners": 20
       }
     ],
-    "subsidiary_total_eur": 430951.24,
+    "subsidiary_total_eur": 21547.56,
     "ico": "00649210",
     "municipality": "Porúbka"
   },
@@ -298,12 +324,14 @@
       {
         "ico": "37805533",
         "name": "Združenie obcí Rajecká dolina",
-        "total_contracted_eur": 430951.24,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 21547.56,
+        "full_amount_eur": 430951.24,
+        "co_owners": 20
       }
     ],
-    "subsidiary_total_eur": 430951.24,
+    "subsidiary_total_eur": 21547.56,
     "ico": "00648060",
     "municipality": "Turie"
   },
@@ -312,12 +340,14 @@
       {
         "ico": "37805533",
         "name": "Združenie obcí Rajecká dolina",
-        "total_contracted_eur": 430951.24,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 21547.56,
+        "full_amount_eur": 430951.24,
+        "co_owners": 20
       }
     ],
-    "subsidiary_total_eur": 430951.24,
+    "subsidiary_total_eur": 21547.56,
     "ico": "00321443",
     "municipality": "Lietavská Svinná - Babkov"
   },
@@ -326,12 +356,14 @@
       {
         "ico": "37805533",
         "name": "Združenie obcí Rajecká dolina",
-        "total_contracted_eur": 430951.24,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 21547.56,
+        "full_amount_eur": 430951.24,
+        "co_owners": 20
       }
     ],
-    "subsidiary_total_eur": 430951.24,
+    "subsidiary_total_eur": 21547.56,
     "ico": "00321591",
     "municipality": "Rajecké Teplice"
   },
@@ -340,12 +372,14 @@
       {
         "ico": "37805533",
         "name": "Združenie obcí Rajecká dolina",
-        "total_contracted_eur": 430951.24,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 21547.56,
+        "full_amount_eur": 430951.24,
+        "co_owners": 20
       }
     ],
-    "subsidiary_total_eur": 430951.24,
+    "subsidiary_total_eur": 21547.56,
     "ico": "00648892",
     "municipality": "Kunerad"
   },
@@ -354,12 +388,14 @@
       {
         "ico": "37805533",
         "name": "Združenie obcí Rajecká dolina",
-        "total_contracted_eur": 430951.24,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 21547.56,
+        "full_amount_eur": 430951.24,
+        "co_owners": 20
       }
     ],
-    "subsidiary_total_eur": 430951.24,
+    "subsidiary_total_eur": 21547.56,
     "ico": "00648876",
     "municipality": "Konská"
   },
@@ -368,12 +404,14 @@
       {
         "ico": "37805533",
         "name": "Združenie obcí Rajecká dolina",
-        "total_contracted_eur": 430951.24,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 21547.56,
+        "full_amount_eur": 430951.24,
+        "co_owners": 20
       }
     ],
-    "subsidiary_total_eur": 430951.24,
+    "subsidiary_total_eur": 21547.56,
     "ico": "00648906",
     "municipality": "Kamenná Poruba"
   },
@@ -382,12 +420,14 @@
       {
         "ico": "37805533",
         "name": "Združenie obcí Rajecká dolina",
-        "total_contracted_eur": 430951.24,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 21547.56,
+        "full_amount_eur": 430951.24,
+        "co_owners": 20
       }
     ],
-    "subsidiary_total_eur": 430951.24,
+    "subsidiary_total_eur": 21547.56,
     "ico": "00321788",
     "municipality": "Zbyňov"
   },
@@ -396,12 +436,14 @@
       {
         "ico": "37805533",
         "name": "Združenie obcí Rajecká dolina",
-        "total_contracted_eur": 430951.24,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 21547.56,
+        "full_amount_eur": 430951.24,
+        "co_owners": 20
       }
     ],
-    "subsidiary_total_eur": 430951.24,
+    "subsidiary_total_eur": 21547.56,
     "ico": "00648914",
     "municipality": "Kľače"
   },
@@ -410,12 +452,14 @@
       {
         "ico": "37805533",
         "name": "Združenie obcí Rajecká dolina",
-        "total_contracted_eur": 430951.24,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 21547.56,
+        "full_amount_eur": 430951.24,
+        "co_owners": 20
       }
     ],
-    "subsidiary_total_eur": 430951.24,
+    "subsidiary_total_eur": 21547.56,
     "ico": "00321575",
     "municipality": "Rajec"
   },
@@ -424,12 +468,14 @@
       {
         "ico": "37805533",
         "name": "Združenie obcí Rajecká dolina",
-        "total_contracted_eur": 430951.24,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 21547.56,
+        "full_amount_eur": 430951.24,
+        "co_owners": 20
       }
     ],
-    "subsidiary_total_eur": 430951.24,
+    "subsidiary_total_eur": 21547.56,
     "ico": "00632732",
     "municipality": "Ďurčiná"
   },
@@ -438,12 +484,14 @@
       {
         "ico": "37805533",
         "name": "Združenie obcí Rajecká dolina",
-        "total_contracted_eur": 430951.24,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 21547.56,
+        "full_amount_eur": 430951.24,
+        "co_owners": 20
       }
     ],
-    "subsidiary_total_eur": 430951.24,
+    "subsidiary_total_eur": 21547.56,
     "ico": "36138487",
     "municipality": "Šuja"
   },
@@ -452,12 +500,14 @@
       {
         "ico": "37805533",
         "name": "Združenie obcí Rajecká dolina",
-        "total_contracted_eur": 430951.24,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 21547.56,
+        "full_amount_eur": 430951.24,
+        "co_owners": 20
       }
     ],
-    "subsidiary_total_eur": 430951.24,
+    "subsidiary_total_eur": 21547.56,
     "ico": "00321583",
     "municipality": "Rajecká Lesná"
   },
@@ -466,12 +516,14 @@
       {
         "ico": "37805533",
         "name": "Združenie obcí Rajecká dolina",
-        "total_contracted_eur": 430951.24,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 21547.56,
+        "full_amount_eur": 430951.24,
+        "co_owners": 20
       }
     ],
-    "subsidiary_total_eur": 430951.24,
+    "subsidiary_total_eur": 21547.56,
     "ico": "00321265",
     "municipality": "Fačkov"
   },
@@ -480,12 +532,14 @@
       {
         "ico": "37805533",
         "name": "Združenie obcí Rajecká dolina",
-        "total_contracted_eur": 430951.24,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 21547.56,
+        "full_amount_eur": 430951.24,
+        "co_owners": 20
       }
     ],
-    "subsidiary_total_eur": 430951.24,
+    "subsidiary_total_eur": 21547.56,
     "ico": "00321206",
     "municipality": "Čičmany"
   },
@@ -494,12 +548,14 @@
       {
         "ico": "37805533",
         "name": "Združenie obcí Rajecká dolina",
-        "total_contracted_eur": 430951.24,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 21547.56,
+        "full_amount_eur": 430951.24,
+        "co_owners": 20
       }
     ],
-    "subsidiary_total_eur": 430951.24,
+    "subsidiary_total_eur": 21547.56,
     "ico": "00632716",
     "municipality": "Malá Čierna"
   },
@@ -508,12 +564,14 @@
       {
         "ico": "37805533",
         "name": "Združenie obcí Rajecká dolina",
-        "total_contracted_eur": 430951.24,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 21547.56,
+        "full_amount_eur": 430951.24,
+        "co_owners": 20
       }
     ],
-    "subsidiary_total_eur": 430951.24,
+    "subsidiary_total_eur": 21547.56,
     "ico": "00632724",
     "municipality": "Veľká Čierna"
   },
@@ -522,12 +580,14 @@
       {
         "ico": "37805533",
         "name": "Združenie obcí Rajecká dolina",
-        "total_contracted_eur": 430951.24,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 21547.56,
+        "full_amount_eur": 430951.24,
+        "co_owners": 20
       }
     ],
-    "subsidiary_total_eur": 430951.24,
+    "subsidiary_total_eur": 21547.56,
     "ico": "00648884",
     "municipality": "Stránske"
   },
@@ -536,9 +596,9 @@
       {
         "ico": "37910485",
         "name": "Základná škola s materskou školou J.D. Matejovie 539, Liptovský Hrádok",
-        "total_contracted_eur": 212038.19,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 212038.19
       }
     ],
     "subsidiary_total_eur": 212038.19,
@@ -550,30 +610,30 @@
       {
         "ico": "35991852",
         "name": "Základná škola Mihálya Tompu s VJM - Tompa Mihály Alapiskola",
-        "total_contracted_eur": 700545.46,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 700545.46
       },
       {
         "ico": "37831721",
         "name": "Základná škola Š. M. Daxnera, Dr. V. Clementisa 1857/13, Rimavská Sobota",
-        "total_contracted_eur": 505265.51,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 505265.51
       },
       {
         "ico": "37828312",
         "name": "Základná škola Pavla Dobšinského, P. Dobšinského 1744/2, Rimavská Sobota",
-        "total_contracted_eur": 418407.71,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 418407.71
       },
       {
         "ico": "37950975",
         "name": "Základná škola s materskou školou s vyučovacím jazykom maďarským - Alapiskola és Óvoda, Dúžavská cesta 1054/11, Rimavská Sobota",
-        "total_contracted_eur": 298127.0,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 298127.0
       }
     ],
     "subsidiary_total_eur": 1922345.68,
@@ -585,12 +645,14 @@
       {
         "ico": "54471419",
         "name": "Združenie obcí Hajlochy",
-        "total_contracted_eur": 510860.59,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 255430.3,
+        "full_amount_eur": 510860.59,
+        "co_owners": 2
       }
     ],
-    "subsidiary_total_eur": 510860.59,
+    "subsidiary_total_eur": 255430.3,
     "ico": "00308846",
     "municipality": "Černík"
   },
@@ -599,12 +661,14 @@
       {
         "ico": "54471419",
         "name": "Združenie obcí Hajlochy",
-        "total_contracted_eur": 510860.59,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 255430.3,
+        "full_amount_eur": 510860.59,
+        "co_owners": 2
       }
     ],
-    "subsidiary_total_eur": 510860.59,
+    "subsidiary_total_eur": 255430.3,
     "ico": "00309117",
     "municipality": "Mojzesovo"
   },
@@ -613,9 +677,9 @@
       {
         "ico": "35545755",
         "name": "Základná škola s materskou školou, Bracovce 26",
-        "total_contracted_eur": 329255.01,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 329255.01
       }
     ],
     "subsidiary_total_eur": 329255.01,
@@ -627,12 +691,14 @@
       {
         "ico": "50515853",
         "name": "Kežmarská platforma pre sociálne začlenenie, n.o.",
-        "total_contracted_eur": 381873.41,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 190936.7,
+        "full_amount_eur": 381873.41,
+        "co_owners": 2
       }
     ],
-    "subsidiary_total_eur": 381873.41,
+    "subsidiary_total_eur": 190936.7,
     "ico": "00326241",
     "municipality": "Ihľany"
   },
@@ -641,12 +707,14 @@
       {
         "ico": "50515853",
         "name": "Kežmarská platforma pre sociálne začlenenie, n.o.",
-        "total_contracted_eur": 381873.41,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 190936.7,
+        "full_amount_eur": 381873.41,
+        "co_owners": 2
       }
     ],
-    "subsidiary_total_eur": 381873.41,
+    "subsidiary_total_eur": 190936.7,
     "ico": "00326305",
     "municipality": "Krížová Ves"
   },
@@ -655,75 +723,77 @@
       {
         "ico": "54080576",
         "name": "Inovačné centrum Košického kraja Košice Region Innovation Center",
-        "total_contracted_eur": 9638400.0,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 4819200.0,
+        "full_amount_eur": 9638400.0,
+        "co_owners": 2
       },
       {
         "ico": "55969984",
         "name": "BUSINESS KOŠICE, n.o.",
-        "total_contracted_eur": 2685700.0,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 2685700.0
       },
       {
         "ico": "35583461",
         "name": "Creative Industry Košice, n.o.",
-        "total_contracted_eur": 1497987.29,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 1497987.29
       },
       {
         "ico": "35546841",
         "name": "Základná škola Ľudovíta Fullu, Maurerova 21, Košice",
-        "total_contracted_eur": 877812.0,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 877812.0
       },
       {
         "ico": "35546832",
         "name": "Základná škola, Postupimská 37, Košice",
-        "total_contracted_eur": 779157.17,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 779157.17
       },
       {
         "ico": "35542641",
         "name": "Základná škola Drábova 3, Košice",
-        "total_contracted_eur": 490938.79,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 490938.79
       },
       {
         "ico": "31985921",
         "name": "Základná škola Starozagorská 8, Košice",
-        "total_contracted_eur": 368513.99,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 368513.99
       },
       {
         "ico": "00189006",
         "name": "Knižnica pre mládež mesta Košice",
-        "total_contracted_eur": 282393.21,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 282393.21
       },
       {
         "ico": "35543019",
         "name": "Základná škola",
-        "total_contracted_eur": 272064.58,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 272064.58
       },
       {
         "ico": "42323975",
         "name": "K 13 - Košické kultúrne centrá",
-        "total_contracted_eur": 267762.87,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 267762.87
       }
     ],
-    "subsidiary_total_eur": 17160729.9,
+    "subsidiary_total_eur": 12341529.9,
     "ico": "00691135",
     "municipality": "Košice"
   },
@@ -732,12 +802,12 @@
       {
         "ico": "36537870",
         "name": "KOMVaK - Vodárne a kanalizácie mesta Komárna, a.s.",
-        "total_contracted_eur": 0,
         "projects_count": 0,
-        "rpo_relationship": "Jediný akcionár a.s."
+        "rpo_relationship": "Jediný akcionár a.s.",
+        "total_contracted_eur": 0.0
       }
     ],
-    "subsidiary_total_eur": 0,
+    "subsidiary_total_eur": 0.0,
     "ico": "00306525",
     "municipality": "Komárno"
   },
@@ -746,9 +816,9 @@
       {
         "ico": "00513474",
         "name": "Mestské kultúrne stredisko Anny Adamis - Adamis Anna Városi Művelődési Központ",
-        "total_contracted_eur": 1480981.6,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 1480981.6
       }
     ],
     "subsidiary_total_eur": 1480981.6,
@@ -760,9 +830,9 @@
       {
         "ico": "51451859",
         "name": "Thermál Nesvady, s.r.o.",
-        "total_contracted_eur": 113752.81,
         "projects_count": 1,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 113752.81
       }
     ],
     "subsidiary_total_eur": 113752.81,
@@ -774,12 +844,14 @@
       {
         "ico": "37804332",
         "name": "Združenie BIELA ORAVA, pre všestranný rozvoj obcí regiónu Biela Orava",
-        "total_contracted_eur": 478369.9,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 68338.56,
+        "full_amount_eur": 478369.9,
+        "co_owners": 7
       }
     ],
-    "subsidiary_total_eur": 478369.9,
+    "subsidiary_total_eur": 68338.56,
     "ico": "00314412",
     "municipality": "Breza"
   },
@@ -788,12 +860,14 @@
       {
         "ico": "37804332",
         "name": "Združenie BIELA ORAVA, pre všestranný rozvoj obcí regiónu Biela Orava",
-        "total_contracted_eur": 478369.9,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 68338.56,
+        "full_amount_eur": 478369.9,
+        "co_owners": 7
       }
     ],
-    "subsidiary_total_eur": 478369.9,
+    "subsidiary_total_eur": 68338.56,
     "ico": "00314625",
     "municipality": "Lokca"
   },
@@ -802,12 +876,14 @@
       {
         "ico": "37804332",
         "name": "Združenie BIELA ORAVA, pre všestranný rozvoj obcí regiónu Biela Orava",
-        "total_contracted_eur": 478369.9,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 68338.56,
+        "full_amount_eur": 478369.9,
+        "co_owners": 7
       }
     ],
-    "subsidiary_total_eur": 478369.9,
+    "subsidiary_total_eur": 68338.56,
     "ico": "00314633",
     "municipality": "Lomná"
   },
@@ -816,12 +892,14 @@
       {
         "ico": "37804332",
         "name": "Združenie BIELA ORAVA, pre všestranný rozvoj obcí regiónu Biela Orava",
-        "total_contracted_eur": 478369.9,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 68338.56,
+        "full_amount_eur": 478369.9,
+        "co_owners": 7
       }
     ],
-    "subsidiary_total_eur": 478369.9,
+    "subsidiary_total_eur": 68338.56,
     "ico": "00314595",
     "municipality": "Krušetnica"
   },
@@ -830,12 +908,14 @@
       {
         "ico": "37804332",
         "name": "Združenie BIELA ORAVA, pre všestranný rozvoj obcí regiónu Biela Orava",
-        "total_contracted_eur": 478369.9,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 68338.56,
+        "full_amount_eur": 478369.9,
+        "co_owners": 7
       }
     ],
-    "subsidiary_total_eur": 478369.9,
+    "subsidiary_total_eur": 68338.56,
     "ico": "00315001",
     "municipality": "Zákamenné"
   },
@@ -844,12 +924,14 @@
       {
         "ico": "37804332",
         "name": "Združenie BIELA ORAVA, pre všestranný rozvoj obcí regiónu Biela Orava",
-        "total_contracted_eur": 478369.9,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 68338.56,
+        "full_amount_eur": 478369.9,
+        "co_owners": 7
       }
     ],
-    "subsidiary_total_eur": 478369.9,
+    "subsidiary_total_eur": 68338.56,
     "ico": "00314692",
     "municipality": "Novoť"
   },
@@ -858,12 +940,14 @@
       {
         "ico": "37804332",
         "name": "Združenie BIELA ORAVA, pre všestranný rozvoj obcí regiónu Biela Orava",
-        "total_contracted_eur": 478369.9,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 68338.56,
+        "full_amount_eur": 478369.9,
+        "co_owners": 7
       }
     ],
-    "subsidiary_total_eur": 478369.9,
+    "subsidiary_total_eur": 68338.56,
     "ico": "00314722",
     "municipality": "Oravská Lesná"
   },
@@ -872,16 +956,16 @@
       {
         "ico": "31643884",
         "name": "Autobusová doprava Púchov, a.s.",
-        "total_contracted_eur": 599460.0,
         "projects_count": 1,
-        "rpo_relationship": "Jediný akcionár a.s."
+        "rpo_relationship": "Jediný akcionár a.s.",
+        "total_contracted_eur": 599460.0
       },
       {
         "ico": "36321893",
         "name": "Podnik technických služieb mesta, s.r.o.",
-        "total_contracted_eur": 352471.91,
         "projects_count": 1,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 352471.91
       }
     ],
     "subsidiary_total_eur": 951931.9099999999,
@@ -893,16 +977,16 @@
       {
         "ico": "31718922",
         "name": "Dopravný podnik mesta Prešov, akciová spoločnosť",
-        "total_contracted_eur": 43346812.71,
         "projects_count": 2,
-        "rpo_relationship": "Jediný akcionár a.s."
+        "rpo_relationship": "Jediný akcionár a.s.",
+        "total_contracted_eur": 43346812.71
       },
       {
         "ico": "31718914",
         "name": "Technické služby mesta Prešov, a.s.",
-        "total_contracted_eur": 2437626.47,
         "projects_count": 2,
-        "rpo_relationship": "Jediný akcionár a.s."
+        "rpo_relationship": "Jediný akcionár a.s.",
+        "total_contracted_eur": 2437626.47
       }
     ],
     "subsidiary_total_eur": 45784439.18,
@@ -914,9 +998,9 @@
       {
         "ico": "36519821",
         "name": "VEPOS, spol. s r.o.",
-        "total_contracted_eur": 492394.02,
         "projects_count": 1,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 492394.02
       }
     ],
     "subsidiary_total_eur": 492394.02,
@@ -928,9 +1012,9 @@
       {
         "ico": "37876015",
         "name": "Základná škola, Tatranská Lomnica 14123, Vysoké Tatry",
-        "total_contracted_eur": 433153.47,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 433153.47
       }
     ],
     "subsidiary_total_eur": 433153.47,
@@ -942,12 +1026,14 @@
       {
         "ico": "51110369",
         "name": "Integrovaná doprava Žilinského kraja, s.r.o.",
-        "total_contracted_eur": 554347.0,
         "projects_count": 1,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 138586.75,
+        "full_amount_eur": 554347.0,
+        "co_owners": 4
       }
     ],
-    "subsidiary_total_eur": 554347.0,
+    "subsidiary_total_eur": 138586.75,
     "ico": "00312037",
     "municipality": "Trenčín"
   },
@@ -956,26 +1042,30 @@
       {
         "ico": "36007099",
         "name": "Dopravný podnik mesta Žiliny s.r.o.",
-        "total_contracted_eur": 46608316.54,
         "projects_count": 2,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 46608316.54
       },
       {
         "ico": "54264405",
         "name": "InoVia",
-        "total_contracted_eur": 7842505.0,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 3921252.5,
+        "full_amount_eur": 7842505.0,
+        "co_owners": 2
       },
       {
         "ico": "51110369",
         "name": "Integrovaná doprava Žilinského kraja, s.r.o.",
-        "total_contracted_eur": 554347.0,
         "projects_count": 1,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 138586.75,
+        "full_amount_eur": 554347.0,
+        "co_owners": 4
       }
     ],
-    "subsidiary_total_eur": 55005168.54,
+    "subsidiary_total_eur": 50668155.79,
     "ico": "00321796",
     "municipality": "Žilina"
   },
@@ -984,9 +1074,9 @@
       {
         "ico": "55380174",
         "name": "Služby občanom mesta Levice, s. r. o., r. s. p. (SOM Levice)",
-        "total_contracted_eur": 96032.5,
         "projects_count": 1,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 96032.5
       }
     ],
     "subsidiary_total_eur": 96032.5,
@@ -998,16 +1088,16 @@
       {
         "ico": "31908969",
         "name": "Nemocnica s poliklinikou Brezno, n.o.",
-        "total_contracted_eur": 2912819.73,
         "projects_count": 2,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 2912819.73
       },
       {
         "ico": "00183067",
         "name": "Mestské služby, kultúra a šport Brezno",
-        "total_contracted_eur": 639765.85,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 639765.85
       }
     ],
     "subsidiary_total_eur": 3552585.58,
@@ -1019,9 +1109,9 @@
       {
         "ico": "54239931",
         "name": "Sociálny podnik Oravský Podzámok s.r.o.",
-        "total_contracted_eur": 322652.57,
         "projects_count": 1,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 322652.57
       }
     ],
     "subsidiary_total_eur": 322652.57,
@@ -1033,9 +1123,9 @@
       {
         "ico": "37813455",
         "name": "Základná škola, Kvačany 227",
-        "total_contracted_eur": 297333.99,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 297333.99
       }
     ],
     "subsidiary_total_eur": 297333.99,
@@ -1047,12 +1137,14 @@
       {
         "ico": "52820254",
         "name": "Združenie obcí - Kráľová pri Senci – Kostolná pri Dunaji - Hrubá Borša",
-        "total_contracted_eur": 10196873.75,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 3398957.92,
+        "full_amount_eur": 10196873.75,
+        "co_owners": 3
       }
     ],
-    "subsidiary_total_eur": 10196873.75,
+    "subsidiary_total_eur": 3398957.92,
     "ico": "00306061",
     "municipality": "Kráľová pri Senci"
   },
@@ -1061,12 +1153,14 @@
       {
         "ico": "52820254",
         "name": "Združenie obcí - Kráľová pri Senci – Kostolná pri Dunaji - Hrubá Borša",
-        "total_contracted_eur": 10196873.75,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 3398957.92,
+        "full_amount_eur": 10196873.75,
+        "co_owners": 3
       }
     ],
-    "subsidiary_total_eur": 10196873.75,
+    "subsidiary_total_eur": 3398957.92,
     "ico": "00306037",
     "municipality": "Kostolná pri Dunaji"
   },
@@ -1075,12 +1169,14 @@
       {
         "ico": "52820254",
         "name": "Združenie obcí - Kráľová pri Senci – Kostolná pri Dunaji - Hrubá Borša",
-        "total_contracted_eur": 10196873.75,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 3398957.92,
+        "full_amount_eur": 10196873.75,
+        "co_owners": 3
       }
     ],
-    "subsidiary_total_eur": 10196873.75,
+    "subsidiary_total_eur": 3398957.92,
     "ico": "00305979",
     "municipality": "Hrubá Borša"
   },
@@ -1089,12 +1185,14 @@
       {
         "ico": "37905805",
         "name": "MIKROREGIÓN BYSTRICKÁ DOLINA",
-        "total_contracted_eur": 1184873.92,
         "projects_count": 2,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 197478.99,
+        "full_amount_eur": 1184873.92,
+        "co_owners": 6
       }
     ],
-    "subsidiary_total_eur": 1184873.92,
+    "subsidiary_total_eur": 197478.99,
     "ico": "00314307",
     "municipality": "Stará Bystrica"
   },
@@ -1103,12 +1201,14 @@
       {
         "ico": "37905805",
         "name": "MIKROREGIÓN BYSTRICKÁ DOLINA",
-        "total_contracted_eur": 1184873.92,
         "projects_count": 2,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 197478.99,
+        "full_amount_eur": 1184873.92,
+        "co_owners": 6
       }
     ],
-    "subsidiary_total_eur": 1184873.92,
+    "subsidiary_total_eur": 197478.99,
     "ico": "00314145",
     "municipality": "Nová Bystrica"
   },
@@ -1117,12 +1217,14 @@
       {
         "ico": "37905805",
         "name": "MIKROREGIÓN BYSTRICKÁ DOLINA",
-        "total_contracted_eur": 1184873.92,
         "projects_count": 2,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 197478.99,
+        "full_amount_eur": 1184873.92,
+        "co_owners": 6
       }
     ],
-    "subsidiary_total_eur": 1184873.92,
+    "subsidiary_total_eur": 197478.99,
     "ico": "00314056",
     "municipality": "Klubina"
   },
@@ -1131,12 +1233,14 @@
       {
         "ico": "37905805",
         "name": "MIKROREGIÓN BYSTRICKÁ DOLINA",
-        "total_contracted_eur": 1184873.92,
         "projects_count": 2,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 197478.99,
+        "full_amount_eur": 1184873.92,
+        "co_owners": 6
       }
     ],
-    "subsidiary_total_eur": 1184873.92,
+    "subsidiary_total_eur": 197478.99,
     "ico": "00314226",
     "municipality": "Radôstka"
   },
@@ -1145,12 +1249,14 @@
       {
         "ico": "37905805",
         "name": "MIKROREGIÓN BYSTRICKÁ DOLINA",
-        "total_contracted_eur": 1184873.92,
         "projects_count": 2,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 197478.99,
+        "full_amount_eur": 1184873.92,
+        "co_owners": 6
       }
     ],
-    "subsidiary_total_eur": 1184873.92,
+    "subsidiary_total_eur": 197478.99,
     "ico": "00314366",
     "municipality": "Zborov nad Bystricou"
   },
@@ -1159,12 +1265,14 @@
       {
         "ico": "37905805",
         "name": "MIKROREGIÓN BYSTRICKÁ DOLINA",
-        "total_contracted_eur": 1184873.92,
         "projects_count": 2,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 197478.99,
+        "full_amount_eur": 1184873.92,
+        "co_owners": 6
       }
     ],
-    "subsidiary_total_eur": 1184873.92,
+    "subsidiary_total_eur": 197478.99,
     "ico": "00321451",
     "municipality": "Lutiše"
   },
@@ -1173,16 +1281,16 @@
       {
         "ico": "36168475",
         "name": "EKOS, spol. s r.o. Stará Ľubovňa",
-        "total_contracted_eur": 519732.28,
         "projects_count": 1,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 519732.28
       },
       {
         "ico": "53538773",
         "name": "Verejnoprospešné služby Stará Ľubovňa, s. r. o.",
-        "total_contracted_eur": 283439.28,
         "projects_count": 1,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 283439.28
       }
     ],
     "subsidiary_total_eur": 803171.56,
@@ -1194,9 +1302,9 @@
       {
         "ico": "36057029",
         "name": "Technické služby Detva s.r.o.",
-        "total_contracted_eur": 499937.0,
         "projects_count": 1,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 499937.0
       }
     ],
     "subsidiary_total_eur": 499937.0,
@@ -1208,9 +1316,9 @@
       {
         "ico": "37831305",
         "name": "Základná škola, Kriváň 435",
-        "total_contracted_eur": 543444.53,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 543444.53
       }
     ],
     "subsidiary_total_eur": 543444.53,
@@ -1222,16 +1330,16 @@
       {
         "ico": "37873377",
         "name": "Základná škola, Sídlisko II. 1336, Vranov nad Topľou",
-        "total_contracted_eur": 680935.17,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 680935.17
       },
       {
         "ico": "37873385",
         "name": "Základná škola Lúčna Vranov nad Topľou",
-        "total_contracted_eur": 519214.57,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 519214.57
       }
     ],
     "subsidiary_total_eur": 1200149.74,
@@ -1243,9 +1351,9 @@
       {
         "ico": "42234891",
         "name": "Verejnoprospešné služby Mesta Kežmarok",
-        "total_contracted_eur": 238099.08,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 238099.08
       }
     ],
     "subsidiary_total_eur": 238099.08,
@@ -1257,9 +1365,9 @@
       {
         "ico": "45746940",
         "name": "Bánovská regionálna rozvojová agentúra",
-        "total_contracted_eur": 299986.97,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 299986.97
       }
     ],
     "subsidiary_total_eur": 299986.97,
@@ -1271,16 +1379,16 @@
       {
         "ico": "31436200",
         "name": "Nitrianske komunálne služby, s.r.o.",
-        "total_contracted_eur": 489881.66,
         "projects_count": 1,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 489881.66
       },
       {
         "ico": "37966456",
         "name": "Správa zariadení sociálnych služieb",
-        "total_contracted_eur": 74946.18,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 74946.18
       }
     ],
     "subsidiary_total_eur": 564827.84,
@@ -1292,9 +1400,9 @@
       {
         "ico": "00696463",
         "name": "Správa mestských komunikácií Poprad",
-        "total_contracted_eur": 578442.0,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 578442.0
       }
     ],
     "subsidiary_total_eur": 578442.0,
@@ -1306,9 +1414,9 @@
       {
         "ico": "00163988",
         "name": "Technické služby, príspevková organizácia mesta",
-        "total_contracted_eur": 159333.7,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 159333.7
       }
     ],
     "subsidiary_total_eur": 159333.7,
@@ -1320,9 +1428,9 @@
       {
         "ico": "37833863",
         "name": "Základná škola Sama Tomášika s Materskou školou",
-        "total_contracted_eur": 1032112.7,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 1032112.7
       }
     ],
     "subsidiary_total_eur": 1032112.7,
@@ -1334,9 +1442,9 @@
       {
         "ico": "37923617",
         "name": "SPOKOJNOSŤ - centrum sociálnych služieb, n.o.",
-        "total_contracted_eur": 271264.0,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 271264.0
       }
     ],
     "subsidiary_total_eur": 271264.0,
@@ -1348,9 +1456,9 @@
       {
         "ico": "35545771",
         "name": "Základná škola Istvána Dobóa s vyučovacím jazykom maďarským - Dobó István Alapiskola, Veľké Slemence 18 - Nagyszelmenc",
-        "total_contracted_eur": 323922.81,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 323922.81
       }
     ],
     "subsidiary_total_eur": 323922.81,
@@ -1362,9 +1470,9 @@
       {
         "ico": "36312941",
         "name": "TSM Dubnica nad Váhom, s.r.o., r.s.p.",
-        "total_contracted_eur": 360108.5,
         "projects_count": 1,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 360108.5
       }
     ],
     "subsidiary_total_eur": 360108.5,
@@ -1376,9 +1484,9 @@
       {
         "ico": "37828541",
         "name": "Základná škola Jozefa Dekreta Matejovie, Jánošovka, Školská 511/2, Čierny Balog",
-        "total_contracted_eur": 209467.72,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 209467.72
       }
     ],
     "subsidiary_total_eur": 209467.72,
@@ -1390,9 +1498,9 @@
       {
         "ico": "53046587",
         "name": "Obecný podnik Rohožník s.r.o.",
-        "total_contracted_eur": 535000.0,
         "projects_count": 1,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 535000.0
       }
     ],
     "subsidiary_total_eur": 535000.0,
@@ -1404,9 +1512,9 @@
       {
         "ico": "31305784",
         "name": "SLUŽBA, mestský podnik Stropkov",
-        "total_contracted_eur": 875263.89,
         "projects_count": 2,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 875263.89
       }
     ],
     "subsidiary_total_eur": 875263.89,
@@ -1418,9 +1526,9 @@
       {
         "ico": "00185213",
         "name": "Technické služby, mestský podnik Banská Štiavnica",
-        "total_contracted_eur": 431358.94,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 431358.94
       }
     ],
     "subsidiary_total_eur": 431358.94,
@@ -1432,9 +1540,9 @@
       {
         "ico": "00186155",
         "name": "Technické služby mesta Humenné",
-        "total_contracted_eur": 134779.37,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 134779.37
       }
     ],
     "subsidiary_total_eur": 134779.37,
@@ -1446,9 +1554,9 @@
       {
         "ico": "36016411",
         "name": "Dopravný podnik mesta Banská Bystrica, a.s.",
-        "total_contracted_eur": 4879074.03,
         "projects_count": 1,
-        "rpo_relationship": "Jediný akcionár a.s."
+        "rpo_relationship": "Jediný akcionár a.s.",
+        "total_contracted_eur": 4879074.03
       }
     ],
     "subsidiary_total_eur": 4879074.03,
@@ -1460,9 +1568,9 @@
       {
         "ico": "35546328",
         "name": "Základná škola s materskou školou, Školská 20, Margecany",
-        "total_contracted_eur": 306104.86,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 306104.86
       }
     ],
     "subsidiary_total_eur": 306104.86,
@@ -1474,9 +1582,9 @@
       {
         "ico": "46941037",
         "name": "Trstenské technické služby - T T S, s.r.o",
-        "total_contracted_eur": 399784.37,
         "projects_count": 1,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 399784.37
       }
     ],
     "subsidiary_total_eur": 399784.37,
@@ -1488,9 +1596,9 @@
       {
         "ico": "35606347",
         "name": "Mestská poliklinika",
-        "total_contracted_eur": 3150420.0,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 3150420.0
       }
     ],
     "subsidiary_total_eur": 3150420.0,
@@ -1502,9 +1610,9 @@
       {
         "ico": "36273074",
         "name": "Mestská poliklinika Senica, a.s.",
-        "total_contracted_eur": 3148897.21,
         "projects_count": 1,
-        "rpo_relationship": "Jediný akcionár a.s."
+        "rpo_relationship": "Jediný akcionár a.s.",
+        "total_contracted_eur": 3148897.21
       }
     ],
     "subsidiary_total_eur": 3148897.21,
@@ -1516,12 +1624,14 @@
       {
         "ico": "37937278",
         "name": "Združenie obcí EKOTORYSA",
-        "total_contracted_eur": 854100.71,
         "projects_count": 1,
-        "rpo_relationship": "Iná zainteresovaná osoba"
+        "rpo_relationship": "Iná zainteresovaná osoba",
+        "total_contracted_eur": 40671.46,
+        "full_amount_eur": 854100.71,
+        "co_owners": 21
       }
     ],
-    "subsidiary_total_eur": 854100.71,
+    "subsidiary_total_eur": 40671.46,
     "ico": "00690562",
     "municipality": "Mošurov"
   },
@@ -1530,12 +1640,14 @@
       {
         "ico": "37937278",
         "name": "Združenie obcí EKOTORYSA",
-        "total_contracted_eur": 854100.71,
         "projects_count": 1,
-        "rpo_relationship": "Iná zainteresovaná osoba"
+        "rpo_relationship": "Iná zainteresovaná osoba",
+        "total_contracted_eur": 40671.46,
+        "full_amount_eur": 854100.71,
+        "co_owners": 21
       }
     ],
-    "subsidiary_total_eur": 854100.71,
+    "subsidiary_total_eur": 40671.46,
     "ico": "00690538",
     "municipality": "Ľubotice"
   },
@@ -1544,12 +1656,14 @@
       {
         "ico": "37937278",
         "name": "Združenie obcí EKOTORYSA",
-        "total_contracted_eur": 854100.71,
         "projects_count": 1,
-        "rpo_relationship": "Iná zainteresovaná osoba"
+        "rpo_relationship": "Iná zainteresovaná osoba",
+        "total_contracted_eur": 40671.46,
+        "full_amount_eur": 854100.71,
+        "co_owners": 21
       }
     ],
-    "subsidiary_total_eur": 854100.71,
+    "subsidiary_total_eur": 40671.46,
     "ico": "00327433",
     "municipality": "Malý Slivník"
   },
@@ -1558,12 +1672,14 @@
       {
         "ico": "37937278",
         "name": "Združenie obcí EKOTORYSA",
-        "total_contracted_eur": 854100.71,
         "projects_count": 1,
-        "rpo_relationship": "Iná zainteresovaná osoba"
+        "rpo_relationship": "Iná zainteresovaná osoba",
+        "total_contracted_eur": 40671.46,
+        "full_amount_eur": 854100.71,
+        "co_owners": 21
       }
     ],
-    "subsidiary_total_eur": 854100.71,
+    "subsidiary_total_eur": 40671.46,
     "ico": "00328006",
     "municipality": "Vyšná Šebastová"
   },
@@ -1572,12 +1688,14 @@
       {
         "ico": "37937278",
         "name": "Združenie obcí EKOTORYSA",
-        "total_contracted_eur": 854100.71,
         "projects_count": 1,
-        "rpo_relationship": "Iná zainteresovaná osoba"
+        "rpo_relationship": "Iná zainteresovaná osoba",
+        "total_contracted_eur": 40671.46,
+        "full_amount_eur": 854100.71,
+        "co_owners": 21
       }
     ],
-    "subsidiary_total_eur": 854100.71,
+    "subsidiary_total_eur": 40671.46,
     "ico": "00327018",
     "municipality": "Fintice"
   },
@@ -1586,12 +1704,14 @@
       {
         "ico": "37937278",
         "name": "Združenie obcí EKOTORYSA",
-        "total_contracted_eur": 854100.71,
         "projects_count": 1,
-        "rpo_relationship": "Iná zainteresovaná osoba"
+        "rpo_relationship": "Iná zainteresovaná osoba",
+        "total_contracted_eur": 40671.46,
+        "full_amount_eur": 854100.71,
+        "co_owners": 21
       }
     ],
-    "subsidiary_total_eur": 854100.71,
+    "subsidiary_total_eur": 40671.46,
     "ico": "00327913",
     "municipality": "Tulčík"
   },
@@ -1600,12 +1720,14 @@
       {
         "ico": "37937278",
         "name": "Združenie obcí EKOTORYSA",
-        "total_contracted_eur": 854100.71,
         "projects_count": 1,
-        "rpo_relationship": "Iná zainteresovaná osoba"
+        "rpo_relationship": "Iná zainteresovaná osoba",
+        "total_contracted_eur": 40671.46,
+        "full_amount_eur": 854100.71,
+        "co_owners": 21
       }
     ],
-    "subsidiary_total_eur": 854100.71,
+    "subsidiary_total_eur": 40671.46,
     "ico": "00327336",
     "municipality": "Lada"
   },
@@ -1614,12 +1736,14 @@
       {
         "ico": "37937278",
         "name": "Združenie obcí EKOTORYSA",
-        "total_contracted_eur": 854100.71,
         "projects_count": 1,
-        "rpo_relationship": "Iná zainteresovaná osoba"
+        "rpo_relationship": "Iná zainteresovaná osoba",
+        "total_contracted_eur": 40671.46,
+        "full_amount_eur": 854100.71,
+        "co_owners": 21
       }
     ],
-    "subsidiary_total_eur": 854100.71,
+    "subsidiary_total_eur": 40671.46,
     "ico": "00328022",
     "municipality": "Záhradné"
   },
@@ -1628,12 +1752,14 @@
       {
         "ico": "37937278",
         "name": "Združenie obcí EKOTORYSA",
-        "total_contracted_eur": 854100.71,
         "projects_count": 1,
-        "rpo_relationship": "Iná zainteresovaná osoba"
+        "rpo_relationship": "Iná zainteresovaná osoba",
+        "total_contracted_eur": 40671.46,
+        "full_amount_eur": 854100.71,
+        "co_owners": 21
       }
     ],
-    "subsidiary_total_eur": 854100.71,
+    "subsidiary_total_eur": 40671.46,
     "ico": "00327042",
     "municipality": "Geraltov"
   },
@@ -1642,12 +1768,14 @@
       {
         "ico": "37937278",
         "name": "Združenie obcí EKOTORYSA",
-        "total_contracted_eur": 854100.71,
         "projects_count": 1,
-        "rpo_relationship": "Iná zainteresovaná osoba"
+        "rpo_relationship": "Iná zainteresovaná osoba",
+        "total_contracted_eur": 40671.46,
+        "full_amount_eur": 854100.71,
+        "co_owners": 21
       }
     ],
-    "subsidiary_total_eur": 854100.71,
+    "subsidiary_total_eur": 40671.46,
     "ico": "00327891",
     "municipality": "Trnkov"
   },
@@ -1656,12 +1784,14 @@
       {
         "ico": "37937278",
         "name": "Združenie obcí EKOTORYSA",
-        "total_contracted_eur": 854100.71,
         "projects_count": 1,
-        "rpo_relationship": "Iná zainteresovaná osoba"
+        "rpo_relationship": "Iná zainteresovaná osoba",
+        "total_contracted_eur": 40671.46,
+        "full_amount_eur": 854100.71,
+        "co_owners": 21
       }
     ],
-    "subsidiary_total_eur": 854100.71,
+    "subsidiary_total_eur": 40671.46,
     "ico": "00326950",
     "municipality": "Demjata"
   },
@@ -1670,12 +1800,14 @@
       {
         "ico": "37937278",
         "name": "Združenie obcí EKOTORYSA",
-        "total_contracted_eur": 854100.71,
         "projects_count": 1,
-        "rpo_relationship": "Iná zainteresovaná osoba"
+        "rpo_relationship": "Iná zainteresovaná osoba",
+        "total_contracted_eur": 40671.46,
+        "full_amount_eur": 854100.71,
+        "co_owners": 21
       }
     ],
-    "subsidiary_total_eur": 854100.71,
+    "subsidiary_total_eur": 40671.46,
     "ico": "00690571",
     "municipality": "Veľký Slivník"
   },
@@ -1684,12 +1816,14 @@
       {
         "ico": "37937278",
         "name": "Združenie obcí EKOTORYSA",
-        "total_contracted_eur": 854100.71,
         "projects_count": 1,
-        "rpo_relationship": "Iná zainteresovaná osoba"
+        "rpo_relationship": "Iná zainteresovaná osoba",
+        "total_contracted_eur": 40671.46,
+        "full_amount_eur": 854100.71,
+        "co_owners": 21
       }
     ],
-    "subsidiary_total_eur": 854100.71,
+    "subsidiary_total_eur": 40671.46,
     "ico": "00326895",
     "municipality": "Bzenov"
   },
@@ -1698,12 +1832,14 @@
       {
         "ico": "37937278",
         "name": "Združenie obcí EKOTORYSA",
-        "total_contracted_eur": 854100.71,
         "projects_count": 1,
-        "rpo_relationship": "Iná zainteresovaná osoba"
+        "rpo_relationship": "Iná zainteresovaná osoba",
+        "total_contracted_eur": 40671.46,
+        "full_amount_eur": 854100.71,
+        "co_owners": 21
       }
     ],
-    "subsidiary_total_eur": 854100.71,
+    "subsidiary_total_eur": 40671.46,
     "ico": "00327204",
     "municipality": "Janovík"
   },
@@ -1712,12 +1848,14 @@
       {
         "ico": "37937278",
         "name": "Združenie obcí EKOTORYSA",
-        "total_contracted_eur": 854100.71,
         "projects_count": 1,
-        "rpo_relationship": "Iná zainteresovaná osoba"
+        "rpo_relationship": "Iná zainteresovaná osoba",
+        "total_contracted_eur": 40671.46,
+        "full_amount_eur": 854100.71,
+        "co_owners": 21
       }
     ],
-    "subsidiary_total_eur": 854100.71,
+    "subsidiary_total_eur": 40671.46,
     "ico": "00327255",
     "municipality": "Klenov"
   },
@@ -1726,12 +1864,14 @@
       {
         "ico": "37937278",
         "name": "Združenie obcí EKOTORYSA",
-        "total_contracted_eur": 854100.71,
         "projects_count": 1,
-        "rpo_relationship": "Iná zainteresovaná osoba"
+        "rpo_relationship": "Iná zainteresovaná osoba",
+        "total_contracted_eur": 40671.46,
+        "full_amount_eur": 854100.71,
+        "co_owners": 21
       }
     ],
-    "subsidiary_total_eur": 854100.71,
+    "subsidiary_total_eur": 40671.46,
     "ico": "00327395",
     "municipality": "Ľubovec"
   },
@@ -1740,12 +1880,14 @@
       {
         "ico": "37937278",
         "name": "Združenie obcí EKOTORYSA",
-        "total_contracted_eur": 854100.71,
         "projects_count": 1,
-        "rpo_relationship": "Iná zainteresovaná osoba"
+        "rpo_relationship": "Iná zainteresovaná osoba",
+        "total_contracted_eur": 40671.46,
+        "full_amount_eur": 854100.71,
+        "co_owners": 21
       }
     ],
-    "subsidiary_total_eur": 854100.71,
+    "subsidiary_total_eur": 40671.46,
     "ico": "00327468",
     "municipality": "Miklušovce"
   },
@@ -1754,12 +1896,14 @@
       {
         "ico": "37937278",
         "name": "Združenie obcí EKOTORYSA",
-        "total_contracted_eur": 854100.71,
         "projects_count": 1,
-        "rpo_relationship": "Iná zainteresovaná osoba"
+        "rpo_relationship": "Iná zainteresovaná osoba",
+        "total_contracted_eur": 40671.46,
+        "full_amount_eur": 854100.71,
+        "co_owners": 21
       }
     ],
-    "subsidiary_total_eur": 854100.71,
+    "subsidiary_total_eur": 40671.46,
     "ico": "00327662",
     "municipality": "Radatice"
   },
@@ -1768,12 +1912,14 @@
       {
         "ico": "37937278",
         "name": "Združenie obcí EKOTORYSA",
-        "total_contracted_eur": 854100.71,
         "projects_count": 1,
-        "rpo_relationship": "Iná zainteresovaná osoba"
+        "rpo_relationship": "Iná zainteresovaná osoba",
+        "total_contracted_eur": 40671.46,
+        "full_amount_eur": 854100.71,
+        "co_owners": 21
       }
     ],
-    "subsidiary_total_eur": 854100.71,
+    "subsidiary_total_eur": 40671.46,
     "ico": "00327743",
     "municipality": "Sedlice"
   },
@@ -1782,12 +1928,14 @@
       {
         "ico": "37937278",
         "name": "Združenie obcí EKOTORYSA",
-        "total_contracted_eur": 854100.71,
         "projects_count": 1,
-        "rpo_relationship": "Iná zainteresovaná osoba"
+        "rpo_relationship": "Iná zainteresovaná osoba",
+        "total_contracted_eur": 40671.46,
+        "full_amount_eur": 854100.71,
+        "co_owners": 21
       }
     ],
-    "subsidiary_total_eur": 854100.71,
+    "subsidiary_total_eur": 40671.46,
     "ico": "00327751",
     "municipality": "Seniakovce"
   },
@@ -1796,12 +1944,14 @@
       {
         "ico": "37937278",
         "name": "Združenie obcí EKOTORYSA",
-        "total_contracted_eur": 854100.71,
         "projects_count": 1,
-        "rpo_relationship": "Iná zainteresovaná osoba"
+        "rpo_relationship": "Iná zainteresovaná osoba",
+        "total_contracted_eur": 40671.46,
+        "full_amount_eur": 854100.71,
+        "co_owners": 21
       }
     ],
-    "subsidiary_total_eur": 854100.71,
+    "subsidiary_total_eur": 40671.46,
     "ico": "00690635",
     "municipality": "Suchá Dolina"
   },
@@ -1810,12 +1960,12 @@
       {
         "ico": "44299311",
         "name": "Mestský podnik služieb Žarnovica s.r.o.",
-        "total_contracted_eur": 0,
         "projects_count": 0,
-        "rpo_relationship": "Spoločník v.o.s. / s.r.o."
+        "rpo_relationship": "Spoločník v.o.s. / s.r.o.",
+        "total_contracted_eur": 0.0
       }
     ],
-    "subsidiary_total_eur": 0,
+    "subsidiary_total_eur": 0.0,
     "ico": "00321117",
     "municipality": "Žarnovica"
   },
@@ -1824,9 +1974,9 @@
       {
         "ico": "00188433",
         "name": "Technické služby mesta Trebišov",
-        "total_contracted_eur": 405733.28,
         "projects_count": 1,
-        "rpo_relationship": "Zriaďovateľ"
+        "rpo_relationship": "Zriaďovateľ",
+        "total_contracted_eur": 405733.28
       }
     ],
     "subsidiary_total_eur": 405733.28,
@@ -1838,12 +1988,14 @@
       {
         "ico": "42298296",
         "name": "Združenie obcí Veselé ČOV",
-        "total_contracted_eur": 16702870.2,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 4175717.55,
+        "full_amount_eur": 16702870.2,
+        "co_owners": 4
       }
     ],
-    "subsidiary_total_eur": 16702870.2,
+    "subsidiary_total_eur": 4175717.55,
     "ico": "00312916",
     "municipality": "Rakovice"
   },
@@ -1852,12 +2004,14 @@
       {
         "ico": "42298296",
         "name": "Združenie obcí Veselé ČOV",
-        "total_contracted_eur": 16702870.2,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 4175717.55,
+        "full_amount_eur": 16702870.2,
+        "co_owners": 4
       }
     ],
-    "subsidiary_total_eur": 16702870.2,
+    "subsidiary_total_eur": 4175717.55,
     "ico": "00313165",
     "municipality": "Veselé"
   },
@@ -1866,12 +2020,14 @@
       {
         "ico": "42298296",
         "name": "Združenie obcí Veselé ČOV",
-        "total_contracted_eur": 16702870.2,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 4175717.55,
+        "full_amount_eur": 16702870.2,
+        "co_owners": 4
       }
     ],
-    "subsidiary_total_eur": 16702870.2,
+    "subsidiary_total_eur": 4175717.55,
     "ico": "00312304",
     "municipality": "Borovce"
   },
@@ -1880,12 +2036,14 @@
       {
         "ico": "42298296",
         "name": "Združenie obcí Veselé ČOV",
-        "total_contracted_eur": 16702870.2,
         "projects_count": 1,
-        "rpo_relationship": "Zakladateľ "
+        "rpo_relationship": "Zakladateľ ",
+        "total_contracted_eur": 4175717.55,
+        "full_amount_eur": 16702870.2,
+        "co_owners": 4
       }
     ],
-    "subsidiary_total_eur": 16702870.2,
+    "subsidiary_total_eur": 4175717.55,
     "ico": "00312479",
     "municipality": "Dubovany"
   }
