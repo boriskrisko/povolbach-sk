@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { useData } from '@/lib/DataContext';
+import { useData, type Period } from '@/lib/DataContext';
 import { Municipality } from '@/lib/types';
 import { searchMunicipalitiesFlexible, formatAmount, getTotalEur, formatBillions } from '@/lib/utils';
 import { t, type Locale } from '@/lib/translations';
@@ -21,9 +21,20 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale }: 
   const inputRef = useRef<HTMLInputElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const periodToggleRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef(0);
   const [showStickyToggle, setShowStickyToggle] = useState(false);
   const tr = t[locale];
   const is2127Available = periodAvailable['2127'];
+
+  function handlePeriodChange(newPeriod: Period) {
+    scrollRef.current = window.scrollY;
+    setPeriod(newPeriod);
+  }
+
+  // Restore scroll position after period change re-renders shift layout
+  useEffect(() => {
+    window.scrollTo({ top: scrollRef.current, behavior: 'instant' });
+  }, [period]);
 
   useEffect(() => {
     const el = periodToggleRef.current;
@@ -202,7 +213,7 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale }: 
             <button
               type="button"
               onMouseDown={e => e.preventDefault()}
-              onClick={() => setPeriod('1420')}
+              onClick={() => handlePeriodChange('1420')}
               className={`px-4 py-1.5 text-sm font-medium transition-colors ${
                 period === '1420'
                   ? 'bg-[#3b82f6] text-white'
@@ -214,7 +225,7 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale }: 
             <button
               type="button"
               onMouseDown={e => e.preventDefault()}
-              onClick={() => is2127Available && setPeriod('2127')}
+              onClick={() => is2127Available && handlePeriodChange('2127')}
               disabled={!is2127Available}
               className={`px-4 py-1.5 text-sm font-medium transition-colors ${
                 period === '2127'
@@ -265,7 +276,7 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale }: 
           <button
             type="button"
             onMouseDown={e => e.preventDefault()}
-            onClick={() => setPeriod('1420')}
+            onClick={() => handlePeriodChange('1420')}
             className={`px-3 py-1 text-sm font-medium transition-colors ${
               period === '1420' ? 'bg-[#3b82f6] text-white' : 'text-[#94a3b8] hover:text-[#f8fafc]'
             }`}
@@ -275,7 +286,7 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale }: 
           <button
             type="button"
             onMouseDown={e => e.preventDefault()}
-            onClick={() => is2127Available && setPeriod('2127')}
+            onClick={() => is2127Available && handlePeriodChange('2127')}
             disabled={!is2127Available}
             className={`px-3 py-1 text-sm font-medium transition-colors ${
               period === '2127'

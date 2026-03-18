@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { DataProvider } from '@/lib/DataContext';
+import { DataProvider, useData } from '@/lib/DataContext';
 import { Municipality } from '@/lib/types';
 import { type Locale } from '@/lib/translations';
 import dynamic from 'next/dynamic';
@@ -14,19 +14,20 @@ import StatsContext from '@/components/StatsContext';
 import Footer from '@/components/Footer';
 import MunicipalityModal from '@/components/MunicipalityModal';
 
-export default function Home() {
+function PageContent() {
+  const { isTransitioning } = useData();
   const [selectedMunicipality, setSelectedMunicipality] = useState<Municipality | null>(null);
   const [viewMode, setViewMode] = useState<'total' | 'capita'>('total');
   const [locale, setLocale] = useState<Locale>('sk');
 
   return (
-    <DataProvider>
-      <main className="min-h-screen bg-[#0a0a0f]">
-        <HeroSearch
-          onSelectMunicipality={setSelectedMunicipality}
-          locale={locale}
-          setLocale={setLocale}
-        />
+    <main className="min-h-screen bg-[#0a0a0f]">
+      <HeroSearch
+        onSelectMunicipality={setSelectedMunicipality}
+        locale={locale}
+        setLocale={setLocale}
+      />
+      <div style={{ opacity: isTransitioning ? 0.5 : 1, transition: 'opacity 0.25s ease' }}>
         <Leaderboard
           onSelectMunicipality={setSelectedMunicipality}
           viewMode={viewMode}
@@ -47,12 +48,20 @@ export default function Home() {
         />
         <StatsContext locale={locale} />
         <Footer locale={locale} />
-        <MunicipalityModal
-          municipality={selectedMunicipality}
-          onClose={() => setSelectedMunicipality(null)}
-          locale={locale}
-        />
-      </main>
+      </div>
+      <MunicipalityModal
+        municipality={selectedMunicipality}
+        onClose={() => setSelectedMunicipality(null)}
+        locale={locale}
+      />
+    </main>
+  );
+}
+
+export default function Home() {
+  return (
+    <DataProvider>
+      <PageContent />
     </DataProvider>
   );
 }

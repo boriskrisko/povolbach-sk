@@ -11,6 +11,7 @@ interface DataContextType {
   period: Period;
   setPeriod: (p: Period) => void;
   periodAvailable: Record<Period, boolean>;
+  isTransitioning: boolean;
 }
 
 const DataContext = createContext<DataContextType>({
@@ -19,6 +20,7 @@ const DataContext = createContext<DataContextType>({
   period: '1420',
   setPeriod: () => {},
   periodAvailable: { '1420': true, '2127': false },
+  isTransitioning: false,
 });
 
 const PERIOD_FILES: Record<Period, string> = {
@@ -30,6 +32,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
   const [data, setData] = useState<MunicipalityMap | null>(null);
   const [loading, setLoading] = useState(true);
   const [period, setPeriodState] = useState<Period>('1420');
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const [periodAvailable, setPeriodAvailable] = useState<Record<Period, boolean>>({
     '1420': true,
     '2127': false,
@@ -72,12 +75,14 @@ export function DataProvider({ children }: { children: ReactNode }) {
 
   const setPeriod = useCallback((p: Period) => {
     if (p === period) return;
+    setIsTransitioning(true);
+    setTimeout(() => setIsTransitioning(false), 300);
     setPeriodState(p);
     loadData(p);
   }, [period, loadData]);
 
   return (
-    <DataContext.Provider value={{ data, loading, period, setPeriod, periodAvailable }}>
+    <DataContext.Provider value={{ data, loading, period, setPeriod, periodAvailable, isTransitioning }}>
       {children}
     </DataContext.Provider>
   );
