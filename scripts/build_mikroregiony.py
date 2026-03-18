@@ -2,14 +2,15 @@
 """
 build_mikroregiony.py
 ---------------------
-Build data/mikroregiony_stats.json from excluded_beneficiaries.json.
+Build data/mikroregiony_stats_{period}.json from aggregated_by_beneficiary_{period}.json.
 Covers inter-municipal cooperation entities (združenia obcí, mikroregióny).
 """
 
 import json
+import argparse
 from pathlib import Path
 
-DATA = Path('/Users/boriskrisko/ConveyorMind/data')
+DATA = Path('/Users/boriskrisko/povolbach/data')
 
 # Keywords that identify inter-municipal cooperation bodies
 MIKRO_KW = [
@@ -64,22 +65,49 @@ def categorize(name: str) -> str:
 
 
 def main():
-    with open(DATA / 'excluded_beneficiaries.json') as f:
-        excl = json.load(f)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--period', choices=['14', '21'], default='14',
+                        help='Period suffix: 14 (2014-2020) or 21 (2021-2027)')
+    args = parser.parse_args()
+    period = args.period
 
-    mikro = [e for e in excl if any(kw.lower() in e['name'].lower() for kw in MIKRO_KW)]
+    # Load aggregated data
+    agg_path = DATA / f'aggregated_by_beneficiary_{period}.json'
+    with open(agg_path) as f:
+        agg_data = json.load(f)
+    if isinstance(agg_data, list):
+        agg_by_ico = {e['ico']: e for e in agg_data}
+    else:
+        agg_by_ico = agg_data
+
+    # Load municipality register to exclude municipalities
+    with open(DATA / 'municipalities_isco.json') as f:
+        muni_register = json.load(f)
+    muni_set = set(muni_register.keys())
+
+    # Find mikroregión/združenie entities among non-municipalities
+    mikro = []
+    for ico, e in agg_by_ico.items():
+        if ico in muni_set:
+            continue
+        name = e.get('nazov', e.get('name', ''))
+        if any(kw.lower() in name.lower() for kw in MIKRO_KW):
+            mikro.append({
+                'ico': ico,
+                'name': name,
+                'total_contracted_eur': e.get('total_contracted_eur', 0) or 0,
+                'projects_count': e.get('projects_count', 0) or
+                    ((e.get('projects_active', e.get('active_projects', 0)) or 0) +
+                     (e.get('projects_completed', e.get('completed_projects', 0)) or 0)),
+            })
+
     mikro.sort(key=lambda e: -e['total_contracted_eur'])
 
     # Build category groups
     by_cat = {cat['key']: [] for cat in CATEGORIES}
     for e in mikro:
         cat_key = categorize(e['name'])
-        by_cat[cat_key].append({
-            'ico': e['ico'],
-            'name': e['name'],
-            'total_contracted_eur': e['total_contracted_eur'],
-            'projects_count': e.get('projects_count', 0),
-        })
+        by_cat[cat_key].append(e)
 
     # Build output
     categories_out = []
@@ -106,10 +134,11 @@ def main():
         'categories': categories_out,
     }
 
-    with open(DATA / 'mikroregiony_stats_14.json', 'w', encoding='utf-8') as f:
+    out_path = DATA / f'mikroregiony_stats_{period}.json'
+    with open(out_path, 'w', encoding='utf-8') as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
 
-    print(f'Total mikroregióny: {total_count}, €{total_eur/1e6:.1f}M')
+    print(f'Period _{period}: Total mikroregióny: {total_count}, €{total_eur/1e6:.1f}M')
     for cat in categories_out:
         print(f'  {cat["label_sk"]}: {cat["count"]} entities, €{cat["total_contracted_eur"]/1e6:.1f}M')
 
