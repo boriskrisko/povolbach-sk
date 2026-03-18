@@ -14,9 +14,9 @@ function PeriodToggle() {
   const is2127Available = periodAvailable['2127'];
 
   return (
-    <div className="mt-5 animate-fade-in-up animate-delay-400">
-      <div className="text-[#94a3b8] text-xs mb-2">Programové obdobie:</div>
-      <div className="inline-flex rounded-lg border border-[#1e1e2e] overflow-hidden">
+    <div className="mt-4 animate-fade-in-up animate-delay-400">
+      <div className="text-[#94a3b8] text-xs mb-2 mt-4">Programové obdobie:</div>
+      <div className="inline-flex rounded-lg border border-[#1e1e2e] overflow-hidden mt-2">
         <button
           onClick={() => setPeriod('1420')}
           className={`px-4 py-1.5 text-sm font-medium transition-colors ${
@@ -127,14 +127,19 @@ export default function HeroSearch({ onSelectMunicipality }: Props) {
       </nav>
 
       {/* Center content */}
-      <div className="w-full max-w-2xl text-center">
+      <div className="w-full text-center" style={{ maxWidth: 'min(1100px, 94vw)' }}>
         <p className="text-[#94a3b8] text-sm tracking-widest uppercase mb-6 animate-fade-in-up">
           Efektívnosť čerpania európskych fondov na Slovensku
         </p>
 
         <h1
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#f8fafc] mb-10 leading-tight animate-fade-in-up animate-delay-100"
-          style={{ fontFamily: 'Syne, sans-serif' }}
+          className="font-bold text-[#f8fafc] mb-10 leading-tight animate-fade-in-up animate-delay-100"
+          style={{
+            fontFamily: 'Syne, sans-serif',
+            fontSize: 'clamp(2.5rem, 5.5vw, 6rem)',
+            maxWidth: 'min(1100px, 94vw)',
+            margin: '0 auto 2.5rem',
+          }}
         >
           Zistite, ako efektívne vaša obec čerpá európske fondy.
         </h1>
@@ -201,7 +206,7 @@ export default function HeroSearch({ onSelectMunicipality }: Props) {
         </div>
 
         {/* Stats line */}
-        <p className="text-[#94a3b8] text-sm mt-6 animate-fade-in-up animate-delay-300">
+        <p className="text-[#94a3b8] text-sm mt-8 animate-fade-in-up animate-delay-300">
           {loading ? (
             'Načítavam dáta...'
           ) : (
@@ -220,7 +225,7 @@ export default function HeroSearch({ onSelectMunicipality }: Props) {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 animate-bounce-slow text-[#94a3b8]/40">
+      <div className="absolute bottom-8 animate-bounce-slow text-[#94a3b8]/40" style={{ marginTop: '2.5rem' }}>
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>

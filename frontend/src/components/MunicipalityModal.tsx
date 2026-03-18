@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { Municipality } from '@/lib/types';
 import { formatEurFull, formatEur } from '@/lib/utils';
 import { useData } from '@/lib/DataContext';
@@ -19,6 +20,13 @@ export default function MunicipalityModal({ municipality, onClose }: Props) {
     return () => document.removeEventListener('keydown', handleEsc);
   }, [onClose]);
 
+  useEffect(() => {
+    if (municipality) {
+      document.body.style.overflow = 'hidden';
+      return () => { document.body.style.overflow = ''; };
+    }
+  }, [municipality]);
+
   const { period } = useData();
 
   if (!municipality) return null;
@@ -28,11 +36,12 @@ export default function MunicipalityModal({ municipality, onClose }: Props) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center modal-backdrop bg-black/60"
+      className="fixed inset-0 z-50 flex items-center justify-center modal-backdrop bg-black/60 overflow-hidden"
       onClick={onClose}
     >
       <div
-        className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl max-w-lg w-full mx-4 p-8 animate-fade-in-up"
+        className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl max-w-lg w-full mx-4 p-8 animate-fade-in-up overflow-y-auto"
+        style={{ maxHeight: '85vh', WebkitOverflowScrolling: 'touch' } as React.CSSProperties}
         onClick={e => e.stopPropagation()}
       >
         {/* Header */}
@@ -60,8 +69,8 @@ export default function MunicipalityModal({ municipality, onClose }: Props) {
         {/* Main stats */}
         <div className="grid grid-cols-2 gap-4 mb-6">
           <div className="bg-[#0a0a0f] rounded-xl p-4 border border-[#1e1e2e]">
-            <div className="text-3xl font-bold text-[#3b82f6] font-mono">
-              {formatEurFull(m.total_contracted_eur)}
+            <div className="font-bold text-[#3b82f6] font-mono" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)' }}>
+              {formatEur(m.total_contracted_eur)}
             </div>
             <div className="text-[#94a3b8] text-sm mt-1">Celkové zmluvné prostriedky</div>
           </div>
@@ -82,7 +91,7 @@ export default function MunicipalityModal({ municipality, onClose }: Props) {
         {m.population > 0 && m.total_contracted_eur > 0 && (
           <div className="mb-6 bg-[#0a0a0f] rounded-xl p-4 border border-[#1e1e2e]">
             <div className="text-xl font-bold text-[#10b981] font-mono">
-              {formatEurFull(Math.round(m.total_contracted_eur / m.population))} / obyvateľ
+              {formatEur(Math.round(m.total_contracted_eur / m.population))} / obyvateľ
             </div>
             <div className="text-[#94a3b8] text-sm mt-1">Čerpanie na obyvateľa</div>
           </div>
@@ -118,7 +127,7 @@ export default function MunicipalityModal({ municipality, onClose }: Props) {
         )}
 
         {/* Disclaimer */}
-        <div className="text-xs text-[#94a3b8] bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e]">
+        <div className="text-xs text-[#94a3b8] bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e] mb-8">
           {period === '2127'
             ? 'Programové obdobie 2021–2027. Zahŕňa len priame čerpanie obcou.'
             : 'Zahŕňa len priame čerpanie obcou. Nezahŕňa financovanie škôl, kultúrnych zariadení a iných organizácií v zriaďovateľskej pôsobnosti obce.'
