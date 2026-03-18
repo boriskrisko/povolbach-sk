@@ -2,12 +2,14 @@
 
 import { useData } from '@/lib/DataContext';
 import { getRegionStats, formatEur } from '@/lib/utils';
+import ViewModeToggle from './ViewModeToggle';
 import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import { Municipality, RegionStats } from '@/lib/types';
 
 interface Props {
   onMunicipalityClick: (m: Municipality) => void;
   viewMode: 'total' | 'capita';
+  setViewMode: (mode: 'total' | 'capita') => void;
 }
 
 // Map SVG id attributes to region names in our data
@@ -75,7 +77,7 @@ const LEGEND_ITEMS_CAPITA = [
   { label: '€2k+', color: '#ffffff' },
 ];
 
-export default function SlovakiaMap({ onMunicipalityClick, viewMode }: Props) {
+export default function SlovakiaMap({ onMunicipalityClick, viewMode, setViewMode }: Props) {
   const { data, loading } = useData();
   const containerRef = useRef<HTMLDivElement>(null);
   const [hoveredRegion, setHoveredRegion] = useState<string | null>(null);
@@ -205,12 +207,15 @@ export default function SlovakiaMap({ onMunicipalityClick, viewMode }: Props) {
 
   return (
     <section className="py-24 px-4 max-w-5xl mx-auto">
-      <h2
-        className="text-3xl md:text-4xl font-bold text-[#f8fafc] mb-2"
-        style={{ fontFamily: 'Syne, sans-serif' }}
-      >
-        Mapa Slovenska
-      </h2>
+      <div className="flex flex-wrap items-start justify-between gap-4 mb-2">
+        <h2
+          className="text-3xl md:text-4xl font-bold text-[#f8fafc]"
+          style={{ fontFamily: 'Syne, sans-serif' }}
+        >
+          Mapa Slovenska
+        </h2>
+        <ViewModeToggle viewMode={viewMode} onToggle={setViewMode} />
+      </div>
       <p className="text-[#94a3b8] mb-12">
         Každý bod predstavuje jednu obec — farba podľa výšky čerpania EÚ fondov
       </p>

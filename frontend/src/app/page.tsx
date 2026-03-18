@@ -6,7 +6,6 @@ import { Municipality } from '@/lib/types';
 import dynamic from 'next/dynamic';
 import HeroSearch from '@/components/HeroSearch';
 import Leaderboard from '@/components/Leaderboard';
-import ViewModeToggle from '@/components/ViewModeToggle';
 const SlovakiaMap = dynamic(() => import('@/components/SlovakiaMap'), { ssr: false });
 import StatsContext from '@/components/StatsContext';
 import Footer from '@/components/Footer';
@@ -25,12 +24,10 @@ export default function Home() {
           viewMode={viewMode}
           setViewMode={setViewMode}
         />
-        <div className="flex justify-center pb-4 -mt-16">
-          <ViewModeToggle viewMode={viewMode} onToggle={setViewMode} />
-        </div>
         <SlovakiaMap
           onMunicipalityClick={setSelectedMunicipality}
           viewMode={viewMode}
+          setViewMode={setViewMode}
         />
         <StatsContext />
         <Footer />
