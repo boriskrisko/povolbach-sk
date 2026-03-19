@@ -12,6 +12,7 @@ interface DataContextType {
   setPeriod: (p: Period) => void;
   periodAvailable: Record<Period, boolean>;
   isTransitioning: boolean;
+  getDataForPeriod: (p: Period) => MunicipalityMap | null;
 }
 
 const DataContext = createContext<DataContextType>({
@@ -21,6 +22,7 @@ const DataContext = createContext<DataContextType>({
   setPeriod: () => {},
   periodAvailable: { '1420': true, '2127': false },
   isTransitioning: false,
+  getDataForPeriod: () => null,
 });
 
 const PERIOD_FILES: Record<Period, string> = {
@@ -95,8 +97,12 @@ export function DataProvider({ children }: { children: ReactNode }) {
     }
   }, [period, loadPeriod]);
 
+  const getDataForPeriod = useCallback((p: Period): MunicipalityMap | null => {
+    return cache.current[p] ?? null;
+  }, []);
+
   return (
-    <DataContext.Provider value={{ data, loading, period, setPeriod, periodAvailable, isTransitioning }}>
+    <DataContext.Provider value={{ data, loading, period, setPeriod, periodAvailable, isTransitioning, getDataForPeriod }}>
       {children}
     </DataContext.Provider>
   );
