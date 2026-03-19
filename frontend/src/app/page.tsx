@@ -21,11 +21,11 @@ function PageContent() {
   const [locale, setLocale] = useState<Locale>('sk');
   const deepLinkHandled = useRef(false);
 
-  // Handle deep-link on page load: ?obec={ico}&obdobie=21
+  // Handle deep-link on page load: ?ico={ico}&obdobie=14|21
   useEffect(() => {
     if (deepLinkHandled.current || !data) return;
     const params = new URLSearchParams(window.location.search);
-    const ico = params.get('obec');
+    const ico = params.get('ico');
     const obdobie = params.get('obdobie');
     if (!ico) return;
 
@@ -52,11 +52,11 @@ function PageContent() {
     setSelectedMunicipality(muni);
     if (muni) {
       const url = new URL(window.location.href);
-      url.searchParams.set('obec', muni.ico);
+      url.searchParams.set('ico', muni.ico);
       window.history.replaceState({}, '', url.toString());
     } else {
       const url = new URL(window.location.href);
-      url.searchParams.delete('obec');
+      url.searchParams.delete('ico');
       url.searchParams.delete('obdobie');
       window.history.replaceState({}, '', url.pathname);
     }

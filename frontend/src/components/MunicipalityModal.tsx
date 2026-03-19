@@ -41,7 +41,7 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
   useEffect(() => {
     if (!municipality) return;
     const url = new URL(window.location.href);
-    url.searchParams.set('obec', municipality.ico);
+    url.searchParams.set('ico', municipality.ico);
     if (globalPeriod === '2127') {
       url.searchParams.set('obdobie', '21');
     } else {
@@ -108,7 +108,7 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
   const shareUrl = useMemo(() => {
     if (!municipality || typeof window === 'undefined') return '';
     const url = new URL(window.location.origin);
-    url.searchParams.set('obec', municipality.ico);
+    url.searchParams.set('ico', municipality.ico);
     if (globalPeriod === '2127') url.searchParams.set('obdobie', '21');
     return url.toString();
   }, [municipality, globalPeriod]);
