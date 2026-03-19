@@ -62,7 +62,8 @@ export default function VucModal({ vuc, vucOtherPeriod, onClose, locale }: Props
   const topProjects = v ? [...v.projects].sort((a, b) => (b.sumaZazmluvnena || 0) - (a.sumaZazmluvnena || 0)).slice(0, 5) : [];
   const topSubs = v ? [...(v.subsidiary_orgs || [])].sort((a, b) => (b.total_contracted_eur || 0) - (a.total_contracted_eur || 0)).slice(0, 5) : [];
 
-  const shareUrl = typeof window !== 'undefined' ? `${window.location.origin}/?vuc=${vuc.ico}` : `https://povolbach.sk/?vuc=${vuc.ico}`;
+  const obdobieSuffix = localPeriod === '2127' ? '21' : '14';
+  const shareUrl = typeof window !== 'undefined' ? `${window.location.origin}/?vuc=${vuc.ico}&obdobie=${obdobieSuffix}` : `https://povolbach.sk/?vuc=${vuc.ico}&obdobie=${obdobieSuffix}`;
   const threadsText = `${vuc.name} — čerpanie eurofondov ${shareUrl}`;
   const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
   const threadsUrl = `https://www.threads.net/intent/post?text=${encodeURIComponent(threadsText)}`;

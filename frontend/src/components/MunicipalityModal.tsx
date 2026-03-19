@@ -40,7 +40,7 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
     if (!municipality) return;
     const url = new URL(window.location.href);
     url.searchParams.set('ico', municipality.ico);
-    if (localPeriod === '2127') url.searchParams.set('obdobie', '21'); else url.searchParams.delete('obdobie');
+    url.searchParams.set('obdobie', localPeriod === '2127' ? '21' : '14');
     window.history.replaceState({}, '', url.toString());
   }, [municipality, localPeriod]);
 
@@ -79,7 +79,7 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
     if (!municipality || typeof window === 'undefined') return '';
     const url = new URL(window.location.origin);
     url.searchParams.set('ico', municipality.ico);
-    if (localPeriod === '2127') url.searchParams.set('obdobie', '21');
+    url.searchParams.set('obdobie', localPeriod === '2127' ? '21' : '14');
     return url.toString();
   }, [municipality, localPeriod]);
 

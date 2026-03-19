@@ -1,154 +1,118 @@
-'use client';
+import type { Metadata } from 'next';
+import { readFileSync } from 'fs';
+import { join } from 'path';
+import ClientPage from './ClientPage';
 
-import { useState, useMemo, useEffect, useCallback, useRef } from 'react';
-import { DataProvider, useData, Period } from '@/lib/DataContext';
-import { Municipality, GlobalStats } from '@/lib/types';
-import { type Locale } from '@/lib/translations';
-import dynamic from 'next/dynamic';
-import HeroSearch from '@/components/HeroSearch';
-import Leaderboard from '@/components/Leaderboard';
-const SlovakiaMap = dynamic(() => import('@/components/SlovakiaMap'), { ssr: false });
-const VucSection = dynamic(() => import('@/components/VucSection'), { ssr: false });
-const MikroregiónySection = dynamic(() => import('@/components/MikroregiónySection'), { ssr: false });
-import StatsContext from '@/components/StatsContext';
-import Footer from '@/components/Footer';
-import MunicipalityModal from '@/components/MunicipalityModal';
+function fmtAmount(amount: number): string {
+  if (amount === 0) return '0 €';
+  if (amount >= 1_000_000_000) return `${(amount / 1_000_000_000).toFixed(2)} mld. €`;
+  if (amount >= 1_000_000) return `${(amount / 1_000_000).toFixed(1)} mil. €`;
+  if (amount >= 1_000) return `${Math.round(amount / 1_000)} tis. €`;
+  return `${Math.round(amount)} €`;
+}
 
-function PageContent() {
-  const { data, isTransitioning, period, setPeriod, getDataForPeriod } = useData();
-  const [selectedMunicipality, setSelectedMunicipality] = useState<Municipality | null>(null);
-  const [viewMode, setViewMode] = useState<'total' | 'capita'>('total');
-  const [locale, setLocale] = useState<Locale>('sk');
-  const deepLinkHandled = useRef(false);
+// Cache JSON data in memory at module level
+let muniCache14: Record<string, Record<string, unknown>> | null = null;
+let muniCache21: Record<string, Record<string, unknown>> | null = null;
+let vucCache14: Record<string, Record<string, unknown>> | null = null;
+let vucCache21: Record<string, Record<string, unknown>> | null = null;
 
-  // Handle deep-link on page load: ?ico={ico}&obdobie=14|21
-  useEffect(() => {
-    if (deepLinkHandled.current || !data) return;
-    const params = new URLSearchParams(window.location.search);
-    const ico = params.get('ico');
-    const obdobie = params.get('obdobie');
-    if (!ico) return;
+function loadJson(filename: string): Record<string, Record<string, unknown>> {
+  try {
+    return JSON.parse(readFileSync(join(process.cwd(), 'public', filename), 'utf-8'));
+  } catch {
+    return {};
+  }
+}
 
-    deepLinkHandled.current = true;
+function getMuniData(period: '14' | '21') {
+  if (period === '14') { if (!muniCache14) muniCache14 = loadJson('municipal_stats_14.json'); return muniCache14; }
+  if (!muniCache21) muniCache21 = loadJson('municipal_stats_21.json'); return muniCache21;
+}
 
-    // Set global period from deep-link
-    if (obdobie === '21') {
-      setPeriod('2127');
+function getVucData(period: '14' | '21') {
+  if (period === '14') { if (!vucCache14) vucCache14 = loadJson('vuc_stats_14.json'); return vucCache14; }
+  if (!vucCache21) vucCache21 = loadJson('vuc_stats_21.json'); return vucCache21;
+}
+
+type Props = {
+  searchParams: Promise<{ ico?: string; vuc?: string; obdobie?: string }>
+}
+
+export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
+  const params = await searchParams;
+  const period = params.obdobie === '21' ? '21' : '14';
+  const periodLabel = period === '14' ? '2014–2020' : '2021–2027';
+
+  if (params.ico) {
+    const data = getMuniData(period);
+    const m = data[params.ico] as Record<string, unknown> | undefined;
+    if (m) {
+      const name = (m.official_name as string) || 'Obec';
+      const region = (m.region as string) || '';
+      const totalEur = ((m.total_contracted_eur as number) || 0) + ((m.subsidiary_total_eur as number) || 0);
+      const projects = ((m.active_projects as number) || 0) + ((m.completed_projects as number) || 0);
+      const pop = (m.population as number) || 0;
+      const perCapita = pop > 0 ? Math.round(totalEur / pop) : 0;
+      const total = fmtAmount(totalEur);
+
+      const ogParams = new URLSearchParams({ name, total, projects: String(projects), region, period: periodLabel });
+      if (perCapita > 0) ogParams.set('percapita', `${fmtAmount(perCapita)}`);
+
+      return {
+        title: `${name} — povolbach.sk`,
+        description: `${total} EU fondov · ${projects} projektov${perCapita > 0 ? ` · ${fmtAmount(perCapita)}/obyv.` : ''} · ${periodLabel}`,
+        openGraph: {
+          title: `${name} — povolbach.sk`,
+          description: `${total} EU fondov · ${projects} projektov${perCapita > 0 ? ` · ${fmtAmount(perCapita)}/obyv.` : ''}`,
+          url: `https://povolbach.sk/?ico=${params.ico}&obdobie=${period}`,
+          images: [`/api/og?${ogParams.toString()}`],
+          type: 'website',
+        },
+        twitter: { card: 'summary_large_image' },
+      };
     }
+  }
 
-    // Try to find the municipality in any available data
-    const targetPeriod: Period = obdobie === '21' ? '2127' : '1420';
-    const targetData = getDataForPeriod(targetPeriod);
-    const fallbackData = getDataForPeriod(targetPeriod === '1420' ? '2127' : '1420');
+  if (params.vuc) {
+    const data = getVucData(period);
+    const v = data[params.vuc] as Record<string, unknown> | undefined;
+    if (v) {
+      const name = (v.name as string) || 'Kraj';
+      const totalEur = ((v.total_contracted_eur as number) || 0) + ((v.subsidiary_total_eur as number) || 0);
+      const projects = ((v.projects_active as number) || 0) + ((v.projects_completed as number) || 0);
+      const total = fmtAmount(totalEur);
 
-    const muni = targetData?.[ico] ?? fallbackData?.[ico] ?? data[ico] ?? null;
-    if (muni) {
-      setSelectedMunicipality(muni);
+      const ogParams = new URLSearchParams({ name, total, projects: String(projects), period: periodLabel });
+
+      return {
+        title: `${name} — povolbach.sk`,
+        description: `${total} EU fondov · ${projects} projektov · ${periodLabel}`,
+        openGraph: {
+          title: `${name} — povolbach.sk`,
+          description: `${total} EU fondov · ${projects} projektov`,
+          url: `https://povolbach.sk/?vuc=${params.vuc}&obdobie=${period}`,
+          images: [`/api/og?${ogParams.toString()}`],
+          type: 'website',
+        },
+        twitter: { card: 'summary_large_image' },
+      };
     }
-  }, [data, getDataForPeriod, setPeriod]);
+  }
 
-  // Update URL when modal opens/closes
-  const handleSelectMunicipality = useCallback((muni: Municipality | null) => {
-    setSelectedMunicipality(muni);
-    if (muni) {
-      const url = new URL(window.location.href);
-      url.searchParams.set('ico', muni.ico);
-      window.history.replaceState({}, '', url.toString());
-    } else {
-      const url = new URL(window.location.href);
-      url.searchParams.delete('ico');
-      url.searchParams.delete('obdobie');
-      window.history.replaceState({}, '', url.pathname);
-    }
-  }, []);
-
-  const handleCloseModal = useCallback(() => {
-    handleSelectMunicipality(null);
-  }, [handleSelectMunicipality]);
-
-  const globalStats = useMemo((): GlobalStats | null => {
-    if (!data) return null;
-    const munis = Object.values(data);
-    return {
-      totalMunicipalities: munis.length,
-      totalFundsEur: munis.reduce((s, m) => s + (m.total_contracted_eur || 0) + (m.subsidiary_total_eur || 0), 0),
-      withProjects: munis.filter(m => (m.total_contracted_eur || 0) + (m.subsidiary_total_eur || 0) > 0).length,
-      withoutProjects: munis.filter(m => (m.total_contracted_eur || 0) + (m.subsidiary_total_eur || 0) === 0).length,
-      totalIndirectEur: munis.reduce((s, m) => s + (m.indirect_total_eur || 0), 0),
-      withIndirect: munis.filter(m => (m.indirect_total_eur || 0) > 0).length,
-      ...(() => {
-        const seen = new Set<string>();
-        let uniqueIndirectEur = 0;
-        let uniqueIndirectCount = 0;
-        for (const m of munis) {
-          for (const p of (m.indirect_projects || [])) {
-            const pid = (p as { id?: string; kod?: string; name?: string }).id
-              || (p as { kod?: string }).kod
-              || (p as { name?: string }).name || '';
-            if (pid && !seen.has(pid)) {
-              seen.add(pid);
-              uniqueIndirectEur += (p as { contracted_eur?: number }).contracted_eur || 0;
-              uniqueIndirectCount++;
-            }
-          }
-        }
-        return { uniqueIndirectEur, uniqueIndirectCount };
-      })(),
-      byRegion: munis.reduce((acc, m) => {
-        const r = m.region || 'Iné';
-        if (!acc[r]) acc[r] = { total: 0, count: 0, zero: 0 };
-        acc[r].total += (m.total_contracted_eur || 0) + (m.subsidiary_total_eur || 0);
-        acc[r].count++;
-        if (!(m.total_contracted_eur || 0) && !(m.subsidiary_total_eur || 0)) acc[r].zero++;
-        return acc;
-      }, {} as Record<string, { total: number; count: number; zero: number }>),
-    };
-  }, [data]);
-
-  return (
-    <main className="min-h-screen bg-[#0a0a0f]">
-      <HeroSearch
-        onSelectMunicipality={handleSelectMunicipality}
-        locale={locale}
-        setLocale={setLocale}
-        globalStats={globalStats}
-      />
-      <div style={{ opacity: isTransitioning ? 0.5 : 1, transition: 'opacity 0.25s ease' }}>
-        <Leaderboard
-          onSelectMunicipality={handleSelectMunicipality}
-          viewMode={viewMode}
-          setViewMode={setViewMode}
-          locale={locale}
-          globalStats={globalStats}
-        />
-        <VucSection
-          viewMode={viewMode}
-          setViewMode={setViewMode}
-          locale={locale}
-        />
-        <MikroregiónySection locale={locale} />
-        <SlovakiaMap
-          onMunicipalityClick={handleSelectMunicipality}
-          viewMode={viewMode}
-          setViewMode={setViewMode}
-          locale={locale}
-        />
-        <StatsContext locale={locale} globalStats={globalStats} />
-        <Footer locale={locale} />
-      </div>
-      <MunicipalityModal
-        municipality={selectedMunicipality}
-        onClose={handleCloseModal}
-        locale={locale}
-      />
-    </main>
-  );
+  return {
+    title: 'povolbach.sk — Efektívnosť čerpania európskych fondov na Slovensku',
+    description: 'Zistite, ako efektívne vaša obec čerpá eurofondy. Dáta z ITMS2014+ a ITMS2021+.',
+    openGraph: {
+      title: 'povolbach.sk',
+      description: 'Efektívnosť čerpania európskych fondov na Slovensku',
+      images: ['/api/og'],
+      type: 'website',
+    },
+    twitter: { card: 'summary_large_image' },
+  };
 }
 
 export default function Home() {
-  return (
-    <DataProvider>
-      <PageContent />
-    </DataProvider>
-  );
+  return <ClientPage />;
 }

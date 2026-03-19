@@ -6,7 +6,7 @@ import { formatAmount, formatProjects } from '@/lib/utils';
 import ViewModeToggle from './ViewModeToggle';
 import VucModal from './VucModal';
 import { type Locale } from '@/lib/translations';
-import { useData } from '@/lib/DataContext';
+import { useData, Period } from '@/lib/DataContext';
 
 interface Props {
   viewMode: 'total' | 'capita';
@@ -15,7 +15,7 @@ interface Props {
 }
 
 export default function VucSection({ viewMode, setViewMode, locale }: Props) {
-  const { period } = useData();
+  const { period, setPeriod } = useData();
   const [vucData14, setVucData14] = useState<Record<string, VucStats>>({});
   const [vucData21, setVucData21] = useState<Record<string, VucStats>>({});
   const [selectedVuc, setSelectedVuc] = useState<VucStats | null>(null);
@@ -31,13 +31,17 @@ export default function VucSection({ viewMode, setViewMode, locale }: Props) {
       setVucData21(d21);
       setLoading(false);
 
-      // Handle ?vuc={ico} deep-link
+      // Handle ?vuc={ico}&obdobie={14|21} deep-link
       if (!deepLinkHandled.current) {
         const params = new URLSearchParams(window.location.search);
         const vucIco = params.get('vuc');
+        const obdobie = params.get('obdobie');
         if (vucIco) {
           deepLinkHandled.current = true;
-          const found = d14[vucIco] || d21[vucIco] || null;
+          if (obdobie === '21') setPeriod('2127');
+          else if (obdobie === '14') setPeriod('1420');
+          const targetData = obdobie === '21' ? d21 : d14;
+          const found = targetData[vucIco] || d14[vucIco] || d21[vucIco] || null;
           if (found) setSelectedVuc(found);
         }
       }
