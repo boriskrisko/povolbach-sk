@@ -96,11 +96,26 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
     setMeta('og:description', description);
     setMeta('og:url', window.location.href);
 
+    const ogImageUrl = `${window.location.origin}/api/og?ico=${municipality.ico}${globalPeriod === '2127' ? '&obdobie=21' : ''}`;
+    setMeta('og:image', ogImageUrl);
+
+    const setMetaName = (name: string, content: string) => {
+      let el = document.querySelector(`meta[name="${name}"]`);
+      if (!el) {
+        el = document.createElement('meta');
+        el.setAttribute('name', name);
+        document.head.appendChild(el);
+      }
+      el.setAttribute('content', content);
+    };
+    setMetaName('twitter:card', 'summary_large_image');
+
     return () => {
       document.title = origTitle;
       setMeta('og:title', 'povolbach.sk');
       setMeta('og:description', 'Efektívnosť čerpania európskych fondov na Slovensku');
       setMeta('og:url', window.location.origin);
+      setMeta('og:image', `${window.location.origin}/api/og`);
     };
   }, [municipality, globalPeriod, stats14, stats21]);
 
