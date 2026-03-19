@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useMemo } from 'react';
-import { DataProvider, useData } from '@/lib/DataContext';
+import { useState, useMemo, useEffect, useCallback, useRef } from 'react';
+import { DataProvider, useData, Period } from '@/lib/DataContext';
 import { Municipality, GlobalStats } from '@/lib/types';
 import { type Locale } from '@/lib/translations';
 import dynamic from 'next/dynamic';
@@ -15,10 +15,56 @@ import Footer from '@/components/Footer';
 import MunicipalityModal from '@/components/MunicipalityModal';
 
 function PageContent() {
-  const { data, isTransitioning, period } = useData();
+  const { data, isTransitioning, period, getDataForPeriod, periodAvailable } = useData();
   const [selectedMunicipality, setSelectedMunicipality] = useState<Municipality | null>(null);
+  const [initialModalPeriod, setInitialModalPeriod] = useState<Period | null>(null);
   const [viewMode, setViewMode] = useState<'total' | 'capita'>('total');
   const [locale, setLocale] = useState<Locale>('sk');
+  const deepLinkHandled = useRef(false);
+
+  // Handle deep-link on page load: ?obec={ico}&obdobie=21
+  useEffect(() => {
+    if (deepLinkHandled.current || !data) return;
+    const params = new URLSearchParams(window.location.search);
+    const ico = params.get('obec');
+    const obdobie = params.get('obdobie');
+    if (!ico) return;
+
+    deepLinkHandled.current = true;
+
+    // Determine which period to show in the modal
+    const targetPeriod: Period = obdobie === '21' ? '2127' : '1420';
+
+    // Try to find the municipality in the target period's data first, then fallback
+    const targetData = getDataForPeriod(targetPeriod);
+    const fallbackData = getDataForPeriod(targetPeriod === '1420' ? '2127' : '1420');
+
+    const muni = targetData?.[ico] ?? fallbackData?.[ico] ?? data[ico] ?? null;
+    if (muni) {
+      setSelectedMunicipality(muni);
+      setInitialModalPeriod(targetPeriod);
+    }
+  }, [data, getDataForPeriod]);
+
+  // Update URL when modal opens/closes
+  const handleSelectMunicipality = useCallback((muni: Municipality | null) => {
+    setSelectedMunicipality(muni);
+    setInitialModalPeriod(null); // only used for deep-link
+    if (muni) {
+      const url = new URL(window.location.href);
+      url.searchParams.set('obec', muni.ico);
+      window.history.replaceState({}, '', url.toString());
+    } else {
+      const url = new URL(window.location.href);
+      url.searchParams.delete('obec');
+      url.searchParams.delete('obdobie');
+      window.history.replaceState({}, '', url.pathname);
+    }
+  }, []);
+
+  const handleCloseModal = useCallback(() => {
+    handleSelectMunicipality(null);
+  }, [handleSelectMunicipality]);
 
   // Modal now has its own local period toggle, so no need to close on global period change
 
@@ -64,14 +110,14 @@ function PageContent() {
   return (
     <main className="min-h-screen bg-[#0a0a0f]">
       <HeroSearch
-        onSelectMunicipality={setSelectedMunicipality}
+        onSelectMunicipality={handleSelectMunicipality}
         locale={locale}
         setLocale={setLocale}
         globalStats={globalStats}
       />
       <div style={{ opacity: isTransitioning ? 0.5 : 1, transition: 'opacity 0.25s ease' }}>
         <Leaderboard
-          onSelectMunicipality={setSelectedMunicipality}
+          onSelectMunicipality={handleSelectMunicipality}
           viewMode={viewMode}
           setViewMode={setViewMode}
           locale={locale}
@@ -84,7 +130,7 @@ function PageContent() {
         />
         <MikroregiónySection locale={locale} />
         <SlovakiaMap
-          onMunicipalityClick={setSelectedMunicipality}
+          onMunicipalityClick={handleSelectMunicipality}
           viewMode={viewMode}
           setViewMode={setViewMode}
           locale={locale}
@@ -94,8 +140,9 @@ function PageContent() {
       </div>
       <MunicipalityModal
         municipality={selectedMunicipality}
-        onClose={() => setSelectedMunicipality(null)}
+        onClose={handleCloseModal}
         locale={locale}
+        initialPeriod={initialModalPeriod}
       />
     </main>
   );
