@@ -1,5 +1,7 @@
 import { ImageResponse } from 'next/og';
 import { NextRequest } from 'next/server';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 
 export const runtime = 'nodejs';
 
@@ -22,18 +24,37 @@ function formatAmount(amount: number): string {
   return `${Math.round(amount)} €`;
 }
 
-async function loadData(baseUrl: string, period: '14' | '21'): Promise<Record<string, MunicipalityData>> {
-  try {
-    const res = await fetch(`${baseUrl}/municipal_stats_${period}.json`);
-    if (!res.ok) return {};
-    return await res.json();
-  } catch {
-    return {};
+// Cache parsed JSON in memory across warm invocations
+let cache14: Record<string, MunicipalityData> | null = null;
+let cache21: Record<string, MunicipalityData> | null = null;
+
+function loadData(period: '14' | '21'): Record<string, MunicipalityData> {
+  if (period === '14' && cache14) return cache14;
+  if (period === '21' && cache21) return cache21;
+
+  // Try multiple paths — Vercel copies public files to different locations
+  const paths = [
+    join(process.cwd(), 'public', `municipal_stats_${period}.json`),
+    join(process.cwd(), `municipal_stats_${period}.json`),
+    join(process.cwd(), '.next', 'static', `municipal_stats_${period}.json`),
+  ];
+
+  for (const p of paths) {
+    try {
+      const data = JSON.parse(readFileSync(p, 'utf-8'));
+      if (period === '14') cache14 = data;
+      else cache21 = data;
+      return data;
+    } catch {
+      continue;
+    }
   }
+
+  return {};
 }
 
 export async function GET(request: NextRequest) {
-  const { searchParams, origin } = request.nextUrl;
+  const { searchParams } = request.nextUrl;
   const ico = searchParams.get('ico');
   const obdobie = searchParams.get('obdobie');
 
@@ -43,10 +64,6 @@ export async function GET(request: NextRequest) {
         <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, #0a0a0f 0%, #13131a 50%, #0a0a0f 100%)', color: '#f8fafc' }}>
           <div style={{ fontSize: 72, fontWeight: 700, marginBottom: 20 }}>povolbach.sk</div>
           <div style={{ fontSize: 28, color: '#94a3b8', textAlign: 'center', maxWidth: '80%' }}>Efektívnosť čerpania európskych fondov na Slovensku</div>
-          <div style={{ display: 'flex', gap: 40, marginTop: 40 }}>
-            <div style={{ padding: '8px 20px', border: '2px solid #3b82f6', borderRadius: 8, color: '#3b82f6', fontSize: 18 }}>2014–2020</div>
-            <div style={{ padding: '8px 20px', border: '2px solid #3b82f6', borderRadius: 8, color: '#3b82f6', fontSize: 18 }}>2021–2027</div>
-          </div>
         </div>
       ),
       { width: 1200, height: 630 },
@@ -56,9 +73,27 @@ export async function GET(request: NextRequest) {
   const period = obdobie === '21' ? '21' : '14';
   const periodLabel = period === '14' ? '2014–2020' : '2021–2027';
 
-  const data = await loadData(origin, period);
-  const m = data[ico];
+  let data: Record<string, MunicipalityData>;
+  try {
+    data = loadData(period);
+  } catch {
+    data = {};
+  }
 
+  // If filesystem read failed, try fetch as fallback
+  if (!data[ico]) {
+    try {
+      const baseUrl = request.nextUrl.origin;
+      const res = await fetch(`${baseUrl}/municipal_stats_${period}.json`, { next: { revalidate: 3600 } });
+      if (res.ok) {
+        data = await res.json();
+        if (period === '14') cache14 = data;
+        else cache21 = data;
+      }
+    } catch { /* give up */ }
+  }
+
+  const m = data[ico];
   if (!m) {
     return new ImageResponse(
       (
@@ -82,16 +117,13 @@ export async function GET(request: NextRequest) {
         background: 'linear-gradient(135deg, #0a0a0f 0%, #131320 40%, #0a0a0f 100%)',
         color: '#f8fafc', padding: '60px 80px', justifyContent: 'space-between',
       }}>
-        {/* Decorative top-right element */}
         <div style={{ position: 'absolute', top: 0, right: 0, width: 300, height: 300, background: 'radial-gradient(circle at top right, rgba(59,130,246,0.08) 0%, transparent 70%)', display: 'flex' }} />
 
-        {/* Top: municipality name + region */}
         <div style={{ display: 'flex', flexDirection: 'column', zIndex: 1 }}>
           <div style={{ fontSize: 52, fontWeight: 700, lineHeight: 1.15, marginBottom: 12 }}>{m.official_name}</div>
           <div style={{ fontSize: 22, color: '#94a3b8' }}>{m.region} · IČO {m.ico}{m.population > 0 ? ` · ${m.population.toLocaleString('sk-SK')} obyvateľov` : ''}</div>
         </div>
 
-        {/* Middle: stats row */}
         <div style={{ display: 'flex', gap: 56, alignItems: 'flex-end', zIndex: 1 }}>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <div style={{ fontSize: 52, fontWeight: 700, color: '#3b82f6' }}>{formatAmount(grandTotal)}</div>
@@ -109,7 +141,6 @@ export async function GET(request: NextRequest) {
           )}
         </div>
 
-        {/* Bottom: branding + period */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', zIndex: 1 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
             <div style={{ width: 8, height: 24, backgroundColor: '#3b82f6', borderRadius: 4, display: 'flex' }} />

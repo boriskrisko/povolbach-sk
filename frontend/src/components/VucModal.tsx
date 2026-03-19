@@ -62,19 +62,19 @@ export default function VucModal({ vuc, vucOtherPeriod, onClose, locale }: Props
   const topProjects = v ? [...v.projects].sort((a, b) => (b.sumaZazmluvnena || 0) - (a.sumaZazmluvnena || 0)).slice(0, 5) : [];
   const topSubs = v ? [...(v.subsidiary_orgs || [])].sort((a, b) => (b.total_contracted_eur || 0) - (a.total_contracted_eur || 0)).slice(0, 5) : [];
 
-  const shareUrl = typeof window !== 'undefined' ? window.location.origin : '';
-  const shareText = `${vuc.name} — povolbach.sk`;
+  const shareUrl = typeof window !== 'undefined' ? window.location.origin : 'https://povolbach.sk';
+  const threadsText = `${vuc.name} — čerpanie eurofondov ${shareUrl}`;
   const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
-  const threadsUrl = `https://www.threads.net/intent/post?text=${encodeURIComponent(shareText + ' ' + shareUrl)}`;
+  const threadsUrl = `https://www.threads.net/intent/post?text=${encodeURIComponent(threadsText)}`;
 
   const copyToClipboard = useCallback(async (text: string) => {
     try { await navigator.clipboard.writeText(text); } catch { const i = document.createElement('input'); i.value = text; document.body.appendChild(i); i.select(); document.execCommand('copy'); document.body.removeChild(i); }
   }, []);
   const showCopied = useCallback(() => { setCopied(true); setCopiedVisible(true); setTimeout(() => setCopiedVisible(false), 2000); setTimeout(() => setCopied(false), 3000); }, []);
   const handleShare = useCallback(async () => {
-    try { await navigator.share({ title: shareText, url: shareUrl }); }
+    try { await navigator.share({ title: `${vuc.name} — povolbach.sk`, text: `${vuc.name} — čerpanie eurofondov`, url: shareUrl }); }
     catch { await copyToClipboard(shareUrl); showCopied(); }
-  }, [shareText, shareUrl, copyToClipboard, showCopied]);
+  }, [vuc, shareUrl, copyToClipboard, showCopied]);
   const handleCopy = useCallback(async () => { await copyToClipboard(shareUrl); showCopied(); }, [shareUrl, copyToClipboard, showCopied]);
 
   const renderCell = (loading: boolean, loaded: boolean, val: number, other: number, fmt: (v: number) => string, hl: boolean) => {
@@ -127,7 +127,7 @@ export default function VucModal({ vuc, vucOtherPeriod, onClose, locale }: Props
           <table className="w-full table-fixed">
             <colgroup><col style={{ width: '25%' }} /><col style={{ width: '37.5%' }} /><col style={{ width: '37.5%' }} /></colgroup>
             <thead><tr className="text-xs">
-              <th className="px-3 py-2 text-left font-normal text-[#94a3b8]/40" />
+              <th className="px-3 py-2 text-left font-normal text-[#94a3b8]/40">{locale === 'sk' ? 'Obdobie' : 'Period'}</th>
               <th className={`px-3 py-2 text-center font-medium ${is14A ? 'bg-[#3b82f6]/8 text-[#3b82f6]' : 'text-[#94a3b8]/50'}`}>{tr.modal_period_1420}</th>
               <th className={`px-3 py-2 text-center font-medium ${!is14A ? 'bg-[#3b82f6]/8 text-[#3b82f6]' : 'text-[#94a3b8]/50'}`}>{tr.modal_period_2127}</th>
             </tr></thead>
