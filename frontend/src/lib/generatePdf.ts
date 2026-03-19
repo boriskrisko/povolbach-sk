@@ -44,13 +44,12 @@ const CSS = `
   tr:nth-child(even) td { background: #fafbfc; }
   td.amount { color: #3b82f6; font-weight: 600; font-variant-numeric: tabular-nums; }
   td.amount-teal { color: #10b981; font-weight: 600; font-variant-numeric: tabular-nums; }
-  .footer { position: fixed; bottom: 10mm; left: 15mm; right: 15mm; font-size: 7pt; color: #94a3b8; border-top: 0.5pt solid #e2e8f0; padding-top: 4pt; display: flex; justify-content: space-between; }
+  .footer { margin-top: 40pt; font-size: 7pt; color: #94a3b8; border-top: 0.5pt solid #e2e8f0; padding-top: 4pt; display: flex; justify-content: space-between; page-break-inside: avoid; }
   @media print {
     * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
-    body { padding: 10mm; -webkit-print-color-adjust: exact !important; }
-    .footer { position: fixed; }
+    body { padding: 0; -webkit-print-color-adjust: exact !important; }
   }
-  @page { size: A4; margin: 10mm; }
+  @page { size: A4; margin: 15mm 15mm 25mm 15mm; }
 `;
 
 interface DetailData {
