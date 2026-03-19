@@ -11,6 +11,7 @@ interface DataContextType {
   period: Period;
   setPeriod: (p: Period) => void;
   periodAvailable: Record<Period, boolean>;
+  periodLoading: Record<Period, boolean>;
   isTransitioning: boolean;
   getDataForPeriod: (p: Period) => MunicipalityMap | null;
 }
@@ -21,6 +22,7 @@ const DataContext = createContext<DataContextType>({
   period: '1420',
   setPeriod: () => {},
   periodAvailable: { '1420': true, '2127': false },
+  periodLoading: { '1420': true, '2127': true },
   isTransitioning: false,
   getDataForPeriod: () => null,
 });
@@ -42,12 +44,18 @@ export function DataProvider({ children }: { children: ReactNode }) {
     '1420': true,
     '2127': false,
   });
+  const [periodLoading, setPeriodLoading] = useState<Record<Period, boolean>>({
+    '1420': true,
+    '2127': true,
+  });
 
   const loadPeriod = useCallback((p: Period, onDone?: () => void) => {
     if (cache.current[p]) {
+      setPeriodLoading(prev => ({ ...prev, [p]: false }));
       onDone?.();
       return;
     }
+    setPeriodLoading(prev => ({ ...prev, [p]: true }));
     fetch(PERIOD_FILES[p])
       .then(res => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -56,12 +64,14 @@ export function DataProvider({ children }: { children: ReactNode }) {
       .then((d: MunicipalityMap) => {
         cache.current[p] = d;
         setPeriodAvailable(prev => ({ ...prev, [p]: true }));
+        setPeriodLoading(prev => ({ ...prev, [p]: false }));
         onDone?.();
       })
       .catch(() => {
         if (p === '2127') {
           setPeriodAvailable(prev => ({ ...prev, '2127': false }));
         }
+        setPeriodLoading(prev => ({ ...prev, [p]: false }));
         onDone?.();
       });
   }, []);
@@ -102,7 +112,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <DataContext.Provider value={{ data, loading, period, setPeriod, periodAvailable, isTransitioning, getDataForPeriod }}>
+    <DataContext.Provider value={{ data, loading, period, setPeriod, periodAvailable, periodLoading, isTransitioning, getDataForPeriod }}>
       {children}
     </DataContext.Provider>
   );

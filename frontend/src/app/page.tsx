@@ -15,9 +15,8 @@ import Footer from '@/components/Footer';
 import MunicipalityModal from '@/components/MunicipalityModal';
 
 function PageContent() {
-  const { data, isTransitioning, period, getDataForPeriod, periodAvailable } = useData();
+  const { data, isTransitioning, period, setPeriod, getDataForPeriod } = useData();
   const [selectedMunicipality, setSelectedMunicipality] = useState<Municipality | null>(null);
-  const [initialModalPeriod, setInitialModalPeriod] = useState<Period | null>(null);
   const [viewMode, setViewMode] = useState<'total' | 'capita'>('total');
   const [locale, setLocale] = useState<Locale>('sk');
   const deepLinkHandled = useRef(false);
@@ -32,24 +31,25 @@ function PageContent() {
 
     deepLinkHandled.current = true;
 
-    // Determine which period to show in the modal
-    const targetPeriod: Period = obdobie === '21' ? '2127' : '1420';
+    // Set global period from deep-link
+    if (obdobie === '21') {
+      setPeriod('2127');
+    }
 
-    // Try to find the municipality in the target period's data first, then fallback
+    // Try to find the municipality in any available data
+    const targetPeriod: Period = obdobie === '21' ? '2127' : '1420';
     const targetData = getDataForPeriod(targetPeriod);
     const fallbackData = getDataForPeriod(targetPeriod === '1420' ? '2127' : '1420');
 
     const muni = targetData?.[ico] ?? fallbackData?.[ico] ?? data[ico] ?? null;
     if (muni) {
       setSelectedMunicipality(muni);
-      setInitialModalPeriod(targetPeriod);
     }
-  }, [data, getDataForPeriod]);
+  }, [data, getDataForPeriod, setPeriod]);
 
   // Update URL when modal opens/closes
   const handleSelectMunicipality = useCallback((muni: Municipality | null) => {
     setSelectedMunicipality(muni);
-    setInitialModalPeriod(null); // only used for deep-link
     if (muni) {
       const url = new URL(window.location.href);
       url.searchParams.set('obec', muni.ico);
@@ -65,8 +65,6 @@ function PageContent() {
   const handleCloseModal = useCallback(() => {
     handleSelectMunicipality(null);
   }, [handleSelectMunicipality]);
-
-  // Modal now has its own local period toggle, so no need to close on global period change
 
   const globalStats = useMemo((): GlobalStats | null => {
     if (!data) return null;
@@ -142,7 +140,6 @@ function PageContent() {
         municipality={selectedMunicipality}
         onClose={handleCloseModal}
         locale={locale}
-        initialPeriod={initialModalPeriod}
       />
     </main>
   );
