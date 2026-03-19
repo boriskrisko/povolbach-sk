@@ -37,6 +37,16 @@ export default function VucModal({ vuc, vucOtherPeriod, onClose, locale }: Props
     if (vuc) { document.body.style.overflow = 'hidden'; return () => { document.body.style.overflow = ''; }; }
   }, [vuc]);
 
+  // Update browser URL to reflect VÚC modal state + local period
+  useEffect(() => {
+    if (!vuc) return;
+    const url = new URL(window.location.href);
+    url.searchParams.delete('ico');
+    url.searchParams.set('vuc', vuc.ico);
+    url.searchParams.set('obdobie', localPeriod === '2127' ? '21' : '14');
+    window.history.replaceState({}, '', url.toString());
+  }, [vuc, localPeriod]);
+
   if (!vuc) return null;
 
   // Determine which VÚC data is for which period

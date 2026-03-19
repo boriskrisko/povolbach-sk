@@ -46,7 +46,7 @@ export default function VucSection({ viewMode, setViewMode, locale }: Props) {
         }
       }
     });
-  }, []);
+  }, [setPeriod]);
 
   const vucData = period === '2127' ? vucData21 : vucData14;
   const vucDataOther = period === '2127' ? vucData14 : vucData21;
@@ -132,7 +132,13 @@ export default function VucSection({ viewMode, setViewMode, locale }: Props) {
         })}
       </div>
 
-      <VucModal vuc={selectedVuc} vucOtherPeriod={selectedVuc ? (vucDataOther[selectedVuc.ico] ?? null) : null} onClose={() => setSelectedVuc(null)} locale={locale} />
+      <VucModal vuc={selectedVuc} vucOtherPeriod={selectedVuc ? (vucDataOther[selectedVuc.ico] ?? null) : null} onClose={() => {
+        setSelectedVuc(null);
+        const url = new URL(window.location.href);
+        url.searchParams.delete('vuc');
+        url.searchParams.delete('obdobie');
+        window.history.replaceState({}, '', url.pathname);
+      }} locale={locale} />
     </section>
   );
 }

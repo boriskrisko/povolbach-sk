@@ -39,6 +39,7 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
   useEffect(() => {
     if (!municipality) return;
     const url = new URL(window.location.href);
+    url.searchParams.delete('vuc');
     url.searchParams.set('ico', municipality.ico);
     url.searchParams.set('obdobie', localPeriod === '2127' ? '21' : '14');
     window.history.replaceState({}, '', url.toString());
