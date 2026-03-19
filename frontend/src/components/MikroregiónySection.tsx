@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { formatAmount, formatProjects } from '@/lib/utils';
-import { type Locale } from '@/lib/translations';
-import { useData } from '@/lib/DataContext';
+import { t, type Locale } from '@/lib/translations';
+import { useData, Period } from '@/lib/DataContext';
 
 interface MikroEntry {
   ico: string;
@@ -93,12 +93,18 @@ export default function MikroregiónySection({ locale }: Props) {
         })}
       </div>
 
-      {selected && <MikroModal cat={selected} locale={locale} onClose={() => setSelected(null)} />}
+      {selected && <MikroModal cat={selected} cat14={data14?.categories.find(c => c.key === selected.key) ?? null} cat21={data21?.categories.find(c => c.key === selected.key) ?? null} locale={locale} onClose={() => setSelected(null)} />}
     </section>
   );
 }
 
-function MikroModal({ cat, locale, onClose }: { cat: MikroCategory; locale: Locale; onClose: () => void }) {
+function MikroModal({ cat, cat14, cat21, locale, onClose }: { cat: MikroCategory; cat14: MikroCategory | null; cat21: MikroCategory | null; locale: Locale; onClose: () => void }) {
+  const { period: globalPeriod, periodAvailable } = useData();
+  const tr = t[locale];
+  const [localPeriod, setLocalPeriod] = useState<Period>(globalPeriod);
+
+  useEffect(() => { setLocalPeriod(globalPeriod); }, [globalPeriod]);
+
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
     document.addEventListener('keydown', handleEsc);
@@ -106,30 +112,44 @@ function MikroModal({ cat, locale, onClose }: { cat: MikroCategory; locale: Loca
     return () => { document.removeEventListener('keydown', handleEsc); document.body.style.overflow = ''; };
   }, [onClose]);
 
-  const color = CAT_COLORS[cat.key] ?? '#94a3b8';
-  const label = locale === 'sk' ? cat.label_sk : cat.label_en;
+  const activeCat = localPeriod === '1420' ? (cat14 || cat) : (cat21 || cat);
+  const color = CAT_COLORS[activeCat.key] ?? '#94a3b8';
+  const label = locale === 'sk' ? activeCat.label_sk : activeCat.label_en;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 overflow-hidden" onClick={onClose}>
       <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl max-w-lg w-full mx-4 p-8 animate-fade-in-up overflow-y-auto" style={{ maxHeight: '85vh' } as React.CSSProperties} onClick={e => e.stopPropagation()}>
-        <div className="flex justify-between items-start mb-6">
+        <div className="flex justify-between items-start mb-4">
           <div>
             <h2 className="text-2xl font-bold text-[#f8fafc]" style={{ fontFamily: 'Syne, sans-serif' }}>{label}</h2>
-            <p className="text-[#94a3b8] text-sm mt-1">{cat.count} {locale === 'sk' ? 'združení' : 'entities'} · <span className="font-mono" style={{ color }}>{formatAmount(cat.total_contracted_eur, locale)}</span></p>
+            <p className="text-[#94a3b8] text-sm mt-1">{activeCat.count} {locale === 'sk' ? 'združení' : 'entities'} · <span className="font-mono" style={{ color }}>{formatAmount(activeCat.total_contracted_eur, locale)}</span></p>
           </div>
           <button onClick={onClose} className="text-[#94a3b8] hover:text-[#f8fafc] transition-colors text-2xl leading-none">&times;</button>
         </div>
-        <div className="space-y-2">
-          {cat.entries.map((e, i) => (
-            <div key={i} className="bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e]">
-              <div className="text-sm text-[#f8fafc]/90 mb-1 line-clamp-2">{e.name}</div>
-              <div className="flex justify-between text-xs">
-                <span className="font-mono" style={{ color }}>{formatAmount(e.total_contracted_eur, locale)}</span>
-                <span className="text-[#94a3b8]/70">{formatProjects(e.projects_count, locale)}</span>
-              </div>
-            </div>
-          ))}
+
+        {/* Period toggle */}
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center gap-0.5 bg-white/[0.04] rounded-md p-0.5">
+            {(['1420', '2127'] as Period[]).map(p => <button key={p} onClick={() => periodAvailable[p] && setLocalPeriod(p)} disabled={!periodAvailable[p]} className={`px-2.5 py-1 rounded text-[11px] font-medium transition-all ${localPeriod === p ? 'bg-[#3b82f6] text-white shadow-sm' : periodAvailable[p] ? 'text-[#94a3b8]/70 hover:text-[#f8fafc]' : 'text-[#94a3b8]/20 cursor-not-allowed'}`}>{p === '1420' ? tr.modal_period_1420 : tr.modal_period_2127}</button>)}
+          </div>
+          <span className="text-[11px] text-[#94a3b8]/40 uppercase tracking-wider">{tr.modal_detail_label(localPeriod === '1420' ? tr.modal_period_1420 : tr.modal_period_2127)}</span>
         </div>
+
+        {activeCat.entries.length === 0 ? (
+          <div className="text-center py-12"><div className="text-[#94a3b8] text-sm">{tr.modal_no_data}</div></div>
+        ) : (
+          <div className="space-y-2">
+            {activeCat.entries.map((e, i) => (
+              <div key={i} className="bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e]">
+                <div className="text-sm text-[#f8fafc]/90 mb-1 line-clamp-2">{e.name}</div>
+                <div className="flex justify-between text-xs">
+                  <span className="font-mono" style={{ color }}>{formatAmount(e.total_contracted_eur, locale)}</span>
+                  <span className="text-[#94a3b8]/70">{formatProjects(e.projects_count, locale)}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
         <div className="mt-6 text-xs text-[#94a3b8] bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e]">
           {locale === 'sk' ? 'Prostriedky nie sú zahrnuté v hodnotení jednotlivých obcí — ide o spoločné projekty viacerých samospráv.' : 'Funds are not included in individual municipality scores — these are joint projects across multiple municipalities.'}
         </div>

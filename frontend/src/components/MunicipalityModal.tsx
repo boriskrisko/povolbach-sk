@@ -68,7 +68,9 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
     document.title = title;
     const setM = (p: string, c: string) => { let el = document.querySelector(`meta[property="${p}"]`); if (!el) { el = document.createElement('meta'); el.setAttribute('property', p); document.head.appendChild(el); } el.setAttribute('content', c); };
     setM('og:title', title); setM('og:description', desc); setM('og:url', window.location.href);
-    setM('og:image', `${window.location.origin}/api/og?ico=${municipality.ico}${localPeriod === '2127' ? '&obdobie=21' : ''}`);
+    const ogParams = new URLSearchParams({ name: municipality.official_name, total: formatAmount(ds.total, 'sk'), projects: String(ds.projects), region: municipality.region, period: localPeriod === '1420' ? '2014–2020' : '2021–2027' });
+    if (ds.perCapita > 0) ogParams.set('percapita', formatAmount(ds.perCapita, 'sk'));
+    setM('og:image', `${window.location.origin}/api/og?${ogParams.toString()}`);
     let el = document.querySelector('meta[name="twitter:card"]'); if (!el) { el = document.createElement('meta'); el.setAttribute('name', 'twitter:card'); document.head.appendChild(el); } el.setAttribute('content', 'summary_large_image');
     return () => { document.title = origTitle; setM('og:title', 'povolbach.sk'); setM('og:description', 'Efektívnosť čerpania európskych fondov na Slovensku'); setM('og:url', window.location.origin); setM('og:image', `${window.location.origin}/api/og`); };
   }, [municipality, localPeriod, stats14, stats21]);

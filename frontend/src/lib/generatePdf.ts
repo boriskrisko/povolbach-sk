@@ -1,16 +1,4 @@
-import jsPDF from 'jspdf';
-import autoTable from 'jspdf-autotable';
-import type { VucStats } from './types';
-
-// Colors matching modal theme (light-theme equivalents for print)
-const C = {
-  navy: [30, 41, 59] as [number, number, number],     // #1e293b — main text
-  blue: [59, 130, 246] as [number, number, number],    // #3b82f6 — amounts, headers
-  teal: [16, 185, 129] as [number, number, number],    // #10b981 — per capita, subsidiaries
-  amber: [245, 158, 11] as [number, number, number],   // #f59e0b — irregularities
-  gray: [148, 163, 184] as [number, number, number],   // #94a3b8 — labels
-  grayLight: [226, 232, 240] as [number, number, number], // borders
-};
+import type { Municipality, VucStats } from './types';
 
 function fmtEur(amount: number): string {
   if (amount === 0) return '0 €';
@@ -23,22 +11,43 @@ function fmtEurFull(amount: number): string {
   return `${amount.toLocaleString('sk-SK', { maximumFractionDigits: 0 })} €`;
 }
 
-interface MuniData {
-  ico: string;
-  official_name: string;
-  region: string;
-  district: string;
-  population: number;
-  total_contracted_eur: number;
-  subsidiary_total_eur?: number;
-  active_projects: number;
-  completed_projects: number;
-  irregularities_count: number;
-  irregularities_total_eur: number;
-  projects: Array<{ nazov: string; sumaZazmluvnena: number; stav: string }>;
-  subsidiary_orgs?: Array<{ name: string; total_contracted_eur: number; projects_count: number }>;
-  indirect_projects?: Array<{ name: string; beneficiary_name: string; contracted_eur: number }>;
+function esc(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
+
+const CSS = `
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1e293b; font-size: 9pt; line-height: 1.4; padding: 15mm; }
+  h1 { font-size: 18pt; margin-bottom: 4pt; }
+  .meta { color: #94a3b8; font-size: 8.5pt; margin-bottom: 3pt; }
+  .period { color: #3b82f6; font-weight: 600; font-size: 8.5pt; margin-bottom: 10pt; }
+  .stat-row { display: flex; gap: 24pt; margin-bottom: 8pt; flex-wrap: wrap; }
+  .stat-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6pt; padding: 8pt 12pt; }
+  .stat-val { font-size: 14pt; font-weight: 700; color: #10b981; font-variant-numeric: tabular-nums; }
+  .stat-val.blue { color: #3b82f6; }
+  .stat-label { font-size: 7.5pt; color: #94a3b8; margin-top: 2pt; }
+  .stat-sub { font-size: 7.5pt; color: #64748b; }
+  .divider { border: none; border-top: 1px solid #e2e8f0; margin: 10pt 0; }
+  .irr { background: #fffbeb; border-left: 3pt solid #f59e0b; padding: 6pt 10pt; margin-bottom: 10pt; border-radius: 0 4pt 4pt 0; color: #92400e; font-weight: 600; font-size: 8.5pt; }
+  .section-title { font-size: 9pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5pt; margin-bottom: 4pt; padding-bottom: 3pt; border-bottom: 1.5pt solid currentColor; display: inline-block; }
+  .section-title.blue { color: #3b82f6; }
+  .section-title.teal { color: #10b981; }
+  .section-title.gray { color: #94a3b8; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 10pt; font-size: 7.5pt; }
+  th { background: #f1f5f9; text-align: left; padding: 4pt 6pt; font-weight: 600; font-size: 7pt; text-transform: uppercase; letter-spacing: 0.3pt; }
+  th.blue { background: #eff6ff; color: #3b82f6; }
+  th.teal { background: #ecfdf5; color: #10b981; }
+  th.gray { background: #f8fafc; color: #94a3b8; }
+  th.right, td.right { text-align: right; }
+  th.center, td.center { text-align: center; }
+  td { padding: 3pt 6pt; border-bottom: 0.5pt solid #f1f5f9; vertical-align: top; }
+  tr:nth-child(even) td { background: #fafbfc; }
+  td.amount { color: #3b82f6; font-weight: 600; font-variant-numeric: tabular-nums; }
+  td.amount-teal { color: #10b981; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .footer { position: fixed; bottom: 10mm; left: 15mm; right: 15mm; font-size: 7pt; color: #94a3b8; border-top: 0.5pt solid #e2e8f0; padding-top: 4pt; display: flex; justify-content: space-between; }
+  @media print { body { padding: 10mm; } .footer { position: fixed; } }
+  @page { size: A4; margin: 10mm; }
+`;
 
 interface DetailData {
   projects?: Array<{ nazov: string; sumaZazmluvnena: number; stav: string }>;
@@ -46,309 +55,128 @@ interface DetailData {
   indirect_projects?: Array<{ name: string; beneficiary_name: string; contracted_eur: number }>;
 }
 
+function openPrintWindow(html: string) {
+  const w = window.open('', '_blank');
+  if (!w) { alert('Povoľte vyskakovacie okná pre tlač PDF.'); return; }
+  w.document.write(html);
+  w.document.close();
+  setTimeout(() => w.print(), 300);
+}
+
 export async function generateMunicipalityPdf(ico: string, period: '1420' | '2127') {
   const suffix = period === '1420' ? '14' : '21';
   const periodLabel = period === '1420' ? '2014–2020' : '2021–2027';
   const dataSource = period === '1420' ? 'ITMS2014+' : 'ITMS2021+';
 
-  // Fetch the correct period's stats data
-  let m: MuniData | null = null;
+  let m: Municipality | null = null;
   try {
     const res = await fetch(`/municipal_stats_${suffix}.json`);
-    if (res.ok) {
-      const all = await res.json();
-      m = all[ico] || null;
-    }
+    if (res.ok) { const all = await res.json(); m = all[ico] || null; }
   } catch { /* */ }
+  if (!m) { alert('Dáta sa nepodarilo načítať.'); return; }
 
-  if (!m) {
-    alert('Dáta sa nepodarilo načítať.');
-    return;
-  }
-
-  // Fetch full details (all projects, not just top 5)
   let detail: DetailData = {};
   try {
     const res = await fetch(`/municipal_details_${suffix}.json`);
-    if (res.ok) {
-      const all = await res.json();
-      detail = all[ico] || {};
-    }
+    if (res.ok) { const all = await res.json(); detail = all[ico] || {}; }
   } catch { /* */ }
 
   const allProjects = detail.projects || m.projects || [];
   const allSubs = detail.subsidiary_orgs || m.subsidiary_orgs || [];
   const allIndirect = detail.indirect_projects || m.indirect_projects || [];
-
   const grandTotal = (m.total_contracted_eur || 0) + (m.subsidiary_total_eur || 0);
   const totalProjects = m.active_projects + m.completed_projects;
   const perCapita = m.population > 0 ? Math.round(grandTotal / m.population) : 0;
 
-  const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
-  const pageW = doc.internal.pageSize.getWidth();
-  let y = 20;
+  let body = `
+    <h1>${esc(m.official_name)}</h1>
+    <div class="meta">${esc(m.region)}${m.district ? ` · ${esc(m.district)}` : ''} · IČO: ${m.ico}${m.population > 0 ? ` · ${m.population.toLocaleString('sk-SK')} obyvateľov` : ''}</div>
+    <div class="period">Obdobie: ${periodLabel}</div>
 
-  // Header
-  doc.setFontSize(20);
-  doc.setFont('helvetica', 'bold');
-  doc.setTextColor(...C.navy);
-  doc.text(m.official_name, 15, y);
-  y += 8;
+    <div class="stat-row">
+      <div class="stat-box"><div class="stat-val">${fmtEurFull(grandTotal)}</div><div class="stat-label">Celkové zmluvné prostriedky</div>
+        ${(m.subsidiary_total_eur || 0) > 0 ? `<div class="stat-sub">${fmtEurFull(m.total_contracted_eur)} priame · ${fmtEurFull(m.subsidiary_total_eur || 0)} zriaďované org.</div>` : ''}
+      </div>
+      <div class="stat-box"><div class="stat-val blue">${totalProjects}</div><div class="stat-label">${m.active_projects} aktívnych, ${m.completed_projects} ukončených</div></div>
+      ${perCapita > 0 ? `<div class="stat-box"><div class="stat-val">${fmtEur(perCapita)}</div><div class="stat-label">Na obyvateľa</div></div>` : ''}
+    </div>`;
 
-  doc.setFontSize(10);
-  doc.setFont('helvetica', 'normal');
-  doc.setTextColor(...C.gray);
-  doc.text(`${m.region}${m.district ? ` · ${m.district}` : ''} · IČO: ${m.ico}${m.population > 0 ? ` · ${m.population.toLocaleString('sk-SK')} obyvateľov` : ''}`, 15, y);
-  y += 5;
-
-  // Period badge
-  doc.setTextColor(...C.blue);
-  doc.setFont('helvetica', 'bold');
-  doc.setFontSize(9);
-  doc.text(`Obdobie: ${periodLabel}`, 15, y);
-  y += 10;
-
-  // Summary stats — teal for amounts
-  doc.setTextColor(...C.teal);
-  doc.setFontSize(14);
-  doc.setFont('helvetica', 'bold');
-  doc.text(fmtEurFull(grandTotal), 15, y);
-  y += 6;
-  doc.setFontSize(9);
-  doc.setTextColor(...C.gray);
-  doc.setFont('helvetica', 'normal');
-  doc.text('Celkové zmluvné prostriedky', 15, y);
-  y += 6;
-
-  if ((m.subsidiary_total_eur || 0) > 0) {
-    doc.setTextColor(...C.navy);
-    doc.text(`Priame: ${fmtEurFull(m.total_contracted_eur)}  ·  Zriaďované org.: ${fmtEurFull(m.subsidiary_total_eur || 0)}`, 15, y);
-    y += 5;
-  }
-
-  doc.setTextColor(...C.navy);
-  doc.text(`Projekty: ${totalProjects} (${m.active_projects} aktívnych, ${m.completed_projects} ukončených)`, 15, y);
-  y += 5;
-
-  if (perCapita > 0) {
-    doc.setTextColor(...C.teal);
-    doc.text(`Na obyvateľa: ${fmtEur(perCapita)}`, 15, y);
-    y += 5;
-  }
-
-  // Irregularities — amber
   if (m.irregularities_count > 0) {
-    y += 2;
-    doc.setTextColor(...C.amber);
-    doc.setFont('helvetica', 'bold');
-    doc.text(`Nezrovnalosti: ${m.irregularities_count} · ${fmtEurFull(m.irregularities_total_eur)}`, 15, y);
-    y += 5;
+    body += `<div class="irr">Nezrovnalosti: ${m.irregularities_count} · ${fmtEurFull(m.irregularities_total_eur)}</div>`;
   }
 
-  // Divider
-  y += 3;
-  doc.setDrawColor(...C.grayLight);
-  doc.line(15, y, pageW - 15, y);
-  y += 6;
+  body += '<hr class="divider">';
 
-  // Projects table — blue header
   if (allProjects.length > 0) {
-    doc.setFontSize(10);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(...C.blue);
-    doc.text(`Priame projekty (${allProjects.length})`, 15, y);
-    y += 2;
-
-    autoTable(doc, {
-      startY: y,
-      head: [['Názov projektu', 'Suma', 'Stav']],
-      body: allProjects.map(p => [
-        p.nazov,
-        fmtEur(p.sumaZazmluvnena),
-        p.stav.includes('ukončen') || p.stav.includes('Ukončen') ? 'Ukončený' : 'V realizácii',
-      ]),
-      styles: { fontSize: 7.5, cellPadding: 2, textColor: C.navy },
-      headStyles: { fillColor: C.blue, textColor: [255, 255, 255], fontSize: 8 },
-      alternateRowStyles: { fillColor: [248, 250, 252] },
-      columnStyles: {
-        0: { cellWidth: pageW - 30 - 28 - 22 },
-        1: { cellWidth: 28, halign: 'right', textColor: C.blue },
-        2: { cellWidth: 22, halign: 'center' },
-      },
-      margin: { left: 15, right: 15 },
-    });
-    y = (doc as jsPDF & { lastAutoTable: { finalY: number } }).lastAutoTable.finalY + 6;
+    body += `<div class="section-title blue">Priame projekty (${allProjects.length})</div>
+    <table><thead><tr><th>Názov projektu</th><th class="right">Suma</th><th class="center">Stav</th></tr></thead><tbody>`;
+    for (const p of allProjects) {
+      const status = (p.stav || '').toLowerCase().includes('ukončen') ? 'Ukončený' : 'V realizácii';
+      body += `<tr><td>${esc(p.nazov)}</td><td class="right amount">${fmtEur(p.sumaZazmluvnena)}</td><td class="center">${status}</td></tr>`;
+    }
+    body += '</tbody></table>';
   }
 
-  // Subsidiary orgs — teal header
   if (allSubs.length > 0) {
-    if (y > 250) { doc.addPage(); y = 20; }
-    doc.setFontSize(10);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(...C.teal);
-    doc.text(`Organizácie v zriaďovateľskej pôsobnosti (${allSubs.length})`, 15, y);
-    y += 2;
-
-    autoTable(doc, {
-      startY: y,
-      head: [['Organizácia', 'Suma', 'Projekty']],
-      body: allSubs.map(o => [o.name, fmtEur(o.total_contracted_eur), String(o.projects_count)]),
-      styles: { fontSize: 7.5, cellPadding: 2, textColor: C.navy },
-      headStyles: { fillColor: C.teal, textColor: [255, 255, 255], fontSize: 8 },
-      alternateRowStyles: { fillColor: [248, 250, 252] },
-      columnStyles: {
-        0: { cellWidth: pageW - 30 - 28 - 20 },
-        1: { cellWidth: 28, halign: 'right', textColor: C.teal },
-        2: { cellWidth: 20, halign: 'center' },
-      },
-      margin: { left: 15, right: 15 },
-    });
-    y = (doc as jsPDF & { lastAutoTable: { finalY: number } }).lastAutoTable.finalY + 6;
+    body += `<div class="section-title teal">Organizácie v zriaďovateľskej pôsobnosti (${allSubs.length})</div>
+    <table><thead><tr><th>Organizácia</th><th class="right">Suma</th><th class="center">Projekty</th></tr></thead><tbody>`;
+    for (const o of allSubs) {
+      body += `<tr><td>${esc(o.name)}</td><td class="right amount-teal">${fmtEur(o.total_contracted_eur)}</td><td class="center">${o.projects_count}</td></tr>`;
+    }
+    body += '</tbody></table>';
   }
 
-  // Indirect projects — gray header
   if (allIndirect.length > 0) {
-    if (y > 250) { doc.addPage(); y = 20; }
-    doc.setFontSize(10);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(...C.gray);
-    doc.text(`Štátne projekty v katastri (${allIndirect.length})`, 15, y);
-    y += 2;
-
-    autoTable(doc, {
-      startY: y,
-      head: [['Projekt', 'Suma', 'Realizátor']],
-      body: allIndirect.map(p => [p.name, fmtEur(p.contracted_eur), p.beneficiary_name.split(' ').slice(0, 4).join(' ')]),
-      styles: { fontSize: 7.5, cellPadding: 2, textColor: C.navy },
-      headStyles: { fillColor: C.gray, textColor: [255, 255, 255], fontSize: 8 },
-      alternateRowStyles: { fillColor: [248, 250, 252] },
-      columnStyles: {
-        0: { cellWidth: pageW - 30 - 28 - 40 },
-        1: { cellWidth: 28, halign: 'right' },
-        2: { cellWidth: 40 },
-      },
-      margin: { left: 15, right: 15 },
-    });
-    y = (doc as jsPDF & { lastAutoTable: { finalY: number } }).lastAutoTable.finalY + 6;
+    body += `<div class="section-title gray">Štátne projekty v katastri (${allIndirect.length})</div>
+    <table><thead><tr><th>Projekt</th><th class="right">Suma</th><th>Realizátor</th></tr></thead><tbody>`;
+    for (const p of allIndirect) {
+      body += `<tr><td>${esc(p.name)}</td><td class="right amount">${fmtEur(p.contracted_eur)}</td><td>${esc(p.beneficiary_name.split(' ').slice(0, 4).join(' '))}</td></tr>`;
+    }
+    body += '</tbody></table>';
   }
 
-  // Footer on each page
-  const pages = doc.getNumberOfPages();
-  for (let i = 1; i <= pages; i++) {
-    doc.setPage(i);
-    const footerY = doc.internal.pageSize.getHeight() - 8;
-    doc.setFontSize(7);
-    doc.setTextColor(...C.gray);
-    doc.setFont('helvetica', 'normal');
-    doc.text(`Zdroj: povolbach.sk · Dáta: ${dataSource} · Vygenerované: ${new Date().toLocaleDateString('sk-SK')}`, 15, footerY);
-    doc.text(`${i} / ${pages}`, pageW - 15, footerY, { align: 'right' });
-  }
+  body += `<div class="footer"><span>Zdroj: povolbach.sk · Dáta: ${dataSource} · Vygenerované: ${new Date().toLocaleDateString('sk-SK')}</span><span>${esc(m.official_name)}</span></div>`;
 
-  const safeName = m.official_name.replace(/[^a-zA-Z0-9áäčďéíľĺňóôŕšťúýžÁÄČĎÉÍĽĹŇÓÔŔŠŤÚÝŽ ]/g, '').replace(/\s+/g, '_');
-  doc.save(`${safeName}_eurofondy.pdf`);
+  openPrintWindow(`<!DOCTYPE html><html lang="sk"><head><meta charset="utf-8"><title>${esc(m.official_name)} — eurofondy</title><style>${CSS}</style></head><body>${body}</body></html>`);
 }
 
 export async function generateVucPdf(v: VucStats, period: '1420' | '2127') {
   const periodLabel = period === '1420' ? '2014–2020' : '2021–2027';
   const dataSource = period === '1420' ? 'ITMS2014+' : 'ITMS2021+';
-
   const grandTotal = v.total_contracted_eur + (v.subsidiary_total_eur || 0);
   const totalProjects = v.projects_active + v.projects_completed;
   const perCapita = v.population > 0 ? Math.round(grandTotal / v.population) : 0;
 
-  const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
-  const pageW = doc.internal.pageSize.getWidth();
-  let y = 20;
-
-  doc.setFontSize(20);
-  doc.setFont('helvetica', 'bold');
-  doc.setTextColor(...C.navy);
-  doc.text(v.name, 15, y);
-  y += 8;
-
-  doc.setFontSize(10);
-  doc.setFont('helvetica', 'normal');
-  doc.setTextColor(...C.gray);
-  doc.text(`IČO: ${v.ico}${v.population > 0 ? ` · ${v.population.toLocaleString('sk-SK')} obyvateľov` : ''}`, 15, y);
-  y += 5;
-  doc.setTextColor(...C.blue);
-  doc.setFont('helvetica', 'bold');
-  doc.setFontSize(9);
-  doc.text(`Obdobie: ${periodLabel}`, 15, y);
-  y += 10;
-
-  doc.setTextColor(...C.teal);
-  doc.setFontSize(14);
-  doc.setFont('helvetica', 'bold');
-  doc.text(fmtEurFull(grandTotal), 15, y);
-  y += 6;
-  doc.setFontSize(9);
-  doc.setTextColor(...C.gray);
-  doc.setFont('helvetica', 'normal');
-  doc.text('Celkové zmluvné prostriedky', 15, y);
-  y += 6;
-
-  if (v.subsidiary_total_eur > 0) {
-    doc.setTextColor(...C.navy);
-    doc.text(`Priame: ${fmtEurFull(v.total_contracted_eur)}  ·  Zriaďované org.: ${fmtEurFull(v.subsidiary_total_eur)}`, 15, y);
-    y += 5;
-  }
-  doc.setTextColor(...C.navy);
-  doc.text(`Projekty: ${totalProjects} (${v.projects_active} aktívnych, ${v.projects_completed} ukončených)${perCapita > 0 ? `  ·  Na obyvateľa: ${fmtEur(perCapita)}` : ''}`, 15, y);
-  y += 3;
-  doc.setDrawColor(...C.grayLight);
-  doc.line(15, y + 3, pageW - 15, y + 3);
-  y += 9;
+  let body = `
+    <h1>${esc(v.name)}</h1>
+    <div class="meta">IČO: ${v.ico}${v.population > 0 ? ` · ${v.population.toLocaleString('sk-SK')} obyvateľov` : ''}</div>
+    <div class="period">Obdobie: ${periodLabel}</div>
+    <div class="stat-row">
+      <div class="stat-box"><div class="stat-val">${fmtEurFull(grandTotal)}</div><div class="stat-label">Celkové zmluvné prostriedky</div>
+        ${v.subsidiary_total_eur > 0 ? `<div class="stat-sub">${fmtEurFull(v.total_contracted_eur)} priame · ${fmtEurFull(v.subsidiary_total_eur)} zriaďované org.</div>` : ''}
+      </div>
+      <div class="stat-box"><div class="stat-val blue">${totalProjects}</div><div class="stat-label">${v.projects_active} aktívnych, ${v.projects_completed} ukončených</div></div>
+      ${perCapita > 0 ? `<div class="stat-box"><div class="stat-val">${fmtEur(perCapita)}</div><div class="stat-label">Na obyvateľa</div></div>` : ''}
+    </div><hr class="divider">`;
 
   if (v.projects.length > 0) {
-    doc.setFontSize(10);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(...C.blue);
-    doc.text(`Projekty (${v.projects.length})`, 15, y);
-    y += 2;
-    autoTable(doc, {
-      startY: y,
-      head: [['Názov projektu', 'Suma', 'Stav']],
-      body: v.projects.map(p => [p.nazov, fmtEur(p.sumaZazmluvnena), p.stav.includes('ukončen') || p.stav.includes('Ukončen') ? 'Ukončený' : 'V realizácii']),
-      styles: { fontSize: 7.5, cellPadding: 2, textColor: C.navy },
-      headStyles: { fillColor: C.blue, textColor: [255, 255, 255], fontSize: 8 },
-      alternateRowStyles: { fillColor: [248, 250, 252] },
-      columnStyles: { 0: { cellWidth: pageW - 30 - 28 - 22 }, 1: { cellWidth: 28, halign: 'right', textColor: C.blue }, 2: { cellWidth: 22, halign: 'center' } },
-      margin: { left: 15, right: 15 },
-    });
-    y = (doc as jsPDF & { lastAutoTable: { finalY: number } }).lastAutoTable.finalY + 6;
+    body += `<div class="section-title blue">Projekty (${v.projects.length})</div><table><thead><tr><th>Názov projektu</th><th class="right">Suma</th><th class="center">Stav</th></tr></thead><tbody>`;
+    for (const p of v.projects) {
+      const status = (p.stav || '').toLowerCase().includes('ukončen') ? 'Ukončený' : 'V realizácii';
+      body += `<tr><td>${esc(p.nazov)}</td><td class="right amount">${fmtEur(p.sumaZazmluvnena)}</td><td class="center">${status}</td></tr>`;
+    }
+    body += '</tbody></table>';
   }
 
   if (v.subsidiary_orgs?.length > 0) {
-    if (y > 250) { doc.addPage(); y = 20; }
-    doc.setFontSize(10);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(...C.teal);
-    doc.text(`Organizácie v zriaďovateľskej pôsobnosti (${v.subsidiary_orgs.length})`, 15, y);
-    y += 2;
-    autoTable(doc, {
-      startY: y,
-      head: [['Organizácia', 'Suma', 'Projekty']],
-      body: v.subsidiary_orgs.map(o => [o.name, fmtEur(o.total_contracted_eur), String(o.projects_count)]),
-      styles: { fontSize: 7.5, cellPadding: 2, textColor: C.navy },
-      headStyles: { fillColor: C.teal, textColor: [255, 255, 255], fontSize: 8 },
-      alternateRowStyles: { fillColor: [248, 250, 252] },
-      columnStyles: { 0: { cellWidth: pageW - 30 - 28 - 20 }, 1: { cellWidth: 28, halign: 'right', textColor: C.teal }, 2: { cellWidth: 20, halign: 'center' } },
-      margin: { left: 15, right: 15 },
-    });
+    body += `<div class="section-title teal">Organizácie v zriaďovateľskej pôsobnosti (${v.subsidiary_orgs.length})</div><table><thead><tr><th>Organizácia</th><th class="right">Suma</th><th class="center">Projekty</th></tr></thead><tbody>`;
+    for (const o of v.subsidiary_orgs) {
+      body += `<tr><td>${esc(o.name)}</td><td class="right amount-teal">${fmtEur(o.total_contracted_eur)}</td><td class="center">${o.projects_count}</td></tr>`;
+    }
+    body += '</tbody></table>';
   }
 
-  const pages = doc.getNumberOfPages();
-  for (let i = 1; i <= pages; i++) {
-    doc.setPage(i);
-    const fy = doc.internal.pageSize.getHeight() - 8;
-    doc.setFontSize(7);
-    doc.setTextColor(...C.gray);
-    doc.setFont('helvetica', 'normal');
-    doc.text(`Zdroj: povolbach.sk · Dáta: ${dataSource} · Vygenerované: ${new Date().toLocaleDateString('sk-SK')}`, 15, fy);
-    doc.text(`${i} / ${pages}`, pageW - 15, fy, { align: 'right' });
-  }
+  body += `<div class="footer"><span>Zdroj: povolbach.sk · Dáta: ${dataSource} · Vygenerované: ${new Date().toLocaleDateString('sk-SK')}</span><span>${esc(v.name)}</span></div>`;
 
-  const safeName = v.name.replace(/[^a-zA-Z0-9áäčďéíľĺňóôŕšťúýžÁÄČĎÉÍĽĹŇÓÔŔŠŤÚÝŽ ]/g, '').replace(/\s+/g, '_');
-  doc.save(`${safeName}_eurofondy.pdf`);
+  openPrintWindow(`<!DOCTYPE html><html lang="sk"><head><meta charset="utf-8"><title>${esc(v.name)} — eurofondy</title><style>${CSS}</style></head><body>${body}</body></html>`);
 }

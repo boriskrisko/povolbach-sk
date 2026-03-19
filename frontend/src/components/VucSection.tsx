@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { VucStats } from '@/lib/types';
 import { formatAmount, formatProjects } from '@/lib/utils';
 import ViewModeToggle from './ViewModeToggle';
@@ -20,9 +20,9 @@ export default function VucSection({ viewMode, setViewMode, locale }: Props) {
   const [vucData21, setVucData21] = useState<Record<string, VucStats>>({});
   const [selectedVuc, setSelectedVuc] = useState<VucStats | null>(null);
   const [loading, setLoading] = useState(true);
+  const deepLinkHandled = useRef(false);
 
   useEffect(() => {
-    // Load both periods on mount
     Promise.all([
       fetch('/vuc_stats_14.json').then(r => r.json()).catch(() => ({})),
       fetch('/vuc_stats_21.json').then(r => r.json()).catch(() => ({})),
@@ -30,6 +30,17 @@ export default function VucSection({ viewMode, setViewMode, locale }: Props) {
       setVucData14(d14);
       setVucData21(d21);
       setLoading(false);
+
+      // Handle ?vuc={ico} deep-link
+      if (!deepLinkHandled.current) {
+        const params = new URLSearchParams(window.location.search);
+        const vucIco = params.get('vuc');
+        if (vucIco) {
+          deepLinkHandled.current = true;
+          const found = d14[vucIco] || d21[vucIco] || null;
+          if (found) setSelectedVuc(found);
+        }
+      }
     });
   }, []);
 
