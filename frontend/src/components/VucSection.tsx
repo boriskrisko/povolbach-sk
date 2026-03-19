@@ -16,19 +16,25 @@ interface Props {
 
 export default function VucSection({ viewMode, setViewMode, locale }: Props) {
   const { period } = useData();
-  const [vucData, setVucData] = useState<Record<string, VucStats>>({});
+  const [vucData14, setVucData14] = useState<Record<string, VucStats>>({});
+  const [vucData21, setVucData21] = useState<Record<string, VucStats>>({});
   const [selectedVuc, setSelectedVuc] = useState<VucStats | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
-    setSelectedVuc(null); // Close modal when period changes (Fix 4)
-    const file = period === '2127' ? '/vuc_stats_21.json' : '/vuc_stats_14.json';
-    fetch(file)
-      .then(r => r.json())
-      .then((d: Record<string, VucStats>) => { setVucData(d); setLoading(false); })
-      .catch(() => setLoading(false));
-  }, [period]);
+    // Load both periods on mount
+    Promise.all([
+      fetch('/vuc_stats_14.json').then(r => r.json()).catch(() => ({})),
+      fetch('/vuc_stats_21.json').then(r => r.json()).catch(() => ({})),
+    ]).then(([d14, d21]) => {
+      setVucData14(d14);
+      setVucData21(d21);
+      setLoading(false);
+    });
+  }, []);
+
+  const vucData = period === '2127' ? vucData21 : vucData14;
+  const vucDataOther = period === '2127' ? vucData14 : vucData21;
 
   if (loading || Object.keys(vucData).length === 0) return null;
 
@@ -111,7 +117,7 @@ export default function VucSection({ viewMode, setViewMode, locale }: Props) {
         })}
       </div>
 
-      <VucModal vuc={selectedVuc} onClose={() => setSelectedVuc(null)} locale={locale} />
+      <VucModal vuc={selectedVuc} vucOtherPeriod={selectedVuc ? (vucDataOther[selectedVuc.ico] ?? null) : null} onClose={() => setSelectedVuc(null)} locale={locale} />
     </section>
   );
 }
