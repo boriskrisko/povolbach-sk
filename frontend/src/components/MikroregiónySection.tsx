@@ -52,15 +52,14 @@ export default function MikroregiónySection({ locale }: Props) {
   }, []);
 
   const data = period === '2127' ? data21 : data14;
-  const otherData = period === '2127' ? data14 : data21;
-  const otherLabel = period === '2127' ? '2014–2020' : '2021–2027';
 
   if (!data) return null;
 
-  const otherMap = new Map<string, MikroCategory>();
-  if (otherData) {
-    for (const cat of otherData.categories) otherMap.set(cat.key, cat);
-  }
+  // Build lookup for both periods by category key
+  const map14 = new Map<string, MikroCategory>();
+  const map21 = new Map<string, MikroCategory>();
+  if (data14) for (const cat of data14.categories) map14.set(cat.key, cat);
+  if (data21) for (const cat of data21.categories) map21.set(cat.key, cat);
 
   const totalCount = data.categories.reduce((s, c) => s + c.count, 0);
   const totalEur = data.categories.reduce((s, c) => s + c.total_contracted_eur, 0);
@@ -84,7 +83,9 @@ export default function MikroregiónySection({ locale }: Props) {
           const color = CAT_COLORS[cat.key] ?? '#94a3b8';
           const label = locale === 'sk' ? cat.label_sk : cat.label_en;
           const desc = locale === 'sk' ? cat.desc_sk : cat.desc_en;
-          const otherCat = otherMap.get(cat.key);
+          const c14 = map14.get(cat.key);
+          const c21 = map21.get(cat.key);
+          const entLabel = locale === 'sk' ? 'združení' : 'entities';
           return (
             <button
               key={cat.key}
@@ -92,14 +93,17 @@ export default function MikroregiónySection({ locale }: Props) {
               className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-5 text-left hover:border-[#3b82f6] transition-colors group"
               style={{ borderLeftColor: color, borderLeftWidth: 3 }}
             >
-              <div className="text-sm font-semibold text-[#f8fafc] mb-2 group-hover:text-[#3b82f6] transition-colors leading-tight" style={{ fontFamily: 'Syne, sans-serif' }}>{label}</div>
-              <div className="font-mono font-bold text-xl mb-0.5" style={{ color }}>{formatAmount(cat.total_contracted_eur, locale)}</div>
-              <div className="text-[#94a3b8] text-xs mb-1">{cat.count} {locale === 'sk' ? 'združení' : 'entities'}</div>
-              {otherCat && (
-                <div className="text-[#94a3b8]/50 text-xs font-mono mb-2">
-                  {formatAmount(otherCat.total_contracted_eur, locale)} <span className="font-sans">({otherLabel})</span>
+              <div className="text-sm font-semibold text-[#f8fafc] mb-3 group-hover:text-[#3b82f6] transition-colors leading-tight" style={{ fontFamily: 'Syne, sans-serif' }}>{label}</div>
+              <div className="space-y-1 mb-3">
+                <div className="flex items-baseline justify-between text-xs">
+                  <span className="text-[#94a3b8]/60">2014–2020</span>
+                  <span>{c14 ? <><span className="font-mono font-bold text-sm" style={{ color }}>{formatAmount(c14.total_contracted_eur, locale)}</span> <span className="text-[#94a3b8]/50">· {c14.count} {entLabel}</span></> : <span className="text-[#94a3b8]/30">—</span>}</span>
                 </div>
-              )}
+                <div className="flex items-baseline justify-between text-xs">
+                  <span className="text-[#94a3b8]/60">2021–2027</span>
+                  <span>{c21 ? <><span className="font-mono font-bold text-sm" style={{ color }}>{formatAmount(c21.total_contracted_eur, locale)}</span> <span className="text-[#94a3b8]/50">· {c21.count} {entLabel}</span></> : <span className="text-[#94a3b8]/30">—</span>}</span>
+                </div>
+              </div>
               <div className="text-[#94a3b8]/60 text-xs leading-snug">{desc}</div>
             </button>
           );
