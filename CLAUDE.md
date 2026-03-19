@@ -57,7 +57,7 @@
 │   ├── subsidiaries_by_municipality_14.json ← subsidiary org attribution (2014-2020)
 │   ├── subsidiaries_by_vuc_14.json         ← VÚC subsidiary attribution
 │   ├── indirect_by_municipality_14.json    ← state/indirect project mapping
-│   └── municipalities_isco.json            ← official Slovak municipality IČO register
+│   └── municipalities_ico.json            ← official Slovak municipality IČO register
 └── frontend/                               ← Next.js app
     └── public/
         ├── municipal_stats_14.json         ← slimmed 2014-2020 (from build_frontend_public.py)
@@ -104,7 +104,7 @@ This script takes `aggregated_by_beneficiary_14.json` and filters it down to onl
 
 ### Input
 - `data/aggregated_by_beneficiary_14.json` — all beneficiaries from ITMS (IČO as key)
-- `data/municipalities_isco.json` — official Slovak municipality IČO list
+- `data/municipalities_ico.json` — official Slovak municipality IČO list
 
 ### Output
 - `data/municipal_stats_14.json` — municipalities only, with full stats
@@ -261,7 +261,7 @@ For each municipality, show a secondary line:
 Data work required:
 1. Take excluded_beneficiaries.json (5,746 non-municipality beneficiaries, €22.9B)
 2. For each, query RPO API for zakladateľ (founder IČO)
-3. If zakladateľ IČO matches a municipality in municipalities_isco.json → 
+3. If zakladateľ IČO matches a municipality in municipalities_ico.json → 
    tag as municipal subsidiary
 4. Aggregate per municipality: count of orgs + total contracted EUR
 5. Add subsidiary_orgs array and subsidiary_total_eur field to municipal_stats.json

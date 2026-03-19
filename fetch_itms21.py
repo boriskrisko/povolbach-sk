@@ -32,7 +32,7 @@ LOG_FILE = DATA_DIR / "itms21_fetch_log.txt"
 AGGREGATED_FILE = DATA_DIR / "aggregated_by_beneficiary_21.json"
 STATS_FILE = DATA_DIR / "municipal_stats_21.json"
 NOTES_FILE = DATA_DIR / "itms21_notes.txt"
-MUNICIPALITIES_FILE = DATA_DIR / "municipalities_isco.json"
+MUNICIPALITIES_FILE = DATA_DIR / "municipalities_ico.json"
 
 PAGE_SIZE_FAST = 200   # for offsets < 55000 (API responds quickly)
 PAGE_SIZE_SLOW = 100   # for offsets >= 55000 (API slows down significantly)

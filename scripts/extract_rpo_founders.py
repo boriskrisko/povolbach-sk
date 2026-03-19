@@ -35,7 +35,7 @@ VUC_ICOS = {
 
 def load_target_icos():
     """Load municipality IČOs + VÚC IČOs as the set of potential founders."""
-    path = os.path.join(BASE, 'data', 'municipalities_isco.json')
+    path = os.path.join(BASE, 'data', 'municipalities_ico.json')
     with open(path) as f:
         data = json.load(f)
     icos = set(data.keys())

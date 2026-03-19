@@ -116,7 +116,7 @@ def main():
     with open(DATA / 'excluded_beneficiaries.json') as f:
         excl = json.load(f)
 
-    with open(DATA / 'municipalities_isco.json') as f:
+    with open(DATA / 'municipalities_ico.json') as f:
         muni_isco = json.load(f)
 
     with open(DATA / 'subsidiaries_by_municipality_14.json') as f:

@@ -2,7 +2,7 @@
 """
 match_municipalities.py — IČO-based municipality matching for povolbach.sk
 
-Step 1: Load/create municipality reference list (municipalities_isco.json)
+Step 1: Load/create municipality reference list (municipalities_ico.json)
 Step 2: Normalize IČOs everywhere
 Step 3: IČO join with ITMS data
 Step 4: Save municipal_stats.json
@@ -23,7 +23,7 @@ from datetime import datetime
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 
-MUNICIPALITIES_ISCO_PATH = os.path.join(DATA_DIR, "municipalities_isco.json")
+MUNICIPALITIES_ICO_PATH = os.path.join(DATA_DIR, "municipalities_ico.json")
 AGGREGATED_PATH = os.path.join(DATA_DIR, "aggregated_by_beneficiary_14.json")
 IRREGULARITIES_PATH = os.path.join(DATA_DIR, "irregularities_by_ico_14.json")
 RAW_SUBJECTS_PATH = os.path.join(DATA_DIR, "raw_subjects.json")
@@ -221,14 +221,14 @@ def step1_load_or_create_reference() -> dict:
     Uses incremental caching so RPO lookups survive crashes."""
 
     # If fully built, just load it
-    if os.path.exists(MUNICIPALITIES_ISCO_PATH):
-        log(f"Step 1: Loading existing {MUNICIPALITIES_ISCO_PATH}")
-        with open(MUNICIPALITIES_ISCO_PATH, "r", encoding="utf-8") as f:
+    if os.path.exists(MUNICIPALITIES_ICO_PATH):
+        log(f"Step 1: Loading existing {MUNICIPALITIES_ICO_PATH}")
+        with open(MUNICIPALITIES_ICO_PATH, "r", encoding="utf-8") as f:
             data = json.load(f)
         log(f"  Loaded {len(data)} municipalities from cache")
         return data
 
-    log("Step 1: Building municipalities_isco.json from available data")
+    log("Step 1: Building municipalities_ico.json from available data")
 
     # --- Source 1: existing complete_municipality_map.json (has IČOs for ~2476) ---
     existing_ico_map = {}  # nuts_code -> ico
@@ -328,9 +328,9 @@ def step1_load_or_create_reference() -> dict:
         log(f"  Failed ({len(rpo_failed)}): {[f['name'] for f in rpo_failed[:20]]}")
 
     # Save the complete reference
-    with open(MUNICIPALITIES_ISCO_PATH, "w", encoding="utf-8") as f:
+    with open(MUNICIPALITIES_ICO_PATH, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
-    log(f"  Saved {len(result)} municipalities to {MUNICIPALITIES_ISCO_PATH}")
+    log(f"  Saved {len(result)} municipalities to {MUNICIPALITIES_ICO_PATH}")
 
     return result
 

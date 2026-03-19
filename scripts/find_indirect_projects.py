@@ -50,7 +50,7 @@ def main():
     else:
         agg_by_ico = agg_data
 
-    with open(f'{DATA}/municipalities_isco.json') as f:
+    with open(f'{DATA}/municipalities_ico.json') as f:
         muni_register = json.load(f)
     muni_set = set(muni_register.keys())
 
