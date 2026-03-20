@@ -58,15 +58,17 @@ interface DetailData {
   indirect_projects?: Array<{ name: string; beneficiary_name: string; contracted_eur: number }>;
 }
 
-function openPrintWindow(html: string) {
-  const w = window.open('', '_blank');
-  if (!w) { alert('Povoľte vyskakovacie okná pre tlač PDF.'); return; }
-  w.document.write(html);
+function writePrintWindow(w: Window, title: string, bodyHtml: string) {
+  w.document.write(`<!DOCTYPE html><html lang="sk"><head><meta charset="utf-8"><title>${title}</title><style>${CSS}</style></head><body>${bodyHtml}</body></html>`);
   w.document.close();
   setTimeout(() => w.print(), 300);
 }
 
 export async function generateMunicipalityPdf(ico: string, period: '1420' | '2127') {
+  // Open window SYNCHRONOUSLY in click handler to avoid popup blocker
+  const w = window.open('', '_blank');
+  if (!w) { alert('Povoľte vyskakovacie okná pre tlač PDF.'); return; }
+
   const suffix = period === '1420' ? '14' : '21';
   const periodLabel = period === '1420' ? '2014–2020' : '2021–2027';
   const dataSource = period === '1420' ? 'ITMS2014+' : 'ITMS2021+';
@@ -76,7 +78,7 @@ export async function generateMunicipalityPdf(ico: string, period: '1420' | '212
     const res = await fetch(`/municipal_stats_${suffix}.json`);
     if (res.ok) { const all = await res.json(); m = all[ico] || null; }
   } catch { /* */ }
-  if (!m) { alert('Dáta sa nepodarilo načítať.'); return; }
+  if (!m) { w.close(); alert('Dáta sa nepodarilo načítať.'); return; }
 
   let detail: DetailData = {};
   try {
@@ -140,10 +142,14 @@ export async function generateMunicipalityPdf(ico: string, period: '1420' | '212
 
   body += `<div class="footer"><span>Zdroj: povolbach.sk · Dáta: ${dataSource} · Vygenerované: ${new Date().toLocaleDateString('sk-SK')}</span><span>${esc(m.official_name)}</span></div>`;
 
-  openPrintWindow(`<!DOCTYPE html><html lang="sk"><head><meta charset="utf-8"><title>${esc(m.official_name)} — eurofondy</title><style>${CSS}</style></head><body>${body}</body></html>`);
+  writePrintWindow(w, `${esc(m.official_name)} - čerpanie Eurofondov - ${periodLabel} | povolbach.sk`, body);
 }
 
-export async function generateVucPdf(v: VucStats, period: '1420' | '2127') {
+export function generateVucPdf(v: VucStats, period: '1420' | '2127') {
+  const w = window.open('', '_blank');
+  if (!w) { alert('Povoľte vyskakovacie okná pre tlač PDF.'); return; }
+
+  const suffix = period === '1420' ? '14' : '21';
   const periodLabel = period === '1420' ? '2014–2020' : '2021–2027';
   const dataSource = period === '1420' ? 'ITMS2014+' : 'ITMS2021+';
   const grandTotal = v.total_contracted_eur + (v.subsidiary_total_eur || 0);
@@ -181,5 +187,5 @@ export async function generateVucPdf(v: VucStats, period: '1420' | '2127') {
 
   body += `<div class="footer"><span>Zdroj: povolbach.sk · Dáta: ${dataSource} · Vygenerované: ${new Date().toLocaleDateString('sk-SK')}</span><span>${esc(v.name)}</span></div>`;
 
-  openPrintWindow(`<!DOCTYPE html><html lang="sk"><head><meta charset="utf-8"><title>${esc(v.name)} — eurofondy</title><style>${CSS}</style></head><body>${body}</body></html>`);
+  writePrintWindow(w, `${esc(v.name)} - čerpanie Eurofondov - ${periodLabel} | povolbach.sk`, body);
 }
