@@ -144,6 +144,42 @@ export function findSimilarSize(targetIco: string, data: MunicipalityMap, count 
     .slice(0, count);
 }
 
+/** Compute national per-capita average from all municipalities */
+export function computeNationalAvgPerCapita(data: MunicipalityMap): number {
+  let totalEur = 0, totalPop = 0;
+  for (const m of Object.values(data)) {
+    totalEur += getCombinedTotal(m);
+    totalPop += m.population || 0;
+  }
+  return totalPop > 0 ? totalEur / totalPop : 0;
+}
+
+/** Find peer rank: municipalities in ±50% population within expanding radius */
+export function findPeerRank(targetIco: string, data: MunicipalityMap): { rank: number; total: number; radiusKm: number; popMin: number; popMax: number } | null {
+  const target = data[targetIco];
+  if (!target?.population || !target.gps_lat || !target.gps_lon) return null;
+  const popMin = Math.round(target.population * 0.5);
+  const popMax = Math.round(target.population * 1.5);
+
+  for (const radiusKm of [30, 50, 100]) {
+    const peers: { ico: string; perCapita: number }[] = [];
+    for (const m of Object.values(data)) {
+      if (!m.population || m.population < popMin || m.population > popMax) continue;
+      if (!m.gps_lat || !m.gps_lon) continue;
+      const dist = haversineKm(target.gps_lat, target.gps_lon, m.gps_lat, m.gps_lon);
+      if (dist > radiusKm) continue;
+      const pc = m.population > 0 ? getCombinedTotal(m) / m.population : 0;
+      peers.push({ ico: m.ico, perCapita: pc });
+    }
+    if (peers.length >= 5) {
+      peers.sort((a, b) => b.perCapita - a.perCapita);
+      const rank = peers.findIndex(p => p.ico === targetIco) + 1;
+      return { rank, total: peers.length, radiusKm, popMin, popMax };
+    }
+  }
+  return null;
+}
+
 export function searchMunicipalities(data: MunicipalityMap, query: string): Municipality[] {
   if (query.length < 2) return [];
   const q = query.toLowerCase();

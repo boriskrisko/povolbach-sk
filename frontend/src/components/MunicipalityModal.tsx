@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo, useCallback, useEffect } from 'react';
 import { Municipality } from '@/lib/types';
-import { formatAmount, formatProjects, getCombinedTotal, findNeighbors, findSimilarSize } from '@/lib/utils';
+import { formatAmount, formatProjects, getCombinedTotal, findNeighbors, findSimilarSize, computeNationalAvgPerCapita, findPeerRank } from '@/lib/utils';
 import { useData, Period } from '@/lib/DataContext';
 import { t, type Locale } from '@/lib/translations';
 import { generateMunicipalityPdf } from '@/lib/generatePdf';
@@ -108,6 +108,8 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
   const activeData = localPeriod === '1420' ? data14 : data21;
   const neighbors = useMemo(() => municipality && activeData ? findNeighbors(municipality.ico, activeData, 5) : [], [municipality?.ico, activeData]);
   const similarSize = useMemo(() => municipality && activeData ? findSimilarSize(municipality.ico, activeData, 5) : [], [municipality?.ico, activeData]);
+  const nationalAvg = useMemo(() => activeData ? computeNationalAvgPerCapita(activeData) : 0, [activeData]);
+  const peerRank = useMemo(() => municipality && activeData ? findPeerRank(municipality.ico, activeData) : null, [municipality?.ico, activeData]);
 
   if (!municipality) return null;
 
@@ -311,6 +313,37 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
             </div>
           </div>
           {m!.population > 0 && grandTotal > 0 && <div className="mb-6 bg-[#0a0a0f] rounded-xl p-4 border border-[#1e1e2e]"><div className="text-xl font-bold text-[#10b981] font-mono">{formatAmount(Math.round(grandTotal / m!.population), locale)} {tr.per_capita_suffix}</div><div className="text-[#94a3b8] text-sm mt-1">{tr.modal_per_capita}</div></div>}
+
+          {/* Potential vs national average */}
+          {m!.population > 0 && nationalAvg > 0 && (() => {
+            const myPC = grandTotal / m!.population;
+            const pct = Math.round((myPC / nationalAvg) * 100);
+            const barWidth = Math.min(pct, 100);
+            const gap = Math.max(0, nationalAvg * m!.population - grandTotal);
+            const barColor = pct >= 75 ? 'bg-[#10b981]' : pct >= 25 ? 'bg-[#f59e0b]' : 'bg-[#ef4444]';
+            return (
+              <div className="mb-6 bg-[#0a0a0f] rounded-xl p-4 border border-[#1e1e2e]">
+                <div className="flex items-baseline justify-between mb-2">
+                  <span className="text-xs text-[#94a3b8]/70">{formatAmount(Math.round(myPC), locale)} / {formatAmount(Math.round(nationalAvg), locale)} {tr.potential_national_avg}</span>
+                  <span className={`text-sm font-bold font-mono ${pct >= 100 ? 'text-[#10b981]' : pct >= 50 ? 'text-[#f59e0b]' : 'text-[#ef4444]'}`}>{pct}%</span>
+                </div>
+                <div className="w-full h-2 rounded-full bg-white/[0.06] overflow-hidden">
+                  <div className={`h-full rounded-full ${barColor} transition-all duration-500`} style={{ width: `${barWidth}%` }} />
+                </div>
+                {pct < 100 ? (
+                  <div className="text-xs text-[#94a3b8]/50 mt-2">{tr.potential_gap} <span className="text-[#f59e0b] font-mono">{formatAmount(Math.round(gap), locale)}</span> {tr.potential_of}.</div>
+                ) : (
+                  <div className="text-xs text-[#10b981]/70 mt-2">{tr.potential_above} <span className="font-mono font-bold">{pct}%</span> {tr.potential_national_avg}.</div>
+                )}
+                {peerRank && (
+                  <div className="text-xs text-[#94a3b8]/50 mt-1.5">
+                    {tr.potential_among} ({peerRank.popMin.toLocaleString('sk-SK')}–{peerRank.popMax.toLocaleString('sk-SK')} {tr.potential_residents}, {tr.potential_within} {peerRank.radiusKm} km): <span className={`font-mono font-bold ${peerRank.rank <= Math.ceil(peerRank.total * 0.25) ? 'text-[#10b981]' : peerRank.rank > Math.ceil(peerRank.total * 0.75) ? 'text-[#f59e0b]' : 'text-[#f8fafc]'}`}>{peerRank.rank}. z {peerRank.total}</span> — {tr.potential_better} {Math.round((1 - peerRank.rank / peerRank.total) * 100)}% {tr.potential_of_neighbors}
+                  </div>
+                )}
+              </div>
+            );
+          })()}
+
           {m!.irregularities_count > 0 && <div className="mb-6 bg-[#0a0a0f] rounded-xl p-4 border border-[#1e1e2e] border-l-2 border-l-[#f59e0b]"><div className="text-[#f59e0b] text-sm font-medium">{tr.modal_irregularities(m!.irregularities_count, formatAmount(m!.irregularities_total_eur, locale))}</div></div>}
           {topProjects.length > 0 && <div className="mb-6"><h3 className="text-sm font-medium text-[#94a3b8] mb-3 uppercase tracking-wider">{tr.modal_top_projects}</h3><div className="space-y-2">{topProjects.map((p, i) => { const act = !p.stav.toLowerCase().includes('ukončen'); const ed = p.datumKoncaRealizacie ? (() => { const d = new Date(p.datumKoncaRealizacie); return isNaN(d.getTime()) ? null : `${d.getMonth()+1}/${d.getFullYear()}`; })() : null; return <div key={i} className="bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e]"><div className="text-sm text-[#f8fafc] mb-1 line-clamp-2">{p.nazov}</div>{act && ed && <div className="text-xs text-[#94a3b8]/60 mb-1">{locale === 'sk' ? 'Realizácia do' : 'Until'}: {ed}</div>}<div className="flex justify-between text-xs"><span className="text-[#3b82f6] font-mono">{formatAmount(p.sumaZazmluvnena, locale)}</span><span className="text-[#94a3b8]">{act ? tr.active : tr.completed}</span></div></div>; })}</div></div>}
           {subTotal > 0 && topSubs.length > 0 && (() => { const hasJV = topSubs.some(o => (o.co_owners||0) > 1); return <div className="mb-6"><h3 className="text-sm font-medium text-[#10b981]/80 mb-1 uppercase tracking-wider flex items-center gap-1.5">{tr.modal_subsidiary_title}<span className="text-base leading-none" title={tr.modal_subsidiary_note}>ℹ️</span></h3><p className="text-[#94a3b8]/60 text-xs mb-3">{tr.modal_subsidiary_note}</p><div className="space-y-2">{topSubs.map((org, i) => <div key={i} className="bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e] border-l-2 border-l-[#10b981]/40"><div className="text-sm text-[#f8fafc]/90 mb-1 line-clamp-2">{org.name}</div><div className="flex justify-between text-xs"><span className="text-[#10b981] font-mono">{formatAmount(org.total_contracted_eur, locale)}</span><span className="text-[#94a3b8]/70">{formatProjects(org.projects_count, locale)}</span></div>{(org.co_owners||0) > 1 && org.full_amount_eur && <div className="text-[10px] text-[#94a3b8]/50 mt-1">↳ {locale === 'sk' ? (org.share_pct ? `podiel ${org.share_pct}% z ${formatAmount(org.full_amount_eur, locale)} (spoločný podnik ${org.co_owners} obcí)` : `podiel 1/${org.co_owners} z ${formatAmount(org.full_amount_eur, locale)} (spoločný podnik ${org.co_owners} obcí)`) : (org.share_pct ? `${org.share_pct}% share of ${formatAmount(org.full_amount_eur, locale)} (joint venture of ${org.co_owners} municipalities)` : `share 1/${org.co_owners} of ${formatAmount(org.full_amount_eur, locale)} (joint venture of ${org.co_owners} municipalities)`)}</div>}</div>)}</div>{hasJV && <p className="text-[10px] text-[#94a3b8]/40 mt-2">{locale === 'sk' ? 'Sumy spoločných podnikov sú rozdelené proporcionálne medzi spoluvlastníkov.' : 'Joint venture amounts are split proportionally among co-owners.'}</p>}</div>; })()}
