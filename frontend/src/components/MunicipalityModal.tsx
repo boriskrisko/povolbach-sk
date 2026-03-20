@@ -119,14 +119,14 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
   const btnCls = "p-2 rounded-lg bg-[#0a0a0f] border border-[#1e1e2e] text-[#94a3b8] hover:text-[#f8fafc] hover:border-white/20 transition-all";
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/60 overflow-hidden" onClick={onClose}>
-      <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-6 sm:p-8 animate-fade-in-up overflow-y-auto" style={{ position: 'fixed', top: '10vh', left: 0, right: 0, marginLeft: 'auto', marginRight: 'auto', width: '90%', maxWidth: 720, maxHeight: '80vh', WebkitOverflowScrolling: 'touch' } as React.CSSProperties} onClick={e => e.stopPropagation()}>
+    <div className="fixed inset-0 z-50 flex justify-center items-start overflow-y-auto bg-black/60 p-4 pt-[10vh]" onClick={onClose}>
+      <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl w-full max-w-[720px] p-6 sm:p-8 animate-fade-in-up overflow-y-auto" style={{ maxHeight: '80vh', WebkitOverflowScrolling: 'touch' } as React.CSSProperties} onClick={e => e.stopPropagation()}>
         {/* Header */}
         <div className="flex justify-between items-start mb-4">
           <div className="flex-1 min-w-0">
             <h2 className="text-2xl font-bold text-[#f8fafc]" style={{ fontFamily: 'Syne, sans-serif' }}>{municipality.official_name}</h2>
             <p className="text-[#94a3b8] text-sm mt-1">{municipality.region}{municipality.district ? ` · ${municipality.district}` : ''} · {municipality.nuts5_code}</p>
-            <p className="text-[#94a3b8] text-sm">IČO: <span className="font-mono text-[#f8fafc]">{municipality.ico}</span>{municipality.population > 0 && <span> · {municipality.population.toLocaleString('sk-SK')} {locale === 'sk' ? 'obyvateľov' : 'inhabitants'}</span>}</p>
+            <p className="text-[#94a3b8] text-sm">IČO: <span className="font-mono text-[#f8fafc]">{municipality.ico}</span>{(m?.population ?? municipality.population) > 0 && <span> · {(m?.population ?? municipality.population).toLocaleString('sk-SK')} {locale === 'sk' ? 'obyvateľov' : 'inhabitants'}</span>}</p>
           </div>
           <button onClick={onClose} className="text-[#94a3b8] hover:text-[#f8fafc] transition-colors text-2xl leading-none ml-4 flex-shrink-0">&times;</button>
         </div>

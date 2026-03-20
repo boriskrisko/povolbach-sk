@@ -107,13 +107,13 @@ export default function VucModal({ vuc, vucOtherPeriod, onClose, locale }: Props
     : (locale === 'sk' ? 'Zahŕňa priame čerpanie samosprávneho kraja aj organizácií v jeho zriaďovateľskej pôsobnosti. Nezahŕňa projekty štátnych agentúr.' : 'Includes direct regional government absorption and organizations under its jurisdiction. Excludes state agency projects.');
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/60 overflow-hidden" onClick={onClose}>
-      <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-6 sm:p-8 animate-fade-in-up overflow-y-auto" style={{ position: 'fixed', top: '10vh', left: 0, right: 0, marginLeft: 'auto', marginRight: 'auto', width: '90%', maxWidth: 720, maxHeight: '80vh' } as React.CSSProperties} onClick={e => e.stopPropagation()}>
+    <div className="fixed inset-0 z-50 flex justify-center items-start overflow-y-auto bg-black/60 p-4 pt-[10vh]" onClick={onClose}>
+      <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl w-full max-w-[720px] p-6 sm:p-8 animate-fade-in-up overflow-y-auto" style={{ maxHeight: '80vh' } as React.CSSProperties} onClick={e => e.stopPropagation()}>
         {/* Header */}
         <div className="flex justify-between items-start mb-4">
           <div>
             <h2 className="text-2xl font-bold text-[#f8fafc]" style={{ fontFamily: 'Syne, sans-serif' }}>{vuc.name}</h2>
-            <p className="text-[#94a3b8] text-sm mt-1">IČO: <span className="font-mono text-[#f8fafc]">{vuc.ico}</span>{vuc.population > 0 && <span> · {vuc.population.toLocaleString('sk-SK')} {locale === 'sk' ? 'obyvateľov' : 'inhabitants'}</span>}</p>
+            <p className="text-[#94a3b8] text-sm mt-1">IČO: <span className="font-mono text-[#f8fafc]">{vuc.ico}</span>{(v?.population ?? vuc.population) > 0 && <span> · {(v?.population ?? vuc.population).toLocaleString('sk-SK')} {locale === 'sk' ? 'obyvateľov' : 'inhabitants'}</span>}</p>
           </div>
           <button onClick={onClose} className="text-[#94a3b8] hover:text-[#f8fafc] transition-colors text-2xl leading-none">&times;</button>
         </div>
