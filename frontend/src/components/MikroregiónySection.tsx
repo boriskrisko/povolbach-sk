@@ -117,8 +117,8 @@ function MikroModal({ cat, cat14, cat21, locale, onClose }: { cat: MikroCategory
   const label = locale === 'sk' ? activeCat.label_sk : activeCat.label_en;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 overflow-hidden" onClick={onClose}>
-      <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl max-w-lg w-full mx-4 p-8 animate-fade-in-up overflow-y-auto" style={{ maxHeight: '85vh' } as React.CSSProperties} onClick={e => e.stopPropagation()}>
+    <div className="fixed inset-0 z-50 bg-black/60 overflow-hidden" onClick={onClose}>
+      <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl max-w-lg w-full mx-4 p-8 animate-fade-in-up overflow-y-auto" style={{ position: 'fixed', top: '10vh', left: '50%', transform: 'translateX(-50%)', maxHeight: '80vh' }} onClick={e => e.stopPropagation()}>
         <div className="flex justify-between items-start mb-4">
           <div>
             <h2 className="text-2xl font-bold text-[#f8fafc]" style={{ fontFamily: 'Syne, sans-serif' }}>{label}</h2>
@@ -129,10 +129,10 @@ function MikroModal({ cat, cat14, cat21, locale, onClose }: { cat: MikroCategory
 
         {/* Period toggle */}
         <div className="flex items-center justify-between mb-4">
+          <span className="text-[11px] text-[#94a3b8]/40 uppercase tracking-wider">{tr.modal_detail_label(localPeriod === '1420' ? tr.modal_period_1420 : tr.modal_period_2127)}</span>
           <div className="flex items-center gap-0.5 bg-white/[0.04] rounded-md p-0.5">
             {(['1420', '2127'] as Period[]).map(p => <button key={p} onClick={() => periodAvailable[p] && setLocalPeriod(p)} disabled={!periodAvailable[p]} className={`px-2.5 py-1 rounded text-[11px] font-medium transition-all ${localPeriod === p ? 'bg-[#3b82f6] text-white shadow-sm' : periodAvailable[p] ? 'text-[#94a3b8]/70 hover:text-[#f8fafc]' : 'text-[#94a3b8]/20 cursor-not-allowed'}`}>{p === '1420' ? tr.modal_period_1420 : tr.modal_period_2127}</button>)}
           </div>
-          <span className="text-[11px] text-[#94a3b8]/40 uppercase tracking-wider">{tr.modal_detail_label(localPeriod === '1420' ? tr.modal_period_1420 : tr.modal_period_2127)}</span>
         </div>
 
         {activeCat.entries.length === 0 ? (

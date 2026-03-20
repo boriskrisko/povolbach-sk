@@ -107,8 +107,8 @@ export default function VucModal({ vuc, vucOtherPeriod, onClose, locale }: Props
     : (locale === 'sk' ? 'Zahŕňa priame čerpanie samosprávneho kraja aj organizácií v jeho zriaďovateľskej pôsobnosti. Nezahŕňa projekty štátnych agentúr.' : 'Includes direct regional government absorption and organizations under its jurisdiction. Excludes state agency projects.');
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 overflow-hidden" onClick={onClose}>
-      <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl max-w-lg w-full mx-4 p-6 sm:p-8 animate-fade-in-up overflow-y-auto" style={{ maxHeight: '85vh' } as React.CSSProperties} onClick={e => e.stopPropagation()}>
+    <div className="fixed inset-0 z-50 bg-black/60 overflow-hidden" onClick={onClose}>
+      <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl max-w-lg w-full mx-4 p-6 sm:p-8 animate-fade-in-up overflow-y-auto" style={{ position: 'fixed', top: '10vh', left: '50%', transform: 'translateX(-50%)', maxHeight: '80vh' } as React.CSSProperties} onClick={e => e.stopPropagation()}>
         {/* Header */}
         <div className="flex justify-between items-start mb-4">
           <div>
