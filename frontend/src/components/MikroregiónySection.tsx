@@ -118,7 +118,7 @@ function MikroModal({ cat, cat14, cat21, locale, onClose }: { cat: MikroCategory
 
   return (
     <div className="fixed inset-0 z-50 bg-black/60 overflow-hidden" onClick={onClose}>
-      <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-8 animate-fade-in-up overflow-y-auto" style={{ position: 'fixed', top: '10vh', left: '50%', transform: 'translateX(-50%)', width: '90%', maxWidth: 720, maxHeight: '80vh' }} onClick={e => e.stopPropagation()}>
+      <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-8 animate-fade-in-up overflow-y-auto" style={{ position: 'fixed', top: '10vh', left: 0, right: 0, marginLeft: 'auto', marginRight: 'auto', width: '90%', maxWidth: 720, maxHeight: '80vh' }} onClick={e => e.stopPropagation()}>
         <div className="flex justify-between items-start mb-4">
           <div>
             <h2 className="text-2xl font-bold text-[#f8fafc]" style={{ fontFamily: 'Syne, sans-serif' }}>{label}</h2>
