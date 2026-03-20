@@ -120,7 +120,7 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
 
   return (
     <div className="fixed inset-0 z-50 bg-black/60 overflow-hidden" onClick={onClose}>
-      <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl max-w-lg w-full mx-4 p-6 sm:p-8 animate-fade-in-up overflow-y-auto" style={{ position: 'fixed', top: '10vh', left: '50%', transform: 'translateX(-50%)', maxHeight: '80vh', WebkitOverflowScrolling: 'touch' } as React.CSSProperties} onClick={e => e.stopPropagation()}>
+      <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-6 sm:p-8 animate-fade-in-up overflow-y-auto" style={{ position: 'fixed', top: '10vh', left: '50%', transform: 'translateX(-50%)', width: '90%', maxWidth: 720, maxHeight: '80vh', WebkitOverflowScrolling: 'touch' } as React.CSSProperties} onClick={e => e.stopPropagation()}>
         {/* Header */}
         <div className="flex justify-between items-start mb-4">
           <div className="flex-1 min-w-0">
