@@ -65,16 +65,15 @@ function writePrintWindow(w: Window, title: string, bodyHtml: string) {
   setTimeout(() => w.print(), 300);
 }
 
-export async function generateMunicipalityPdf(ico: string, period: '1420' | '2127') {
-  // Open window SYNCHRONOUSLY in click handler to avoid popup blocker
-  const w = window.open('', '_blank');
-  if (!w) { alert('Povoľte vyskakovacie okná pre tlač PDF.'); return; }
-
+export async function generateMunicipalityPdf(ico: string, period: '1420' | '2127', name: string) {
   const suffix = period === '1420' ? '14' : '21';
   const periodLabel = period === '1420' ? '2014–2020' : '2021–2027';
+  const title = `${name} - čerpanie Eurofondov - ${periodLabel} | povolbach.sk`;
 
-  // Set temporary title immediately so the tab isn't blank during fetch
-  w.document.title = `čerpanie Eurofondov - ${periodLabel} | povolbach.sk`;
+  // Open window SYNCHRONOUSLY with title set IMMEDIATELY — before any async work
+  const w = window.open('', '_blank');
+  if (!w) { alert('Povoľte vyskakovacie okná pre tlač PDF.'); return; }
+  w.document.title = title;
   const dataSource = period === '1420' ? 'ITMS2014+' : 'ITMS2021+';
 
   let m: Municipality | null = null;
@@ -146,7 +145,6 @@ export async function generateMunicipalityPdf(ico: string, period: '1420' | '212
 
   body += `<div class="footer"><span>Zdroj: povolbach.sk · Dáta: ${dataSource} · Vygenerované: ${new Date().toLocaleDateString('sk-SK')}</span><span>${esc(m.official_name)}</span></div>`;
 
-  const title = `${esc(m.official_name)} - čerpanie Eurofondov - ${periodLabel} | povolbach.sk`;
   w.document.write(`<!DOCTYPE html><html lang="sk"><head><meta charset="utf-8"><title>${title}</title><style>${CSS}</style></head><body>${body}</body></html>`);
   w.document.close();
   w.document.title = title;
