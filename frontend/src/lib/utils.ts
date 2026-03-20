@@ -81,7 +81,10 @@ export function getRegionStats(data: MunicipalityMap): RegionStats[] {
       regions[region] = { totalEur: 0, totalPopulation: 0, count: 0, withProjects: 0, withoutProjects: 0 };
     }
     regions[region].totalEur += getCombinedTotal(m);
-    regions[region].totalPopulation += m.population || 0;
+    // Skip parent BA/KE population (already counted via their MČ)
+    if (!PARENT_CITY_ICOS.has(m.ico)) {
+      regions[region].totalPopulation += m.population || 0;
+    }
     regions[region].count += 1;
     if (getCombinedTotal(m) > 0) {
       regions[region].withProjects += 1;
@@ -144,12 +147,18 @@ export function findSimilarSize(targetIco: string, data: MunicipalityMap, count 
     .slice(0, count);
 }
 
-/** Compute national per-capita average from all municipalities */
+// Bratislava and Košice parent records duplicate their MČ populations.
+// Exclude parent population (but keep their EUR — those are unique projects).
+const PARENT_CITY_ICOS = new Set(['00603481', '00691135']); // Bratislava, Košice
+
+/** Compute national per-capita average, excluding duplicate parent city populations */
 export function computeNationalAvgPerCapita(data: MunicipalityMap): number {
   let totalEur = 0, totalPop = 0;
   for (const m of Object.values(data)) {
     totalEur += getCombinedTotal(m);
-    totalPop += m.population || 0;
+    if (!PARENT_CITY_ICOS.has(m.ico)) {
+      totalPop += m.population || 0;
+    }
   }
   return totalPop > 0 ? totalEur / totalPop : 0;
 }
