@@ -61,6 +61,7 @@ interface DetailData {
 function writePrintWindow(w: Window, title: string, bodyHtml: string) {
   w.document.write(`<!DOCTYPE html><html lang="sk"><head><meta charset="utf-8"><title>${title}</title><style>${CSS}</style></head><body>${bodyHtml}</body></html>`);
   w.document.close();
+  w.document.title = title;
   setTimeout(() => w.print(), 300);
 }
 
