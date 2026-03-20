@@ -26,10 +26,19 @@ def load_json(path: Path):
         return json.load(f)
 
 
-def process_municipalities(base_path: Path, subs: dict, indirect: dict, out_path: Path):
+def process_municipalities(base_path: Path, subs: dict, indirect: dict, out_path: Path, population: dict | None = None):
     base = load_json(base_path)
     print(f'\n  Processing {base_path.name} → {out_path.name}')
     print(f'    Municipalities: {len(base)}')
+
+    # Override population with period-appropriate data
+    if population:
+        pop_updated = 0
+        for ico, m in base.items():
+            if ico in population:
+                m['population'] = population[ico]
+                pop_updated += 1
+        print(f'    Population overridden for {pop_updated} municipalities')
 
     merged = 0
     for ico, m in base.items():
@@ -133,6 +142,12 @@ def process_period(period: str):
     indirect_path = DATA / f'indirect_by_municipality{suffix}.json'
     indirect = load_json(indirect_path) if indirect_path.exists() else {}
 
+    # Load period-appropriate population data
+    pop_file = DATA / ('population_2017.json' if period == '14' else 'population_2024.json')
+    pop_data = load_json(pop_file) if pop_file.exists() else None
+    if pop_data:
+        print(f'  Population source: {pop_file.name} ({len(pop_data)} entries)')
+
     print(f'  Municipalities with subsidiaries: {len(subs)}')
     print(f'  VÚC with subsidiaries: {sum(1 for v in vuc_subs.values() if v.get("subsidiary_orgs"))}')
     print(f'  Municipalities with indirect projects: {len(indirect)}')
@@ -141,6 +156,7 @@ def process_period(period: str):
         muni_path,
         subs, indirect,
         PUBLIC / f'municipal_stats{suffix}.json',
+        population=pop_data,
     )
     process_vuc(PUBLIC / f'vuc_stats{suffix}.json', vuc_subs, PUBLIC / f'vuc_stats{suffix}.json')
     return base
