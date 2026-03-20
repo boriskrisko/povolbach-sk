@@ -26,7 +26,7 @@ def load_json(path: Path):
         return json.load(f)
 
 
-def process_municipalities(base_path: Path, subs: dict, indirect: dict, out_path: Path, population: dict | None = None):
+def process_municipalities(base_path: Path, subs: dict, indirect: dict, out_path: Path, population: dict | None = None, mikro_attr: dict | None = None):
     base = load_json(base_path)
     print(f'\n  Processing {base_path.name} → {out_path.name}')
     print(f'    Municipalities: {len(base)}')
@@ -78,6 +78,16 @@ def process_municipalities(base_path: Path, subs: dict, indirect: dict, out_path
         else:
             m.pop('indirect_total_eur', None)
             m.pop('indirect_projects', None)
+
+        # Mikroregión attribution
+        if mikro_attr and ico in mikro_attr:
+            ma = mikro_attr[ico]
+            m['mikroregion_eur'] = ma.get('attributed_eur', 0)
+            m['mikroregion_sources'] = ma.get('sources', [])
+            changed = True
+        else:
+            m.pop('mikroregion_eur', None)
+            m.pop('mikroregion_sources', None)
 
         if changed:
             merged += 1
@@ -148,15 +158,20 @@ def process_period(period: str):
     if pop_data:
         print(f'  Population source: {pop_file.name} ({len(pop_data)} entries)')
 
+    mikro_path = DATA / f'mikroregion_attributed{suffix}.json'
+    mikro_attr = load_json(mikro_path) if mikro_path.exists() else {}
+
     print(f'  Municipalities with subsidiaries: {len(subs)}')
     print(f'  VÚC with subsidiaries: {sum(1 for v in vuc_subs.values() if v.get("subsidiary_orgs"))}')
     print(f'  Municipalities with indirect projects: {len(indirect)}')
+    print(f'  Municipalities with mikroregión attribution: {len(mikro_attr)}')
 
     base = process_municipalities(
         muni_path,
         subs, indirect,
         PUBLIC / f'municipal_stats{suffix}.json',
         population=pop_data,
+        mikro_attr=mikro_attr,
     )
     process_vuc(PUBLIC / f'vuc_stats{suffix}.json', vuc_subs, PUBLIC / f'vuc_stats{suffix}.json')
     return base

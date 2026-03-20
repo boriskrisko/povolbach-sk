@@ -301,9 +301,11 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
                 <div className="font-bold text-[#3b82f6] font-mono" style={{ fontSize: 'clamp(1.2rem, 3.5vw, 2rem)' }}>{formatAmount(grandTotal, locale)}</div>
                 <div className="text-[#94a3b8] text-xs mt-0.5">{formatAmount(m!.total_contracted_eur, locale)} <span className="text-[#94a3b8]/60">{locale === 'sk' ? 'priame' : 'direct'}</span></div>
                 <div className="text-[#10b981] text-xs">+{formatAmount(subTotal, locale)} <span className="text-[#10b981]/70">{locale === 'sk' ? 'zriaďované org.' : 'orgs'}</span></div>
+                {(m!.mikroregion_eur || 0) > 0 && <div className="text-[#8b5cf6] text-xs">+{formatAmount(m!.mikroregion_eur!, locale)} <span className="text-[#8b5cf6]/70">{tr.from_mikroregions}</span></div>}
                 <div className="text-[#94a3b8] text-xs mt-1">{tr.modal_total}</div>
               </>) : (<>
                 <div className="font-bold text-[#3b82f6] font-mono" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)' }}>{formatAmount(m!.total_contracted_eur, locale)}</div>
+                {(m!.mikroregion_eur || 0) > 0 && <div className="text-[#8b5cf6] text-xs mt-0.5">+{formatAmount(m!.mikroregion_eur!, locale)} <span className="text-[#8b5cf6]/70">{tr.from_mikroregions}</span></div>}
                 <div className="text-[#94a3b8] text-sm mt-1">{tr.modal_total}</div>
               </>)}
             </div>
@@ -312,7 +314,11 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
               <div className="text-[#94a3b8] text-sm mt-1">{m!.active_projects > 0 ? `${m!.active_projects} ${tr.modal_active(m!.active_projects)}` : ''}{m!.active_projects > 0 && m!.completed_projects > 0 ? ', ' : ''}{m!.completed_projects > 0 ? `${m!.completed_projects} ${tr.modal_completed(m!.completed_projects)}` : ''}{totalProjects === 0 ? tr.modal_projects : ''}</div>
             </div>
           </div>
-          {m!.population > 0 && grandTotal > 0 && <div className="mb-6 bg-[#0a0a0f] rounded-xl p-4 border border-[#1e1e2e]"><div className="text-xl font-bold text-[#10b981] font-mono">{formatAmount(Math.round(grandTotal / m!.population), locale)} {tr.per_capita_suffix}</div><div className="text-[#94a3b8] text-sm mt-1">{tr.modal_per_capita}</div></div>}
+          {m!.population > 0 && grandTotal > 0 && <div className="mb-6 bg-[#0a0a0f] rounded-xl p-4 border border-[#1e1e2e]">
+            <div className="text-xl font-bold text-[#10b981] font-mono">{formatAmount(Math.round(grandTotal / m!.population), locale)} {tr.per_capita_suffix}</div>
+            {(m!.mikroregion_eur || 0) > 0 && <div className="text-xs text-[#8b5cf6] mt-0.5">{formatAmount(Math.round((grandTotal + m!.mikroregion_eur!) / m!.population), locale)} {tr.with_mikroregions}</div>}
+            <div className="text-[#94a3b8] text-sm mt-1">{tr.modal_per_capita}</div>
+          </div>}
 
           {/* Potential vs national average */}
           {m!.population > 0 && nationalAvg > 0 && (() => {

@@ -53,6 +53,8 @@ export interface Municipality {
   indirect_total_eur?: number;
   subsidiary_total_eur?: number;
   subsidiary_orgs?: SubsidiaryOrg[];
+  mikroregion_eur?: number;
+  mikroregion_sources?: string[];
 }
 
 export interface ProjectSummary {
