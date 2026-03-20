@@ -1,287 +1,205 @@
 # povolbach.sk — Project Context for Claude Code
 
-> Read this file at the start of every session. It contains everything you need to work autonomously without asking for background.
+> Read this file at the start of every session.
 
 ---
 
 ## What we're building
 
-**povolbach.sk** is a two-stage product:
+**povolbach.sk** — free public dashboard showing how well Slovak municipalities absorb EU funds.
 
-- **Stage 1 (current):** Free public dashboard showing how well Slovak municipalities absorb EU funds. Data comes from ITMS2014+ Open Data API. Framing is *efficiency* (opportunity to improve), NOT shaming.
-- **Stage 2 (future):** Paid SaaS — municipal EU project management tool. Stage 1 builds the audience; Stage 2 monetises it.
+- **Stage 1 (current):** Public dashboard. Data from ITMS2014+ and ITMS2021+ Open Data APIs. Framing is *efficiency* (opportunity to improve), NOT shaming.
+- **Stage 2 (future):** Paid SaaS — municipal EU project management tool.
 
 **Target:** $100K+/month in 18–24 months.
-**Stack:** Python data pipeline → static JSON → Next.js/React frontend.
+**Stack:** Python data pipeline → static JSON → Next.js 16.1.7 / React / Tailwind CSS
+**Hosting:** Vercel (serverless + edge). Live at https://povolbach.sk
 **Founder:** Based in Košice, member of Progressive Slovakia.
 
 ---
 
-## Data source
+## Architecture Rules — NON-NEGOTIABLE
 
-**API:** ITMS2014+ Open Data
-- Base URL: `https://opendata.itms2014.sk/v2/`
-- Key endpoints: `/projektoveUkoncene`, `/projektoveVrealizacii`, `/projekt/{id}`, `/subjekt/{id}`, `/ciselnik/nuts5`, `/nezrovnalosti`
-- Rate limits: ~20 concurrent requests safe, retry on 429/timeout
-- All requests are GET, no auth required
-
----
-
-## File structure
-
-```
-/Users/boriskrisko/povolbach/
-├── CLAUDE.md                               ← you are here
-├── fetch_itms.py                           ← 2014-2020 data pipeline
-├── fetch_itms21.py                         ← 2021-2027 data pipeline
-├── match_municipalities.py                 ← IČO-based municipality matching
-├── scripts/
-│   ├── build_frontend_public.py            ← merge + slim to frontend/public/
-│   ├── attribute_subsidiaries.py           ← RPO-based subsidiary attribution
-│   ├── find_indirect_projects.py           ← state project geo-mapping
-│   └── build_mikroregiony.py               ← mikroregión stats
-├── data/
-│   ├── raw_project_lists.json              ← paginated project IDs (step 1 cache)
-│   ├── raw_project_details/                ← individual project JSONs (step 2 cache)
-│   ├── raw_nuts_names.json                 ← NUTS5 code → municipality name (step 3 cache)
-│   ├── raw_subjects.json                   ← subject ID → name/address/GPS/municipality (step 4 cache)
-│   ├── aggregated_by_beneficiary_14.json   ← 2014-2020 per-IČO aggregated stats (step 5)
-│   ├── irregularities_by_ico_14.json       ← 2014-2020 irregularities per IČO (step 6)
-│   ├── aggregated_by_beneficiary_21.json   ← 2021-2027 per-IČO aggregated stats
-│   ├── municipal_stats_14.json             ← 2014-2020 municipal stats (match_municipalities output)
-│   ├── municipal_stats_21.json             ← 2021-2027 municipal stats (fetch_itms21 output)
-│   ├── vuc_stats_14.json                   ← 2014-2020 VÚC stats
-│   ├── vuc_stats_21.json                   ← 2021-2027 VÚC stats
-│   ├── mikroregiony_stats_14.json          ← 2014-2020 mikroregión stats
-│   ├── mikroregiony_stats_21.json          ← 2021-2027 mikroregión stats
-│   ├── subsidiaries_by_municipality_14.json ← subsidiary org attribution (2014-2020)
-│   ├── subsidiaries_by_vuc_14.json         ← VÚC subsidiary attribution
-│   ├── indirect_by_municipality_14.json    ← state/indirect project mapping
-│   └── municipalities_ico.json            ← official Slovak municipality IČO register
-└── frontend/                               ← Next.js app
-    └── public/
-        ├── municipal_stats_14.json         ← slimmed 2014-2020 (from build_frontend_public.py)
-        ├── municipal_stats_21.json         ← slimmed 2021-2027
-        ├── vuc_stats_14.json
-        ├── vuc_stats_21.json
-        ├── mikroregiony_stats_14.json
-        └── mikroregiony_stats_21.json
-```
-
----
-
-## The IČO rule — CRITICAL
-
-**IČO = Slovak company/entity registration number. It is the only join key used anywhere in this project.**
-
+### IČO-only joins
+**IČO = Slovak company/entity registration number. The ONLY join key in this project.**
 - ✅ Join by IČO
 - ✅ Display names (from registers or API responses)
-- ❌ NEVER match or deduplicate by name (names have typos, abbreviations, encoding issues)
+- ❌ NEVER match or deduplicate by name
 - ❌ NEVER use fuzzy matching on names
 
-This rule exists because name-based matching produced collisions and false matches in early testing. Every join, filter, and aggregation in the pipeline must use IČO as the primary key.
+### File Naming Convention
+ALL period-specific data files use suffix:
+- **2014-2020:** `_14` (e.g. `municipal_stats_14.json`)
+- **2021-2027:** `_21` (e.g. `municipal_stats_21.json`)
+- **NEVER use:** `_2127`, `_2021`, `_14_20`, `_21_27`, or no suffix
+
+### No cross-period contamination
+Each period's data is independent. Clear period-specific data before regenerating.
+
+### Static JSON architecture
+No external DB in Stage 1. All data is pre-computed JSON served as static files.
 
 ---
 
-## Pipeline overview (fetch_itms.py)
+## Data Pipeline
 
-| Step | What it does | Cache file |
-|------|-------------|-----------|
-| 1 | Fetch project IDs from both endpoints with `minId` pagination | `data/raw_project_lists.json` |
-| 2 | Fetch each project detail (20 concurrent, retry on 429) | `data/raw_project_details/{endpoint}_{id}.json` |
-| 3 | Resolve NUTS5 codes → municipality names | `data/raw_nuts_names.json` |
-| 4 | Resolve subject IDs → name, address, GPS, municipality | `data/raw_subjects.json` |
-| 5 | Aggregate by IČO: name, location, active/completed counts, total contracted | `data/aggregated_by_beneficiary_14.json` |
-| 6 | Fetch all irregularities, group by debtor IČO | `data/irregularities_by_ico_14.json` |
+### How to run a full data refresh
 
-**Resumability:** Steps 2–4 cache individual files. Re-running skips already-fetched records. Always check if a cache file exists before re-fetching.
+```bash
+# 1. Fetch raw data from ITMS APIs
+python3 fetch_itms.py          # 2014-2020 (resumable, ~20 min first run)
+python3 fetch_itms21.py        # 2021-2027 (resumable)
 
----
+# 2. Match municipalities to IČO register
+python3 match_municipalities.py
 
-## Municipality matching (match_municipalities.py) — CURRENT TASK
+# 3. Attribute subsidiary organizations via RPO
+python3 scripts/attribute_subsidiaries.py --period 14
+python3 scripts/attribute_subsidiaries.py --period 21
 
-This script takes `aggregated_by_beneficiary_14.json` and filters it down to only Slovak municipalities, enriched with official register data.
+# 4. Map state/indirect projects to municipalities
+python3 scripts/find_indirect_projects.py --period 14
+python3 scripts/find_indirect_projects.py --period 21
 
-### Input
-- `data/aggregated_by_beneficiary_14.json` — all beneficiaries from ITMS (IČO as key)
-- `data/municipalities_ico.json` — official Slovak municipality IČO list
+# 5. Build mikroregión stats
+python3 scripts/build_mikroregiony.py
 
-### Output
-- `data/municipal_stats_14.json` — municipalities only, with full stats
-- `data/validation_report.txt` — QA summary
+# 6. Merge + slim → frontend/public/
+python3 scripts/build_frontend_public.py
 
-### Municipality IČO source
-Slovak municipality IČOs are public. Authoritative sources:
-1. **REGOB register** (registerUO.sk or data.gov.sk) — official list of self-governing units
-2. **ITMS data itself** — beneficiaries with `pravnaForma` == `Obec` or `Mesto`
-3. **Manually curated list** — fallback if neither above is available
-
-The script must fetch or load this list, then do a pure IČO intersection — no name matching at any point.
-
-### Logic
-```python
-# CORRECT approach
-municipal_stats = {
-    ico: aggregated_data[ico]
-    for ico in municipality_icos
-    if ico in aggregated_data
-}
-
-# WRONG — never do this
-for name in municipality_names:
-    match = find_similar(name, all_beneficiary_names)  # ← forbidden
+# 7. Generate full-detail files for PDF export
+# (run the Python snippet from the session that creates municipal_details_*.json and vuc_details_*.json)
 ```
 
-### Edge cases to handle
-- Municipality IČO in register but NOT in ITMS data → include with zero values, not excluded
-- ITMS beneficiary is a municipal organisation (school, etc.) not the municipality itself → exclude from V1
-- IČO in ITMS but not in municipality register → not a municipality, exclude
-- Always output counts of each category in `validation_report.txt`
+### Pipeline scripts
 
-### validation_report.txt must contain
-```
-Total municipalities in register: X
-Municipalities matched in ITMS: X
-Municipalities with €0 absorption: X
-Excluded (org not in register): X
-Excluded (name-based match attempt detected): 0  ← should always be 0
-IČO collisions or anomalies: X
-Top 10 municipalities by total contracted: [list]
-Bottom 10 matched municipalities by total contracted: [list]
-```
+| Script | Purpose | Output |
+|--------|---------|--------|
+| `fetch_itms.py` | 6-step ITMS2014+ pipeline | `data/aggregated_by_beneficiary_14.json`, `data/irregularities_by_ico_14.json` |
+| `fetch_itms21.py` | ITMS2021+ pipeline | `data/aggregated_by_beneficiary_21.json` |
+| `match_municipalities.py` | IČO-based municipality matching + RPO lookup | `data/municipal_stats_14.json`, `data/municipalities_ico.json` |
+| `scripts/build_frontend_public.py` | Merge + slim to top 5 projects | `frontend/public/municipal_stats_*.json`, `frontend/public/vuc_stats_*.json` |
+| `scripts/attribute_subsidiaries.py` | RPO founder → municipality/VÚC attribution | `data/subsidiaries_by_municipality_*.json`, `data/subsidiaries_by_vuc_*.json` |
+| `scripts/find_indirect_projects.py` | State project geo-mapping | `data/indirect_by_municipality_*.json` |
+| `scripts/build_mikroregiony.py` | Inter-municipal cooperation stats | `data/mikroregiony_stats_*.json` |
 
 ---
 
-## Key data shapes
+## Frontend Structure
 
-### aggregated_by_beneficiary.json entry
-```json
-{
-  "12345678": {
-    "ico": "12345678",
-    "name": "Obec Rimavská Sobota",
-    "address": "...",
-    "municipality": "Rimavská Sobota",
-    "nuts5_code": "SK041...",
-    "gps_lat": 48.38,
-    "gps_lon": 20.01,
-    "active_projects": 3,
-    "completed_projects": 7,
-    "total_contracted_eur": 1250000.00,
-    "total_contracted_amended_eur": 1180000.00,
-    "projects": [...]
-  }
-}
 ```
-
-### municipality_icos.json (target shape)
-```json
-{
-  "12345678": {
-    "ico": "12345678",
-    "official_name": "Obec Rimavská Sobota",
-    "nuts5_code": "SK041...",
-    "region": "Banskobystrický kraj",
-    "district": "Rimavská Sobota",
-    "population": 24000,
-    "type": "mesto"
-  }
-}
+frontend/src/
+├── app/
+│   ├── page.tsx               # Server component — generateMetadata() for OG tags
+│   ├── ClientPage.tsx         # Client component — DataProvider, deep-links, modals
+│   ├── layout.tsx             # Root layout (metadataBase)
+│   └── api/og/route.tsx       # OG image generation (edge, param-based)
+├── components/
+│   ├── HeroSearch.tsx         # Hero + diacritics search + global period toggle
+│   ├── MunicipalityModal.tsx  # Municipality detail — comparison, local toggle, sharing, PDF
+│   ├── VucModal.tsx           # VÚC detail — same pattern as municipality
+│   ├── VucSection.tsx         # VÚC card grid + deep-link (?vuc=)
+│   ├── MikroregiónySection.tsx # Mikroregión cards + modal with period toggle
+│   ├── Leaderboard.tsx        # Top/bottom 10 rankings
+│   ├── SlovakiaMap.tsx        # Interactive GPS dot map
+│   ├── StatsContext.tsx       # Global aggregate stats
+│   ├── ViewModeToggle.tsx     # Total / Per Capita
+│   └── Footer.tsx
+└── lib/
+    ├── DataContext.tsx         # Period cache (both periods pre-fetched)
+    ├── generatePdf.ts         # PDF export via window.print()
+    ├── translations.ts        # SK/EN translations
+    ├── types.ts               # TypeScript interfaces
+    └── utils.ts               # Formatters, search functions
 ```
 
----
+### Data flow
+1. `DataContext` loads `municipal_stats_14.json` immediately, pre-fetches `_21` in background
+2. Both periods cached in `useRef` — switching is instant
+3. `VucSection` independently fetches `vuc_stats_14.json` + `_21.json`
+4. `MikroregiónySection` independently fetches both mikroregión files
+5. Modals access both periods via `getDataForPeriod()` from DataContext (municipalities) or props (VÚC)
+6. PDF export fetches `municipal_details_*.json` or `vuc_details_*.json` on-demand (full project lists)
 
-## Autonomy rules for Claude Code
+### Frontend public data files
 
-When working on this project, Claude Code should:
-
-1. **Never ask for clarification on the IČO rule** — it is final and non-negotiable
-2. **Self-heal on API errors** — 429 → wait and retry, timeout → retry up to 3x, 404 → log and skip
-3. **Always check for cache files before fetching** — resumability is a core requirement
-4. **When a source file is missing**, log clearly what's missing and why, then create it from available data or output a clear error
-5. **Never block on ambiguity** — make the conservative choice (exclude rather than include uncertain records), document it in `validation_report.txt`, and continue
-6. **Log progress to stderr and a log file** (`data/match_log.txt`)
-7. **Output counts at every major step** — how many records in, how many out, how many excluded and why
-
----
-
-## What's done ✅
-
-- [x] ITMS2014+ API explored and documented
-- [x] `fetch_itms.py` — 6-step pipeline written and tested
-- [x] IČO-only join rule established
-- [x] Data shapes defined
-
-## What's in progress 🔄
-
-- [ ] `match_municipalities.py` — IČO-based municipality filter + enrichment
-- [ ] `data/municipality_icos.json` — need to source official Slovak municipality IČO list
-
-## What's next ⏳
-
-- [ ] `data/municipal_eu_stats.json` — clean output for frontend
-- [ ] Frontend: Next.js dashboard (municipality cards, search, map view)
-- [ ] Deploy: Vercel (frontend) + GitHub Actions (weekly data refresh)
+| File | Size | Content |
+|------|------|---------|
+| `municipal_stats_14.json` | 4.8 MB | 2,928 municipalities, top 5 projects each |
+| `municipal_stats_21.json` | 1.4 MB | 2,928 municipalities, top 5 projects each |
+| `municipal_details_14.json` | 5.4 MB | ALL projects per municipality (for PDF) |
+| `municipal_details_21.json` | 361 KB | ALL projects per municipality (for PDF) |
+| `vuc_stats_14.json` | 29 KB | 8 VÚCs, top 5 projects each |
+| `vuc_stats_21.json` | 15 KB | 8 VÚCs, top 5 projects each |
+| `vuc_details_14.json` | 245 KB | ALL projects per VÚC (for PDF) |
+| `vuc_details_21.json` | 37 KB | ALL projects per VÚC (for PDF) |
+| `mikroregiony_stats_14.json` | 19 KB | Inter-municipal cooperation by category |
+| `mikroregiony_stats_21.json` | 4 KB | Inter-municipal cooperation by category |
 
 ---
 
-## File Naming Convention — HARD RULE
+## What's Done ✅
 
-ALL data files use period suffix:
-- **2014-2020 period:** `_14` (e.g. `municipal_stats_14.json`, `vuc_stats_14.json`, `aggregated_by_beneficiary_14.json`)
-- **2021-2027 period:** `_21` (e.g. `municipal_stats_21.json`, `vuc_stats_21.json`, `aggregated_by_beneficiary_21.json`)
-- **NEVER use:** `_2127`, `_2021`, `_14_20`, `_21_27`, or no suffix for period-specific files
-- **Frontend fetches:** `/municipal_stats_14.json` and `/municipal_stats_21.json`
-- **Local root:** `/Users/boriskrisko/povolbach/` (was ConveyorMind — do not use old path)
+- [x] Both programming periods (2014-2020, 2021-2027) with full data
+- [x] Period comparison tables in all modals (side-by-side total, projects, per capita)
+- [x] Local period toggles in Municipality, VÚC, and Mikroregióny modals
+- [x] Deep-links: `?ico={ico}&obdobie=14|21` and `?vuc={ico}&obdobie=14|21`
+- [x] Server-side OG meta tags via `generateMetadata()` (visible to crawlers)
+- [x] OG image generation at `/api/og` (edge runtime, param-based, no file reads)
+- [x] Sharing: Share (navigator.share), Copy link, Facebook, Threads
+- [x] PDF export via window.print() with on-demand full detail fetch
+- [x] Diacritics-aware search with keyboard navigation
+- [x] Interactive Slovakia GPS dot map
+- [x] Leaderboard (top/bottom 10, total/per-capita toggle)
+- [x] 8 VÚC (regional governments) with projects + subsidiaries
+- [x] Mikroregióny (inter-municipal cooperation) by 4 categories
+- [x] RPO-based subsidiary attribution with proportional joint venture splits
+- [x] Indirect/state projects mapped to municipalities by geography
+- [x] Irregularities per municipality and VÚC
+- [x] Bilingual SK/EN translations
+- [x] Per capita toggle for rankings
+- [x] Responsive design (mobile + desktop)
 
 ---
 
-## Tech preferences
+## Known Issues / Technical Debt
 
-- **Python 3.10+**, stdlib preferred, `httpx` or `aiohttp` for async if needed
-- **No pandas** for simple transforms — plain dicts/lists are fine
-- **JSON pretty-printed** (indent=2) for all output files
-- **UTF-8** everywhere — Slovak has ď, š, č, ž, ľ, ŕ, etc.
+- Safari macOS: PDF title requires two-phase document.write (loading placeholder → full content)
+- No automated data refresh pipeline (manual Python script re-runs)
+- No tests (unit or e2e)
+- _21 indirect projects use project name→municipality matching (ITMS21 API lacks NUTS5 location data)
+- ~280/308 multi-founder subsidiary entities use equal 1/N split (RPO deposit data unavailable for those)
+- ITMS2021+ fetch uses offset-based pagination (slow); could switch to minId cursor
+
+---
+
+## TODO — Future Work
+
+- [ ] Historical population data from ŠÚSR DATAcube (currently static 2024 population)
+- [ ] Multi-municipality project split by population proportion
+- [ ] GitHub Actions for automated weekly data refresh
+- [ ] E2E tests (Playwright)
+- [ ] Stage 2: paid SaaS for municipality project management
+- [ ] Potential funding / open calls feature
+- [ ] Instagram sharing support
+
+---
+
+## Tech Preferences
+
+- **Python 3.10+**, stdlib preferred, `httpx` or `aiohttp` for async
+- **No pandas** for simple transforms — plain dicts/lists
+- **JSON pretty-printed** (indent=2) for all data/ output files
+- **UTF-8** everywhere — Slovak diacritics: ď, š, č, ž, ľ, ŕ, ĺ, ä, ô, í, á, é, ú, ý, ó
 - **No external DB** in Stage 1 — flat JSON files only
+- **Next.js App Router** with server components for metadata, client components for interactivity
 
----
+## Autonomy Rules
 
-## Post-Launch Roadmap
+1. **Never ask for clarification on the IČO rule** — it is final
+2. **Self-heal on API errors** — 429 → wait and retry, timeout → retry up to 3x, 404 → skip
+3. **Always check for cache files before fetching** — resumability is core
+4. **Never block on ambiguity** — conservative choice, document in validation_report.txt
+5. **Log progress** — stderr + log files, counts at every step
 
-### V1 (current) — Option A: Disclaimer
-Municipality pages show direct funding only.
-Every municipality card/page includes a note:
-"Zahŕňa len priame čerpanie. Nezahŕňa financovanie škôl, kultúrnych zariadení 
-a iných organizácií v zriaďovateľskej pôsobnosti obce."
-
-### V1.1 — Option C: Subsidiary org rollup ← DO NOT FORGET
-For each municipality, show a secondary line:
-"+ N organizácie v zriaďovateľskej pôsobnosti (€X.XM)" — clickable to breakdown.
-
-Data work required:
-1. Take excluded_beneficiaries.json (5,746 non-municipality beneficiaries, €22.9B)
-2. For each, query RPO API for zakladateľ (founder IČO)
-3. If zakladateľ IČO matches a municipality in municipalities_ico.json → 
-   tag as municipal subsidiary
-4. Aggregate per municipality: count of orgs + total contracted EUR
-5. Add subsidiary_orgs array and subsidiary_total_eur field to municipal_stats.json
-
-This gives genuinely unique data no Slovak platform has. Build after first public launch.
-
----
-
-## Pipeline Notes
-
-### ITMS2021+ fetch performance
-The 2021-2027 pipeline (fetch_itms21.py) currently uses offset-based pagination for resume 
-(slow ~5 min/1k projects). If re-running from scratch, switch to minId cursor approach 
-(same as fetch_itms.py) for significantly faster fetching.
-
-### Indirect projects (štátne projekty v katastri)
-Currently sourced only from 2014-2020 excluded_beneficiaries.json.
-For accurate period-specific indirect data, run find_indirect_projects.py
-against aggregated_by_beneficiary_21.json to generate indirect_by_municipality_21.json.
-Until then, both periods show same geographic infrastructure data — which is 
-technically correct (same motorways exist in both periods) but not period-specific.
-
-*Last updated: March 2026*
+*Last updated: 2026-03-20*
