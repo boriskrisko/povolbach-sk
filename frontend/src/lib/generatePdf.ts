@@ -117,12 +117,24 @@ export async function generateMunicipalityPdf(ico: string, period: '1420' | '212
 
   body += '<hr class="divider">';
 
-  if (allProjects.length > 0) {
-    body += `<div class="section-title blue">Priame projekty (${allProjects.length})</div>
+  const directProjects = allProjects.filter((p: Record<string, unknown>) => !p.isMikroregion);
+  const mikroProjects = allProjects.filter((p: Record<string, unknown>) => p.isMikroregion);
+
+  if (directProjects.length > 0) {
+    body += `<div class="section-title blue">Priame projekty (${directProjects.length})</div>
     <table><thead><tr><th>Názov projektu</th><th class="right">Suma</th><th class="center">Stav</th></tr></thead><tbody>`;
-    for (const p of allProjects) {
+    for (const p of directProjects) {
       const status = (p.stav || '').toLowerCase().includes('ukončen') ? 'Ukončený' : 'V realizácii';
       body += `<tr><td>${esc(p.nazov)}</td><td class="right amount">${fmtEur(p.sumaZazmluvnena)}</td><td class="center">${status}</td></tr>`;
+    }
+    body += '</tbody></table>';
+  }
+
+  if (mikroProjects.length > 0) {
+    body += `<div class="section-title" style="color:#8b5cf6">Projekty z mikroregiónov (${mikroProjects.length})</div>
+    <table><thead><tr><th style="background:#f5f3ff;color:#8b5cf6">Názov projektu</th><th class="right" style="background:#f5f3ff;color:#8b5cf6">Podiel obce</th><th style="background:#f5f3ff;color:#8b5cf6">Mikroregión</th></tr></thead><tbody>`;
+    for (const p of mikroProjects) {
+      body += `<tr><td>${esc(p.nazov)}</td><td class="right amount" style="color:#8b5cf6">${fmtEur(p.sumaZazmluvnena)}</td><td>${esc((p as Record<string, unknown>).source as string || '')}</td></tr>`;
     }
     body += '</tbody></table>';
   }

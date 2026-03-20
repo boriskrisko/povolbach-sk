@@ -3,6 +3,7 @@
 attribute_mikroregiony.py
 Attribute mikroregión funding to member municipalities via RPO founder data.
 Split proportionally by population. IČO-only joins — no name matching.
+Includes individual project details with attributed amounts.
 """
 
 import json
@@ -25,6 +26,11 @@ def attribute_period(suffix: str):
     rpo = load_json(DATA / 'rpo_founders.json')
     muni_stats = load_json(DATA / f'municipal_stats_{suffix}.json')
 
+    # Load aggregated data for full project details
+    agg_path = DATA / f'aggregated_by_beneficiary_{suffix}.json'
+    agg_raw = load_json(agg_path)
+    agg = agg_raw if isinstance(agg_raw, dict) else {e['ico']: e for e in agg_raw if 'ico' in e}
+
     # Flatten all mikroregión entries from categories
     entries = []
     for cat in mikro.get('categories', []):
@@ -32,7 +38,7 @@ def attribute_period(suffix: str):
 
     print(f'  Mikroregióny: {len(entries)}')
 
-    attribution = {}  # { municipality_ico: { attributed_eur: X, sources: [...] } }
+    attribution = {}  # { municipality_ico: { attributed_eur, sources, projects } }
     attributed_total = 0
     attributed_mikro = 0
 
@@ -65,23 +71,42 @@ def attribute_period(suffix: str):
         if total_pop == 0:
             continue
 
+        # Get project details from aggregated data
+        mikro_projects = agg.get(mikro_ico, {}).get('projects', [])
+
         attributed_mikro += 1
         attributed_total += mikro_eur
 
         for f_ico, pop in muni_founders:
-            share = (pop / total_pop) * mikro_eur
+            share_ratio = pop / total_pop
 
             if f_ico not in attribution:
-                attribution[f_ico] = {'attributed_eur': 0, 'sources': []}
+                attribution[f_ico] = {'attributed_eur': 0, 'sources': [], 'projects': []}
 
-            attribution[f_ico]['attributed_eur'] += share
+            attribution[f_ico]['attributed_eur'] += share_ratio * mikro_eur
             attribution[f_ico]['sources'].append(mikro_name)
 
-    # Round amounts
+            # Add project details with attributed amounts
+            for p in mikro_projects:
+                attributed_project = {
+                    'nazov': p.get('nazov', ''),
+                    'sumaZazmluvnena': round(share_ratio * (p.get('sumaZazmluvnena', 0) or 0)),
+                    'fullProjectSum': p.get('sumaZazmluvnena', 0) or 0,
+                    'stav': p.get('stav', ''),
+                    'datumKoncaRealizacie': p.get('datumKoncaRealizacie', ''),
+                    'source': mikro_name,
+                    'isMikroregion': True,
+                }
+                attribution[f_ico]['projects'].append(attributed_project)
+
+    # Round and deduplicate
     for ico in attribution:
         attribution[ico]['attributed_eur'] = round(attribution[ico]['attributed_eur'], 2)
-        # Deduplicate sources
         attribution[ico]['sources'] = list(set(attribution[ico]['sources']))
+        # Sort projects by attributed amount desc
+        attribution[ico]['projects'].sort(
+            key=lambda p: p.get('sumaZazmluvnena', 0) or 0, reverse=True
+        )
 
     out_path = DATA / f'mikroregion_attributed_{suffix}.json'
     with open(out_path, 'w', encoding='utf-8') as f:
@@ -91,12 +116,13 @@ def attribute_period(suffix: str):
     print(f'  Total attributed: €{attributed_total:,.0f}')
     print(f'  Saved: {out_path.name}')
 
-    # Spot-check top 5 municipalities by attributed amount
-    top = sorted(attribution.items(), key=lambda x: x[1]['attributed_eur'], reverse=True)[:5]
-    print(f'  Top 5 recipients:')
+    # Spot-check
+    top = sorted(attribution.items(), key=lambda x: x[1]['attributed_eur'], reverse=True)[:3]
     for ico, d in top:
         name = muni_stats.get(ico, {}).get('official_name', ico)
-        print(f'    {name}: €{d["attributed_eur"]:,.0f} from {len(d["sources"])} mikroregión(y)')
+        print(f'    {name}: €{d["attributed_eur"]:,.0f}, {len(d["projects"])} projects')
+        for p in d['projects'][:2]:
+            print(f'      {p["nazov"][:60]} — attributed €{p["sumaZazmluvnena"]:,}')
 
 
 if __name__ == '__main__':

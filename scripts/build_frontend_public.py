@@ -79,11 +79,19 @@ def process_municipalities(base_path: Path, subs: dict, indirect: dict, out_path
             m.pop('indirect_total_eur', None)
             m.pop('indirect_projects', None)
 
-        # Mikroregión attribution
+        # Mikroregión attribution — include projects in top-5 list
         if mikro_attr and ico in mikro_attr:
             ma = mikro_attr[ico]
             m['mikroregion_eur'] = ma.get('attributed_eur', 0)
             m['mikroregion_sources'] = ma.get('sources', [])
+            # Merge mikroregión projects into top-5 project list
+            mikro_projects = ma.get('projects', [])
+            if mikro_projects:
+                all_projects = list(m.get('projects', []))
+                for mp in mikro_projects:
+                    all_projects.append(mp)
+                all_projects.sort(key=lambda p: p.get('sumaZazmluvnena', 0) or 0, reverse=True)
+                m['projects'] = all_projects[:MAX_PROJECTS]
             changed = True
         else:
             m.pop('mikroregion_eur', None)

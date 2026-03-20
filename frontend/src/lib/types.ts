@@ -62,6 +62,9 @@ export interface ProjectSummary {
   sumaZazmluvnena: number;
   stav: string;
   datumKoncaRealizacie?: string;
+  isMikroregion?: boolean;
+  source?: string;
+  fullProjectSum?: number;
 }
 
 export interface MunicipalityMap {
