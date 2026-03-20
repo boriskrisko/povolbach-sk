@@ -69,9 +69,12 @@ export async function generateMunicipalityPdf(ico: string, period: '1420' | '212
   const periodLabel = period === '1420' ? '2014–2020' : '2021–2027';
   const title = `${name} - čerpanie Eurofondov - ${periodLabel} | povolbach.sk`;
 
-  // Open window SYNCHRONOUSLY to avoid popup blocker
+  // Open window SYNCHRONOUSLY and write title IMMEDIATELY — Safari reads it from first document.write
   const w = window.open('', '_blank');
   if (!w) { alert('Povoľte vyskakovacie okná pre tlač PDF.'); return; }
+  w.document.write(`<!DOCTYPE html><html lang="sk"><head><meta charset="utf-8"><title>${esc(title)}</title></head><body><p style="font-family:sans-serif;color:#94a3b8;padding:20mm">Generujem PDF...</p></body></html>`);
+  w.document.close();
+
   const dataSource = period === '1420' ? 'ITMS2014+' : 'ITMS2021+';
 
   let m: Municipality | null = null;
@@ -143,7 +146,11 @@ export async function generateMunicipalityPdf(ico: string, period: '1420' | '212
 
   body += `<div class="footer"><span>Zdroj: povolbach.sk · Dáta: ${dataSource} · Vygenerované: ${new Date().toLocaleDateString('sk-SK')}</span><span>${esc(m.official_name)}</span></div>`;
 
-  writePrintWindow(w, title, body);
+  // Reopen and write full content — title persists from first write in Safari
+  w.document.open();
+  w.document.write(`<!DOCTYPE html><html lang="sk"><head><meta charset="utf-8"><title>${esc(title)}</title><style>${CSS}</style></head><body>${body}</body></html>`);
+  w.document.close();
+  setTimeout(() => w.print(), 300);
 }
 
 export function generateVucPdf(v: VucStats, period: '1420' | '2127') {
