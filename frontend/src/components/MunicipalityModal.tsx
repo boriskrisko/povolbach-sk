@@ -104,8 +104,16 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
   }, [municipality, shareUrl, locale, copyToClipboard, showCopied]);
   const handleCopy = useCallback(async () => { await copyToClipboard(shareUrl); showCopied(); }, [shareUrl, copyToClipboard, showCopied]);
 
+  // Comparison tool: neighbors + similar size — MUST be before early return (hooks must always run)
+  const activeData = localPeriod === '1420' ? data14 : data21;
+  const neighbors = useMemo(() => municipality && activeData ? findNeighbors(municipality.ico, activeData, 5) : [], [municipality?.ico, activeData]);
+  const similarSize = useMemo(() => municipality && activeData ? findSimilarSize(municipality.ico, activeData, 5) : [], [municipality?.ico, activeData]);
+
   if (!municipality) return null;
 
+  const compareM = compareIco && activeData ? activeData[compareIco] ?? null : null;
+  const compareM14 = compareIco && data14 ? data14[compareIco] ?? null : null;
+  const compareM21 = compareIco && data21 ? data21[compareIco] ?? null : null;
   const shareText = tr.share_text(municipality.official_name, shareUrl);
   const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
   const threadsUrl = `https://www.threads.net/intent/post?text=${encodeURIComponent(shareText)}`;
@@ -126,14 +134,6 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
 
   const is14L = !!data14, is21L = !!data21, is14A = localPeriod === '1420';
   const btnCls = "p-2 rounded-lg bg-[#0a0a0f] border border-[#1e1e2e] text-[#94a3b8] hover:text-[#f8fafc] hover:border-white/20 transition-all";
-
-  // Comparison tool: neighbors + similar size
-  const activeData = localPeriod === '1420' ? data14 : data21;
-  const neighbors = useMemo(() => municipality && activeData ? findNeighbors(municipality.ico, activeData, 5) : [], [municipality?.ico, activeData]);
-  const similarSize = useMemo(() => municipality && activeData ? findSimilarSize(municipality.ico, activeData, 5) : [], [municipality?.ico, activeData]);
-  const compareM = compareIco && activeData ? activeData[compareIco] ?? null : null;
-  const compareM14 = compareIco && data14 ? data14[compareIco] ?? null : null;
-  const compareM21 = compareIco && data21 ? data21[compareIco] ?? null : null;
 
   return (
     <div className="fixed inset-0 z-50 flex justify-center items-start overflow-y-auto bg-black/60 p-4 pt-[10vh]" onClick={onClose}>
