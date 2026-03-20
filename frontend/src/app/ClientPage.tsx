@@ -17,6 +17,7 @@ import MunicipalityModal from '@/components/MunicipalityModal';
 function PageContent() {
   const { data, isTransitioning, period, setPeriod, getDataForPeriod } = useData();
   const [selectedMunicipality, setSelectedMunicipality] = useState<Municipality | null>(null);
+  const [initialCompareIco, setInitialCompareIco] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<'total' | 'capita'>('total');
   const [locale, setLocale] = useState<Locale>('sk');
   const deepLinkHandled = useRef(false);
@@ -43,6 +44,8 @@ function PageContent() {
     const muni = targetData?.[ico] ?? fallbackData?.[ico] ?? data[ico] ?? null;
     if (muni) {
       setSelectedMunicipality(muni);
+      const porovnat = params.get('porovnat');
+      if (porovnat) setInitialCompareIco(porovnat);
     }
   }, [data, getDataForPeriod, setPeriod]);
 
@@ -141,6 +144,7 @@ function PageContent() {
         municipality={selectedMunicipality}
         onClose={handleCloseModal}
         locale={locale}
+        initialCompareIco={initialCompareIco}
       />
     </main>
   );

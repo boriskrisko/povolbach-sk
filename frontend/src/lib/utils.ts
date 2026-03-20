@@ -103,6 +103,47 @@ export function getRegionStats(data: MunicipalityMap): RegionStats[] {
     .sort((a, b) => b.avgEur - a.avgEur);
 }
 
+/** Haversine distance in km between two GPS points */
+export function haversineKm(lat1: number, lon1: number, lat2: number, lon2: number): number {
+  const R = 6371;
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLon = (lon2 - lon1) * Math.PI / 180;
+  const a = Math.sin(dLat / 2) ** 2 + Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.sin(dLon / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+export interface NeighborResult {
+  municipality: Municipality;
+  distanceKm: number;
+}
+
+/** Find N nearest municipalities by GPS distance */
+export function findNeighbors(targetIco: string, data: MunicipalityMap, count = 5): NeighborResult[] {
+  const target = data[targetIco];
+  if (!target?.gps_lat || !target?.gps_lon) return [];
+  return Object.values(data)
+    .filter(m => m.ico !== targetIco && m.gps_lat && m.gps_lon)
+    .map(m => ({ municipality: m, distanceKm: haversineKm(target.gps_lat!, target.gps_lon!, m.gps_lat!, m.gps_lon!) }))
+    .sort((a, b) => a.distanceKm - b.distanceKm)
+    .slice(0, count);
+}
+
+export interface SimilarSizeResult {
+  municipality: Municipality;
+  populationDiff: number;
+}
+
+/** Find N municipalities closest in population */
+export function findSimilarSize(targetIco: string, data: MunicipalityMap, count = 5): SimilarSizeResult[] {
+  const target = data[targetIco];
+  if (!target?.population) return [];
+  return Object.values(data)
+    .filter(m => m.ico !== targetIco && m.population > 0)
+    .map(m => ({ municipality: m, populationDiff: Math.abs(m.population - target.population) }))
+    .sort((a, b) => a.populationDiff - b.populationDiff)
+    .slice(0, count);
+}
+
 export function searchMunicipalities(data: MunicipalityMap, query: string): Municipality[] {
   if (query.length < 2) return [];
   const q = query.toLowerCase();

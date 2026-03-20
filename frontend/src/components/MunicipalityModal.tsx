@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo, useCallback, useEffect } from 'react';
 import { Municipality } from '@/lib/types';
-import { formatAmount, formatProjects } from '@/lib/utils';
+import { formatAmount, formatProjects, getCombinedTotal, findNeighbors, findSimilarSize } from '@/lib/utils';
 import { useData, Period } from '@/lib/DataContext';
 import { t, type Locale } from '@/lib/translations';
 import { generateMunicipalityPdf } from '@/lib/generatePdf';
@@ -11,20 +11,28 @@ interface Props {
   municipality: Municipality | null;
   onClose: () => void;
   locale: Locale;
+  initialCompareIco?: string | null;
 }
 
 function Spinner() {
   return <span className="inline-block w-3 h-3 border-2 border-[#3b82f6]/30 border-t-[#3b82f6] rounded-full animate-spin" />;
 }
 
-export default function MunicipalityModal({ municipality, onClose, locale }: Props) {
+export default function MunicipalityModal({ municipality, onClose, locale, initialCompareIco }: Props) {
   const tr = t[locale];
   const { period: globalPeriod, periodLoading, periodAvailable, getDataForPeriod } = useData();
   const [localPeriod, setLocalPeriod] = useState<Period>(globalPeriod);
   const [copied, setCopied] = useState(false);
   const [copiedVisible, setCopiedVisible] = useState(false);
+  const [compareIco, setCompareIco] = useState<string | null>(null);
+  const [compareDropdownOpen, setCompareDropdownOpen] = useState(false);
+  const [compareTab, setCompareTab] = useState<'neighbors' | 'similar'>('neighbors');
 
-  useEffect(() => { setLocalPeriod(globalPeriod); }, [globalPeriod, municipality?.ico]);
+  useEffect(() => {
+    setLocalPeriod(globalPeriod);
+    setCompareIco(initialCompareIco ?? null);
+    setCompareDropdownOpen(false);
+  }, [globalPeriod, municipality?.ico, initialCompareIco]);
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
@@ -42,8 +50,9 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
     url.searchParams.delete('vuc');
     url.searchParams.set('ico', municipality.ico);
     url.searchParams.set('obdobie', localPeriod === '2127' ? '21' : '14');
+    if (compareIco) url.searchParams.set('porovnat', compareIco); else url.searchParams.delete('porovnat');
     window.history.replaceState({}, '', url.toString());
-  }, [municipality, localPeriod]);
+  }, [municipality, localPeriod, compareIco]);
 
   const data14 = getDataForPeriod('1420');
   const data21 = getDataForPeriod('2127');
@@ -118,6 +127,14 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
   const is14L = !!data14, is21L = !!data21, is14A = localPeriod === '1420';
   const btnCls = "p-2 rounded-lg bg-[#0a0a0f] border border-[#1e1e2e] text-[#94a3b8] hover:text-[#f8fafc] hover:border-white/20 transition-all";
 
+  // Comparison tool: neighbors + similar size
+  const activeData = localPeriod === '1420' ? data14 : data21;
+  const neighbors = useMemo(() => municipality && activeData ? findNeighbors(municipality.ico, activeData, 5) : [], [municipality?.ico, activeData]);
+  const similarSize = useMemo(() => municipality && activeData ? findSimilarSize(municipality.ico, activeData, 5) : [], [municipality?.ico, activeData]);
+  const compareM = compareIco && activeData ? activeData[compareIco] ?? null : null;
+  const compareM14 = compareIco && data14 ? data14[compareIco] ?? null : null;
+  const compareM21 = compareIco && data21 ? data21[compareIco] ?? null : null;
+
   return (
     <div className="fixed inset-0 z-50 flex justify-center items-start overflow-y-auto bg-black/60 p-4 pt-[10vh]" onClick={onClose}>
       <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl w-full max-w-[720px] p-6 sm:p-8 animate-fade-in-up overflow-y-auto" style={{ maxHeight: '80vh', WebkitOverflowScrolling: 'touch' } as React.CSSProperties} onClick={e => e.stopPropagation()}>
@@ -174,6 +191,96 @@ export default function MunicipalityModal({ municipality, onClose, locale }: Pro
             </tbody>
           </table>
         </div>
+
+        {/* Compare with dropdown */}
+        <div className="mb-4 relative">
+          <div className="flex items-center gap-2">
+            <button onClick={() => setCompareDropdownOpen(!compareDropdownOpen)} className="text-xs text-[#94a3b8] hover:text-[#f8fafc] bg-white/[0.04] rounded-md px-3 py-1.5 transition-all border border-white/[0.06] hover:border-white/[0.12]">
+              {compareIco && compareM ? `${tr.compare_with}: ${compareM.official_name}` : `${tr.compare_with}...`}
+            </button>
+            {compareIco && <button onClick={() => { setCompareIco(null); setCompareDropdownOpen(false); }} className="text-[10px] text-[#94a3b8]/60 hover:text-[#f8fafc]">{tr.compare_clear} ×</button>}
+          </div>
+          {compareDropdownOpen && (
+            <div className="absolute top-full left-0 mt-1 z-10 bg-[#13131a] border border-[#1e1e2e] rounded-lg shadow-xl w-72 max-h-64 overflow-y-auto">
+              <div className="flex border-b border-white/[0.06]">
+                <button onClick={() => setCompareTab('neighbors')} className={`flex-1 px-3 py-2 text-xs font-medium ${compareTab === 'neighbors' ? 'text-[#3b82f6] border-b-2 border-[#3b82f6]' : 'text-[#94a3b8]/60'}`}>{tr.compare_neighbors}</button>
+                <button onClick={() => setCompareTab('similar')} className={`flex-1 px-3 py-2 text-xs font-medium ${compareTab === 'similar' ? 'text-[#3b82f6] border-b-2 border-[#3b82f6]' : 'text-[#94a3b8]/60'}`}>{tr.compare_similar}</button>
+              </div>
+              <div className="py-1">
+                {compareTab === 'neighbors' ? neighbors.map(n => (
+                  <button key={n.municipality.ico} onClick={() => { setCompareIco(n.municipality.ico); setCompareDropdownOpen(false); }} className="w-full px-3 py-2 text-left hover:bg-white/[0.04] flex justify-between items-center">
+                    <span className="text-sm text-[#f8fafc] truncate">{n.municipality.official_name}</span>
+                    <span className="text-xs text-[#94a3b8]/50 ml-2 flex-shrink-0">{n.distanceKm.toFixed(1)} km</span>
+                  </button>
+                )) : similarSize.map(s => (
+                  <button key={s.municipality.ico} onClick={() => { setCompareIco(s.municipality.ico); setCompareDropdownOpen(false); }} className="w-full px-3 py-2 text-left hover:bg-white/[0.04] flex justify-between items-center">
+                    <span className="text-sm text-[#f8fafc] truncate">{s.municipality.official_name}</span>
+                    <span className="text-xs text-[#94a3b8]/50 ml-2 flex-shrink-0">{s.municipality.population.toLocaleString('sk-SK')} {locale === 'sk' ? 'ob.' : 'inh.'}</span>
+                  </button>
+                ))}
+                {((compareTab === 'neighbors' && neighbors.length === 0) || (compareTab === 'similar' && similarSize.length === 0)) && (
+                  <div className="px-3 py-4 text-xs text-[#94a3b8]/40 text-center">{locale === 'sk' ? 'Žiadne dáta' : 'No data'}</div>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Municipality comparison table */}
+        {compareIco && compareM && m && (() => {
+          const cTotal = getCombinedTotal(compareM);
+          const mTotal = getCombinedTotal(m);
+          const cPC = compareM.population > 0 ? Math.round(cTotal / compareM.population) : 0;
+          const mPC = m.population > 0 ? Math.round(mTotal / m.population) : 0;
+          const cProj = compareM.active_projects + compareM.completed_projects;
+          const mProj = m.active_projects + m.completed_projects;
+          // Trend: both periods
+          const cTotal14 = compareM14 ? getCombinedTotal(compareM14) : 0;
+          const cTotal21 = compareM21 ? getCombinedTotal(compareM21) : 0;
+          const mTotal14 = m14 ? getCombinedTotal(m14) : 0;
+          const mTotal21 = m21 ? getCombinedTotal(m21) : 0;
+          const mChange = mTotal14 > 0 ? ((mTotal21 - mTotal14) / mTotal14 * 100) : 0;
+          const cChange = cTotal14 > 0 ? ((cTotal21 - cTotal14) / cTotal14 * 100) : 0;
+          return (
+            <div className="rounded-lg border border-[#10b981]/20 bg-[#10b981]/[0.03] mb-4 overflow-hidden">
+              <table className="w-full table-fixed text-xs">
+                <colgroup><col style={{ width: '30%' }} /><col style={{ width: '35%' }} /><col style={{ width: '35%' }} /></colgroup>
+                <thead><tr>
+                  <th className="px-3 py-2 text-left font-normal text-[#94a3b8]/40" />
+                  <th className="px-3 py-2 text-center font-medium text-[#f8fafc] truncate">{municipality.official_name}</th>
+                  <th className="px-3 py-2 text-center font-medium text-[#10b981] truncate">{compareM.official_name}</th>
+                </tr></thead>
+                <tbody className="text-sm">
+                  <tr className="border-t border-white/[0.06]">
+                    <td className="px-3 py-1.5 text-[#94a3b8]/50 text-xs">{tr.compare_population}</td>
+                    <td className="px-3 py-1.5 text-center font-mono text-[#f8fafc]">{m.population.toLocaleString('sk-SK')}</td>
+                    <td className="px-3 py-1.5 text-center font-mono text-[#f8fafc]">{compareM.population.toLocaleString('sk-SK')}</td>
+                  </tr>
+                  <tr className="border-t border-white/[0.06]">
+                    <td className="px-3 py-1.5 text-[#94a3b8]/50 text-xs">{tr.compare_total}</td>
+                    <td className={`px-3 py-1.5 text-center font-mono ${mTotal >= cTotal ? 'text-[#f8fafc]' : 'text-[#94a3b8]'}`}>{mTotal > cTotal && <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#10b981] mr-1 align-middle" />}{formatAmount(mTotal, locale)}</td>
+                    <td className={`px-3 py-1.5 text-center font-mono ${cTotal >= mTotal ? 'text-[#f8fafc]' : 'text-[#94a3b8]'}`}>{cTotal > mTotal && <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#10b981] mr-1 align-middle" />}{formatAmount(cTotal, locale)}</td>
+                  </tr>
+                  <tr className="border-t border-white/[0.06]">
+                    <td className="px-3 py-1.5 text-[#94a3b8]/50 text-xs">{tr.compare_per_capita}</td>
+                    <td className={`px-3 py-1.5 text-center font-mono ${mPC >= cPC ? 'text-[#f8fafc]' : 'text-[#94a3b8]'}`}>{mPC > cPC && <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#10b981] mr-1 align-middle" />}{formatAmount(mPC, locale)}</td>
+                    <td className={`px-3 py-1.5 text-center font-mono ${cPC >= mPC ? 'text-[#f8fafc]' : 'text-[#94a3b8]'}`}>{cPC > mPC && <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#10b981] mr-1 align-middle" />}{formatAmount(cPC, locale)}</td>
+                  </tr>
+                  <tr className="border-t border-white/[0.06]">
+                    <td className="px-3 py-1.5 text-[#94a3b8]/50 text-xs">{tr.compare_projects}</td>
+                    <td className={`px-3 py-1.5 text-center font-mono ${mProj >= cProj ? 'text-[#f8fafc]' : 'text-[#94a3b8]'}`}>{mProj > cProj && <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#10b981] mr-1 align-middle" />}{mProj}</td>
+                    <td className={`px-3 py-1.5 text-center font-mono ${cProj >= mProj ? 'text-[#f8fafc]' : 'text-[#94a3b8]'}`}>{cProj > mProj && <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#10b981] mr-1 align-middle" />}{cProj}</td>
+                  </tr>
+                  <tr className="border-t border-white/[0.08]">
+                    <td className="px-3 py-1.5 text-[#94a3b8]/50 text-xs font-medium">{tr.compare_trend}</td>
+                    <td className="px-3 py-1.5 text-center"><span className="text-[10px] text-[#94a3b8]/50">{formatAmount(mTotal14, locale)} → {formatAmount(mTotal21, locale)}</span><br /><span className={`text-xs font-mono ${mChange >= 0 ? 'text-[#10b981]' : 'text-[#f59e0b]'}`}>{mChange >= 0 ? '+' : ''}{mChange.toFixed(0)}%</span></td>
+                    <td className="px-3 py-1.5 text-center"><span className="text-[10px] text-[#94a3b8]/50">{formatAmount(cTotal14, locale)} → {formatAmount(cTotal21, locale)}</span><br /><span className={`text-xs font-mono ${cChange >= 0 ? 'text-[#10b981]' : 'text-[#f59e0b]'}`}>{cChange >= 0 ? '+' : ''}{cChange.toFixed(0)}%</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          );
+        })()}
 
         {/* Detail label */}
         <div className="text-[11px] text-[#94a3b8]/40 uppercase tracking-wider mb-4">
