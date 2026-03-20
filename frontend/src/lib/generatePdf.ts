@@ -72,6 +72,9 @@ export async function generateMunicipalityPdf(ico: string, period: '1420' | '212
 
   const suffix = period === '1420' ? '14' : '21';
   const periodLabel = period === '1420' ? '2014–2020' : '2021–2027';
+
+  // Set temporary title immediately so the tab isn't blank during fetch
+  w.document.title = `čerpanie Eurofondov - ${periodLabel} | povolbach.sk`;
   const dataSource = period === '1420' ? 'ITMS2014+' : 'ITMS2021+';
 
   let m: Municipality | null = null;
@@ -143,7 +146,11 @@ export async function generateMunicipalityPdf(ico: string, period: '1420' | '212
 
   body += `<div class="footer"><span>Zdroj: povolbach.sk · Dáta: ${dataSource} · Vygenerované: ${new Date().toLocaleDateString('sk-SK')}</span><span>${esc(m.official_name)}</span></div>`;
 
-  writePrintWindow(w, `${esc(m.official_name)} - čerpanie Eurofondov - ${periodLabel} | povolbach.sk`, body);
+  const title = `${esc(m.official_name)} - čerpanie Eurofondov - ${periodLabel} | povolbach.sk`;
+  w.document.write(`<!DOCTYPE html><html lang="sk"><head><meta charset="utf-8"><title>${title}</title><style>${CSS}</style></head><body>${body}</body></html>`);
+  w.document.close();
+  w.document.title = title;
+  setTimeout(() => { w.document.title = title; w.print(); }, 300);
 }
 
 export function generateVucPdf(v: VucStats, period: '1420' | '2127') {
