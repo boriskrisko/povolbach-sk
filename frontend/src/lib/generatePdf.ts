@@ -130,20 +130,20 @@ export async function generateMunicipalityPdf(ico: string, period: '1420' | '212
     body += '</tbody></table>';
   }
 
-  if (mikroProjects.length > 0) {
-    body += `<div class="section-title" style="color:#8b5cf6">Projekty z mikroregiónov (${mikroProjects.length})</div>
-    <table><thead><tr><th style="background:#f5f3ff;color:#8b5cf6">Názov projektu</th><th class="right" style="background:#f5f3ff;color:#8b5cf6">Podiel obce</th><th style="background:#f5f3ff;color:#8b5cf6">Mikroregión</th></tr></thead><tbody>`;
-    for (const p of mikroProjects) {
-      body += `<tr><td>${esc(p.nazov)}</td><td class="right amount" style="color:#8b5cf6">${fmtEur(p.sumaZazmluvnena)}</td><td>${esc((p as Record<string, unknown>).source as string || '')}</td></tr>`;
-    }
-    body += '</tbody></table>';
-  }
-
   if (allSubs.length > 0) {
     body += `<div class="section-title teal">Organizácie v zriaďovateľskej pôsobnosti (${allSubs.length})</div>
     <table><thead><tr><th>Organizácia</th><th class="right">Suma</th><th class="center">Projekty</th></tr></thead><tbody>`;
     for (const o of allSubs) {
       body += `<tr><td>${esc(o.name)}</td><td class="right amount-teal">${fmtEur(o.total_contracted_eur)}</td><td class="center">${o.projects_count}</td></tr>`;
+    }
+    body += '</tbody></table>';
+  }
+
+  if (mikroProjects.length > 0) {
+    body += `<div class="section-title" style="color:#8b5cf6">Projekty z mikroregiónov (${mikroProjects.length})</div>
+    <table><thead><tr><th style="background:#f5f3ff;color:#8b5cf6">Názov projektu</th><th class="right" style="background:#f5f3ff;color:#8b5cf6">Podiel obce</th><th style="background:#f5f3ff;color:#8b5cf6">Mikroregión</th></tr></thead><tbody>`;
+    for (const p of mikroProjects) {
+      body += `<tr><td>${esc(p.nazov)}</td><td class="right amount" style="color:#8b5cf6">${fmtEur(p.sumaZazmluvnena)}</td><td>${esc((p as Record<string, unknown>).source as string || '')}</td></tr>`;
     }
     body += '</tbody></table>';
   }
