@@ -1,11 +1,16 @@
 import { Municipality, MunicipalityMap, RegionStats } from './types';
 import type { Locale } from './translations';
 
+/** Slovak pluralization: 1 = singular, 2-4 = nom. plural, 0/5+ = gen. plural */
+export function pluralizeSk(count: number, one: string, twoFour: string, fivePlus: string): string {
+  if (count === 1) return one;
+  if (count >= 2 && count <= 4) return twoFour;
+  return fivePlus;
+}
+
 export function formatProjects(count: number, locale: Locale): string {
   if (locale === 'en') return count === 1 ? '1 project' : `${count} projects`;
-  if (count === 1) return '1 projekt';
-  if (count >= 2 && count <= 4) return `${count} projekty`;
-  return `${count} projektov`;
+  return `${count} ${pluralizeSk(count, 'projekt', 'projekty', 'projektov')}`;
 }
 
 export function formatAmount(amount: number, locale: Locale = 'sk'): string {

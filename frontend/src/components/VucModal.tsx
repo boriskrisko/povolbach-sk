@@ -187,13 +187,13 @@ export default function VucModal({ vuc, vucOtherPeriod, onClose, locale }: Props
             </div>
             <div className="bg-[#0a0a0f] rounded-xl p-4 border border-[#1e1e2e]">
               <div className="text-3xl font-bold text-[#f8fafc] font-mono">{totalProjects}</div>
-              <div className="text-[#94a3b8] text-sm mt-1">{v!.projects_active > 0 ? `${v!.projects_active} ${locale === 'sk' ? 'aktívnych' : 'active'}` : ''}{v!.projects_active > 0 && v!.projects_completed > 0 ? ', ' : ''}{v!.projects_completed > 0 ? `${v!.projects_completed} ${locale === 'sk' ? 'ukončených' : 'completed'}` : ''}</div>
+              <div className="text-[#94a3b8] text-sm mt-1">{v!.projects_active > 0 ? `${v!.projects_active} ${tr.modal_active(v!.projects_active)}` : ''}{v!.projects_active > 0 && v!.projects_completed > 0 ? ', ' : ''}{v!.projects_completed > 0 ? `${v!.projects_completed} ${tr.modal_completed(v!.projects_completed)}` : ''}</div>
             </div>
           </div>
 
           {perCapita > 0 && <div className="mb-6 bg-[#0a0a0f] rounded-xl p-4 border border-[#1e1e2e]"><div className="text-xl font-bold text-[#10b981] font-mono">{formatAmount(perCapita, locale)} {locale === 'sk' ? '/ obyv.' : '/ capita'}</div><div className="text-[#94a3b8] text-sm mt-1">{locale === 'sk' ? 'Čerpanie na obyvateľa' : 'Per capita absorption'}</div></div>}
 
-          {(v!.irregularities_count ?? 0) > 0 && <div className="mb-6 bg-[#0a0a0f] rounded-xl p-4 border border-[#1e1e2e] border-l-2 border-l-[#f59e0b]"><div className="text-[#f59e0b] text-sm font-medium">{v!.irregularities_count} {locale === 'sk' ? `nezrovnalosť${(v!.irregularities_count ?? 0) > 1 ? 'í' : ''}` : `irregularit${(v!.irregularities_count ?? 0) > 1 ? 'ies' : 'y'}`} · {formatAmount(v!.irregularities_total_eur ?? 0, locale)}</div></div>}
+          {(v!.irregularities_count ?? 0) > 0 && <div className="mb-6 bg-[#0a0a0f] rounded-xl p-4 border border-[#1e1e2e] border-l-2 border-l-[#f59e0b]"><div className="text-[#f59e0b] text-sm font-medium">{v!.irregularities_count} {locale === 'sk' ? ((v!.irregularities_count ?? 0) === 1 ? 'nezrovnalosť' : (v!.irregularities_count ?? 0) >= 2 && (v!.irregularities_count ?? 0) <= 4 ? 'nezrovnalosti' : 'nezrovnalostí') : ((v!.irregularities_count ?? 0) === 1 ? 'irregularity' : 'irregularities')} · {formatAmount(v!.irregularities_total_eur ?? 0, locale)}</div></div>}
 
           {topProjects.length > 0 && <div className="mb-6"><h3 className="text-sm font-medium text-[#94a3b8] mb-3 uppercase tracking-wider">{locale === 'sk' ? 'TOP PROJEKTY' : 'TOP PROJECTS'}</h3><div className="space-y-2">{topProjects.map((p, i) => { const act = !p.stav.toLowerCase().includes('ukončen'); return <div key={i} className="bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e]"><div className="text-sm text-[#f8fafc] mb-1 line-clamp-2">{p.nazov}</div><div className="flex justify-between text-xs"><span className="text-[#3b82f6] font-mono">{formatAmount(p.sumaZazmluvnena, locale)}</span><span className="text-[#94a3b8]">{act ? (locale === 'sk' ? 'V realizácii' : 'In progress') : (locale === 'sk' ? 'Ukončený' : 'Completed')}</span></div></div>; })}</div></div>}
 

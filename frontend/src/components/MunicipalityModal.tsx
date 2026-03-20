@@ -309,7 +309,7 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
             </div>
             <div className="bg-[#0a0a0f] rounded-xl p-4 border border-[#1e1e2e]">
               <div className="text-3xl font-bold text-[#f8fafc] font-mono">{totalProjects}</div>
-              <div className="text-[#94a3b8] text-sm mt-1">{m!.active_projects > 0 ? `${m!.active_projects} ${tr.modal_active}` : ''}{m!.active_projects > 0 && m!.completed_projects > 0 ? ', ' : ''}{m!.completed_projects > 0 ? `${m!.completed_projects} ${tr.modal_completed}` : ''}{totalProjects === 0 ? tr.modal_projects : ''}</div>
+              <div className="text-[#94a3b8] text-sm mt-1">{m!.active_projects > 0 ? `${m!.active_projects} ${tr.modal_active(m!.active_projects)}` : ''}{m!.active_projects > 0 && m!.completed_projects > 0 ? ', ' : ''}{m!.completed_projects > 0 ? `${m!.completed_projects} ${tr.modal_completed(m!.completed_projects)}` : ''}{totalProjects === 0 ? tr.modal_projects : ''}</div>
             </div>
           </div>
           {m!.population > 0 && grandTotal > 0 && <div className="mb-6 bg-[#0a0a0f] rounded-xl p-4 border border-[#1e1e2e]"><div className="text-xl font-bold text-[#10b981] font-mono">{formatAmount(Math.round(grandTotal / m!.population), locale)} {tr.per_capita_suffix}</div><div className="text-[#94a3b8] text-sm mt-1">{tr.modal_per_capita}</div></div>}
