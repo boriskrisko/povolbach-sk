@@ -155,12 +155,26 @@ export async function generateMunicipalityPdf(ico: string, period: '1420' | '212
   setTimeout(() => w.print(), 300);
 }
 
-export function generateVucPdf(v: VucStats, period: '1420' | '2127') {
-  const w = window.open('', '_blank');
-  if (!w) { alert('Povoľte vyskakovacie okná pre tlač PDF.'); return; }
-
+export async function generateVucPdf(v: VucStats, period: '1420' | '2127') {
   const suffix = period === '1420' ? '14' : '21';
   const periodLabel = period === '1420' ? '2014–2020' : '2021–2027';
+  const title = `${v.name} - čerpanie Eurofondov - ${periodLabel} | povolbach.sk`;
+
+  const w = window.open('', '_blank');
+  if (!w) { alert('Povoľte vyskakovacie okná pre tlač PDF.'); return; }
+  w.document.write(`<!DOCTYPE html><html lang="sk"><head><meta charset="utf-8"><title>${esc(title)}</title></head><body><p style="font-family:sans-serif;color:#94a3b8;padding:20mm">Generujem PDF...</p></body></html>`);
+  w.document.close();
+
+  // Fetch full details (all projects + all subsidiary orgs)
+  let detail: DetailData = {};
+  try {
+    const res = await fetch(`/vuc_details_${suffix}.json`);
+    if (res.ok) { const all = await res.json(); detail = all[v.ico] || {}; }
+  } catch { /* */ }
+
+  const allProjects = detail.projects || v.projects || [];
+  const allSubs = detail.subsidiary_orgs || v.subsidiary_orgs || [];
+
   const dataSource = period === '1420' ? 'ITMS2014+' : 'ITMS2021+';
   const grandTotal = v.total_contracted_eur + (v.subsidiary_total_eur || 0);
   const totalProjects = v.projects_active + v.projects_completed;
@@ -178,18 +192,18 @@ export function generateVucPdf(v: VucStats, period: '1420' | '2127') {
       ${perCapita > 0 ? `<div class="stat-box"><div class="stat-val">${fmtEur(perCapita)}</div><div class="stat-label">Na obyvateľa</div></div>` : ''}
     </div><hr class="divider">`;
 
-  if (v.projects.length > 0) {
-    body += `<div class="section-title blue">Projekty (${v.projects.length})</div><table><thead><tr><th>Názov projektu</th><th class="right">Suma</th><th class="center">Stav</th></tr></thead><tbody>`;
-    for (const p of v.projects) {
+  if (allProjects.length > 0) {
+    body += `<div class="section-title blue">Projekty (${allProjects.length})</div><table><thead><tr><th>Názov projektu</th><th class="right">Suma</th><th class="center">Stav</th></tr></thead><tbody>`;
+    for (const p of allProjects) {
       const status = (p.stav || '').toLowerCase().includes('ukončen') ? 'Ukončený' : 'V realizácii';
       body += `<tr><td>${esc(p.nazov)}</td><td class="right amount">${fmtEur(p.sumaZazmluvnena)}</td><td class="center">${status}</td></tr>`;
     }
     body += '</tbody></table>';
   }
 
-  if (v.subsidiary_orgs?.length > 0) {
-    body += `<div class="section-title teal">Organizácie v zriaďovateľskej pôsobnosti (${v.subsidiary_orgs.length})</div><table><thead><tr><th>Organizácia</th><th class="right">Suma</th><th class="center">Projekty</th></tr></thead><tbody>`;
-    for (const o of v.subsidiary_orgs) {
+  if (allSubs.length > 0) {
+    body += `<div class="section-title teal">Organizácie v zriaďovateľskej pôsobnosti (${allSubs.length})</div><table><thead><tr><th>Organizácia</th><th class="right">Suma</th><th class="center">Projekty</th></tr></thead><tbody>`;
+    for (const o of allSubs) {
       body += `<tr><td>${esc(o.name)}</td><td class="right amount-teal">${fmtEur(o.total_contracted_eur)}</td><td class="center">${o.projects_count}</td></tr>`;
     }
     body += '</tbody></table>';
@@ -197,5 +211,9 @@ export function generateVucPdf(v: VucStats, period: '1420' | '2127') {
 
   body += `<div class="footer"><span>Zdroj: povolbach.sk · Dáta: ${dataSource} · Vygenerované: ${new Date().toLocaleDateString('sk-SK')}</span><span>${esc(v.name)}</span></div>`;
 
-  writePrintWindow(w, `${esc(v.name)} - čerpanie Eurofondov - ${periodLabel} | povolbach.sk`, body);
+  w.document.open();
+  w.document.write(`<!DOCTYPE html><html lang="sk"><head><meta charset="utf-8"><title>${esc(title)}</title><style>${CSS}</style></head><body>${body}</body></html>`);
+  w.document.close();
+  w.focus();
+  setTimeout(() => w.print(), 300);
 }
