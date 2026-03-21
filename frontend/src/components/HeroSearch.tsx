@@ -101,8 +101,8 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale, gl
       {/* Nav */}
       <nav className="absolute top-0 left-0 right-0 flex justify-between items-center px-6 py-5">
         <div className="text-xl font-bold tracking-tight" style={{ fontFamily: 'Syne, sans-serif' }}>
-          <span className="text-[#3b82f6]">po</span>
-          <span className="text-[#ffffff]">volbach</span>
+          <span className="text-[#ffffff]">po</span>
+          <span className="text-[#3b82f6]">volbach</span>
           <span className="text-[#6b7280]">.sk</span>
         </div>
         <div className="flex gap-2 text-sm">
