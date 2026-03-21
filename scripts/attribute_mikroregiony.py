@@ -26,6 +26,21 @@ def attribute_period(suffix: str):
     rpo = load_json(DATA / 'rpo_founders.json')
     muni_stats = load_json(DATA / f'municipal_stats_{suffix}.json')
 
+    # Load subsidiary data to deduplicate — skip mikro attribution if already a subsidiary
+    subs_path = DATA / f'subsidiaries_by_municipality_{suffix}.json'
+    subs = load_json(subs_path) if subs_path.exists() else {}
+
+    # Build: for each municipality, set of subsidiary org names (uppercase for matching)
+    muni_sub_names: dict[str, set[str]] = {}
+    for muni_ico, sub_data in subs.items():
+        names = set()
+        for org in sub_data.get('subsidiary_orgs', []):
+            n = org.get('name', '').upper().strip()
+            if n:
+                names.add(n)
+        if names:
+            muni_sub_names[muni_ico] = names
+
     # Load aggregated data for full project details
     agg_path = DATA / f'aggregated_by_beneficiary_{suffix}.json'
     agg_raw = load_json(agg_path)
@@ -75,9 +90,30 @@ def attribute_period(suffix: str):
         mikro_projects = agg.get(mikro_ico, {}).get('projects', [])
 
         attributed_mikro += 1
-        attributed_total += mikro_eur
 
+        # Filter out municipalities where this mikroregión is already a subsidiary
+        mikro_name_upper = mikro_name.upper().strip()
+        deduped_founders = []
+        skipped = 0
         for f_ico, pop in muni_founders:
+            if f_ico in muni_sub_names and mikro_name_upper in muni_sub_names[f_ico]:
+                skipped += 1
+                continue
+            deduped_founders.append((f_ico, pop))
+
+        if skipped > 0:
+            print(f'    Dedup: {mikro_name[:50]} — skipped {skipped}/{len(muni_founders)} (already subsidiary)')
+
+        if not deduped_founders:
+            continue
+
+        deduped_pop = sum(pop for _, pop in deduped_founders)
+        if deduped_pop == 0:
+            continue
+
+        attributed_total += mikro_eur * (len(deduped_founders) / len(muni_founders))
+
+        for f_ico, pop in deduped_founders:
             share_ratio = pop / total_pop
 
             if f_ico not in attribution:
