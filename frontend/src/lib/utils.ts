@@ -47,6 +47,15 @@ export function formatBillions(amount: number, locale: Locale = 'sk'): string {
   return `${(amount / 1_000_000).toFixed(0)} mil. €`;
 }
 
+export function formatBillionsParts(amount: number, locale: Locale = 'sk'): { number: string; unit: string } {
+  if (locale === 'en') {
+    if (amount >= 1_000_000_000) return { number: `€${(amount / 1_000_000_000).toFixed(2)}`, unit: 'B' };
+    return { number: `€${(amount / 1_000_000).toFixed(0)}`, unit: 'M' };
+  }
+  if (amount >= 1_000_000_000) return { number: (amount / 1_000_000_000).toFixed(2), unit: 'mld. €' };
+  return { number: (amount / 1_000_000).toFixed(0), unit: 'mil. €' };
+}
+
 /** Combined total: direct + subsidiary (the number that matters for absorption ranking). */
 export function getCombinedTotal(m: Municipality): number {
   return (m.total_contracted_eur || 0) + (m.subsidiary_total_eur || 0);

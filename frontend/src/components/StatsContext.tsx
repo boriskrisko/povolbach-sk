@@ -1,7 +1,7 @@
 'use client';
 
 import { useData } from '@/lib/DataContext';
-import { formatBillions } from '@/lib/utils';
+import { formatBillionsParts } from '@/lib/utils';
 import { useEffect, useRef, useState } from 'react';
 import { t, type Locale } from '@/lib/translations';
 import { GlobalStats } from '@/lib/types';
@@ -85,7 +85,7 @@ export default function StatsContext({ locale, globalStats }: Props) {
             className="text-4xl md:text-5xl font-bold mb-2"
             style={{ color: '#3b82f6', fontFamily: 'JetBrains Mono, monospace' }}
           >
-            {formatBillions(totalEur, locale)}
+            {formatBillionsParts(totalEur, locale).number}<span className="text-lg md:text-xl"> {formatBillionsParts(totalEur, locale).unit}</span>
           </div>
           <div className="text-[#94a3b8] mt-2">{tr.total_funds_tracked}</div>
         </div>
@@ -120,7 +120,7 @@ export default function StatsContext({ locale, globalStats }: Props) {
             className="text-4xl md:text-5xl font-bold mb-2"
             style={{ color: '#6366f1', fontFamily: 'JetBrains Mono, monospace' }}
           >
-            {formatBillions(uniqueIndirectEur, locale)}
+            {formatBillionsParts(uniqueIndirectEur, locale).number}<span className="text-lg md:text-xl"> {formatBillionsParts(uniqueIndirectEur, locale).unit}</span>
           </div>
           <div className="text-[#94a3b8] mt-2">{indirectLabel}</div>
           <div className="text-[#94a3b8]/50 text-xs mt-2 leading-relaxed">{indirectNote}</div>
