@@ -19,7 +19,8 @@ export default function Nav() {
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-14">
         <Link href="/dashboard" className="text-xl font-bold tracking-tight shrink-0" style={{ fontFamily: 'var(--font-syne)', letterSpacing: '-0.5px' }}>
           <span className="text-[#94a3b8]">dev.</span>
-          <span className="text-[#3b82f6]">povolbach</span>
+          <span className="text-[#3b82f6]">po</span>
+          <span className="text-[#f8fafc]">volbach</span>
           <span className="text-[#94a3b8]">.sk</span>
         </Link>
         <div className="flex gap-1 overflow-x-auto">
