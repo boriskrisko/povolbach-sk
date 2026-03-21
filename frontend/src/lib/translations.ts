@@ -144,7 +144,7 @@ export const t = {
     potential_better: 'better than',
     potential_of_neighbors: 'of neighbors',
     potential_within: 'within',
-    potential_residents: 'res.',
+    potential_residents: 'residents',
     compare_with: 'Compare with',
     compare_neighbors: 'Neighboring municipalities',
     compare_similar: 'Similar size',
