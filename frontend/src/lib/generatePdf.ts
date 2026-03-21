@@ -143,7 +143,7 @@ export async function generateMunicipalityPdf(ico: string, period: '1420' | '212
 
   if (mikroProjects.length > 0) {
     body += `<div class="section-title" style="color:#8b5cf6">Projekty z mikroregiónov (${mikroProjects.length})</div>
-    <div style="font-size:7pt;color:#94a3b8;margin-bottom:4pt">Projekty realizované združeniami obcí. Sumy sú rozdelené podľa počtu obyvateľov členských obcí.</div>
+    <div style="font-size:7pt;color:#94a3b8;margin-bottom:4pt">Projekty realizované združeniami obcí. Sú zahrnuté v hodnotení obce. Sumy sú rozdelené podľa počtu obyvateľov členských obcí.</div>
     <table><thead><tr><th style="background:#f5f3ff;color:#8b5cf6">Názov projektu</th><th class="right" style="background:#f5f3ff;color:#8b5cf6">Podiel obce</th><th style="background:#f5f3ff;color:#8b5cf6">Mikroregión</th></tr></thead><tbody>`;
     for (const p of mikroProjects) {
       body += `<tr><td>${esc(p.nazov)}</td><td class="right amount" style="color:#8b5cf6">${fmtEur(p.sumaZazmluvnena)}</td><td>${esc((p as Record<string, unknown>).source as string || '')}</td></tr>`;

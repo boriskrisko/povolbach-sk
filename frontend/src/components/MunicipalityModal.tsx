@@ -365,7 +365,7 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
             }
             return <div className="mb-6">
               <h4 className="text-xs font-medium text-[#8b5cf6] mb-1 uppercase tracking-wider">{locale === 'sk' ? 'PROJEKTY Z MIKROREGIÓNOV' : 'MICRO-REGION PROJECTS'}</h4>
-              <p className="text-[#94a3b8]/60 text-xs mb-3">{locale === 'sk' ? 'Projekty realizované združeniami obcí. Sumy sú rozdelené podľa počtu obyvateľov členských obcí.' : 'Projects by municipal associations. Amounts split by member population.'}</p>
+              <p className="text-[#94a3b8]/60 text-xs mb-3">{locale === 'sk' ? 'Projekty realizované združeniami obcí. Sú zahrnuté v hodnotení obce.' : 'Projects by municipal associations. Included in municipality score.'}</p>
               <div className="space-y-2">{Object.entries(grouped).map(([src, projs]) => {
                 const srcTotal = projs.reduce((s, p) => s + (p.sumaZazmluvnena || 0), 0);
                 return <div key={src} className="bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e] border-l-2 border-l-[#8b5cf6]/40">
@@ -379,6 +379,7 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
                   </div>)}</div>
                 </div>;
               })}</div>
+              <p className="text-[10px] text-[#94a3b8]/40 mt-2">{locale === 'sk' ? 'Sumy z mikroregiónov sú rozdelené podľa počtu obyvateľov členských obcí.' : 'Micro-region amounts are split by member municipality population.'}</p>
             </div>;
           })()}
           {topIndirect.length > 0 && <div className="mb-6"><h3 className="text-sm font-medium text-[#94a3b8]/70 mb-1 uppercase tracking-wider flex items-center gap-1.5">{tr.modal_indirect_title}</h3><p className="text-[#94a3b8]/60 text-xs mb-3">{tr.modal_indirect_note}</p><div className="space-y-2">{topIndirect.map((p, i) => <div key={i} className="bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e] opacity-80"><div className="text-sm text-[#f8fafc]/80 mb-1 line-clamp-2">{p.name}</div><div className="flex justify-between text-xs"><span className="text-[#3b82f6]/80 font-mono">{formatAmount(p.contracted_eur, locale)}</span><span className="text-[#94a3b8]/70">{p.beneficiary_name.split(' ').slice(0, 3).join(' ')}</span></div></div>)}</div></div>}
