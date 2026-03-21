@@ -141,7 +141,7 @@ export async function generateMunicipalityPdf(ico: string, period: '1420' | '212
   }
 
   let body = `<h1>${esc(m.official_name)}</h1>
-    <div class="meta">${esc(m.region)}${m.district ? ` · ${locale === 'sk' ? 'Okres' : 'District'} ${esc(m.district)}` : ''} · IČO: ${m.ico}${m.population > 0 ? ` · ${m.population.toLocaleString('sk-SK')} ${t.residents}` : ''}</div>
+    <div class="meta">${esc(m.region)}${m.district ? ` · ${locale === 'sk' ? `Okres ${esc(m.district)}` : `${esc(m.district)} District`}` : ''} · IČO: ${m.ico}${m.population > 0 ? ` · ${m.population.toLocaleString('sk-SK')} ${t.residents}` : ''}</div>
     <div class="period">${t.period}: ${periodLabel}</div>
     <div class="stat-row">
       <div class="stat-box"><div class="stat-val">${fmtFull(grandTotal)}</div><div class="stat-label">${t.total}</div>

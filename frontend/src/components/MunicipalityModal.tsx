@@ -145,7 +145,7 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
         <div className="flex justify-between items-start mb-4">
           <div className="flex-1 min-w-0">
             <h2 className="text-2xl font-bold text-[#f8fafc]" style={{ fontFamily: 'Syne, sans-serif' }}>{municipality.official_name}</h2>
-            <p className="text-[#94a3b8] text-sm mt-1">{municipality.region}{municipality.district ? ` · ${locale === 'sk' ? 'Okres' : 'District'} ${municipality.district}` : ''}</p>
+            <p className="text-[#94a3b8] text-sm mt-1">{municipality.region}{municipality.district ? ` · ${locale === 'sk' ? `Okres ${municipality.district}` : `${municipality.district} District`}` : ''}</p>
             <p className="text-[#94a3b8] text-sm">IČO: <span className="font-mono text-[#f8fafc]">{municipality.ico}</span>{(m?.population ?? municipality.population) > 0 && <span> · {(m?.population ?? municipality.population).toLocaleString('sk-SK')} {locale === 'sk' ? 'obyvateľov' : 'inhabitants'}</span>}</p>
           </div>
           <button onClick={onClose} className="text-[#94a3b8] hover:text-[#f8fafc] transition-colors text-2xl leading-none ml-4 flex-shrink-0">&times;</button>
