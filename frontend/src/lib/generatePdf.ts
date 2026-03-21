@@ -133,6 +133,7 @@ export async function generateMunicipalityPdf(ico: string, period: '1420' | '212
 
   if (allSubs.length > 0) {
     body += `<div class="section-title teal">Organizácie v zriaďovateľskej pôsobnosti (${allSubs.length})</div>
+    <div style="font-size:7pt;color:#94a3b8;margin-bottom:4pt">Tieto organizácie získali fondy samostatne pod vlastným IČO. Sú zahrnuté v celkovom hodnotení obce.</div>
     <table><thead><tr><th>Organizácia</th><th class="right">Suma</th><th class="center">Projekty</th></tr></thead><tbody>`;
     for (const o of allSubs) {
       body += `<tr><td>${esc(o.name)}</td><td class="right amount-teal">${fmtEur(o.total_contracted_eur)}</td><td class="center">${o.projects_count}</td></tr>`;
@@ -142,6 +143,7 @@ export async function generateMunicipalityPdf(ico: string, period: '1420' | '212
 
   if (mikroProjects.length > 0) {
     body += `<div class="section-title" style="color:#8b5cf6">Projekty z mikroregiónov (${mikroProjects.length})</div>
+    <div style="font-size:7pt;color:#94a3b8;margin-bottom:4pt">Projekty realizované združeniami obcí. Sumy sú rozdelené podľa počtu obyvateľov členských obcí.</div>
     <table><thead><tr><th style="background:#f5f3ff;color:#8b5cf6">Názov projektu</th><th class="right" style="background:#f5f3ff;color:#8b5cf6">Podiel obce</th><th style="background:#f5f3ff;color:#8b5cf6">Mikroregión</th></tr></thead><tbody>`;
     for (const p of mikroProjects) {
       body += `<tr><td>${esc(p.nazov)}</td><td class="right amount" style="color:#8b5cf6">${fmtEur(p.sumaZazmluvnena)}</td><td>${esc((p as Record<string, unknown>).source as string || '')}</td></tr>`;
@@ -151,6 +153,7 @@ export async function generateMunicipalityPdf(ico: string, period: '1420' | '212
 
   if (allIndirect.length > 0) {
     body += `<div class="section-title gray">Štátne projekty v katastri (${allIndirect.length})</div>
+    <div style="font-size:7pt;color:#94a3b8;margin-bottom:4pt">Tieto projekty realizoval štát alebo štátne agentúry na území obce. Nie sú zahrnuté v hodnotení obce.</div>
     <table><thead><tr><th>Projekt</th><th class="right">Suma</th><th>Realizátor</th></tr></thead><tbody>`;
     for (const p of allIndirect) {
       body += `<tr><td>${esc(p.name)}</td><td class="right amount">${fmtEur(p.contracted_eur)}</td><td>${esc(p.beneficiary_name.split(' ').slice(0, 4).join(' '))}</td></tr>`;
