@@ -63,7 +63,7 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
 
   const getStats = useCallback((muni: Municipality | null) => {
     if (!muni) return { total: 0, projects: 0, perCapita: 0 };
-    const total = (muni.total_contracted_eur || 0) + (muni.subsidiary_total_eur || 0) + (muni.mikroregion_eur || 0);
+    const total = (muni.total_contracted_eur || 0) + (muni.subsidiary_total_eur || 0);
     return { total, projects: muni.active_projects + muni.completed_projects, perCapita: muni.population > 0 ? Math.round(total / muni.population) : 0 };
   }, []);
   const stats14 = useMemo(() => getStats(m14), [m14, getStats]);
@@ -122,11 +122,9 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
   const hasDetailData = m && (m.total_contracted_eur > 0 || m.active_projects > 0 || m.completed_projects > 0 || (m.subsidiary_total_eur || 0) > 0);
   const totalProjects = m ? m.active_projects + m.completed_projects : 0;
   const subTotal = m ? (m.subsidiary_total_eur || 0) : 0;
-  const mikroTotal = m ? (m.mikroregion_eur || 0) : 0;
-  const grandTotal = m ? m.total_contracted_eur + subTotal + mikroTotal : 0;
+  const grandTotal = m ? m.total_contracted_eur + subTotal : 0;
   const allProjectsSorted = m ? [...m.projects].sort((a, b) => (b.sumaZazmluvnena || 0) - (a.sumaZazmluvnena || 0)) : [];
-  const topProjects = allProjectsSorted.filter(p => !p.isMikroregion).slice(0, 5);
-  const mikroProjects = allProjectsSorted.filter(p => p.isMikroregion);
+  const topProjects = allProjectsSorted.slice(0, 5);
   const topIndirect = m ? [...(m.indirect_projects || [])].sort((a, b) => (b.contracted_eur || 0) - (a.contracted_eur || 0)).slice(0, 5) : [];
   const topSubs = m ? [...(m.subsidiary_orgs || [])].sort((a, b) => (b.total_contracted_eur || 0) - (a.total_contracted_eur || 0)).slice(0, 5) : [];
 
@@ -147,7 +145,7 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
         <div className="flex justify-between items-start mb-4">
           <div className="flex-1 min-w-0">
             <h2 className="text-2xl font-bold text-[#f8fafc]" style={{ fontFamily: 'Syne, sans-serif' }}>{municipality.official_name}</h2>
-            <p className="text-[#94a3b8] text-sm mt-1">{municipality.region}{municipality.district ? ` · ${municipality.district}` : ''} · {municipality.nuts5_code}</p>
+            <p className="text-[#94a3b8] text-sm mt-1">{municipality.region}{municipality.district ? ` · ${locale === 'sk' ? 'Okres' : 'District'} ${municipality.district}` : ''}</p>
             <p className="text-[#94a3b8] text-sm">IČO: <span className="font-mono text-[#f8fafc]">{municipality.ico}</span>{(m?.population ?? municipality.population) > 0 && <span> · {(m?.population ?? municipality.population).toLocaleString('sk-SK')} {locale === 'sk' ? 'obyvateľov' : 'inhabitants'}</span>}</p>
           </div>
           <button onClick={onClose} className="text-[#94a3b8] hover:text-[#f8fafc] transition-colors text-2xl leading-none ml-4 flex-shrink-0">&times;</button>
@@ -304,11 +302,11 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
                 <div className="font-bold text-[#3b82f6] font-mono" style={{ fontSize: 'clamp(1.2rem, 3.5vw, 2rem)' }}>{formatAmount(grandTotal, locale)}</div>
                 <div className="text-[#94a3b8] text-xs mt-0.5">{formatAmount(m!.total_contracted_eur, locale)} <span className="text-[#94a3b8]/60">{locale === 'sk' ? 'priame' : 'direct'}</span></div>
                 <div className="text-[#10b981] text-xs">+{formatAmount(subTotal, locale)} <span className="text-[#10b981]/70">{locale === 'sk' ? 'zriaďované org.' : 'orgs'}</span></div>
-                {(m!.mikroregion_eur || 0) > 0 && <div className="text-[#8b5cf6] text-xs">+{formatAmount(m!.mikroregion_eur!, locale)} <span className="text-[#8b5cf6]/70">{tr.from_mikroregions}</span></div>}
+
                 <div className="text-[#94a3b8] text-xs mt-1">{tr.modal_total}</div>
               </>) : (<>
                 <div className="font-bold text-[#3b82f6] font-mono" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)' }}>{formatAmount(m!.total_contracted_eur, locale)}</div>
-                {(m!.mikroregion_eur || 0) > 0 && <div className="text-[#8b5cf6] text-xs mt-0.5">+{formatAmount(m!.mikroregion_eur!, locale)} <span className="text-[#8b5cf6]/70">{tr.from_mikroregions}</span></div>}
+
                 <div className="text-[#94a3b8] text-sm mt-1">{tr.modal_total}</div>
               </>)}
             </div>
@@ -355,33 +353,6 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
           {m!.irregularities_count > 0 && <div className="mb-6 bg-[#0a0a0f] rounded-xl p-4 border border-[#1e1e2e] border-l-2 border-l-[#f59e0b]"><div className="text-[#f59e0b] text-sm font-medium">{tr.modal_irregularities(m!.irregularities_count, formatAmount(m!.irregularities_total_eur, locale))}</div></div>}
           {topProjects.length > 0 && <div className="mb-6"><h3 className="text-sm font-medium text-[#94a3b8] mb-2 uppercase tracking-wider">{tr.modal_top_projects}</h3><h4 className="text-xs font-medium text-[#3b82f6] mb-3 uppercase tracking-wider">{tr.modal_direct_projects}</h4><div className="space-y-2">{topProjects.map((p, i) => { const act = !p.stav.toLowerCase().includes('ukončen'); const ed = p.datumKoncaRealizacie ? (() => { const d = new Date(p.datumKoncaRealizacie); return isNaN(d.getTime()) ? null : `${d.getMonth()+1}/${d.getFullYear()}`; })() : null; return <div key={i} className="bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e]"><div className="text-sm text-[#f8fafc] mb-1 line-clamp-2">{p.nazov}</div>{act && ed && <div className="text-xs text-[#94a3b8]/60 mb-1">{locale === 'sk' ? 'Realizácia do' : 'Until'}: {ed}</div>}<div className="flex justify-between text-xs"><span className="text-[#3b82f6] font-mono">{formatAmount(p.sumaZazmluvnena, locale)}</span><span className="text-[#94a3b8]">{act ? tr.active : tr.completed}</span></div></div>; })}</div></div>}
           {subTotal > 0 && topSubs.length > 0 && (() => { const hasJV = topSubs.some(o => (o.co_owners||0) > 1); return <div className="mb-6"><h3 className="text-sm font-medium text-[#10b981]/80 mb-1 uppercase tracking-wider flex items-center gap-1.5">{tr.modal_subsidiary_title}</h3><p className="text-[#94a3b8]/60 text-xs mb-3">{tr.modal_subsidiary_note}</p><div className="space-y-2">{topSubs.map((org, i) => <div key={i} className="bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e] border-l-2 border-l-[#10b981]/40"><div className="text-sm text-[#f8fafc]/90 mb-1 line-clamp-2">{org.name}</div><div className="flex justify-between text-xs"><span className="text-[#10b981] font-mono">{formatAmount(org.total_contracted_eur, locale)}</span><span className="text-[#94a3b8]/70">{formatProjects(org.projects_count, locale)}</span></div>{(org.co_owners||0) > 1 && org.full_amount_eur && <div className="text-[10px] text-[#94a3b8]/50 mt-1">↳ {locale === 'sk' ? (org.share_pct ? `podiel ${org.share_pct}% z ${formatAmount(org.full_amount_eur, locale)} (spoločný podnik ${org.co_owners} obcí)` : `podiel 1/${org.co_owners} z ${formatAmount(org.full_amount_eur, locale)} (spoločný podnik ${org.co_owners} obcí)`) : (org.share_pct ? `${org.share_pct}% share of ${formatAmount(org.full_amount_eur, locale)} (joint venture of ${org.co_owners} municipalities)` : `share 1/${org.co_owners} of ${formatAmount(org.full_amount_eur, locale)} (joint venture of ${org.co_owners} municipalities)`)}</div>}</div>)}</div>{hasJV && <p className="text-[10px] text-[#94a3b8]/40 mt-2">{locale === 'sk' ? 'Sumy spoločných podnikov sú rozdelené proporcionálne medzi spoluvlastníkov.' : 'Joint venture amounts are split proportionally among co-owners.'}</p>}</div>; })()}
-          {mikroProjects.length > 0 && (() => {
-            // Group by source mikroregión name
-            const grouped: Record<string, typeof mikroProjects> = {};
-            for (const p of mikroProjects) {
-              const src = p.source || '?';
-              if (!grouped[src]) grouped[src] = [];
-              grouped[src].push(p);
-            }
-            return <div className="mb-6">
-              <h4 className="text-xs font-medium text-[#8b5cf6] mb-1 uppercase tracking-wider">{locale === 'sk' ? 'PROJEKTY Z MIKROREGIÓNOV' : 'MICRO-REGION PROJECTS'}</h4>
-              <p className="text-[#94a3b8]/60 text-xs mb-3">{locale === 'sk' ? 'Projekty realizované združeniami obcí. Sú zahrnuté v hodnotení obce.' : 'Projects by municipal associations. Included in municipality score.'}</p>
-              <div className="space-y-2">{Object.entries(grouped).map(([src, projs]) => {
-                const srcTotal = projs.reduce((s, p) => s + (p.sumaZazmluvnena || 0), 0);
-                return <div key={src} className="bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e] border-l-2 border-l-[#8b5cf6]/40">
-                  <div className="flex justify-between items-start mb-2">
-                    <div className="text-sm text-[#f8fafc]/90 font-medium line-clamp-2">{src}</div>
-                    <span className="text-[#8b5cf6] font-mono text-sm ml-2 flex-shrink-0">{formatAmount(srcTotal, locale)}</span>
-                  </div>
-                  <div className="space-y-1">{projs.map((p, i) => <div key={i} className="flex justify-between text-xs">
-                    <span className="text-[#f8fafc]/70 truncate mr-2">{p.nazov}</span>
-                    <span className="text-[#8b5cf6]/70 font-mono flex-shrink-0">{formatAmount(p.sumaZazmluvnena, locale)}</span>
-                  </div>)}</div>
-                </div>;
-              })}</div>
-              <p className="text-[10px] text-[#94a3b8]/40 mt-2">{locale === 'sk' ? 'Sumy z mikroregiónov sú rozdelené podľa počtu obyvateľov členských obcí.' : 'Micro-region amounts are split by member municipality population.'}</p>
-            </div>;
-          })()}
           {topIndirect.length > 0 && <div className="mb-6"><h3 className="text-sm font-medium text-[#94a3b8]/70 mb-1 uppercase tracking-wider flex items-center gap-1.5">{tr.modal_indirect_title}</h3><p className="text-[#94a3b8]/60 text-xs mb-3">{tr.modal_indirect_note}</p><div className="space-y-2">{topIndirect.map((p, i) => <div key={i} className="bg-[#0a0a0f] rounded-lg p-3 border border-[#1e1e2e] opacity-80"><div className="text-sm text-[#f8fafc]/80 mb-1 line-clamp-2">{p.name}</div><div className="flex justify-between text-xs"><span className="text-[#3b82f6]/80 font-mono">{formatAmount(p.contracted_eur, locale)}</span><span className="text-[#94a3b8]/70">{p.beneficiary_name.split(' ').slice(0, 3).join(' ')}</span></div></div>)}</div></div>}
           <div className="mb-8" />
         </>)}

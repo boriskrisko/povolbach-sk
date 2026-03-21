@@ -30,7 +30,7 @@ const L = {
     perCapita: 'Na obyvateľa', residents: 'obyvateľov', irregularities: 'Nezrovnalosti',
     nationalAvg: 'národný priemer', gapText: 'Obec nevyčerpala', gapOf: 'potenciálu',
     aboveText: 'Obec čerpá', peerAmong: 'Medzi podobnými obcami', peerWithin: 'do',
-    peerRes: 'ob.', peerBetter: 'lepšia než', peerOf: 'susedov', peerRank: 'z',
+    peerRes: 'obyvateľov', peerBetter: 'lepšia než', peerOf: 'susedov', peerRank: 'z',
     catHeading: 'TOP 5 PODĽA KATEGÓRIÍ', directHeading: 'VLASTNÉ PROJEKTY',
     subsHeading: 'Organizácie v zriaďovateľskej pôsobnosti', subsNote: 'Tieto organizácie získali fondy samostatne pod vlastným IČO. Sú zahrnuté v celkovom hodnotení obce.',
     mikroHeading: 'Projekty z mikroregiónov', mikroNote: 'Projekty realizované združeniami obcí. Sú zahrnuté v hodnotení obce. Sumy sú rozdelené podľa počtu obyvateľov členských obcí.',
@@ -128,7 +128,6 @@ export async function generateMunicipalityPdf(ico: string, period: '1420' | '212
   const allProjects = detail.projects || m.projects || [];
   const allSubs = detail.subsidiary_orgs || m.subsidiary_orgs || [];
   const allIndirect = detail.indirect_projects || m.indirect_projects || [];
-  const mikroEur = m.mikroregion_eur || 0;
   const grandTotal = getCombinedTotal(m);
   const totalProjects = m.active_projects + m.completed_projects;
   const perCapita = m.population > 0 ? Math.round(grandTotal / m.population) : 0;
@@ -142,11 +141,11 @@ export async function generateMunicipalityPdf(ico: string, period: '1420' | '212
   }
 
   let body = `<h1>${esc(m.official_name)}</h1>
-    <div class="meta">${esc(m.region)}${m.district ? ` · ${esc(m.district)}` : ''} · IČO: ${m.ico}${m.population > 0 ? ` · ${m.population.toLocaleString('sk-SK')} ${t.residents}` : ''}</div>
+    <div class="meta">${esc(m.region)}${m.district ? ` · ${locale === 'sk' ? 'Okres' : 'District'} ${esc(m.district)}` : ''} · IČO: ${m.ico}${m.population > 0 ? ` · ${m.population.toLocaleString('sk-SK')} ${t.residents}` : ''}</div>
     <div class="period">${t.period}: ${periodLabel}</div>
     <div class="stat-row">
       <div class="stat-box"><div class="stat-val">${fmtFull(grandTotal)}</div><div class="stat-label">${t.total}</div>
-        ${((m.subsidiary_total_eur || 0) > 0 || mikroEur > 0) ? `<div class="stat-sub">${fmtFull(m.total_contracted_eur)} ${t.direct}${(m.subsidiary_total_eur || 0) > 0 ? ` · ${fmtFull(m.subsidiary_total_eur || 0)} ${t.subsOrgs}` : ''}${mikroEur > 0 ? ` · ${fmtFull(mikroEur)} ${t.mikroLabel}` : ''}</div>` : ''}
+        ${(m.subsidiary_total_eur || 0) > 0 ? `<div class="stat-sub">${fmtFull(m.total_contracted_eur)} ${t.direct} · ${fmtFull(m.subsidiary_total_eur || 0)} ${t.subsOrgs}</div>` : ''}
       </div>
       <div class="stat-box"><div class="stat-val blue">${totalProjects}</div><div class="stat-label">${m.active_projects} ${t.active}, ${m.completed_projects} ${t.completed}</div></div>
       ${perCapita > 0 ? `<div class="stat-box"><div class="stat-val">${fmt(perCapita, locale)}</div><div class="stat-label">${t.perCapita}</div></div>` : ''}
@@ -173,11 +172,10 @@ export async function generateMunicipalityPdf(ico: string, period: '1420' | '212
 
   body += '<hr class="divider">';
 
-  const directProjects = allProjects.filter((p) => !p.isMikroregion);
-  const mikroProjects = allProjects.filter((p) => p.isMikroregion);
+  const directProjects = allProjects;
 
   // Section heading
-  body += `<div class="cat-heading">${t.catHeading}</div>`;
+  // No "TOP 5" heading in PDF — PDF shows ALL projects
 
   if (directProjects.length > 0) {
     body += `<div class="section-title blue">${t.directHeading} (${directProjects.length})</div>
@@ -195,16 +193,6 @@ export async function generateMunicipalityPdf(ico: string, period: '1420' | '212
     <table><thead><tr><th>${t.org}</th><th class="right">${t.amount}</th><th class="center">${t.projects}</th></tr></thead><tbody>`;
     for (const o of allSubs) {
       body += `<tr><td>${esc(o.name)}</td><td class="right amount-teal">${fmt(o.total_contracted_eur, locale)}</td><td class="center">${o.projects_count}</td></tr>`;
-    }
-    body += '</tbody></table>';
-  }
-
-  if (mikroProjects.length > 0) {
-    body += `<div class="section-title" style="color:#8b5cf6">${t.mikroHeading} (${mikroProjects.length})</div>
-    <div class="note">${t.mikroNote}</div>
-    <table><thead><tr><th style="background:#f5f3ff;color:#8b5cf6">${t.projectName}</th><th class="right" style="background:#f5f3ff;color:#8b5cf6">${t.share}</th><th style="background:#f5f3ff;color:#8b5cf6">${t.source}</th></tr></thead><tbody>`;
-    for (const p of mikroProjects) {
-      body += `<tr><td>${esc(p.nazov)}</td><td class="right" style="color:#8b5cf6;font-weight:600">${fmt(p.sumaZazmluvnena, locale)}</td><td>${esc(p.source || '')}</td></tr>`;
     }
     body += '</tbody></table>';
   }

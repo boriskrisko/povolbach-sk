@@ -60,7 +60,7 @@ export const t = {
     potential_better: 'lepšia než',
     potential_of_neighbors: 'susedov',
     potential_within: 'do',
-    potential_residents: 'ob.',
+    potential_residents: 'obyvateľov',
     compare_with: 'Porovnať s',
     compare_neighbors: 'Susedné obce',
     compare_similar: 'Podobne veľké',
