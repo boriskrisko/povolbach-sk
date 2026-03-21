@@ -1,0 +1,7 @@
+[
+  { "id": "visitors", "icon": "eye", "label": "Visitors", "actual": 0, "target": 50000 },
+  { "id": "municipalities", "icon": "building", "label": "Municipalities Viewed", "actual": 0, "target": 500 },
+  { "id": "shares", "icon": "share", "label": "Shares", "actual": 0, "target": 1000 },
+  { "id": "media", "icon": "newspaper", "label": "Media Mentions", "actual": 0, "target": 3 },
+  { "id": "inbound", "icon": "mail", "label": "Municipal Inbound", "actual": 0, "target": 1 }
+]
