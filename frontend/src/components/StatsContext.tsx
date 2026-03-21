@@ -77,10 +77,10 @@ export default function StatsContext({ locale, globalStats }: Props) {
   const indirectParts = formatBillionsParts(uniqueIndirectEur, locale);
 
   return (
-    <section className="py-24 px-4 max-w-5xl mx-auto">
+    <section className="py-24 px-4 max-w-6xl mx-auto">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
         {/* Total EUR */}
-        <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-6 text-center flex flex-col justify-center">
+        <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-6 text-center flex flex-col">
           <div
             className="text-4xl md:text-5xl font-bold"
             style={{ color: '#3b82f6', fontFamily: 'JetBrains Mono, monospace' }}
@@ -92,7 +92,7 @@ export default function StatsContext({ locale, globalStats }: Props) {
         </div>
 
         {/* With projects */}
-        <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-6 text-center flex flex-col justify-center">
+        <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-6 text-center flex flex-col">
           <div
             className="text-4xl md:text-5xl font-bold"
             style={{ color: '#10b981', fontFamily: 'JetBrains Mono, monospace' }}
@@ -104,7 +104,7 @@ export default function StatsContext({ locale, globalStats }: Props) {
         </div>
 
         {/* Without projects */}
-        <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-6 text-center flex flex-col justify-center">
+        <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-6 text-center flex flex-col">
           <div
             className="text-4xl md:text-5xl font-bold"
             style={{ color: '#f59e0b', fontFamily: 'JetBrains Mono, monospace' }}
@@ -116,7 +116,7 @@ export default function StatsContext({ locale, globalStats }: Props) {
         </div>
 
         {/* State investments */}
-        <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-6 text-center flex flex-col justify-center">
+        <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-6 text-center flex flex-col">
           <div
             className="text-4xl md:text-5xl font-bold"
             style={{ color: '#6366f1', fontFamily: 'JetBrains Mono, monospace' }}
@@ -128,7 +128,7 @@ export default function StatsContext({ locale, globalStats }: Props) {
         </div>
       </div>
 
-      <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-8 max-w-3xl mx-auto">
+      <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-8 mx-auto">
         <p className="text-[#94a3b8] leading-relaxed text-center">
           {period === '21' ? tr.data_source_21 : tr.data_source_14}
         </p>
