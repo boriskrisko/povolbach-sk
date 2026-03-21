@@ -33,7 +33,7 @@ export default function Footer({ locale }: Props) {
       {/* Fixed bug report button */}
       <a
         href="mailto:boris@povolbach.sk?subject=Nahlásenie chyby — povolbach.sk"
-        className="fixed bottom-4 right-4 z-[60] px-3 py-1.5 rounded-lg text-xs text-[#94a3b8]/70 hover:text-[#f8fafc] bg-[#13131a]/80 border border-[#1e1e2e] hover:border-white/20 backdrop-blur-sm transition-all"
+        className="fixed bottom-12 right-12 z-[60] px-4 py-2 rounded-lg text-xs font-medium text-white bg-amber-600 hover:bg-amber-500 shadow-lg transition-all"
       >
         {tr.report_bug}
       </a>
