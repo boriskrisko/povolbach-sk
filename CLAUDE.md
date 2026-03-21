@@ -20,18 +20,20 @@
 
 ## Architecture Rules — NON-NEGOTIABLE
 
+### Period identifiers: `_14` and `_21` ONLY — HARD RULE
+- **File suffixes:** `_14` for 2014–2020, `_21` for 2021–2027
+- **Internal period values in code:** `'14'` and `'21'`
+- ❌ **NEVER use:** `_1420`, `_2127`, `'1420'`, `'2127'`, or any other format
+- This applies to: file names, JSON keys, variable names, string comparisons, URL parameters, translation keys, function names — **EVERYWHERE**
+- ✅ Display strings like `"2014–2020"` and `"2021–2027"` are fine for UI text shown to users
+- ✅ System names `"ITMS2014+"` and `"ITMS2021+"` are fine — these are official names, not period identifiers
+
 ### IČO-only joins
 **IČO = Slovak company/entity registration number. The ONLY join key in this project.**
 - ✅ Join by IČO
 - ✅ Display names (from registers or API responses)
 - ❌ NEVER match or deduplicate by name
 - ❌ NEVER use fuzzy matching on names
-
-### File Naming Convention
-ALL period-specific data files use suffix:
-- **2014-2020:** `_14` (e.g. `municipal_stats_14.json`)
-- **2021-2027:** `_21` (e.g. `municipal_stats_21.json`)
-- **NEVER use:** `_2127`, `_2021`, `_14_20`, `_21_27`, or no suffix
 
 ### No cross-period contamination
 Each period's data is independent. Clear period-specific data before regenerating.
@@ -202,4 +204,4 @@ frontend/src/
 4. **Never block on ambiguity** — conservative choice, document in validation_report.txt
 5. **Log progress** — stderr + log files, counts at every step
 
-*Last updated: 2026-03-20*
+*Last updated: 2026-03-21*
