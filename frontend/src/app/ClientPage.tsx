@@ -33,13 +33,13 @@ function PageContent() {
     deepLinkHandled.current = true;
 
     // Set global period from deep-link
-    if (obdobie === '21') setPeriod('2127');
-    else if (obdobie === '14') setPeriod('1420');
+    if (obdobie === '21') setPeriod('21');
+    else if (obdobie === '14') setPeriod('14');
 
     // Try to find the municipality in any available data
-    const targetPeriod: Period = obdobie === '21' ? '2127' : '1420';
+    const targetPeriod: Period = obdobie === '21' ? '21' : '14';
     const targetData = getDataForPeriod(targetPeriod);
-    const fallbackData = getDataForPeriod(targetPeriod === '1420' ? '2127' : '1420');
+    const fallbackData = getDataForPeriod(targetPeriod === '14' ? '21' : '14');
 
     const muni = targetData?.[ico] ?? fallbackData?.[ico] ?? data[ico] ?? null;
     if (muni) {
@@ -55,7 +55,7 @@ function PageContent() {
     if (muni) {
       const url = new URL(window.location.href);
       url.searchParams.set('ico', muni.ico);
-      url.searchParams.set('obdobie', period === '2127' ? '21' : '14');
+      url.searchParams.set('obdobie', period === '21' ? '21' : '14');
       window.history.replaceState({}, '', url.toString());
     } else {
       const url = new URL(window.location.href);

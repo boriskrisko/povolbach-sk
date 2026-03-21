@@ -100,12 +100,12 @@ interface DetailData {
   indirect_projects?: Array<{ name: string; beneficiary_name: string; contracted_eur: number }>;
 }
 
-export async function generateMunicipalityPdf(ico: string, period: '1420' | '2127', name: string, locale: Locale = 'sk', allData?: MunicipalityMap | null) {
-  const suffix = period === '1420' ? '14' : '21';
-  const periodLabel = period === '1420' ? '2014–2020' : '2021–2027';
+export async function generateMunicipalityPdf(ico: string, period: '14' | '21', name: string, locale: Locale = 'sk', allData?: MunicipalityMap | null) {
+  const suffix = period === '14' ? '14' : '21';
+  const periodLabel = period === '14' ? '2014–2020' : '2021–2027';
   const t = L[locale];
   const title = `${name} - ${t.titleSuffix} - ${periodLabel} | povolbach.sk`;
-  const dataSource = period === '1420' ? 'ITMS2014+' : 'ITMS2021+';
+  const dataSource = period === '14' ? 'ITMS2014+' : 'ITMS2021+';
 
   const w = window.open('', '_blank');
   if (!w) { alert(locale === 'sk' ? 'Povoľte vyskakovacie okná pre tlač PDF.' : 'Please allow popups for PDF export.'); return; }
@@ -216,12 +216,12 @@ export async function generateMunicipalityPdf(ico: string, period: '1420' | '212
   setTimeout(() => w.print(), 300);
 }
 
-export async function generateVucPdf(v: VucStats, period: '1420' | '2127', locale: Locale = 'sk') {
-  const suffix = period === '1420' ? '14' : '21';
-  const periodLabel = period === '1420' ? '2014–2020' : '2021–2027';
+export async function generateVucPdf(v: VucStats, period: '14' | '21', locale: Locale = 'sk') {
+  const suffix = period === '14' ? '14' : '21';
+  const periodLabel = period === '14' ? '2014–2020' : '2021–2027';
   const t = L[locale];
   const title = `${v.name} - ${t.titleSuffix} - ${periodLabel} | povolbach.sk`;
-  const dataSource = period === '1420' ? 'ITMS2014+' : 'ITMS2021+';
+  const dataSource = period === '14' ? 'ITMS2014+' : 'ITMS2021+';
 
   const w = window.open('', '_blank');
   if (!w) { return; }

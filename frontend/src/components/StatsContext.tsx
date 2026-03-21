@@ -129,7 +129,7 @@ export default function StatsContext({ locale, globalStats }: Props) {
 
       <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-8 max-w-3xl mx-auto">
         <p className="text-[#94a3b8] leading-relaxed text-center">
-          {period === '2127' ? tr.data_source_2127 : tr.data_source_1420}
+          {period === '21' ? tr.data_source_21 : tr.data_source_14}
         </p>
       </div>
     </section>

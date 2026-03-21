@@ -3,7 +3,7 @@
 import { createContext, useContext, useEffect, useState, useCallback, useRef, ReactNode } from 'react';
 import { MunicipalityMap } from './types';
 
-export type Period = '1420' | '2127';
+export type Period = '14' | '21';
 
 interface DataContextType {
   data: MunicipalityMap | null;
@@ -19,34 +19,34 @@ interface DataContextType {
 const DataContext = createContext<DataContextType>({
   data: null,
   loading: true,
-  period: '1420',
+  period: '14',
   setPeriod: () => {},
-  periodAvailable: { '1420': true, '2127': false },
-  periodLoading: { '1420': true, '2127': true },
+  periodAvailable: { '14': true, '21': false },
+  periodLoading: { '14': true, '21': true },
   isTransitioning: false,
   getDataForPeriod: () => null,
 });
 
 const PERIOD_FILES: Record<Period, string> = {
-  '1420': '/municipal_stats_14.json',
-  '2127': '/municipal_stats_21.json',
+  '14': '/municipal_stats_14.json',
+  '21': '/municipal_stats_21.json',
 };
 
 export function DataProvider({ children }: { children: ReactNode }) {
   // Cache both periods' data — once loaded, swapping is instant (like viewMode)
   const cache = useRef<Partial<Record<Period, MunicipalityMap>>>({});
 
-  const [period, setPeriodState] = useState<Period>('1420');
+  const [period, setPeriodState] = useState<Period>('14');
   const [data, setData] = useState<MunicipalityMap | null>(null);
   const [loading, setLoading] = useState(true);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [periodAvailable, setPeriodAvailable] = useState<Record<Period, boolean>>({
-    '1420': true,
-    '2127': false,
+    '14': true,
+    '21': false,
   });
   const [periodLoading, setPeriodLoading] = useState<Record<Period, boolean>>({
-    '1420': true,
-    '2127': true,
+    '14': true,
+    '21': true,
   });
 
   const loadPeriod = useCallback((p: Period, onDone?: () => void) => {
@@ -68,22 +68,22 @@ export function DataProvider({ children }: { children: ReactNode }) {
         onDone?.();
       })
       .catch(() => {
-        if (p === '2127') {
-          setPeriodAvailable(prev => ({ ...prev, '2127': false }));
+        if (p === '21') {
+          setPeriodAvailable(prev => ({ ...prev, '21': false }));
         }
         setPeriodLoading(prev => ({ ...prev, [p]: false }));
         onDone?.();
       });
   }, []);
 
-  // Initial load: load 1420 immediately, then pre-fetch 2127 in background
+  // Initial load: load 14 immediately, then pre-fetch 21 in background
   useEffect(() => {
     setLoading(true);
-    loadPeriod('1420', () => {
-      setData(cache.current['1420'] ?? null);
+    loadPeriod('14', () => {
+      setData(cache.current['14'] ?? null);
       setLoading(false);
-      // Pre-fetch 2127 silently after 1420 is ready
-      loadPeriod('2127');
+      // Pre-fetch 21 silently after 14 is ready
+      loadPeriod('21');
     });
   }, [loadPeriod]);
 

@@ -51,7 +51,7 @@ export default function MikroregiónySection({ locale }: Props) {
     fetch('/mikroregiony_stats_21.json').then(r => r.json()).then(setData21).catch(() => {});
   }, []);
 
-  const data = period === '2127' ? data21 : data14;
+  const data = period === '21' ? data21 : data14;
 
   if (!data) return null;
 
@@ -112,13 +112,13 @@ function MikroModal({ cat, cat14, cat21, locale, onClose }: { cat: MikroCategory
     return () => { document.removeEventListener('keydown', handleEsc); document.body.style.overflow = ''; };
   }, [onClose]);
 
-  const activeCat = localPeriod === '1420' ? (cat14 || cat) : (cat21 || cat);
+  const activeCat = localPeriod === '14' ? (cat14 || cat) : (cat21 || cat);
   const color = CAT_COLORS[activeCat.key] ?? '#94a3b8';
   const label = locale === 'sk' ? activeCat.label_sk : activeCat.label_en;
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/60 overflow-hidden" onClick={onClose}>
-      <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-8 animate-fade-in-up overflow-y-auto" style={{ position: 'fixed', top: '10vh', left: 0, right: 0, marginLeft: 'auto', marginRight: 'auto', width: '90%', maxWidth: 720, maxHeight: '80vh' }} onClick={e => e.stopPropagation()}>
+    <div className="fixed inset-0 z-50 flex justify-center items-start overflow-y-auto bg-black/60 p-4 pt-[10vh]" onClick={onClose}>
+      <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl w-full max-w-[720px] p-8 animate-fade-in-up overflow-y-auto" style={{ maxHeight: '80vh' }} onClick={e => e.stopPropagation()}>
         <div className="flex justify-between items-start mb-4">
           <div>
             <h2 className="text-2xl font-bold text-[#f8fafc]" style={{ fontFamily: 'Syne, sans-serif' }}>{label}</h2>
@@ -129,9 +129,9 @@ function MikroModal({ cat, cat14, cat21, locale, onClose }: { cat: MikroCategory
 
         {/* Period toggle */}
         <div className="flex items-center justify-between mb-4">
-          <span className="text-[11px] text-[#94a3b8]/40 uppercase tracking-wider">{tr.modal_detail_label(localPeriod === '1420' ? tr.modal_period_1420 : tr.modal_period_2127)}</span>
+          <span className="text-[11px] text-[#94a3b8]/40 uppercase tracking-wider">{tr.modal_detail_label(localPeriod === '14' ? tr.modal_period_14 : tr.modal_period_21)}</span>
           <div className="flex items-center gap-0.5 bg-white/[0.04] rounded-md p-0.5">
-            {(['1420', '2127'] as Period[]).map(p => <button key={p} onClick={() => periodAvailable[p] && setLocalPeriod(p)} disabled={!periodAvailable[p]} className={`px-2.5 py-1 rounded text-[11px] font-medium transition-all ${localPeriod === p ? 'bg-[#3b82f6] text-white shadow-sm' : periodAvailable[p] ? 'text-[#94a3b8]/70 hover:text-[#f8fafc]' : 'text-[#94a3b8]/20 cursor-not-allowed'}`}>{p === '1420' ? tr.modal_period_1420 : tr.modal_period_2127}</button>)}
+            {(['14', '21'] as Period[]).map(p => <button key={p} onClick={() => periodAvailable[p] && setLocalPeriod(p)} disabled={!periodAvailable[p]} className={`px-2.5 py-1 rounded text-[11px] font-medium transition-all ${localPeriod === p ? 'bg-[#3b82f6] text-white shadow-sm' : periodAvailable[p] ? 'text-[#94a3b8]/70 hover:text-[#f8fafc]' : 'text-[#94a3b8]/20 cursor-not-allowed'}`}>{p === '14' ? tr.modal_period_14 : tr.modal_period_21}</button>)}
           </div>
         </div>
 

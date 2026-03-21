@@ -49,17 +49,17 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
     const url = new URL(window.location.href);
     url.searchParams.delete('vuc');
     url.searchParams.set('ico', municipality.ico);
-    url.searchParams.set('obdobie', localPeriod === '2127' ? '21' : '14');
+    url.searchParams.set('obdobie', localPeriod === '21' ? '21' : '14');
     if (compareIco) url.searchParams.set('porovnat', compareIco); else url.searchParams.delete('porovnat');
     window.history.replaceState({}, '', url.toString());
   }, [municipality, localPeriod, compareIco]);
 
-  const data14 = getDataForPeriod('1420');
-  const data21 = getDataForPeriod('2127');
+  const data14 = getDataForPeriod('14');
+  const data21 = getDataForPeriod('21');
   const m14 = data14?.[municipality?.ico ?? ''] ?? null;
   const m21 = data21?.[municipality?.ico ?? ''] ?? null;
-  const m = localPeriod === '1420' ? m14 : m21;
-  const detailLoading = localPeriod === '1420' ? periodLoading['1420'] : periodLoading['2127'];
+  const m = localPeriod === '14' ? m14 : m21;
+  const detailLoading = localPeriod === '14' ? periodLoading['14'] : periodLoading['21'];
 
   const getStats = useCallback((muni: Municipality | null) => {
     if (!muni) return { total: 0, projects: 0, perCapita: 0 };
@@ -72,13 +72,13 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
   useEffect(() => {
     if (!municipality) return;
     const origTitle = document.title;
-    const ds = localPeriod === '1420' ? stats14 : stats21;
+    const ds = localPeriod === '14' ? stats14 : stats21;
     const title = `${municipality.official_name} — povolbach.sk`;
     const desc = `${formatAmount(ds.total, 'sk')} EU fondov · ${ds.projects} projektov${ds.perCapita > 0 ? ` · ${formatAmount(ds.perCapita, 'sk')}/obyv.` : ''}`;
     document.title = title;
     const setM = (p: string, c: string) => { let el = document.querySelector(`meta[property="${p}"]`); if (!el) { el = document.createElement('meta'); el.setAttribute('property', p); document.head.appendChild(el); } el.setAttribute('content', c); };
     setM('og:title', title); setM('og:description', desc); setM('og:url', window.location.href);
-    const ogParams = new URLSearchParams({ name: municipality.official_name, total: formatAmount(ds.total, 'sk'), projects: String(ds.projects), region: municipality.region, period: localPeriod === '1420' ? '2014–2020' : '2021–2027' });
+    const ogParams = new URLSearchParams({ name: municipality.official_name, total: formatAmount(ds.total, 'sk'), projects: String(ds.projects), region: municipality.region, period: localPeriod === '14' ? '2014–2020' : '2021–2027' });
     if (ds.perCapita > 0) ogParams.set('percapita', formatAmount(ds.perCapita, 'sk'));
     setM('og:image', `${window.location.origin}/api/og?${ogParams.toString()}`);
     let el = document.querySelector('meta[name="twitter:card"]'); if (!el) { el = document.createElement('meta'); el.setAttribute('name', 'twitter:card'); document.head.appendChild(el); } el.setAttribute('content', 'summary_large_image');
@@ -89,7 +89,7 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
     if (!municipality || typeof window === 'undefined') return '';
     const url = new URL(window.location.origin);
     url.searchParams.set('ico', municipality.ico);
-    url.searchParams.set('obdobie', localPeriod === '2127' ? '21' : '14');
+    url.searchParams.set('obdobie', localPeriod === '21' ? '21' : '14');
     return url.toString();
   }, [municipality, localPeriod]);
 
@@ -105,7 +105,7 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
   const handleCopy = useCallback(async () => { await copyToClipboard(shareUrl); showCopied(); }, [shareUrl, copyToClipboard, showCopied]);
 
   // Comparison tool: neighbors + similar size — MUST be before early return (hooks must always run)
-  const activeData = localPeriod === '1420' ? data14 : data21;
+  const activeData = localPeriod === '14' ? data14 : data21;
   const neighbors = useMemo(() => municipality && activeData ? findNeighbors(municipality.ico, activeData, 5) : [], [municipality?.ico, activeData]);
   const similarSize = useMemo(() => municipality && activeData ? findSimilarSize(municipality.ico, activeData, 5) : [], [municipality?.ico, activeData]);
   const nationalAvg = useMemo(() => activeData ? computeNationalAvgPerCapita(activeData) : 0, [activeData]);
@@ -135,7 +135,7 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
     return <span className={`font-mono text-sm ${hl ? 'text-[#f8fafc]' : 'text-[#94a3b8]'}`}>{higher && <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#10b981] mr-1 align-middle" />}{fmt(val)}</span>;
   };
 
-  const is14L = !!data14, is21L = !!data21, is14A = localPeriod === '1420';
+  const is14L = !!data14, is21L = !!data21, is14A = localPeriod === '14';
   const btnCls = "p-2 rounded-lg bg-[#0a0a0f] border border-[#1e1e2e] text-[#94a3b8] hover:text-[#f8fafc] hover:border-white/20 transition-all";
 
   return (
@@ -162,7 +162,7 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
             {copied && <span className={`absolute left-[88px] -top-7 text-[11px] text-[#10b981] bg-[#0a0a0f] border border-[#1e1e2e] rounded px-1.5 py-0.5 transition-opacity duration-1000 ${copiedVisible ? 'opacity-100' : 'opacity-0'}`}>{tr.share_copied}</span>}
           </div>
           <div className="flex items-center gap-0.5 bg-white/[0.04] rounded-md p-0.5">
-            {(['1420', '2127'] as Period[]).map(p => <button key={p} onClick={() => periodAvailable[p] && setLocalPeriod(p)} disabled={!periodAvailable[p]} className={`px-2.5 py-1 rounded text-[11px] font-medium transition-all ${localPeriod === p ? 'bg-[#3b82f6] text-white shadow-sm' : periodAvailable[p] ? 'text-[#94a3b8]/70 hover:text-[#f8fafc]' : 'text-[#94a3b8]/20 cursor-not-allowed'}`}>{p === '1420' ? tr.modal_period_1420 : tr.modal_period_2127}</button>)}
+            {(['14', '21'] as Period[]).map(p => <button key={p} onClick={() => periodAvailable[p] && setLocalPeriod(p)} disabled={!periodAvailable[p]} className={`px-2.5 py-1 rounded text-[11px] font-medium transition-all ${localPeriod === p ? 'bg-[#3b82f6] text-white shadow-sm' : periodAvailable[p] ? 'text-[#94a3b8]/70 hover:text-[#f8fafc]' : 'text-[#94a3b8]/20 cursor-not-allowed'}`}>{p === '14' ? tr.modal_period_14 : tr.modal_period_21}</button>)}
           </div>
         </div>
 
@@ -172,24 +172,24 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
             <colgroup><col style={{ width: '25%' }} /><col style={{ width: '37.5%' }} /><col style={{ width: '37.5%' }} /></colgroup>
             <thead><tr className="text-xs">
               <th className="px-3 py-2 text-left font-normal text-[#94a3b8]/40">{locale === 'sk' ? 'Obdobie' : 'Period'}</th>
-              <th className={`px-3 py-2 text-center font-medium ${is14A ? 'bg-[#3b82f6]/8 text-[#3b82f6]' : 'text-[#94a3b8]/50'}`}>{tr.modal_period_1420}</th>
-              <th className={`px-3 py-2 text-center font-medium ${!is14A ? 'bg-[#3b82f6]/8 text-[#3b82f6]' : 'text-[#94a3b8]/50'}`}>{tr.modal_period_2127}</th>
+              <th className={`px-3 py-2 text-center font-medium ${is14A ? 'bg-[#3b82f6]/8 text-[#3b82f6]' : 'text-[#94a3b8]/50'}`}>{tr.modal_period_14}</th>
+              <th className={`px-3 py-2 text-center font-medium ${!is14A ? 'bg-[#3b82f6]/8 text-[#3b82f6]' : 'text-[#94a3b8]/50'}`}>{tr.modal_period_21}</th>
             </tr></thead>
             <tbody>
               <tr className="border-t border-white/[0.06]">
                 <td className="px-3 py-2 text-left text-xs text-[#94a3b8]/50">{tr.modal_comparison_total}</td>
-                <td className={`px-3 py-2 text-center ${is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['1420'], is14L, stats14.total, stats21.total, v => formatAmount(v, locale), is14A)}</td>
-                <td className={`px-3 py-2 text-center ${!is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['2127'], is21L, stats21.total, stats14.total, v => formatAmount(v, locale), !is14A)}</td>
+                <td className={`px-3 py-2 text-center ${is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['14'], is14L, stats14.total, stats21.total, v => formatAmount(v, locale), is14A)}</td>
+                <td className={`px-3 py-2 text-center ${!is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['21'], is21L, stats21.total, stats14.total, v => formatAmount(v, locale), !is14A)}</td>
               </tr>
               <tr className="border-t border-white/[0.06]">
                 <td className="px-3 py-2 text-left text-xs text-[#94a3b8]/50">{tr.modal_comparison_projects}</td>
-                <td className={`px-3 py-2 text-center ${is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['1420'], is14L, stats14.projects, stats21.projects, v => String(v), is14A)}</td>
-                <td className={`px-3 py-2 text-center ${!is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['2127'], is21L, stats21.projects, stats14.projects, v => String(v), !is14A)}</td>
+                <td className={`px-3 py-2 text-center ${is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['14'], is14L, stats14.projects, stats21.projects, v => String(v), is14A)}</td>
+                <td className={`px-3 py-2 text-center ${!is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['21'], is21L, stats21.projects, stats14.projects, v => String(v), !is14A)}</td>
               </tr>
               {municipality.population > 0 && <tr className="border-t border-white/[0.06]">
                 <td className="px-3 py-2 text-left text-xs text-[#94a3b8]/50">{tr.modal_comparison_per_capita}</td>
-                <td className={`px-3 py-2 text-center ${is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['1420'], is14L, stats14.perCapita, stats21.perCapita, v => formatAmount(v, locale), is14A)}</td>
-                <td className={`px-3 py-2 text-center ${!is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['2127'], is21L, stats21.perCapita, stats14.perCapita, v => formatAmount(v, locale), !is14A)}</td>
+                <td className={`px-3 py-2 text-center ${is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['14'], is14L, stats14.perCapita, stats21.perCapita, v => formatAmount(v, locale), is14A)}</td>
+                <td className={`px-3 py-2 text-center ${!is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['21'], is21L, stats21.perCapita, stats14.perCapita, v => formatAmount(v, locale), !is14A)}</td>
               </tr>}
             </tbody>
           </table>
@@ -287,7 +287,7 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
 
         {/* Detail label */}
         <div className="text-[11px] text-[#94a3b8]/40 uppercase tracking-wider mb-4">
-          {tr.modal_detail_label(localPeriod === '1420' ? tr.modal_period_1420 : tr.modal_period_2127)}
+          {tr.modal_detail_label(localPeriod === '14' ? tr.modal_period_14 : tr.modal_period_21)}
         </div>
 
         {/* Detail */}

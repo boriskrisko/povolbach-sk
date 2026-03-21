@@ -176,10 +176,10 @@ export default function Leaderboard({ onSelectMunicipality, viewMode, setViewMod
             {tr.zero_municipalities(zeroCount)}
           </p>
           <p className="text-[#94a3b8] text-sm leading-relaxed">
-            {period === '2127' ? tr.disclaimer_2127 : tr.disclaimer_1420}
+            {period === '21' ? tr.disclaimer_21 : tr.disclaimer_14}
           </p>
           <p className="text-[#94a3b8]/60 text-xs mt-2 leading-relaxed">
-            {tr.zero_muni_note(period === '2127' ? 'ITMS2021+' : 'ITMS2014+')}
+            {tr.zero_muni_note(period === '21' ? 'ITMS2021+' : 'ITMS2014+')}
           </p>
         </div>
       </div>

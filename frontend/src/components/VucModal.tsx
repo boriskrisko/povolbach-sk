@@ -43,16 +43,16 @@ export default function VucModal({ vuc, vucOtherPeriod, onClose, locale }: Props
     const url = new URL(window.location.href);
     url.searchParams.delete('ico');
     url.searchParams.set('vuc', vuc.ico);
-    url.searchParams.set('obdobie', localPeriod === '2127' ? '21' : '14');
+    url.searchParams.set('obdobie', localPeriod === '21' ? '21' : '14');
     window.history.replaceState({}, '', url.toString());
   }, [vuc, localPeriod]);
 
   if (!vuc) return null;
 
   // Determine which VÚC data is for which period
-  const v14 = globalPeriod === '1420' ? vuc : vucOtherPeriod;
-  const v21 = globalPeriod === '2127' ? vuc : vucOtherPeriod;
-  const v = localPeriod === '1420' ? v14 : v21;
+  const v14 = globalPeriod === '14' ? vuc : vucOtherPeriod;
+  const v21 = globalPeriod === '21' ? vuc : vucOtherPeriod;
+  const v = localPeriod === '14' ? v14 : v21;
 
   const getStats = (v: VucStats | null | undefined) => {
     if (!v) return { total: 0, projects: 0, perCapita: 0 };
@@ -62,7 +62,7 @@ export default function VucModal({ vuc, vucOtherPeriod, onClose, locale }: Props
   const stats14 = getStats(v14);
   const stats21 = getStats(v21);
 
-  const detailLoading = localPeriod === '1420' ? periodLoading['1420'] : periodLoading['2127'];
+  const detailLoading = localPeriod === '14' ? periodLoading['14'] : periodLoading['21'];
   const totalProjects = v ? v.projects_active + v.projects_completed : 0;
   const subTotal = v ? (v.subsidiary_total_eur || 0) : 0;
   const grandTotal = v ? v.total_contracted_eur + subTotal : 0;
@@ -72,7 +72,7 @@ export default function VucModal({ vuc, vucOtherPeriod, onClose, locale }: Props
   const topProjects = v ? [...v.projects].sort((a, b) => (b.sumaZazmluvnena || 0) - (a.sumaZazmluvnena || 0)).slice(0, 5) : [];
   const topSubs = v ? [...(v.subsidiary_orgs || [])].sort((a, b) => (b.total_contracted_eur || 0) - (a.total_contracted_eur || 0)).slice(0, 5) : [];
 
-  const obdobieSuffix = localPeriod === '2127' ? '21' : '14';
+  const obdobieSuffix = localPeriod === '21' ? '21' : '14';
   const shareUrl = typeof window !== 'undefined' ? `${window.location.origin}/?vuc=${vuc.ico}&obdobie=${obdobieSuffix}` : `https://povolbach.sk/?vuc=${vuc.ico}&obdobie=${obdobieSuffix}`;
   const threadsText = `${vuc.name} — čerpanie eurofondov ${shareUrl}`;
   const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
@@ -95,14 +95,14 @@ export default function VucModal({ vuc, vucOtherPeriod, onClose, locale }: Props
     return <span className={`font-mono text-sm ${hl ? 'text-[#f8fafc]' : 'text-[#94a3b8]'}`}>{higher && <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#10b981] mr-1 align-middle" />}{fmt(val)}</span>;
   };
 
-  const is14A = localPeriod === '1420';
+  const is14A = localPeriod === '14';
   const is14L = !!v14, is21L = !!v21;
   const btnCls = "p-2 rounded-lg bg-[#0a0a0f] border border-[#1e1e2e] text-[#94a3b8] hover:text-[#f8fafc] hover:border-white/20 transition-all";
 
   const subsidiaryNote = locale === 'sk'
     ? 'Tieto organizácie získali fondy samostatne pod vlastným IČO. Sú zahrnuté v celkovom hodnotení kraja.'
     : 'These organizations received EU funds under their own ICO. They are included in the region\'s total score.';
-  const disclaimer = localPeriod === '2127'
+  const disclaimer = localPeriod === '21'
     ? (locale === 'sk' ? 'Programové obdobie 2021–2027. Zahŕňa priame čerpanie samosprávneho kraja aj organizácií v jeho zriaďovateľskej pôsobnosti.' : 'Programming period 2021–2027. Includes direct regional government absorption and organizations under its jurisdiction.')
     : (locale === 'sk' ? 'Zahŕňa priame čerpanie samosprávneho kraja aj organizácií v jeho zriaďovateľskej pôsobnosti. Nezahŕňa projekty štátnych agentúr.' : 'Includes direct regional government absorption and organizations under its jurisdiction. Excludes state agency projects.');
 
@@ -129,7 +129,7 @@ export default function VucModal({ vuc, vucOtherPeriod, onClose, locale }: Props
             {copied && <span className={`absolute left-[88px] -top-7 text-[11px] text-[#10b981] bg-[#0a0a0f] border border-[#1e1e2e] rounded px-1.5 py-0.5 transition-opacity duration-1000 ${copiedVisible ? 'opacity-100' : 'opacity-0'}`}>{tr.share_copied}</span>}
           </div>
           <div className="flex items-center gap-0.5 bg-white/[0.04] rounded-md p-0.5">
-            {(['1420', '2127'] as Period[]).map(p => <button key={p} onClick={() => periodAvailable[p] && setLocalPeriod(p)} disabled={!periodAvailable[p]} className={`px-2.5 py-1 rounded text-[11px] font-medium transition-all ${localPeriod === p ? 'bg-[#3b82f6] text-white shadow-sm' : periodAvailable[p] ? 'text-[#94a3b8]/70 hover:text-[#f8fafc]' : 'text-[#94a3b8]/20 cursor-not-allowed'}`}>{p === '1420' ? tr.modal_period_1420 : tr.modal_period_2127}</button>)}
+            {(['14', '21'] as Period[]).map(p => <button key={p} onClick={() => periodAvailable[p] && setLocalPeriod(p)} disabled={!periodAvailable[p]} className={`px-2.5 py-1 rounded text-[11px] font-medium transition-all ${localPeriod === p ? 'bg-[#3b82f6] text-white shadow-sm' : periodAvailable[p] ? 'text-[#94a3b8]/70 hover:text-[#f8fafc]' : 'text-[#94a3b8]/20 cursor-not-allowed'}`}>{p === '14' ? tr.modal_period_14 : tr.modal_period_21}</button>)}
           </div>
         </div>
 
@@ -139,24 +139,24 @@ export default function VucModal({ vuc, vucOtherPeriod, onClose, locale }: Props
             <colgroup><col style={{ width: '25%' }} /><col style={{ width: '37.5%' }} /><col style={{ width: '37.5%' }} /></colgroup>
             <thead><tr className="text-xs">
               <th className="px-3 py-2 text-left font-normal text-[#94a3b8]/40">{locale === 'sk' ? 'Obdobie' : 'Period'}</th>
-              <th className={`px-3 py-2 text-center font-medium ${is14A ? 'bg-[#3b82f6]/8 text-[#3b82f6]' : 'text-[#94a3b8]/50'}`}>{tr.modal_period_1420}</th>
-              <th className={`px-3 py-2 text-center font-medium ${!is14A ? 'bg-[#3b82f6]/8 text-[#3b82f6]' : 'text-[#94a3b8]/50'}`}>{tr.modal_period_2127}</th>
+              <th className={`px-3 py-2 text-center font-medium ${is14A ? 'bg-[#3b82f6]/8 text-[#3b82f6]' : 'text-[#94a3b8]/50'}`}>{tr.modal_period_14}</th>
+              <th className={`px-3 py-2 text-center font-medium ${!is14A ? 'bg-[#3b82f6]/8 text-[#3b82f6]' : 'text-[#94a3b8]/50'}`}>{tr.modal_period_21}</th>
             </tr></thead>
             <tbody>
               <tr className="border-t border-white/[0.06]">
                 <td className="px-3 py-2 text-left text-xs text-[#94a3b8]/50">{tr.modal_comparison_total}</td>
-                <td className={`px-3 py-2 text-center ${is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['1420'], is14L, stats14.total, stats21.total, v => formatAmount(v, locale), is14A)}</td>
-                <td className={`px-3 py-2 text-center ${!is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['2127'], is21L, stats21.total, stats14.total, v => formatAmount(v, locale), !is14A)}</td>
+                <td className={`px-3 py-2 text-center ${is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['14'], is14L, stats14.total, stats21.total, v => formatAmount(v, locale), is14A)}</td>
+                <td className={`px-3 py-2 text-center ${!is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['21'], is21L, stats21.total, stats14.total, v => formatAmount(v, locale), !is14A)}</td>
               </tr>
               <tr className="border-t border-white/[0.06]">
                 <td className="px-3 py-2 text-left text-xs text-[#94a3b8]/50">{tr.modal_comparison_projects}</td>
-                <td className={`px-3 py-2 text-center ${is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['1420'], is14L, stats14.projects, stats21.projects, v => String(v), is14A)}</td>
-                <td className={`px-3 py-2 text-center ${!is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['2127'], is21L, stats21.projects, stats14.projects, v => String(v), !is14A)}</td>
+                <td className={`px-3 py-2 text-center ${is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['14'], is14L, stats14.projects, stats21.projects, v => String(v), is14A)}</td>
+                <td className={`px-3 py-2 text-center ${!is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['21'], is21L, stats21.projects, stats14.projects, v => String(v), !is14A)}</td>
               </tr>
               {vuc.population > 0 && <tr className="border-t border-white/[0.06]">
                 <td className="px-3 py-2 text-left text-xs text-[#94a3b8]/50">{tr.modal_comparison_per_capita}</td>
-                <td className={`px-3 py-2 text-center ${is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['1420'], is14L, stats14.perCapita, stats21.perCapita, v => formatAmount(v, locale), is14A)}</td>
-                <td className={`px-3 py-2 text-center ${!is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['2127'], is21L, stats21.perCapita, stats14.perCapita, v => formatAmount(v, locale), !is14A)}</td>
+                <td className={`px-3 py-2 text-center ${is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['14'], is14L, stats14.perCapita, stats21.perCapita, v => formatAmount(v, locale), is14A)}</td>
+                <td className={`px-3 py-2 text-center ${!is14A ? 'bg-[#3b82f6]/[0.03]' : ''}`}>{renderCell(periodLoading['21'], is21L, stats21.perCapita, stats14.perCapita, v => formatAmount(v, locale), !is14A)}</td>
               </tr>}
             </tbody>
           </table>
@@ -164,7 +164,7 @@ export default function VucModal({ vuc, vucOtherPeriod, onClose, locale }: Props
 
         {/* Detail label */}
         <div className="text-[11px] text-[#94a3b8]/40 uppercase tracking-wider mb-4">
-          {tr.modal_detail_label(localPeriod === '1420' ? tr.modal_period_1420 : tr.modal_period_2127)}
+          {tr.modal_detail_label(localPeriod === '14' ? tr.modal_period_14 : tr.modal_period_21)}
         </div>
 
         {/* Detail */}

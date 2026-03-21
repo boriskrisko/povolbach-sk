@@ -38,8 +38,8 @@ export default function VucSection({ viewMode, setViewMode, locale }: Props) {
         const obdobie = params.get('obdobie');
         if (vucIco) {
           deepLinkHandled.current = true;
-          if (obdobie === '21') setPeriod('2127');
-          else if (obdobie === '14') setPeriod('1420');
+          if (obdobie === '21') setPeriod('21');
+          else if (obdobie === '14') setPeriod('14');
           const targetData = obdobie === '21' ? d21 : d14;
           const found = targetData[vucIco] || d14[vucIco] || d21[vucIco] || null;
           if (found) setSelectedVuc(found);
@@ -48,8 +48,8 @@ export default function VucSection({ viewMode, setViewMode, locale }: Props) {
     });
   }, [setPeriod]);
 
-  const vucData = period === '2127' ? vucData21 : vucData14;
-  const vucDataOther = period === '2127' ? vucData14 : vucData21;
+  const vucData = period === '21' ? vucData21 : vucData14;
+  const vucDataOther = period === '21' ? vucData14 : vucData21;
 
   if (loading || Object.keys(vucData).length === 0) return null;
 
