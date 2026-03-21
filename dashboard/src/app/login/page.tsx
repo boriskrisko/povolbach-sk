@@ -34,8 +34,8 @@ export default function LoginPage() {
         <div className="bg-[#111827] border border-[#1f2937] rounded-xl p-8">
           <h1 className="text-xl font-bold tracking-tight mb-1" style={{ fontFamily: 'var(--font-syne)', letterSpacing: '-0.5px' }}>
             <span className="text-[#94a3b8]">dev.</span>
-            <span className="text-[#3b82f6]">po</span>
-            <span className="text-[#f8fafc]">volbach</span>
+            <span className="text-[#f8fafc]">po</span>
+            <span className="text-[#3b82f6]">volbach</span>
             <span className="text-[#94a3b8]">.sk</span>
           </h1>
           <p className="text-[#6b7280] text-sm mb-6">Internal dashboard</p>
