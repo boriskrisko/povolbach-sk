@@ -47,9 +47,9 @@ export function formatBillions(amount: number, locale: Locale = 'sk'): string {
   return `${(amount / 1_000_000).toFixed(0)} mil. €`;
 }
 
-/** Combined total: direct + subsidiary (the number that matters for absorption ranking). */
+/** Combined total: direct + subsidiary + mikroregión (the number that matters for absorption ranking). */
 export function getCombinedTotal(m: Municipality): number {
-  return (m.total_contracted_eur || 0) + (m.subsidiary_total_eur || 0);
+  return (m.total_contracted_eur || 0) + (m.subsidiary_total_eur || 0) + (m.mikroregion_eur || 0);
 }
 
 export function getTop10(data: MunicipalityMap): Municipality[] {
