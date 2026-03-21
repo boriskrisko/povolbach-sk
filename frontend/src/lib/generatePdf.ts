@@ -94,7 +94,8 @@ export async function generateMunicipalityPdf(ico: string, period: '1420' | '212
   const allProjects = detail.projects || m.projects || [];
   const allSubs = detail.subsidiary_orgs || m.subsidiary_orgs || [];
   const allIndirect = detail.indirect_projects || m.indirect_projects || [];
-  const grandTotal = (m.total_contracted_eur || 0) + (m.subsidiary_total_eur || 0);
+  const mikroEur = m.mikroregion_eur || 0;
+  const grandTotal = (m.total_contracted_eur || 0) + (m.subsidiary_total_eur || 0) + mikroEur;
   const totalProjects = m.active_projects + m.completed_projects;
   const perCapita = m.population > 0 ? Math.round(grandTotal / m.population) : 0;
 
@@ -105,7 +106,7 @@ export async function generateMunicipalityPdf(ico: string, period: '1420' | '212
 
     <div class="stat-row">
       <div class="stat-box"><div class="stat-val">${fmtEurFull(grandTotal)}</div><div class="stat-label">Celkové zmluvné prostriedky</div>
-        ${(m.subsidiary_total_eur || 0) > 0 ? `<div class="stat-sub">${fmtEurFull(m.total_contracted_eur)} priame · ${fmtEurFull(m.subsidiary_total_eur || 0)} zriaďované org.</div>` : ''}
+        ${((m.subsidiary_total_eur || 0) > 0 || mikroEur > 0) ? `<div class="stat-sub">${fmtEurFull(m.total_contracted_eur)} priame${(m.subsidiary_total_eur || 0) > 0 ? ` · ${fmtEurFull(m.subsidiary_total_eur || 0)} zriaďované org.` : ''}${mikroEur > 0 ? ` · ${fmtEurFull(mikroEur)} mikroregióny` : ''}</div>` : ''}
       </div>
       <div class="stat-box"><div class="stat-val blue">${totalProjects}</div><div class="stat-label">${m.active_projects} aktívnych, ${m.completed_projects} ukončených</div></div>
       ${perCapita > 0 ? `<div class="stat-box"><div class="stat-val">${fmtEur(perCapita)}</div><div class="stat-label">Na obyvateľa</div></div>` : ''}
