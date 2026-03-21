@@ -20,7 +20,7 @@ export default function Footer({ locale }: Props) {
             <span className="text-[#6b7280]">.sk</span>
           </span>
           <span className="hidden md:inline">·</span>
-          <span>{period === '21' ? tr.footer_data_21 : tr.footer_data_14}</span>
+          <span>{(period as string) === '21' ? tr.footer_data_21 : tr.footer_data_14}</span>
           <span className="hidden md:inline">·</span>
           <span>{tr.footer_updated}</span>
         </div>
