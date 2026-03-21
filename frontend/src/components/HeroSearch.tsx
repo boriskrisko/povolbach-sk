@@ -24,7 +24,7 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale, gl
   const periodToggleRef = useRef<HTMLDivElement>(null);
   const [showStickyToggle, setShowStickyToggle] = useState(false);
   const tr = t[locale];
-  const is2127Available = periodAvailable['2127'];
+  const is21Available = periodAvailable['21'];
 
   function handlePeriodChange(newPeriod: Period) {
     const scrollY = window.scrollY;
@@ -101,8 +101,9 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale, gl
       {/* Nav */}
       <nav className="absolute top-0 left-0 right-0 flex justify-between items-center px-6 py-5">
         <div className="text-xl font-bold tracking-tight" style={{ fontFamily: 'Syne, sans-serif' }}>
-          <span className="text-[#3b82f6]">povolbach</span>
-          <span className="text-[#94a3b8]">.sk</span>
+          <span className="text-[#3b82f6]">po</span>
+          <span className="text-[#ffffff]">volbach</span>
+          <span className="text-[#6b7280]">.sk</span>
         </div>
         <div className="flex gap-2 text-sm">
           <button
@@ -216,9 +217,9 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale, gl
             <button
               type="button"
               onMouseDown={e => e.preventDefault()}
-              onClick={() => handlePeriodChange('1420')}
+              onClick={() => handlePeriodChange('14')}
               className={`px-4 py-1.5 text-sm font-medium transition-colors ${
-                period === '1420'
+                period === '14'
                   ? 'bg-[#3b82f6] text-white'
                   : 'bg-[#13131a] text-[#94a3b8] hover:text-[#f8fafc]'
               }`}
@@ -228,26 +229,26 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale, gl
             <button
               type="button"
               onMouseDown={e => e.preventDefault()}
-              onClick={() => is2127Available && handlePeriodChange('2127')}
-              disabled={!is2127Available}
+              onClick={() => is21Available && handlePeriodChange('21')}
+              disabled={!is21Available}
               className={`px-4 py-1.5 text-sm font-medium transition-colors ${
-                period === '2127'
+                period === '21'
                   ? 'bg-[#3b82f6] text-white'
-                  : is2127Available
+                  : is21Available
                     ? 'bg-[#13131a] text-[#94a3b8] hover:text-[#f8fafc]'
                     : 'bg-[#13131a] text-[#94a3b8]/40 cursor-not-allowed'
               }`}
-              title={!is2127Available ? 'Dáta 2021–2027 sa načítavajú, skúste neskôr.' : undefined}
+              title={!is21Available ? 'Dáta 2021–2027 sa načítavajú, skúste neskôr.' : undefined}
             >
               2021 – 2027
             </button>
           </div>
-          {!is2127Available && (
+          {!is21Available && (
             <div className="text-[#94a3b8]/50 text-xs mt-1.5">
               Dáta 2021–2027 sa načítavajú, skúste neskôr.
             </div>
           )}
-          {period === '2127' && (
+          {period === '21' && (
             <div className="text-[#f59e0b] text-xs mt-2">
               {tr.period_ongoing}
             </div>
@@ -279,9 +280,9 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale, gl
           <button
             type="button"
             onMouseDown={e => e.preventDefault()}
-            onClick={() => handlePeriodChange('1420')}
+            onClick={() => handlePeriodChange('14')}
             className={`px-3 py-1 text-sm font-medium transition-colors ${
-              period === '1420' ? 'bg-[#3b82f6] text-white' : 'text-[#94a3b8] hover:text-[#f8fafc]'
+              period === '14' ? 'bg-[#3b82f6] text-white' : 'text-[#94a3b8] hover:text-[#f8fafc]'
             }`}
           >
             2014 – 2020
@@ -289,12 +290,12 @@ export default function HeroSearch({ onSelectMunicipality, locale, setLocale, gl
           <button
             type="button"
             onMouseDown={e => e.preventDefault()}
-            onClick={() => is2127Available && handlePeriodChange('2127')}
-            disabled={!is2127Available}
+            onClick={() => is21Available && handlePeriodChange('21')}
+            disabled={!is21Available}
             className={`px-3 py-1 text-sm font-medium transition-colors ${
-              period === '2127'
+              period === '21'
                 ? 'bg-[#3b82f6] text-white'
-                : is2127Available
+                : is21Available
                   ? 'text-[#94a3b8] hover:text-[#f8fafc]'
                   : 'text-[#94a3b8]/40 cursor-not-allowed'
             }`}
