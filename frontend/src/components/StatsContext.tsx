@@ -67,63 +67,64 @@ export default function StatsContext({ locale, globalStats }: Props) {
 
   if (loading || !globalStats) return null;
 
-  const { totalFundsEur: totalEur, withProjects, withoutProjects, totalMunicipalities, uniqueIndirectEur, uniqueIndirectCount } = globalStats;
+  const { totalFundsEur: totalEur, withProjects, withoutProjects, totalMunicipalities, uniqueIndirectEur } = globalStats;
   const withPct = Math.round((withProjects / totalMunicipalities) * 100);
   const withoutPct = 100 - withPct;
 
   const indirectLabel = locale === 'sk' ? 'štátnych investícií v obciach' : 'state investments in municipalities';
-  const indirectNote = locale === 'sk'
-    ? `${uniqueIndirectCount} unikátnych projektov · ministerstvá a štátne agentúry · nezahrnuté v hodnotení samospráv`
-    : `${uniqueIndirectCount} unique projects · ministries and state agencies · not included in municipal scores`;
+
+  const totalParts = formatBillionsParts(totalEur, locale);
+  const indirectParts = formatBillionsParts(uniqueIndirectEur, locale);
 
   return (
     <section className="py-24 px-4 max-w-5xl mx-auto">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
         {/* Total EUR */}
-        <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-8 text-center">
+        <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-6 text-center flex flex-col justify-center">
           <div
-            className="text-4xl md:text-5xl font-bold mb-2"
+            className="text-4xl md:text-5xl font-bold"
             style={{ color: '#3b82f6', fontFamily: 'JetBrains Mono, monospace' }}
           >
-            {formatBillionsParts(totalEur, locale).number}<span className="text-lg md:text-xl"> {formatBillionsParts(totalEur, locale).unit}</span>
+            {totalParts.number}
           </div>
+          <div className="text-[#f8fafc] text-lg font-medium mt-1">{totalParts.unit}</div>
           <div className="text-[#94a3b8] mt-2">{tr.total_funds_tracked}</div>
         </div>
 
         {/* With projects */}
-        <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-8 text-center">
+        <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-6 text-center flex flex-col justify-center">
           <div
-            className="text-4xl md:text-5xl font-bold mb-2"
+            className="text-4xl md:text-5xl font-bold"
             style={{ color: '#10b981', fontFamily: 'JetBrains Mono, monospace' }}
           >
             <AnimatedCounter target={withProjects} locale={locale} />
           </div>
-          <div className="text-[#f8fafc] text-lg font-medium">({withPct}%)</div>
+          <div className="text-[#f8fafc] text-lg font-medium mt-1">({withPct}%)</div>
           <div className="text-[#94a3b8] mt-2">{tr.absorbing_eu}</div>
         </div>
 
         {/* Without projects */}
-        <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-8 text-center">
+        <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-6 text-center flex flex-col justify-center">
           <div
-            className="text-4xl md:text-5xl font-bold mb-2"
+            className="text-4xl md:text-5xl font-bold"
             style={{ color: '#f59e0b', fontFamily: 'JetBrains Mono, monospace' }}
           >
             <AnimatedCounter target={withoutProjects} locale={locale} />
           </div>
-          <div className="text-[#f8fafc] text-lg font-medium">({withoutPct}%)</div>
+          <div className="text-[#f8fafc] text-lg font-medium mt-1">({withoutPct}%)</div>
           <div className="text-[#94a3b8] mt-2">{tr.without_project}</div>
         </div>
 
         {/* State investments */}
-        <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-8 text-center">
+        <div className="bg-[#13131a] border border-[#1e1e2e] rounded-2xl p-6 text-center flex flex-col justify-center">
           <div
-            className="text-4xl md:text-5xl font-bold mb-2"
+            className="text-4xl md:text-5xl font-bold"
             style={{ color: '#6366f1', fontFamily: 'JetBrains Mono, monospace' }}
           >
-            {formatBillionsParts(uniqueIndirectEur, locale).number}<span className="text-lg md:text-xl"> {formatBillionsParts(uniqueIndirectEur, locale).unit}</span>
+            {indirectParts.number}
           </div>
+          <div className="text-[#f8fafc] text-lg font-medium mt-1">{indirectParts.unit}</div>
           <div className="text-[#94a3b8] mt-2">{indirectLabel}</div>
-          <div className="text-[#94a3b8]/50 text-xs mt-2 leading-relaxed">{indirectNote}</div>
         </div>
       </div>
 
