@@ -6,7 +6,6 @@ import Link from 'next/link'
 import { createClient } from '@/lib/supabase/client'
 import Logo from '@/components/Logo'
 import { ENTITY_TYPE_LABELS, type EntityType } from '@/lib/types'
-import { removeDiacritics } from '@/lib/utils'
 
 interface OrgResult {
   id: string
@@ -56,39 +55,26 @@ export default function RegisterPage() {
       setSearching(true)
       setSearchError('')
 
-      const isNumeric = /^\d+$/.test(query)
+      try {
+        const res = await fetch(
+          `/api/organizations/search?q=${encodeURIComponent(query)}`
+        )
+        const data: OrgResult[] = await res.json()
 
-      let data: OrgResult[] | null = null
+        setSearching(false)
 
-      if (isNumeric) {
-        // Search by IČO prefix
-        const { data: d } = await supabase
-          .from('organizations')
-          .select('id, name, reg_id, region, district, population, entity_type, claimed')
-          .like('reg_id', `${query}%`)
-          .limit(10)
-        data = d
-      } else {
-        // Search by name — fetch broader set and filter client-side for diacritics flexibility
-        const q = removeDiacritics(query.toLowerCase())
-        const { data: d } = await supabase
-          .from('organizations')
-          .select('id, name, reg_id, region, district, population, entity_type, claimed')
-          .limit(2000)
-        data = d?.filter((o) =>
-          removeDiacritics(o.name.toLowerCase()).includes(q)
-        )?.slice(0, 10) || null
-      }
-
-      setSearching(false)
-
-      if (data && data.length > 0) {
-        setResults(data)
-        setShowDropdown(true)
-      } else {
+        if (Array.isArray(data) && data.length > 0) {
+          setResults(data)
+          setShowDropdown(true)
+        } else {
+          setResults([])
+          setShowDropdown(false)
+          setSearchError('Organizáciu sme nenašli. Skúste iné IČO alebo názov.')
+        }
+      } catch {
+        setSearching(false)
         setResults([])
-        setShowDropdown(false)
-        setSearchError('Organizáciu sme nenašli. Skúste iné IČO alebo názov.')
+        setSearchError('Chyba pri vyhľadávaní.')
       }
     }, 300)
 
