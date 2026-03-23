@@ -116,8 +116,7 @@ export default function RegisterPage() {
       return
     }
 
-    router.push('/dashboard')
-    router.refresh()
+    router.push(`/register/verify?email=${encodeURIComponent(email)}`)
   }
 
   return (

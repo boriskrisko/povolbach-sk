@@ -13,7 +13,7 @@ export default function LandingPage() {
           <Logo className="text-3xl sm:text-4xl" />
         </div>
         <h1 className="font-display text-3xl sm:text-5xl font-bold mb-6 leading-tight">
-          Idú voľby, sľubujte vo veľkom.
+          Idú voľby - sľubujte vo veľkom.
           <br />
           <span className="text-accent">My vám sľuby po voľbách pomôžeme splniť.</span>
         </h1>
