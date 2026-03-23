@@ -119,10 +119,6 @@ function PageContent() {
         globalStats={globalStats}
       />
       <div style={{ opacity: isTransitioning ? 0.5 : 1, transition: 'opacity 0.25s ease' }}>
-        <StoriesSection
-          locale={locale}
-          onSelectMunicipality={handleSelectMunicipality}
-        />
         <Leaderboard
           onSelectMunicipality={handleSelectMunicipality}
           viewMode={viewMode}
@@ -141,6 +137,10 @@ function PageContent() {
           viewMode={viewMode}
           setViewMode={setViewMode}
           locale={locale}
+        />
+        <StoriesSection
+          locale={locale}
+          onSelectMunicipality={handleSelectMunicipality}
         />
         <StatsContext locale={locale} globalStats={globalStats} />
         <Footer locale={locale} />
