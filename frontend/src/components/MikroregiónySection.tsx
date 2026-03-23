@@ -67,7 +67,7 @@ export default function MikroregiónySection({ locale }: Props) {
     : 'These funds are not included in individual municipality scores — they represent joint projects across multiple municipalities.';
 
   return (
-    <section className="py-24 px-4 max-w-6xl mx-auto">
+    <section id="mikroregiony" className="py-24 px-4 max-w-6xl mx-auto">
       <h2 className="text-3xl md:text-4xl font-bold text-[#f8fafc] mb-2" style={{ fontFamily: 'Syne, sans-serif' }}>{heading}</h2>
       <p className="text-[#94a3b8] mb-2">{subtitle}</p>
       <p className="text-[#94a3b8]/60 text-xs mb-10">{noteText}</p>

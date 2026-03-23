@@ -104,7 +104,7 @@ export default function Leaderboard({ onSelectMunicipality, viewMode, setViewMod
     : (bottom10.length > 0 ? getCombinedTotal(bottom10[bottom10.length - 1]) : 1);
 
   return (
-    <section className="py-24 px-4 max-w-6xl mx-auto">
+    <section id="rebricek" className="py-24 px-4 max-w-6xl mx-auto">
       <div className="flex flex-wrap items-start justify-between gap-4 mb-2">
         <h2
           className="text-3xl md:text-4xl font-bold text-[#f8fafc]"

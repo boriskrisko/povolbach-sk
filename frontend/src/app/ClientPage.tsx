@@ -12,6 +12,7 @@ const VucSection = dynamic(() => import('@/components/VucSection'), { ssr: false
 const MikroregiónySection = dynamic(() => import('@/components/MikroregiónySection'), { ssr: false });
 import StatsContext from '@/components/StatsContext';
 import StoriesSection from '@/components/StoriesSection';
+import StickyNav from '@/components/StickyNav';
 import Footer from '@/components/Footer';
 import MunicipalityModal from '@/components/MunicipalityModal';
 
@@ -112,6 +113,7 @@ function PageContent() {
 
   return (
     <main className="min-h-screen bg-[#0a0a0f]">
+      <StickyNav locale={locale} />
       <HeroSearch
         onSelectMunicipality={handleSelectMunicipality}
         locale={locale}

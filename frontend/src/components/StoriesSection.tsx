@@ -192,7 +192,7 @@ export default function StoriesSection({ locale, onSelectMunicipality }: Props) 
   if (stories.length === 0) return null;
 
   return (
-    <section className="py-24 px-4 max-w-6xl mx-auto">
+    <section id="pribehy" className="py-24 px-4 max-w-6xl mx-auto">
       <div className="flex items-center justify-between mb-8">
         <h2 className="text-3xl md:text-4xl font-bold text-[#f8fafc]" style={{ fontFamily: 'Syne, sans-serif' }}>
           {tr.did_you_know}
