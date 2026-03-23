@@ -15,9 +15,41 @@ export async function GET(request: NextRequest) {
   if (!name) {
     return new ImageResponse(
       (
-        <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, #0a0a0f 0%, #13131a 50%, #0a0a0f 100%)', color: '#f8fafc' }}>
-          <div style={{ fontSize: 72, fontWeight: 700, marginBottom: 20 }}>povolbach.sk</div>
-          <div style={{ fontSize: 28, color: '#94a3b8', textAlign: 'center', maxWidth: '80%' }}>Efektívnosť čerpania európskych fondov na Slovensku</div>
+        <div style={{
+          width: '100%', height: '100%', display: 'flex', flexDirection: 'column',
+          background: 'linear-gradient(135deg, #0a0a0f 0%, #131320 40%, #0a0a0f 100%)',
+          color: '#f8fafc', padding: '60px 80px', justifyContent: 'space-between',
+        }}>
+          <div style={{ position: 'absolute', top: 0, right: 0, width: 400, height: 400, background: 'radial-gradient(circle at top right, rgba(59,130,246,0.1) 0%, transparent 70%)', display: 'flex' }} />
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, zIndex: 1 }}>
+            <div style={{ width: 8, height: 32, backgroundColor: '#3b82f6', borderRadius: 4, display: 'flex' }} />
+            <span style={{ fontSize: 36, fontWeight: 700 }}>
+              <span style={{ color: '#ffffff' }}>po</span>
+              <span style={{ color: '#3b82f6' }}>volbach</span>
+              <span style={{ color: '#6b7280' }}>.sk</span>
+            </span>
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', zIndex: 1 }}>
+            <div style={{ fontSize: 56, fontWeight: 700, lineHeight: 1.2, marginBottom: 8 }}>
+              Efektívnosť čerpania
+            </div>
+            <div style={{ fontSize: 56, fontWeight: 700, lineHeight: 1.2, marginBottom: 8 }}>
+              európskych fondov
+            </div>
+            <div style={{ fontSize: 56, fontWeight: 700, lineHeight: 1.2 }}>
+              na Slovensku
+            </div>
+          </div>
+
+          <div style={{ display: 'flex', gap: 32, alignItems: 'center', zIndex: 1 }}>
+            <div style={{ fontSize: 22, color: '#94a3b8' }}>2 926 obcí</div>
+            <div style={{ width: 4, height: 4, borderRadius: 2, backgroundColor: '#3b82f6', display: 'flex' }} />
+            <div style={{ fontSize: 22, color: '#3b82f6', fontWeight: 600 }}>3.32 mld. €</div>
+            <div style={{ width: 4, height: 4, borderRadius: 2, backgroundColor: '#3b82f6', display: 'flex' }} />
+            <div style={{ fontSize: 22, color: '#94a3b8' }}>2014–2027</div>
+          </div>
         </div>
       ),
       { width: 1200, height: 630 },
@@ -62,7 +94,11 @@ export async function GET(request: NextRequest) {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', zIndex: 1 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
             <div style={{ width: 8, height: 24, backgroundColor: '#3b82f6', borderRadius: 4, display: 'flex' }} />
-            <div style={{ fontSize: 26, fontWeight: 700, color: '#f8fafc' }}>povolbach.sk</div>
+            <span style={{ fontSize: 26, fontWeight: 700 }}>
+              <span style={{ color: '#ffffff' }}>po</span>
+              <span style={{ color: '#3b82f6' }}>volbach</span>
+              <span style={{ color: '#6b7280' }}>.sk</span>
+            </span>
           </div>
           {period && <div style={{ fontSize: 18, color: '#3b82f6', padding: '6px 16px', border: '2px solid #3b82f6', borderRadius: 8 }}>{period}</div>}
         </div>
