@@ -18,8 +18,7 @@ export default function LandingPage() {
           <span className="text-accent">My vám sľuby po voľbách pomôžeme splniť.</span>
         </h1>
         <p className="text-lg text-text-secondary mb-10 max-w-2xl mx-auto">
-          Bezplatné notifikácie o nových výzvach EÚ fondov pre vašu samosprávu.
-          Žiadne výzvy vám už neuniknú.
+          Nástroje pre modernú, efektívnu a ambicióznu samosprávu.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link

@@ -4,7 +4,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'portal.povolbach.sk — Výzvy EÚ fondov pre samosprávy',
   description:
-    'Bezplatné notifikácie o nových výzvach EÚ fondov pre vašu samosprávu. Žiadne výzvy vám už neuniknú.',
+    'Nástroje pre modernú, efektívnu a ambicióznu samosprávu.',
 }
 
 export default function RootLayout({
