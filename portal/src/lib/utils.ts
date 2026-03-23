@@ -1,3 +1,7 @@
+export function removeDiacritics(str: string): string {
+  return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+}
+
 export function formatEur(value: number | null | undefined): string {
   if (value == null) return '—'
   return new Intl.NumberFormat('sk-SK', {

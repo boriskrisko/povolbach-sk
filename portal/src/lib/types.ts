@@ -31,12 +31,25 @@ export interface User {
   id: string
   email: string
   name: string | null
+  phone: string | null
   org_id: string
   role: 'admin' | 'editor' | 'viewer'
   locale: string
   notification_frequency: 'daily' | 'weekly' | 'none'
   created_at: string
   last_login_at: string | null
+}
+
+export interface Invitation {
+  id: string
+  org_id: string
+  code: string
+  created_by: string
+  max_uses: number
+  used_count: number
+  expires_at: string | null
+  status: 'active' | 'revoked' | 'expired'
+  created_at: string
 }
 
 export interface FundCall {
