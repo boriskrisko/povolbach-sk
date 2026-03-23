@@ -11,6 +11,7 @@ const SlovakiaMap = dynamic(() => import('@/components/SlovakiaMap'), { ssr: fal
 const VucSection = dynamic(() => import('@/components/VucSection'), { ssr: false });
 const MikroregiónySection = dynamic(() => import('@/components/MikroregiónySection'), { ssr: false });
 import StatsContext from '@/components/StatsContext';
+import StoriesSection from '@/components/StoriesSection';
 import Footer from '@/components/Footer';
 import MunicipalityModal from '@/components/MunicipalityModal';
 
@@ -118,6 +119,10 @@ function PageContent() {
         globalStats={globalStats}
       />
       <div style={{ opacity: isTransitioning ? 0.5 : 1, transition: 'opacity 0.25s ease' }}>
+        <StoriesSection
+          locale={locale}
+          onSelectMunicipality={handleSelectMunicipality}
+        />
         <Leaderboard
           onSelectMunicipality={handleSelectMunicipality}
           viewMode={viewMode}

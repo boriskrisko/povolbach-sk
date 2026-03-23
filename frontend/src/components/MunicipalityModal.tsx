@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo, useCallback, useEffect } from 'react';
 import { Municipality } from '@/lib/types';
-import { formatAmount, formatProjects, getCombinedTotal, findNeighbors, findSimilarSize, computeNationalAvgPerCapita, findPeerRank } from '@/lib/utils';
+import { formatAmount, formatProjects, getCombinedTotal, findNeighbors, findSimilarSize, computeNationalAvgPerCapita, findPeerRank, searchMunicipalitiesFlexible } from '@/lib/utils';
 import { useData, Period } from '@/lib/DataContext';
 import { t, type Locale } from '@/lib/translations';
 import { generateMunicipalityPdf } from '@/lib/generatePdf';
@@ -27,11 +27,13 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
   const [compareIco, setCompareIco] = useState<string | null>(null);
   const [compareDropdownOpen, setCompareDropdownOpen] = useState(false);
   const [compareTab, setCompareTab] = useState<'neighbors' | 'similar'>('neighbors');
+  const [compareSearch, setCompareSearch] = useState('');
 
   useEffect(() => {
     setLocalPeriod(globalPeriod);
     setCompareIco(initialCompareIco ?? null);
     setCompareDropdownOpen(false);
+    setCompareSearch('');
   }, [globalPeriod, municipality?.ico, initialCompareIco]);
 
   useEffect(() => {
@@ -108,6 +110,10 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
   const activeData = localPeriod === '14' ? data14 : data21;
   const neighbors = useMemo(() => municipality && activeData ? findNeighbors(municipality.ico, activeData, 5) : [], [municipality?.ico, activeData]);
   const similarSize = useMemo(() => municipality && activeData ? findSimilarSize(municipality.ico, activeData, 5) : [], [municipality?.ico, activeData]);
+  const compareSearchResults = useMemo(() => {
+    if (!compareSearch || !activeData || !municipality) return [];
+    return searchMunicipalitiesFlexible(activeData, compareSearch).filter(m => m.ico !== municipality.ico).slice(0, 5);
+  }, [compareSearch, activeData, municipality?.ico]);
   const nationalAvg = useMemo(() => activeData ? computeNationalAvgPerCapita(activeData) : 0, [activeData]);
   const peerRank = useMemo(() => municipality && activeData ? findPeerRank(municipality.ico, activeData) : null, [municipality?.ico, activeData]);
 
@@ -204,19 +210,40 @@ export default function MunicipalityModal({ municipality, onClose, locale, initi
             {compareIco && <button onClick={() => { setCompareIco(null); setCompareDropdownOpen(false); }} className="text-[10px] text-[#94a3b8]/60 hover:text-[#f8fafc]">{tr.compare_clear} ×</button>}
           </div>
           {compareDropdownOpen && (
-            <div className="absolute top-full left-0 mt-1 z-10 bg-[#13131a] border border-[#1e1e2e] rounded-lg shadow-xl w-72 max-h-64 overflow-y-auto">
+            <div className="absolute top-full left-0 mt-1 z-10 bg-[#13131a] border border-[#1e1e2e] rounded-lg shadow-xl w-72 max-h-80 overflow-y-auto">
+              <div className="px-3 py-2 border-b border-white/[0.06]">
+                <input
+                  type="text"
+                  value={compareSearch}
+                  onChange={e => setCompareSearch(e.target.value)}
+                  placeholder={tr.search_municipality}
+                  className="w-full bg-white/[0.04] border border-white/[0.08] rounded-md px-2.5 py-1.5 text-sm text-[#f8fafc] placeholder-[#94a3b8]/40 outline-none focus:border-[#3b82f6]/50"
+                  autoFocus
+                />
+              </div>
+              {compareSearch.length >= 2 && compareSearchResults.length > 0 && (
+                <div className="border-b border-white/[0.06]">
+                  <div className="px-3 py-1.5 text-[10px] text-[#94a3b8]/40 uppercase tracking-wider">{tr.search_results}</div>
+                  {compareSearchResults.map(m => (
+                    <button key={m.ico} onClick={() => { setCompareIco(m.ico); setCompareDropdownOpen(false); setCompareSearch(''); }} className="w-full px-3 py-2 text-left hover:bg-white/[0.04] flex justify-between items-center">
+                      <span className="text-sm text-[#f8fafc] truncate">{m.official_name}</span>
+                      <span className="text-xs text-[#94a3b8]/50 ml-2 flex-shrink-0">{m.population.toLocaleString('sk-SK')} {locale === 'sk' ? 'ob.' : 'inh.'}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
               <div className="flex border-b border-white/[0.06]">
                 <button onClick={() => setCompareTab('neighbors')} className={`flex-1 px-3 py-2 text-xs font-medium ${compareTab === 'neighbors' ? 'text-[#3b82f6] border-b-2 border-[#3b82f6]' : 'text-[#94a3b8]/60'}`}>{tr.compare_neighbors}</button>
                 <button onClick={() => setCompareTab('similar')} className={`flex-1 px-3 py-2 text-xs font-medium ${compareTab === 'similar' ? 'text-[#3b82f6] border-b-2 border-[#3b82f6]' : 'text-[#94a3b8]/60'}`}>{tr.compare_similar}</button>
               </div>
               <div className="py-1">
                 {compareTab === 'neighbors' ? neighbors.map(n => (
-                  <button key={n.municipality.ico} onClick={() => { setCompareIco(n.municipality.ico); setCompareDropdownOpen(false); }} className="w-full px-3 py-2 text-left hover:bg-white/[0.04] flex justify-between items-center">
+                  <button key={n.municipality.ico} onClick={() => { setCompareIco(n.municipality.ico); setCompareDropdownOpen(false); setCompareSearch(''); }} className="w-full px-3 py-2 text-left hover:bg-white/[0.04] flex justify-between items-center">
                     <span className="text-sm text-[#f8fafc] truncate">{n.municipality.official_name}</span>
                     <span className="text-xs text-[#94a3b8]/50 ml-2 flex-shrink-0">{n.distanceKm.toFixed(1)} km</span>
                   </button>
                 )) : similarSize.map(s => (
-                  <button key={s.municipality.ico} onClick={() => { setCompareIco(s.municipality.ico); setCompareDropdownOpen(false); }} className="w-full px-3 py-2 text-left hover:bg-white/[0.04] flex justify-between items-center">
+                  <button key={s.municipality.ico} onClick={() => { setCompareIco(s.municipality.ico); setCompareDropdownOpen(false); setCompareSearch(''); }} className="w-full px-3 py-2 text-left hover:bg-white/[0.04] flex justify-between items-center">
                     <span className="text-sm text-[#f8fafc] truncate">{s.municipality.official_name}</span>
                     <span className="text-xs text-[#94a3b8]/50 ml-2 flex-shrink-0">{s.municipality.population.toLocaleString('sk-SK')} {locale === 'sk' ? 'ob.' : 'inh.'}</span>
                   </button>
