@@ -1,7 +1,7 @@
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import { ENTITY_TYPE_LABELS, type EntityType } from '@/lib/types'
-import { formatEur, daysUntil, deadlineColor, formatDate } from '@/lib/utils'
+import { formatEur, daysUntil, deadlineColor } from '@/lib/utils'
 import Link from 'next/link'
 
 export default async function DashboardPage() {
@@ -12,20 +12,36 @@ export default async function DashboardPage() {
   } = await supabase.auth.getUser()
   if (!user) redirect('/login')
 
-  // Get user profile + org
-  const { data: profile } = await supabase
+  // Get user profile
+  const { data: profile, error: profileError } = await supabase
     .from('users')
-    .select('*, organizations(*)')
+    .select('*')
     .eq('id', user.id)
     .single()
 
-  if (!profile) redirect('/login')
+  if (!profile) {
+    console.error('Profile not found:', profileError?.message)
+    redirect('/login')
+  }
 
-  const org = profile.organizations as unknown as {
-    name: string
-    entity_type: EntityType
-    region: string
-    district: string
+  // Get org separately to avoid RLS join issues
+  const { data: org, error: orgError } = await supabase
+    .from('organizations')
+    .select('*')
+    .eq('id', profile.org_id)
+    .single()
+
+  if (!org) {
+    console.error('Org not found:', orgError?.message)
+    return (
+      <div className="p-6 lg:p-10 max-w-5xl">
+        <div className="bg-surface border border-border rounded-xl p-10 text-center">
+          <p className="text-text-secondary">
+            Nepodarilo sa načítať údaje organizácie.
+          </p>
+        </div>
+      </div>
+    )
   }
 
   // Get matched calls
@@ -41,7 +57,6 @@ export default async function DashboardPage() {
     matches?.filter((m) => m.fund_calls?.status === 'open') || []
   const totalOpen = openMatches.length
 
-  // Find closest deadline
   const closestMatch = openMatches
     .filter((m) => m.fund_calls?.deadline)
     .sort(
@@ -54,7 +69,6 @@ export default async function DashboardPage() {
     ? daysUntil(closestMatch.fund_calls!.deadline)
     : null
 
-  // Count new this week
   const weekAgo = new Date()
   weekAgo.setDate(weekAgo.getDate() - 7)
   const newThisWeek = openMatches.filter(
@@ -65,10 +79,10 @@ export default async function DashboardPage() {
     <div className="p-6 lg:p-10 max-w-5xl">
       {/* Org header */}
       <div className="mb-8">
-        <h1 className="text-2xl font-bold">{org.name}</h1>
-        <p className="text-sm text-gray-400 mt-1">
-          <span className="bg-blue-900/30 text-blue-400 px-2 py-0.5 rounded text-xs font-medium">
-            {ENTITY_TYPE_LABELS[org.entity_type]}
+        <h1 className="font-display text-2xl font-bold">{org.name}</h1>
+        <p className="text-sm text-text-secondary mt-1">
+          <span className="bg-accent/10 text-accent px-2 py-0.5 rounded text-xs font-medium">
+            {ENTITY_TYPE_LABELS[org.entity_type as EntityType]}
           </span>
           <span className="ml-2">
             {org.district && `Okres ${org.district} · `}
@@ -81,56 +95,54 @@ export default async function DashboardPage() {
       <div className="grid sm:grid-cols-3 gap-4 mb-10">
         <Link
           href="/calls"
-          className="bg-[#111827] border border-gray-800 rounded-xl p-5 hover:border-gray-700 transition"
+          className="bg-surface border border-border rounded-xl p-5 hover:border-border/80 transition"
         >
-          <p className="text-sm text-gray-400 mb-1">Otvorené výzvy pre vás</p>
-          <p className="text-3xl font-bold text-green-400">{totalOpen}</p>
+          <p className="text-sm text-text-secondary mb-1">Otvorené výzvy pre vás</p>
+          <p className="text-3xl font-bold text-success">{totalOpen}</p>
         </Link>
 
-        <div className="bg-[#111827] border border-gray-800 rounded-xl p-5">
-          <p className="text-sm text-gray-400 mb-1">Najbližší deadline</p>
+        <div className="bg-surface border border-border rounded-xl p-5">
+          <p className="text-sm text-text-secondary mb-1">Najbližší deadline</p>
           {closestMatch ? (
             <>
-              <p
-                className={`text-xl font-bold ${deadlineColor(closestDays)}`}
-              >
+              <p className={`text-xl font-bold ${deadlineColor(closestDays)}`}>
                 {closestDays != null && closestDays > 0
                   ? `${closestDays} dní`
                   : 'Dnes!'}
               </p>
-              <p className="text-xs text-gray-500 mt-1 line-clamp-1">
+              <p className="text-xs text-text-secondary/60 mt-1 line-clamp-1">
                 {closestMatch.fund_calls!.title}
               </p>
             </>
           ) : (
-            <p className="text-xl font-bold text-gray-600">—</p>
+            <p className="text-xl font-bold text-text-secondary/40">—</p>
           )}
         </div>
 
-        <div className="bg-[#111827] border border-gray-800 rounded-xl p-5">
-          <p className="text-sm text-gray-400 mb-1">Nové tento týždeň</p>
-          <p className="text-3xl font-bold text-white">{newThisWeek}</p>
+        <div className="bg-surface border border-border rounded-xl p-5">
+          <p className="text-sm text-text-secondary mb-1">Nové tento týždeň</p>
+          <p className="text-3xl font-bold text-text-primary">{newThisWeek}</p>
         </div>
       </div>
 
       {/* Recent matched calls */}
       <div>
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-semibold">Najrelevantnejšie výzvy</h2>
+          <h2 className="font-display text-lg font-semibold">Najrelevantnejšie výzvy</h2>
           <Link
             href="/calls"
-            className="text-sm text-blue-400 hover:text-blue-300"
+            className="text-sm text-accent hover:text-accent/80"
           >
             Zobraziť všetky →
           </Link>
         </div>
 
         {openMatches.length === 0 ? (
-          <div className="bg-[#111827] border border-gray-800 rounded-xl p-10 text-center">
-            <p className="text-gray-500">
+          <div className="bg-surface border border-border rounded-xl p-10 text-center">
+            <p className="text-text-secondary">
               Momentálne nemáte žiadne priradené výzvy.
             </p>
-            <p className="text-gray-600 text-sm mt-1">
+            <p className="text-text-secondary/60 text-sm mt-1">
               Nové výzvy kontrolujeme denne.
             </p>
           </div>
@@ -143,14 +155,14 @@ export default async function DashboardPage() {
                 <Link
                   key={match.id}
                   href={`/calls/${call.id}`}
-                  className="block bg-[#111827] border border-gray-800 rounded-xl p-4 hover:border-gray-700 transition"
+                  className="block bg-surface border border-border rounded-xl p-4 hover:border-border/80 transition"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="min-w-0">
-                      <h3 className="text-sm font-medium text-white line-clamp-1">
+                      <h3 className="text-sm font-medium text-text-primary line-clamp-1">
                         {call.title}
                       </h3>
-                      <p className="text-xs text-gray-500 mt-1">
+                      <p className="text-xs text-text-secondary/60 mt-1">
                         {call.program}
                         {call.max_grant_eur &&
                           ` · Max. ${formatEur(call.max_grant_eur)}`}
@@ -169,7 +181,7 @@ export default async function DashboardPage() {
                       {match.match_reasons.map((r: string) => (
                         <span
                           key={r}
-                          className="text-xs bg-green-900/20 text-green-500 px-2 py-0.5 rounded-full"
+                          className="text-xs bg-success/10 text-success px-2 py-0.5 rounded-full"
                         >
                           {r} ✓
                         </span>

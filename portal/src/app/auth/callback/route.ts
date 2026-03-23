@@ -10,7 +10,7 @@ export async function GET(request: Request) {
   if (code) {
     const supabase = await createClient()
     await supabase.auth.exchangeCodeForSession(code)
-    return NextResponse.redirect(`${origin}/auth/confirmed`)
+    return NextResponse.redirect(`${origin}/login?confirmed=true`)
   }
 
   if (token_hash && type) {
@@ -19,7 +19,7 @@ export async function GET(request: Request) {
       token_hash,
       type: type as 'signup' | 'email',
     })
-    return NextResponse.redirect(`${origin}/auth/confirmed`)
+    return NextResponse.redirect(`${origin}/login?confirmed=true`)
   }
 
   return NextResponse.redirect(`${origin}/login?error=invalid_callback`)
