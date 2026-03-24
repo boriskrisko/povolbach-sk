@@ -10,7 +10,7 @@
 |---------|-----|------|----------|
 | **povolbach.sk** (public dashboard) | https://povolbach.sk | `boriskrisko/povolbach-sk` (this repo) | `frontend/` |
 | **dev.povolbach.sk** (internal ops dashboard) | https://dev.povolbach.sk | `boriskrisko/povolbach-dev` (separate) | `dashboard/` is a separate git context |
-| **portal.povolbach.sk** (SaaS platform) | — not yet built | `boriskrisko/povolbach-portal` (planned) | Specs in `docs/` |
+| **portal.povolbach.sk** (SaaS V0 — call alerts) | https://portal.povolbach.sk | `boriskrisko/povolbach-sk` (this repo) | `portal/` |
 
 ---
 
@@ -21,6 +21,8 @@
 ├── CLAUDE.md                  # This file — monorepo overview
 ├── frontend/                  # povolbach.sk public dashboard (Next.js)
 │   └── CLAUDE.md              # Frontend-specific context
+├── portal/                    # portal.povolbach.sk SaaS V0 (Next.js + Supabase)
+│   └── CLAUDE.md              # Portal-specific context
 ├── dashboard/                 # dev.povolbach.sk (SEPARATE GIT REPO — boriskrisko/povolbach-dev)
 │   └── CLAUDE.md              # Dashboard-specific context
 ├── data/                      # Shared data files (ITMS, RPO, municipal stats)

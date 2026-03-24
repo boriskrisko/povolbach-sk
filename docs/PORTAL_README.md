@@ -1,17 +1,24 @@
-# portal.povolbach.sk — Municipal EU Fund Management SaaS
+# portal.povolbach.sk — Municipal EU Fund Call Alerts (SaaS)
 
-## Status: Spec complete, not yet built
+## Status: V0 LIVE
 
-portal.povolbach.sk is a planned paid SaaS platform for Slovak municipalities to manage their EU-funded projects. It will be the Stage 2 revenue product, building on the public dashboard (povolbach.sk) as a lead generation tool.
+portal.povolbach.sk is a live SaaS platform (V0 freemium) that alerts Slovak municipalities about matching EU fund calls. Deployed on Vercel.
 
-## Planned Stack
-- Next.js + Supabase + Resend
-- Deployed to Vercel
+## Stack
+- Next.js + Supabase (Auth + Postgres + RLS) + Resend + Vercel
 - Domain: portal.povolbach.sk
 
+## V0 Features
+- Landing page with value proposition
+- Registration with IČO auto-lookup (searches 2,926 pre-seeded organizations)
+- Login via Supabase Auth (email + password)
+- Dashboard with matched fund calls
+- Call detail pages
+- Email notifications via Resend
+
 ## Repo
-Will live in its own repo: `boriskrisko/povolbach-portal` (not yet created).
-When the repo is created, it will get its own CLAUDE.md.
+Currently lives in `portal/` folder of the main monorepo (`boriskrisko/povolbach-sk`).
+Will eventually move to its own repo: `boriskrisko/povolbach-portal`.
 
 ## Specs
 Full specifications are in this docs/ folder:
